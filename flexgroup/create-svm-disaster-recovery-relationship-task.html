@@ -20699,7 +20699,7 @@
         클러스터에 SSL 인증서를 설치합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html">
         ONTAP 9.6 이상(NVE)에서 외부 키 관리 지원
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-exernal-key-management-95-earlier-hw-task.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-95-earlier-task.html">
         ONTAP 9.5 이전 버전에서 외부 키 관리를 활성화합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/manage-keys-azure-google-task.html">
         Azure 또는 Google 키 관리 서비스를 통해 키를 관리합니다
@@ -22049,11 +22049,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 09:06:02 +0000">02/01/2022</time>
+    <time datetime="2022-02-02 06:01:29 +0000">02/02/2022</time>
     
   
 
 <span>기여자
+  <a target="_blank" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/netapp-thomi">
     <img  class="avatar avatar-small"
           alt="netapp-thomi"
@@ -22099,11 +22107,17 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>SVM DR 관계 생성에 대한 자세한 내용은 를 참조하십시오 <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/GUID-C6D7E4F1-76F0-44E7-909E-04BA68AE77A8.html?cp=7_3_5">"SnapMirror SVM 복제 관리"</a>.</p>
+<p>SVM DR 관계 생성에 대한 자세한 내용은 를 참조하십시오 <a href="https://docs.netapp.com/us-en/ontap/data-protection/snapmirror-svm-replication-workflow-concept.html">"SnapMirror SVM 복제 관리"</a>.</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
 <ol class="arabic">
+<li>
+<p>SVM DR 관계를 생성하거나 기존 관계를 사용합니다.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/data-protection/replicate-entire-svm-config-task.html">"전체 SVM 구성을 복제합니다"</a></p>
+</div>
+</li>
 <li>
 <p>필요한 구성 요소 수로 운영 사이트에 FlexGroup 볼륨을 생성합니다.</p>
 <div class="paragraph">
@@ -22111,7 +22125,7 @@
 </div>
 </li>
 <li>
-<p>보조 사이트에서 'sapmirror update-destination-path destination_svm_name: - source-path source_svm_name:'을(를) 업데이트하십시오</p>
+<p>FlexGroup 볼륨을 복제하려면 보조 사이트에서 'sapmirror update-destination-path destination_svm_name: - source-path source_svm_name:'을(를) 업데이트하십시오</p>
 </li>
 <li>
 <p>2차 사이트에서 SnapMirror 관계가 정상인지 '스냅샷 표시&#8217;인지 확인합니다</p>

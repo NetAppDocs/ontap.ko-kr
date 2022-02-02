@@ -20699,7 +20699,7 @@
         클러스터에 SSL 인증서를 설치합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html">
         ONTAP 9.6 이상(NVE)에서 외부 키 관리 지원
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-exernal-key-management-95-earlier-hw-task.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-95-earlier-task.html">
         ONTAP 9.5 이전 버전에서 외부 키 관리를 활성화합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/manage-keys-azure-google-task.html">
         Azure 또는 Google 키 관리 서비스를 통해 키를 관리합니다
@@ -22049,7 +22049,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 09:06:02 +0000">02/01/2022</time>
+    <time datetime="2022-02-02 06:01:29 +0000">02/02/2022</time>
     
   
 
@@ -22091,25 +22091,28 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>깨진 디스크 정리: + 'storage encryption disk sanitize -disk disk_id'</p>
+<p>권한 수준을 Advanced:'Set-Privilege advanced&#8217;로 설정합니다</p>
 </li>
 <li>
-<p>권한 수준을 advanced:+'et-Privilege advanced로 설정합니다</p>
+<p>FIPS 키를 기본 제조 보안 ID 0x0:'스토리지 암호화 디스크 수정 - FIPS-key-id 0x0-DISK_DISK_id_'로 재설정합니다</p>
 </li>
 <li>
-<p>삭제된 디스크의 장애를 해제합니다: + '스토리지 디스크 불합격 - 스페어 TRUE - DISK DISK_ID'</p>
+<p>작업이 성공했는지 확인합니다. '스토리지 암호화 디스크 표시 상태' 작업이 실패하면 이 항목의 PSID 프로세스를 사용합니다.</p>
 </li>
 <li>
-<p>디스크에 소유자가 있는지 확인합니다: +'스토리지 디스크 표시 - disk disk_id'</p>
+<p>깨진 디스크 정리:'storage encryption disk sanitize -disk_disk_id_' 다음 단계로 진행하기 전에 'storage encryption disk show-status' 명령으로 작업이 성공했는지 확인합니다.</p>
 </li>
 <li>
-<p>디스크에 소유자가 없는 경우 하나를 할당한 다음 다시 디스크의 장애를 해제합니다. + '스토리지 디스크 할당 - 소유자 노드 - disk disk_id'</p>
-<div class="paragraph">
-<p>'storage disk unfail-spare true-disk disk_id'</p>
-</div>
+<p>삭제된 디스크:'storage disk unfail-spare true-disk_disk_id_'의 장애를 해제합니다</p>
 </li>
 <li>
-<p>디스크가 이제 스페어이고 Aggregate에서 다시 사용할 준비가 되었는지 확인합니다. + 'storage disk show -disk disk_id'</p>
+<p>디스크에 소유자가 'storage disk show -disk_disk_id_'인지 확인합니다</p>
+</li>
+<li>
+<p>디스크에 소유자가 없으면 디스크 할당을 다시 해제하고 '스토리지 디스크 할당 - 소유자 노드 - disk_disk_id_''스토리지 디스크 불고장 - 스페어 true - disk_disk_id_''를 표시합니다</p>
+</li>
+<li>
+<p>디스크가 이제 스페어이고 'storage disk show -disk_disk_id_'라는 Aggregate에서 재사용할 준비가 되었는지 확인합니다</p>
 </li>
 </ol>
 </div></div></td>
@@ -22124,36 +22127,33 @@
 <p>디스크 레이블에서 디스크의 PSID를 가져옵니다.</p>
 </li>
 <li>
-<p>권한 수준을 advanced:+'et-Privilege advanced로 설정합니다</p>
+<p>권한 수준을 Advanced:'Set-Privilege advanced&#8217;로 설정합니다</p>
 </li>
 <li>
-<p>디스크를 출하 시 구성된 설정으로 재설정합니다. + '저장소 암호화 디스크 복원 - 원본-상태-디스크 disk_id -psid disk_physical_secure_id'</p>
+<p>디스크를 출고 시 구성된 설정으로 재설정합니다. '스토리지 암호화 디스크 복원 - 원본-디스크_디스크_id_-psid_disk_physical_secure_id_' 다음 단계로 진행하기 전에 '저장소 암호화 디스크 표시-상태' 명령으로 작업이 성공했는지 확인합니다.</p>
 </li>
 <li>
-<p>삭제된 디스크의 장애를 해제합니다: + '스토리지 디스크 불합격 - 스페어 TRUE - DISK DISK_ID'</p>
+<p>삭제된 디스크:'storage disk unfail-spare true-disk_disk_id_'의 장애를 해제합니다</p>
 </li>
 <li>
-<p>디스크에 소유자가 있는지 확인합니다: +'스토리지 디스크 표시 - disk disk_id'</p>
+<p>디스크에 소유자가 'storage disk show -disk_disk_id_'인지 확인합니다</p>
 </li>
 <li>
-<p>디스크에 소유자가 없는 경우 하나를 할당한 다음 다시 디스크의 장애를 해제합니다. + '스토리지 디스크 할당 - 소유자 노드 - disk disk_id'</p>
-<div class="paragraph">
-<p>'storage disk unfail-spare true-disk disk_id'</p>
-</div>
+<p>디스크에 소유자가 없으면 디스크 할당을 다시 해제하고 '스토리지 디스크 할당 - 소유자 노드 - disk_disk_id_''스토리지 디스크 불고장 - 스페어 true - disk_disk_id_''를 표시합니다</p>
 </li>
 <li>
-<p>디스크가 이제 스페어이고 Aggregate에서 다시 사용할 준비가 되었는지 확인합니다. + 'storage disk show -disk disk_id'</p>
+<p>디스크가 이제 스페어이고 'storage disk show -disk_disk_id_'라는 Aggregate에서 재사용할 준비가 되었는지 확인합니다</p>
 </li>
 </ol>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>전체 명령 구문은 man 페이지를 참조하십시오.</p>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>전체 명령 구문은 man 페이지를 참조하십시오.</p>
 </div>
 
     </article>

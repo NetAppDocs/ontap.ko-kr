@@ -20699,7 +20699,7 @@
         클러스터에 SSL 인증서를 설치합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html">
         ONTAP 9.6 이상(NVE)에서 외부 키 관리 지원
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-exernal-key-management-95-earlier-hw-task.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-external-key-management-95-earlier-task.html">
         ONTAP 9.5 이전 버전에서 외부 키 관리를 활성화합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/manage-keys-azure-google-task.html">
         Azure 또는 Google 키 관리 서비스를 통해 키를 관리합니다
@@ -22049,7 +22049,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-01 09:06:02 +0000">02/01/2022</time>
+    <time datetime="2022-02-02 06:01:29 +0000">02/02/2022</time>
     
   
 
@@ -22063,9 +22063,6 @@
 <div class="paragraph lead">
 <p>'volume move' 명령을 사용하여 SnapLock 볼륨을 대상 애그리게이트로 이동할 수 있습니다.</p>
 </div>
-<div class="paragraph">
-<p>ONTAP 9.8부터 SnapLock 볼륨을 엔터프라이즈부터 규정 준수까지 동일한 유형의 대상 Aggregate로 이동할 수 있습니다. SnapLock 볼륨을 이동하려면 SnapLock 보안 역할이 할당되어야 합니다.</p>
-</div>
 <div class="ulist">
 <div class="title">무엇을 &#8217;필요로 할거야</div>
 <ul>
@@ -22076,10 +22073,10 @@
 </div>
 </li>
 <li>
-<p>대상 애그리게이트는 이동하려는 SnapLock 볼륨과 동일한 SnapLock 유형이어야 합니다. Compliance to Compliance 또는 Enterprise to Enterprise입니다.</p>
+<p>ONTAP 9.10.1 이전 버전의 ONTAP를 사용하는 경우 대상 애그리게이트는 이동할 SnapLock 볼륨과 동일한 SnapLock 유형이어야 합니다. Compliance to Compliance 또는 Enterprise to Enterprise입니다. ONTAP 9.10.1부터는 이러한 제한이 없어지기 때문에 aggregate에 Compliance 및 Enterprise SnapLock 볼륨과 비 SnapLock 볼륨이 모두 포함될 수 있습니다.</p>
 </li>
 <li>
-<p>SnapLock 보안 SnapLock 역할을 가진 사용자여야 합니다.</p>
+<p>SnapLock 보안 역할을 가진 사용자여야 합니다.</p>
 </li>
 </ul>
 </div>
