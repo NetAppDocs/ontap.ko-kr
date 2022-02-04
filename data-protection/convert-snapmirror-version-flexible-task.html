@@ -13253,6 +13253,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -20962,6 +20964,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/snapshot-copies-work-concept.html">
         NFS 또는 CIFS 클라이언트의 스냅샷 복사본에서 파일을 복원합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protectionenable-disable-snapshot-dir-access-task.html">
+        스냅샷 복사본 디렉토리에 대한 NFS 및 SMB 클라이언트 액세스를 설정 및 해제합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/restore-single-file-snapshot-task.html">
         스냅샷 복사본에서 단일 파일을 복원합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/restore-part-file-snapshot-task.html">
@@ -22049,11 +22053,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-03 15:19:43 +0000">02/03/2022</time>
+    <time datetime="2022-02-04 15:19:58 +0000">02/04/2022</time>
     
   
 
 <span>기여자
+  <a target="_blank" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -22063,8 +22075,16 @@
 <div class="paragraph lead">
 <p>기존 DP 유형 관계를 XDP로 쉽게 변환하여 버전에 상관없이 유연한 SnapMirror를 활용할 수 있습니다.</p>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<div class="title">이 작업에 대해</div>
+<ul>
+<li>
 <p>SnapMirror는 기존 DP 유형 관계를 XDP로 자동 변환하지 않습니다. 관계를 변환하려면 기존 관계를 분리 및 삭제하고 새로운 XDP 관계를 생성한 다음 관계를 다시 동기화해야 합니다. 배경 정보는 을 참조하십시오 <a href="version-flexible-snapmirror-default-concept.html">"XDP는 DP를 SnapMirror 기본값으로 바꿉니다"</a>.</p>
+</li>
+<li>
+<p>전환을 계획할 때는 XDP SnapMirror 관계의 백그라운드 준비 및 데이터 웨어하우징 단계에 시간이 오래 걸릴 수 있습니다. SnapMirror 관계가 오랫동안 "준비 중" 상태를 보고하는 것을 보면 흔히 볼 수 있습니다.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
