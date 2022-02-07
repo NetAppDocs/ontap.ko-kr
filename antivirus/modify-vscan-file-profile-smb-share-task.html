@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다</title>
+  <title>SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다" />
+  <meta property="og:title" content="SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/antivirus/modify-vscan-file-profile-smb-share-task.html" />
-	<meta property="og:description" content="CIFS 공유에 대한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 표준 매개 변수로 설정됩니다. CIFS 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다." />
+	<meta property="og:description" content="SMB 공유를 위한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 표준 매개 변수로 설정됩니다. SMB 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="CIFS 공유에 대한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 표준 매개 변수로 설정됩니다. CIFS 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다.">
+  <meta name="description" content="SMB 공유를 위한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 표준 매개 변수로 설정됩니다. SMB 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다.">
   <meta name="keywords" content=" modify, vscan, file-operations, profile, cifs share">
   
   
@@ -16200,7 +16200,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_disabling_qtrees_in_flexgroup_volumes_before_reverting.html">
         FlexGroup 볼륨
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_identifying_and_moving_cifs_servers_in_workgroup_mode.html">
-        CIFS 서버를 워크그룹 모드로 설정합니다
+        작업 그룹 모드의 SMB 서버
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_reverting_systems_with_deduplicated_volumes.html">
         중복제거된 볼륨
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_disable_asuo.html">
@@ -16225,7 +16225,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_preparing_snapshot_copies_after_reverting.html">
         스냅샷 복사본 정책 설정
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_verifying_client_access_cifs_and_nfs.html">
-        클라이언트 액세스 확인(CIFS 및 NFS)
+        클라이언트 액세스 확인(SMB 및 NFS)
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_verifying_ipv6_firewall_entries.html">
         IPv6 방화벽 항목을 확인합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_reverting_password_hash_function.html">
@@ -18240,7 +18240,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/ontap-name-services-concept.html">
         ONTAP에서 이름 서비스를 사용하는 방법
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/smb-access-nfs-clients-concept.html">
-        ONTAP가 NFS 클라이언트에서 CIFS 파일 액세스를 허용하는 방법
+        ONTAP가 NFS 클라이언트에서 SMB 파일 액세스를 허용하는 방법
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/nfs-credential-cache-concept.html">
         NFS 자격 증명 캐시의 작동 방식
       </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
@@ -20382,7 +20382,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/antivirus/enable-on-access-policy-task.html">
         액세스 시 정책을 설정합니다
       </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/antivirus/modify-vscan-file-profile-smb-share-task.html">
-        CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다
+        SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/antivirus/commands-manage-on-access-policies-reference.html">
         액세스 시 정책을 관리하는 명령입니다
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -20963,7 +20963,7 @@
         <div class="na-navbar-padding"> 스냅샷 복사본에서 파일을 복원합니다</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/snapshot-copies-work-concept.html">
-        NFS 또는 CIFS 클라이언트의 스냅샷 복사본에서 파일을 복원합니다
+        NFS 또는 SMB 클라이언트의 스냅샷 복사본에서 파일을 복원합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protectionenable-disable-snapshot-dir-access-task.html">
         스냅샷 복사본 디렉토리에 대한 NFS 및 SMB 클라이언트 액세스를 설정 및 해제합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/restore-single-file-snapshot-task.html">
@@ -21084,7 +21084,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/specify-svmdr-vol-dest-aggr.html">
         SVM DR 관계에 사용할 애그리게이트를 지정합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/create-smb-server-task.html">
-        CIFS만 해당: CIFS 서버를 생성합니다
+        SMB만 해당: SMB 서버를 생성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/data-protection/exclude-volumes-svm-replication-task.html">
         SVM 복제에서 볼륨 제외
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -22023,7 +22023,7 @@
           <a href="/ko-kr/ontap/">ONTAP&nbsp;9</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다
+          SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다
         </li>
       </ul>
     </div>
@@ -22046,18 +22046,26 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다</h1>
+  <h1 class="n-doc__component-detail-heading">SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-04 15:19:58 +0000">02/04/2022</time>
+    <time datetime="2022-02-07 15:53:21 +0000">02/07/2022</time>
     
   
 
 <span>기여자
+  <a target="_blank" href="https://github.com/netapp-ahibbard">
+    <img  class="avatar avatar-small"
+          alt="netapp-ahibbard"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/85892662?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -22065,7 +22073,7 @@
 
 
 <div class="paragraph lead">
-<p>CIFS 공유에 대한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 '표준&#8217;으로 설정됩니다. CIFS 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다.</p>
+<p>SMB 공유를 위한 Vscan 파일 작업 프로필은 공유에서 스캔을 트리거할 수 있는 작업을 정의합니다. 기본적으로 매개 변수는 '표준&#8217;으로 설정됩니다. SMB 공유를 생성하거나 수정할 때 필요에 따라 매개 변수를 조정할 수 있습니다.</p>
 </div>
 <div class="paragraph">
 <p>Vscan 파일 작업 프로필에 사용할 수 있는 값에 대한 자세한 내용은 ""Vscan file-operations profile"을 참조하십시오.</p>
@@ -22081,7 +22089,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>'연속 사용 가능' 매개 변수가 '예&#8217;로 설정된 CIFS 공유에서는 바이러스 검사가 수행되지 않습니다.</p>
+<p>지속적으로 사용 가능한 파라미터가 Yes로 설정된 SMB 공유에서는 바이러스 검색이 수행되지 않습니다.</p>
 </div>
 </td>
 </tr>
@@ -22091,12 +22099,12 @@
 <div class="title">단계</div>
 <ol class="arabic">
 <li>
-<p>CIFS 공유에 대한 Vscan 파일 작업 프로파일의 값을 수정합니다. 'vserver cifs share modify -vserver data_SVM-share-name share-path share-path share-path -vscan -fileop -profile no-scan | standard | strict | writes-only'</p>
+<p>SMB 공유에 대한 Vscan 파일 작업 프로파일의 값을 수정합니다. 'vserver cifs share modify -vserver_data_SVM_-share-name_share_-path_share_path_-vscan-fileop-profile no-scan|standard|strict|writes-only'</p>
 <div class="paragraph">
 <p>전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.</p>
 </div>
 <div class="paragraph">
-<p>다음 명령을 실행하면 CIFS 공유에 대한 Vscan 파일 작업 프로필이 '사전&#8217;으로 변경됩니다.</p>
+<p>다음 명령을 실행하면 SMB 공유의 Vscan 파일 작업 프로필이 '사전&#8217;으로 변경됩니다.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -22116,7 +22124,7 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[CIFS 공유에 대한 Vscan 파일 작업 프로필을 수정합니다](https://docs.netapp.com/ko-kr/ontap/antivirus/modify-vscan-file-profile-smb-share-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[SMB 공유에 대한 Vscan 파일 작업 프로필을 수정합니다](https://docs.netapp.com/ko-kr/ontap/antivirus/modify-vscan-file-profile-smb-share-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
       <a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/antivirus/modify-vscan-file-profile-smb-share-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
     </div>
