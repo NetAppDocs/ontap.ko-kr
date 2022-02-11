@@ -22053,7 +22053,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-09 20:18:11 +0000">02/09/2022</time>
+    <time datetime="2022-02-10 23:49:30 +0000">02/10/2022</time>
     
   
 
@@ -22105,22 +22105,23 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>유지 보수, 보류 중 또는 재구성 상태의 디스크를 표시합니다. 스토리지 디스크 상태 유지 관리</p>
+<p>유지 보수, 보류 중 또는 재구성 상태의 디스크를 표시합니다. 스토리지 디스크 표시 상태 유지 관리</p>
 </li>
 </ol>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">보류 중</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">재구성 중&#8230;&#8203; 유지보수 또는 재구성 작업이 완료될 때까지 기다린 후 계속 진행하십시오. 를 누릅니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">재구성 중<br>
+.. 유지보수 또는 재구성 작업이 완료될 때까지 기다린 후 계속 진행하십시오.</p></td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>'Storage aggregate show-state! online&#8217;이라는 상태를 표시하여 모든 애그리게이트가 온라인 상태인지 확인합니다</p>
-<div class="paragraph">
-<p>이 명령은 _not_online 인 애그리게이트를 표시합니다. 주요 업그레이드 또는 리버전을 수행하기 전과 후의 모든 애그리게이트는 온라인 상태여야 합니다.</p>
+<p>'storage aggregate show -state!online' 상태를 표시하여 모든 애그리게이트가 온라인 상태인지 확인합니다. 이 명령은 _not_online 상태인 애그리게이트를 표시합니다. 주요 업그레이드 또는 리버전을 수행하기 전과 후의 모든 애그리게이트는 온라인 상태여야 합니다.</p>
+</li>
+</ol>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -22128,11 +22129,12 @@
 There are no entries matching your query.</pre>
 </div>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>"volume show-state! online"이라는 볼륨을 표시하여 모든 볼륨이 온라인 상태인지 확인합니다</p>
-<div class="paragraph">
-<p>주요 업그레이드 또는 재버전을 수행하기 전과 후에 모든 볼륨이 온라인 상태여야 합니다.</p>
+<p>"volume show-state! online"이라는 볼륨을 표시하여 모든 볼륨이 온라인 상태인지 확인합니다. 모든 볼륨은 주요 업그레이드 또는 재버전을 수행하기 전과 후에 온라인 상태여야 합니다.</p>
+</li>
+</ol>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -22140,12 +22142,10 @@ There are no entries matching your query.</pre>
 There are no entries matching your query.</pre>
 </div>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>'볼륨 표시 - 불일치 true&#8217;라는 일관성 없는 볼륨이 없는지 확인합니다</p>
-<div class="paragraph">
-<p>일관되지 않은 볼륨이 반환되는 경우 업그레이드를 시작하기 전에 NetApp Support에 문의해야 합니다.</p>
-</div>
+<p>일관되지 않은 볼륨이 없는지 확인: 'volume show-is-consistent true&#8217;입니다. 일관되지 않은 볼륨이 반환되면 업그레이드하기 전에 NetApp Support에 문의해야 합니다.</p>
 </li>
 </ol>
 </div>
