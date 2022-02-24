@@ -953,14 +953,14 @@
 
 
 
+
+
           
         </li>
       </ul>
     
 
   
-
-
 
 
 
@@ -16042,9 +16042,9 @@
         클러스터 업그레이드 제한
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/task_identifying_current_cluster_activity.html">
         현재 클러스터 활동입니다
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
         업그레이드 중 펌웨어 업데이트 방법
-      </a></li></ul></li><li class="subfolders "><a href="#">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> Upgrade Advisor를 사용하거나 사용하지 않고 업그레이드하기 전에 무엇을 확인해야 합니까?</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/task_what_to_check_before_upgrade.html">
@@ -22053,7 +22053,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-22 03:40:21 +0000">02/22/2022</time>
+    <time datetime="2022-02-24 15:40:41 +0000">02/24/2022</time>
     
   
 
@@ -22320,6 +22320,52 @@ cluster1::&gt;</pre>
 </div>
 <div class="paragraph">
 <p>클러스터가 AutoSupport 메시지를 전송하도록 구성되지 않은 경우 알림 복사본이 로컬에 저장됩니다.</p>
+</div>
+</li>
+<li>
+<p>클러스터가 자동 비계획 스위치오버에 대해 설정되었는지 확인합니다.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
+이 절차는 MetroCluster FC 구성에만 수행됩니다. MetroCluster IP 구성을 사용하는 경우 이 절차를 건너뜁니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>예기치 않은 자동 전환이 활성화되어 있는지 확인합니다.</p>
+<div class="paragraph">
+<p>MetroCluster 쇼</p>
+</div>
+<div class="paragraph">
+<p>자동 비계획 전환이 활성화된 경우 명령 출력에 다음 설명이 표시됩니다.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>AUSO Failure Domain    auso-on-cluster-disaster</pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>명령문이 출력에 표시되지 않으면 예기치 않은 자동 전환을 설정합니다.</p>
+<div class="paragraph">
+<p>'MetroCluster modify-auto-switchover-failure-domain auso-on-cluster-disaster</p>
+</div>
+</li>
+<li>
+<p>1단계를 반복하여 예기치 않은 자동 전환을 활성화했는지 확인합니다.</p>
+</li>
+</ol>
 </div>
 </li>
 </ol>
