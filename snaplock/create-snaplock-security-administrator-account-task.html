@@ -22061,11 +22061,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-28 20:37:14 +0000">02/28/2022</time>
+    <time datetime="2022-03-01 18:20:30 +0000">03/01/2022</time>
     
   
 
 <span>기여자
+  <a target="_blank" href="https://github.com/netapp-lenida">
+    <img  class="avatar avatar-small"
+          alt="netapp-lenida"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54081920?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/netapp-ahibbard">
     <img  class="avatar avatar-small"
           alt="netapp-ahibbard"
@@ -22095,7 +22103,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>SnapLock 역할은 데이터 SVM과 연결된 vsadmin-SnapLock 역할과는 달리 클러스터 SVM과 연결됩니다.</p>
+<p>SnapLock 역할은 데이터 SVM과 연결된 vsadmin-SnapLock 역할과는 달리 관리 SVM과 연결됩니다.</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
@@ -22106,11 +22114,11 @@
 <p>'* 보안 로그인 create-vserver_SVM_name_-user-or-group-name_user_or_group_name_-application_application_-AuthMethod_authentication_method_-role_role_-comment_comment_*'</p>
 </div>
 <div class="paragraph">
-<p>다음 명령을 실행하면 SnapLock 역할이 사전 정의된 SVM 관리자 계정 'napLockAdmin&#8217;에서 암호를 사용하여 VM2에 액세스할 수 있습니다.</p>
+<p>다음 명령을 실행하면 미리 정의된 "SnapLock" 역할을 사용하여 SVM 관리자 계정 'napLockAdmin&#8217;에서 암호를 사용하여 admin SVM 'cluster1&#8217;에 액세스할 수 있습니다.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::&gt; security login create -vserver SVM2 -user-or-group-name SnapLockAdmin -application ssh -authmethod password -role snaplock</pre>
+<pre>cluster1::&gt; security login create -vserver cluster1 -user-or-group-name SnapLockAdmin -application ssh -authmethod password -role snaplock</pre>
 </div>
 </div>
 </li>
