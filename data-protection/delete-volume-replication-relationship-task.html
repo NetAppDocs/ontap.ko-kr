@@ -22061,7 +22061,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-02 15:44:44 +0000">03/02/2022</time>
+    <time datetime="2022-03-02 22:02:12 +0000">03/02/2022</time>
     
   
 
@@ -22109,9 +22109,14 @@
 </div>
 </li>
 <li>
-<p>SnapMirror 관계 끊기:</p>
+<p>복제 관계 중단:</p>
 <div class="paragraph">
-<p>스냅미러 break-source-path svm1:vola-destination-path svm_backup:VolA_dst'</p>
+<p>'스냅샷 break-source-path SVM: volume | cluster://SVM/volume, … m. s.-destination-path SVM: volume|cluster://SVM/volume, … s.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cluster_dst::&gt; snapmirror break -source-path svm1:volA -destination-path svm_backup:volA_dst</pre>
+</div>
 </div>
 </li>
 <li>
