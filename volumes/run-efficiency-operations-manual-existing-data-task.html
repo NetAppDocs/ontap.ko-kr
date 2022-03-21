@@ -9,14 +9,14 @@
   <meta property="og:title" content="기존 데이터에 대해 수동으로 효율성 작업을 실행합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/volumes/run-efficiency-operations-manual-existing-data-task.html" />
-	<meta property="og:description" content="중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 볼륨에 있는 데이터에 대해 효율성 작업을 수동으로 실행할 수 있습니다. 볼륨 효율성 start-scan-old-data 명령을 사용하여 이러한 작업을 실행할 수 있습니다." />
+	<meta property="og:description" content="ONTAP 9.8 이전 버전의 ONTAP에서 중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 온도에 민감하지 않은 스토리지 효율성 볼륨에 있는 데이터에 대해 수동으로 효율성 작업을 실행할 수 있습니다. 볼륨 효율성 start-scan-old-data 명령을 사용하여 이러..." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 볼륨에 있는 데이터에 대해 효율성 작업을 수동으로 실행할 수 있습니다. 볼륨 효율성 start-scan-old-data 명령을 사용하여 이러한 작업을 실행할 수 있습니다.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="ONTAP 9.8 이전 버전의 ONTAP에서 중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 온도에 민감하지 않은 스토리지 효율성 볼륨에 있는 데이터에 대해 수동으로 효율성 작업을 실행할 수 있습니다. 볼륨 효율성 start-scan-old-data 명령을 사용하여 이러...">
   <meta name="keywords" content=" run, efficiency, operations, manually, existing, data"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -12731,6 +12731,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -20754,10 +20756,12 @@
         개요
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/hw-encryption-workflow-concept.html">
         하드웨어 기반 암호화 워크플로우
-      </a></li><li class="subfolders "><a href="/ko-kr/ontap/encryption-at-rest/configure-external-key-management-concept.html">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 외부 키 관리를 구성합니다</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/before-configuring-concept.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/configure-external-key-management-concept.html">
+        개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/before-configuring-concept.html">
         ONTAP 9.2 및 그 이전 버전에서 네트워크 정보를 수집합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/install-ssl-certificates-hardware-task.html">
         클러스터에 SSL 인증서를 설치합니다
@@ -22077,7 +22081,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 19:19:56 +0000">01/31/2022</time>
+    <time datetime="2022-03-21 16:15:01 +0000">03/21/2022</time>
     
   
 
@@ -22085,7 +22089,10 @@
 </p>
 
 <div class="paragraph lead">
-<p>중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 볼륨에 있는 데이터에 대해 효율성 작업을 수동으로 실행할 수 있습니다. 'volume Efficiency start-scan-old-data' 명령을 사용하여 이러한 작업을 실행할 수 있습니다.</p>
+<p>ONTAP 9.8 이전 버전의 ONTAP에서 중복제거, 데이터 압축 또는 데이터 컴팩션을 사용하기 전에 온도에 민감하지 않은 스토리지 효율성 볼륨에 있는 데이터에 대해 수동으로 효율성 작업을 실행할 수 있습니다. 'volume Efficiency start-scan-old-data' 명령을 사용하여 이러한 작업을 실행할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>'-압축' 옵션은 온도에 민감한 스토리지 효율성 볼륨에 대한 '-scan-old-data&#8217;와 함께 사용할 수 없습니다. 비활성 데이터 압축은 ONTAP 9.8 이상에서 온도에 민감한 스토리지 효율성 볼륨을 위해 기존 데이터에 자동으로 실행됩니다.</p>
 </div>
 <div class="paragraph">
 <p>볼륨에 대해 중복 제거만 사용하도록 설정하면 데이터에서 중복제거가 실행됩니다. 볼륨에 중복제거, 데이터 압축 및 데이터 컴팩션을 사용하도록 설정하면 데이터 압축이 먼저 실행된 후 중복제거가 실행되고 데이터 컴팩션이 적용됩니다.</p>
