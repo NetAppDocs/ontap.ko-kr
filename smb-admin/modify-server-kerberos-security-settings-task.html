@@ -9,15 +9,15 @@
   <meta property="og:title" content="CIFS 서버 Kerberos 보안 설정을 수정합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/smb-admin/modify-server-kerberos-security-settings-task.html" />
-	<meta property="og:description" content="허용되는 최대 Kerberos 클록 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 포함하여 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다." />
+	<meta property="og:description" content="허용되는 최대 Kerberos 클록 비뚤어짐 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 비롯한 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="허용되는 최대 Kerberos 클록 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 포함하여 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다.">
-  <meta name="keywords" content=" modify, cifs, server, kerberos, security, setting, clock, slew, time, ticket, lifetime, renewal, modify the cifs server kerberos security ticket settings"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="허용되는 최대 Kerberos 클록 비뚤어짐 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 비롯한 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다.">
+  <meta name="keywords" content=" modify, cifs, server, kerberos, security, setting, clock, skew, time, ticket, lifetime, renewal, modify the cifs server kerberos security ticket settings"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -22081,7 +22081,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 19:19:56 +0000">01/31/2022</time>
+    <time datetime="2022-03-23 00:50:14 +0000">03/23/2022</time>
     
   
 
@@ -22089,7 +22089,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>허용되는 최대 Kerberos 클록 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 포함하여 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다.</p>
+<p>허용되는 최대 Kerberos 클록 비뚤어짐 시간, Kerberos 티켓 수명 및 티켓 갱신 최대 일 수를 비롯한 특정 CIFS 서버 Kerberos 보안 설정을 수정할 수 있습니다.</p>
 </div>
 <div class="paragraph">
 <p>'vserver cifs security modify' 명령을 사용하여 CIFS 서버 Kerberos 설정을 수정하면 '-vserver' 매개 변수로 지정한 단일 SVM(스토리지 가상 머신)에서만 설정이 수정됩니다. Active Directory 그룹 정책 개체(GPO)를 사용하여 동일한 Active Directory 도메인에 속한 클러스터의 모든 SVM에 대한 Kerberos 보안 설정을 중앙에서 관리할 수 있습니다.</p>
@@ -22104,55 +22104,68 @@
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">원하는 작업</th>
-<th class="tableblock halign-left valign-top">입력&#8230;&#8203;</th>
-</tr>
-</thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원하는 작업</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">입력&#8230;&#8203;</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>허용되는 최대 Kerberos 클록 비뚤어짐 시간(분)을 지정합니다</p>
+<p>허용되는 최대 Kerberos 클록 비뚤어짐 시간(분)을 지정합니다.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-clock-suts_integer_in_minutes_' 기본 설정은 5분입니다.</p>
+<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-clock-suts_integer_in_minutes_'</p>
+</div>
+<div class="paragraph">
+<p>기본 설정은 5분입니다.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Kerberos 티켓 수명(시간)을 지정합니다</p>
+<p>Kerberos 티켓 수명(시간)을 지정합니다.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-Ticket-age integer_in_hours' 기본 설정은 10시간입니다.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>티켓 갱신 최대 일 수를 지정하십시오</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>'vserver cifs security modify - vserver_vserver_name_ - Kerberos - renew -age_integer_in_days_' 기본 설정은 7일입니다.</p>
+<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-티켓-age integer_in_hours&#8217;를 선택합니다</p>
+</div>
+<div class="paragraph">
+<p>기본 설정은 10시간입니다.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>모든 KDC가 도달할 수 없음으로 표시되는 KDC의 소켓에 대한 시간 제한을 지정합니다</p>
+<p>티켓 갱신 최대 일 수를 지정하십시오.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-KDC-timeout_integer_in_seconds _' 기본 설정은 3초입니다.</p>
+<p>'vserver cifs security modify - vserver_vserver_name_ - Kerberos - renew - age_integer_in_days _'</p>
+</div>
+<div class="paragraph">
+<p>기본 설정은 7일입니다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>모든 KDC가 도달할 수 없음으로 표시되는 KDC의 소켓에 대한 시간 제한을 지정합니다.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>'vserver cifs security modify -vserver_vserver_name_-Kerberos-KDC-timeout_integer_in_seconds _'</p>
+</div>
+<div class="paragraph">
+<p>기본 설정은 3초입니다.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>Kerberos 보안 설정 'vserver cifs security show -vserver_vserver_name_'을 확인합니다</p>
+<p>Kerberos 보안 설정을 확인합니다.</p>
+<div class="paragraph">
+<p>'vserver cifs security show -vserver_vserver_name_'</p>
+</div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Kerberos 보안 변경 사항은 Kerberos Clock Skew가 3분으로 설정되고 Kerberos Ticket Age는 SVM VS1 v1의 경우 8시간으로 설정됩니다.</p>
+<p>다음 예에서는 Kerberos 보안을 다음과 같이 변경합니다. ""Kerberos Clock Skew""는 3분으로 설정되고 ""Kerberos Ticket Age""는 SVM VS1 v1의 경우 8시간으로 설정됩니다.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -22175,13 +22188,13 @@ Vserver: vs1
 </div>
 </div>
 <div class="paragraph">
-<p><a href="display-server-security-settings-task.html">CIFS 서버 보안 설정에 대한 정보를 표시합니다</a></p>
+<p><a href="display-server-security-settings-task.html">"CIFS 서버 보안 설정에 대한 정보를 표시합니다"</a></p>
 </div>
 <div class="paragraph">
-<p><a href="supported-gpos-concept.html">지원되는 GPO</a></p>
+<p><a href="supported-gpos-concept.html">"지원되는 GPO"</a></p>
 </div>
 <div class="paragraph">
-<p><a href="applying-group-policy-objects-concept.html">CIFS 서버에 그룹 정책 객체 적용</a></p>
+<p><a href="applying-group-policy-objects-concept.html">"CIFS 서버에 그룹 정책 객체 적용"</a></p>
 </div>
 
     </article>
