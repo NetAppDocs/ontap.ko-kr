@@ -22081,7 +22081,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 19:19:56 +0000">01/31/2022</time>
+    <time datetime="2022-03-24 22:31:51 +0000">03/24/2022</time>
     
   
 
@@ -22190,10 +22190,15 @@ vs1     vv2    10.38MB                             0%
 <p>'스냅샷 전용' 계층화 정책의 경우 ONTAP는 활성 파일 시스템이 31일 이상 비활성 상태임을 보고합니다.</p>
 </li>
 <li>
-<p>"없음" 계층화 정책의 경우 ONTAP는 최소 31일 동안 비활성 상태인 전체 볼륨의 양을 보고합니다.</p>
+<p>"없음" 계층화 정책의 경우 ONTAP는 최소 31일 동안 비활성 상태인 전체 볼륨의 양을 보고합니다. none 계층화 정책으로는 `-Tiering-Minimum-Cooling-Days' 매개 변수를 사용할 수 없습니다.</p>
 </li>
 <li>
 <p>'All' 계층화 정책의 경우 비활성 데이터 보고는 지원되지 않습니다.</p>
+<div class="literalblock">
+<div class="content">
+<pre>// 2022-3-23, issue #374</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
