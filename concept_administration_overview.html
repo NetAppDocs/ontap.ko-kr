@@ -1485,6 +1485,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -1547,6 +1549,8 @@
             클러스터 및 SVM 관리자
           </a>
           
+
+
 
 
 
@@ -1724,34 +1728,6 @@
     
 
   
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          <a target="_blank" 
-            
-              href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_통한_클러스터_액세스.pdf" 
-            
-          >
-            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            System Manager를 통한 클러스터 액세스
-          </a>
-          
-
-
 
 
 
@@ -16261,6 +16237,8 @@
       </a>
       <ul><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/concept_administration_overview.html">
         관리 개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/access-cluster-system-manager-browser-task.html">
+        System Manager를 사용하여 클러스터에 액세스합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_enable_new_features.html">
         새로운 기능 활성화
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_view_submit_support_cases.html">
@@ -16290,6 +16268,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/cluster-svm-administrators-concept.html">
         역할
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/manage-access-system-manager-concept.html">
+        System Manager에 대한 액세스를 관리합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/cluster-management-server-concept.html">
         클러스터 관리 서버의 정의
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/types-svms-concept.html">
@@ -16364,15 +16344,6 @@
         CLI 세션의 레코드를 관리하는 명령입니다
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/commands-manage-timeout-period-reference.html">
         CLI session의 자동 timeout 기간을 관리하는 명령어
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> System Manager를 통한 클러스터 액세스</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/access-cluster-system-manager-browser-task.html">
-        System Manager를 사용하여 클러스터에 액세스합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/system-manager-concept.html">
-        System Manager 정보
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/manage-access-system-manager-concept.html">
-        System Manager에 대한 액세스를 관리하는 방법
       </a></li></ul></li></ul></li><li class="subfolders "><a href="/ko-kr/ontap/system-admin/command-line-interface-concept.html">
         <div class="na-navbar-padding"> ONTAP 명령줄 인터페이스를 사용합니다</div>
       </a>
@@ -19814,7 +19785,7 @@
         <div class="na-navbar-padding"> NVMe 프로토콜 관리</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/manage-nvme-concept.html">
-        라이센스 요구 사항
+        개요
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/start-nvme-fc-service-svm-task.html">
         SVM에 대해 NVMe/FC 서비스를 시작합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/delete-nvme-fc-service-task.html">
@@ -22081,7 +22052,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 19:19:56 +0000">01/31/2022</time>
+    <time datetime="2022-03-25 18:07:16 +0000">03/25/2022</time>
     
   
 
@@ -22109,7 +22080,19 @@
 <img src="/us-en/ontap/images/note.svg" alt="참고">
 </td>
 <td class="content">
-클래식 시스템 관리자(ONTAP 9.7 이전에서만 사용 가능)를 사용하는 경우 를 참조하십시오  <a href="https://docs.netapp.com/us-en/ontap-sm-classic/index.html" target="_blank" rel="noopener">"System Manager Classic(ONTAP 9.0 ~ 9.7)"</a>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP 9.8부터 System Manager는 더 이상 실행 파일로 사용할 수 없으며, ONTAP 소프트웨어에 웹 서비스로 포함되어 있으며, 기본적으로 활성화되어 있으며 브라우저를 통해 액세스할 수 있습니다.</p>
+</li>
+<li>
+<p>System Manager의 이름이 ONTAP 9.6부터 변경되었습니다. ONTAP 9.5 이전 버전에서는 OnCommand 시스템 관리자라고 했습니다. ONTAP 9.6 이상에서는 시스템 관리자라고 합니다.</p>
+</li>
+<li>
+<p>클래식 시스템 관리자(ONTAP 9.7 이전에서만 사용 가능)를 사용하는 경우 를 참조하십시오  <a href="https://docs.netapp.com/us-en/ontap-sm-classic/index.html" target="_blank" rel="noopener">"System Manager Classic(ONTAP 9.0 ~ 9.7)"</a></p>
+</li>
+</ul>
+</div>
 </td>
 </tr>
 </table>
