@@ -22052,7 +22052,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-09 21:42:52 +0000">03/09/2022</time>
+    <time datetime="2022-03-30 23:09:02 +0000">03/30/2022</time>
     
   
 
@@ -22063,6 +22063,9 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>스토리지 아키텍처를 계획 및 관리할 때 고려해야 할 스토리지 개체에 대한 제한이 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>제한은 플랫폼에 따라 다릅니다. 을 참조하십시오 <a href="https://hwu.netapp.com/" target="_blank" rel="noopener">"Hardware Universe"</a> 특정 구성에 대한 제한 사항을 알아봅니다.</p>
 </div>
 <div class="paragraph">
 <p>제한 사항은 다음 섹션에 나와 있습니다.</p>
@@ -22078,7 +22081,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Cloud Volumes ONTAP에 대한 스토리지 제한은 _Cloud Volumes ONTAP 릴리즈 노트_에 설명되어 있습니다.</p>
+<p>Cloud Volumes ONTAP에 대한 스토리지 제한은 에 설명되어 있습니다 <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap/" target="_blank" rel="noopener">"Cloud Volumes ONTAP 릴리즈 노트"</a>.</p>
 </div>
 </div>
 </div>
@@ -22087,11 +22090,10 @@
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
@@ -22099,7 +22101,6 @@
 <th class="tableblock halign-left valign-top">제한</th>
 <th class="tableblock halign-left valign-top">네이티브 스토리지</th>
 <th class="tableblock halign-left valign-top">지원합니다</th>
-<th class="tableblock halign-left valign-top">Data ONTAP 에지</th>
 </tr>
 </thead>
 <tbody>
@@ -22115,9 +22116,6 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>모델에 따라 다름</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>해당 없음</p>
 </div></div></td>
 </tr>
 <tr>
@@ -22137,16 +22135,10 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>16TB</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>16TB</p>
-</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>볼륨당 최대 <sup>3</sup></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>볼륨 크기에 따라 다르며 최대 20억 개까지 가능합니다</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>볼륨 크기에 따라 다르며 최대 20억 개까지 가능합니다</p>
@@ -22161,9 +22153,6 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>계층적 복제 깊이 <sup>4</sup></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>499</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>499</p>
@@ -22190,9 +22179,6 @@
 <p>모델에 따라 다름</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>200</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>SVM당 최대 <sup>5</sup></p>
 </div></div></td>
 </tr>
@@ -22204,9 +22190,6 @@
 <p>모델에 따라 다름</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>200</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>최소 크기</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22214,9 +22197,6 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>20MB</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>20MB</p>
 </div></div></td>
@@ -22231,9 +22211,6 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>모델에 따라 다름</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -22252,9 +22229,6 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>모델에 따라 다름</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -22274,9 +22248,6 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>모델에 따라 다름</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>LUN *</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22291,9 +22262,6 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1,024</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>클러스터당 최대 <sup>5</sup></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -22303,33 +22271,24 @@
 <p>모델에 따라 다름</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>1,024</p>
+<p>볼륨당 최대 <sup>5</sup></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>볼륨당 최대 <sup>5</sup></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>모델에 따라 다름</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>모델에 따라 다름</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>512</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>최대 크기</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>16TB</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>16TB</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>16TB</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>16TB</p>
 </div></div></td>
@@ -22343,14 +22302,11 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>FlexVol 볼륨당 최대</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4,995</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>4,995</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>4,995</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>4,995</p>
 </div></div></td>
@@ -22360,14 +22316,11 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>볼륨당 최대 <sup>6</sup></p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>255/1023</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>255/1023</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>255/1023</p>
-</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>255/1023</p>
 </div></div></td>
@@ -22377,19 +22330,19 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>NAS의 경우 클러스터당 최대 수</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>12,000</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>12,000</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>12,000</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>200</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>SAN 프로토콜이 구성된 클러스터당 최대 수</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>모델에 따라 다름</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>모델에 따라 다름</p>
@@ -22439,17 +22392,15 @@
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">제한</th>
 <th class="tableblock halign-left valign-top">네이티브 스토리지</th>
 <th class="tableblock halign-left valign-top">지원합니다</th>
-<th class="tableblock halign-left valign-top">Data ONTAP 에지</th>
 </tr>
 </thead>
 <tbody>
@@ -22457,12 +22408,9 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>파일 또는 LUN당 최대 <sup>1</sup> *</p>
+<p>파일 또는 LUN당 최대 ** <sup>1</sup></p>
 </li>
 </ul>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>32,767입니다</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>32,767입니다</p>
@@ -22484,9 +22432,6 @@
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>640TB</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>100TB</p>
 </div></div></td>
 </tr>
 </tbody>
