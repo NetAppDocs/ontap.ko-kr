@@ -45,12 +45,52 @@
   <link rel="stylesheet" href='/ko-kr/ontap/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/ko-kr/ontap/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/ko-kr/ontap/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ko-kr/ontap/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/ko-kr/ontap/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/ko-kr/ontap/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/ko-kr/ontap/css/tabbed-blocks.css" type="text/css">
-  <link rel='stylesheet' href='/ko-kr/ontap/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/ko-kr/ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
@@ -60,15 +100,6 @@
 
   <script src='/ko-kr/ontap/js/na-utility.js'></script>
   <script src='/ko-kr/ontap/js/clouddocs.js'></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    var head = document.getElementsByTagName('head')[0];
-    var adobe = document.createElement("script");
-    adobe.type = "text/javascript";
-    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-    head.appendChild(adobe);
-  }
-  </script>
   <script src='/ko-kr/ontap/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/ko-kr/ontap/js/toc.js'></script>
@@ -121,16 +152,8 @@
               $("#tg-sb-icon").toggleClass('fa-toggle-off');
           });
       });
-  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-81697994-3');
-  }
   </script>
-  <script src='/ko-kr/ontap/js/version-dropdown.js'></script>
+  <script src='/ko-kr/ontap/js/custom-dropdown.js'></script>
   <script src='/ko-kr/ontap/js/FileSaver.min.js'></script>
   <script src='/ko-kr/ontap/js/jszip-utils.min.js'></script>
   <script src='/ko-kr/ontap/js/jszip.min.js'></script>
@@ -138,20 +161,15 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
   <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Cloud Backup을 사용하여 데이터를 백업합니다](https://docs.netapp.com/ko-kr/ontap/task_cloud_backup_data_using_cbs.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/task_cloud_backup_data_using_cbs.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a>
-    </div>
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Cloud Backup을 사용하여 데이터를 백업합니다](https://docs.netapp.com/ko-kr/ontap/task_cloud_backup_data_using_cbs.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/task_cloud_backup_data_using_cbs.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -161,6 +179,7 @@
       </nav>
     </div>
   </div>
+  
   
   <!-- Start top_hat -->
   <div class="n-top-hat">
@@ -244,7 +263,8 @@
           data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
           data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
           data-results-found="{hitCount}개의 결과를 찾음"  
-          data-sk-es-pf-indexes=""></div>
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -333,6 +353,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/ko-kr/ontap/pdfs/fullsite-sidebar/ONTAP_9_설명서.pdf" >
           <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
 
@@ -343,6 +366,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/소개_및_개념.pdf" 
@@ -356,6 +382,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_개념.pdf" 
@@ -379,6 +408,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네트워크_아키텍처.pdf" 
@@ -411,6 +443,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/디스크와_애그리게이트.pdf" 
@@ -441,6 +476,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스토리지_가상화.pdf" 
@@ -471,6 +509,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/경로_페일오버.pdf" 
@@ -501,6 +542,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/복제.pdf" 
@@ -535,6 +579,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스토리지_효율성.pdf" 
@@ -565,6 +612,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안.pdf" 
@@ -608,6 +658,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP와_클라우드.pdf" 
@@ -623,6 +676,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/데이터_보호와_클라우드.pdf" 
@@ -655,6 +711,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/전체_워크로드를_클라우드로_이동.pdf" 
@@ -668,6 +727,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/프로토콜을_지원합니다.pdf" 
@@ -709,6 +771,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클라우드_내의_성능_및_효율성.pdf" 
@@ -737,6 +802,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클라우드에서_ONTAP_관리.pdf" 
@@ -769,6 +837,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/요구사항에_빠르게_대응할_수_있습니다.pdf" 
@@ -817,6 +888,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_설정__업그레이드_및_복원.pdf" 
@@ -830,6 +904,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP를_설정합니다.pdf" 
@@ -847,6 +924,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_클러스터_설정.pdf" 
@@ -892,6 +972,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP를_업그레이드합니다.pdf" 
@@ -911,6 +994,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Upgrade_Advisor_없이_업그레이드.pdf" 
@@ -928,6 +1014,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Upgrade_Advisor_없이_업그레이드하기_전에_무엇을_확인해야_합니까_.pdf" 
@@ -967,6 +1056,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Upgrade_Advisor를_사용하거나_사용하지_않고_업그레이드하기_전에_무엇을_확인해야_합니까_.pdf" 
@@ -996,6 +1088,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/특별한_고려_사항.pdf" 
@@ -1015,6 +1110,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/MetroCluster_구성.pdf" 
@@ -1045,6 +1143,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror를_참조하십시오.pdf" 
@@ -1103,6 +1204,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/어떤_업그레이드_방법을_사용해야_합니까_.pdf" 
@@ -1124,6 +1228,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_수동_무중단_지원.pdf" 
@@ -1139,6 +1246,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/MetroCluster_구성.pdf" 
@@ -1185,6 +1295,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/업그레이드_후_어떻게_해야_합니까_.pdf" 
@@ -1204,6 +1317,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/특수_구성을_확인합니다.pdf" 
@@ -1266,6 +1382,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP를_되돌립니다.pdf" 
@@ -1285,6 +1404,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/되돌리기_전에_무엇을_읽어야_합니까_.pdf" 
@@ -1313,6 +1435,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/되돌리기_전에_무엇을_확인해야_합니까_.pdf" 
@@ -1328,6 +1453,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror를_참조하십시오.pdf" 
@@ -1383,6 +1511,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터를_되돌린_후에는_어떻게_해야_합니까_.pdf" 
@@ -1439,6 +1570,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_관리.pdf" 
@@ -1452,6 +1586,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_클러스터_관리.pdf" 
@@ -1481,6 +1618,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드_관리.pdf" 
@@ -1516,6 +1656,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_클러스터_관리.pdf" 
@@ -1531,6 +1674,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_및_SVM_관리자.pdf" 
@@ -1561,6 +1707,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_관리_인터페이스의_기본_사항.pdf" 
@@ -1574,6 +1723,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_클러스터에_액세스_클러스터_관리자만_해당_.pdf" 
@@ -1608,6 +1760,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_명령줄_인터페이스를_사용합니다.pdf" 
@@ -1623,6 +1778,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI_명령에_대한_여러_셸_정보_클러스터_관리자만_해당_.pdf" 
@@ -1684,6 +1842,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI_세션_관리_클러스터_관리자만_해당_.pdf" 
@@ -1697,6 +1858,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI_세션_기록을_관리합니다.pdf" 
@@ -1745,6 +1909,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_명령줄_인터페이스를_사용합니다.pdf" 
@@ -1758,6 +1925,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI_명령에_대한_여러_셸_정보_클러스터_관리자만_해당_.pdf" 
@@ -1817,6 +1987,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_관리_기본_사항_클러스터_관리자만_해당_.pdf" 
@@ -1851,6 +2024,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드_관리.pdf" 
@@ -1878,6 +2054,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드_루트_볼륨_및_루트_애그리게이트를_제어하는_규칙.pdf" 
@@ -1906,6 +2085,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드를_시작_또는_중지합니다.pdf" 
@@ -1938,6 +2120,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SP_BMC를_사용하여_노드를_원격으로_관리합니다.pdf" 
@@ -1957,6 +2142,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SP_BMC_네트워크를_구성합니다.pdf" 
@@ -1993,6 +2181,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SP_BMC에_액세스합니다.pdf" 
@@ -2057,6 +2248,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/관리_활동에_대한_감사_로깅을_관리합니다.pdf" 
@@ -2091,6 +2285,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/배너_및_MOTD_관리.pdf" 
@@ -2123,6 +2320,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/라이센스_관리_클러스터_관리자만_해당_.pdf" 
@@ -2151,6 +2351,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/작업_및_일정을_관리합니다.pdf" 
@@ -2179,6 +2382,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_구성_백업_및_복원_클러스터_관리자만_해당_.pdf" 
@@ -2194,6 +2400,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/구성_백업을_관리합니다.pdf" 
@@ -2222,6 +2431,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드_구성_복구.pdf" 
@@ -2248,6 +2460,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_구성을_복구합니다.pdf" 
@@ -2289,6 +2504,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스토리지_시스템을_모니터링합니다.pdf" 
@@ -2306,6 +2524,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_AutoSupport를_관리합니다.pdf" 
@@ -2359,6 +2580,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/AutoSupport_문제를_해결합니다.pdf" 
@@ -2398,6 +2622,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/시스템_상태를_모니터링합니다.pdf" 
@@ -2455,6 +2682,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/웹_서비스에_대한_액세스를_관리합니다.pdf" 
@@ -2474,6 +2704,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/웹_서비스에_대한_SAML_인증을_구성합니다.pdf" 
@@ -2502,6 +2735,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/웹_서비스_관리.pdf" 
@@ -2547,6 +2783,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/인증서를_사용하여_원격_서버의_ID를_확인합니다.pdf" 
@@ -2566,6 +2805,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터와_KMIP_서버를_상호_인증.pdf" 
@@ -2614,6 +2856,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_디스크_및_애그리게이트_관리.pdf" 
@@ -2629,6 +2874,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/집계_작성.pdf" 
@@ -2663,6 +2911,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/애그리게이트_확장.pdf" 
@@ -2695,6 +2946,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/애그리게이트_관리.pdf" 
@@ -2716,6 +2970,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/HA_쌍_내에서_애그리게이트_소유권을_재배치합니다.pdf" 
@@ -2763,6 +3020,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Flash_Pool_애그리게이트와_함께_사용.pdf" 
@@ -2776,6 +3036,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Flash_Pool_캐싱_정책_및_SSD_파티셔닝.pdf" 
@@ -2806,6 +3069,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SSD_스토리지_풀을_사용하여_Flash_Pool_애그리게이트를_생성합니다.pdf" 
@@ -2840,6 +3106,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Flash_Pool_애그리게이트의_캐싱_정책을_수정할지_여부를_결정합니다.pdf" 
@@ -2877,6 +3146,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/디스크_관리.pdf" 
@@ -2898,6 +3170,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/분할된_디스크의_소유권을_수동으로_할당합니다.pdf" 
@@ -2936,6 +3211,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/디스크_삭제.pdf" 
@@ -2987,6 +3265,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/RAID_그룹_관리.pdf" 
@@ -3017,6 +3298,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/미러링되지_않은_애그리게이트.pdf" 
@@ -3054,6 +3338,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_사용하여_FabricPool_계층_관리.pdf" 
@@ -3090,6 +3377,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_FabricPool_계층_관리.pdf" 
@@ -3113,6 +3403,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FabricPool를_구성합니다.pdf" 
@@ -3126,6 +3419,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FabricPool_구성을_준비합니다.pdf" 
@@ -3149,6 +3445,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/오브젝트_저장소를_FabricPool의_클라우드_계층으로_설정합니다.pdf" 
@@ -3172,6 +3471,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클라우드_계층으로_AWS_S3_사용.pdf" 
@@ -3235,6 +3537,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FabricPool_관리.pdf" 
@@ -3252,6 +3557,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/필요에_따라_FabricPool에_볼륨을_추가하거나_이동합니다.pdf" 
@@ -3278,6 +3586,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/사용자가_만든_사용자_지정_태그를_사용하여_개체_태그_지정.pdf" 
@@ -3320,6 +3631,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/데이터를_성능_계층으로_상향_이동.pdf" 
@@ -3361,6 +3675,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FabricPool_미러를_관리합니다.pdf" 
@@ -3410,6 +3727,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM_데이터_이동성.pdf" 
@@ -3446,6 +3766,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/고가용성_관리.pdf" 
@@ -3488,6 +3811,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_통한_REST_API_관리.pdf" 
@@ -3523,6 +3849,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_관리.pdf" 
@@ -3536,6 +3865,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_사용하여_볼륨_및_LUN_관리.pdf" 
@@ -3590,6 +3922,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_논리적_스토리지_관리.pdf" 
@@ -3605,6 +3940,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_생성_및_관리.pdf" 
@@ -3620,6 +3958,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_볼륨.pdf" 
@@ -3672,6 +4013,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/디렉토리를_삭제합니다.pdf" 
@@ -3713,6 +4057,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_이동_및_복사.pdf" 
@@ -3747,6 +4094,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexClone_볼륨을_사용하여_FlexVol_볼륨의_효율적인_복사본을_생성합니다.pdf" 
@@ -3779,6 +4129,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexClone_파일_및_FlexClone_LUN을_사용하여_파일_및_LUN의_효율적인_복사본을_생성합니다.pdf" 
@@ -3802,6 +4155,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨이_자동_삭제_설정을_통해_사용_가능한_공간을_재확보하는_방법.pdf" 
@@ -3841,6 +4197,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Qtree를_사용하여_FlexVol_볼륨을_분할합니다.pdf" 
@@ -3860,6 +4219,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/디렉토리를_qtree로_변환합니다.pdf" 
@@ -3899,6 +4261,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨에_대한_논리적_공간_보고_및_적용.pdf" 
@@ -3929,6 +4294,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/할당량을_사용하여_리소스_사용을_제한하거나_추적합니다.pdf" 
@@ -3942,6 +4310,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/할당량_프로세스_개요.pdf" 
@@ -3967,6 +4338,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/특별한_종류의_할당량입니다.pdf" 
@@ -4001,6 +4375,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/사용자_및_그룹에서_할당량이_작동하는_방식.pdf" 
@@ -4045,6 +4422,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/트리_할당량의_작동_방식.pdf" 
@@ -4075,6 +4455,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Qtree_변경이_할당량에_미치는_영향.pdf" 
@@ -4105,6 +4488,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/할당량이_활성화되는_방식.pdf" 
@@ -4133,6 +4519,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/할당량_정보를_보는_방법.pdf" 
@@ -4167,6 +4556,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/할당량_보고서_및_UNIX_클라이언트에_의해_표시되는_공간_사용량_차이.pdf" 
@@ -4229,6 +4621,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/중복제거__데이터_압축__데이터_컴팩션을_사용하여_스토리지_효율성을_높입니다.pdf" 
@@ -4276,6 +4671,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/효율성_작업을_실행할_볼륨_효율성_정책을_생성합니다.pdf" 
@@ -4310,6 +4708,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/수동으로_볼륨_효율성_작업을_관리합니다.pdf" 
@@ -4342,6 +4743,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스케줄을_사용하여_볼륨_효율성_작업을_관리합니다.pdf" 
@@ -4368,6 +4772,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_효율성_작업을_모니터링합니다.pdf" 
@@ -4409,6 +4816,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/한_SVM에서_다른_SVM으로_볼륨을_다시_호스팅.pdf" 
@@ -4445,6 +4855,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/권장되는_볼륨_및_파일_또는_LUN_구성_조합.pdf" 
@@ -4477,6 +4890,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_또는_디렉토리_용량_변경에_대한_주의_및_고려_사항.pdf" 
@@ -4507,6 +4923,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexClone_파일_및_FlexClone_LUN에서_지원되는_기능입니다.pdf" 
@@ -4562,6 +4981,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_FlexGroup_볼륨_관리.pdf" 
@@ -4581,6 +5003,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexGroup_볼륨_설정.pdf" 
@@ -4611,6 +5036,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexGroup_볼륨_관리.pdf" 
@@ -4655,6 +5083,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexGroup_볼륨에_대한_데이터_보호.pdf" 
@@ -4697,6 +5128,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexGroup_볼륨에_대한_데이터_보호_작업을_관리합니다.pdf" 
@@ -4710,6 +5144,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexGroup_볼륨의_재해_복구.pdf" 
@@ -4740,6 +5177,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_관계에서_FlexGroup_볼륨을_확장합니다.pdf" 
@@ -4785,6 +5225,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨을_FlexGroup_볼륨으로_변환합니다.pdf" 
@@ -4824,6 +5267,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_FlexCache_볼륨_관리.pdf" 
@@ -4845,6 +5291,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexCache_볼륨_생성.pdf" 
@@ -4862,6 +5311,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexCache_볼륨을_생성하는_프로세스입니다.pdf" 
@@ -4899,6 +5351,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexCache_관계를_관리합니다.pdf" 
@@ -4951,6 +5406,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네트워크_관리.pdf" 
@@ -4964,6 +5422,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_네트워크를_관리합니다.pdf" 
@@ -4994,6 +5455,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_NAS_경로_페일오버_설정.pdf" 
@@ -5007,6 +5471,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_9_8_이상.pdf" 
@@ -5022,6 +5489,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/워크플로우_NAS_경로_페일오버.pdf" 
@@ -5069,6 +5539,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_9_7_이하.pdf" 
@@ -5084,6 +5557,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/워크플로우_NAS_경로_페일오버.pdf" 
@@ -5146,6 +5622,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_네트워크를_관리합니다.pdf" 
@@ -5161,6 +5640,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/업그레이드_고려_사항.pdf" 
@@ -5187,6 +5669,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터의_네트워킹_구성_요소.pdf" 
@@ -5215,6 +5700,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네트워크_포트_구성_클러스터_관리자만_해당_.pdf" 
@@ -5257,6 +5745,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/IPspace_구성_클러스터_관리자만_해당_.pdf" 
@@ -5291,6 +5782,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/브로드캐스트_도메인_구성_클러스터_관리자만_해당_.pdf" 
@@ -5304,6 +5798,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_9_8_이상.pdf" 
@@ -5342,6 +5839,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_9_7_이하.pdf" 
@@ -5391,6 +5891,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LIF에_대한_페일오버_그룹_및_정책을_구성합니다.pdf" 
@@ -5421,6 +5924,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/서브넷_구성_클러스터_관리자만_해당_.pdf" 
@@ -5455,6 +5961,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LIF_구성_클러스터_관리자만_해당_.pdf" 
@@ -5501,6 +6010,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/호스트_이름_확인을_구성합니다.pdf" 
@@ -5529,6 +6041,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/사용자_트래픽을_최적화하기_위해_네트워크_로드_밸런싱_클러스터_관리자만_해당_.pdf" 
@@ -5559,6 +6074,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네트워크_보안.pdf" 
@@ -5589,6 +6107,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/QoS_표시_구성_클러스터_관리자만_해당_.pdf" 
@@ -5619,6 +6140,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터에서_SNMP_관리_클러스터_관리자만_해당_.pdf" 
@@ -5655,6 +6179,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에서_라우팅_관리.pdf" 
@@ -5689,6 +6216,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스토리지_시스템에서_ONTAP_포트_사용.pdf" 
@@ -5715,6 +6245,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네트워크_정보를_봅니다.pdf" 
@@ -5783,6 +6316,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_스토리지_관리.pdf" 
@@ -5796,6 +6332,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_NAS_프로토콜을_관리합니다.pdf" 
@@ -5833,6 +6372,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_스토리지를_설정합니다.pdf" 
@@ -5870,6 +6412,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_NFS를_구성합니다.pdf" 
@@ -5887,6 +6432,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/준비.pdf" 
@@ -5917,6 +6465,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에_대한_NFS_액세스를_구성합니다.pdf" 
@@ -5942,6 +6493,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이름_서비스_구성.pdf" 
@@ -5959,6 +6513,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_UNIX_사용자_및_그룹을_구성합니다.pdf" 
@@ -5993,6 +6550,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/넷그룹으로_작업합니다.pdf" 
@@ -6023,6 +6583,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LDAP를_사용합니다.pdf" 
@@ -6066,6 +6629,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/강력한_보안을_위해_NFS와_Kerberos_사용.pdf" 
@@ -6107,6 +6673,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFS_지원_SVM에_스토리지_용량_추가.pdf" 
@@ -6126,6 +6695,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_또는_qtree_스토리지_컨테이너를_생성합니다.pdf" 
@@ -6152,6 +6724,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/내보내기_정책을_사용하여_NFS_액세스를_보호합니다.pdf" 
@@ -6197,6 +6772,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_내보내기는_7_Mode_내보내기와는_어떻게_다릅니까.pdf" 
@@ -6234,6 +6812,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI에서_NFS를_관리합니다.pdf" 
@@ -6249,6 +6830,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_파일_액세스_이해.pdf" 
@@ -6262,6 +6846,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/네임스페이스_및_교차점.pdf" 
@@ -6288,6 +6875,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP에서_파일_액세스를_제어하는_방법.pdf" 
@@ -6316,6 +6906,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP가_NFS_클라이언트_인증을_처리하는_방식.pdf" 
@@ -6355,6 +6948,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_네임스페이스에서_데이터_볼륨을_생성하고_관리합니다.pdf" 
@@ -6385,6 +6981,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_스타일을_구성합니다.pdf" 
@@ -6398,6 +6997,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_스타일이_데이터_액세스에_미치는_영향.pdf" 
@@ -6447,6 +7049,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFS를_사용하여_파일_액세스를_설정합니다.pdf" 
@@ -6462,6 +7067,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/내보내기_정책을_사용하여_NFS_액세스를_보호합니다.pdf" 
@@ -6508,6 +7116,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/강력한_보안을_위해_NFS와_Kerberos_사용.pdf" 
@@ -6536,6 +7147,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이름_서비스_구성.pdf" 
@@ -6551,6 +7165,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LDAP를_사용합니다.pdf" 
@@ -6596,6 +7213,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이름_매핑을_구성합니다.pdf" 
@@ -6645,6 +7265,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFS를_사용하여_파일_액세스를_관리합니다.pdf" 
@@ -6716,6 +7339,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFS_자격_증명_캐시를_구성합니다.pdf" 
@@ -6742,6 +7368,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/엑스포트_정책_캐시_관리.pdf" 
@@ -6772,6 +7401,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_잠금_관리.pdf" 
@@ -6808,6 +7440,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFSv4_ACL_관리.pdf" 
@@ -6842,6 +7477,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFSv4_파일_위임을_관리합니다.pdf" 
@@ -6868,6 +7506,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFSv4_파일을_구성하고_잠금을_기록합니다.pdf" 
@@ -6929,6 +7570,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/부록__지원되는_NFS_버전_및_클라이언트.pdf" 
@@ -6965,6 +7609,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/부록__NFS_및_SMB_파일_및_디렉토리_이름_지정_종속성.pdf" 
@@ -7010,6 +7657,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/RDMA를_통해_NFS를_관리합니다.pdf" 
@@ -7040,6 +7690,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_SMB를_구성합니다.pdf" 
@@ -7057,6 +7710,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/준비.pdf" 
@@ -7087,6 +7743,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에_대한_SMB_액세스를_구성합니다.pdf" 
@@ -7112,6 +7771,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Active_Directory_도메인에서_SMB_서버를_설정합니다.pdf" 
@@ -7142,6 +7804,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/워크그룹에서_SMB_서버를_설정합니다.pdf" 
@@ -7187,6 +7852,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/공유_스토리지에_대한_SMB_클라이언트_액세스를_구성합니다.pdf" 
@@ -7202,6 +7870,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/볼륨_또는_qtree_스토리지_컨테이너를_생성합니다.pdf" 
@@ -7258,6 +7929,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_SMB를_관리합니다.pdf" 
@@ -7273,6 +7947,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버_지원.pdf" 
@@ -7305,6 +7982,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버를_관리합니다.pdf" 
@@ -7320,6 +8000,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/옵션을_사용하여_CIFS_서버를_사용자_지정합니다.pdf" 
@@ -7341,6 +8024,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/UNIX_보안_스타일_데이터를_위해_SMB_클라이언트에_파일_보안을_제공하는_방법을_관리합니다.pdf" 
@@ -7380,6 +8066,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버_보안_설정을_관리합니다.pdf" 
@@ -7409,6 +8098,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서명을_사용하여_네트워크_보안을_강화합니다.pdf" 
@@ -7447,6 +8139,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_통한_데이터_전송을_위해_SMB_서버에서_필요한_SMB_암호화를_구성합니다.pdf" 
@@ -7479,6 +8174,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_LDAP_세션_통신.pdf" 
@@ -7496,6 +8194,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/TLS를_통해_LDAP를_구성합니다.pdf" 
@@ -7544,6 +8245,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버에서_기본_Windows_사용자를_UNIX_사용자_매핑으로_구성합니다.pdf" 
@@ -7576,6 +8280,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/기존_oplocks_및_리스_oplocks로_클라이언트_성능_향상.pdf" 
@@ -7610,6 +8317,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버에_그룹_정책_개체를_적용합니다.pdf" 
@@ -7631,6 +8341,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버에서_GPO를_업데이트하는_방법.pdf" 
@@ -7678,6 +8391,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/도메인_컨트롤러_연결을_관리합니다.pdf" 
@@ -7714,6 +8430,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/null_세션을_사용하여_Kerberos가_아닌_환경의_스토리지에_액세스합니다.pdf" 
@@ -7742,6 +8461,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버의_NetBIOS_별칭을_관리합니다.pdf" 
@@ -7774,6 +8496,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/기타_SMB_서버_작업을_관리합니다.pdf" 
@@ -7810,6 +8535,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_액세스_및_SMB_서비스에_IPv6를_사용합니다.pdf" 
@@ -7853,6 +8581,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_사용하여_파일_액세스를_설정합니다.pdf" 
@@ -7866,6 +8597,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_스타일을_구성합니다.pdf" 
@@ -7879,6 +8613,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_스타일이_데이터_액세스에_미치는_영향.pdf" 
@@ -7928,6 +8665,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_네임스페이스에서_데이터_볼륨을_생성하고_관리합니다.pdf" 
@@ -7960,6 +8700,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이름_매핑을_구성합니다.pdf" 
@@ -7996,6 +8739,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/다중_도메인_이름_매핑_검색을_구성합니다.pdf" 
@@ -8028,6 +8774,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_공유를_생성하고_구성합니다.pdf" 
@@ -8049,6 +8798,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_공유_속성을_사용합니다.pdf" 
@@ -8092,6 +8844,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_공유_ACL을_사용하여_파일_액세스_보호.pdf" 
@@ -8120,6 +8875,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_권한을_사용하여_파일_액세스를_보호합니다.pdf" 
@@ -8148,6 +8906,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/DAC_Dynamic_Access_Control_를_사용하여_파일_액세스_보안.pdf" 
@@ -8188,6 +8949,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/내보내기_정책을_사용하여_SMB_액세스를_보호합니다.pdf" 
@@ -8218,6 +8982,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Storage_Level_Access_Guard를_사용하여_파일_액세스를_보호합니다.pdf" 
@@ -8263,6 +9030,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_사용하여_파일_액세스를_관리합니다.pdf" 
@@ -8276,6 +9046,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_사용자_및_그룹을_인증_및_인증에_사용합니다.pdf" 
@@ -8289,6 +9062,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP에서_로컬_사용자_및_그룹을_사용하는_방법.pdf" 
@@ -8327,6 +9103,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/어떤_로컬_권한이_있는지_확인합니다.pdf" 
@@ -8359,6 +9138,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_사용자_및_그룹_기능을_설정하거나_해제합니다.pdf" 
@@ -8387,6 +9169,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_사용자_계정을_관리합니다.pdf" 
@@ -8421,6 +9206,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_그룹을_관리합니다.pdf" 
@@ -8455,6 +9243,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_권한을_관리합니다.pdf" 
@@ -8494,6 +9285,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/우회_통과_검사를_구성합니다.pdf" 
@@ -8522,6 +9316,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_보안_및_감사_정책에_대한_정보를_표시합니다.pdf" 
@@ -8558,6 +9355,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_SVM에서_NTFS_파일_보안__NTFS_감사_정책_및_Storage_Level_Access_Guard를_관리합니다.pdf" 
@@ -8581,6 +9381,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_NTFS_파일_및_폴더에_파일_보안을_구성하고_적용합니다.pdf" 
@@ -8617,6 +9420,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_NTFS_파일_및_폴더에_감사_정책을_구성하고_적용합니다.pdf" 
@@ -8676,6 +9482,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_공유에_대한_메타데이터_캐시를_구성합니다.pdf" 
@@ -8704,6 +9513,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_잠금_관리.pdf" 
@@ -8736,6 +9548,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_작업을_모니터링합니다.pdf" 
@@ -8775,6 +9590,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_클라이언트_기반_서비스_구축.pdf" 
@@ -8788,6 +9606,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/오프라인_파일을_사용하여_오프라인_사용을_위해_파일_캐싱을_허용합니다.pdf" 
@@ -8820,6 +9641,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로밍_프로필을_사용하여_SVM과_연결된_SMB_서버에_사용자_프로필을_중앙에서_저장합니다.pdf" 
@@ -8848,6 +9672,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버에_데이터를_저장하려면_폴더_리디렉션을_사용합니다.pdf" 
@@ -8878,6 +9705,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이전_버전을_사용하여_파일_및_폴더를_복구합니다.pdf" 
@@ -8921,6 +9751,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_서버_기반_서비스_구축.pdf" 
@@ -8934,6 +9767,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/홈_디렉터리를_관리합니다.pdf" 
@@ -8949,6 +9785,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/홈_디렉토리_공유.pdf" 
@@ -9000,6 +9839,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/UNIX_심볼_링크에_대한_SMB_클라이언트_액세스를_구성합니다.pdf" 
@@ -9034,6 +9876,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/BranchCache를_사용하여_지사에_SMB_공유_콘텐츠를_캐싱합니다.pdf" 
@@ -9049,6 +9894,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/요구사항_및_지침.pdf" 
@@ -9083,6 +9931,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/BranchCache를_구성합니다.pdf" 
@@ -9113,6 +9964,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/BranchCache_지원_SMB_공유를_구성합니다.pdf" 
@@ -9141,6 +9995,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/BranchCache_구성을_관리하고_모니터링합니다.pdf" 
@@ -9179,6 +10036,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_공유에서_BranchCache를_해제합니다.pdf" 
@@ -9207,6 +10067,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에서_BranchCache를_비활성화하거나_활성화합니다.pdf" 
@@ -9233,6 +10096,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에서_BranchCache_구성을_삭제합니다.pdf" 
@@ -9270,6 +10136,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Microsoft_원격_복제_성능_향상.pdf" 
@@ -9304,6 +10173,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/자동_위치로_SMB_자동_노드_조회를_제공하여_클라이언트_응답_시간을_단축합니다.pdf" 
@@ -9338,6 +10210,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/액세스_기반_열거를_사용하여_공유에_대한_폴더_보안을_제공합니다.pdf" 
@@ -9375,6 +10250,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NFS_및_SMB_파일_및_디렉토리_명명_종속성.pdf" 
@@ -9420,6 +10298,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Microsoft_Hyper_V_및_SQL_Server를_위한_SMB_구성.pdf" 
@@ -9437,6 +10318,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_통한_Hyper_V_및_SQL_Server의_무중단_운영.pdf" 
@@ -9471,6 +10355,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/원격_VSS와_공유_기반_백업.pdf" 
@@ -9503,6 +10390,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/구성_요구_사항_및_고려_사항.pdf" 
@@ -9543,6 +10433,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_통한_Hyper_V_또는_SQL_Server_구성_계획.pdf" 
@@ -9569,6 +10462,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB를_통한_Hyper_V_및_SQL_Server의_무중단_운영을_위한_ONTAP_구성_생성.pdf" 
@@ -9611,6 +10507,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_구성을_통해_Hyper_V_및_SQL_Server_관리.pdf" 
@@ -9637,6 +10536,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/통계를_사용하여_SMB_작업을_통해_Hyper_V_및_SQL_Server를_모니터링합니다.pdf" 
@@ -9663,6 +10565,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/구성이_무중단_운영이_가능한지_확인합니다.pdf" 
@@ -9684,6 +10589,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMB_세션을_지속적으로_사용할_수_있는지_확인합니다.pdf" 
@@ -9737,6 +10645,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_스토리지_관리.pdf" 
@@ -9750,6 +10661,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_SAN_관리.pdf" 
@@ -9763,6 +10677,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_스토리지.pdf" 
@@ -9803,6 +10720,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NVMe_스토리지.pdf" 
@@ -9840,6 +10760,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_SAN_관리.pdf" 
@@ -9855,6 +10778,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_및_iSCSI에_대해_LUN을_설정합니다.pdf" 
@@ -9895,6 +10821,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NVMe용_네임스페이스_설정.pdf" 
@@ -9925,6 +10854,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_및_iSCSI용_LUN_관리.pdf" 
@@ -9971,6 +10903,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/권장되는_볼륨_및_파일_또는_LUN_구성_조합.pdf" 
@@ -10005,6 +10940,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/선택적_LUN_맵입니다.pdf" 
@@ -10035,6 +10973,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/iSCSI_프로토콜을_관리합니다.pdf" 
@@ -10071,6 +11012,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_프로토콜을_관리합니다.pdf" 
@@ -10097,6 +11041,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_어댑터를_사용하여_시스템을_관리합니다.pdf" 
@@ -10141,6 +11088,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NVMe_프로토콜_관리.pdf" 
@@ -10171,6 +11121,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/모든_SAN_프로토콜에_대한_LIF_관리.pdf" 
@@ -10209,6 +11162,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_환경의_데이터_보호_방법입니다.pdf" 
@@ -10224,6 +11180,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LUN을_스냅샷_복사본에서_이동_또는_복사하는_영향.pdf" 
@@ -10254,6 +11213,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexClone_LUN을_사용하여_데이터를_보호합니다.pdf" 
@@ -10290,6 +11252,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_환경에서_SnapVault_백업을_구성하고_사용합니다.pdf" 
@@ -10335,6 +11300,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_개념.pdf" 
@@ -10348,6 +11316,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_호스트_프로비저닝에_대해_설명합니다.pdf" 
@@ -10363,6 +11334,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/iSCSI_서비스_관리.pdf" 
@@ -10388,6 +11362,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/iSNS_서버_등록_요구_사항입니다.pdf" 
@@ -10438,6 +11415,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_볼륨_정보.pdf" 
@@ -10470,6 +11450,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/호스트_측_공간_관리에_대해_설명합니다.pdf" 
@@ -10508,6 +11491,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/VMware_및_Microsoft_복사본_오프로드를_통한_스토리지_가상화.pdf" 
@@ -10529,6 +11515,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Microsoft_ODX_Offloaded_Data_Transfer_.pdf" 
@@ -10584,6 +11573,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SAN_구성_참조.pdf" 
@@ -10599,6 +11591,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/iSCSI_구성에_대한_고려_사항.pdf" 
@@ -10631,6 +11626,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_구성에_대한_고려_사항.pdf" 
@@ -10667,6 +11665,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FC_어댑터를_사용하여_시스템을_관리합니다.pdf" 
@@ -10696,6 +11697,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/X1143A_R6_어댑터를_관리합니다.pdf" 
@@ -10705,8 +11709,6 @@
             X1143A-R6 어댑터를 관리합니다
           </a>
           
-
-
 
 
 
@@ -10739,6 +11741,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FCoE_구성_방법.pdf" 
@@ -10767,6 +11772,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파이버_채널_및_FCoE_조닝.pdf" 
@@ -10803,6 +11811,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/다중_경로에_대한_호스트_지원.pdf" 
@@ -10831,6 +11842,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/구성_제한.pdf" 
@@ -10885,6 +11899,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_오브젝트_스토리지_관리.pdf" 
@@ -10898,6 +11915,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_S3_구성.pdf" 
@@ -10932,6 +11952,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_S3_구성.pdf" 
@@ -10947,6 +11970,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_9에서_S3_지원.pdf" 
@@ -10977,6 +12003,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_구성_프로세스_정보.pdf" 
@@ -11007,6 +12036,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에_대한_S3_액세스를_구성합니다.pdf" 
@@ -11041,6 +12073,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_지원_SVM에_스토리지_용량_추가.pdf" 
@@ -11060,6 +12095,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/액세스_정책_문을_만들거나_수정합니다.pdf" 
@@ -11088,6 +12126,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_오브젝트_스토리지에_대한_클라이언트_액세스_지원.pdf" 
@@ -11136,6 +12177,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_SnapMirror로_버킷_보호.pdf" 
@@ -11151,6 +12195,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/원격_클러스터의_미러링_및_백업_보호.pdf" 
@@ -11181,6 +12228,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_클러스터의_미러링_및_백업_보호.pdf" 
@@ -11211,6 +12261,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클라우드_타겟을_통한_백업_보호.pdf" 
@@ -11252,6 +12305,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/S3_이벤트를_감사합니다.pdf" 
@@ -11295,6 +12351,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_및_데이터_암호화.pdf" 
@@ -11308,6 +12367,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_보안을_관리합니다.pdf" 
@@ -11340,6 +12402,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_관리자_인증_및_RBAC를_관리합니다.pdf" 
@@ -11359,6 +12424,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로그인_계정을_만듭니다.pdf" 
@@ -11374,6 +12442,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_계정_액세스를_설정합니다.pdf" 
@@ -11421,6 +12492,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/액세스_제어_역할을_관리합니다.pdf" 
@@ -11453,6 +12527,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/관리자_계정을_관리합니다.pdf" 
@@ -11470,6 +12547,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CA_서명_서버_인증서를_생성하고_설치합니다.pdf" 
@@ -11498,6 +12578,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Active_Directory_도메인_컨트롤러_액세스를_구성합니다.pdf" 
@@ -11526,6 +12609,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/LDAP_또는_NIS_서버_액세스를_구성합니다.pdf" 
@@ -11582,6 +12668,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/랜섬웨어_보호.pdf" 
@@ -11618,6 +12707,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/안티바이러스_구성.pdf" 
@@ -11633,6 +12725,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NetApp_바이러스_백신_보호_정보.pdf" 
@@ -11663,6 +12758,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스캐너_풀을_구성합니다.pdf" 
@@ -11697,6 +12795,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/액세스_시_스캔을_구성합니다.pdf" 
@@ -11727,6 +12828,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/온디맨드_스캐닝_구성.pdf" 
@@ -11765,6 +12869,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/연결_문제를_해결합니다.pdf" 
@@ -11800,6 +12907,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NAS_감사_및_보안_추적.pdf" 
@@ -11815,6 +12925,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에서_NAS_이벤트를_감사합니다.pdf" 
@@ -11830,6 +12943,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/감사_작동_방식.pdf" 
@@ -11864,6 +12980,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/감사할_수_있는_SMB_이벤트입니다.pdf" 
@@ -11898,6 +13017,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에_파일_및_디렉토리_감사_구성을_생성합니다.pdf" 
@@ -11926,6 +13048,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_및_폴더_감사_정책을_구성합니다.pdf" 
@@ -11954,6 +13079,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_및_디렉토리에_적용된_감사_정책에_대한_정보를_표시합니다.pdf" 
@@ -11982,6 +13110,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/감사할_수_있는_CLI_변경_이벤트입니다.pdf" 
@@ -12016,6 +13147,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/감사_구성을_관리합니다.pdf" 
@@ -12061,6 +13195,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM에서_파일_모니터링_및_관리를_위해_FPolicy를_사용합니다.pdf" 
@@ -12074,6 +13211,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy의_작동_방식.pdf" 
@@ -12093,6 +13233,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy가_외부_FPolicy_서버에서_작동하는_방식.pdf" 
@@ -12148,6 +13291,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_구성을_계획합니다.pdf" 
@@ -12161,6 +13307,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_외부_엔진_구성을_계획하십시오.pdf" 
@@ -12191,6 +13340,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_이벤트_구성을_계획합니다.pdf" 
@@ -12223,6 +13375,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_정책_구성을_계획합니다.pdf" 
@@ -12251,6 +13406,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_범위_구성을_계획합니다.pdf" 
@@ -12286,6 +13444,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_구성을_생성합니다.pdf" 
@@ -12318,6 +13479,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_구성을_수정합니다.pdf" 
@@ -12344,6 +13508,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_구성에_대한_정보를_표시합니다.pdf" 
@@ -12374,6 +13541,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FPolicy_서버_연결을_관리합니다.pdf" 
@@ -12413,6 +13583,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_추적을_사용하여_파일_및_디렉터리_액세스를_확인하거나_문제를_해결합니다.pdf" 
@@ -12432,6 +13605,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보안_추적을_수행합니다.pdf" 
@@ -12492,6 +13668,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_암호화를_관리합니다.pdf" 
@@ -12518,6 +13697,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용하여_암호화를_관리합니다.pdf" 
@@ -12533,6 +13715,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NetApp_볼륨_암호화를_구성합니다.pdf" 
@@ -12550,6 +13735,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NVE를_구성합니다.pdf" 
@@ -12567,6 +13755,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/외부_키_관리를_구성합니다.pdf" 
@@ -12614,6 +13805,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NVE를_사용하여_볼륨_데이터_암호화.pdf" 
@@ -12657,6 +13851,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NetApp_하드웨어_기반_암호화를_구성합니다.pdf" 
@@ -12674,6 +13871,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/외부_키_관리를_구성합니다.pdf" 
@@ -12712,6 +13912,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/온보드_키_관리를_구성합니다.pdf" 
@@ -12753,6 +13956,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NetApp_암호화_관리.pdf" 
@@ -12780,6 +13986,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/암호화된_볼륨에서_데이터를_안전하게_제거합니다.pdf" 
@@ -12822,6 +14031,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FIPS_드라이브_또는_SED에_액세스할_수_없도록_설정합니다.pdf" 
@@ -12895,6 +14107,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/데이터_보호_및_재해_복구.pdf" 
@@ -12908,6 +14123,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_데이터_보호.pdf" 
@@ -12977,6 +14195,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_클러스터_및_SVM_피어링.pdf" 
@@ -12992,6 +14213,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/클러스터_및_SVM_피어링을_준비합니다.pdf" 
@@ -13022,6 +14246,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/인터클러스터_LIF를_구성합니다.pdf" 
@@ -13050,6 +14277,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/피어_관계_구성_ONTAP_9_3_이상_.pdf" 
@@ -13078,6 +14308,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/피어_관계_구성_ONTAP_9_2_이하_.pdf" 
@@ -13119,6 +14352,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_데이터_보호.pdf" 
@@ -13134,6 +14370,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/로컬_Snapshot_복사본_관리.pdf" 
@@ -13149,6 +14388,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/사용자_지정_스냅샷_정책을_구성합니다.pdf" 
@@ -13179,6 +14421,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스냅샷_복사본_예약_공간을_관리합니다.pdf" 
@@ -13215,6 +14460,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스냅샷_복사본에서_파일을_복원합니다.pdf" 
@@ -13256,6 +14504,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_볼륨_복제.pdf" 
@@ -13287,6 +14538,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_라이센스.pdf" 
@@ -13324,6 +14578,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_볼륨_복제를_관리합니다.pdf" 
@@ -13341,6 +14598,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/한_번에_한_단계씩_복제_관계를_구성합니다.pdf" 
@@ -13358,6 +14618,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/복제_정책을_사용자_지정합니다.pdf" 
@@ -13407,6 +14670,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_DR_대상_볼륨의_데이터를_제공합니다.pdf" 
@@ -13435,6 +14701,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_대상_볼륨에서_파일을_복원합니다.pdf" 
@@ -13482,6 +14751,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_SVM_복제_관리.pdf" 
@@ -13495,6 +14767,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM_구성_복제.pdf" 
@@ -13533,6 +14808,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM_DR_대상에서_데이터_제공.pdf" 
@@ -13559,6 +14837,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/소스_SVM을_다시_활성화합니다.pdf" 
@@ -13600,6 +14881,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_루트_볼륨_복제를_관리합니다.pdf" 
@@ -13630,6 +14914,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_기술_세부_정보.pdf" 
@@ -13671,6 +14958,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapLock_기술을_사용한_아카이브_및_규정_준수.pdf" 
@@ -13690,6 +14980,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapLock를_구성합니다.pdf" 
@@ -13713,6 +15006,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/보존_시간을_설정합니다.pdf" 
@@ -13754,6 +15050,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/WORM에_파일을_커밋합니다.pdf" 
@@ -13790,6 +15089,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/권한이_있는_삭제_기능을_사용합니다.pdf" 
@@ -13822,6 +15124,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapLock_볼륨을_이동합니다.pdf" 
@@ -13859,6 +15164,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/정합성_보장_그룹_관리.pdf" 
@@ -13882,6 +15190,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_비즈니스_연속성.pdf" 
@@ -13899,6 +15210,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/계획_수립.pdf" 
@@ -13933,6 +15247,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_사용하여_비즈니스_연속성을_위한_SnapMirror를_관리합니다.pdf" 
@@ -13961,6 +15278,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ONTAP_CLI를_사용한_설치_및_설정.pdf" 
@@ -13995,6 +15315,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/관리.pdf" 
@@ -14037,6 +15360,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/문제_해결.pdf" 
@@ -14099,6 +15425,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/MetroCluster_및_SnapMirror_비즈니스_연속성을_위한_중재자_서비스.pdf" 
@@ -14125,6 +15454,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_MetroCluster_사이트를_관리합니다.pdf" 
@@ -14161,6 +15493,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/테이프_백업을_사용한_데이터_보호.pdf" 
@@ -14180,6 +15515,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/테이프_드라이브_관리.pdf" 
@@ -14216,6 +15554,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/테이프_드라이브_정보.pdf" 
@@ -14235,6 +15576,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/테이프_장치_개요.pdf" 
@@ -14263,6 +15607,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/테이프_에일리어싱.pdf" 
@@ -14306,6 +15653,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/ndmpcopy를_사용하여_데이터를_전송합니다.pdf" 
@@ -14332,6 +15682,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨용_NDMP.pdf" 
@@ -14347,6 +15700,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NDMP_작업_모드에_대해_설명합니다.pdf" 
@@ -14375,6 +15731,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/환경_변수.pdf" 
@@ -14426,6 +15785,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨에_대한_노드_범위_NDMP_모드를_관리합니다.pdf" 
@@ -14454,6 +15816,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨에_대한_SVM_범위의_NDMP_모드를_관리합니다.pdf" 
@@ -14496,6 +15861,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨의_덤프_엔진_정보.pdf" 
@@ -14556,6 +15924,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨용_SMTape_엔진_정보.pdf" 
@@ -14600,6 +15971,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨에_대한_테이프_백업_및_복원_작업을_모니터링합니다.pdf" 
@@ -14617,6 +15991,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/덤프_및_복원_이벤트_로그_메시지_형식은_무엇입니까.pdf" 
@@ -14658,6 +16035,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/FlexVol_볼륨의_테이프_백업_및_복원에_대한_오류_메시지입니다.pdf" 
@@ -14671,6 +16051,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/백업_및_복원_오류_메시지.pdf" 
@@ -14725,6 +16108,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NDMP_오류_메시지입니다.pdf" 
@@ -14769,6 +16155,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/덤프_오류_메시지.pdf" 
@@ -14811,6 +16200,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SMTape_오류_메시지입니다.pdf" 
@@ -14917,6 +16309,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NDMP_구성.pdf" 
@@ -14940,6 +16335,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM_레벨_또는_노드_레벨에서_NDMP를_구성합니다.pdf" 
@@ -14955,6 +16353,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SVM_범위_NDMP를_구성합니다.pdf" 
@@ -14985,6 +16386,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/노드_범위_NDMP를_구성합니다.pdf" 
@@ -15031,6 +16435,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/NetApp_Element_소프트웨어와_ONTAP_간의_복제.pdf" 
@@ -15048,6 +16455,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Element_소프트웨어에서_SnapMirror를_활성화합니다.pdf" 
@@ -15076,6 +16486,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/복제_관계를_구성합니다.pdf" 
@@ -15091,6 +16504,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/복제_정책을_사용자_지정합니다.pdf" 
@@ -15117,6 +16533,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/복제_관계를_생성합니다.pdf" 
@@ -15154,6 +16573,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/SnapMirror_DR_대상_볼륨의_데이터를_제공합니다.pdf" 
@@ -15204,6 +16626,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/이벤트_및_성능_모니터링.pdf" 
@@ -15217,6 +16642,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/System_Manager로_클러스터_성능을_봅니다.pdf" 
@@ -15249,6 +16677,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_성능_모니터링_설정.pdf" 
@@ -15264,6 +16695,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/성능_모니터링.pdf" 
@@ -15283,6 +16717,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Active_IQ_Unified_Manager를_설치합니다.pdf" 
@@ -15311,6 +16748,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/기본_모니터링_작업을_설정합니다.pdf" 
@@ -15328,6 +16768,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/성능_임계값을_사용하여_이벤트_알림을_생성합니다.pdf" 
@@ -15385,6 +16828,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI를_통한_성능_관리.pdf" 
@@ -15400,6 +16846,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/성능을_모니터링합니다.pdf" 
@@ -15419,6 +16868,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/Active_IQ_Unified_Manager를_설치합니다.pdf" 
@@ -15447,6 +16899,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/기본_모니터링_작업을_설정합니다.pdf" 
@@ -15492,6 +16947,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/성능_문제_관리.pdf" 
@@ -15507,6 +16965,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/기본_인프라_검사를_수행합니다.pdf" 
@@ -15520,6 +16981,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/스토리지_시스템의_프로토콜_설정을_확인합니다.pdf" 
@@ -15567,6 +17031,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/워크로드_관리.pdf" 
@@ -15584,6 +17051,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/QoS로_처리량_보장.pdf" 
@@ -15649,6 +17119,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/파일_시스템_분석.pdf" 
@@ -15683,6 +17156,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/EMS_구성.pdf" 
@@ -15700,6 +17176,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/CLI로_EMS_이벤트_알림을_설정한다.pdf" 
@@ -15734,6 +17213,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/ko-kr/ontap/pdfs/sidebar/더_이상_사용되지_않는_EMS_이벤트_매핑을_업데이트합니다.pdf" 
@@ -20008,8 +21490,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-config/supported-port-config-x1143a-r6-adapter-concept.html">
         개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-config/port-config-options-x1143a-r6-adapter-concept.html">
-        X1143A-R6 어댑터의 포트 구성 옵션입니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-config/configure-ports-task.html">
         포트를 구성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-config/change-uta2-port-cna-mode-fc-task.html">
@@ -21250,7 +22730,7 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smbc/smbc_install_high_level_deployment_workflow.html">
         고급 배포 워크플로
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smbc/smbc-install-confirm-ontap-cluster.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smbc/smbc_install_confirm_ontap_cluster.html">
         ONTAP 중재자 서비스를 설치하고 ONTAP 클러스터 구성을 확인합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smbc/smbc_install_initialize_the_ontap_mediator.html">
         ONTAP 중재자를 초기화합니다
@@ -22004,6 +23484,7 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
+
   </div>
   
 
@@ -22533,98 +24014,122 @@ Azure 또는 AWS로 볼륨에 대한 아카이브를 활성화하면 아카이�
   <div class="n-footer__bottom">
     <div class="n-container">
       <div class="n-footer__bottom-left">
-
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
-
-</ul>
-</div>
-<div class="n-footer__social-links">
-<ul class="n-footer__social-link-list">
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
-<span class="n-footer__social-link-text">blog</span>
-<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
-  <title>blog@</title>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#blog"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
-<span class="n-footer__social-link-text">community</span>
-<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
-<title>community@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#comments"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
-<span class="n-footer__social-link-text">twitter</span>
-<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
-<title>twitter@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#twitter"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
-<span class="n-footer__social-link-text">facebook</span>
-<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
-<title>facebook@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#facebook"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
-<span class="n-footer__social-link-text">linkedin</span>
-<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
-<title>linkedin@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#linkedin"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
-<span class="n-footer__social-link-text">youtube</span>
-<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
-<title>youtube@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#youtube"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
-<span class="n-footer__social-link-text">slideshare</span>
-<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
-<title>slideshare@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/ontap/common/svg/sprite.svg#slideshare"></use>
-</svg>
-
-</a>
-</li>
-</ul>
-</div>
-
-</div>
-<div class="n-footer__bottom-right">
-  <p class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">의견을 공유해 주십시오</a>
-  <a href="https://docs.netapp.com/ko-kr/announcements/" class="n-footer__copyright">공지 사항</a>
-  </p>
-</div>
-</div>
-</div>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">이용 약관</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">개인 정보 보호 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">쿠키 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">쿠키 설정</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">웹 사이트에 대한 피드백이 있으십니까?</span>
+              <a target="_self" href="javascript:netapp_mailto()">의견을 공유해 주십시오</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/ko-kr/announcements/">공지 사항</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/ko-kr/ontap/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
       </div><!-- Elasticsearch JS -->
