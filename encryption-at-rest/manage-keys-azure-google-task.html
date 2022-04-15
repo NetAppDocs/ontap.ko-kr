@@ -23533,7 +23533,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-04 15:14:19 +0000">04/04/2022</time>
+    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
     
   
 
@@ -23590,27 +23590,57 @@
 <div class="sect1">
 <h2 id="cli를-사용하여-외부-키-관리를-활성화합니다">CLI를 사용하여 외부 키 관리를 활성화합니다</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>외부 키 관리를 사용하는 방법은 사용하는 특정 키 관리자에 따라 다릅니다. Cloud Volumes ONTAP에서 AKV를 활성화하는 경우 별도의 절차가 있다는 점에 유의하십시오. 요구 사항에 맞는 키 관리자 및 환경의 탭을 선택합니다.</p>
+</div>
 <div class="exampleblock tabbed-block">
 <div class="content">
 <div class="openblock">
-<div class="title">Azure를 지원합니다</div>
+<div class="title">ONTAP용 Azure</div>
 <div class="content">
 <div class="olist arabic">
-<div class="title">CLI를 사용하여 AKV를 사용하도록 설정합니다</div>
+<div class="title">ONTAP용 Azure 키 저장소를 활성화합니다</div>
 <ol class="arabic">
 <li>
-<p>시작하기 전에 Azure 계정에서 클라이언트 암호 또는 인증서로 적절한 인증 자격 증명을 얻어야 합니다.</p>
-<div class="paragraph">
-<p>또한 클러스터의 모든 노드가 정상 상태인지 확인해야 합니다. 'cluster show' 명령을 사용하여 확인할 수 있습니다.</p>
-</div>
+<p>시작하기 전에 Azure 계정에서 클라이언트 암호 또는 인증서로 적절한 인증 자격 증명을 얻어야 합니다. 또한 클러스터의 모든 노드가 정상 상태인지 확인해야 합니다. 'cluster show' 명령을 사용하여 확인할 수 있습니다.</p>
 </li>
 <li>
 <p>권한 수준을 Advanced&#8217;et-priv advanced로 설정합니다</p>
 </li>
 <li>
-<p>SVM의 보안 키 관리자 외부 Azure enable-client-id_client_id_-tenant-id_tenant_id_-name-key-id_id_-authentication-method {certificate | client-secret} 에서 AKV를 활성화합니다</p>
-<div class="paragraph">
-<p>메시지가 표시되면 Azure 계정에서 클라이언트 인증서 또는 클라이언트 암호를 입력합니다.</p>
+<p>SVM의 보안 키 관리자 외부 Azure ENABLE - CLIENT-id_client_id_-tenant-id_tenant_id_-name-key-id_id_-authentication-method {certificate|client-secret} 에서 AKV를 활성화합니다. 메시지가 나타나면 Azure 계정에서 클라이언트 인증서 또는 클라이언트 암호를 입력합니다.</p>
+</li>
+<li>
+<p>AKV가 올바르게 활성화되었는지 확인합니다. '보안 키 관리자 외부 Azure show vserver_vserver_name_' 서비스 상태가 정상이 아닌 경우 데이터 가상 서버 LIF를 통해 AKV 키 관리 서비스에 대한 연결을 설정합니다.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">Cloud Volumes ONTAP용 Azure</div>
+<div class="content">
+<div class="olist arabic">
+<div class="title">Cloud Volumes ONTAP용 Azure 키 저장소를 활성화합니다</div>
+<ol class="arabic">
+<li>
+<p>시작하기 전에 Azure 계정에서 클라이언트 암호 또는 인증서로 적절한 인증 자격 증명을 얻어야 합니다. 또한 클러스터의 모든 노드가 정상 상태인지 확인해야 합니다. 'cluster show' 명령을 사용하여 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>권한 수준을 Advanced&#8217;et-priv advanced로 설정합니다</p>
+</li>
+<li>
+<p>SVM의 보안 키 관리자 외부 Azure ENABLE - CLIENT-id_client_id_-tenant-id_tenant_id_-name-key-id_id_-authentication-method {certificate|client-secret} 에서 AKV를 활성화합니다. 메시지가 나타나면 Azure 계정에서 클라이언트 인증서 또는 클라이언트 암호를 입력합니다.</p>
+</li>
+<li>
+<p>데이터 SVM을 위한 DNS 설정: dns create-domain_domain_name_-name-servers_server_address_-vserver_vserver_name_'을 선택합니다</p>
+</li>
+<li>
+<p>키 볼트가 포함된 서브스크립션의 Azure 포털로 이동합니다. <strong> 액세스 정책</strong> 메뉴를 선택합니다. 응용 프로그램에 키 권한, 비밀 권한 및 인증서 권한을 제공한 다음 저장합니다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/azure-key-vault-access-policies.png" alt="제공해야 하는 사용 권한 필드를 보여 주는 Azure 액세스 정책 메뉴">
+</div>
 </div>
 </li>
 <li>
@@ -23621,25 +23651,19 @@
 </div>
 </div>
 <div class="openblock">
-<div class="title">Google 클라우드</div>
+<div class="title">Google Cloud for ONTAP 를 참조하십시오</div>
 <div class="content">
 <div class="olist arabic">
-<div class="title">CLI를 사용하여 Cloud KMS를 사용하도록 설정합니다</div>
+<div class="title">ONTAP용 CLI를 사용하여 클라우드 KMS를 사용하도록 설정합니다</div>
 <ol class="arabic">
 <li>
-<p>시작하기 전에 JSON 형식으로 Google Cloud KMS 계정 키 파일의 개인 키를 받아야 합니다. GCP 계정에서 찾을 수 있습니다.</p>
-<div class="paragraph">
-<p>또한 클러스터의 모든 노드가 정상 상태인지 확인해야 합니다. 'cluster show' 명령을 사용하여 확인할 수 있습니다.</p>
-</div>
+<p>시작하기 전에 JSON 형식으로 Google Cloud KMS 계정 키 파일의 개인 키를 받아야 합니다. GCP 계정에서 찾을 수 있습니다. 또한 클러스터의 모든 노드가 정상 상태인지 확인해야 합니다. 'cluster show' 명령을 사용하여 확인할 수 있습니다.</p>
 </li>
 <li>
 <p>권한 수준을 Advanced&#8217;et-priv advanced로 설정합니다</p>
 </li>
 <li>
-<p>SVM 보안 키 관리자 외부 GCP enable-vserver_data_svm_name_-project-id_project_id_-key-ring-name_key_ring_name_-key-ring-location_key_ring_location_-key-name_key_key_key_key_key_name_'에서 Cloud KMS를 활성화합니다</p>
-<div class="paragraph">
-<p>메시지가 표시되면 서비스 계정 개인 키로 JSON 파일의 내용을 입력합니다</p>
-</div>
+<p>SVM 보안 키 관리자에서 Cloud KMS 사용 외부 GCP 활성화 - vserver_data_svm_name_-project-id_project_id_-key-ring-name_key_ring_name_-key-ring-location_key_ring_location_-key-name_key_key_key_key_key_key_name_'이 표시되면 서비스 계정 개인 키를 사용하여 JSON 파일의 내용을 입력합니다</p>
 </li>
 <li>
 <p>Cloud KMS가 올바른 매개 변수로 구성되었는지 확인합니다. '보안 키 관리자 외부 GCP show vserver_vserver_name_' 암호화된 볼륨이 생성되지 않으면 kms_Wrapped_key_status의 상태가 '"unknown"'이 됩니다. 서비스 상태가 양호하지 않은 경우 데이터 SVM LIF를 통해 GCP 키 관리 서비스에 대한 연결을 설정합니다.</p>
