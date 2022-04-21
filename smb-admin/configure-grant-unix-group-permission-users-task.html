@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>CIFS 사용자에게 UNIX 그룹 권한 부여 를 구성합니다</title>
+  <title>SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="CIFS 사용자에게 UNIX 그룹 권한 부여 를 구성합니다" />
+  <meta property="og:title" content="SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/smb-admin/configure-grant-unix-group-permission-users-task.html" />
-	<meta property="og:description" content="들어오는 CIFS 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다." />
+	<meta property="og:description" content="들어오는 SMB 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="들어오는 CIFS 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다.">
-  <meta name="keywords" content=" configure, grant, group, permission, access, file, directories, directory, incoming, cifs, ownder, configure the grant unix group permission to cifs users"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="들어오는 SMB 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다.">
+  <meta name="keywords" content=" configure, grant, group, permission, access, file, directories, directory, incoming, cifs, ownder, configure the grant unix group permission to smb users"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[CIFS 사용자에게 UNIX 그룹 권한 부여 를 구성합니다](https://docs.netapp.com/ko-kr/ontap/smb-admin/configure-grant-unix-group-permission-users-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/smb-admin/configure-grant-unix-group-permission-users-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다](https://docs.netapp.com/ko-kr/ontap/smb-admin/configure-grant-unix-group-permission-users-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/smb-admin/configure-grant-unix-group-permission-users-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -8005,11 +8005,11 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/ontap/pdfs/sidebar/옵션을_사용하여_CIFS_서버를_사용자_지정합니다.pdf" 
+              href="/ko-kr/ontap/pdfs/sidebar/옵션을_사용하여_SMB_서버를_사용자_지정합니다.pdf" 
             
           >
             <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            옵션을 사용하여 CIFS 서버를 사용자 지정합니다
+            옵션을 사용하여 SMB 서버를 사용자 지정합니다
           </a>
           
 
@@ -20114,14 +20114,14 @@
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/modify-servers-task.html">
         SMB 서버를 수정합니다
       </a></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 옵션을 사용하여 CIFS 서버를 사용자 지정합니다</div>
+        <div class="na-navbar-padding"> 옵션을 사용하여 SMB 서버를 사용자 지정합니다</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/server-options-reference.html">
         사용 가능한 SMB 서버 옵션
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/configure-server-options-task.html">
-        CIFS 서버 옵션을 구성합니다
+        SMB 서버 옵션을 구성합니다
       </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/configure-grant-unix-group-permission-users-task.html">
-        CIFS 사용자에게 UNIX 그룹 권한 부여 를 구성합니다
+        SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/configure-access-restrictions-anonymous-users-task.html">
         익명 사용자의 액세스 제한을 구성합니다
       </a></li><li class="subfolders "><a href="#">
@@ -20829,7 +20829,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/requirements-configuring-branchcache-concept.html">
         BranchCache 구성 요구 사항
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/configure-branchcache-task.html">
-        CIFS 서버에서 BranchCache를 구성합니다
+        SMB 서버에서 BranchCache를 구성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/smb-admin/configure-branchcache-remote-office-concept.html">
         원격 사무소에서 BranchCache 구성에 대한 정보를 찾을 수 있는 위치
       </a></li></ul></li><li class="subfolders "><a href="#">
@@ -23490,14 +23490,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">CIFS 사용자에게 UNIX 그룹 권한 부여 를 구성합니다</h1>
+  <h1 class="n-doc__component-detail-heading">SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-04-21 20:52:36 +0000">04/21/2022</time>
     
   
 
@@ -23505,7 +23505,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>들어오는 CIFS 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다.</p>
+<p>들어오는 SMB 사용자가 파일 소유자가 아닌 경우에도 파일 또는 디렉토리에 액세스할 수 있는 그룹 권한을 부여하도록 이 옵션을 구성할 수 있습니다.</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
