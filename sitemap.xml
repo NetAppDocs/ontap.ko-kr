@@ -2218,13 +2218,6 @@
     </url>
   
     <url>
-      <loc>https://docs.netapp.com/ko-kr/ontap/software_setup/concept_how_to_send_comments_about_documentation_and_receive_update_notifications_netapp_post_preface.html</loc>
-      
-      <lastmod>2022-04-15T14:41:21+00:00</lastmod>
-      
-    </url>
-  
-    <url>
       <loc>https://docs.netapp.com/ko-kr/ontap/concept_key_ontap.html</loc>
       
       <lastmod>2022-04-15T14:41:21+00:00</lastmod>
@@ -8287,6 +8280,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/ko-kr/ontap/high-availability/halt-reboot-node-wo-takeover-task.html</loc>
+      
+      <lastmod>2022-05-02T03:48:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/ko-kr/ontap/nfs-admin/handle-clients-unlisted-security-type-concept.html</loc>
       
       <lastmod>2022-04-15T14:41:21+00:00</lastmod>
@@ -13182,7 +13182,7 @@
     <url>
       <loc>https://docs.netapp.com/ko-kr/ontap//search.html</loc>
       
-      <lastmod>2022-04-29T17:53:51+00:00</lastmod>
+      <lastmod>2022-05-02T03:51:54+00:00</lastmod>
       
     </url>
   
