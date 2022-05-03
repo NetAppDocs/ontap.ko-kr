@@ -23501,7 +23501,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-03 01:45:44 +0000">05/03/2022</time>
     
   
 
@@ -23535,7 +23535,7 @@
 <p>ONTAP 9.6부터는 유지보수 모드에서 디스크 완전 삭제를 수행할 수 있습니다.</p>
 </div>
 <div class="ulist">
-<div class="title">무엇을 &#8217;필요로 할거야</div>
+<div class="title">시작하기 전에</div>
 <ul>
 <li>
 <p>디스크는 SED(자체 암호화 디스크)가 될 수 없습니다.</p>
@@ -23556,6 +23556,20 @@
 </li>
 <li>
 <p>삭제할 디스크가 파티션된 경우 각 디스크의 파티션을 해제합니다.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>디스크 파티션 해제를 위한 명령은 diag 수준에서만 사용할 수 있으며 NetApp 지원 부서의 감독 하에 수행해야 합니다. 계속하기 전에 NetApp Support에 문의하는 것이 좋습니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Disk_name의 파티션을 해제합니다</p>
 </div>
@@ -23572,9 +23586,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="참고">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>삭제 중에 노드 전원을 끄거나 스토리지 연결을 중단하거나 타겟 디스크를 제거하지 마십시오. 포맷 단계에서 제거가 중단된 경우 디스크를 삭제하고 스페어 풀로 반환할 준비가 되기 전에 포맷 단계를 다시 시작하고 완료해야 합니다. 완전 삭제 프로세스를 중단해야 하는 경우 "disk sanitize abort" 명령을 사용하여 중단할 수 있습니다. 지정된 디스크가 완전 삭제의 포맷 단계를 진행 중인 경우 단계가 완료될 때까지 중단이 발생하지 않습니다.</p>
-</div>
+삭제 중에 노드 전원을 끄거나 스토리지 연결을 중단하거나 타겟 디스크를 제거하지 마십시오. 포맷 단계에서 제거가 중단된 경우 디스크를 삭제하고 스페어 풀로 반환할 준비가 되기 전에 포맷 단계를 다시 시작하고 완료해야 합니다. 완전 삭제 프로세스를 중단해야 하는 경우 "disk sanitize abort" 명령을 사용하여 중단할 수 있습니다. 지정된 디스크가 완전 삭제의 포맷 단계를 진행 중인 경우 단계가 완료될 때까지 중단이 발생하지 않습니다.
 </td>
 </tr>
 </table>
@@ -23618,7 +23630,7 @@
 <p>notesHell 명령을 사용하여 디스크 삭제를 활성화하면 일부 낮은 수준의 ONTAP 명령이 비활성화됩니다. 노드에 디스크 삭제가 설정된 후에는 해제할 수 없습니다.</p>
 </div>
 <div class="ulist">
-<div class="title">무엇을 &#8217;필요로 할거야</div>
+<div class="title">시작하기 전에</div>
 <ul>
 <li>
 <p>디스크는 스페어 디스크여야 하며, 노드가 소유해야 하며 애그리게이트에는 사용되지 않습니다.</p>
@@ -23646,7 +23658,7 @@
 <li>
 <p>삭제할 디스크를 소유하는 노드에 대한 노드 선택을 입력합니다.</p>
 <div class="paragraph">
-<p>'system node run-node node_name&#8217;입니다</p>
+<p>'system node run-node_node_name_'</p>
 </div>
 </li>
 <li>
@@ -23666,8 +23678,22 @@
 </li>
 <li>
 <p>삭제할 디스크가 파티션된 경우 각 디스크의 파티션을 해제합니다.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Disk_name의 파티션을 해제합니다</p>
+<p>디스크 파티션 해제를 위한 명령은 diag 수준에서만 사용할 수 있으며 NetApp 지원 부서의 감독 하에 수행해야 합니다. 계속하기 전에 NetApp Support에 문의하는 것이 좋습니다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>디스크 이름 _ 의 파티션을 해제했습니다</p>
 </div>
 </li>
 <li>
@@ -23770,13 +23796,13 @@
 <li>
 <p>할당되지 않은 삭제된 디스크를 각 디스크의 적절한 노드에 할당합니다.</p>
 <div class="paragraph">
-<p>'storage disk assign-disk disk_name-owner node_name&#8217;입니다</p>
+<p>'Storage disk assign-disk_name_-owner_node_name_'</p>
 </div>
 </li>
 <li>
 <p>디스크를 각 디스크의 예비 상태로 되돌립니다.</p>
 <div class="paragraph">
-<p>'storage disk unfail-disk disk_name-s-q'</p>
+<p>'storage disk unfail-disk_disk_name_-s-q'</p>
 </div>
 </li>
 <li>

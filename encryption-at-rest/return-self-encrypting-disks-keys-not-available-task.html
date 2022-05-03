@@ -9,14 +9,14 @@
   <meta property="og:title" content="인증 키가 손실되면 FIPS 드라이브 또는 SED를 서비스에 반환합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/encryption-at-rest/return-self-encrypting-disks-keys-not-available-task.html" />
-	<meta property="og:description" content="FIPS 드라이브 또는 SED가 영구적으로 인증 키를 분실하여 KMIP 서버에서 검색할 수 없는 경우, 시스템은 FIPS 드라이브 또는 SED를 파손된 것으로 처리합니다. 디스크의 데이터에 액세스하거나 복구할 수 없지만 SED의 사용되지 않은 공간을 데이터에 다시 사용할 수 있도록..." />
+	<meta property="og:description" content="FIPS 드라이브 또는 SED가 영구적으로 인증 키를 분실하여 KMIP 서버에서 검색할 수 없는 경우, 시스템은 FIPS 드라이브 또는 SED를 파손된 것으로 처리합니다. 디스크의 데이터에 액세스하거나 복구할 수 없지만 SED의 미사용 공간을 데이터에 다시 사용할 수 있도록 하는 ..." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="FIPS 드라이브 또는 SED가 영구적으로 인증 키를 분실하여 KMIP 서버에서 검색할 수 없는 경우, 시스템은 FIPS 드라이브 또는 SED를 파손된 것으로 처리합니다. 디스크의 데이터에 액세스하거나 복구할 수 없지만 SED의 사용되지 않은 공간을 데이터에 다시 사용할 수 있도록...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="FIPS 드라이브 또는 SED가 영구적으로 인증 키를 분실하여 KMIP 서버에서 검색할 수 없는 경우, 시스템은 FIPS 드라이브 또는 SED를 파손된 것으로 처리합니다. 디스크의 데이터에 액세스하거나 복구할 수 없지만 SED의 미사용 공간을 데이터에 다시 사용할 수 있도록 하는 ...">
   <meta name="keywords" content=" returning, fips, drive, sed, service, authentication, keys, lost"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -23501,7 +23501,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-03 01:45:44 +0000">05/03/2022</time>
     
   
 
@@ -23516,6 +23516,9 @@
 </div>
 <div class="paragraph">
 <p>FIPS 드라이브 또는 SED의 인증 키가 영구적으로 손실되어 복구할 수 없는 경우에만 이 프로세스를 사용해야 합니다.</p>
+</div>
+<div class="paragraph">
+<p>디스크가 분할되어 있는 경우 이 프로세스를 시작하기 전에 먼저 분할되지 않아야 합니다. 포함 항목::../_include/unpartition-disk.adoc [ ]</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
