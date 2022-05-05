@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="네트워크에서 노드, 디스크 쉘프 및 스토리지 스위치의 구성을 확인하고 발생할 수 있는 문제를 해결할 수 있습니다.">
-  <meta name="keywords" content=" netapp, ontap, troubleshoot, hardware, controller, fan, switch, system, problems, errors, issues, card, high temperature, heat, port, FRU, hardware visualization, visual, visualize, visualise, visualisation, video, hardware view, disk shelf, adapter card, console ports, view node, view disk shelf, view disk shelves, view switch"><!-- Icons -->
+  <meta name="keywords" content=" netapp, ontap, troubleshoot, hardware, controller, fan, switch, system, problems, errors, issues, card, high temperature, heat, port, SAS port, FRU, hardware visualization, visual, visualize, visualise, visualisation, video, hardware view, disk shelf, adapter card, console ports, view node, view disk shelf, view disk shelves, view switch"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -1497,6 +1497,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -1621,6 +1623,12 @@
 
 </ul>
   
+
+
+
+
+
+
 
 
 
@@ -2271,6 +2279,8 @@
             관리 활동에 대한 감사 로깅을 관리합니다
           </a>
           
+
+
 
 
 
@@ -4041,10 +4051,6 @@
 
 
 
-
-
-
-
           
         </li>
       </ul>
@@ -5084,6 +5090,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -5376,6 +5384,8 @@
             FlexCache 관계를 관리합니다
           </a>
           
+
+
 
 
 
@@ -7190,6 +7200,8 @@
             LDAP를 사용합니다
           </a>
           
+
+
 
 
 
@@ -10721,6 +10733,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -10822,6 +10836,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -10846,6 +10862,8 @@
             NVMe용 네임스페이스 설정
           </a>
           
+
+
 
 
 
@@ -12669,6 +12687,43 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/ko-kr/ontap/pdfs/sidebar/여러_관리자_검증_관리.pdf" 
+            
+          >
+            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
+            여러 관리자 검증 관리
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
           
         </li>
       </ul>
@@ -12693,6 +12748,8 @@
             랜섬웨어 보호
           </a>
           
+
+
 
 
 
@@ -13896,6 +13953,8 @@
             외부 키 관리를 구성합니다
           </a>
           
+
+
 
 
 
@@ -17663,6 +17722,8 @@
         Snapshot 복사본
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/identify-user-sha2-hash-user-accounts.html">
         SHA-2 해시 기능을 사용하는 사용자 계정
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/anti-ransomware-license-task.html">
+        랜섬웨어 방지 라이센스
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_download_and_install_ontap_software_image.html">
         복원 소프트웨어 이미지를 구해서 설치하려면 어떻게 해야 합니까?
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/task_reverting_an_ontap_cluster.html">
@@ -17706,8 +17767,14 @@
         시스템 최적화를 위한 통찰력 확보
       </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_troubleshoot_hardware_problems.html">
         하드웨어 구성을 보고 문제를 확인합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/add-create-local-tier-task.html">
+        로컬 계층을 추가(생성)합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/edit-local-tier-task.html">
+        로컬 계층을 편집합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_add_disks_to_local_tier.html">
-        디스크를 로컬 계층에 추가합니다
+        로컬 계층에 용량 추가
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_add_cache_to_local_tier.html">
+        로컬 계층에 캐시를 추가합니다
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 노드 관리</div>
       </a>
@@ -17945,14 +18012,16 @@
       </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 관리 활동에 대한 감사 로깅을 관리합니다</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/changes-audit-logging-ontap-9-concept.html">
-        ONTAP 9의 감사 로깅을 변경합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/ontap-implements-audit-logging-concept.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/ontap-implements-audit-logging-concept.html">
         ONTAP에서 감사 로깅을 구현하는 방법
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/changes-audit-logging-ontap-9-concept.html">
+        ONTAP 9의 감사 로깅을 변경합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/audit-display-log-contents-task.html">
+        감사 로그 내용을 표시합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/audit-manage-get-requests-task.html">
+        감사 가져오기 요청 설정을 관리합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/forward-command-history-log-file-destination-task.html">
-        감사 로그를 대상으로 전달합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/commands-manage-audit-settings-reference.html">
-        관리 작업에 대한 감사 설정을 관리하는 명령입니다
+        감사 로그 대상을 관리합니다
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/manage-cluster-time-concept.html">
         클러스터 시간 관리(클러스터 관리자만 해당)
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/commands-manage-system-time-reference.html">
@@ -18623,10 +18692,6 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/delete-directories-concept.html">
         개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/fast-directory-delete-task.html">
-        CLI를 사용하여 빠른 디렉토리 삭제를 수행합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/cancel-directory-delete-job-task.html">
-        디렉토리 삭제 작업을 취소합니다
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/commands-manage-flexvol-volumes-reference.html">
         FlexVol 볼륨을 관리하는 명령입니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/commands-display-space-usage-reference.html">
@@ -19028,7 +19093,9 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexgroup/configure-automatic-grow-shrink-task.html">
         크기가 자동으로 확장 및 축소되도록 FlexGroup 볼륨을 구성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexgroup/fast-directory-delete-asynchronous-task.html">
-        파일 및 디렉토리를 비동기적으로 삭제하여 빠른 디렉토리 삭제를 수행합니다
+        클러스터에서 파일과 디렉토리를 빠르게 삭제합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexgroup/manage-client-async-dir-delete-task.html">
+        클라이언트 권한을 관리하여 디렉토리를 신속하게 삭제합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexgroup/create-qtrees-task.html">
         FlexGroup 볼륨으로 qtree를 생성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexgroup/quota-reporting-task.html">
@@ -19142,6 +19209,8 @@
         원본 볼륨에서 FlexCache 볼륨의 속성을 동기화합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexcache/refresh-config-relationship-task.html">
         FlexCache 관계의 구성을 업데이트합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexcache/enable-file-access-time-updates-task.html">
+        파일 액세스 시간 업데이트를 활성화합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexcache/global-file-locking-task.html">
         글로벌 파일 잠금을 설정합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/flexcache/prepopulate-volume-task.html">
@@ -19792,6 +19861,8 @@
         LDAP 디렉토리 검색에 대한 구성 옵션입니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/improve-performance-ldap-directory-searches-task.html">
         LDAP 디렉토리 Netgroup-by-host 검색 성능 향상
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html">
+        nsswitch 인증에 LDAP 고속 바인딩을 사용합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nfs-admin/display-ldap-statistics-task.html">
         LDAP 통계를 표시합니다
       </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
@@ -21082,6 +21153,8 @@
         Linux 서버
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_san_provision_windows.html">
         지원합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/manage-san-initiators-task.html">
+        Igroup 및 이니시에이터를 관리합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_san_create_nested_igroup.html">
         중첩된 igroup을 생성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_san_map_igroups_to_multiple_luns.html">
@@ -21127,6 +21200,8 @@
         LUN을 생성하고 igroup에 매핑합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/enable-block-access-specific-host-task.html">
         특정 호스트에 대해 블록 액세스를 설정합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/convert-lun-to-namespace.html">
+        LUN을 네임스페이스로 변환
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NVMe용 네임스페이스 설정</div>
       </a>
@@ -21138,6 +21213,8 @@
         NVMe 네임스페이스 및 하위 시스템을 작성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/map-nvme-namespace-subsystem-task.html">
         NVMe 네임스페이스를 하위 시스템에 매핑
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/nvme/convert-namespace-to-lun-task.html">
+        네임스페이스를 LUN으로 변환합니다
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> FC 및 iSCSI용 LUN 관리</div>
       </a>
@@ -21777,6 +21854,21 @@
         실패한 로그인 시도를 관리합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/authentication/enforce-sha2-user-account-passwords-task.html">
         관리자 계정 암호에 SHA-2를 적용합니다
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 여러 관리자 검증 관리</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/index.html">
+        개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/manage-groups-task.html">
+        관리자 그룹을 관리합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/enable-disable-task.html">
+        다중 관리 확인을 활성화 및 비활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/manage-rules-task.html">
+        보호된 작업 규칙을 관리합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/request-operation-task.html">
+        보호된 작업의 실행을 요청합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/multi-admin-verify/manage-requests-task.html">
+        보호된 작업 요청을 관리합니다
       </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 랜섬웨어 보호</div>
       </a>
@@ -21794,6 +21886,8 @@
         비정상적인 활동에 응답합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/anti-ransomware/recover-data-task.html">
         공격 후 데이터 복구
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/anti-ransomware/modify-automatic-shapshot-options-task.html">
+        스냅샷 복사본 옵션을 수정합니다
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 안티바이러스 구성</div>
       </a>
@@ -22197,6 +22291,8 @@
         ONTAP 9.6 이상(HW 기반)에서 외부 키 관리 활성화
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/enable-exernal-key-management-95-earlier-hw-task.html">
         ONTAP 9.5 이전 버전에서 외부 키 관리를 활성화합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/configure-cluster-key-server-task.html">
+        클러스터링된 외부 키 서버를 구성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/create-authentication-keys-96-later-task.html">
         ONTAP 9.6 이상에서 인증 키를 생성합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/encryption-at-rest/create-authentication-keys-93-later-task.html">
@@ -23503,7 +23599,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-05 05:40:37 +0000">05/05/2022</time>
     
   
 
@@ -23516,19 +23612,15 @@
 <li><a href="#컨트롤러에-대한-정보">컨트롤러에 대한 정보</a></li>
 <li><a href="#디스크-쉘프-정보">디스크 쉘프 정보</a></li>
 <li><a href="#스토리지-스위치에-대한-정보">스토리지 스위치에 대한 정보</a></li>
-<li><a href="#ontap-9-8의-system-manager를-사용한-하드웨어-시각화-비디오">ONTAP 9.8의 System Manager를 사용한 하드웨어 시각화 비디오</a></li>
 </ul>
 </div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>ONTAP 9.8 이상에서는 System Manager를 사용하여 네트워크에 있는 AFF 하드웨어의 구성을 확인하고 문제가 발생할 수 있는지 확인할 수 있습니다.</p>
+<p>ONTAP 9.8 이상에서는 System Manager를 사용하여 네트워크 하드웨어 구성을 확인하고 문제가 발생할 수 있는지 확인할 수 있습니다.</p>
 </div>
 <div class="paragraph">
-<p>ONTAP 9.8의 경우 System Manager는 AFF 하드웨어 구성을 볼 수 있는 기능의 _preview_를 제공합니다. ONTAP 9.9.1부터 모든 AFF 하드웨어 구성을 볼 수 있습니다.</p>
-</div>
-<div class="paragraph">
-<p>AFF 하드웨어 구성을 보려면 다음 단계를 수행하십시오.</p>
+<p>하드웨어 구성을 보려면 다음 단계를 수행하십시오.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -23564,13 +23656,18 @@
 <div class="paragraph">
 <p>다음을 볼 수 있습니다.</p>
 </div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">노드</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
 <p>노드 *:</p>
 </li>
 <li>
-<p>후면이 표시됩니다.</p>
+<p>전면도 및 후면도 표시됩니다.</p>
 </li>
 <li>
 <p>내부 디스크 쉘프가 있는 모델도 전면 보기에 디스크 레이아웃을 표시합니다.</p>
@@ -23589,15 +23686,36 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C190, A220, A300, A400, A700을 지원합니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A220, A300, A400, A700 및 C190(이 기능의 A_preview_만 사용 가능)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C190, A220, A250, A300, A320, A400, A700, A700s, A800, FAS500f</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A220, A250, A300, A320, A400, A700, A700s, A800, C190 및 FAS500f</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ONTAP 9.10.1</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A220, A250, A300, A320, A400, A700, A700s, A800, A900, C190, 500f로 설정합니다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A220, A250, A300, A320, A400, A700, A700s, A800, A900, C190, FAS2720, FAS2750, FAS8300, FAS8700, 및 FAS9000</p></td>
 </tr>
 </tbody>
 </table>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">포트</div>
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>포트 *:</p>
 </li>
@@ -23610,6 +23728,28 @@
 <li>
 <p>포트 상태 및 기타 세부 정보는 포트 위로 마우스를 가져가면 표시됩니다.</p>
 </li>
+<li>
+<p>참고 *:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTAP 9.10.1 이하 버전의 경우 SAS 포트를 비활성화하면 빨간색으로 표시됩니다.</p>
+</li>
+<li>
+<p>9.11.1부터 SAS 포트는 오류 상태에 있거나 사용 중인 케이블 연결 포트가 오프라인이 되는 경우에만 빨간색으로 강조 표시됩니다. 포트가 오프라인이고 비활성화 상태이면 흰색으로 표시됩니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">FRU</div>
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>FRU *:</p>
 </li>
@@ -23629,6 +23769,15 @@
 <li>
 <p>노드나 섀시의 팬 오류가 발생했습니다.</p>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">어댑터 카드</div>
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>어댑터 카드 *:</p>
 </li>
@@ -23645,12 +23794,21 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="디스크-쉘프-정보">디스크 쉘프 정보</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>다음을 볼 수 있습니다.</p>
 </div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">디스크 쉘프</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -23676,12 +23834,21 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">DS4243, DS4486, DS212C, DS2246, DS224C, 및 NS224를 참조하십시오</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">지원되는 모든 디스크 쉘프 모델</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1 이상</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 비 EOS 및 비 EOA 셸프</p></td>
 </tr>
 </tbody>
 </table>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">쉘프 포트</div>
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>쉘프 포트 *:</p>
 </li>
@@ -23691,6 +23858,15 @@
 <li>
 <p>원격 포트 정보는 포트가 연결된 경우 표시됩니다.</p>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">쉘프 FRU</div>
+<div class="content">
+<div class="ulist">
+<ul>
 <li>
 <p>쉘프 FRU *:</p>
 </li>
@@ -23701,16 +23877,53 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="스토리지-스위치에-대한-정보">스토리지 스위치에 대한 정보</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>다음을 볼 수 있습니다.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">스토리지 스위치</div>
+<div class="content">
 <div class="ulist">
 <ul>
+<li>
+<p>스토리지 스위치 *:</p>
+</li>
 <li>
 <p>이 디스플레이에는 쉘프를 노드에 연결하는 데 사용되는 스토리지 스위치 역할을 하는 스위치가 표시됩니다.</p>
 </li>
 <li>
 <p>9.9.1부터 System Manager는 스토리지 스위치와 클러스터 역할을 모두 수행하는 스위치에 대한 정보를 표시하며, 이 정보는 HA 쌍의 노드 간에도 공유할 수 있습니다.</p>
+</li>
+<li>
+<p>다음 정보가 표시됩니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>스위치 이름</p>
+</li>
+<li>
+<p>IP 주소입니다</p>
+</li>
+<li>
+<p>일련 번호입니다</p>
+</li>
+<li>
+<p>SNMP 버전입니다</p>
+</li>
+<li>
+<p>시스템 버전입니다</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>다음과 같은 스토리지 스위치 모델을 볼 수 있습니다.</p>
@@ -23729,21 +23942,46 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cisco Nexus 3232C 스위치</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.9.1 및 9.10.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cisco Nexus 3232C 스위치 Cisco Nexus 9336C-FX2 스위치</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP 9.11.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cisco Nexus 3232C 스위치 Cisco Nexus 9336C-FX2 스위치 Mellanox SN2100 스위치</p></td>
 </tr>
 </tbody>
 </table>
 </li>
-<li>
-<p>다음을 볼 수 있습니다.</p>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">스토리지 스위치 포트</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>* 스토리지 스위치 * 정보에는 스위치 이름, IP 주소, 일련 번호, SNMP 버전 및 시스템 버전이 포함됩니다.</p>
+<p>스토리지 스위치 포트 *</p>
 </li>
 <li>
-<p>* 스토리지 스위치 포트 * 정보에는 ID 이름, ID 인덱스, 상태 및 원격 연결을 포함한 기타 세부 정보가 포함됩니다.</p>
+<p>다음 정보가 표시됩니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ID 이름입니다</p>
+</li>
+<li>
+<p>ID 인덱스입니다</p>
+</li>
+<li>
+<p>상태</p>
+</li>
+<li>
+<p>원격 연결</p>
+</li>
+<li>
+<p>기타 세부 정보</p>
 </li>
 </ul>
 </div>
@@ -23752,15 +23990,6 @@
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="ontap-9-8의-system-manager를-사용한-하드웨어-시각화-비디오">ONTAP 9.8의 System Manager를 사용한 하드웨어 시각화 비디오</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>하드웨어 시각화 기능을 통해 사용자는 하드웨어 상태 및 잠재적인 연결 문제를 신속하게 시각화할 수 있습니다.</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe width="848" height="480" src="https://www.youtube.com/embed/Jdf5dxSQsDY?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 </div>
