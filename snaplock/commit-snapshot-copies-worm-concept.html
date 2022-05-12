@@ -23599,7 +23599,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-12 07:11:46 +0000">05/12/2022</time>
     
   
 
@@ -23610,7 +23610,7 @@
 <p>SnapLock for SnapVault를 사용하여 2차 스토리지에서 WORM 상태로 스냅샷 복사본을 보호할 수 있습니다. SnapVault 대상에서 모든 기본 SnapLock 작업을 수행합니다. 타겟 볼륨이 읽기 전용으로 자동 마운트되므로 Snapshot 복사본을 WORM에 명시적으로 커밋할 필요가 없습니다. 따라서 SnapMirror 정책을 사용하여 타겟 볼륨에 예약된 Snapshot 복사본을 생성하는 것은 지원되지 않습니다.</p>
 </div>
 <div class="ulist">
-<div class="title">무엇을 &#8217;필요로 할거야</div>
+<div class="title">시작하기 전에</div>
 <ul>
 <li>
 <p>소스 클러스터는 ONTAP 8.2.2 이상을 실행해야 합니다.</p>
@@ -23642,9 +23642,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="참고">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>WORM 상태로 커밋된 스냅샷 복사본의 이름은 변경할 수 없습니다.</p>
-</div>
+WORM 상태로 커밋된 스냅샷 복사본의 이름은 변경할 수 없습니다.
 </td>
 </tr>
 </table>
@@ -23659,9 +23657,7 @@
 <img src="/us-en/ontap/images/note.svg" alt="참고">
 </td>
 <td class="content">
-<div class="paragraph">
-<p>LUN은 SnapLock 볼륨에서 지원되지 않습니다. 기존 기술을 사용하여 SnapLock 볼륨으로 LUN을 이동할 수는 있지만 이 작업은 지원되지 않으며 SnapLock 볼륨에 LUN을 포함하는 다른 작업은 지원되지 않습니다.</p>
-</div>
+LUN은 SnapLock 볼륨에서 지원되지 않습니다. 기존 기술을 사용하여 SnapLock 볼륨으로 LUN을 이동할 수는 있지만 이 작업은 지원되지 않으며 SnapLock 볼륨에 LUN을 포함하는 다른 작업은 지원되지 않습니다.
 </td>
 </tr>
 </table>
@@ -23697,7 +23693,7 @@
 <p>대상 클러스터를 식별합니다.</p>
 </li>
 <li>
-<p>에 설명된 대로 대상 클러스터에서 SnapLock 라이센스를 설치하고 ComplianceClock을 초기화하며 SnapLock 애그리게이트를 생성합니다 <a href="configure-snaplock-concept.html">SnapLock를 구성합니다</a>.</p>
+<p>에 설명된 대로 대상 클러스터에서 SnapLock 라이센스를 설치하고 ComplianceClock을 초기화하며 SnapLock 애그리게이트를 생성합니다 <a href="workflow-concept.html">SnapLock 워크플로</a>.</p>
 </li>
 <li>
 <p>대상 클러스터에서 소스 볼륨보다 크거나 같은 dP 유형의 SnapLock 대상 볼륨을 생성합니다.</p>
@@ -23762,7 +23758,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p><a href="../data-protection/create-custom-replication-policy-concept.html">사용자 지정 복제 정책을 생성합니다</a> 또는 a <a href="/data-protection/create-replication-job-schedule-task.html">사용자 지정 일정</a> 사용 가능한 기본값이 적합하지 않은 경우</p>
+<p><a href="../data-protection/create-custom-replication-policy-concept.html">사용자 지정 복제 정책을 생성합니다</a> 또는 a <a href="../data-protection/create-replication-job-schedule-task.html">사용자 지정 일정</a> 사용 가능한 기본값이 적합하지 않은 경우</p>
 </div>
 </td>
 </tr>
