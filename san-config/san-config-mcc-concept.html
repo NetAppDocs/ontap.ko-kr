@@ -23599,7 +23599,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-12 22:56:07 +0000">05/12/2022</time>
     
   
 
@@ -23624,6 +23624,9 @@
 <p>SAN 클라이언트 구성을 사용할 때는 상호 운용성 매트릭스 툴(IMT)에 제공된 노트에 MetroCluster 구성과 관련된 특별한 고려 사항이 포함되어 있는지 확인해야 합니다.</p>
 </li>
 <li>
+<p>운영 체제 및 애플리케이션은 MetroCluster의 자동 계획되지 않은 전환 및 Tiebreaker 또는 중재자 시작 전환을 지원하기 위해 120초의 I/O 복원력을 제공해야 합니다.</p>
+</li>
+<li>
 <p>MetroCluster는 프런트엔드 SAN의 양쪽에 동일한 WWPN을 사용합니다.</p>
 </li>
 </ul>
@@ -23639,6 +23642,19 @@
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>자세한 내용은 다음을 참조하십시오.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html">"MetroCluster 데이터 보호 및 재해 복구 이해"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap-metrocluster/manage/task_perform_switchover_for_tests_or_maintenance.html">"테스트 또는 유지 관리를 위한 전환 수행"</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>이전 포트가 오프라인이 되고 새 포트가 온라인 상태가 될 때 중첩되지 않도록 하려면 다음 단계를 사용하여 프런트엔드 스위치를 구성합니다.</p>

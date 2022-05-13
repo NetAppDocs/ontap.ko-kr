@@ -23599,7 +23599,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-12 22:56:07 +0000">05/12/2022</time>
     
   
 
@@ -23632,19 +23632,19 @@
 </div>
 </li>
 <li>
-<p>MTU 포트 설정을 9000으로 변경합니다.</p>
+<p>포트에서 사용하는 브로드캐스트 도메인의 MTU를 변경합니다.</p>
 <div class="paragraph">
-<p>'network port modify -node_nodename_-port_port_-mtu 9000'</p>
+<p>'network port broadcast-domain modify -IPSpace_IPSpace_-broadcast-domain_broadcast_domain_-MTU_new_MTU_'</p>
 </div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>다음 예에서는 "e0a"에 대한 MTU 포트 설정을 9000으로 변경합니다.</p>
+<p>다음 예에서는 MTU 포트 설정을 9000으로 변경합니다.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cluster1::*&gt; network port modify -node node0 -port e0a -mtu 9000</pre>
+<pre>network port broadcast-domain modify -ipspace Cluster -broadcast-domain Cluster -mtu 9000</pre>
 </div>
 </div>
 </div>
