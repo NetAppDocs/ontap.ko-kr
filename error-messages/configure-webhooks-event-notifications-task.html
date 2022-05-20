@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title>알림을 REST API 서버로 전달하도록 중요한 EMS 이벤트를 구성합니다</title>
+  <title>Webhook 애플리케이션에 알림을 전달하도록 중요한 EMS 이벤트를 구성합니다</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="알림을 REST API 서버로 전달하도록 중요한 EMS 이벤트를 구성합니다" />
+  <meta property="og:title" content="Webhook 애플리케이션에 알림을 전달하도록 중요한 EMS 이벤트를 구성합니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/error-messages/configure-webhooks-event-notifications-task.html" />
-	<meta property="og:description" content="REST API 서버에서 이벤트 알림을 받으려면 REST API webhook 지원을 구성해야 합니다." />
+	<meta property="og:description" content="중요한 이벤트 알림을 Webhook 애플리케이션에 전달하도록 ONTAP를 구성할 수 있습니다. 필요한 구성 단계는 선택한 보안 수준에 따라 다릅니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="REST API 서버에서 이벤트 알림을 받으려면 REST API webhook 지원을 구성해야 합니다.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="중요한 이벤트 알림을 Webhook 애플리케이션에 전달하도록 ONTAP를 구성할 수 있습니다. 필요한 구성 단계는 선택한 보안 수준에 따라 다릅니다.">
   <meta name="keywords" content=" configure, important, ems, events, receive, email, notifications, forward, rest, api, webhook"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[알림을 REST API 서버로 전달하도록 중요한 EMS 이벤트를 구성합니다](https://docs.netapp.com/ko-kr/ontap/error-messages/configure-webhooks-event-notifications-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/error-messages/configure-webhooks-event-notifications-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Webhook 애플리케이션에 알림을 전달하도록 중요한 EMS 이벤트를 구성합니다](https://docs.netapp.com/ko-kr/ontap/error-messages/configure-webhooks-event-notifications-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/error-messages/configure-webhooks-event-notifications-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -23528,7 +23528,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/error-messages/configure-snmp-traphosts-event-notifications-task.html">
         이벤트 알림을 수신하도록 SNMP traaphosts를 구성합니다
       </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/error-messages/configure-webhooks-event-notifications-task.html">
-        알림을 REST API 서버로 전달하도록 중요한 EMS 이벤트를 구성합니다
+        Webhook 애플리케이션에 알림을 전달하도록 EMS 이벤트를 구성합니다
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 더 이상 사용되지 않는 EMS 이벤트 매핑을 업데이트합니다</div>
       </a>
@@ -23592,14 +23592,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">알림을 REST API 서버로 전달하도록 중요한 EMS 이벤트를 구성합니다</h1>
+  <h1 class="n-doc__component-detail-heading">Webhook 애플리케이션에 알림을 전달하도록 중요한 EMS 이벤트를 구성합니다</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-19 22:34:12 +0000">05/19/2022</time>
     
   
 
@@ -23609,114 +23609,133 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>REST API 서버에서 이벤트 알림을 받으려면 REST API webhook 지원을 구성해야 합니다.</p>
+<p>중요한 이벤트 알림을 Webhook 애플리케이션에 전달하도록 ONTAP를 구성할 수 있습니다. 필요한 구성 단계는 선택한 보안 수준에 따라 다릅니다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ems-이벤트-전달을-구성할-준비를-합니다">EMS 이벤트 전달을 구성할 준비를 합니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>이벤트 알림을 웹 후크 응용 프로그램으로 전달하도록 ONTAP를 구성하기 전에 고려해야 할 몇 가지 개념과 요구 사항이 있습니다.</p>
+</div>
+<div class="sect2">
+<h3 id="webhook-응용-프로그램">Webhook 응용 프로그램</h3>
+<div class="paragraph">
+<p>ONTAP 이벤트 알림을 받을 수 있는 웹 후크 응용 프로그램이 필요합니다. Webhook은 사용자가 정의한 콜백 루틴으로, 이 루틴이 실행되는 원격 응용 프로그램 또는 서버의 기능을 확장합니다. Webhook는 대상 URL로 HTTP 요청을 전송하여 클라이언트(이 경우 ONTAP)에 의해 호출되거나 활성화됩니다. 특히 ONTAP는 웹 후크 응용 프로그램을 호스팅하는 서버에 HTTP POST 요청을 보내고 XML로 포맷된 이벤트 알림 세부 정보를 보냅니다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="보안-옵션">보안 옵션</h3>
+<div class="paragraph">
+<p>TLS(Transport Layer Security) 프로토콜을 사용하는 방법에 따라 몇 가지 보안 옵션을 사용할 수 있습니다. 선택한 옵션에 따라 필요한 ONTAP 구성이 결정됩니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
+TLS는 인터넷에서 널리 사용되는 암호화 프로토콜입니다. 하나 이상의 공개 키 인증서를 사용하여 개인 정보 보호와 데이터 무결성 및 인증을 제공합니다. 인증서는 신뢰할 수 있는 인증 기관에서 발급합니다.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">HTTP</dt>
+<dd>
+<p>HTTP를 사용하여 이벤트 알림을 전송할 수 있습니다. 이 구성에서는 연결이 안전하지 않습니다. ONTAP 클라이언트 및 웹 후크 응용 프로그램의 ID가 확인되지 않습니다. 또한 네트워크 트래픽은 암호화되거나 보호되지 않습니다. 을 참조하십시오 <a href="configure-webhooks-event-notifications-task.html#configure-a-webhook-destination-to-use-http">"HTTP를 사용하도록 웹 후크 대상을 구성합니다"</a> 를 참조하십시오.</p>
+</dd>
+<dt class="hdlist1">HTTPS</dt>
+<dd>
+<p>추가 보안을 위해 Webhook 루틴을 호스팅하는 서버에 인증서를 설치할 수 있습니다. ONTAP는 HTTPS 프로토콜을 사용하여 웹 후크 응용 프로그램 서버의 ID와 네트워크 트래픽의 개인 정보 보호와 무결성을 보장합니다. 을 참조하십시오 <a href="configure-webhooks-event-notifications-task.html#configure-a-webhook-destination-to-use-https">"HTTPS를 사용하도록 웹 후크 대상을 구성합니다"</a> 를 참조하십시오.</p>
+</dd>
+<dt class="hdlist1">상호 인증을 사용하는 HTTPS</dt>
+<dd>
+<p>웹북 요청을 실행하는 ONTAP 시스템에 클라이언트 인증서를 설치하여 HTTPS 보안을 강화할 수 있습니다. webhook 응용 프로그램 서버의 ID를 확인하고 네트워크 트래픽을 보호하는 ONTAP 외에도 webhook 응용 프로그램은 ONTAP 클라이언트의 ID를 확인합니다. 이 양방향 피어 인증을 _Mutual TLS_라고 합니다. 을 참조하십시오 <a href="configure-webhooks-event-notifications-task.html#configure-a-webhook-destination-to-use-https-with-mutual-authentication">"상호 인증과 함께 HTTPS를 사용하도록 웹 후크 대상을 구성합니다"</a> 를 참조하십시오.</p>
+</dd>
+</dl>
+</div>
+<div class="ulist">
+<div class="title">관련 정보</div>
+<ul>
+<li>
+<p><a href="https://www.rfc-editor.org/info/rfc8446" target="_blank" rel="noopener">"TLS(Transport Layer Security) 프로토콜 버전 1.3"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="http를-사용하도록-웹-후크-대상을-구성합니다">HTTP를 사용하도록 웹 후크 대상을 구성합니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HTTP를 사용하여 웹 후크 응용 프로그램에 이벤트 알림을 전달하도록 ONTAP를 구성할 수 있습니다. 이 옵션은 가장 안전하지는 않지만 가장 간단한 설치 방법입니다.</p>
+</div>
+<div class="olist arabic">
+<div class="title">단계</div>
+<ol class="arabic">
+<li>
+<p>이벤트를 수신할 새 대상 'restapi-EMS&#8217;를 생성합니다.</p>
+<div class="paragraph">
+<p>이벤트 알림 목적지 create-name restapi-ems-rest-api-url\http://&lt;webhook-application&gt;`</p>
+</div>
+<div class="paragraph">
+<p>위 명령에서 대상에 대해 * HTTP * 체계를 사용해야 합니다.</p>
+</div>
+</li>
+<li>
+<p>중요 이벤트 필터를 "restapi-EMS" 대상으로 연결하는 알림 생성:</p>
+<div class="paragraph">
+<p>이벤트 알림 create-filter-name important-events-destinations reapi-EMS</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="https를-사용하도록-웹-후크-대상을-구성합니다">HTTPS를 사용하도록 웹 후크 대상을 구성합니다</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HTTPS를 사용하여 이벤트 알림을 웹 후크 응용 프로그램으로 전달하도록 ONTAP를 구성할 수 있습니다. ONTAP는 서버 인증서를 사용하여 웹 후크 응용 프로그램의 ID를 확인하고 네트워크 트래픽을 보호합니다.</p>
 </div>
 <div class="ulist">
 <div class="title">시작하기 전에</div>
 <ul>
 <li>
-<p>EMS 이벤트를 수신할 수 있는 REST API/webhook 지원 서버가 필요합니다.</p>
+<p>Webhook 응용 프로그램 서버에 대한 개인 키와 인증서를 생성합니다</p>
 </li>
 <li>
-<p>REST API 서버는 서버측 또는 클라이언트측 보안 인증서를 활용할 수 있습니다.</p>
-</li>
-<li>
-<p>인증서 구성은 대상에 따라 결정됩니다. 대상을 기반으로 하는 인증서 구성에 대한 개요는 다음을 참조하십시오.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>* http *: - 관련 인증서가 없습니다</p>
-</li>
-<li>
-<p><strong>https</strong>: - ONTAP 시스템에서 서버 인증서를 확인합니다. 선택적으로 ONTAP 시스템에서 서버가 확인할 클라이언트 인증서를 보내도록 구성할 수 있습니다.</p>
+<p>ONTAP에 설치할 수 있는 루트 인증서를 가지고 있어야 합니다</p>
 </li>
 </ul>
-</div>
-</li>
-<li>
-<p>클라이언트 측 인증서에는 소스 ONTAP 시스템에 설치할 수 있는 개인 키와 인증서가 모두 필요합니다.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="참고">
-</td>
-<td class="content">
-클라이언트 및 서버 인증서 REST API를 모두 앞으로 구성하는 경우 클라이언트측 인증서를 사용하려면 서버 측 인증서가 필요합니다. 따라서 클라이언트쪽 지침에 따라 두 가지 인증 방법을 모두 사용해야 합니다.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="http-rest-api-forward-구성">HTTP REST API forward 구성</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>ONTAP 명령줄에 명령을 입력하여 클러스터가 실행 중일 때마다 이 작업을 수행할 수 있습니다.</p>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
 <ol class="arabic">
 <li>
-<p>필터에 대한 새 대상 'restapi-EMS' 목적지를 작성하십시오. '중요 이벤트':</p>
-<div class="paragraph">
-<p>이벤트 알림 목적지 create-name restapi-ems-rest-api-url\http://&lt;url_to_rest_api_server&gt;`</p>
-</div>
+<p>웹 후크 응용 프로그램을 호스팅하는 서버에 적절한 서버 개인 키와 인증서를 설치합니다. 특정 구성 단계는 서버에 따라 다릅니다.</p>
 </li>
 <li>
-<p>중요 이벤트 필터를 새 restapi-EMS 대상과 연결하는 알림을 생성합니다.</p>
-<div class="paragraph">
-<p>이벤트 알림 create-filter-name important-events-destinations reapi-EMS</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="서버-인증서-https-rest-api-전달을-구성합니다">서버 인증서 HTTPS REST API 전달을 구성합니다</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>이 절차에서는 서버 측 개인 키와 공개 인증서를 이미 생성했다고 가정합니다. 또한 ONTAP에 설치할 수 있는 루트 인증서가 있다고 가정합니다.</p>
-</div>
-<div class="olist arabic">
-<div class="title">단계</div>
-<ol class="arabic">
-<li>
-<p>REST API 서버에 적절한 서버 개인 키와 공용 인증서를 설치합니다.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="참고">
-</td>
-<td class="content">
-특정 지침은 서버에 따라 다릅니다.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>ONTAP에 서버 루트 인증서를 설치합니다.</p>
+<p>ONTAP에 서버 루트 인증서 설치:</p>
 <div class="paragraph">
 <p>보안 인증서설치형 server-ca</p>
 </div>
 <div class="paragraph">
-<p>명령을 실행하면 공용 인증서가 쿼리됩니다.</p>
+<p>명령이 인증서를 요청합니다.</p>
 </div>
 </li>
 <li>
-<p>필터 '중요 이벤트&#8217;의 'restapi-EMS' 대상을 생성합니다.</p>
+<p>이벤트를 수신할 'restapi-EMS' 대상을 생성합니다.</p>
 <div class="paragraph">
-<p>서버측 인증서를 사용하려면 HTTPS 구성표를 사용해야 합니다.</p>
+<p>이벤트 알림 목적지 create-name restapi-ems-rest-api-url\https://&lt;webhook-application&gt;`</p>
 </div>
 <div class="paragraph">
-<p>이벤트 알림 목적지 create-name restapi-ems-rest-api-url\https://&lt;url_to_rest_api_server&gt;`</p>
+<p>위의 명령에서 대상에 대해 * HTTPS * 구성표를 사용해야 합니다.</p>
 </div>
 </li>
 <li>
@@ -23730,30 +23749,52 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="클라이언트-인증서-https-rest-api-전달을-구성합니다">클라이언트 인증서 HTTPS REST API 전달을 구성합니다</h2>
+<h2 id="상호-인증과-함께-https를-사용하도록-웹-후크-대상을-구성합니다">상호 인증과 함께 HTTPS를 사용하도록 웹 후크 대상을 구성합니다</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>클라이언트 인증서 사용은 선택 사항이며 서버에 의한 클라이언트 인증이 필요한 경우에만 필요합니다. 이 절차에서는 클라이언트 개인 키와 공개 인증서를 이전에 생성했다고 가정합니다.</p>
+<p>상호 인증을 사용하여 HTTPS를 사용하여 이벤트 알림을 웹 후크 응용 프로그램에 전달하도록 ONTAP를 구성할 수 있습니다. 이 구성에는 두 개의 인증서가 있습니다. ONTAP는 서버 인증서를 사용하여 webhook 응용 프로그램의 ID를 확인하고 네트워크 트래픽을 보호합니다. 또한 webhook를 호스팅하는 응용 프로그램은 클라이언트 인증서를 사용하여 ONTAP 클라이언트의 ID를 확인합니다.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP를 구성하기 전에 다음을 수행해야 합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Webhook 응용 프로그램 서버에 대한 개인 키와 인증서를 생성합니다</p>
+</li>
+<li>
+<p>ONTAP에 설치할 수 있는 루트 인증서를 가지고 있어야 합니다</p>
+</li>
+<li>
+<p>ONTAP 클라이언트에 대한 개인 키와 인증서를 생성합니다</p>
+</li>
+</ul>
 </div>
 <div class="olist arabic">
 <div class="title">단계</div>
 <ol class="arabic">
 <li>
-<p>REST API 서버에 적절한 루트 및 중간 인증서를 설치하여 클라이언트 인증서를 검증합니다.</p>
+<p>작업의 처음 두 단계를 수행합니다 <a href="configure-webhooks-event-notifications-task.html#configure-a-webhook-destination-to-use-https">"HTTPS를 사용하도록 웹 후크 대상을 구성합니다"</a> ONTAP가 서버의 ID를 확인할 수 있도록 서버 인증서를 설치합니다.</p>
 </li>
 <li>
-<p>ONTAP에 클라이언트 인증서를 설치합니다.</p>
+<p>웹 후크 응용 프로그램에 적절한 루트 및 중간 인증서를 설치하여 클라이언트 인증서를 확인합니다.</p>
+</li>
+<li>
+<p>ONTAP에 클라이언트 인증서 설치:</p>
 <div class="paragraph">
 <p>보안 인증서 설치형 클라이언트</p>
 </div>
 <div class="paragraph">
-<p>이 명령을 실행하면 개인 키와 공용 인증서를 쿼리합니다.</p>
+<p>명령에서 개인 키와 인증서를 요청합니다.</p>
 </div>
 </li>
 <li>
-<p>필터 '중요 이벤트&#8217;의 'restapi-EMS' 대상을 생성합니다.</p>
+<p>이벤트를 수신할 'restapi-EMS' 대상을 생성합니다.</p>
 <div class="paragraph">
-<p>이벤트 알림 목적지 create-name restapi-EMS-REST-API-URL <a href="https://&lt;url_to_rest_api_server&gt;" class="bare">https://&lt;url_to_rest_api_server&gt;</a> -certificate-authority &lt;클라이언트 인증서의 발급자&gt; -certificate-serial &lt;클라이언트 인증서의 직렬&gt;'</p>
+<p>'이벤트 알림 대상 create-name restapi-EMS-REST-API-URL\https://&lt;webhook-application&gt; - certificate-authority &lt;클라이언트 인증서 발급자&gt; - certificate-serial &lt;클라이언트 인증서 직렬&gt;'</p>
+</div>
+<div class="paragraph">
+<p>위의 명령에서 대상에 대해 * HTTPS * 구성표를 사용해야 합니다.</p>
 </div>
 </li>
 <li>
