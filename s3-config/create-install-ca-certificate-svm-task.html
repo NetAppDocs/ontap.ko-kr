@@ -11942,48 +11942,11 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_S3_구성.pdf" 
+              href="/ko-kr/ontap/pdfs/sidebar/S3_구성.pdf" 
             
           >
             <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            System Manager를 이용한 S3 구성
-          </a>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_S3_구성.pdf" 
-            
-          >
-            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            CLI를 사용한 S3 구성
+            S3 구성
           </a>
           
 
@@ -21606,22 +21569,7 @@
         <div class="na-navbar-padding"> S3 오브젝트 스토리지 관리</div>
       </a>
       <ul><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> System Manager를 이용한 S3 구성</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/concept_object_provision_overview.html">
-        오브젝트 스토리지 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_enable_s3_server.html">
-        S3 서버를 활성화합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_buckets.html">
-        버킷을 프로비저닝합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_add_s3_users_groups.html">
-        S3 사용자 및 그룹 추가
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_bucket_access.html">
-        버킷 액세스를 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_svm_access.html">
-        스토리지 VM 액세스를 관리합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> CLI를 사용한 S3 구성</div>
+        <div class="na-navbar-padding"> S3 구성</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/s3-config/index.html">
         개요
@@ -23595,7 +23543,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-27 00:20:11 +0000">05/27/2022</time>
     
   
 
@@ -23626,7 +23574,7 @@
 <li>
 <p>자체 서명된 디지털 인증서 생성:</p>
 <div class="paragraph">
-<p>'Security certificate create - vserver svm_name - type root-ca-common-name ca_cert_name'</p>
+<p>'Security certificate create - vserver_svm_name _ -type root-ca-common-name_ca_cert_name _'</p>
 </div>
 <div class="paragraph">
 <p>'-type root-ca' 옵션은 자체 서명된 디지털 인증서를 만들어 설치하여 CA(인증 기관)를 사용하여 다른 인증서에 서명합니다.</p>
@@ -23654,7 +23602,7 @@ The certificate's generated name for reference: svm1_ca_159D1587CE21E9D4_svm1_ca
 <li>
 <p>인증서 서명 요청 생성:</p>
 <div class="paragraph">
-<p>'Security certificate generate - csr-common-name s3_server_name [Additional_options]'</p>
+<p>'Security certificate generate - csr-common-name_s3_server_name_[additional_options]'</p>
 </div>
 <div class="paragraph">
 <p>서명 요청의 '-common-name' 매개변수는 S3 서버 이름(FQDN)이어야 합니다.</p>
@@ -23669,7 +23617,7 @@ The certificate's generated name for reference: svm1_ca_159D1587CE21E9D4_svm1_ca
 <li>
 <p>SVM_CA를 사용하여 CSR에 서명하여 S3 서버의 인증서를 생성합니다.</p>
 <div class="paragraph">
-<p>'보안 인증서 서명 - vserver svm_name -ca_cert_name -ca -serial ca_cert_serial_number [additional_options]'</p>
+<p>'보안 인증서 서명 - vserver_svm_name_-ca_ca_cert_name_-ca-serial_ca_cert_serial_number_[additional_options]'</p>
 </div>
 <div class="paragraph">
 <p>이전 단계에서 사용한 명령 옵션을 입력합니다.</p>
@@ -23697,7 +23645,7 @@ The certificate's generated name for reference: svm1_ca_159D1587CE21E9D4_svm1_ca
 <li>
 <p>S3 기반 SVM에 서명된 인증서 설치:</p>
 <div class="paragraph">
-<p>'Security certificate install-type server-vserver svm_name&#8217;입니다</p>
+<p>'Security certificate install-type server-vserver_svm_name_'</p>
 </div>
 <div class="paragraph">
 <p>메시지가 표시되면 인증서와 개인 키를 입력합니다.</p>
@@ -23712,7 +23660,7 @@ The certificate's generated name for reference: svm1_ca_159D1587CE21E9D4_svm1_ca
 <li>
 <p>공개 키 인증서 받기:</p>
 <div class="paragraph">
-<p>'Security certificate show -vserver svm_name -common-name ca_cert_name -type root-ca-instance'</p>
+<p>'Security certificate show -vserver_svm_name_-common-name_ca_cert_name_-type root-ca-instance'</p>
 </div>
 <div class="paragraph">
 <p>나중에 클라이언트 측 구성을 위해 공개 키 인증서를 저장합니다.</p>

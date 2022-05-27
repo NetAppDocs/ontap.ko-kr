@@ -11951,48 +11951,11 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_S3_구성.pdf" 
+              href="/ko-kr/ontap/pdfs/sidebar/S3_구성.pdf" 
             
           >
             <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            System Manager를 이용한 S3 구성
-          </a>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_S3_구성.pdf" 
-            
-          >
-            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            CLI를 사용한 S3 구성
+            S3 구성
           </a>
           
 
@@ -21606,22 +21569,7 @@
         <div class="na-navbar-padding"> S3 오브젝트 스토리지 관리</div>
       </a>
       <ul><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> System Manager를 이용한 S3 구성</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/concept_object_provision_overview.html">
-        오브젝트 스토리지 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_enable_s3_server.html">
-        S3 서버를 활성화합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_buckets.html">
-        버킷을 프로비저닝합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_add_s3_users_groups.html">
-        S3 사용자 및 그룹 추가
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_bucket_access.html">
-        버킷 액세스를 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_svm_access.html">
-        스토리지 VM 액세스를 관리합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> CLI를 사용한 S3 구성</div>
+        <div class="na-navbar-padding"> S3 구성</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/s3-config/index.html">
         개요
@@ -23595,7 +23543,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-27 00:20:11 +0000">05/27/2022</time>
     
   
 
@@ -23614,6 +23562,9 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>LIF에 대한 서비스 정책을 생성할 수 있습니다. 하나 이상의 LIF에 서비스 정책을 할당할 수 있으므로 LIF에서 단일 서비스 또는 서비스 목록에 대한 트래픽을 전송할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>'network interface service-policy create' 명령을 실행하려면 고급 권한이 필요합니다.</p>
 </div>
 <div class="paragraph">
 <p>기본 제공 서비스 및 서비스 정책을 사용하여 데이터 및 시스템 SVM에서 데이터 및 관리 트래픽을 관리할 수 있습니다. 대부분의 사용 사례는 사용자 지정 서비스 정책을 만들지 않고 기본 제공 서비스 정책을 사용하여 충족됩니다.</p>
@@ -23639,7 +23590,8 @@
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>network interface service show
+<pre>cluster1::&gt; network interface service show
+
 Service                     Protocol:Ports
 -------                     --------------
 cluster-core                -
@@ -23659,52 +23611,11 @@ management-ssh              tcp:22
 </div>
 </li>
 <li>
-<p>서비스 정책 생성:</p>
+<p>클러스터에 존재하는 서비스 정책을 확인합니다.</p>
 <div class="literalblock">
 <div class="content">
-<pre>network interface service-policy create -vserver &lt;svm_name&gt; -policy &lt;service_policy_name&gt; -services &lt;service_name&gt; -allowed-addresses &lt;IP_address/mask,...&gt;</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"service_name"은 정책에 포함되어야 하는 서비스 목록을 지정합니다.</p>
-</li>
-<li>
-<p>"ip_address/mask"는 서비스 정책의 서비스에 액세스할 수 있는 주소에 대한 서브넷 마스크 목록을 지정합니다. 기본적으로 지정된 모든 서비스는 모든 서브넷의 트래픽을 허용하는 기본 허용 주소 목록인 0.0.0.0/0으로 추가됩니다. 기본값이 아닌 허용 주소 목록이 제공되는 경우 정책을 사용하는 LIF는 지정된 마스크와 일치하지 않는 소스 주소를 가진 모든 요청을 차단하도록 구성됩니다.</p>
-<div class="paragraph">
-<p>다음 예에서는 NFS 및 SMB 서비스를 포함하는 SVM에 대해 svm1_data_policy 라는 데이터 서비스 정책을 생성하는 방법을 보여 줍니다.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>network interface service-policy create -vserver svm1 -policy svm1_data_policy -services data-nfs,data-cifs,data-core -allowed-addresses 10.1.0.0/16</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>다음 예제에서는 인터클러스터 서비스 정책을 만드는 방법을 보여 줍니다.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>network interface service-policy create -vserver cluster1 -policy intercluster1 -services intercluster-core -allowed-addresses 10.1.0.0/16</pre>
-</div>
-</div>
-</li>
-<li>
-<p>서비스 정책이 생성되었는지 확인합니다.</p>
-<div class="literalblock">
-<div class="content">
-<pre>network interface service-policy show</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>다음 출력에는 사용 가능한 서비스 정책이 나와 있습니다.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>network interface service-policy show
+<pre>cluster1::&gt; network interface service-policy show
+
 Vserver   Policy                     Service: Allowed Addresses
 --------- -------------------------- ----------------------------------------
 cluster1
@@ -23735,6 +23646,105 @@ vs0
                                      management-https: 0.0.0.0/0
 
 7 entries were displayed.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>서비스 정책 생성:</p>
+<div class="literalblock">
+<div class="content">
+<pre>cluster1::&gt; set -privilege advanced
+Warning: These advanced commands are potentially dangerous; use them only when directed to do so by technical support.
+Do you wish to continue? (y or n): y
+
+cluster1::&gt; network interface service-policy create -vserver &lt;svm_name&gt; -policy &lt;service_policy_name&gt; -services &lt;service_name&gt; -allowed-addresses &lt;IP_address/mask,...&gt;</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"service_name"은 정책에 포함되어야 하는 서비스 목록을 지정합니다.</p>
+</li>
+<li>
+<p>"ip_address/mask"는 서비스 정책의 서비스에 액세스할 수 있는 주소에 대한 서브넷 마스크 목록을 지정합니다. 기본적으로 지정된 모든 서비스는 모든 서브넷의 트래픽을 허용하는 기본 허용 주소 목록인 0.0.0.0/0으로 추가됩니다. 기본값이 아닌 허용 주소 목록이 제공되는 경우 정책을 사용하는 LIF는 지정된 마스크와 일치하지 않는 소스 주소를 가진 모든 요청을 차단하도록 구성됩니다.</p>
+<div class="paragraph">
+<p>다음 예에서는 _nfs_and_smb_services를 포함하는 SVM에 대해 _svm1_data_policy_라는 데이터 서비스 정책을 생성하는 방법을 보여 줍니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster1::&gt; set -privilege advanced
+Warning: These advanced commands are potentially dangerous; use them only when directed to do so by technical support.
+Do you wish to continue? (y or n): y
+
+cluster1::&gt; network interface service-policy create -vserver svm1 -policy svm1_data_policy -services data-nfs,data-cifs,data-core</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>다음 예제에서는 인터클러스터 서비스 정책을 만드는 방법을 보여 줍니다.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster1::&gt; set -privilege advanced
+Warning: These advanced commands are potentially dangerous; use them only when directed to do so by technical support.
+Do you wish to continue? (y or n): y
+
+cluster1::&gt; network interface service-policy create -vserver cluster1 -policy intercluster1 -services intercluster-core</pre>
+</div>
+</div>
+</li>
+<li>
+<p>서비스 정책이 생성되었는지 확인합니다.</p>
+<div class="literalblock">
+<div class="content">
+<pre>cluster1::&gt; network interface service-policy show</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>다음 출력에는 사용 가능한 서비스 정책이 나와 있습니다.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cluster1::&gt; network interface service-policy show
+
+Vserver   Policy                     Service: Allowed Addresses
+--------- -------------------------- ----------------------------------------
+cluster1
+          default-intercluster       intercluster-core: 0.0.0.0/0
+                                     management-https: 0.0.0.0/0
+
+          intercluster1              intercluster-core: 0.0.0.0/0
+
+          default-management         management-core: 0.0.0.0/0
+                                     management-autosupport: 0.0.0.0/0
+                                     management-ssh: 0.0.0.0/0
+                                     management-https: 0.0.0.0/0
+
+          default-route-announce     management-bgp: 0.0.0.0/0
+
+Cluster
+          default-cluster            cluster-core: 0.0.0.0/0
+
+vs0
+          default-data-blocks        data-core: 0.0.0.0/0
+                                     data-iscsi: 0.0.0.0/0
+
+          default-data-files         data-core: 0.0.0.0/0
+                                     data-nfs: 0.0.0.0/0
+                                     data-cifs: 0.0.0.0/0
+                                     data-flexcache: 0.0.0.0/0
+
+          default-management         data-core: 0.0.0.0/0
+                                     management-ssh: 0.0.0.0/0
+                                     management-https: 0.0.0.0/0
+
+          svm1_data_policy           data-core: 0.0.0.0/0
+                                     data-nfs: 0.0.0.0/0
+                                     data-cifs: 0.0.0.0/0
+
+9 entries were displayed.</pre>
 </div>
 </div>
 </li>
@@ -23801,7 +23811,7 @@ vs0
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>network interface modify -vserver cluster1 -lif lif1 -service-policy default-management</pre>
+<pre>cluster1::&gt; network interface modify -vserver cluster1 -lif lif1 -service-policy default-management</pre>
 </div>
 </div>
 </div>
@@ -23825,7 +23835,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>서비스 정책을 생성합니다</p>
+<p>서비스 정책 생성(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 만들기</p>
@@ -23833,7 +23843,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책에 추가 서비스 항목을 추가합니다</p>
+<p>기존 서비스 정책에 추가 서비스 항목 추가(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 추가 서비스</p>
@@ -23841,7 +23851,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책의 클론을 생성합니다</p>
+<p>기존 서비스 정책 클론 생성(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 클론</p>
@@ -23849,7 +23859,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책에서 서비스 항목을 수정합니다</p>
+<p>기존 서비스 정책의 서비스 항목 수정(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 수정 서비스</p>
@@ -23857,7 +23867,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책에서 서비스 항목을 제거합니다</p>
+<p>기존 서비스 정책에서 서비스 항목 제거(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 제거 서비스</p>
@@ -23865,7 +23875,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책의 이름을 바꿉니다</p>
+<p>기존 서비스 정책 이름 바꾸기(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 이름 바꾸기</p>
@@ -23873,7 +23883,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기존 서비스 정책을 삭제합니다</p>
+<p>기존 서비스 정책 삭제(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 삭제</p>
@@ -23881,7 +23891,7 @@ vs0
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기본 제공 서비스 정책을 원래 상태로 복원합니다</p>
+<p>기본 제공 서비스 정책을 원래 상태로 복원(고급 권한 필요)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>네트워크 인터페이스 서비스 정책 복원 - 기본값</p>

@@ -11942,48 +11942,11 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_S3_구성.pdf" 
+              href="/ko-kr/ontap/pdfs/sidebar/S3_구성.pdf" 
             
           >
             <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            System Manager를 이용한 S3 구성
-          </a>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_S3_구성.pdf" 
-            
-          >
-            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            CLI를 사용한 S3 구성
+            S3 구성
           </a>
           
 
@@ -21606,22 +21569,7 @@
         <div class="na-navbar-padding"> S3 오브젝트 스토리지 관리</div>
       </a>
       <ul><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> System Manager를 이용한 S3 구성</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/concept_object_provision_overview.html">
-        오브젝트 스토리지 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_enable_s3_server.html">
-        S3 서버를 활성화합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_buckets.html">
-        버킷을 프로비저닝합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_add_s3_users_groups.html">
-        S3 사용자 및 그룹 추가
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_bucket_access.html">
-        버킷 액세스를 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_svm_access.html">
-        스토리지 VM 액세스를 관리합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> CLI를 사용한 S3 구성</div>
+        <div class="na-navbar-padding"> S3 구성</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/s3-config/index.html">
         개요
@@ -23595,7 +23543,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-05-27 00:20:11 +0000">05/27/2022</time>
     
   
 
@@ -23608,8 +23556,22 @@
 <div class="paragraph">
 <p>이 SVM에서 S3 오브젝트 스토리지만 제공하는 경우 S3 서버는 DNS 구성이 필요하지 않습니다. 그러나 다른 프로토콜을 사용하는 경우 SVM에서 DNS를 구성할 수 있습니다.</p>
 </div>
+<div class="paragraph">
+<p>System Manager를 사용하여 새 스토리지 VM 또는 기존 스토리지 VM에 대한 S3 액세스를 구성하면 인증서 및 네트워킹 정보를 입력하라는 메시지가 표시되고 S3 오브젝트 스토리지 서버가 단일 작업으로 생성됩니다.</p>
+</div>
+<div class="paragraph">
+<p>인터페이스 역할 데이터에 대한 S3 서버 이름(FQDN) 및 IP 주소를 입력할 준비가 되어 있어야 합니다.</p>
+</div>
+<div class="paragraph">
+<p>외부 CA 서명 인증서를 사용하는 경우 이 절차를 수행하는 동안 해당 인증서를 입력하라는 메시지가 표시됩니다. 또한 시스템에서 생성한 인증서를 사용할 수도 있습니다.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="title">예 1. 단계</div>
+<div class="content">
+<div class="openblock">
+<div class="title">CLI를 참조하십시오</div>
+<div class="content">
 <div class="olist arabic">
-<div class="title">단계</div>
 <ol class="arabic">
 <li>
 <p>S3 라이센스가 클러스터에서 라이센스되었는지 확인합니다.</p>
@@ -23623,7 +23585,7 @@
 <li>
 <p>SVM 생성:</p>
 <div class="paragraph">
-<p>'vserver create-vserver svm_name-rootvolume root_volume_name-aggregate aggregate_name-rootvolume-security-style UNIX-language C. UTF-8-IPSpace IPSpace_name&#8217;을 선택합니다</p>
+<p>'vserver create-vserver_svm_name_-rootvolume_root_volume_name_-aggregate_aggregate_name_-rootvolume-security-style UNIX-language C. UTF-8-IPSpace_IPSpace_name_'</p>
 </div>
 <div class="ulist">
 <ul>
@@ -23642,7 +23604,7 @@
 <li>
 <p>새로 생성한 SVM의 구성 및 상태 확인:</p>
 <div class="paragraph">
-<p>'vserver show-vserver svm_name&#8217;을 선택합니다</p>
+<p>'vserver show -vserver_svm_name_'</p>
 </div>
 <div class="paragraph">
 <p>'Vserver 작동 상태' 필드에는 '실행 중' 상태가 표시되어야 합니다. 초기화 중 상태가 표시되는 경우 루트 볼륨 생성 등 일부 중간 작업이 실패한 것으로, SVM을 삭제하고 다시 생성해야 합니다.</p>
@@ -23690,6 +23652,67 @@ Vserver creation completed</pre>
                            QoS Policy Group: -
                                 Config Lock: false
                                IPspace Name: ipspaceA</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">시스템 관리자</div>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>스토리지 VM에서 S3를 설정합니다.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>새 스토리지 VM 추가: * 스토리지 &gt; 스토리지 VM * 을 클릭한 다음 * 추가 * 를 클릭합니다.</p>
+<div class="paragraph">
+<p>기존 스토리지 VM이 없는 새 시스템인 경우 * 대시보드 &gt; 프로토콜 구성 * 을 클릭합니다.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>기존 스토리지 VM에 S3 서버를 추가하는 경우 * 스토리지 &gt; 스토리지 VM * 을 클릭하고 스토리지 VM을 선택한 다음 * 설정 * 을 클릭하고 을 클릭합니다 <span class="image"><img src="../media/icon_gear.gif" alt="설정 아이콘"></span> S3 * 아래.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>S3 * 활성화 를 클릭한 다음 S3 서버 이름 을 입력합니다.</p>
+<div class="paragraph">
+<p>이 이름은 클라이언트가 사용할 FQDN(정규화된 도메인 이름)입니다.</p>
+</div>
+</li>
+<li>
+<p>인증서 유형을 선택합니다.</p>
+<div class="paragraph">
+<p>시스템에서 생성한 인증서 또는 사용자 인증서 중 하나를 선택하든 클라이언트 액세스에 필요합니다.</p>
+</div>
+</li>
+<li>
+<p>네트워크 인터페이스를 입력합니다.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>시스템에서 생성한 인증서를 선택한 경우 새 스토리지 VM 생성이 확인되면 인증서 정보가 표시됩니다. 다운로드 * 를 클릭하고 클라이언트 액세스를 위해 저장합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>비밀 키는 다시 표시되지 않습니다.</p>
+</li>
+<li>
+<p>인증서 정보가 다시 필요한 경우 * 스토리지 &gt; 스토리지 VM * 을 클릭하고 스토리지 VM을 선택한 다음 * 설정 * 을 클릭합니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 </div>
 

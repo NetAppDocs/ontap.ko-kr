@@ -9,15 +9,15 @@
   <meta property="og:title" content="버킷을 만듭니다" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/s3-config/create-bucket-task.html" />
-	<meta property="og:description" content="S3 오브젝트는 버킷에 보관되므로 다른 디렉토리 내의 파일 안으로 중첩되지 않습니다." />
+	<meta property="og:description" content="S3 오브젝트는 _bucket_- 에 보관되며 다른 디렉토리 내의 디렉토리 내에 파일로 중첩되지 않습니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="S3 오브젝트는 버킷에 보관되므로 다른 디렉토리 내의 파일 안으로 중첩되지 않습니다.">
-  <meta name="keywords" content=" create, bucket"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="S3 오브젝트는 _bucket_- 에 보관되며 다른 디렉토리 내의 디렉토리 내에 파일로 중첩되지 않습니다.">
+  <meta name="keywords" content=" s3, bucket, system manager,"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -11942,48 +11942,11 @@
           
           <a target="_blank" 
             
-              href="/ko-kr/ontap/pdfs/sidebar/System_Manager를_이용한_S3_구성.pdf" 
+              href="/ko-kr/ontap/pdfs/sidebar/S3_구성.pdf" 
             
           >
             <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            System Manager를 이용한 S3 구성
-          </a>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
-
-
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/ko-kr/ontap/pdfs/sidebar/CLI를_사용한_S3_구성.pdf" 
-            
-          >
-            <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
-            CLI를 사용한 S3 구성
+            S3 구성
           </a>
           
 
@@ -21606,22 +21569,7 @@
         <div class="na-navbar-padding"> S3 오브젝트 스토리지 관리</div>
       </a>
       <ul><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> System Manager를 이용한 S3 구성</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/concept_object_provision_overview.html">
-        오브젝트 스토리지 개요
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_enable_s3_server.html">
-        S3 서버를 활성화합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_buckets.html">
-        버킷을 프로비저닝합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_add_s3_users_groups.html">
-        S3 사용자 및 그룹 추가
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_bucket_access.html">
-        버킷 액세스를 관리합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_object_provision_manage_svm_access.html">
-        스토리지 VM 액세스를 관리합니다
-      </a></li></ul></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> CLI를 사용한 S3 구성</div>
+        <div class="na-navbar-padding"> S3 구성</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/s3-config/index.html">
         개요
@@ -23595,13 +23543,15 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-05 05:40:37 +0000">05/05/2022</time>
+    <time datetime="2022-05-27 00:20:11 +0000">05/27/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>S3 오브젝트는 <em>bucket</em>- 에 보관되며 다른 디렉토리 내의 디렉토리 내에 파일로 중첩되지 않습니다.</p>
 </div>
@@ -23609,7 +23559,7 @@
 <p>S3 서버를 포함하는 SVM이 이미 존재해야 합니다.</p>
 </div>
 <div class="paragraph">
-<p>버킷을 생성할 때 두 가지 프로비저닝 옵션이 있습니다.</p>
+<p>CLI의 경우 버킷을 생성할 때 두 가지 프로비저닝 옵션이 있습니다.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -23638,27 +23588,36 @@
 <p>새 버킷에 대해 Aggregate 및 구성요소를 지정하는 경우 새 FlexGroup가 새 버킷에 대해 생성됩니다.</p>
 </li>
 <li>
-<p>새 버킷의 Aggregate 및 구성요소를 지정하지 않을 경우 새 버킷이 기존 FlexGroup에 추가됩니다. 자세한 내용은 FlexGroup 설명서를 참조하십시오.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><a href="../flexgroup/index.html">"FlexGroup 볼륨 관리"</a></p>
-</div>
-</li>
-</ul>
-</div>
+<p>새 버킷의 Aggregate 및 구성요소를 지정하지 않을 경우 새 버킷이 기존 FlexGroup에 추가됩니다. 을 참조하십시오 <a href="../flexgroup/index.html">FlexGroup 볼륨 관리</a> 를 참조하십시오.</p>
 <div class="paragraph">
 <p>버킷을 생성할 때 Aggregate 및 구성요소를 지정하면 QoS 정책 그룹, 기본값 또는 사용자 지정이 적용되지 않습니다. 나중에 'vserver object-store-server bucket modify' 명령을 사용하여 이 작업을 수행할 수 있습니다.</p>
 </div>
 </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
-<p>참고: * Cloud Volumes ONTAP에서 버킷을 제공하는 경우 기본 애그리게이트를 수동으로 선택하여 해당 애그리게이트가 하나의 노드만 사용하는지 확인하는 것이 좋습니다. 두 노드의 애그리게이트를 사용하면 지리적으로 서로 분리되어 있는 가용성 영역에 노드가 있기 때문에 지연 시간 문제가 발생하기 때문에 성능에 영향을 미칠 수 있습니다.</p>
+<p>참고: * Cloud Volumes ONTAP에서 버킷을 제공하는 경우 CLI 절차를 사용해야 합니다. 기본 애그리게이트는 한 노드만 사용하는지 확인하기 위해 수동으로 선택하는 것이 좋습니다. 두 노드의 애그리게이트를 사용하면 지리적으로 서로 분리되어 있는 가용성 영역에 노드가 있기 때문에 지연 시간 문제가 발생하기 때문에 성능에 영향을 미칠 수 있습니다.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>스토리지 서비스 수준은 <em>value</em>, <em>performance</em> 및 _extreme_default 수준으로 사전 정의된 QoS(Adaptive Quality of Service) 정책 그룹입니다. 기본 스토리지 서비스 수준 대신 맞춤형 QoS 정책 그룹을 정의하여 버킷에 적용할 수도 있습니다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
+ONTAP 9.8부터는 스토리지 용량 할당 시 QoS가 기본적으로 사용하도록 설정됩니다. 프로비저닝 프로세스 중에 또는 나중에 QoS를 비활성화하거나 사용자 지정 QoS 정책을 선택할 수 있습니다.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><a href="storage-service-definitions-reference.html">"스토리지 서비스 정의"</a></p>
@@ -23667,13 +23626,25 @@
 <p>로컬 용량 계층화를 구성하는 경우, S3 서버가 있는 시스템 SVM이 아니라 데이터 SVM에서 버킷 및 사용자를 생성합니다.</p>
 </div>
 <div class="paragraph">
+<p>원격 클라이언트 액세스의 경우 S3 지원 스토리지 VM에서 버킷을 구성해야 합니다. S3이 활성화되지 않은 스토리지 VM에서 버킷을 생성하는 경우 로컬 계층화에만 사용할 수 있습니다.</p>
+</div>
+<div class="paragraph">
 <p><a href="../performance-admin/index.html">"성능 관리"</a></p>
 </div>
 <div class="paragraph">
 <p>추가 구성 및 표시 옵션은 'vserver object-store-server bucket' man 페이지를 참조하십시오.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="버킷을-생성하는-프로세스">버킷을 생성하는 프로세스</h2>
+<div class="sectionbody">
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">CLI를 참조하십시오</div>
+<div class="content">
 <div class="olist arabic">
-<div class="title">단계</div>
 <ol class="arabic">
 <li>
 <p>Aggregate 및 FlexGroup 구성 요소를 직접 선택하려면 권한 수준을 Advanced(고급)로 설정하십시오. 그렇지 않으면 admin 권한 수준이 Advanced(고급)로 설정됩니다</p>
@@ -23751,6 +23722,92 @@
 <div class="listingblock">
 <div class="content">
 <pre>cluster-1::*&gt; vserver object-store-server bucket create -vserver svm1.example.com -bucket testbucket -aggr-list aggr1 -size 1TB</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">시스템 관리자</div>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>S3 지원 스토리지 VM에 새 버킷을 추가합니다.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>스토리지 &gt; 버킷 * 을 클릭한 다음 * 추가 * 를 클릭합니다.</p>
+</li>
+<li>
+<p>이름을 입력하고 스토리지 VM을 선택한 다음 크기를 입력합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>이 지점에서 * Save * (저장 *)를 클릭하면 다음 기본 설정으로 버킷이 생성됩니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>그룹 정책이 이미 적용되어 있지 않으면 버킷에 대한 액세스 권한이 사용자에게 부여되지 않습니다.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap/images/note.svg" alt="참고">
+</td>
+<td class="content">
+오브젝트 저장소에 대한 무제한 액세스 권한이 있으므로 S3 루트 사용자를 사용하여 ONTAP 오브젝트 스토리지를 관리하고 권한을 공유해서는 안 됩니다. 대신 할당한 관리 권한이 있는 사용자 또는 그룹을 만듭니다.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>시스템에서 가장 높은 수준의 서비스 품질(성능) 수준입니다.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>bucket을 구성할 때 * 추가 옵션 * 을 클릭하여 사용자 권한 및 성능 수준을 구성하거나 나중에 이러한 설정을 수정할 수 있습니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>권한을 구성하려면 * 추가 옵션 * 을 사용하기 전에 사용자 및 그룹을 이미 만들어야 합니다.</p>
+</li>
+<li>
+<p>FabricPool 계층화에 S3 오브젝트 저장소를 사용하려는 경우 성능 서비스 수준이 아닌 * 계층화에 사용 * (계층 데이터에 최적의 성능을 제공하는 저비용 미디어 사용)을 선택하는 것이 좋습니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>S3 클라이언트 애플리케이션 – 다른 ONTAP 시스템 또는 외부 타사 애플리케이션 – 다음을 입력하여 새 버킷에 대한 액세스를 확인합니다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>S3 서버 CA 인증서입니다.</p>
+</li>
+<li>
+<p>사용자의 액세스 키 및 암호 키입니다.</p>
+</li>
+<li>
+<p>S3 서버 FQDN 이름 및 버킷 이름입니다.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
