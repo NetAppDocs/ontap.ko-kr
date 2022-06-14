@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head class="at-element-marker">
-  <title></title>
+  <title>ASA 플랫폼의 iSCSI LIF 페일오버</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="ASA 플랫폼의 iSCSI LIF 페일오버" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/ko-kr/ontap/san-admin/asa-iscsi-lif-fo-task.html" />
-	<meta property="og:description" content="" />
+	<meta property="og:description" content="iSCSI LIF 페일오버 기능은 모든 SAN 어레이 플랫폼의 ONTAP 9.11.1에서 사용할 수 있으며, 홈 노드가 중지되기 전에 iSCSI LIF가 노드에서 HA 파트너로 마이그레이션하도록 허용합니다." />
   <meta property="og:image" content="https://docs.netapp.com/ko-kr/ontap/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="iSCSI LIF 페일오버 기능은 모든 SAN 어레이 플랫폼의 ONTAP 9.11.1에서 사용할 수 있으며, 홈 노드가 중지되기 전에 iSCSI LIF가 노드에서 HA 파트너로 마이그레이션하도록 허용합니다.">
+  <meta name="keywords" content=" failover, iscsi, all san array, cli, system manager, auto-revert, revert network interface"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -53,9 +53,6 @@
   <link rel="stylesheet" href="/ko-kr/ontap/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
   <link rel='stylesheet' href='/ko-kr/ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
-    pageRedirect("https://docs.netapp.com/ko-kr/ontap/san-admin/index.html");
-    function pageRedirect(url) { location.href = url; }
-  </script><script>
     if (document.location.hostname === "docs.netapp.com") {
       var head = document.getElementsByTagName('head')[0];
       var onetrustConsent = document.createElement("script");
@@ -172,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[](https://docs.netapp.com/ko-kr/ontap/san-admin/asa-iscsi-lif-fo-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/san-admin/asa-iscsi-lif-fo-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[ASA 플랫폼의 iSCSI LIF 페일오버](https://docs.netapp.com/ko-kr/ontap/san-admin/asa-iscsi-lif-fo-task.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/san-admin/asa-iscsi-lif-fo-task.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/ontap/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/ontap/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -11016,6 +11013,17 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ko-kr/ontap/pdfs/pages/san-admin/asa-iscsi-lif-fo-task.pdf" >
+    <img src="/ko-kr/ontap/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
 
           
         </li>
@@ -21232,6 +21240,8 @@
         스토리지 시스템의 iSCSI 오류 메시지를 해결합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/troubleshoot-iscsi-luns-not-visible-reference.html">
         호스트에 표시되지 않는 iSCSI LUN 문제를 해결합니다
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/asa-iscsi-lif-fo-task.html">
+        ASA 플랫폼의 iSCSI LIF 페일오버
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> FC 프로토콜을 관리합니다</div>
       </a>
@@ -23522,23 +23532,132 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading"></h1>
+  <h1 class="n-doc__component-detail-heading">ASA 플랫폼의 iSCSI LIF 페일오버</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-05-08 00:34:06 +0000">05/08/2022</time>
+    <time datetime="2022-06-13 22:35:04 +0000">06/13/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>iSCSI 논리 인터페이스(LIF) 페일오버 기능은 모든 SAN 어레이(ASA) 플랫폼의 ONTAP 9.11.1에서 사용할 수 있으며 홈 노드가 중지되기 전에 iSCSI LIF가 HA 파트너로 다운되는 노드에서 마이그레이션하도록 합니다. iSCSI LIF 페일오버 기능은 전체 ONTAP 클러스터가 ONTAP 9.11.1 이상이 되어야 사용할 수 있습니다.</p>
+</div>
 <div class="paragraph">
-<p>=
-:allow-uri-read:</p>
+<p>다음 목록에서는 이 기능의 작동 방식을 설명합니다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>다타-iSCSI 서비스 정책을 사용하는 LIF의 경우 페일오버 정책은 'fo-partner-only', 'local-only', 'disabled&#8217;로 제한됩니다</p>
+</li>
+<li>
+<p>iSCSI LIF는 페일오버 정책이 'fo 파트너 전용&#8217;으로 설정된 경우에만 HA 파트너에 페일오버할 수 있습니다</p>
+</li>
+<li>
+<p>반환 정책이 'auto-revert true&#8217;로 설정되고 노드가 quorum에 다시 돌아올 때 발생합니다</p>
+</li>
+<li>
+<p>계획되거나 계획되지 않은 노드 테이크오버가 있을 경우 테이크오버가 수행되는 노드의 iSCSI LIF가 HA 파트너로 페일오버되며 LIF가 페일오버되는 포트는 VIF Manager에 의해 결정됩니다</p>
+</li>
+<li>
+<p>페일오버가 완료되면 iSCSI LIF가 정상적으로 작동합니다</p>
+</li>
+<li>
+<p>반환이 시작되면 iSCSI LIF가 홈 노드 및 포트로 되돌아갑니다</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="system-manager-절차">System Manager 절차</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP 9.11.1부터 System Manager를 사용하면 홈 노드가 중지되기 전에 ASA 플랫폼에서 HA 파트너로 다운되는 iSCSI LIF를 마이그레이션할 수 있습니다. ASA 플랫폼에서는 마이그레이션 및 되돌리기 기능이 기본적으로 사용됩니다.</p>
+</div>
+<div class="sect2">
+<h3 id="페일오버">페일오버</h3>
+<div class="olist arabic">
+<div class="title">단계</div>
+<ol class="arabic">
+<li>
+<p>System Manager에서 * Network &gt; Overview &gt; Network Interfaces * 를 클릭합니다</p>
+</li>
+<li>
+<p>마이그레이션할 LIF를 선택하고 을 클릭합니다 <span class="image"><img src="../media/icon_kabob.gif" alt="Kabob 아이콘"></span>를 클릭한 다음 * 마이그레이션 * 을 클릭합니다.</p>
+</li>
+<li>
+<p>Migrate Interface * 대화 상자에서 HA 파트너의 대상 노드 및 포트를 선택합니다.</p>
+</li>
+<li>
+<p>마이그레이션 * 을 클릭합니다.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="반환">반환</h3>
+<div class="olist arabic">
+<div class="title">단계</div>
+<ol class="arabic">
+<li>
+<p>System Manager에서 * Network &gt; Overview &gt; Network Interfaces * 를 클릭합니다.</p>
+</li>
+<li>
+<p>되돌릴 LIF를 선택한 다음 을 클릭합니다 <span class="image"><img src="../media/icon_kabob.gif" alt="Kabob 아이콘"></span> 그런 다음 * 네트워크 인터페이스 되돌리기 * 를 클릭합니다.</p>
+</li>
+<li>
+<p>네트워크 인터페이스 * 되돌리기 대화 상자에서 * 되돌리기 * 를 클릭합니다.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cli-절차">CLI 절차</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP 9.11.1부터 ASA 플랫폼에서 다음 명령을 사용하여 iSCSI LIF를 생성하고 관리합니다. 페일오버 및 자동 되돌리기 기능은 기본적으로 활성화되어 있습니다. _</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원하는 작업</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이 명령 사용&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI LIF를 생성합니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'network interface create-vserver_SVM_name_-lif_iscsi_lif_-service-policy default-data-blocks-data-protocol iscsi-home-node_node_name_-home-port_name_'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LIF가 성공적으로 생성되었는지 확인합니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'network interface show -vserver_SVM_name_-fields failover-policy, failover-group, auto-revert, is-home'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI LIF에서 자동 되돌리기 기본값을 재정의할 수 있는지 확인합니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"network interface modify -vserver_SVM_name_-lif iscsi_lif -auto-revert false" 오류: "오류: 명령 실패: SAN LIF에서 자동 복원을 비활성화할 수 없습니다." 오류가 발생합니다</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iSCSI LIF에서 스토리지 페일오버를 수행합니다</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'storage failover - ofnode_node_name_ - option normal' 경고 메시지가 표시됩니다. '테이크오버가 시작됩니다. 파트너 노드가 재부팅되면 반환이 자동으로 시작됩니다. 계속 하시겠습니까? {y/n}: "y" 응답은 HA 파트너의 인수 메시지를 표시합니다.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
     </article>
