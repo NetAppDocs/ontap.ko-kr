@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="전송 중에도 데이터를 지속적으로 보호하고 암호화하기 위해 ONTAP는 전송 모드에서 IPsec 프로토콜을 사용합니다">
-  <meta name="keywords" content=" ipsec, security, internet protocol, on wire, in transit, encrypt, encryption, secure, configure ip security (ipsec) over wire encryption, ensure data is continuously secure and encrypted, ipsec protocol, enable ipsec on the cluster, security ipsec config show, ipsec enabled, ipsec config modify, ipsec config show, security ipsec policy create, protocols, local-ports, remote-ports, define the security policy database (spd), use ipsec identities, subnet configuration, allow all clients configuration, ipsec statistics"><!-- Icons -->
+  <meta name="keywords" content=" ipsec, security, internet protocol, on wire, in transit, encrypt, encryption, secure, enable ipsec, security ipsec config show, ipsec config modify, ipsec config show, security ipsec policy create, protocols, local-ports, remote-ports, spd, security policy database,ipsec identities"><!-- Icons -->
   <link rel="icon" href="/ko-kr/ontap/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -23539,7 +23539,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-06-14 19:48:30 +0000">06/14/2022</time>
     
   
 
@@ -23550,6 +23550,9 @@
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>ONTAP 9.8부터 ONTAP는 전송 모드에서 IPsec 프로토콜을 사용하여 전송 중에도 데이터를 지속적으로 보호하고 암호화합니다. IPsec은 NFS, iSCSI 및 SMB 프로토콜을 포함한 모든 IP 트래픽에 대한 데이터 암호화를 제공합니다. IPsec은 iSCSI 트래픽에 대해 전송 중인 유일한 암호화 옵션을 제공합니다.</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.9.1부터 IPsec에서 사용하는 암호화 알고리즘은 FIPS 140-2 검증을 거쳤습니다. 알고리즘은 FIPS 140-2 검증을 수행하는 ONTAP의 NetApp 암호화 모듈에 의해 생성됩니다.</p>
 </div>
 <div class="paragraph">
 <p>ONTAP 9.10.1부터 사전 공유 키(PSK) 또는 인증서를 사용하여 IPsec을 통한 인증을 수행할 수 있습니다. 이전에는 PSK만 IPsec에서 지원되었습니다.</p>
