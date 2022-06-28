@@ -1853,6 +1853,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -16800,7 +16802,7 @@
         <div class="na-navbar-padding"> CLI 명령에 대한 여러 셸 정보(클러스터 관리자만 해당)</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/different-shells-cli-commands-concept.html">
-        정보
+        개요
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/access-nodeshell-commands-options-clustershell-concept.html">
         클러스터 쉘에서 노드 명령 및 옵션 액세스
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/display-nodeshell-commands-task.html">
@@ -16846,10 +16848,12 @@
       </a></li></ul></li></ul></li><li class="subfolders "><a href="/ko-kr/ontap/system-admin/command-line-interface-concept.html">
         <div class="na-navbar-padding"> ONTAP 명령줄 인터페이스를 사용합니다</div>
       </a>
-      <ul><li class="subfolders "><a href="/ko-kr/ontap/system-admin/different-shells-cli-commands-concept.html">
+      <ul><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> CLI 명령에 대한 여러 셸 정보(클러스터 관리자만 해당)</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/access-nodeshell-commands-options-clustershell-concept.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/different-shells-cli-commands-concept-cluster-admin.html">
+        개요
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/access-nodeshell-commands-options-clustershell-concept.html">
         클러스터 쉘에서 노드 명령 및 옵션 액세스
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/system-admin/display-nodeshell-commands-task.html">
         사용 가능한 노드 대체 명령을 표시합니다
@@ -22559,26 +22563,50 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-06-28 21:12:45 +0000">06/28/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>ONTAP 9.4부터 보안 제거를 사용하여 NVE 지원 볼륨에서 데이터를 중단 없이 스크럽할 수 있습니다. 암호화된 볼륨에 데이터를 스크러빙하면 물리적 미디어에서 데이터를 복구할 수 없습니다. 예를 들어, 블록 덮어쓰기 시 데이터 추적이 남아 있거나 비어 있는 테넌트의 데이터를 안전하게 삭제하기 위해 "스필지"가 남아 있을 수 있습니다.</p>
 </div>
 <div class="paragraph">
 <p>Secure Purge는 NVE 지원 볼륨에서 이전에 삭제된 파일에 대해서만 작동합니다. 암호화되지 않은 볼륨은 스크럽 할 수 없습니다. 온보드 키 관리자가 아닌 KMIP 서버를 사용하여 키를 제공해야 합니다.</p>
 </div>
-<div class="paragraph">
-<p>ONTAP 버전에 따라 퍼지 기능을 다르게 보호합니다.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="보안-제거-사용에-대한-고려-사항">보안 제거 사용에 대한 고려 사항</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>ONTAP 9.8 이상:</p>
+<p>NetApp Aggregate Encryption(NAE)이 활성화된 Aggregate에서 생성된 볼륨은 보안 제거를 지원하지 않습니다.</p>
+</li>
+<li>
+<p>Secure Purge는 NVE 지원 볼륨에서 이전에 삭제된 파일에 대해서만 작동합니다.</p>
+</li>
+<li>
+<p>암호화되지 않은 볼륨은 스크럽 할 수 없습니다.</p>
+</li>
+<li>
+<p>온보드 키 관리자가 아닌 KMIP 서버를 사용하여 키를 제공해야 합니다.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ONTAP 버전에 따라 퍼지 기능을 다르게 보호합니다.</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">ONTAP 9.8 이상</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -22604,13 +22632,15 @@
 </div>
 </li>
 <li>
-<p>기본적으로 FlexVol 볼륨의 모든 스냅샷 복사본은 보안 삭제 작업 중에 자동으로 삭제됩니다. 기본적으로 FlexGroup 볼륨 및 SnapMirror 데이터 보호를 사용하는 볼륨의 스냅샷은 안전한 삭제 작업 중에 자동으로 삭제되지 않습니다. 이러한 기본값은 'Secure purge delete-all-snapshots[true|false]'를 사용하여 변경할 수 있습니다. 명령.</p>
+<p>기본적으로 FlexVol 볼륨의 모든 스냅샷 복사본은 보안 삭제 작업 중에 자동으로 삭제됩니다. 기본적으로 FlexGroup 볼륨 및 SnapMirror 데이터 보호를 사용하는 볼륨의 스냅샷은 안전한 삭제 작업 중에 자동으로 삭제되지 않습니다. 이러한 기본값은 'secure purge delete -all -snapshots[true|false]' 명령을 사용하여 변경할 수 있습니다.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>ONTAP 9.7 및 그 이전:</p>
+</div>
+</div>
+<div class="openblock">
+<div class="title">ONTAP 9.7 이하:</div>
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
@@ -22635,9 +22665,6 @@
 <p>볼륨에서 사용 중인 스냅샷 복사본이 있는 경우 볼륨을 제거하려면 먼저 스냅샷 복사본을 해제해야 합니다. 예를 들어, FlexClone 볼륨을 상위 볼륨에서 분할해야 할 수 있습니다.</p>
 </div>
 </li>
-</ul>
-</div>
-</li>
 <li>
 <p>보안 제거 기능을 성공적으로 호출하면 새 키를 사용하여 남아 있는 비퍼지된 데이터를 다시 암호화하는 볼륨 이동이 트리거됩니다.</p>
 <div class="paragraph">
@@ -22645,6 +22672,12 @@
 </div>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     </article>
