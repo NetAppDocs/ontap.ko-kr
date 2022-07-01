@@ -1287,6 +1287,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1453,6 +1455,8 @@
             클러스터를 되돌린 후에는 어떻게 해야 합니까?
           </a>
           
+
+
 
 
 
@@ -10411,8 +10415,6 @@
 
 
 
-
-
         </li>
       </ul>
     
@@ -16649,6 +16651,8 @@
         NFS 클라이언트에 대해 원하는 NT ACL 권한 표시 수준을 설정합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/task_enforcing_sha_2_on_user_account_passwords_dot_9_0_upgrade_guide.html">
         관리자 암호에 SHA-2를 적용합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/sp-user-accounts-change-concept.html">
+        서비스 프로세서에 액세스할 수 있는 사용자 계정의 변경
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/upgrade/concept_when_you_need_to_update_the_disk_qualification_package.html">
         DQP를 업데이트합니다
       </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/task_admin_update_firmware.html">
@@ -16724,6 +16728,8 @@
         암호 해시 기능을 되돌립니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/concept_support_of_sp_firmware_automatic_revert.html">
         SP 펌웨어를 업데이트합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/revert/verify-sp-user-accounts-task.html">
+        서비스 프로세서에 액세스할 수 있는 사용자 계정을 확인합니다
       </a></li></ul></li></ul></li></ul></li><li class="subfolders "><a href="/ko-kr/ontap/cluster-admin/index.html">
         <div class="na-navbar-padding"> 클러스터 관리</div>
       </a>
@@ -20264,8 +20270,6 @@
         스토리지 시스템의 iSCSI 오류 메시지를 해결합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/troubleshoot-iscsi-luns-not-visible-reference.html">
         호스트에 표시되지 않는 iSCSI LUN 문제를 해결합니다
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/san-admin/asa-iscsi-lif-fo-task.html">
-        ASA 플랫폼의 iSCSI LIF 페일오버
       </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> FC 프로토콜을 관리합니다</div>
       </a>
@@ -22563,7 +22567,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-07-01 01:54:14 +0000">07/01/2022</time>
     
   
 
@@ -22591,10 +22595,21 @@
 <p>SnapMirror 대상에서 FlexGroup 레벨 SnapMirror 관계인 '스냅샷 재동기화&#8217;를 다시 동기화합니다</p>
 </li>
 <li>
-<p>FlexGroup SVM DR SnapMirror 관계를 생성합니다. '스냅샷 생성 정책 DPDefault-identity-preserve true-destination-path dest_svm:dest_flexgroup-source-path src_svm:src_flexgroup'</p>
+<p>FlexGroup SVM DR SnapMirror 관계를 생성합니다. FlexGroup 볼륨 SnapMirror 관계에 구성된 동일한 SnapMirror 정책을 사용하십시오. 'napmirror create-destination-path dest_svm: -source-path src_svm: -identity-preserve true-policy MirrorAllSnapshots'</p>
 </li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>복제 관계를 생성할 때 'napmirror create' 명령의 '-identity-preserve true' 옵션을 사용해야 합니다.</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>'sapmirror show-destination-path dest_svm: dest_flexgroup-source-path src_svm: src_flexgroup' 관계가 끊어졌는지 확인합니다</p>
+<p>'sapmirror show-destination-path dest_svm:-source-path src_svm:'의 관계가 끊어졌는지 확인합니다</p>
 <div class="listingblock">
 <div class="content">
 <pre>snapmirror show -destination-path fg_vs_renamed: -source-path fg_vs:
@@ -22619,7 +22634,7 @@ fg_vs:        XDP  fg_vs1_renamed:     Broken-off
 </div>
 </li>
 <li>
-<p>SVM SnapMirror 관계를 재동기화합니다. 'sapmirror resync-destination-path dest_svm: dest_flexgroup-source-path src_svm: src_flexgroup'</p>
+<p>SVM SnapMirror 관계를 재동기화합니다. 'sapmirror resync-destination-path dest_svm:-source-path src_svm:</p>
 <div class="listingblock">
 <div class="content">
 <pre>snapmirror resync -destination-path fg_vs_renamed: -source-path fg_vs:
