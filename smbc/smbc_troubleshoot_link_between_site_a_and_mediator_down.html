@@ -22569,7 +22569,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-07-14 02:39:29 +0000">07/14/2022</time>
     
   
 
@@ -22579,85 +22579,39 @@
 <div class="paragraph lead">
 <p>SM-BC를 사용하면 중재자나 피어링된 클러스터 간의 연결이 끊어질 수 있습니다. SM-BC 관계의 여러 부분에 대한 연결, 가용성 및 합의 상태를 확인한 후 강제로 연결을 재개하여 문제를 진단할 수 있습니다.</p>
 </div>
-<div class="paragraph">
-<p>사이트 A에서 스냅미러 중재자 표시 명령을 사용하여 중재자의 상태를 확인합니다.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>C1_cluster::*&gt; snapmirror mediator show
-Mediator Address Peer Cluster     Connection Status Quorum Status
----------------- ---------------- ----------------- -------------
-10.237.86.17     C2_cluster       unreachable       true
-
-C1_cluster::*&gt; snapmirror list-destinations
-                                                  Progress
-Source             Destination         Transfer   Last         Relationship
-Path         Type  Path         Status Progress   Updated      Id
------------ ----- ------------ ------- --------- ------------ ---------------
-vs0:/cg/src_cg_1  XDP   vs1:/cg/dst_cg_1  OutOfSync  -         -            bba7d354-06f6-11eb-9138-005056acec19</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>"cluster peer show" 명령을 사용하여 사이트 B 연결을 확인합니다.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>C1_sti78-vsim-ucs188a_cluster::*&gt; cluster peer show
-Peer Cluster Name         Cluster Serial Number Availability   Authentication
-------------------------- --------------------- -------------- --------------
-C2_cluster                1-80-000011           Unavailable    ok</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>sm-bc volume의 합의 상태를 'volume show_volume_name_-fields smbc-Consensus' 명령으로 확인한다.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>C1_cluster::*&gt; volume show zrto_cg_894191_188b_RW1 -fields smbc-consensus
-vserver volume                  smbc-consensus
-------- ----------------------- ------------------
-vs0     zrto_cg_894191_188b_RW1 Awaiting-consensus</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>SM-BC 합의를 무시하고 사이트 A에서 강제로 I/O를 재개하려면 다음 단계를 수행하십시오.</p>
-</div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<img src="/us-en/ontap/images/note.svg" alt="참고">
-</td>
-<td class="content">
-이 솔루션은 NetApp 지원에 문의해야 하는 DIAG 레벨 명령을 사용합니다.
-</td>
+<th class="tableblock halign-left valign-top">확인할 사항</th>
+<th class="tableblock halign-left valign-top">CLI 명령</th>
+<th class="tableblock halign-left valign-top">표시기</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사이트 A의 중재자</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">스냅미러 중재자 쇼</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">연결 상태는 Unreachable(연결 불가) 상태가 됩니다</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사이트 B 연결</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 피어 쇼</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이용 가능 여부는 불가할 것입니다</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SM-BC 볼륨의 합의 상태</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'volume show_volume_name_-fields smbc-Consensus'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'중도합의' 필드는 '대기합의&#8217;로 읽혀질 것이다</p></td>
+</tr>
+</tbody>
 </table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>사이트 A에서 LUN 매핑을 해제합니다</p>
-</li>
-<li>
-<p>사이트 A의 '-force ' 및 ' override-smbc-Consensus ' 옵션을 사용하여 'napMirror release' 명령을 실행합니다</p>
-</li>
-<li>
-<p>LUN을 다시 매핑합니다.</p>
-</li>
-<li>
-<p>먼저 중재자를 불러 사이트 B 노드를 가져옵니다.</p>
-</li>
-<li>
-<p>'스냅샷 재동기화&#8217;를 사용하여 정합성 보장 그룹 관계를 다시 동기화하십시오.</p>
-</li>
-<li>
-<p>사이트 B가 가동된 후 정합성 보장 그룹 관계가 설정되어 있고 동기화되어 있는지 확인합니다.</p>
-</li>
-<li>
-<p>호스트에서 LUN 재검색을 수행하여 LUN에 대한 모든 경로를 복구합니다.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>이 문제의 진단 및 해결에 대한 자세한 내용은 기술 자료 문서를 참조하십시오 <a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Link_between_Site_A_and_Mediator_down_and_Site_B_down_when_using_SM-BC" target="_blank" rel="noopener">"SM-BC 사용 시 사이트 A와 중재자를 다운시키고 사이트 B를 다운합니다"</a>.</p>
 </div>
 
     </article>
