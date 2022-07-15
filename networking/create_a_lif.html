@@ -4436,6 +4436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -17918,6 +17920,8 @@
         볼륨 효율성 모드를 확인합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/change-efficiency-mode-task.html">
         볼륨 효율성 모드를 변경합니다
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/view-footprint-savings-task.html">
+        온도에 민감한 스토리지 효율성 물리적 설치 공간 절감 효과 확인
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/enable-data-compression-volume-task.html">
         볼륨에 대해 데이터 압축을 설정합니다
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/ontap/volumes/move-between-secondary-adaptive-compression-task.html">
@@ -22569,7 +22573,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-18 00:28:54 +0000">06/18/2022</time>
+    <time datetime="2022-07-15 16:32:13 +0000">07/15/2022</time>
     
   
 
@@ -22649,6 +22653,18 @@
 </li>
 <li>
 <p>서브넷을 사용하여 네트워크 인터페이스를 만들면 ONTAP는 선택한 서브넷에서 사용 가능한 IP 주소를 자동으로 선택하고 네트워크 인터페이스에 할당합니다. 서브넷이 두 개 이상인 경우 서브넷을 변경할 수 있지만 IP 주소는 변경할 수 없습니다.</p>
+</li>
+<li>
+<p>ONTAP 9.11.1부터 iSCSI LIF 페일오버 기능은 모든 SAN 어레이(ASA) 플랫폼에서 사용할 수 있습니다.</p>
+<div class="paragraph">
+<p>iSCSI LIF 페일오버가 자동으로 활성화됨(페일오버 정책은 'fo-partner-only&#8217;로 설정되고 자동 되돌리기 값은 'true&#8217;로 설정됨) 지정된 스토리지 VM에 iSCSI LIF가 없거나 지정된 스토리지 VM의 기존 iSCSI LIF가 iSCSI LIF 페일오버로 이미 활성화되어 있는 경우, 새로 생성된 iSCSI LIF에서</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.11.1 이상으로 업그레이드한 후 iSCSI LIF 페일오버 기능을 사용하도록 설정되지 않은 스토리지 VM에 기존 iSCSI LIF가 있고 동일한 스토리지 VM에 새 iSCSI LIF를 생성하는 경우, 새로운 iSCSI LIF는 스토리지 VM에 있는 기존 iSCSI LIF와 동일한 페일오버 정책(비활성화)을 가정합니다.</p>
+</div>
+<div class="paragraph">
+<p><a href="../san-admin/asa-iscsi-lif-fo-task.html">"ASA 플랫폼의 iSCSI LIF 페일오버"</a></p>
+</div>
 </li>
 </ul>
 </div>
