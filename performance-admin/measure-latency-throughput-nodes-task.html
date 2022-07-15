@@ -22573,7 +22573,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-15 14:41:21 +0000">04/15/2022</time>
+    <time datetime="2022-07-15 21:58:04 +0000">07/15/2022</time>
     
   
 
@@ -22625,27 +22625,17 @@
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">세션 유형</th>
-<th class="tableblock halign-left valign-top">설명</th>
-</tr>
-</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>기본값</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>서로 다른 클러스터에 있는 노드 간 SnapMirror 복제</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">세션 유형</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">설명</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>AsyncMirrorLocal 을 선택합니다</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>동일한 클러스터 내의 노드 간 SnapMirror 복제</p>
+<p>동일한 클러스터의 노드 간에 SnapMirror가 사용하는 설정입니다</p>
 </div></div></td>
 </tr>
 <tr>
@@ -22653,15 +22643,7 @@
 <p>AsyncMirrorRemote 를 참조하십시오</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>서로 다른 클러스터에 있는 노드 간 SnapMirror 복제</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SyncMirrorRemote</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>서로 다른 클러스터에 있는 노드 간 SyncMirror 복제</p>
+<p>서로 다른 클러스터 노드 간에 SnapMirror가 사용하는 설정(기본 유형)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -22669,7 +22651,7 @@
 <p>RemoteDataTransfer를 참조하십시오</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>동일한 클러스터 내의 노드 간 데이터 전송(예: 다른 노드의 볼륨에 저장된 파일에 대해 NFS 요청)</p>
+<p>ONTAP에서 동일한 클러스터의 노드 간 원격 데이터 액세스를 위해 사용하는 설정(예: 다른 노드의 볼륨에 저장된 파일에 대해 노드에 NFS 요청)</p>
 </div></div></td>
 </tr>
 </tbody>
