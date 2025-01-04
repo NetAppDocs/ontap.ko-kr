@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, two-node, metrocluster, mcc, 9.2, earlier 
 summary: 2노드 MetroCluster 구성을 업그레이드하는 방법은 ONTAP 버전에 따라 다릅니다. ONTAP 9.2 이전 버전에서 업그레이드하는 경우 이 절차를 사용하십시오. 
 ---
-= ONTAP 9.2 이전 버전에서 2노드 MetroCluster 구성의 무중단 업그레이드
+= ONTAP 9.2 이하 버전의 2-노드 MetroCluster 구성에 대한 수동 무중단 업그레이드
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

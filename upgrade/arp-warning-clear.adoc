@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, ransomware, protection, security, arp 
 summary: ONTAP를 업그레이드하기 전에 TLS를 사용하도록 LDAP 서버와의 보안 통신을 위해 SSLv3을 사용하여 LDAP 클라이언트를 구성합니다. 업그레이드 후에는 SSL을 사용할 수 없습니다. 
 ---
-= 자율적 랜섬웨어 방어(ARP)에서 비정상적인 활동 경고에 대응
+= ONTAP를 업그레이드하기 전에 ARP(자율적 랜섬웨어 차단)에서 활동 경고를 해결합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

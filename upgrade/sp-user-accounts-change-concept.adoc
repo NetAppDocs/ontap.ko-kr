@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sp, service processor, user acoount, after, upgrade 
 summary: ONTAP 9.8 이하 버전에서 admin 역할을 사용하여 SP에 액세스할 수 있는 사용자 계정을 생성했고 9.9.1 이상으로 업그레이드하는 경우 -role 매개 변수에서 admin이 아닌 값은 admin으로 수정됩니다. 
 ---
-= 서비스 프로세서에 액세스할 수 있는 사용자 계정의 변경
+= ONTAP 업그레이드 후 서비스 프로세서에 액세스할 수 있는 사용자 계정 변경 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

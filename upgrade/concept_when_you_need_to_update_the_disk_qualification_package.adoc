@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, ontap, dqp, disk, qualification, package 
 summary: 'ONTAP를 업그레이드하거나 새 드라이브 유형 또는 크기를 추가하거나 디스크 펌웨어를 업데이트한 후에는 ONTAP 디스크 자격 패키지(DQP)도 업데이트해야 합니다.' 
 ---
-= 디스크 검증 패키지를 업데이트합니다
+= ONTAP 업그레이드 후 디스크 자격 패키지를 업데이트합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

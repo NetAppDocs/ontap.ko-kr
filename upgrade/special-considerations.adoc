@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, plan, planning, upgrade, manually, manual, checks, cluster, ready, verification, verify, verifying, special considerations 
 summary: 특정 클러스터 구성의 경우, ONTAP 소프트웨어 업그레이드를 시작하기 전에 특정 작업을 수행해야 합니다. 
 ---
-= ONTAP 업그레이드 전 특별한 고려 사항
+= 업그레이드하기 전에 특정 ONTAP 구성을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

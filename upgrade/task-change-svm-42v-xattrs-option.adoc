@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, svm, xattr, nfsv4.2 
 summary: ONTAP 9.12.1 이상을 업그레이드하기 전에 NFS 응답 오류를 방지하기 위해 NFSv4.2 확장 속성 옵션에 대해 명시적 값을 지정해야 합니다. 
 ---
-= v4.2-xattrs 옵션에 명시적 값을 할당합니다
+= ONTAP 업그레이드 전에 v4.2-xattrs 옵션에 명시적 값을 할당합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

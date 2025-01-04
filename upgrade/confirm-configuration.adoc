@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, before, confirm, configuration, hardware, cluster management switches, metrocluster ip switches, san, target, release 
 summary: ONTAP를 업그레이드하기 전에 대상 릴리스에서 하드웨어 구성이 지원되는지 확인해야 합니다. 
 ---
-= 하드웨어 구성에 대한 ONTAP 지원을 확인합니다
+= 사용 중인 하드웨어 구성에 대한 ONTAP 대상 릴리스 지원을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

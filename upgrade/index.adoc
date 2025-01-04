@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade overview, upgrade, digital advisor, summary, upgrade ontap, upgrading ontap, upgrade, upgrading, ontap, software, on-premise, prepare, preparation, major upgrade, minor upgrade, patch upgrade, upgrade assistance, upgrade help, upgrade technical support 
 summary: ONTAP 업그레이드를 통해 새롭고 향상된 기능을 활용할 수 있습니다. 시작하기 전에 권장 단계에 따라 업그레이드를 준비합니다. 
 ---
-= ONTAP 업그레이드 개요
+= ONTAP 업그레이드에 대해 알아봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

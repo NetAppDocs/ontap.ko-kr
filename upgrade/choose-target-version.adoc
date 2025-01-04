@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, ontap, choose target release, target release 
 summary: NetApp 권장 사항, 특정 기능의 필요성 또는 성능을 위한 최소 권장 릴리스를 기준으로 대상 ONTAP 업그레이드 릴리스를 선택합니다. 
 ---
-= 업그레이드할 대상 ONTAP 릴리스를 선택합니다
+= 업그레이드를 위해 NetApp 권장 대상 ONTAP 버전을 선택합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

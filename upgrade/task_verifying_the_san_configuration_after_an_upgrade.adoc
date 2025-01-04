@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, post, after, san, verify 
 summary: ONTAP 업그레이드 후 SAN 환경에서 업그레이드가 성공적으로 LIF에 다시 연결되기 전에 LIF에 연결된 각 이니시에이터가 확인합니다 
 ---
-= 업그레이드 후 SAN 구성을 확인합니다
+= ONTAP 업그레이드 후 SAN 구성을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

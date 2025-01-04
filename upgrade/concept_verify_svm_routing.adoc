@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, verify, verifying, svm, routing 
 summary: ONTAP를 업그레이드하기 전에 기본 SVM 경로에서 연결할 수 없는 네트워크 주소에 연결할 수 있는지 확인하십시오. 
 ---
-= SVM 라우팅 구성을 확인합니다
+= 업그레이드 전에 ONTAP 클러스터 SVM 라우팅 구성을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

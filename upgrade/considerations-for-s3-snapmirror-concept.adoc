@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, update, considerations, s3, snapmirror, license 
 summary: SnapMirror S3를 사용하는 경우 ONTAP를 업그레이드하기 전에 라이선스를 확인해야 합니다 
 ---
-= SnapMirror S3 구성에 대한 라이센스를 확인합니다
+= SnapMirror S3 구성에 대한 ONTAP 라이센스 확인
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
