@@ -79,7 +79,7 @@ entries:
   - title: 클러스터에 노드를 추가합니다
     url: "/system-admin/add-nodes-cluster-concept.html"
   - title: 클러스터에서 노드를 제거합니다
-    url: "/system-admin/remov-nodes-cluster-concept.html"
+    url: "/system-admin/remove-nodes-cluster-concept.html"
   - title: 웹 브라우저를 사용하여 노드의 로그, 코어 덤프 및 MIB 파일에 액세스합니다
     url: "/system-admin/accessg-node-log-core-dump-mib-files-task.html"
   - title: 노드의 시스템 콘솔에 액세스합니다
