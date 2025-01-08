@@ -98,7 +98,28 @@ FabricPool 용량 계층입니다:: S3 NAS 버킷을 FabricPool의 용량 계층
 
 
 
-=== S3 기능은 현재 S3 NAS 버킷에서 지원되지 않습니다
+=== 현재 S3 NAS 버킷에서 지원되지 않는 S3 작업 및 기능
+
+작업::
++
+--
+* ByPassGovernanceRetention 을 참조하십시오
+* CopyObject 를 선택합니다
+* GetBucketObjectLockConfiguration 을 참조하십시오
+* GetBuckketVersioning 을 참조하십시오
+* GetObjectRetention을 참조하십시오
+* PutBucketVersioning을 참조하십시오
+* PutObjectLockConfiguration 을 참조하십시오
+* PutObjectRetention
+* ListBuckketVersioning을 참조하십시오
+* ListObjectVersions 를 선택합니다
+
+
+--
+
+
+
+NOTE: 이러한 S3 작업은 S3 NAS 버킷에서 S3를 사용할 때는 특별히 지원되지 않습니다. 네이티브 S3 버킷을 사용할 때 이러한 작업은 다음과 link:../s3-config/ontap-s3-supported-actions-reference.html["정상적으로 지원됩니다"]같습니다.
 
 AWS 사용자 메타데이터::
 +

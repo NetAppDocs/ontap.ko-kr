@@ -14,6 +14,9 @@ summary: ONTAP S3가 지원되는 작업.
 ONTAP S3 작업은 아래 명시된 경우를 제외하고 표준 S3 REST API에서 지원됩니다. 자세한 내용은 를 참조하십시오 link:https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html["Amazon S3 API 참조"^].
 
 
+NOTE: 이러한 S3 작업은 ONTAP에서 네이티브 S3 버킷을 사용할 때 특히 지원됩니다. 버전 관리, 개체 잠금 및 기타 기능과 관련된 작업과 같은 이러한 작업 중 일부는 을 사용할 때 지원되지 link:../s3-multiprotocol/index.html["S3 NAS 버킷(멀티프로토콜 NAS 볼륨의 S3)"]않습니다.
+
+
 
 == 버킷 작업
 
