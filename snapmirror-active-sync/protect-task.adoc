@@ -151,19 +151,21 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 .균일 설정에 대한 단계
 . 애플리케이션의 모든 볼륨을 그룹화하는 새로운 SnapMirror 관계를 생성합니다. 를 지정했는지 확인합니다 `AutomatedFailOverDuplex` 양방향 동기화 복제를 설정하는 정책입니다.
 +
-`snapmirror create -source-path _source_path_ -destination-path _destination_path_ -cg-item-mappings _source_volume:@destination_volume_ -policy AutomatedFailOverDuplex`
+`snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
 
+. SnapMirror 관계 초기화:
+`snapmirror initialize -destination-path <destination-consistency-group>`
 . 을(를) 기다리면 작업이 성공적으로 수행되었는지 확인합니다 `Mirrored State` 를 눌러 로 표시합니다 `SnapMirrored` 및 `Relationship Status` 현재 `Insync`.
 +
-`snapmirror show -destination-path _destination_path_`
+`snapmirror show -destination-path <destination_path>`
 
 . 호스트에서 필요에 따라 각 클러스터에 대한 액세스를 통해 호스트 연결을 구성합니다.
 . igroup 구성을 설정합니다. 로컬 클러스터에서 이니시에이터에 대한 기본 경로를 설정합니다. 피어 클러스터 반선호도에 구성을 복제하는 옵션을 지정합니다.
 +
-`SiteA::> igroup create -vserver _svm_name_  -os-type _os_type_ -igroup _igroup_name_ -replication-peer _peer_svm_name_ -initiator _host_`
+`SiteA::> igroup create -vserver <svm_name> -os-type <os_type> -igroup <igroup_name> -replication-peer <peer_svm_name> -initiator <host>`
 
 +
-`SiteA::> igroup add -vserver _svm_name_ -igroup _igroup_name_ -os-type _os_type_ -initiator _host_`
+`SiteA::> igroup add -vserver <svm_name> -igroup <igroup_name> -os-type <os_type> -initiator <host>`
 
 . 호스트에서 경로를 검색하고 호스트에 기본 클러스터에서 스토리지 LUN으로 연결되는 활성/최적화된 경로가 있는지 확인합니다.
 . 애플리케이션을 배포하고 VM 워크로드를 클러스터 전체에 분산하여 필요한 로드 밸런싱을 수행합니다.
@@ -172,21 +174,23 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 .비균일 설정에 대한 단계
 . 애플리케이션의 모든 볼륨을 그룹화하는 새로운 SnapMirror 관계를 생성합니다. 양방향 동기화 복제를 설정하려면 "AutomatedFailOverDuplex" 정책을 지정해야 합니다.
 +
-`snapmirror create -source-path _source_path_ -destination-path _destination_path_ -cg-item-mappings _source_volume:@destination_volume_ -policy AutomatedFailOverDuplex`
+`snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
 
+. SnapMirror 관계 초기화:
+`snapmirror initialize -destination-path <destination-consistency-group>`
 . 을(를) 기다리면 작업이 성공적으로 수행되었는지 확인합니다 `Mirrored State` 를 눌러 로 표시합니다 `SnapMirrored` 및 `Relationship Status` 현재 `Insync`.
 +
-`snapmirror show -destination-path _destination_path_`
+`snapmirror show -destination-path <destination_path>`
 
 . 호스트에서 필요에 따라 각 클러스터에 대한 액세스를 통해 호스트 연결을 구성합니다.
 . 소스 및 대상 클러스터 모두에서 igroup 구성을 설정합니다.
 +
 `# primary site
-SiteA::> igroup create -vserver _svm_name_ -igroup _igroup_name_ -initiator _host_1_name_`
+SiteA::> igroup create -vserver <svm_name> -igroup <igroup_name> -initiator <host_1_name_>`
 
 +
 `# secondary site
-SiteB::> igroup create -vserver _svm_name_ -igroup _igroup_name_ -initiator _host_2_name_`
+SiteB::> igroup create -vserver <svm_name> -igroup <igroup_name> -initiator <host_2_name>`
 
 . 호스트에서 경로를 검색하고 호스트에 기본 클러스터에서 스토리지 LUN으로 연결되는 활성/최적화된 경로가 있는지 확인합니다.
 . 애플리케이션을 배포하고 VM 워크로드를 클러스터 전체에 분산하여 필요한 로드 밸런싱을 수행합니다.

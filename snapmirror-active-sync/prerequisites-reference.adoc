@@ -167,9 +167,10 @@ SnapMirror 액티브 동기화 볼륨에서는 NTFS 보안 스타일이 * 지원
 
 
 
-== 읽기-쓰기 대상 볼륨
+== 기타 필수 구성 요소
 
 * SnapMirror 활성 동기화 관계는 읽기-쓰기 대상 볼륨에서 지원되지 않습니다. 읽기-쓰기 볼륨을 사용하려면 먼저 볼륨 레벨 SnapMirror 관계를 생성한 다음 관계를 삭제하여 DP 볼륨으로 변환해야 합니다. 자세한 내용은 을 참조하십시오 link:convert-active-sync-task.html["기존 SnapMirror 관계를 SnapMirror 활성 동기화로 변환"].
+* SnapMirror Active Sync를 사용하는 스토리지 VM은 계산된 클라이언트로 Active Directory에 연결할 수 없습니다.
 
 
 

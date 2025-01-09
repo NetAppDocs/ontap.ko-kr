@@ -57,7 +57,7 @@ ONTAP 9.7부터 데이터 복사본이나 추가 디스크 공간 없이 FlexVol
 
 
 .단계
-. FlexVol 볼륨이 온라인 상태인지 확인합니다. `volume show vol_name volume-style-extended,state`
+. FlexVol 볼륨이 온라인 상태인지 확인합니다. `volume show -fields vol_name volume-style-extended,state`
 +
 [listing]
 ----

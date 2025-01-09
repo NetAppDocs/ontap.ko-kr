@@ -466,25 +466,29 @@ image:mediator-certs-index.png["웹 서버 설정 및 ONTAP 중재자 서버 설
 
 다음 절차를 사용하여 PKI 기관으로부터 인증서를 얻을 수 있습니다.
 
-다음 예제에서는 자체 서명된 인증서 액터, 즉 를 교체하는 방법을 보여 줍니다 `ca.key`, `ca.csr`, `ca.srl`, 및 `ca.crt` 에 있습니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/` 타사 인증서 액터 사용.
+다음 예제에서는 자체 서명된 인증서 액터를 에 있는 타사 인증서 액터로 바꾸는 방법을 보여 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/` 줍니다.
+
+[NOTE]
+====
+* ONTAP 중재자 1.8 이하에서 사용되는 CA 파일은 `ca.key` , , `ca.csr` `ca.srl` 및 `ca.crt`입니다. ONTAP mediator 1.9부터 필수 파일은 `intermediate.key` , `intermediate.csr`, `intermediate.srl` 및 `intermediate.crt`입니다.
+* 이 예제에서는 ONTAP 중재자 서비스에 필요한 인증서에 필요한 기준을 보여 줍니다. 이 절차와 다른 방법으로 PKI 기관으로부터 인증서를 얻을 수 있습니다. 비즈니스 요구에 따라 절차를 조정합니다.
 
 
-NOTE: 이 예제에서는 ONTAP 중재자 서비스에 필요한 인증서에 필요한 기준을 보여 줍니다. 이 절차와 다른 방법으로 PKI 기관으로부터 인증서를 얻을 수 있습니다. 비즈니스 요구에 따라 절차를 조정합니다.
-
+====
 .단계
-. 개인 키를 만듭니다 `ca.key` 및 구성 파일 `openssl_ca.cnf` PKI 기관에서 인증서를 생성하기 위해 사용합니다.
+. PKI 기관에서 인증서를 생성하기 위해 사용할 개인 키와 구성 파일을 `openssl_ca.cnf` 만듭니다 `intermediate.key`.
 +
-.. 개인 키를 생성합니다 `ca.key`:
+.. 개인 키를 `intermediate.key`생성합니다.
 +
 * 예 *
 
 +
-`openssl genrsa -aes256 -out ca.key 4096`
+`openssl genrsa -aes256 -out intermediate.key 4096`
 
 .. 구성 파일 `openssl_ca.cnf` (에 위치 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_ca.cnf`)은 생성된 인증서에 있어야 하는 속성을 정의합니다.
 
 
-. 개인 키 및 구성 파일을 사용하여 인증서 서명 요청을 만듭니다 `ca.csr`.
+. 개인 키 및 구성 파일을 사용하여 인증서 서명 요청을 만듭니다 `intermediate.csr`.
 +
 * 예: *
 
@@ -494,22 +498,22 @@ NOTE: 이 예제에서는 ONTAP 중재자 서비스에 필요한 인증서에 �
 +
 [listing]
 ----
-[root@scs000216655 server_config]# openssl req -key ca.key -new -config openssl_ca.cnf -out ca.csr
-Enter pass phrase for ca.key:
-[root@scs000216655 server_config]# cat ca.csr
+[root@scs000216655 server_config]# openssl req -key intermediate.key -new -config openssl_ca.cnf -out intermediate.csr
+Enter pass phrase for intermediate.key:
+[root@scs000216655 server_config]# cat intermediate.csr
 -----BEGIN CERTIFICATE REQUEST-----
 MIIE6TCCAtECAQAwgaMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh
 ...
 erARKhY9z0e8BHPl3g==
 -----END CERTIFICATE REQUEST-----
 ----
-. 인증서 서명 요청을 보냅니다 `ca.csr` 서명을 위한 PKI 권한
+. PKI 기관에 인증서 서명 요청을 보내 `intermediate.csr` 서명을 받습니다.
 +
-PKI 권한은 요청을 확인하고 에 서명하여 `.csr`인증서를 `ca.crt`생성합니다. 또한 PKI 기관으로부터 인증서에 서명한 인증서를 얻어야 `root_ca.crt` `ca.crt` 합니다.
+PKI 권한은 요청을 확인하고 에 서명하여 `.csr`인증서를 `intermediate.crt`생성합니다. 또한 PKI 기관으로부터 인증서에 서명한 인증서를 얻어야 `root_intermediate.crt` `intermediate.crt` 합니다.
 
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `ca.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
 
 
 
@@ -517,7 +521,7 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 
 === 2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다
 
-서버 인증서는 개인 키로 서명해야 합니다 `ca.key` 및 타사 인증서 `ca.crt`. 또한 구성 파일도 있습니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_server.cnf` OpenSSL에서 발급한 서버 인증서에 필요한 속성을 지정하는 특정 특성이 포함되어 있습니다.
+서버 인증서는 개인 키 및 타사 인증서로 `intermediate.crt` 서명해야 `intermediate.key` 합니다. 또한 구성 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_server.cnf` 파일에는 OpenSSL에서 발급한 서버 인증서에 필요한 속성을 지정하는 특정 특성이 포함되어 있습니다.
 
 다음 명령을 사용하여 서버 인증서를 생성할 수 있습니다.
 
@@ -529,10 +533,10 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 . [[step_2_intermediate_info]] CSR에서 서버 인증서를 생성하려면 폴더에서 다음 명령을 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` 실행합니다.
 +
 
-NOTE:  `ca.crt`및 `ca.key` 파일은 PKI 기관에서 가져왔습니다. 및 와 같이 다른 인증서 이름을 사용하는 경우 `intermediate.crt` `intermediate.key` `ca.crt` 및 `ca.key` 와 를 `intermediate.crt` `intermediate.key` 각각 바꿉니다.
+NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 이름을 사용하는 경우 `intermediate.crt` 및 를 `intermediate.key` 관련 파일 이름으로 바꿉니다.
 
 +
-`openssl x509 -extfile openssl_server.cnf -extensions v3_req -CA ca.crt -CAkey ca.key -CAcreateserial -sha512 -days 1095 -req -in ontap_mediator_server.csr -out ontap_mediator_server.crt`
+`openssl x509 -extfile openssl_server.cnf -extensions v3_req -CA intermediate.crt -CAkey intermediate.key -CAcreateserial -sha512 -days 1095 -req -in ontap_mediator_server.csr -out ontap_mediator_server.crt`
 
 +
 ** 이 `-CAcreateserial` 옵션은 사용 중인 인증서 이름에 따라 또는 파일을 생성하는 데 `ca.srl` `intermediate.srl` 사용됩니다.
@@ -550,19 +554,19 @@ NOTE:  `ca.crt`및 `ca.key` 파일은 PKI 기관에서 가져왔습니다. 및 �
 ----
 cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.crt'
 key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key'
-ca_cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.crt'
-ca_key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.key'
-ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.srl'
+ca_cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.crt'
+ca_key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.key'
+ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.srl'
 ----
 * `cert_path` 및 `key_path` 서버 인증서 변수입니다.
 * `ca_cert_path`, `ca_key_path`, 및 `ca_serial_path` CA 인증서 변수입니다.
 
 
 .단계
-. 모든 `ca.*` 파일을 타사 인증서로 바꿉니다.
-. 및 인증서에서 인증서 체인을 `ca.crt` `ontap_mediator_server.crt` 생성합니다.
+. 모든 `intermediate.*` 파일을 타사 인증서로 바꿉니다.
+. 및 인증서에서 인증서 체인을 `intermediate.crt` `ontap_mediator_server.crt` 생성합니다.
 +
-`cat ontap_mediator_server.crt ca.crt > ontap_mediator_server_chain.crt`
+`cat ontap_mediator_server.crt intermediate.crt > ontap_mediator_server_chain.crt`
 
 .  `/opt/netapp/lib/ontap_mediator/uwsgi/ontap_mediator.ini`파일을 업데이트합니다.
 +
@@ -575,12 +579,12 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.
 `set-placeholder = mediator_key = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
 
 +
-`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
+`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_intermediate.crt`
 
 +
 **  `mediator_cert`값은 파일의 경로입니다. `ontap_mediator_server_chain.crt`
 **  `mediator_key value`는 파일의 키 경로입니다. `ontap_mediator_server.crt` `ontap_mediator_server.key`
-**  `ca_certificate`값은 파일의 경로입니다. `root_ca.crt`
+**  `ca_certificate`값은 파일의 경로입니다. `root_intermediate.crt`
 
 
 . 새로 생성된 인증서의 다음 특성이 올바르게 설정되었는지 확인합니다.
@@ -599,7 +603,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.
 
 === 4단계: 타사 인증서에 다른 경로나 이름을 사용할 수도 있습니다
 
-이외의 다른 이름을 가진 타사 인증서를 사용할 수 있습니다 `ca.*` 또는 타사 인증서를 다른 위치에 저장합니다.
+이 아닌 다른 이름을 가진 타사 인증서를 사용하거나 타사 인증서를 다른 위치에 저장할 수 `intermediate.*` 있습니다.
 
 .단계
 .  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.user_config.yaml`파일의 기본 변수 값을 재정의하도록 파일을 `ontap_mediator.config.yaml` 구성합니다.
@@ -634,7 +638,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/int
 
 ----
 +
-.. 인증서가 인증서를 서명하는 인증서를 제공하는 인증서 구조를 사용하는 경우 `root_ca.crt` `intermediate.crt` `ontap_mediator_server.crt` 및 인증서에서 인증서 체인을 만듭니다 `intermediate.crt` `ontap_mediator_server.crt` .
+.. 인증서가 인증서를 서명하는 인증서를 제공하는 인증서 구조를 사용하는 경우 `root_intermediate.crt` `intermediate.crt` `ontap_mediator_server.crt` 및 인증서에서 인증서 체인을 만듭니다 `intermediate.crt` `ontap_mediator_server.crt` .
 +
 
 NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받아야 `intermediate.crt` `ontap_mediator_server.crt` 합니다.
@@ -653,15 +657,15 @@ NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받�
 `set-placeholder = mediator_key = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
 
 +
-`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
+`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_intermediate.crt`
 
 +
 ***  `mediator_cert`값은 파일의 경로입니다. `ontap_mediator_server_chain.crt`
 ***  `mediator_key`값은 파일의 키 경로입니다. `ontap_mediator_server.crt` `ontap_mediator_server.key`
-***  `ca_certificate`값은 파일의 경로입니다. `root_ca.crt`
+***  `ca_certificate`값은 파일의 경로입니다. `root_intermediate.crt`
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
 
 
 
@@ -693,7 +697,7 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 
 [listing]
 ----
-[root@scs000216982 server_config]# openssl x509 -in ca.crt -text -noout
+[root@scs000216982 server_config]# openssl x509 -in intermediate.crt -text -noout
 Certificate:
     Data:
 ...
@@ -707,7 +711,7 @@ Certificate:
 
 다음 명령을 사용하여 CA 인증에서 X509v3 확장을 확인합니다.
 
-에 정의된 속성 `*v3_ca*` 인치 `openssl_ca.cnf` 로 표시됩니다 `X509v3 extensions` 인치 `ca.crt`.
+에 `openssl_ca.cnf` 정의된 속성이 `*v3_ca*` 에서와 같이 `X509v3 extensions` `intermediate.crt` 표시됩니다.
 
 [listing, subs="+quotes"]
 ----
@@ -722,7 +726,7 @@ Certificate:
 *basicConstraints = critical, CA:true*
 *keyUsage = critical, cRLSign, digitalSignature, keyCertSign*
 
-[root@scs000216982 server_config]# openssl x509 -in ca.crt -text -noout
+[root@scs000216982 server_config]# openssl x509 -in intermediate.crt -text -noout
 Certificate:
     Data:
 ...
@@ -766,7 +770,7 @@ DNS.2 = abc-v6.company.com
 IP.1 = 1.2.3.4
 IP.2 = abcd:abcd:abcd:abcd:abcd:abcd
 
-[root@scs000216982 server_config]# openssl x509 -in ca.crt -text -noout
+[root@scs000216982 server_config]# openssl x509 -in intermediate.crt -text -noout
 Certificate:
     Data:
 ...
@@ -807,7 +811,7 @@ Enter pass phrase for intermediate.key:
 
 [listing]
 ----
-[root@scs000216982 server_config]# openssl verify -CAfile ca.crt ontap_mediator_server.crt
+[root@scs000216982 server_config]# openssl verify -CAfile intermediate.crt ontap_mediator_server.crt
 ontap_mediator_server.crt: OK
 ----
 OCSP(Online Certificate Status Protocol) 유효성 검사가 사용 중인 경우 명령을 link:https://www.openssl.org/docs/manmaster/man1/openssl-verify.html["OpenSSL - 확인"^]사용합니다.

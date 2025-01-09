@@ -83,6 +83,9 @@ xref:../san-admin/provision-storage.html[LUN을 생성하고 igroup을 매핑합
 
 ONTAP 중재자를 설치하고 클러스터 구성을 확인한 후에는 클러스터 모니터링을 위한 ONTAP 중재자를 초기화해야 합니다. System Manager 또는 ONTAP CLI를 사용하여 ONTAP 중재자를 초기화할 수 있습니다.
 
+
+NOTE: ONTAP 중재자 1.8 이하에서 CA 인증서는 `ca.crt` 입니다. ONTAP 중재자 1.9부터 필수 인증서는 `intermediate.crt` 입니다.
+
 [role="tabbed-block"]
 ====
 .시스템 관리자
@@ -104,8 +107,8 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 
 . 다음과 같은 두 가지 방법으로 인증서 입력을 제공할 수 있습니다.
 +
-** * option (a) *: * Import * 를 선택하여 로 이동합니다 `.crt` 파일을 열고 가져옵니다.
-** * option (b) * : 의 내용을 복사합니다 `.crt` 인증서 * 필드에 파일을 첨부하여 붙여 넣습니다.
+** * option (a) *: * Import * 를 선택하여 `intermediate.crt` 파일을 탐색하고 가져옵니다.
+** * option (b) *: 파일의 내용을 `intermediate.crt` 복사하여 * Certificate * 필드에 붙여 넣습니다.
 +
 모든 세부 정보가 올바르게 입력되면 제공된 인증서가 모든 피어 클러스터에 설치됩니다.
 
@@ -141,7 +144,7 @@ ONTAP CLI를 사용하여 운영 클러스터 또는 2차 클러스터에서 ONT
 +
 [listing]
 ----
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator server_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 MIIFxTCCA62gAwIBAgIJANhtjk6HFCiOMA0GCSqGSIb3DQEBCwUAMHgxFTATBgNV
 BAoMDE5ldEFwcCwgSW5jLjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3Ju
@@ -161,7 +164,7 @@ p+jdg5bG61cxkuvbRm7ykFbih1b88/Sgu5XJg2KRhjdISF98I81N+Fo=
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
 
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator server_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 MIIFxTCCA62gAwIBAgIJANhtjk6HFCiOMA0GCSqGSIb3DQEBCwUAMHgxFTATBgNV
 BAoMDE5ldEFwcCwgSW5jLjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3Ju
@@ -283,7 +286,7 @@ image:configure-mediator-system-manager.png["시스템 관리자 중재자 추�
 ONTAP CLI를 사용하여 자체 서명된 인증서를 타사 인증서로 교체하면 운영 또는 보조 클러스터에서 ONTAP 중재자를 다시 초기화할 수 있습니다.
 
 .단계
-. 자체 서명된 을 제거합니다 `ca.crt` 모든 클러스터에 대해 자체 서명된 인증서를 사용할 때 이전에 설치되었습니다. 아래 예에서는 두 개의 클러스터가 있습니다.
+. 모든 클러스터에 대해 자체 서명된 인증서를 사용할 때 이전에 설치한 자체 서명된 `intermediate.crt` 인증서를 제거합니다. 아래 예에서는 두 개의 클러스터가 있습니다.
 +
 * 예 *
 
@@ -319,12 +322,12 @@ Info: [Job 136] 'mediator remove' job queued
 C1_test_cluster::*> snapmirror mediator show
 This table is currently empty.
 ----
-. 하위 CA에서 인증서를 가져오는 방법은 에 설명된 단계를 link:../mediator/manage-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"] `ca.crt`참조하십시오. 자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다
+. 하위 CA에서 인증서를 가져오는 방법에 대한 지침은 `intermediate.crt` 에 설명된 단계를 link:../mediator/manage-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"]참조하십시오. 자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다
 +
 
-NOTE: 를 클릭합니다 `ca.crt` 파일에 정의되어 있는 PKI 권한으로 보내야 하는 요청에서 파생되는 특정 속성이 있습니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_ca.cnf`.
+NOTE: 에는 `intermediate.crt` 파일에 정의된 PKI 권한으로 전송되어야 하는 요청에서 파생되는 특정 속성이 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_ca.cnf` 있습니다.
 
-. 새 타사 ONTAP 중재자 CA 인증서를 추가합니다 `ca.crt` ONTAP mediator Linux VM/호스트 소프트웨어 설치 위치에서 다음을 수행합니다.
+. ONTAP 중재자 Linux VM/호스트 소프트웨어 설치 위치에서 새 타사 ONTAP 중재자 CA 인증서를 `intermediate.crt` 추가합니다.
 +
 * 예 *
 
@@ -332,7 +335,7 @@ NOTE: 를 클릭합니다 `ca.crt` 파일에 정의되어 있는 PKI 권한으�
 [listing]
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator server_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 MIIFxTCCA62gAwIBAgIJANhtjk6HFCiOMA0GCSqGSIb3DQEBCwUAMHgxFTATBgNV
 BAoMDE5ldEFwcCwgSW5jLjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3Ju
@@ -340,7 +343,7 @@ BAoMDE5ldEFwcCwgSW5jLjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3Ju
 p+jdg5bG61cxkuvbRm7ykFbih1b88/Sgu5XJg2KRhjdISF98I81N+Fo=
 -----END CERTIFICATE-----
 ----
-. 를 추가합니다 `ca.crt` 피어링된 클러스터에 대한 파일 모든 피어 클러스터에 대해 이 단계를 반복합니다.
+.  `intermediate.crt`피어링된 클러스터에 파일을 추가합니다. 모든 피어 클러스터에 대해 이 단계를 반복합니다.
 +
 * 예 *
 

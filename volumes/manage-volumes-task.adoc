@@ -13,6 +13,14 @@ summary: System Manager로 볼륨 목록을 표시한 후 다양한 작업을 �
 [role="lead"]
 System Manager에 볼륨 목록을 표시한 후 다양한 작업을 수행하여 볼륨을 관리할 수 있습니다.
 
+다음 볼륨을 비롯한 일부 볼륨 유형은 System Manager에서 사용할 수 없습니다.
+
+* Vol0를 참조하십시오
+* Del 및 TMP 유형 볼륨
+* FlexGroup 구성 요소입니다
+* MetroCluster 구성에서 복제된 볼륨
+
+
 .단계
 . System Manager에서 * 스토리지 > 볼륨 * 을 클릭합니다.
 +

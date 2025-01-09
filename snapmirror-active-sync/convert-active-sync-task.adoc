@@ -132,11 +132,11 @@ ONTAP 9.15.1부터 기존 SnapMirror 관계를 SnapMirror 액티브 동기식 �
 NOTE: igroup에 복제되지 않은 LUN에 대한 맵이 포함되어 있지 않은지 확인합니다.
 
 +
-`SiteB::> lun mapping delete -vserver _svm_name_ -igroup _igroup_ -path <>`
+`SiteB::> lun mapping delete -vserver <svm_name> -igroup <igroup> -path <>`
 
 . 운영 사이트에서 기존 호스트의 이니시에이터 구성을 수정하여 로컬 클러스터의 이니시에이터에 대한 근위 경로를 설정합니다.
 +
-`SiteA::> igroup initiator add-proximal-vserver -vserver _svm_name_ -initiator _host_ -proximal-vserver _server_`
+`SiteA::> igroup initiator add-proximal-vserver -vserver <svm_name> -initiator <host> -proximal-vserver <server>`
 
 . 새로운 호스트에 대한 새로운 igroup 및 이니시에이터를 추가하고 호스트 선호도를 해당 로컬 사이트에 근접하게 설정합니다. Ennable igroup replication으로 구성을 복제하고 원격 클러스터에서 호스트 인접성을 반전합니다.
 +
