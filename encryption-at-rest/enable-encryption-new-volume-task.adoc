@@ -67,7 +67,7 @@ NOTE: NAE가 지원되지 않는 ONTAP 9.6 및 이전 버전에서는 `-encrypt 
 
 |===
 +
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/volume-create.html 명령 링크에 대해 자세히[`volume create` 알아보십시오.
+에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 볼륨에 암호화가 설정되어 있는지 확인합니다.
 +

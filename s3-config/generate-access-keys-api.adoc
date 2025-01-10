@@ -24,7 +24,7 @@ ONTAP 9.14.1부터 ONTAP 관리자는 사용자 지정 역할을 만들고 로�
 . 스토리지 VM에 DNS가 구성되어 있다. 을 참조하십시오 link:../networking/configure_dns_services_manual.html["DNS 서비스를 구성합니다"].
 . LDAP 서버의 자체 서명된 루트 CA(인증 기관) 인증서가 스토리지 VM에 설치되어 있습니다. 을 참조하십시오 link:../nfs-config/install-self-signed-root-ca-certificate-svm-task.html["SVM에 자체 서명된 루트 CA 인증서를 설치합니다"].
 . LDAP 클라이언트는 스토리지 VM에서 TLS를 사용하도록 구성했습니다. 을 link:../nfs-config/create-ldap-client-config-task.html["LDAP 클라이언트 구성을 생성합니다"]참조하십시오.
-. 클라이언트 구성을 SVM에 연결합니다. 을 link:../nfs-config/enable-ldap-svms-task.html["LDAP 클라이언트 구성을 SVM과 연결합니다"]참조하십시오. ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli//vserver-services-name-service-ldap-create.html 명령 링크에 대해 자세히[`vserver services name-service ldap create` 알아보십시오.
+. 클라이언트 구성을 SVM에 연결합니다. 을 link:../nfs-config/enable-ldap-svms-task.html["LDAP 클라이언트 구성을 SVM과 연결합니다"]참조하십시오. 에 대한 자세한 내용은 `vserver services name-service ldap create` link:https://docs.netapp.com/us-en/ontap-cli//vserver-services-name-service-ldap-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 . 데이터 스토리지 VM을 사용하는 경우 관리 네트워크 인터페이스(LIF) 및 VM에 그리고 LIF에 대한 서비스 정책을 생성합니다. ONTAP 명령 참조에서 [ ] 및[`network interface service-policy create` [ ] 명령에 대해[`network interface create` 자세히 알아봅니다.
 
 
@@ -40,7 +40,7 @@ ns-switch modify -vserver <vserver-name> -database group -sources files,ldap
 ns-switch modify -vserver <vserver-name> -database passwd -sources files,ldap
 ----
 +
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/vserver-services-name-service-ns-switch-modify.html 명령 링크에 대해 자세히[`vserver services name-service ns-switch modify` 알아보십시오.
+에 대한 자세한 내용은 `vserver services name-service ns-switch modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-ns-switch-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . S3 사용자 REST API 끝점에 액세스하여 사용자 지정 역할 생성:
 `security login rest-role create -vserver <vserver-name> -role <custom-role-name> -api "/api/protocols/s3/services/*/users" -access <access-type>`
@@ -51,9 +51,9 @@ ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/vserver-servi
 security login rest-role create -vserver svm-1 -role s3role -api "/api/protocols/s3/services/*/users" -access all
 ----
 +
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/security-login-rest-role-create.html 명령 링크에 대해 자세히[`security login rest-role create` 알아보십시오.
+에 대한 자세한 내용은 `security login rest-role create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-rest-role-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. security login 명령으로 LDAP 사용자 그룹을 생성하고 S3 사용자 REST API 끝점에 액세스하기 위한 새 사용자 지정 역할을 추가합니다. ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli//security-login-create.html 명령 링크에 대해 자세히[`security login create` 알아보십시오.
+. security login 명령으로 LDAP 사용자 그룹을 생성하고 S3 사용자 REST API 끝점에 액세스하기 위한 새 사용자 지정 역할을 추가합니다. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli//security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 [listing]
 ----

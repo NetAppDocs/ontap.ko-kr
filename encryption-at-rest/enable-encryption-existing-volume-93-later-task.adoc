@@ -27,7 +27,7 @@ NOTE: 를 사용할 수 없습니다 `volume encryption conversion start` SnapLo
 `volume encryption conversion start -vserver _svm_name_ -volume _volume_name_`
 
 +
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/volume-encryption-conversion-start.html 명령 링크에 대해 자세히[`volume encryption conversion start` 알아보십시오.
+에 대한 자세한 내용은 `volume encryption conversion start` link:https://docs.netapp.com/us-en/ontap-cli/volume-encryption-conversion-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 기존 볼륨의 암호화가 설정됩니다 `vol1`:
@@ -64,7 +64,7 @@ vs1       vol1     9/18/2017 17:51:41   Phase 2 of 2 is in progress.
 볼륨 쇼는 암호화된 사실이다
 
 +
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli//volume-show.html#parameters' 명령에 대해 자세히[`volume show -is-encrypted true` 알아보십시오.
+에 대한 자세한 내용은 `volume show -is-encrypted true` link:https://docs.netapp.com/us-en/ontap-cli//volume-show.html#parameters["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 암호화된 볼륨이 'cluster1'에 표시됩니다.
