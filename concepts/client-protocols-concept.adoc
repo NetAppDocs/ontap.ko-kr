@@ -80,6 +80,6 @@ ONTAP은 S3 오브젝트 스토리지를 지원하기 위한 두 가지 사내 �
 
 [NOTE]
 ====
-ONTAP S3는 추가 하드웨어 및 관리 없이 기존 클러스터에서 S3 기능을 원하는 경우에 적합합니다. 300TB 이상의 배포를 위해 NetApp StorageGRID 소프트웨어는 계속해서 오브젝트 스토리지를 위한 NetApp의 대표적인 솔루션입니다. 에 대해 자세히 알아보십시오 link:https://docs.netapp.com/sgws-114/index.jsp["StorageGRID"^].
+ONTAP S3는 추가 하드웨어 및 관리 없이 기존 클러스터에서 S3 기능을 원하는 경우에 적합합니다. 300TB 이상의 배포를 위해 NetApp StorageGRID 소프트웨어는 계속해서 오브젝트 스토리지를 위한 NetApp의 대표적인 솔루션입니다. 에 대해 자세히 https://docs.netapp.com/us-en/storagegrid-family/["StorageGRID"^] 알아보십시오.
 
 ====

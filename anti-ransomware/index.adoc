@@ -165,8 +165,7 @@ ONTAP에서 분석 보고서를 실행하고 비정상 상태가 랜섬웨어 �
 
 ARP는 검증된 ONTAP 데이터 보호 및 재해 복구 기술을 기반으로 구축되며, 랜섬웨어 공격에 대응합니다. 데이터 복구에 대한 자세한 내용은 다음 항목을 참조하십시오.
 
-* link:../data-protection/restore-contents-volume-snapshot-task.html["스냅샷에서 복구(System Manager)"]
-* link:../data-protection/restore-contents-volume-snapshot-task.html["스냅샷에서 파일 복구(CLI)"]
+* link:../data-protection/restore-contents-volume-snapshot-task.html["스냅샷에서 복구합니다"]
 * link:https://www.netapp.com/blog/smart-ransomware-recovery["스마트 랜섬웨어 복구"^]
 
 

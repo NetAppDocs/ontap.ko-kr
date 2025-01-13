@@ -19,8 +19,10 @@ ONTAP 9.8부터 SnapMirror 클라우드는 ONTAP 인스턴스에서 오브젝트
 
 클라우드 네이티브 데이터 보호에 관심이 있는 경우, BlueXP를 사용하여 사내 볼륨과 퍼블릭 클라우드의 Cloud Volumes ONTAP 인스턴스 간에 SnapMirror 또는 SnapVault 관계를 구성할 수 있습니다.
 
-또한 BlueXP는 SaaS(Software as a Service) 모델을 사용하여 Cloud Volumes ONTAP 인스턴스의 백업도 제공합니다. 사용자는 NetApp Cloud Central에서 제공되는 Cloud Backup을 사용하여 Cloud Volumes ONTAP 인스턴스를 S3 및 S3 호환 퍼블릭 클라우드 오브젝트 스토리지에 백업할 수 있습니다.
+또한 BlueXP는 SaaS(Software as a Service) 모델을 사용하여 Cloud Volumes ONTAP 인스턴스의 백업도 제공합니다. 사용자는 BlueXP  백업 및 복구를 사용하여 Cloud Volumes ONTAP 인스턴스를 S3 및 S3 호환 퍼블릭 클라우드 오브젝트 스토리지에 백업할 수 있습니다.
 
-https://www.netapp.com/cloud-services/cloud-manager/documentation/["Cloud Volumes ONTAP 및 BlueXP 문서 리소스"]
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP 설명서"^]
 
-https://cloud.netapp.com["NetApp Cloud Central에서"]
+link:https://docs.netapp.com/us-en/bluexp-family/index.html["BlueXP 설명서"^]
+
+link:https://bluexp.netapp.com/["NetApp BlueXP"^]

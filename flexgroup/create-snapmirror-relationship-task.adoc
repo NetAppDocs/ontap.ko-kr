@@ -23,7 +23,7 @@ link:../peering/index.html["클러스터 및 SVM 피어링"]
 * FlexGroup 볼륨에 대한 인터클러스터 SnapMirror 관계와 클러스터 간 SnapMirror 관계를 모두 생성할 수 있습니다.
 * ONTAP 9.3부터 SnapMirror 관계에 있는 FlexGroup 볼륨을 확장할 수 있습니다.
 +
-ONTAP 9.3 이전 버전의 ONTAP를 사용하는 경우 SnapMirror 관계가 설정된 후에는 FlexGroup 볼륨을 확장해서는 안 되지만, SnapMirror 관계를 설정한 후에는 FlexGroup 볼륨의 용량을 늘릴 수 있습니다. ONTAP 9.3 이전의 릴리즈에서 SnapMirror 관계를 끊은 후 소스 FlexGroup 볼륨을 확장하는 경우 대상 FlexGroup 볼륨에 대한 기본 전송을 수행해야 합니다.
+ONTAP 9.3 이전 버전의 ONTAP를 사용 중인 경우 SnapMirror 관계가 구축된 후 FlexGroup 볼륨을 확장하지 마십시오. 그러나 SnapMirror 관계를 설정한 후 FlexGroup 볼륨의 용량을 늘릴 수 있습니다. ONTAP 9.3 이전의 릴리즈에서 SnapMirror 관계를 끊은 후 소스 FlexGroup 볼륨을 확장하는 경우 대상 FlexGroup 볼륨에 대한 기본 전송을 수행해야 합니다.
 
 
 

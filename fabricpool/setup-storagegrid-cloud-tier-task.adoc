@@ -15,7 +15,7 @@ ONTAP 9.2 이상을 실행 중인 경우 FabricPool를 StorageGRID의 클라우�
 
 .FabricPool와 함께 StorageGRID를 사용하기 위한 고려 사항
 * 인증서 확인을 명시적으로 해제하지 않는 한 StorageGRID용 CA 인증서를 설치해야 합니다.
-* 오브젝트 저장소 버킷에서 StorageGRID 오브젝트 버전 관리를 사용하도록 설정하면 안 됩니다.
+* 오브젝트 저장소 버킷에서 StorageGRID 오브젝트 버전 관리를 활성화하지 마십시오.
 * FabricPool 라이센스는 필요하지 않습니다.
 * StorageGRID 노드가 NetApp AFF 시스템에서 할당된 스토리지가 있는 가상 머신에 구축된 경우 해당 볼륨에 FabricPool 계층화 정책이 활성화되어 있지 않은지 확인하십시오.
 +

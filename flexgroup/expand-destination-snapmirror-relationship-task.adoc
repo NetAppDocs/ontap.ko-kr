@@ -35,7 +35,7 @@ SnapMirror 관계를 끊거나 삭제할 수 없습니다.
 * 소스 FlexGroup 볼륨과 타겟 FlexGroup 볼륨 모두에 동일한 수의 구성요소가 있을 때까지 모든 SnapMirror 작업이 실패합니다.
 * SnapMirror 관계가 끊거나 삭제된 후 대상 FlexGroup 볼륨을 확장하는 경우 원래 관계를 다시 동기화할 수 없습니다.
 +
-대상 FlexGroup 볼륨을 재사용하려면 SnapMirror 관계를 삭제한 후 볼륨을 확장해서는 안 됩니다.
+대상 FlexGroup 볼륨을 재사용하려면 SnapMirror 관계를 삭제한 후 볼륨을 확장하지 마십시오.
 
 
 

@@ -23,14 +23,14 @@ qtree 레벨 및 볼륨 레벨 공유가 동일한 FlexVol 또는 SCVMM 풀에 �
 +
 [source, cli]
 ----
-volume show -vserver <SVM_name> -volume <volume_name> -fields files
+volume show -vserver <SVM_name> -volume <volume_name> -fields files-used
 ----
 
 
 .예
 [listing]
 ----
-cluster1::*> volume show -vserver vs1 -volume vol1 -fields files
+cluster1::*> volume show -vserver vs1 -volume vol1 -fields files-used
 Vserver Name: vs1
 Files Used (for user-visible data): 98
 ----
