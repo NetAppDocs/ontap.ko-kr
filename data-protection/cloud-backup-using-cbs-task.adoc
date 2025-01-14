@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/cloud-backup-using-cbs-task.html 
-keywords: cloud, data, backup, back up, storage, volume, lun, connector, secret key, access key, Cloud Backup service, CBS, restore data, protect volumes, ipspace, storagegrid, storage grid, archive, archival, archiving, cost, calculator, glacier, deep archive 
-summary: ONTAP 9.9.1부터 Cloud Backup을 사용하여 System Manager를 사용하여 클라우드의 데이터를 백업할 수 있습니다. 
+keywords: cloud, data, backup, back up, storage, volume, lun, connector, secret key, access key, BlueXP back and recovery service, Cloud Backup service, CBS, restore data, protect volumes, ipspace, storagegrid, storage grid, archive, archival, archiving, cost, calculator, glacier, deep archive 
+summary: ONTAP 9.9.1부터 System Manager를 사용하여 BlueXP  백업 및 복구 서비스를 사용하여 클라우드에 데이터를 백업할 수 있습니다. 
 ---
-= Cloud Backup을 사용하여 데이터를 백업합니다
+= BlueXP  백업 및 복구 서비스를 사용하여 데이터를 백업합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -16,9 +16,11 @@ summary: ONTAP 9.9.1부터 Cloud Backup을 사용하여 System Manager를 사용
 
 
 [role="lead"]
-ONTAP 9.9.1부터 Cloud Backup을 사용하여 System Manager를 사용하여 클라우드의 데이터를 백업할 수 있습니다.
+ONTAP 9.9.1부터 System Manager를 사용하여 BlueXP  백업 및 복구 서비스(이전의 Cloud Backup Service)를 사용하여 클라우드에 데이터를 백업할 수 있습니다.
 
-Cloud Backup은 FlexVol 읽기-쓰기 볼륨 및 데이터 보호(DP) 볼륨을 지원합니다. ONTAP 9.12.1부터 Cloud Backup은 FlexGroup 볼륨과 SnapLock 볼륨을 지원합니다.
+BlueXP  백업 및 복구 서비스는 FlexVol 읽기-쓰기 볼륨과 데이터 보호(DP) 볼륨을 지원합니다. ONTAP 9.12.1부터 BlueXP  백업 및 복구 서비스는 FlexGroup 볼륨과 SnapLock 볼륨을 지원합니다.
+
+에 대해 자세히 link:https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["BlueXP 백업 및 복구"^]알아보십시오.
 
 .시작하기 전에
 BlueXP에서 계정을 설정하려면 다음 절차를 수행해야 합니다. 서비스 계정의 경우 "계정 관리자" 역할을 생성해야 합니다. (다른 서비스 계정 역할에는 System Manager와의 연결을 설정하는 데 필요한 권한이 없습니다.)
@@ -36,7 +38,7 @@ NOTE: ONTAP 9.10.1부터 StorageGRID를 클라우드 백업 공급자로 선택�
 
 
 
-. link:https://docs.netapp.com/us-en/occm/concept_backup_to_cloud.html["BlueXP에서 Cloud Backup Service를 구독합니다"^] (적절한 라이센스 필요).
+. link:https://docs.netapp.com/us-en/occm/concept_backup_to_cloud.html["BlueXP 에서 BlueXP  백업 및 복구 서비스에 가입합니다"^] (적절한 라이센스 필요).
 . link:https://docs.netapp.com/us-en/occm/task_managing_cloud_central_accounts.html#creating-and-managing-service-accounts["BlueXP를 사용하여 액세스 키와 비밀 키를 생성합니다"^].
 
 
@@ -48,7 +50,7 @@ BlueXP 또는 System Manager를 사용하여 클러스터를 BlueXP에 등록할
 
 .단계
 . System Manager에서 * 보호 개요 * 로 이동합니다.
-. Cloud Backup Service * 에서 다음 세부 정보를 제공합니다.
+. BlueXP  백업 및 복구 * 에 다음 세부 정보를 제공합니다.
 +
 ** 클라이언트 ID입니다
 ** 클라이언트 암호 키입니다
@@ -59,19 +61,19 @@ BlueXP 또는 System Manager를 사용하여 클러스터를 BlueXP에 등록할
 
 
 
-== 클라우드 백업 활성화
+== BlueXP 백업 및 복구를 활성화합니다
 
-클러스터를 BlueXP에 등록한 후에는 클라우드 백업을 활성화하고 클라우드에 대한 첫 번째 백업을 시작해야 합니다.
+클러스터를 BlueXP 에 등록한 후에는 BlueXP  백업 및 복구를 활성화하고 클라우드에 대한 첫 번째 백업을 시작해야 합니다.
 
 .단계
-. 시스템 관리자에서 * 보호 > 개요 * 를 클릭한 다음 * Cloud Backup Service * 섹션으로 스크롤합니다.
+. System Manager에서 * 보호 > 개요 * 를 클릭한 다음 * BlueXP  백업 및 복구 * 섹션으로 스크롤합니다.
 . 클라이언트 ID * 및 * 클라이언트 암호 * 를 입력합니다.
 +
 
 NOTE: ONTAP 9.10.1부터 * 클라우드 사용 비용에 대해 자세히 알아보기 * 를 클릭하여 클라우드 사용 비용에 대해 알아볼 수 있습니다.
 
-. 연결 및 Cloud Backup Service 사용 * 을 클릭합니다.
-. 선택한 공급자에 따라 * Cloud Backup Service * 활성화 페이지에서 다음 세부 정보를 제공합니다.
+. 연결 을 클릭하고 BlueXP  백업 및 복구 * 를 활성화합니다.
+. 선택한 공급자에 따라 * BlueXP  백업 및 복구 활성화 * 페이지에서 다음 세부 정보를 제공합니다.
 +
 [cols="35,65"]
 |===
@@ -150,12 +152,12 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 
 
-== Cloud Backup에 사용되는 보호 정책을 편집합니다
+== BlueXP  백업 및 복구에 사용되는 보호 정책을 편집합니다
 
-Cloud Backup에 사용되는 보호 정책을 변경할 수 있습니다.
+BlueXP  백업 및 복구에 사용되는 보호 정책을 변경할 수 있습니다.
 
 .단계
-. 시스템 관리자에서 * 보호 > 개요 * 를 클릭한 다음 * Cloud Backup Service * 섹션으로 스크롤합니다.
+. System Manager에서 * 보호 > 개요 * 를 클릭한 다음 * BlueXP  백업 및 복구 * 섹션으로 스크롤합니다.
 . 을 image:icon_kabob.gif["메뉴 옵션 아이콘"]클릭한 다음 * 편집 * 을 클릭합니다.
 . 보호 정책 * 선택:
 +
@@ -201,13 +203,13 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 * 클러스터가 MetroCluster 환경에 있을 수 없습니다.
 * SVM-DR은 지원되지 않습니다.
-* FlexGroups는 Cloud Backup을 사용하여 백업할 수 없습니다.
+* BlueXP  백업 및 복구를 사용하여 FlexGroups를 백업할 수 없습니다.
 
 
 .단계
 . 볼륨 또는 LUN을 프로비저닝할 때 System Manager의 * 보호 * 페이지에서 * SnapMirror 사용(로컬 또는 원격) * 확인란을 선택합니다.
-. Cloud Backup 정책 유형을 선택합니다.
-. 클라우드 백업이 활성화되지 않은 경우 * Cloud Backup Service * 활성화 를 선택합니다.
+. BlueXP  백업 및 복구 정책 유형을 선택합니다.
+. BlueXP  백업 및 복구 서비스가 활성화되지 않은 경우 * BlueXP  백업 및 복구 서비스 서비스를 사용하여 백업 활성화 * 를 선택합니다.
 
 
 
@@ -218,10 +220,10 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 .단계
 . 기존 볼륨 또는 LUN을 선택하고 * 보호 * 를 클릭합니다.
-. 볼륨 보호 * 페이지에서 보호 정책에 대해 * Cloud Backup Service * 를 사용하여 백업 * 을 지정합니다.
+. 볼륨 보호 * 페이지에서 보호 정책에 * BlueXP  백업 및 복구 서비스를 사용한 백업 * 을 지정합니다.
 . 보호 * 를 클릭합니다.
 . 보호 * 페이지에서 * SnapMirror 활성화(로컬 또는 원격) * 확인란을 선택합니다.
-. Cloud Backup Service 사용 * 을 선택합니다.
+. 연결 및 BlueXP  백업 및 복구 활성화 * 를 선택합니다.
 
 
 
