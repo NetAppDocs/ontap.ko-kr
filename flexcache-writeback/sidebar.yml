@@ -1,6 +1,6 @@
 ---
 section: flexcache-writeback
-title: FlexCache 쓰기 저장
+title: FlexCache 다시 쓰기
 entries:
 - title: 개요
   url: "/flexcache-writeback/flexcache-write-back-overview.html"

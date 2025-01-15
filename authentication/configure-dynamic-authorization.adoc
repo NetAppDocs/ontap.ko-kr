@@ -212,7 +212,7 @@ security dynamic-authorization trust-score-component show
 
 시스템 정책으로 인해 사용자의 액세스가 거부되고 ID를 입증할 수 있는 경우 관리자는 사용자의 신뢰 점수를 재설정할 수 있습니다.
 
-ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/security-dynamic-authorization-user-trust-score-reset.html' 명령에 대해 자세히[`security dynamic-authorization user-trust-score reset` 알아보십시오.
+ONTAP 명령 참조에서 https://docs .NetApp.com/us-en/ONTAP-cli/security-dynamic-authorization-user-trust-score-reset.html 명령 링크에 대해 자세히[`security dynamic-authorization user-trust-score reset` 알아보십시오.
 
 .단계
 . 명령을 추가합니다. 을 참조하십시오 <<동적 권한 부여 신뢰 점수 구성 요소를 구성합니다>> 재설정할 수 있는 신뢰 점수 구성 요소 목록 괄호(>)의 값을 환경에 맞게 업데이트합니다. 를 사용하지 않는 경우 `-vserver` 매개 변수로, 명령은 클러스터 레벨에서 실행됩니다. 굵은 글씨로 표시된 매개 변수가 필요합니다.
