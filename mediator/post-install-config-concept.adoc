@@ -54,9 +54,10 @@ NOTE: ONTAP 중재자 업그레이드 중에 수정된 값이 유지되지 않�
 
 이러한 파일의 변수는 ONTAP 중재자 서비스에서 사용하는 인증서 파일을 제어하는 데 사용됩니다.
 
-
-NOTE: ONTAP 중재자 1.8 이하에서 CA 인증서는 `ca.crt` 입니다. ONTAP 중재자 1.9부터 필수 인증서는 `intermediate.crt` 입니다.
-
+[role="tabbed-block"]
+====
+.ONTAP 중재자 1.9 이상
+--
 다음 표에 나열된 기본 변수가 파일에 포함되어 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` 있습니다.
 
 [cols="2*"]
@@ -103,6 +104,57 @@ NOTE: ONTAP 중재자 1.8 이하에서 CA 인증서는 `ca.crt` 입니다. ONTAP
 
 | `ca_cert_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.crt` 
 |===
+--
+.ONTAP 중재자 1.8 이하
+--
+다음 표에 나열된 기본 변수가 파일에 포함되어 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` 있습니다.
+
+[cols="2*"]
+|===
+| 변수 | 경로 
+
+
+| `cert_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.crt` 
+
+
+| `key_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key` 
+
+
+| `ca_cert_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.crt` 
+
+
+| `ca_key_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.key` 
+
+
+| `ca_serial_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.srl` 
+
+
+| `cert_valid_days` | `1095` 
+
+
+| `x509_passin_pwd` | `pass:ontap` 
+|===
+* `cert_valid_days` 클라이언트 인증서의 만료를 설정하는 데 사용됩니다. 최대값은 3년(1095일)입니다.
+* `x509_passin_pwd` 은 서명된 클라이언트 인증서의 암호입니다.
+
+
+다음 표에 나열된 기본 변수가 파일에 포함되어 `/opt/netapp/lib/ontap_mediator/uwsgi/ontap_mediator.ini` 있습니다.
+
+[cols="2*"]
+|===
+| 변수 | 경로 
+
+
+| `mediator_cert` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.crt` 
+
+
+| `mediator_key` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key` 
+
+
+| `ca_cert_path` | `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.crt` 
+|===
+--
+====
 이러한 속성을 수정하는 경우 ONTAP 중재자 서비스를 다시 시작하여 변경 사항을 적용합니다. 기본 인증서를 타사 인증서로 교체하는 방법에 대한 자세한 지침은 을 참조하십시오link:../mediator/manage-task.html#replace-self-signed-certificates-with-trusted-third-party-certificates["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"].
 
 

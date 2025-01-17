@@ -34,7 +34,7 @@ BlueXP에서 계정을 설정하려면 다음 절차를 수행해야 합니다. 
 ** StorageGRID(ONTAP 9.10.1)
 +
 
-NOTE: ONTAP 9.10.1부터 StorageGRID를 클라우드 백업 공급자로 선택할 수 있지만 BlueXP가 사내에 구축된 경우에만 가능합니다. BlueXP 커넥터는 사내에 설치해야 하며 BlueXP SaaS(Software-as-a-Service) 애플리케이션을 통해 사용할 수 있습니다.
+NOTE: ONTAP 9.10.1부터 클라우드 백업 공급자로 StorageGRID을 선택할 수 있지만, BlueXP 가 온프레미스에 배포된 경우에만 가능합니다. BlueXP 커넥터는 사내에 설치해야 하며 BlueXP SaaS(Software-as-a-Service) 애플리케이션을 통해 사용할 수 있습니다.
 
 
 
@@ -66,13 +66,13 @@ BlueXP 또는 System Manager를 사용하여 클러스터를 BlueXP에 등록할
 클러스터를 BlueXP 에 등록한 후에는 BlueXP  백업 및 복구를 활성화하고 클라우드에 대한 첫 번째 백업을 시작해야 합니다.
 
 .단계
-. System Manager에서 * 보호 > 개요 * 를 클릭한 다음 * BlueXP  백업 및 복구 * 섹션으로 스크롤합니다.
+. System Manager에서 * 보호 > 개요 * 를 선택한 다음 * Cloud Backup Service * 섹션으로 스크롤합니다.
 . 클라이언트 ID * 및 * 클라이언트 암호 * 를 입력합니다.
 +
 
-NOTE: ONTAP 9.10.1부터 * 클라우드 사용 비용에 대해 자세히 알아보기 * 를 클릭하여 클라우드 사용 비용에 대해 알아볼 수 있습니다.
+NOTE: ONTAP 9.10.1부터 * 클라우드 사용 비용에 대해 자세히 알아보기 * 를 선택하여 클라우드 사용 비용에 대해 알아볼 수 있습니다.
 
-. 연결 을 클릭하고 BlueXP  백업 및 복구 * 를 활성화합니다.
+. 연결 및 Cloud Backup Service 활성화 * 를 선택합니다.
 . 선택한 공급자에 따라 * BlueXP  백업 및 복구 활성화 * 페이지에서 다음 세부 정보를 제공합니다.
 +
 [cols="35,65"]
@@ -115,7 +115,7 @@ Google Cloud Project(GCP)
 
 
  a| 
-StorageGRID(ONTAP 9.10.1 이상, BlueXP 사내 배포 전용)
+StorageGRID(ONTAP 9.10.1 이상, BlueXP  온프레미스 배포에만 해당)
  a| 
 ** 서버
 ** SG 액세스 키
@@ -157,8 +157,8 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 BlueXP  백업 및 복구에 사용되는 보호 정책을 변경할 수 있습니다.
 
 .단계
-. System Manager에서 * 보호 > 개요 * 를 클릭한 다음 * BlueXP  백업 및 복구 * 섹션으로 스크롤합니다.
-. 을 image:icon_kabob.gif["메뉴 옵션 아이콘"]클릭한 다음 * 편집 * 을 클릭합니다.
+. System Manager에서 * 보호 > 개요 * 를 선택한 다음 * Cloud Backup Service * 섹션으로 스크롤합니다.
+. 을 image:icon_kabob.gif["메뉴 옵션 아이콘"]선택한 다음 * 편집 * 을 선택합니다.
 . 보호 정책 * 선택:
 +
 ** * 기존 정책 *: 기존 정책을 선택합니다.
@@ -219,9 +219,9 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 기존 볼륨 및 LUN에 대해 SnapMirror 보호 관계를 설정할 수 있습니다.
 
 .단계
-. 기존 볼륨 또는 LUN을 선택하고 * 보호 * 를 클릭합니다.
+. 기존 볼륨 또는 LUN을 선택하고 * Protect * 를 선택합니다.
 . 볼륨 보호 * 페이지에서 보호 정책에 * BlueXP  백업 및 복구 서비스를 사용한 백업 * 을 지정합니다.
-. 보호 * 를 클릭합니다.
+. protect * 를 선택합니다.
 . 보호 * 페이지에서 * SnapMirror 활성화(로컬 또는 원격) * 확인란을 선택합니다.
 . 연결 및 BlueXP  백업 및 복구 활성화 * 를 선택합니다.
 
@@ -230,4 +230,4 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 == 백업 파일에서 데이터를 복원합니다
 
-BlueXP 인터페이스를 사용하는 경우에만 데이터 복원, 관계 업데이트, 관계 삭제 등의 백업 관리 작업을 수행할 수 있습니다. 을 참조하십시오 link:https://docs.netapp.com/us-en/occm/task_restore_backups.html["백업 파일에서 데이터를 복원합니다"] 를 참조하십시오.
+BlueXP 인터페이스를 사용하는 경우에만 데이터 복원, 관계 업데이트, 관계 삭제 등의 백업 관리 작업을 수행할 수 있습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/occm/task_restore_backups.html["백업 파일에서 데이터를 복원합니다"^] 참조하십시오.

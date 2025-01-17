@@ -1,52 +1,60 @@
 ---
 permalink: snaplock/snapshot-lock-concept.html 
 sidebar: sidebar 
-keywords: snaplock, snapshot copy, lock, tamperproof 
-summary: ONTAP 9.12.1부터 비 SnapLock 볼륨에 Snapshot 복사본을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷 복사본을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다. 
+keywords: snaplock, snapshot, lock, tamperproof 
+summary: ONTAP 9.12.1부터 비 SnapLock 볼륨에서 스냅샷을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다. 
 ---
-= 랜섬웨어 공격을 차단하려면 스냅샷 복사본을 잠그십시오
+= 랜섬웨어 공격으로부터 보호하기 위해 스냅샷을 잠급니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 9.12.1부터 비 SnapLock 볼륨에 Snapshot 복사본을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷 복사본을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다.
+ONTAP 9.12.1부터 비 SnapLock 볼륨에서 스냅샷을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다.
 
-SnapLock 컴플라이언스 클록 기능을 사용하면 만료 시간에 도달할 때까지 스냅샷 복사본을 삭제할 수 없도록 지정된 기간 동안 스냅샷 복사본을 잠글 수 있습니다. Snapshot 복사본을 잠그면 무단 변경 방지 기능이 되어 랜섬웨어 위협으로부터 보호됩니다. 잠겨 있는 Snapshot 복사본을 사용하여 랜섬웨어 공격으로 볼륨이 손상된 경우 데이터를 복구할 수 있습니다.
+만료 시간에 도달할 때까지 스냅샷을 삭제할 수 없도록 SnapLock Compliance 시계 기능을 사용하여 지정된 기간 동안 스냅샷을 잠급니다. 스냅샷을 잠그면 무단 변경이 방지되어 랜섬웨어 위협으로부터 보호할 수 있습니다. 볼륨이 랜섬웨어 공격에 의해 손상된 경우 잠긴 스냅샷을 사용하여 데이터를 복구할 수 있습니다.
 
-ONTAP 9.14.1부터 스냅샷 복사본 잠금은 SnapLock 소산 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 장기 보존 스냅샷 복사본을 지원합니다. 스냅샷 복사본 잠금은 에 연결된 SnapMirror 정책 규칙을 사용하여 보존 기간을 설정하여 사용할 수 있습니다 xref:Modify an existing policy to apply long-term retention[기존 정책 레이블]. 이 규칙은 볼륨에 설정된 기본 보존 기간을 재정의합니다. SnapMirror 레이블과 연결된 보존 기간이 없으면 볼륨의 기본 보존 기간이 사용됩니다.
+ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 장기 보존 스냅샷을 지원합니다. 에 연결된 SnapMirror 정책 규칙을 사용하여 보존 기간을 설정하여 스냅샷 잠금을 xref:Modify an existing policy to apply long-term retention[기존 정책 레이블]설정할 수 있습니다. 이 규칙은 볼륨에 설정된 기본 보존 기간을 재정의합니다. SnapMirror 레이블과 연결된 보존 기간이 없으면 볼륨의 기본 보존 기간이 사용됩니다.
 
-.스냅샷 복사본의 요구 사항 및 고려 사항을 무단 변경 방지
+.변조 방지 스냅샷 요구사항 및 고려사항
 * ONTAP CLI를 사용하는 경우 클러스터의 모든 노드에서 ONTAP 9.12.1 이상을 실행해야 합니다. System Manager를 사용하는 경우 모든 노드에서 ONTAP 9.13.1 이상을 실행해야 합니다.
 * link:../system-admin/install-license-task.html["SnapLock 라이센스가 클러스터에 설치되어 있어야 합니다"].. 이 라이센스는 에 link:../system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP 1 을 참조하십시오"]포함되어 있습니다.
 * link:../snaplock/initialize-complianceclock-task.html["클러스터의 규정 준수 클록을 초기화해야 합니다"]..
-* 볼륨에서 스냅샷 잠금이 활성화된 경우 클러스터를 ONTAP 9.12.1 이후 버전의 ONTAP로 업그레이드할 수 있습니다. 그러나 잠긴 스냅샷 복사본의 만료 날짜가 모두 만료되어 삭제되고 스냅샷 복사본 잠금이 비활성화되기 전에는 이전 버전의 ONTAP로 되돌릴 수 없습니다.
-* 스냅샷이 잠기면 볼륨 만료 시간이 스냅샷 복사본의 만료 시간으로 설정됩니다. 둘 이상의 스냅샷 복사본이 잠겨 있는 경우 볼륨 만료 시간은 모든 스냅샷 복사본 중에서 가장 큰 만료 시간을 반영합니다.
-* 잠긴 스냅샷 복사본의 보존 기간이 스냅샷 복사본 보존 기간보다 우선적으로 적용됩니다. 즉, 잠긴 스냅샷 복사본의 보존 기간이 만료되지 않은 경우 유지 수 제한이 적용되지 않습니다.
-* SnapMirror 관계에서 미러 소산 정책 규칙에 보존 기간을 설정할 수 있으며, 타겟 볼륨에 스냅샷 복사본 잠금이 활성화된 경우 타겟에 복제된 스냅샷 복사본에 보존 기간이 적용됩니다. 보존 기간이 keep 카운트보다 우선합니다. 예를 들어, 만료일이 경과하지 않은 Snapshot 복사본은 keep 카운트가 초과되더라도 보존됩니다.
-* 비 SnapLock 볼륨의 스냅샷 복사본 이름을 바꿀 수 있습니다. SnapMirror 관계의 운영 볼륨에 대한 스냅샷 이름 바꾸기 작업은 정책이 MirrorAllSnapshots인 경우에만 보조 볼륨에 반영됩니다. 다른 정책 유형의 경우 업데이트 중에는 이름이 변경된 스냅샷 복사본이 전파되지 않습니다.
-* ONTAP CLI를 사용하는 경우 로 잠긴 스냅샷 복사본을 복원할 수 있습니다 `volume snapshot restore` 잠긴 스냅샷 복사본이 최신 상태인 경우에만 명령 복원 중인 스냅샷 복사본 이외의 만료되지 않은 스냅샷 복사본이 있는 경우 스냅샷 복사본 복원 작업이 실패합니다.
+* 볼륨에 스냅샷 잠금이 설정되어 있으면 클러스터를 ONTAP 9.12.1 이후의 ONTAP 버전으로 업그레이드할 수 있지만, 잠긴 스냅샷이 모두 만료 날짜에 도달하여 삭제되고 스냅샷 잠금이 해제될 때까지 이전 버전의 ONTAP로 되돌릴 수 없습니다.
+* 스냅샷이 잠기면 볼륨 만료 시간이 스냅샷의 만료 시간으로 설정됩니다. 두 개 이상의 스냅샷이 잠겨 있는 경우 볼륨 만료 시간은 모든 스냅샷 중에서 가장 긴 만료 시간을 반영합니다.
+* 잠긴 스냅샷의 보존 기간이 스냅샷 유지 수보다 우선합니다. 즉, 잠긴 스냅샷에 대한 스냅샷 보존 기간이 만료되지 않은 경우에는 유지 수 제한이 적용되지 않습니다.
+* SnapMirror 관계에서 미러 볼트 정책 규칙에 보존 기간을 설정할 수 있으며 대상 볼륨에 스냅샷 잠금이 활성화된 경우 대상에 복제된 스냅샷에 보존 기간이 적용됩니다. 보존 기간이 유지 수보다 우선합니다. 예를 들어 만료 기간이 경과하지 않은 스냅샷은 유지 수를 초과하더라도 유지됩니다.
+* 비 SnapLock 볼륨에서 스냅샷 이름을 바꿀 수 있습니다. SnapMirror 관계의 운영 볼륨에 대한 스냅샷 이름 바꾸기 작업은 정책이 MirrorAllSnapshots인 경우에만 보조 볼륨에 반영됩니다. 다른 정책 유형의 경우 이름이 바뀐 스냅샷은 업데이트 중에 전파되지 않습니다.
+* ONTAP CLI를 사용하는 경우 잠긴 스냅샷이 가장 최근의 스냅샷인 경우에만 명령을 사용하여 잠긴 스냅샷을 복구할 수 `volume snapshot restore` 있습니다. 복구 중인 스냅샷보다 나중에 만료되지 않은 스냅샷이 있는 경우 스냅샷 복구 작업이 실패합니다.
 
 
-.무단 스냅샷 복사본으로 지원되는 기능
+.변조 방지 스냅샷에서 지원되는 기능
 * link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-worm-snaplock.html["Cloud Volumes ONTAP"^]
 * FlexGroup 볼륨
 +
-스냅샷 복사본 잠금은 FlexGroup 볼륨에서 지원됩니다. 스냅샷 잠금은 루트 구성 요소 스냅샷 복사본에만 적용됩니다. FlexGroup 볼륨은 루트 구성 요소 만료 시간이 경과한 경우에만 삭제할 수 있습니다.
+스냅샷 잠금은 FlexGroup 볼륨에 대해 지원됩니다. 스냅샷 잠금은 루트 구성 요소 스냅샷에서만 발생합니다. FlexGroup 볼륨은 루트 구성 요소 만료 시간이 경과한 경우에만 삭제할 수 있습니다.
 
 * FlexVol에서 FlexGroup로의 변환
 +
-잠긴 스냅샷 복사본이 있는 FlexVol 볼륨을 FlexGroup 볼륨으로 변환할 수 있습니다. 스냅샷 복사본은 변환 후에도 잠겨 있습니다.
+잠긴 스냅샷이 있는 FlexVol volume를 FlexGroup 볼륨으로 변환할 수 있습니다. 변환 후에도 스냅샷은 잠긴 상태로 유지됩니다.
+
+* SnapMirror 비동기
++
+소스와 대상 모두에서 컴플라이언스 클록을 초기화해야 합니다.
+
+* SVM DR
++
+소스와 대상 모두에서 컴플라이언스 클록을 초기화해야 합니다.
 
 * 볼륨 클론 및 파일 클론
 +
-잠긴 스냅샷 복사본에서 볼륨 클론 및 파일 클론을 생성할 수 있습니다.
+잠긴 스냅샷에서 볼륨 클론 및 파일 클론을 생성할 수 있습니다.
 
 
 
 .지원되지 않는 기능입니다
-다음 기능은 현재 무단 스냅샷 복사본에서는 지원되지 않습니다.
+다음 기능은 현재 변조 방지 스냅샷에서 지원되지 않습니다.
 
 * 정합성 보장 그룹
 * FabricPool
@@ -60,9 +68,9 @@ ONTAP 9.14.1부터 스냅샷 복사본 잠금은 SnapLock 소산 대상 및 비 
 
 
 
-== 볼륨을 생성할 때 스냅샷 복사본 잠금을 설정합니다
+== 볼륨을 생성할 때 스냅샷 잠금을 설정합니다
 
-ONTAP 9.12.1부터 새 볼륨을 만들거나 를 사용하여 기존 볼륨을 수정할 때 스냅샷 복사본 잠금을 활성화할 수 있습니다 `-snapshot-locking-enabled` 의 옵션 `volume create` 및 `volume modify` CLI에서의 명령. ONTAP 9.13.1 부터 시스템 관리자를 사용하여 스냅샷 복사본 잠금을 활성화할 수 있습니다.
+ONTAP 9.12.1부터 새 볼륨을 생성할 때 또는 CLI에서 및 `volume modify` 명령의 옵션을 `volume create` 사용하여 기존 볼륨을 수정할 때 스냅샷 잠금을 설정할 수 있습니다 `-snapshot-locking-enabled`. ONTAP 9.13.1부터 System Manager를 사용하여 스냅샷 잠금을 설정할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -75,24 +83,24 @@ ONTAP 9.12.1부터 새 볼륨을 만들거나 를 사용하여 기존 볼륨을 
 . 아직 활성화되지 않은 경우 * SnapLock 준수 클럭 초기화 * 를 선택합니다.
 . 변경 사항을 저장합니다.
 . 볼륨 * 창에서 업데이트한 볼륨을 선택하고 * 개요 * 를 선택합니다.
-. SnapLock 스냅샷 복사본 잠금 * 이 * 사용 * 으로 표시되는지 확인합니다.
+. SnapLock 스냅샷 잠금 * 이 * 사용 * 으로 표시되는지 확인합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 새 볼륨을 생성하고 스냅샷 복사본 잠금을 활성화하려면 다음 명령을 입력합니다.
+. 새 볼륨을 생성하고 스냅샷 잠금을 설정하려면 다음 명령을 입력합니다.
 +
 `volume create -vserver _vserver_name_ -volume _volume_name_ -snapshot-locking-enabled true`
 
 +
-다음 명령을 실행하면 vol1이라는 새 볼륨에서 스냅샷 복사본 잠금이 설정됩니다.
+다음 명령을 실행하면 vol1이라는 새 볼륨에 대한 스냅샷 잠금이 설정됩니다.
 
 +
 [listing]
 ----
 > volume create -volume vol1 -aggregate aggr1 -size 100m -snapshot-locking-enabled true
-Warning: Snapshot copy locking is being enabled on volume “vol1” in Vserver “vs1”. It cannot be disabled until all locked Snapshot copies are past their expiry time. A volume with unexpired locked Snapshot copies cannot be deleted.
+Warning: snapshot locking is being enabled on volume “vol1” in Vserver “vs1”. It cannot be disabled until all locked snapshots are past their expiry time. A volume with unexpired locked snapshots cannot be deleted.
 Do you want to continue: {yes|no}: y
 [Job 32] Job succeeded: Successful
 ----
@@ -102,9 +110,9 @@ Do you want to continue: {yes|no}: y
 ====
 
 
-== 기존 볼륨에서 스냅샷 복사본 잠금 을 활성화합니다
+== 기존 볼륨에 대한 스냅샷 잠금을 설정합니다
 
-ONTAP 9.12.1부터 ONTAP CLI를 사용하여 기존 볼륨에서 스냅샷 복사본 잠금을 활성화할 수 있습니다. ONTAP 9.13.1 부터 시스템 관리자를 사용하여 기존 볼륨에서 스냅샷 복사본 잠금을 활성화할 수 있습니다.
+ONTAP 9.12.1부터 ONTAP CLI를 사용하여 기존 볼륨에 대한 스냅샷 잠금을 설정할 수 있습니다. ONTAP 9.13.1부터 System Manager를 사용하여 기존 볼륨에 대한 스냅샷 잠금을 설정할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -112,20 +120,20 @@ ONTAP 9.12.1부터 ONTAP CLI를 사용하여 기존 볼륨에서 스냅샷 복�
 --
 . Storage > Volumes * 로 이동합니다.
 . 를 image:icon_kabob.gif["메뉴 옵션 아이콘"] 선택하고 * 편집 > 볼륨 * 을 선택합니다.
-. 볼륨 편집 * 창에서 스냅샷 복사본(로컬) 설정 섹션을 찾아 * 스냅샷 잠금 활성화 * 를 선택합니다.
+. 볼륨 편집 * 창에서 스냅샷(로컬) 설정 섹션을 찾고 * 스냅샷 잠금 활성화 * 를 선택합니다.
 +
 SnapLock 라이센스가 설치되지 않은 경우에는 이 선택 항목이 표시되지 않습니다.
 
 . 아직 활성화되지 않은 경우 * SnapLock 준수 클럭 초기화 * 를 선택합니다.
 . 변경 사항을 저장합니다.
 . 볼륨 * 창에서 업데이트한 볼륨을 선택하고 * 개요 * 를 선택합니다.
-. SnapLock 스냅샷 복사본 잠금 * 이 * 사용 * 으로 표시되는지 확인합니다.
+. SnapLock 스냅샷 잠금 * 이 * 사용 * 으로 표시되는지 확인합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 스냅샷 복사본 잠금을 사용하도록 기존 볼륨을 수정하려면 다음 명령을 입력합니다.
+. 기존 볼륨을 수정하여 스냅샷 잠금을 설정하려면 다음 명령을 입력합니다.
 +
 `volume modify -vserver _vserver_name_ -volume _volume_name_ -snapshot-locking-enabled true`
 
@@ -135,13 +143,13 @@ SnapLock 라이센스가 설치되지 않은 경우에는 이 선택 항목이 �
 ====
 
 
-== 잠긴 스냅샷 복사본 정책을 생성하고 보존을 적용합니다
+== 잠긴 스냅샷 정책을 생성하고 보존을 적용합니다
 
-ONTAP 9.12.1부터 스냅샷 복사본 보존 기간을 적용하기 위한 스냅샷 복사본 정책을 생성하고 이 정책을 볼륨에 적용하여 지정된 기간 동안 스냅샷 복사본을 잠글 수 있습니다. 보존 기간을 수동으로 설정하여 스냅샷 복사본을 잠글 수도 있습니다. ONTAP 9.13.1 부터는 시스템 관리자를 사용하여 스냅샷 복사본 잠금 정책을 생성하고 볼륨에 적용할 수 있습니다.
+ONTAP 9.12.1부터 스냅샷 정책을 생성하여 스냅샷 보존 기간을 적용하고 볼륨에 정책을 적용하여 지정된 기간 동안 스냅샷을 잠글 수 있습니다. 보존 기간을 수동으로 설정하여 스냅샷을 잠글 수도 있습니다. ONTAP 9.13.1부터 System Manager를 사용하여 스냅샷 잠금 정책을 생성하여 볼륨에 적용할 수 있습니다.
 
 
 
-=== 스냅샷 복사본 잠금 정책을 생성합니다
+=== 스냅샷 잠금 정책을 생성합니다
 
 [role="tabbed-block"]
 ====
@@ -152,8 +160,8 @@ ONTAP 9.12.1부터 스냅샷 복사본 보존 기간을 적용하기 위한 스�
 . Snapshot Policies * 를 찾아 선택합니다 image:icon_arrow.gif["화살표 아이콘"].
 . 스냅샷 정책 추가 * 창에서 정책 이름을 입력합니다.
 . 를 선택합니다 image:icon_add.gif["추가 아이콘"].
-. 일정 이름, 유지할 최대 스냅샷 복사본, SnapLock 보존 기간을 비롯한 스냅샷 복사본 일정 세부 정보를 제공합니다.
-. SnapLock 보존 기간 * 열에 스냅샷 복사본을 보존할 시간, 일, 월 또는 년의 수를 입력합니다. 예를 들어, 보존 기간이 5일인 스냅샷 복사본 정책은 스냅샷 복사본이 생성된 후 5일 동안 잠기고, 이 기간 동안에는 삭제할 수 없습니다. 다음과 같은 보존 기간 범위가 지원됩니다.
+. 스케줄 이름, 유지할 최대 스냅샷 및 SnapLock 보존 기간을 포함한 스냅샷 스케줄 세부 정보를 제공합니다.
+. SnapLock 보존 기간 * 열에 스냅샷을 보존할 시간, 일, 월 또는 년 수를 입력합니다. 예를 들어 보존 기간이 5일인 스냅샷 정책은 스냅샷이 생성된 시점부터 5일 동안 스냅샷을 잠그며, 이 시간 동안에는 삭제할 수 없습니다. 다음과 같은 보존 기간 범위가 지원됩니다.
 +
 ** 연도: 0-100
 ** 월: 0-1200
@@ -167,12 +175,12 @@ ONTAP 9.12.1부터 스냅샷 복사본 보존 기간을 적용하기 위한 스�
 --
 .CLI를 참조하십시오
 --
-. 스냅샷 복사본 정책을 생성하려면 다음 명령을 입력합니다.
+. 스냅샷 정책을 생성하려면 다음 명령을 입력합니다.
 +
 `volume snapshot policy create -policy policy_name -enabled true -schedule1 _schedule1_name_ -count1 _maximum_Snapshot_copies -retention-period1 _retention_period_`
 
 +
-다음 명령을 실행하면 스냅샷 복사본 잠금 정책이 생성됩니다.
+다음 명령을 실행하면 스냅샷 잠금 정책이 생성됩니다.
 
 +
 [listing]
@@ -180,7 +188,7 @@ ONTAP 9.12.1부터 스냅샷 복사본 보존 기간을 적용하기 위한 스�
 cluster1> volume snapshot policy create -policy policy_name -enabled true -schedule1 hourly -count1 24 -retention-period1 "1 days"
 ----
 +
-스냅샷 복사본은 활성 보존 상태에 있는 경우 교체되지 않습니다. 즉, 아직 만료되지 않은 잠긴 스냅샷 복사본이 있는 경우 보존 횟수가 적용되지 않습니다.
+활성 보존 상태인 스냅샷은 대체되지 않습니다. 즉, 아직 만료되지 않은 잠긴 스냅샷이 있는 경우에는 보존 횟수가 유지되지 않습니다.
 
 
 
@@ -196,16 +204,16 @@ cluster1> volume snapshot policy create -policy policy_name -enabled true -sched
 --
 . Storage > Volumes * 로 이동합니다.
 . 를 image:icon_kabob.gif["메뉴 옵션 아이콘"] 선택하고 * 편집 > 볼륨 * 을 선택합니다.
-. Edit Volume * (볼륨 편집 *) 창에서 * Schedule Snapshot copies * (스냅샷 복사본 예약 *)를 선택합니다.
-. 목록에서 잠금 스냅샷 복사본 정책을 선택합니다.
-. 스냅샷 복사본 잠금이 아직 활성화되지 않은 경우 * 스냅샷 잠금 활성화 * 를 선택합니다.
+. 볼륨 편집 * 창에서 * 스냅샷 예약 * 을 선택합니다.
+. 목록에서 스냅샷 잠금 정책을 선택합니다.
+. 스냅샷 잠금이 아직 활성화되지 않은 경우 * Enable Snapshot locking * 을 선택합니다.
 . 변경 사항을 저장합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 기존 볼륨에 스냅샷 복사본 잠금 정책을 적용하려면 다음 명령을 입력합니다.
+. 기존 볼륨에 스냅샷 잠금 정책을 적용하려면 다음 명령을 입력합니다.
 +
 `volume modify -volume volume_name -vserver vserver_name -snapshot-policy policy_name`
 
@@ -215,31 +223,31 @@ cluster1> volume snapshot policy create -policy policy_name -enabled true -sched
 ====
 
 
-=== 수동 스냅샷 복사본 생성 중에 보존 기간을 적용합니다
+=== 수동 스냅샷 생성 중에 보존 기간을 적용합니다
 
-스냅샷 복사본을 수동으로 생성할 때 스냅샷 복사본 보존 기간을 적용할 수 있습니다. 볼륨에 대해 스냅샷 복사본 잠금을 설정해야 합니다. 그렇지 않으면 보존 기간 설정이 무시됩니다.
+스냅샷을 수동으로 생성할 때 스냅샷 보존 기간을 적용할 수 있습니다. 볼륨에 대해 스냅샷 잠금을 설정해야 합니다. 그렇지 않으면 보존 기간 설정이 무시됩니다.
 
 [role="tabbed-block"]
 ====
 .시스템 관리자
 --
 . Storage > Volumes * 로 이동하여 볼륨을 선택합니다.
-. 볼륨 세부 정보 페이지에서 * 스냅샷 복사본 * 탭을 선택합니다.
+. 볼륨 세부 정보 페이지에서 * 스냅샷 * 탭을 선택합니다.
 . 를 선택합니다 image:icon_add.gif["추가 아이콘"].
-. 스냅샷 복사본 이름 및 SnapLock 만료 시간을 입력합니다. 보존 만료 날짜 및 시간을 선택할 달력을 선택할 수 있습니다.
+. 스냅샷 이름과 SnapLock 만료 시간을 입력합니다. 보존 만료 날짜 및 시간을 선택할 달력을 선택할 수 있습니다.
 . 변경 사항을 저장합니다.
-. 볼륨 > 스냅샷 복사본 * 페이지에서 * 표시/숨기기 * 를 선택하고 * SnapLock 만료 시간 * 을 선택하여 * SnapLock 만료 시간 * 열을 표시하고 보존 시간이 설정되어 있는지 확인합니다.
+. 볼륨 > 스냅샷 * 페이지에서 * 표시/숨기기 * 를 선택하고 * SnapLock 만료 시간 * 을 선택하여 * SnapLock 만료 시간 * 열을 표시하고 보존 시간이 설정되었는지 확인합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 스냅샷 복사본을 수동으로 생성하고 잠금 보존 기간을 적용하려면 다음 명령을 입력합니다.
+. 스냅샷을 수동으로 생성하고 잠금 보존 기간을 적용하려면 다음 명령을 입력합니다.
 +
 `volume snapshot create -volume _volume_name_ -snapshot _snapshot_copy_name_ -snaplock-expiry-time _expiration_date_time_`
 
 +
-다음 명령을 실행하면 새 스냅샷 복사본이 생성되고 보존 기간이 설정됩니다.
+다음 명령을 실행하면 새 스냅샷이 생성되고 보존 기간이 설정됩니다.
 
 +
 [listing]
@@ -252,28 +260,28 @@ cluster1> volume snapshot create -vserver vs1 -volume vol1 -snapshot snap1 -snap
 ====
 
 
-=== 기존 스냅샷 복사본에 보존 기간을 적용합니다
+=== 기존 스냅샷에 보존 기간을 적용합니다
 
 [role="tabbed-block"]
 ====
 .시스템 관리자
 --
 . Storage > Volumes * 로 이동하여 볼륨을 선택합니다.
-. 볼륨 세부 정보 페이지에서 * 스냅샷 복사본 * 탭을 선택합니다.
-. 스냅샷 복사본을 선택하고 를 선택한 image:icon_kabob.gif["메뉴 옵션 아이콘"]다음 * SnapLock 만료 시간 수정 * 을 선택합니다. 보존 만료 날짜 및 시간을 선택할 달력을 선택할 수 있습니다.
+. 볼륨 세부 정보 페이지에서 * 스냅샷 * 탭을 선택합니다.
+. 스냅샷을 선택하고 를 선택한 image:icon_kabob.gif["메뉴 옵션 아이콘"]다음 * SnapLock 만료 시간 수정 * 을 선택합니다. 보존 만료 날짜 및 시간을 선택할 달력을 선택할 수 있습니다.
 . 변경 사항을 저장합니다.
-. 볼륨 > 스냅샷 복사본 * 페이지에서 * 표시/숨기기 * 를 선택하고 * SnapLock 만료 시간 * 을 선택하여 * SnapLock 만료 시간 * 열을 표시하고 보존 시간이 설정되어 있는지 확인합니다.
+. 볼륨 > 스냅샷 * 페이지에서 * 표시/숨기기 * 를 선택하고 * SnapLock 만료 시간 * 을 선택하여 * SnapLock 만료 시간 * 열을 표시하고 보존 시간이 설정되었는지 확인합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 기존 스냅샷 복사본에 보존 기간을 수동으로 적용하려면 다음 명령을 입력합니다.
+. 기존 스냅샷에 보존 기간을 수동으로 적용하려면 다음 명령을 입력합니다.
 +
 `volume snapshot modify-snaplock-expiry-time -volume _volume_name_ -snapshot _snapshot_copy_name_ -expiry-time _expiration_date_time_`
 
 +
-다음 예에서는 기존 스냅샷 복사본에 보존 기간을 적용합니다.
+다음 예에서는 기존 스냅샷에 보존 기간을 적용합니다.
 
 +
 [listing]
@@ -288,13 +296,13 @@ cluster1> volume snapshot modify-snaplock-expiry-time -volume vol1 -snapshot sna
 
 === 기존 정책을 수정하여 장기 보존을 적용합니다
 
-SnapMirror 관계에서 미러 소산 정책 규칙에 보존 기간을 설정할 수 있으며, 타겟 볼륨에 스냅샷 복사본 잠금이 활성화된 경우 타겟에 복제된 스냅샷 복사본에 보존 기간이 적용됩니다. 보존 기간이 keep 카운트보다 우선합니다. 예를 들어, 만료일이 경과하지 않은 Snapshot 복사본은 keep 카운트가 초과되더라도 보존됩니다.
+SnapMirror 관계에서 미러 볼트 정책 규칙에 보존 기간을 설정할 수 있으며 대상 볼륨에 스냅샷 잠금이 활성화된 경우 대상에 복제된 스냅샷에 보존 기간이 적용됩니다. 보존 기간이 유지 수보다 우선합니다. 예를 들어 만료 기간이 경과하지 않은 스냅샷은 유지 수를 초과하더라도 유지됩니다.
 
-ONTAP 9.14.1부터 스냅샷 복사본의 장기 보존을 설정하는 규칙을 추가하여 기존 SnapMirror 정책을 수정할 수 있습니다. 이 규칙은 SnapLock 소산 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 기본 볼륨 보존 기간을 재정의하는 데 사용됩니다.
+ONTAP 9.14.1부터 스냅샷의 장기 보존을 설정하는 규칙을 추가하여 기존 SnapMirror 정책을 수정할 수 있습니다. 이 규칙은 SnapLock 소산 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 기본 볼륨 보존 기간을 재정의하는 데 사용됩니다.
 
 . 기존 SnapMirror 정책에 규칙 추가:
 +
-`snapmirror policy add-rule -vserver <SVM name> -policy <policy name> -snapmirror-label <label name> -keep <number of Snapshot copies> -retention-period [<integer> days|months|years]`
+`snapmirror policy add-rule -vserver <SVM name> -policy <policy name> -snapmirror-label <label name> -keep <number of snapshots> -retention-period [<integer> days|months|years]`
 
 +
 다음 예에서는 "LockVault"라는 기존 정책에 6개월의 보존 기간을 적용하는 규칙을 만듭니다.
