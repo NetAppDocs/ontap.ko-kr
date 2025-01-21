@@ -60,11 +60,12 @@ ONTAP 액세스 방법에 따라 올바른 절차를 선택합니다.
 . 텍스트 편집기로 인증서 파일을 엽니다.
 . 다음 행을 포함하여 전체 인증서를 복사합니다.
 +
-`-----BEGIN CERTIFICATE-----`
-
-+
-`-----END CERTIFICATE-----`
-
+[listing]
+----
+-----BEGIN CERTIFICATE-----
+<certificate_value>
+-----END CERTIFICATE-----
+----
 . 명령 프롬프트 후 터미널에 인증서를 붙여 넣습니다.
 . Enter * 키를 눌러 설치를 완료합니다.
 . 다음 중 하나를 사용하여 인증서가 설치되었는지 확인합니다.

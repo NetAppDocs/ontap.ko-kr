@@ -13,7 +13,7 @@ summary: '보안 인증서 generate-csr 명령을 사용하여 인증서 서명 
 [role="lead"]
 보안 인증서 'generate-csr' 명령을 사용하여 인증서 서명 요청(CSR)을 생성할 수 있습니다. 요청을 처리한 후 CA(인증 기관)에서 서명된 디지털 인증서를 보냅니다.
 
-.필요한 것
+.시작하기 전에
 이 작업을 수행하려면 클러스터 관리자 또는 SVM 관리자여야 합니다.
 
 .단계
@@ -36,23 +36,12 @@ locality Sunnyvale -organization IT -unit Software -email-addr
 web@example.com -hash-function SHA256
 Certificate Signing Request :
 -----BEGIN CERTIFICATE REQUEST-----
-MIIBGjCBxQIBADBgMRQwEgYDVQQDEwtleGFtcGxlLmNvbTELMAkGA1UEBhMCVVMx
-CTAHBgNVBAgTADEJMAcGA1UEBxMAMQkwBwYDVQQKEwAxCTAHBgNVBAsTADEPMA0G
-CSqGSIb3DQEJARYAMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPXFanNoJApT1nzS
-xOcxixqImRRGZCR7tVmTYyqPSuTvfhVtwDJbmXuj6U3a1woUsb13wfEvQnHVFNci
-2ninsJ8CAwEAAaAAMA0GCSqGSIb3DQEBCwUAA0EA6EagLfso5+4g+ejiRKKTUPQO
-UqOUEoKuvxhOvPC2w7b//fNSFsFHvXloqEOhYECn/NX9h8mbphCoM5YZ4OfnKw==
+<certificate_value>
 -----END CERTIFICATE REQUEST-----
 Private Key :
 24 | Administrator Authentication and RBAC
 -----BEGIN RSA PRIVATE KEY-----
-MIIBOwIBAAJBAPXFanNoJApT1nzSxOcxixqImRRGZCR7tVmTYyqPSuTvfhVtwDJb
-mXuj6U3a1woUsb13wfEvQnHVFNci2ninsJ8CAwEAAQJAWt2AO+bW3FKezEuIrQlu
-KoMyRYK455wtMk8BrOyJfhYsB20B28eifjJvRWdTOBEav99M7cEzgPv+p5kaZTTM
-gQIhAPsp+j1hrUXSRj979LIJJY0sNez397i7ViFXWQScx/ehAiEA+oDbOooWlVvu
-xj4aitxVBu6ByVckYU8LbsfeRNsZwD8CIQCbZ1/ENvmlJ/P7N9Exj2NCtEYxd0Q5
-cwBZ5NfZeMBpwQIhAPk0KWQSLadGfsKO077itF+h9FGFNHbtuNTrVq4vPW3nAiAA
-peMBQgEv28y2r8D4dkYzxcXmjzJluUSZSZ9c/wS6fA==
+<key_value>
 -----END RSA PRIVATE KEY-----
 Note: Please keep a copy of your certificate request and private key
 for future reference.

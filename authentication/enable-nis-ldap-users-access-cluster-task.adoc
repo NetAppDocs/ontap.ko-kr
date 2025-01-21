@@ -35,7 +35,7 @@ LDAP 계정이 SVM에 액세스하려면 SVM에 대한 LDAP 서버 액세스를 
 
 
 .시작하기 전에
-* 을(를) 설치해야 합니다 link:install-ca-signed-server-digital-certificate-task.html["CA 서명 서버 디지털 인증서"] SVM에서.
+*  를 설치해야 link:install-server-certificate-cluster-svm-ssl-server-task.html["CA 서명 서버 디지털 인증서"]SVM에합니다.
 * 이 작업을 수행하려면 클러스터 또는 SVM 관리자여야 합니다.
 
 

@@ -504,9 +504,7 @@ image:mediator-certs-index.png["웹 서버 설정 및 ONTAP 중재자 서버 설
 Enter pass phrase for intermediate.key:
 [root@scs000216655 server_config]# cat intermediate.csr
 -----BEGIN CERTIFICATE REQUEST-----
-MIIE6TCCAtECAQAwgaMxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlh
-...
-erARKhY9z0e8BHPl3g==
+<certificate_value>
 -----END CERTIFICATE REQUEST-----
 ----
 . PKI 기관에 인증서 서명 요청을 보내 `intermediate.csr` 서명을 받습니다.
