@@ -246,7 +246,7 @@ System Manager에 표시되는 운영 데이터 축소율에는 스냅샷 복사
 
 
 
-| xref:../snaplock/snapshot-lock-concept.html#enable-snapshot-copy-locking-when-creating-a-volume[스냅샷 복사본의 무단 잠금 방지] | System Manager를 사용하여 SnapLock이 아닌 볼륨의 스냅샷 복사본을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 
+| xref:../snaplock/snapshot-lock-concept.html[스냅샷 복사본의 무단 잠금 방지] | System Manager를 사용하여 SnapLock이 아닌 볼륨의 스냅샷 복사본을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 
 
 
 | xref:../encryption-at-rest/manage-external-key-managers-sm-task.html[외부 키 관리자 지원] | System Manager를 사용하여 외부 키 관리자를 관리할 수 있으며 인증 및 암호화 키를 저장하고 관리할 수 있습니다. 

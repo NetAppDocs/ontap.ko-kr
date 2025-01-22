@@ -98,9 +98,9 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * '클러스터 피어 삭제'
 * `cluster time-service ntp server create` (영어
 * `cluster time-service ntp server delete` (영어
-* `cluster time-service ntp server key create` (영어
-* `cluster time-service ntp server key delete` (영어
-* `cluster time-service ntp server key modify` (영어
+* `cluster time-service ntp key create` (영어
+* `cluster time-service ntp key delete` (영어
+* `cluster time-service ntp key modify` (영어
 * `cluster time-service ntp server modify` (영어
 * 이벤트 구성 수정
 * `lun delete` (영어
@@ -121,6 +121,7 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * `security saml-sp create` (영어
 * `security saml-sp delete` (영어
 * `security saml-sp modify` (영어
+* `security webauthn credentials delete` (영어
 * `snaplock legal-hold end` (영어
 * `storage aggregate delete` (영어
 * `storage aggregate offline` (영어
@@ -189,6 +190,8 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * `vserver object-store-server audit disable` (영어
 * `vserver object-store-server audit modify` (영어
 * `vserver object-store-server audit rotate-log` (영어
+* `vserver object-store-server bucket cors-rule create` (영어
+* `vserver object-store-server bucket cors-rule delete` (영어
 * `vserver options` (영어
 * 'vserver peer delete
 * `vserver security file-directory apply` (영어
@@ -214,9 +217,9 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * '클러스터 피어 삭제'
 * `cluster time-service ntp server create` (영어
 * `cluster time-service ntp server delete` (영어
-* `cluster time-service ntp server key create` (영어
-* `cluster time-service ntp server key delete` (영어
-* `cluster time-service ntp server key modify` (영어
+* `cluster time-service ntp key create` (영어
+* `cluster time-service ntp key delete` (영어
+* `cluster time-service ntp key modify` (영어
 * `cluster time-service ntp server modify` (영어
 * 이벤트 구성 수정
 * `lun delete` (영어

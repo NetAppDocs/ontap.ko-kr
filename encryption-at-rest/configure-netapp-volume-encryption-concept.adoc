@@ -79,6 +79,9 @@ NAE 볼륨에서는 'Secure purge' 명령어를 사용할 수 없다.
 검증된 외부 키 관리자 목록은 에서 확인할 수 있습니다 link:http://mysupport.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴(IMT)"^]. IMT의 검색 기능에 "Key Manager"라는 용어를 입력하면 이 목록을 확인할 수 있습니다.
 
 
+NOTE: Azure Key Vault 및 AWS KMS와 같은 클라우드 KMS 공급자는 KMIP를 지원하지 않습니다. 따라서 IMT에 나열되지 않습니다.
+
+
 
 == 지원 세부 정보
 
