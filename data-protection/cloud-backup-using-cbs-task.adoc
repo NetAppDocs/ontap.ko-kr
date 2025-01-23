@@ -34,7 +34,7 @@ BlueXP에서 계정을 설정하려면 다음 절차를 수행해야 합니다. 
 ** StorageGRID(ONTAP 9.10.1)
 +
 
-NOTE: ONTAP 9.10.1부터 클라우드 백업 공급자로 StorageGRID을 선택할 수 있지만, BlueXP 가 온프레미스에 배포된 경우에만 가능합니다. BlueXP 커넥터는 사내에 설치해야 하며 BlueXP SaaS(Software-as-a-Service) 애플리케이션을 통해 사용할 수 있습니다.
+NOTE: ONTAP 9.10.1부터 클라우드 백업 공급자로 StorageGRID을 선택할 수 있지만, BlueXP 가 온프레미스에 배포된 경우에만 가능합니다. BlueXP  커넥터는 사내에 설치되어야 하며 BlueXP  SaaS(Software-as-a-Service) 애플리케이션을 통해 사용할 수 있어야 합니다.
 
 
 

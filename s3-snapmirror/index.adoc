@@ -67,6 +67,7 @@ ONTAP S3 서버에서 기존 버킷을 보호하거나 데이터 보호를 즉�
 ** ONTAP S3 프로토콜 및 스토리지
 ** SnapMirror S3에서 다른 NetApp 오브젝트 저장소 타겟(ONTAP S3, StorageGRID, Cloud Volumes ONTAP) 공략
 ** SnapMirror S3에서 AWS S3(에서 사용 가능link:../data-protection/install-snapmirror-cloud-license-task.html["ONTAP One 호환성 번들"])를 비롯한 타사 오브젝트 저장소 공략
+** 클러스터에서 ONTAP 9.10.1을 실행 중인 link:../fabricpool/install-license-aws-azure-ibm-task.html["FabricPool 라이센스"]경우 가 필요합니다.
 
 
 * ONTAP S3
