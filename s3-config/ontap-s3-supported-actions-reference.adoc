@@ -81,7 +81,7 @@ ONTAP 9.9.1부터 ONTAP S3는 오브젝트 메타데이터 및 태그 지정을 
 +
 예: ' x-amz-meta-project: ONTAP_S3'.
 
-* GetObject 를 참조하십시오. 및 HeadObject 는 사용자 정의 메타데이터를 반환합니다.
+* GetObject 및 HeadObject 는 사용자 정의 메타데이터를 반환합니다.
 * 메타데이터와 달리 태그는 다음을 사용하여 오브젝트와 독립적으로 읽을 수 있습니다.
 +
 ** PutObjectTagging
@@ -259,7 +259,7 @@ ONTAP 9.10.1에는 SnapMirror S3 및 GetBucketLocation에 대한 지원이 추�
 .ONTAP 9.9.1
 ONTAP 9.9.1에서는 ONTAP S3에 개체 메타데이터 및 태그 지정 지원에 대한 지원을 추가합니다.
 
-* PutObject 및 CreateMultipartUpload 는 이제 'x-amz-meta-<key>'를 사용하여 키-값 쌍을 포함합니다. 예: 'x-amz-meta-project:ONTAP_S3'.
+* PutObject 및 CreateMultipartUpload 는 이제 를 사용하여 키-값 쌍을 `x-amz-meta-<key>` 포함합니다. 예를 들면 다음과 `x-amz-meta-project: ontap_s3`같습니다.
 * GetObject 및 HeadObject 는 이제 사용자 정의 메타데이터를 반환합니다.
 
 

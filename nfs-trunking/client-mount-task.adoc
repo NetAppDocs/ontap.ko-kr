@@ -21,13 +21,15 @@ summary: 트렁킹을 지원하는 Linux 및 VMware 클라이언트는 트렁킹
 ====
 .Linux 클라이언트 요구 사항
 --
-트렁킹 그룹의 각 연결에는 별도의 마운트 지점이 필요합니다.
+ONTAP 9.16.1 이상 및 Red Hat Enterprise Linux 버전 8.7 이상(RHEL 8의 경우) 또는 9.2 이상(RHEL 9의 경우)을 Linux 클라이언트로 사용하는 경우 트렁킹 그룹에 하나의 마운트 지점만 필요합니다. 다음 옵션을 사용하여 내보낸 볼륨을 이 명령으로 마운트합니다. `trunkdiscovery`
 
-다음과 유사한 명령을 사용하여 내보낸 볼륨을 마운트합니다.
+`mount <lif1_ip>:<volume> </mnt/test1> -o trunkdiscovery,vers=4.1`
 
-`mount lif1_ip:/vol-test /mnt/test1 -o vers=4.1,max_connect=16`
+그렇지 않으면 트렁킹 그룹의 각 연결에 대해 별도의 마운트 지점이 필요합니다. 다음과 유사한 명령을 사용하여 내보낸 볼륨을 마운트합니다.
 
-`mount lif2_ip:/vol-test /mnt/test2 -o vers=4.1,max_connect=16`
+`mount <lif1_ip>:<volume> </mnt/test1> -o vers=4.1,max_connect=16`
+
+`mount <lif2_ip>:<volume> </mnt/test2> -o vers=4.1,max_connect=16`
 
 버전 (`vers`) 값은 이어야 합니다 `4.1` 이상.
 

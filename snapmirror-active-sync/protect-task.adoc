@@ -102,6 +102,16 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 .시작하기 전에
 * 두 클러스터에서 모두 ONTAP 9.15.1 이상을 실행해야 한다.
 * 대칭 액티브/액티브 구성에는 이 필요합니다 `AutomatedFailoverDuplex` 보호 정책. 또는, 가능합니다 xref:../data-protection/create-custom-replication-policy-concept.html[사용자 지정 SnapMirror 정책을 생성합니다] 제공함 `-type` 있습니다 `automated-failover-duplex`.
+* ONTAP 9.15.1에서 대칭 액티브/액티브는 2노드 클러스터에서만 지원됩니다.
+* ONTAP 9.16.1 GA부터 SnapMirror 액티브 동기화는 4노드 클러스터에서 대칭 액티브/액티브 구성을 지원합니다.
++
+** 4노드 클러스터에서 SnapMirror 액티브 동기화를 사용하려면 ONTAP 9.16.1 GA 이상을 실행해야 합니다.
+** 4노드 구성을 배포하기 전에 먼저 해야 xref:../peering/create-cluster-relationship-93-later-task.adoc[클러스터 피어 관계를 생성합니다]합니다.
+** 4노드 클러스터의 경우 를 xref:limits-reference.adoc[제한]검토합니다.
+** 2노드 클러스터로 되돌리는 경우 되돌리기 전에 클러스터에서 SnapMirror 액티브 동기화 관계를 제거해야 합니다.
+** 4노드 구성을 사용하여 스토리지와 컨트롤러를 업그레이드할 수 있습니다. 이 프로세스는 무중단 작업으로, 볼륨을 새 노드로 이동하는 동안 클러스터를 확장합니다. 자세한 내용은 을 link:upgrade-revert-task.html#refresh-a-cluster["클러스터를 새로 고칩니다"]참조하십시오.
+
+
 
 
 .단계
@@ -114,7 +124,7 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 +
 .. 일관성 그룹을 생성할 때 호스트 이니시에이터를 지정하여 igroup을 생성합니다.
 .. 확인란을 선택하여 ** SnapMirror 활성화** 를 선택한 다음 을 선택합니다 `AutomatedFailoverDuplex` 정책.
-.. 표시되는 대화 상자에서 ** Replicate initiator groups** 확인란을 선택하여 igroup을 복제합니다. 근위 설정 편집**에서 호스트의 근위 SVM을 설정합니다.
+.. 표시되는 대화 상자에서 ** Replicate initiator groups** 확인란을 선택하여 igroup을 복제합니다. 근접 설정 편집** 에서 호스트의 근접 SVM을 설정합니다.
 .. ** 저장**을 선택합니다.
 
 
@@ -133,7 +143,7 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 .. ** Hosts**>** SAN Initiator Groups** 로 이동합니다.
 .. 새 igroup을 생성하려면 ** + 추가** 를 선택하십시오.
 .. ** 이름 제공**, ** 호스트 운영 체제** 를 선택한 다음 ** 이니시에이터 그룹 구성원** 을 선택합니다.
-.. ** 저장**을 선택합니다.
+.. 관계를 초기화하려면 ** 저장** 을 선택합니다.
 
 
 . 새로운 igroup을 대상 LUN에 매핑합니다.
@@ -160,12 +170,20 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 `snapmirror show -destination-path <destination_path>`
 
 . 호스트에서 필요에 따라 각 클러스터에 대한 액세스를 통해 호스트 연결을 구성합니다.
-. igroup 구성을 설정합니다. 로컬 클러스터에서 이니시에이터에 대한 기본 경로를 설정합니다. 피어 클러스터 반선호도에 구성을 복제하는 옵션을 지정합니다.
+. igroup 구성을 설정합니다. 로컬 클러스터에서 이니시에이터에 대한 기본 경로를 설정합니다. 역선호도를 위해 피어 클러스터로 구성을 복제하는 옵션을 지정합니다.
 +
-`SiteA::> igroup create -vserver <svm_name> -os-type <os_type> -igroup <igroup_name> -replication-peer <peer_svm_name> -initiator <host>`
+`SiteA::> igroup create -vserver <svm_name> -ostype <os_type> -igroup <igroup_name> -replication-peer <peer_svm_name> -initiator <host>`
 
 +
-`SiteA::> igroup add -vserver <svm_name> -igroup <igroup_name> -os-type <os_type> -initiator <host>`
+
+NOTE: ONTAP 9.16.1부터 `-proximal-vserver local` 이 명령의 매개 변수를 사용합니다.
+
++
+`SiteA::> igroup add -vserver <svm_name> -igroup <igroup_name> -ostype <os_type> -initiator <host>`
+
++
+
+NOTE: ONTAP 9.16.1부터 `-proximal-vserver peer` 이 명령의 매개 변수를 사용합니다.
 
 . 호스트에서 경로를 검색하고 호스트에 기본 클러스터에서 스토리지 LUN으로 연결되는 활성/최적화된 경로가 있는지 확인합니다.
 . 애플리케이션을 배포하고 VM 워크로드를 클러스터 전체에 분산하여 필요한 로드 밸런싱을 수행합니다.

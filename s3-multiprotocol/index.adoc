@@ -119,21 +119,21 @@ FabricPool 용량 계층입니다:: S3 NAS 버킷을 FabricPool의 용량 계층
 
 
 
-NOTE: 이러한 S3 작업은 S3 NAS 버킷에서 S3를 사용할 때는 특별히 지원되지 않습니다. 네이티브 S3 버킷을 사용할 때 이러한 작업은 다음과 link:../s3-config/ontap-s3-supported-actions-reference.html["정상적으로 지원됩니다"]같습니다.
+NOTE: 이러한 S3 작업은 S3 NAS 버킷에서 S3를 사용하는 경우 특별히 지원되지 않습니다. 네이티브 S3 버킷을 사용할 때 이러한 작업은 다음과 link:../s3-config/ontap-s3-supported-actions-reference.html["정상적으로 지원됩니다"]같습니다.
 
 AWS 사용자 메타데이터::
 +
 --
-* S3 사용자 메타데이터의 일부로 수신된 키 값 쌍은 현재 릴리즈의 오브젝트 데이터와 함께 디스크에 저장되지 않습니다.
-* 접두사 "x-amz-meta"가 있는 요청 헤더는 무시됩니다.
+* ONTAP 9.15.1 이하 버전의 경우 S3 사용자 메타데이터의 일부로 수신된 키 값 쌍이 오브젝트 데이터와 함께 디스크에 저장되지 않습니다.
+* ONTAP 9.15.1 이하 버전의 경우 접두사가 "x-amz-meta"인 요청 헤더는 무시됩니다.
 
 
 --
 AWS 태그::
 +
 --
-* Put 객체와 Multitpart initiate 요청에서 접두사 "x-amz-tagging"이 있는 헤더는 무시됩니다.
-* 기존 파일의 태그 업데이트 요청(예: "tagging query-string"으로 PUT, GET 및 Delete 요청)은 오류로 거부됩니다.
+* ONTAP 9.15.1 이하 버전의 PUT 객체 및 Multipart Initiate 요청에서는 접두사 "x-amz-tagging"이 있는 헤더가 무시됩니다.
+* ONTAP 9.15.1 이하 버전의 경우 기존 파일에 대한 태그 업데이트 요청(?태깅 쿼리 문자열을 사용한 PUT, GET 및 삭제 요청)이 오류로 거부됩니다.
 
 
 --

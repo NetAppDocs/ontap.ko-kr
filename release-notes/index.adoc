@@ -44,7 +44,7 @@ IPSec에 비해 간소화된 구성과 향상된 성능으로 프로토콜 계�
 
 * xref:../networking/ipsec-prepare.html[새 네트워크 카드에 대한 IPsec HW 오프로드 지원]
 +
-ONTAP 9.16.1은 모든 새로운 AFF A 시리즈 및 AFF-C 시리즈 시스템 플랫폼에 도입된 오프로드 카드에서 IPSec 하드웨어 오프로드 기능을 활용할 때 보다 높은 "유선" 암호화 성능을 제공합니다.
+ONTAP 9.16.1은 최신 AFF A 시리즈 및 AFF-C 시리즈 시스템 플랫폼에 도입된 오프로드 카드에서 IPSec 하드웨어 오프로드 기능을 활용할 때 보다 높은 "유선" 암호화 성능을 제공합니다.
 
 * xref:../san-admin/enable-space-allocation.html[NVMe 공간 할당 해제 지원]
 +
@@ -52,7 +52,17 @@ ONTAP 9.16.1은 모든 새로운 AFF A 시리즈 및 AFF-C 시리즈 시스템 �
 
 * xref:../flexgroup/enable-adv-capacity-flexgroup-task.html[FlexGroup 볼륨을 위한 고급 용량 밸런싱]
 +
-NetApp FlexGroup 볼륨은 선택적으로 여러 백 엔드 구성요소 볼륨에 걸쳐 파일 데이터를 스트라이핑하여 성능 병목 현상을 줄이고 백엔드 구성 볼륨에 걸쳐 용량 밸런싱의 일관성을 추가할 수 있습니다.
+NetApp FlexGroup 볼륨은 필요에 따라 여러 백 엔드 구성 볼륨에 걸쳐 단일 파일 내의 데이터를 스트라이핑하여 성능 병목 현상을 줄이고 백엔드 구성 볼륨 간에 용량 밸런싱의 일관성을 추가할 수 있습니다.
+
+* xref:../svm-migrate/index.html[MetroCluster 구성 마이그레이션에 대한 SVM 데이터 이동성 지원]
++
+ONTAP은 다음 MetroCluster SVM 마이그레이션을 지원합니다.
+
++
+** 비 MetroCluster 구성과 MetroCluster IP 구성 간에 SVM 마이그레이션
+** 2개의 MetroCluster IP 구성 간에 SVM 마이그레이션
+** MetroCluster FC 구성과 MetroCluster IP 구성 간에 SVM 마이그레이션
+
 
 
 

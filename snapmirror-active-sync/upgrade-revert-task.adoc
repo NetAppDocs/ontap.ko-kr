@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/upgrade-revert-task.html
 keywords: upgrade, revert, snapmirror active sync, SMBC, SM-BC 
 summary: ONTAP의 업그레이드나 복귀는 특히 ONTAP 9.9.1 이상 또는 9.7 이전 버전으로 전환할 때 SnapMirror 액티브 동기화 관계에 영향을 미칩니다. 
 ---
-= SnapMirror 활성 동기화로 ONTAP 업그레이드 및 되돌리기
+= ONTAP에서 SnapMirror 활성 동기화를 사용하여 업그레이드 및 되돌립니다
 :allow-uri-read: 
 :nofooter: 
 :icons: font
@@ -13,7 +13,27 @@ summary: ONTAP의 업그레이드나 복귀는 특히 ONTAP 9.9.1 이상 또는 
 
 
 [role="lead"]
-SnapMirror 액티브 동기화는 ONTAP 9.9.1부터 지원됩니다. ONTAP 클러스터의 업그레이드와 되돌리기는 업그레이드하거나 되돌리려는 ONTAP 버전에 따라 SnapMirror 활성 동기화 관계에 영향을 미칩니다.
+SnapMirror 액티브 동기화는 ONTAP 9.9.1부터 지원됩니다. ONTAP 클러스터 또는 컨트롤러의 업그레이드와 되돌리기는 업그레이드하거나 되돌리려는 ONTAP 버전에 따라 SnapMirror 활성 동기화 관계에 영향을 미칩니다.
+
+
+
+== 클러스터를 새로 고칩니다
+
+ONTAP 9.16.1부터 SnapMirror 액티브 동기화는 대칭 액티브/액티브 구성의 4노드 클러스터를 지원합니다. 4-노드 클러스터를 활용하여 컨트롤러와 스토리지를 업그레이드할 수 있습니다.
+
+.시작하기 전에
+* 를 검토합니다. link:protect-task.html#configure-symmetric-activeactive-protection["4노드 클러스터의 요구사항"]
+* 기술 업데이트 프로세스 중에 비대칭 구성을 만들 수 있지만 새로 고침을 완료한 후에는 대칭 구성으로 돌아가야 합니다.
+* 이러한 지침은 50개 이하의 일관성 그룹과 400개 이하의 볼륨 엔드포인트를 가진 기존 4노드 구성에 적용됩니다.
+
+
+.단계
+. link:../volumes/move-volume-task.html["모든 SnapMirror 활성 동기화 볼륨을 _single_high-availability(HA) 쌍으로 이동합니다"]..
+. link:../system-admin/remove-nodes-cluster-concept.html["클러스터에서 사용되지 않는 노드를 제거합니다"]..
+. link:../system-admin/add-nodes-cluster-concept.html["클러스터에 새 노드를 추가합니다"]..
+. link:../volumes/move-volume-task.html["모든 볼륨을 이동합니다"] 새 노드로 이동할 수 있습니다.
+. link:../system-admin/remove-nodes-cluster-concept.html["클러스터에서 사용되지 않는 노드를 제거합니다"] 그런 다음 교체합니다link:../system-admin/add-nodes-cluster-concept.html["새로운 노드로"].
+
 
 
 
