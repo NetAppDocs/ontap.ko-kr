@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sanitize, fips, drive, sed, inaccessible, psid, physical secure ID, nrd plus, encrypt 
 summary: 'FIPS 드라이브 또는 SED에 있는 데이터를 영구적으로 액세스할 수 없도록 만들고 새 데이터에 드라이브를 사용하려면 "Storage encryption disk sanitize" 명령을 사용하여 드라이브를 삭제할 수 있습니다.' 
 ---
-= FIPS 드라이브 또는 SED를 살균합니다
+= ONTAP에서 FIPS 드라이브 또는 SED를 삭제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,7 +26,7 @@ FIPS 드라이브 또는 SED에 있는 데이터를 영구적으로 액세스할
 'Storage aggregate delete-aggregate_aggregate_name_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage aggregate delete` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -38,7 +38,7 @@ cluster1::> storage aggregate delete -aggregate aggr1
 스토리지 암호화 디스크 데이터 필드 데이터 키 ID, FIPS 키 ID, 소유자
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage encryption disk show` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -72,7 +72,7 @@ Info: Starting modify on 1 disk.
 'Storage encryption disk sanitize -disk_disk_id_'
 
 +
-이 명령을 사용하여 핫 스페어 또는 파손된 디스크만 삭제할 수 있습니다. 유형에 관계없이 모든 디스크를 삭제하는 방법은 '-force-all-state' 옵션을 사용하십시오. 전체 명령 구문은 man 페이지를 참조하십시오.
+이 명령을 사용하여 핫 스페어 또는 파손된 디스크만 삭제할 수 있습니다. 유형에 관계없이 모든 디스크를 필터링하려면 `-force-all-state` 옵션을 사용합니다. 에 대한 자세한 내용은 `storage encryption disk sanitize` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-sanitize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 

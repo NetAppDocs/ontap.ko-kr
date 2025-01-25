@@ -93,7 +93,7 @@ IP 보안(IPsec)은 클라이언트와 ONTAP 노드 간의 모든 IP 트래픽�
  a| 
 S3 오브젝트 메타데이터 및 태깅을 위한 멀티프로토콜 S3 버킷 지원
  a| 
-비 멀티프로토콜 ONTAP S3 버킷에 대해 S3 오브젝트 태깅을 사용할 수 있었습니다. ONTAP 9.16.1부터 S3 오브젝트 태깅이 NAS 및 S3 멀티프로토콜 ONTAP S3 버킷으로 확장됩니다. 태그는 S3 프로토콜에서만 표시됩니다. S3 클라이언트를 사용하여 S3 오브젝트에 적용함으로써 https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html["태그 및 메타데이터"^] ONTAP에 오브젝트 또는 파일로 저장된 데이터에서 라이프사이클, 비용 청구, 데이터 범주 및 사용자 지정 워크플로우를 정의하는 데 도움이 됩니다. Bedrock 또는 Athena와 같은 AWS 데이터 서비스와 통합할 경우 태그 및 메타데이터가 이 서비스에서 제공하는 Data Processing의 핵심이 됩니다.
+ONTAP 9.16.1부터 S3 오브젝트 태깅은 비멀티프로토콜 ONTAP S3 버킷에서 NAS 및 S3 멀티프로토콜 ONTAP S3 버킷으로 확장됩니다. 태그는 S3 프로토콜에서만 표시됩니다. S3 클라이언트를 사용하여 S3 오브젝트에 적용함으로써 https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html["태그 및 메타데이터"^] ONTAP에 오브젝트 또는 파일로 저장된 데이터에서 라이프사이클, 비용 청구, 데이터 범주 및 사용자 지정 워크플로우를 정의하는 데 도움이 됩니다. Bedrock 또는 Athena와 같은 AWS 데이터 서비스와 통합할 경우 태그 및 메타데이터가 이 서비스에서 제공하는 Data Processing의 핵심이 됩니다.
 
 
 NOTE: 네이티브 S3 버킷에서 태그 및 사용자 정의 메타데이터에 대한 지원은 ONTAP 9.9.1부터 시작되었습니다.

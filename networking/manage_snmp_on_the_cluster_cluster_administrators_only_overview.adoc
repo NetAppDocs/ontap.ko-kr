@@ -4,7 +4,7 @@ permalink: networking/manage_snmp_on_the_cluster_cluster_administrators_only_ove
 keywords: 'manage, managing, snmp, monitor, monitoring, troubleshooting, error detection, traps, overview, configure snmp to monitor svms in your cluster, snmp, trap, traphosts, asynchronous, notification, notify, alert, message, thresholds, failures, errors, fail, rfc 1215, built in, built-in, standard, snmp traps, use snmp traps to periodically check for operational thresholds or failures, standard snmp traps, system snmp authtrap, rfc 1215, coldstart, warmstart, linkdown, linkup, authenticationfailure, built-in snmp traps, traphost, diskfailedshutdown, cputoobusy, and volumenearlyfull, introducing, introduction, overview, mib, management information base, text, structure, netapp.mib, what mibs are, introducing management information bases (mibs), snmp objects and traps, object identifiers, oids, traps.dat' 
 summary: 클러스터의 SVM을 모니터링하도록 SNMP를 구성합니다 
 ---
-= SNMP 개요
+= ONTAP의 SNMP 개요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -62,7 +62,7 @@ NOTE: ONTAP는 SNMPv1 트랩을 지원하고 ONTAP 9.1, SNMPv3 트랩을 확인�
 이러한 트랩은 RFC 1215에 정의되어 있습니다. ONTAP에서 지원하는 5개의 표준 SNMP 트랩은 coldstart, 웜스타트, Linkdown, Linkup 및 authenticationFailure입니다.
 
 
-NOTE: authenticationFailure 트랩은 기본적으로 해제되어 있습니다. 명령을 사용하여 트랩을 활성화해야 `system snmp authtrap` 합니다. 자세한 내용은 man 페이지를 참조하십시오. link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+NOTE: authenticationFailure 트랩은 기본적으로 해제되어 있습니다. 명령을 사용하여 트랩을 활성화해야 `system snmp authtrap` 합니다. 에 대한 자세한 내용은 `system snmp authtrap` link:https://docs.netapp.com/us-en/ontap-cli/system-snmp-authtrap.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

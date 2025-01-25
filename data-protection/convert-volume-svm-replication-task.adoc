@@ -22,7 +22,7 @@ summary: '소스의 각 볼륨(루트 볼륨 제외)이 복제되고 있는 경�
 `snapmirror resync -source-path <SVM:volume> -destination-path <SVM:volume> -type DP|XDP -policy <policy>`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -47,7 +47,7 @@ cluster_dst::> snapmirror resync -source-path svm1:volA -destination-path svm_ba
 'vserver stop-vserver_SVM_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver stop` link:https://docs.netapp.com/us-en/ontap-cli/vserver-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 대상 SVM의 VM_BACKUP을 중지합니다.
@@ -62,7 +62,7 @@ cluster_dst::> vserver stop svm_backup
 `snapmirror resync -source-path <SVM>: -destination-path <SVM>: -type DP|XDP -policy <policy>`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]

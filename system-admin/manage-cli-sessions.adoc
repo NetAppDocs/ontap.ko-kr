@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: record, cli, script, start, stop, session 
 summary: CLI 세션을 지정된 이름 및 크기 제한이 있는 파일에 기록한 다음 파일을 FTP 또는 HTTP 대상으로 업로드할 수 있습니다. 
 ---
-= CLI 세션을 관리합니다
+= ONTAP에서 CLI 세션을 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ CLI 세션의 레코드는 녹화를 중지하거나 CLI 세션을 종료할 때
 system script start
 ----
 +
-'system script start' 명령어를 사용하는 방법에 대한 자세한 내용은 man 페이지를 참고한다.
+에 대한 자세한 내용은 `system script start` link:https://docs.netapp.com/us-en/ontap-cli/system-script-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 ONTAP가 CLI 세션을 지정된 파일에 기록하기 시작합니다.
@@ -42,7 +42,7 @@ ONTAP가 CLI 세션을 지정된 파일에 기록하기 시작합니다.
 system script stop
 ----
 +
-'system script stop' 명령어 사용에 대한 자세한 내용은 man 페이지를 참조한다.
+에 대한 자세한 내용은 `system script stop` link:https://docs.netapp.com/us-en/ontap-cli/system-script-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 ONTAP는 CLI 세션 녹화를 중지합니다.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, cifs, server, option, create, storage, virtual, machine, svm, configure SMB server options 
 summary: 'SVM(스토리지 가상 시스템)에서 SMB 서버를 생성한 후에는 언제든지 SMB 서버 옵션을 구성할 수 있습니다.' 
 ---
-= SMB 서버 옵션 구성
+= ONTAP에서 SMB 서버 옵션 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,6 +37,6 @@ SVM(스토리지 가상 시스템)에서 SMB 서버를 생성한 후에는 언�
 
 |===
 +
-SMB 서버 옵션 구성에 대한 자세한 내용은 'vserver cifs options modify' 명령의 man 페이지를 참조하십시오.
+SMB 서버 옵션에 대한 자세한 `vserver cifs options modify` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-options-modify.html["ONTAP 명령 참조입니다"^]참조하십시오.
 
 

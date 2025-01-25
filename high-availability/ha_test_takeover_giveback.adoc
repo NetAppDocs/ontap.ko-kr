@@ -4,7 +4,7 @@ permalink: high-availability/ha_test_takeover_giveback.html
 keywords: ontap, high, availability, ha, pair, test, testing, takeover, giveback 
 summary: HA 쌍의 모든 측면을 구성한 후에는 Takeover 및 Giveback 작업 시 두 노드의 스토리지에 중단 없이 액세스할 수 있도록 HA 쌍이 예상대로 작동하는지 확인해야 합니다 
 ---
-= 테이크오버 및 반환 테스트
+= ONTAP에서 Takeover 및 반환 테스트
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -24,7 +24,7 @@ HA 쌍의 모든 측면을 구성한 후에는 Takeover 및 Giveback 작업 시 
 'Storage failover-ofnode partnernode'
 
 +
-명령에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage failover takeover` link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-takeover.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 다음 명령 중 하나를 입력하여 테이크오버 발생 여부를 확인합니다.
 +

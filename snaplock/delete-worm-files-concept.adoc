@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, worm, file, privileged, delete, enterprise, mode, retention, period, overview 
 summary: 권한 있는 삭제 기능을 사용하여 보존 기간 동안 엔터프라이즈 모드 WORM 파일을 삭제할 수 있습니다. 이 기능을 사용하려면 먼저 SnapLock 관리자 계정을 만든 다음 계정을 사용하여 기능을 활성화해야 합니다. 
 ---
-= WORM 파일 삭제 개요
+= ONTAP에서 WORM 파일 삭제 개요를 참조하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -80,7 +80,7 @@ SVM1::> volume snaplock modify -vserver SVM1 -volume dataVol -privileged-delete 
 
 
 .이 작업에 대해
-만료된 WORM 파일을 삭제하려면 권한이 있는 삭제 작업을 사용할 수 없습니다. 'volume file retention show' 명령을 사용하여 삭제할 WORM 파일의 보존 시간을 확인할 수 있습니다. 자세한 내용은 명령에 대한 man 페이지를 참조하십시오.
+만료된 WORM 파일을 삭제하려면 권한이 있는 삭제 작업을 사용할 수 없습니다. 명령을 사용하여 `volume file retention show` 삭제하려는 WORM 파일의 보존 시간을 볼 수 있습니다. 에 대한 자세한 내용은 `volume file retention show` link:https://docs.netapp.com/us-en/ontap-cli/volume-file-retention-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 엔터프라이즈 볼륨에서 WORM 파일 삭제:

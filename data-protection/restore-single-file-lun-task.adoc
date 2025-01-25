@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, single file, lun, nvme, namespace, snapmirror, destination, snapshot, copy, snap mirror, baseline, 
 summary: 단일 파일, LUN, 스냅샷 복사본에서 파일 또는 LUN 세트 또는 SnapMirror 타겟 볼륨에서 NVMe 네임스페이스를 복원할 수 있습니다. ONTAP 9.7부터는 SnapMirror 동기식 대상에서 NVMe 네임스페이스를 복원할 수도 있습니다. 파일을 원래 소스 볼륨이나 다른 볼륨으로 복원할 수 있습니다. 
 ---
-= SnapMirror 대상에서 단일 파일, LUN 또는 NVMe 네임스페이스를 복원합니다
+= ONTAP를 통해 SnapMirror 대상에서 단일 파일, LUN 또는 NVMe 네임스페이스를 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ SnapMirror 동기 대상(ONTAP 9.5부터 지원됨)에서 파일 또는 LUN을 �
 `volume snapshot show -vserver <SVM> -volume volume`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 "vserverB:secondary1" 대상의 스냅샷 복사본을 보여 줍니다.
@@ -57,7 +57,7 @@ vserverB    secondary1  hourly.2013-01-25_0005  valid   224KB     0%    0%
 `snapmirror restore -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ... -source-snapshot snapshot -file-list <source_file_path,@destination_file_path>`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]

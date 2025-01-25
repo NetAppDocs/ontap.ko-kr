@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disconnect, external fpolicy servers 
 summary: 외부 FPolicy 서버에서 수동으로 연결을 끊어야 할 수도 있습니다. FPolicy 서버에 알림 요청 처리에 문제가 있거나 FPolicy 서버에서 유지 관리를 수행해야 하는 경우 이 방법이 바람직할 수 있습니다. 
 ---
-= 외부 FPolicy 서버에서 분리하십시오
+= ONTAP의 외부 FPolicy 서버와 연결 끊기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,10 +16,10 @@ summary: 외부 FPolicy 서버에서 수동으로 연결을 끊어야 할 수도
 .단계
 . 'vserver FPolicy engine-disconnect' 명령을 사용하여 외부 FPolicy 서버에서 분리하십시오.
 +
-명령에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver fpolicy engine-disconnect` link:https://docs.netapp.com/us-en/ontap-cli/vserver-fpolicy-engine-disconnect.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 'vserver FPolicy show -engine' 명령을 사용하여 외부 FPolicy 서버의 연결이 끊겼는지 확인하십시오.
 +
-명령에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver fpolicy show-engine` link:https://docs.netapp.com/us-en/ontap-cli/vserver-fpolicy-show-engine.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

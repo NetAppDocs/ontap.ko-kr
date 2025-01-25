@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, flexclone file, flexclone lun, efficient, clone 
 summary: FlexVol 또는 FlexClone 볼륨에서 파일 및 LUN의 공간 효율적이고 시간 효율적인 클론을 생성할 수 있습니다. 
 ---
-= FlexClone 파일 또는 FlexClone LUN을 생성합니다
+= ONTAP에서 FlexClone 파일 또는 FlexClone LUN을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,7 +42,7 @@ summary: FlexVol 또는 FlexClone 볼륨에서 파일 및 LUN의 공간 효율�
 cluster1::> volume file clone create -vserver vs0 -volume vol1 -source-path /file1_source -destination-path /file1_clone
 ----
 +
-이 명령 사용에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume file clone create` link:https://docs.netapp.com/us-en/ontap-cli/volume-file-clone-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

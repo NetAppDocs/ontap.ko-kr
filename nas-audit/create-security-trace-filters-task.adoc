@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, security trace filters 
 summary: 'SVM(스토리지 가상 머신)에서 SMB 및 NFS 클라이언트 작업을 감지하고 필터와 일치하는 모든 액세스 검사를 추적하는 보안 추적 필터를 생성할 수 있습니다. 보안 추적의 결과를 사용하여 구성을 확인하거나 액세스 문제를 해결할 수 있습니다.' 
 ---
-= 보안 추적 필터를 만듭니다
+= ONTAP에서 보안 추적 필터를 만듭니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -110,7 +110,7 @@ SMB 및 NFS 액세스 이벤트를 추적할 수 있더라도 UNIX 보안 스타
 filter_parameters는 선택 필터 매개변수 목록입니다.
 
 +
-자세한 내용은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver security trace filter create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-security-trace-filter-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 보안 추적 필터 항목을 확인합니다.
 +

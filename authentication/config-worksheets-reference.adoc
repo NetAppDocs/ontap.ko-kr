@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: worksheets, administrator authentication, rbac configuration 
 summary: '로그인 계정을 생성하고 역할 기반 액세스 제어(RBAC)를 설정하기 전에 구성 워크시트의 각 항목에 대한 정보를 수집해야 합니다.' 
 ---
-= 관리자 인증 및 RBAC 구성을 위한 워크시트
+= ONTAP를 사용한 관리자 인증 및 RBAC 구성을 위한 워크시트
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -471,7 +471,7 @@ ONTAP 9.15.1부터 에 이러한 값을 제공합니다 `security dynamic-author
  a| 
 ``국가’
  a| 
-스토리지 VM의 국가로, 2자로 된 코드입니다. 기본값은 입니다 `US`. 코드 목록은 man 페이지를 참조하십시오.
+스토리지 VM의 국가로, 2자로 된 코드입니다. 기본값은 입니다 `US`. 코드 목록은 를 참조하십시오link:https://docs.netapp.com/us-en/ontap-cli/index.html["ONTAP 명령 참조입니다"^].
  a| 
 
 

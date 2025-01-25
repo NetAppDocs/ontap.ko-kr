@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, creating, ntfs, security, descriptor, audit, policy, configure, configuring, apply, access, control, list, acl, file, residing, reside, svm, associate, folder, policy, task, create an ntfs security descriptor 
 summary: 'NTFS 보안 설명자 감사 정책을 생성하는 것은 SVM에 상주하는 파일 및 폴더에 NTFS ACL(액세스 제어 목록)을 구성 및 적용하는 첫 번째 단계입니다. 보안 설명자를 정책 작업의 파일 또는 폴더 경로에 연결합니다.' 
 ---
-= NTFS 보안 설명자를 만듭니다
+= ONTAP에서 NTFS 보안 설명자를 만듭니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,7 +72,7 @@ NT AUTHORITY\SYSTEM
 * 원시 제어 플래그
 
 
-선택적 매개 변수의 값은 Storage-Level Access Guard에서 무시됩니다. 자세한 내용은 man 페이지를 참조하십시오.
+선택적 매개 변수의 값은 Storage-Level Access Guard에서 무시됩니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 .단계
 . 고급 매개 변수를 사용하려면 권한 수준을 고급:'Set-Privilege Advanced'로 설정합니다

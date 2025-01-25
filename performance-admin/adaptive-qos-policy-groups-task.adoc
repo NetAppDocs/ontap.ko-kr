@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: use, adaptive, qos, policy, groups 
 summary: 적응형 QoS 정책 그룹을 사용하면 볼륨 크기가 변경될 때 IOPS와 TB|GB의 비율을 유지하면서 처리량 상한 또는 하한 크기를 자동으로 확장할 수 있습니다. 이는 대규모 구축 환경에서 수백 또는 수천 개의 워크로드를 관리할 때 큰 이점입니다. 
 ---
-= 적응형 QoS 정책 그룹을 사용합니다
+= ONTAP에서 적응형 QoS 정책 그룹 사용
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -127,7 +127,7 @@ SVM이나 하위 LUN을 포함하는 볼륨을 정책 그룹에 포함하는 볼
 'QOS adaptive-policy-group create-policy group_group_-vserver_SVM_-expected-IOPS_number_of_IOPS_/TB|GB-peak-IOPS_number_of_IOPS_/TB|GB-expected-IOPS-allocation-space|used-space-peak-peak-IOPS-allocation-space|used-space-space-absolute-min-64K_K_number_K_number_K_number_K_K_number|K_K_K_number|K_MB|K_
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `qos adaptive-policy-group create` link:https://docs.netapp.com/us-en/ontap-cli/qos-adaptive-policy-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -148,7 +148,7 @@ cluster1::> qos adaptive-policy-group create -policy group adpg-app1 -vserver vs
 'volume create-vserver SVM-volume_volume_-aggregate_aggregate_-size_number_of_TB|GB-QoS-adaptive-policy-group_policy_group_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령은 Adaptive QoS 정책 그룹 'adpg-app1'을 볼륨 'app1'에 적용합니다.

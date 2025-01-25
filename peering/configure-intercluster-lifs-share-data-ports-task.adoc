@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, intercluster, lifs, shared, data, ports 
 summary: 데이터 네트워크와 공유하는 포트에 대한 인터클러스터 LIF를 구성할 수 있습니다. 이렇게 하면 인터클러스터 네트워킹에 필요한 포트 수가 줄어듭니다. 
 ---
-= 공유 데이터 포트에 대한 인터클러스터 LIF를 구성합니다
+= ONTAP의 공유 데이터 포트에 대한 인터클러스터 LIF를 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ summary: 데이터 네트워크와 공유하는 포트에 대한 인터클러스
 네트워크 포트 쇼
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 "cluster01"의 네트워크 포트를 보여줍니다.
@@ -63,7 +63,7 @@ cluster01-02
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 인터클러스터 LIF 'cluster01_icl01'과 'cluster01_icl02'를 생성합니다.
@@ -100,7 +100,7 @@ policy default-intercluster -home-node cluster01-02 -home-port e0c -address 192.
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -135,7 +135,7 @@ cluster01
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 e0c 포트의 인터클러스터 LIF 'cluster01_icl01'과 cluster01_icl02가 e0d 포트로 페일오버된다는 것을 보여 줍니다.

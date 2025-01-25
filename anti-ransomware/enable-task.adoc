@@ -25,11 +25,8 @@ ONTAP 9.10.1부터 기존 볼륨에서 ARP(자율적 랜섬웨어 방어)를 활
 +
 최소 30일 동안 ARP를 학습 모드로 실행하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 자동으로 최적의 학습 기간 간격을 결정하고 30일 이전에 발생할 수 있는 스위치를 자동화합니다.
 
-* * ONTAP 9.16.1 이상의 경우 FlexVol 볼륨 * ARP를 활성화하면 ARP/AI 보호가 즉시 활성 모드에서 시작됩니다. 학습 기간은 필요하지 않습니다.
+* * FlexVol 볼륨 * 을 사용하는 ONTAP 9.16.1 이상의 경우 ARP를 활성화하면 ARP/AI 보호가 즉시 활성화되고 활성화됩니다. 학습 기간은 필요하지 않습니다.
 
-
-
-NOTE: 기존 볼륨에서 학습 및 활성 모드는 볼륨의 기존 데이터가 아닌 새로 기록된 데이터에만 적용됩니다. ARP에 대해 볼륨이 활성화된 후 새 데이터를 기반으로 이전 일반 데이터 트래픽의 특성이 가정되기 때문에 기존 데이터는 스캔되고 분석되지 않습니다.
 
 .시작하기 전에
 * NFS나 SMB(또는 둘 다)에 대해 SVM(스토리지 VM)을 활성화해야 합니다.
@@ -60,7 +57,11 @@ NOTE: 기존 볼륨에서 학습 및 활성 모드는 볼륨의 기존 데이터
 
 NOTE: ONTAP 9.13.1 부터는 ARP가 최적의 학습 기간을 자동으로 결정하고 스위치를 자동화합니다. link:enable-default-task.html["연결된 스토리지 VM에서 이 설정을 해제합니다"]학습 모드를 활성 모드 전환으로 수동으로 제어하려는 경우
 
-** ONTAP 9.16.1 이상의 FlexVol 볼륨에서 ARP를 사용하는 경우 ARP/AI 기능은 학습 기간이 필요하지 않으며 기본적으로 활성 모드가 선택됩니다.
++
+
+NOTE: 기존 볼륨에서 학습 및 활성 모드는 볼륨의 기존 데이터가 아닌 새로 기록된 데이터에만 적용됩니다. ARP에 대해 볼륨이 활성화된 후 새 데이터를 기반으로 이전 일반 데이터 트래픽의 특성이 가정되기 때문에 기존 데이터는 스캔되고 분석되지 않습니다.
+
+** ONTAP 9.16.1 이상의 FlexVol 볼륨에서 ARP를 사용하는 경우 ARP/AI 기능이 즉시 활성화되고 활성화됩니다. 학습 기간은 필요하지 않습니다.
 
 
 . Anti-랜섬웨어 * 상자에서 볼륨의 ARP 상태를 확인할 수 있습니다.
@@ -77,47 +78,49 @@ NOTE: ONTAP 9.13.1 부터는 ARP가 최적의 학습 기간을 자동으로 결�
 .기존 볼륨에서 ARP를 활성화합니다
 . 기존 볼륨을 수정하여 랜섬웨어 방지 지원:
 +
-** ONTAP 9.15.1 이하 및 FlexGroup 볼륨을 사용하는 ARP의 경우 볼륨 상태를 (학습 모드)로 설정합니다 `dry-run`.
+[source, cli]
+----
+security anti-ransomware volume dry-run -volume <vol_name> -vserver <svm_name>
+----
 +
-`security anti-ransomware volume dry-run -volume <vol_name> -vserver <svm_name>`
+ONTAP 9.15.1 이하 및 FlexGroup 볼륨의 경우 새 볼륨이 학습 모드에서 시작됩니다. FlexVol 볼륨이 있는 ONTAP 9.16.1 이상의 경우 ARP/AI가 즉시 활성화됩니다. 두 경우 모두 값으로 를 `dry-run` 사용합니다.
 
-** ARP/AI 및 FlexVol 볼륨이 있는 ONTAP 9.16.1 이상의 경우 볼륨 상태를 (활성 모드)로 설정합니다 `active`.
+. ONTAP 9.15.1을 통해 ONTAP 9.13.1로 업그레이드한 경우 기본 상태가 인 경우 `dry-run` Adaptive Learning이 활성화되어 상태 변경이 `active` 자동으로 수행됩니다. 이 동작이 자동으로 활성화되지 않도록 하려면 모든 관련 볼륨에서 SVM 레벨에서 설정을 변경합니다.
 +
-`security anti-ransomware volume active -volume <vol_name> -vserver <svm_name>`
-
-
-
-. ONTAP 9.13.1 이상으로 업그레이드한 경우 ARP 기본 상태가 인 경우 `dry-run` 활성 상태로 자동 변경되도록 Adaptive Learning이 활성화됩니다. 이 동작이 자동으로 활성화되지 않도록 하려면 모든 관련 볼륨에서 SVM 레벨에서 설정을 변경합니다.
-+
-`vserver modify <svm_name> -anti-ransomware-auto-switch-from-learning-to-enabled false`
-
+[source, cli]
+----
+vserver modify <svm_name> -anti-ransomware-auto-switch-from-learning-to-enabled false
+----
 . 볼륨의 ARP 상태를 확인합니다.
 +
-'보안 안티 랜섬웨어 볼륨 쇼'
-
+[source, cli]
+----
+security anti-ransomware volume show
+----
 
 
 .새 볼륨에서 ARP를 활성화합니다
 . 데이터를 프로비저닝하기 전에 ARP가 활성화된 새 볼륨을 생성합니다.
 +
-** ONTAP 9.15.1 이하 및 FlexGroup 볼륨을 사용하는 ARP의 경우 상태를 (학습 모드)로 설정합니다 `dry-run`.
+[source, cli]
+----
+volume create -volume <vol_name> -vserver <svm_name> -aggregate <aggr_name> -size <nn> -anti-ransomware-state dry-run -junction-path </path_name>
+----
 +
-`volume create -volume <vol_name> -vserver <svm_name> -aggregate <aggr_name> -size <nn> -anti-ransomware-state dry-run -junction-path </_path_name_>`
+ONTAP 9.15.1 이하 및 FlexGroup 볼륨의 경우 새 볼륨이 학습 모드에서 시작됩니다. FlexVol 볼륨이 있는 ONTAP 9.16.1 이상의 경우 ARP/AI가 즉시 활성화됩니다. 두 경우 모두 값으로 를 `dry-run` 사용합니다.
 
-** ARP/AI 및 FlexVol 볼륨이 있는 ONTAP 9.16.1 이상의 경우 상태를 (활성 모드)로 설정합니다 `active`.
+. ONTAP 9.15.1을 통해 ONTAP 9.13.1로 업그레이드한 경우 기본 상태가 인 경우 `dry-run` Adaptive Learning이 활성화되어 상태 변경이 `active` 자동으로 수행됩니다. 이 동작이 자동으로 활성화되지 않도록 하려면 모든 관련 볼륨에서 SVM 레벨에서 설정을 변경합니다.
 +
-`volume create -volume <vol_name> -vserver <svm_name> -aggregate <aggr_name> -size <nn> -anti-ransomware-state active -junction-path </_path_name_>`
-
-
-
-. ONTAP 9.13.1 이상으로 업그레이드한 경우 ARP 기본 상태가 인 경우 `dry-run` 활성 상태로 자동 변경되도록 Adaptive Learning이 활성화됩니다. 이 동작이 자동으로 활성화되지 않도록 하려면 모든 관련 볼륨에서 SVM 레벨에서 설정을 변경합니다.
+[source, cli]
+----
+vserver modify <svm_name> -anti-ransomware-auto-switch-from-learning-to-enabled false
+----
+. 볼륨이 상태로 설정되어 있는지 `enabled` 확인합니다.
 +
-`vserver modify <svm_name> -anti-ransomware-auto-switch-from-learning-to-enabled false`
-
-. 볼륨의 ARP 상태를 확인합니다.
-+
-'보안 안티 랜섬웨어 볼륨 쇼'
-
+[source, cli]
+----
+security anti-ransomware volume show
+----
 
 
 --

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands for, display, displaying, information about, quotas 
 summary: 명령을 사용하면 적용된 할당량과 리소스 사용량이 포함된 할당량 보고서를 표시하고, 할당량 상태 및 오류에 대한 정보를 표시하거나, 할당량 정책 및 할당량 규칙에 대한 정보를 표시할 수 있습니다. 
 ---
-= 할당량에 대한 정보를 표시하는 명령입니다
+= ONTAP의 할당량에 대한 정보를 표시하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -85,4 +85,4 @@ logmsg 매개 변수가 있는 볼륨 할당량 표시
 vserver show와 -instance 매개 변수를 함께 사용합니다
 
 |===
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume quota` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota["ONTAP 명령 참조입니다"^]을 참조하십시오.

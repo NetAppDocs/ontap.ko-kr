@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, intercluster, lifs, dedicated, ports 
 summary: 전용 포트에 대한 인터클러스터 LIF를 구성할 수 있습니다. 이렇게 하면 일반적으로 복제 트래픽에 사용할 수 있는 대역폭이 증가합니다. 
 ---
-= 전용 포트에 대한 인터클러스터 LIF를 구성합니다
+= ONTAP의 전용 포트에 대한 인터클러스터 LIF를 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ summary: 전용 포트에 대한 인터클러스터 LIF를 구성할 수 있습�
 네트워크 포트 쇼
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 "cluster01"의 네트워크 포트를 보여줍니다.
@@ -52,7 +52,7 @@ cluster01-02
 네트워크 인터페이스 보기 필드 홈 포트, 통화 포트
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예제는 포트 e0e 및 e0f에 LIF가 할당되지 않음을 보여줍니다.
@@ -94,7 +94,7 @@ cluster01-01:e0e,cluster01-01:e0f,cluster01-02:e0e,cluster01-02:e0f
 네트워크 인터페이스 페일오버 그룹들이 보여줌
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface failover-groups show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-failover-groups-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -137,7 +137,7 @@ cluster01
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 페일오버 그룹 intercluster01에 인터클러스터 LIF 'cluster01_icl01'과 'cluster01_icl02'를 생성합니다.
@@ -173,7 +173,7 @@ policy default-intercluster -home-node cluster01-02 -home-port e0e -address 192.
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -208,7 +208,7 @@ cluster01
 
 |===
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 SVM e0e 포트의 인터클러스터 LIF 'cluster01_icl01'과 cluster01_icl02가 e0f 포트로 페일오버된다는 것을 보여 줍니다.

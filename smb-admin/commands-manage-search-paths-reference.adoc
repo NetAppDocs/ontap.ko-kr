@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, managing, manage, path, cifs, directory, configuration, add, remove, removing, display, information, search, path, changing, change, search, path, order, commands for managing search paths 
 summary: SMB 홈 디렉토리 구성을 위한 검색 경로를 관리하기 위한 특정 ONTAP 명령이 있습니다. 예를 들어, 검색 경로에 대한 정보를 추가, 제거 및 표시하는 명령이 있습니다. 검색 경로 순서를 변경하는 명령도 있습니다. 
 ---
-= 검색 경로 관리를 위한 명령입니다
+= ONTAP에서 검색 경로를 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,4 +44,4 @@ SMB 홈 디렉토리 구성을 위한 검색 경로를 관리하기 위한 특�
 'vserver cifs home-directory search-path remove'
 
 |===
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver cifs home-directory search-path` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+home-directory+search-path["ONTAP 명령 참조입니다"^]을 참조하십시오.

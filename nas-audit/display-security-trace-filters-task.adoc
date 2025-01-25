@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, information, security trace filters 
 summary: 'SVM(스토리지 가상 시스템)에 구성된 보안 추적 필터에 대한 정보를 표시할 수 있습니다. 이를 통해 각 필터 추적의 액세스 이벤트 유형을 확인할 수 있습니다.' 
 ---
-= 보안 추적 필터에 대한 정보를 표시합니다
+= ONTAP에서 보안 추적 필터에 대한 정보를 표시합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ SVM(스토리지 가상 시스템)에 구성된 보안 추적 필터에 대한 �
 .단계
 . 'vserver security trace filter show' 명령을 사용하여 보안 추적 필터 항목에 대한 정보를 출력한다.
 +
-이 명령 사용에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver security trace filter show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-security-trace-filter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

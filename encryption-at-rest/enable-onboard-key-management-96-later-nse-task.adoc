@@ -79,7 +79,7 @@ NOTE: 지정된 ""cc-mode"" 암호가 64자 미만이면 키 관리자 설정 �
 
 +
 
-NOTE: 보안 키-관리자 키 쿼리 명령은 보안 키-관리자 쿼리 키 명령을 대체합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+NOTE:  `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html?q=security+key-manager+key+query["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예제에서는 "cluster1"에 대해 인증 키가 생성되었는지 확인합니다.

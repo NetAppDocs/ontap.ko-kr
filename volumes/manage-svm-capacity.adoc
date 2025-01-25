@@ -51,7 +51,7 @@ SVM의 용량은 FlexVol, FlexGroup 볼륨, FlexClone, FlexCache 볼륨의 합�
 
 * SVM을 마이그레이션할 때 소스 SVM에서 스토리지 제한을 설정할 수 없습니다. 마이그레이션 작업을 완료하려면 소스에서 스토리지 제한을 해제한 다음 마이그레이션을 완료합니다.
 * SVM 용량은 와 다릅니다 xref:../volumes/quotas-concept.html[할당량]. 할당량은 최대 크기를 초과할 수 없습니다.
-* SVM에서 다른 작업이 진행 중인 경우에는 스토리지 제한을 설정할 수 없습니다.  `job show vservser <svm_name>`기존 작업을 보려면 명령을 사용하십시오. 작업이 완료되면 명령을 다시 실행해 보십시오.
+* SVM에서 다른 작업이 진행 중인 경우에는 스토리지 제한을 설정할 수 없습니다.  `job show vserver <svm_name>`기존 작업을 보려면 명령을 사용하십시오. 작업이 완료되면 명령을 다시 실행해 보십시오.
 
 
 
@@ -93,19 +93,25 @@ SVM의 최대 용량 크기를 제공합니다.
 .단계
 . SVM을 생성합니다. 저장소 제한을 설정하려면 을 제공합니다 `storage-limit` 값. 스토리지 제한에 대한 임계값 알림을 설정하려면 에 대한 백분율 값을 제공합니다 `-storage-limit-threshold-alert`.
 +
-`vserver create -vserver <vserver_name> -aggregate <aggregate_name> -rootvolume <root_volume_name> -rootvolume-security-style {unix|ntfs|mixed} -storage-limit <value> [GiB|TIB] -storage-limit-threshold-alert <percentage> [-ipspace IPspace_name] [-language <language>] [-snapshot-policy <snapshot_policy_name>] [-quota-policy <quota_policy_name>] [-comment <comment>]`
-
+[source, cli]
+----
+vserver create -vserver <vserver_name> -aggregate <aggregate_name> -rootvolume <root_volume_name> -rootvolume-security-style {unix|ntfs|mixed} -storage-limit <value> [GiB|TIB] -storage-limit-threshold-alert <percentage> [-ipspace <IPspace_name>] [-language <language>] [-snapshot-policy <snapshot_policy_name>] [-quota-policy <quota_policy_name>] [-comment <comment>]
+----
 +
 임계값을 제공하지 않으면 기본적으로 SVM이 90% 용량에 도달하면 경고가 트리거됩니다. 임계값 경고를 비활성화하려면 값을 0으로 입력합니다.
 
 . SVM이 성공적으로 생성되었는지 확인합니다.
 +
-`vserver show -vserver <vserver_name>`
-
-. 스토리지 제한값을 해제하려면 으로 SVM을 수정합니다 `-storage-limit` 0으로 설정된 매개 변수:
+[source, cli]
+----
+vserver show -vserver <vserver_name>
+----
+. 스토리지 제한을 비활성화하려면 SVM에 대한 매개 변수를 0으로 설정합니다 `-storage-limit`.
 +
-`vserver modify -vserver <vserver_name> -storage-limit 0`
-
+[source, cli]
+----
+vserver modify -vserver <vserver_name> -storage-limit 0
+----
 
 
 --
@@ -138,15 +144,19 @@ SVM의 최대 용량 크기를 제공합니다.
 .단계
 . SVM을 호스팅하는 클러스터에서 를 실행합니다 `vserver modify` 명령. 에 대한 숫자 값을 입력합니다 `-storage-limit` 에 대한 백분율 값을 표시합니다 `-storage-limit-threshold-alert`.
 +
-`vserver modify -vserver <vserver_name> -storage-limit <value> [GiB|TIB] -storage-limit-threshold-alert <percentage>`
-
+[source, cli]
+----
+vserver modify -vserver <vserver_name> -storage-limit <value> [GiB|TIB] -storage-limit-threshold-alert <percentage>
+----
 +
 임계값을 제공하지 않으면 기본 경고가 90% 용량으로 표시됩니다. 임계값 경고를 비활성화하려면 값을 0으로 입력합니다.
 
-. 스토리지 제한값을 해제하려면 으로 SVM을 수정합니다 `-storage-limit` 0으로 설정:
+. 스토리지 제한을 해제하려면 SVM에 대해 를 0으로 설정합니다 `-storage-limit`.
 +
-`vserver modify -vserver <vserver_name> -storage-limit 0`
-
+[source, cli]
+----
+vserver modify -vserver <vserver_name> -storage-limit 0
+----
 
 
 --
@@ -162,7 +172,7 @@ SVM의 최대 용량 크기를 제공합니다.
 * 볼륨을 위한 공간을 제공하려면 스냅샷을 삭제하십시오
 
 
-.추가 정보
+.관련 정보
 * xref:../concepts/capacity-measurements-in-sm-concept.adoc[System Manager의 용량 측정]
 * xref:../task_admin_monitor_capacity_in_sm.html[System Manager에서 용량을 모니터링합니다]
 

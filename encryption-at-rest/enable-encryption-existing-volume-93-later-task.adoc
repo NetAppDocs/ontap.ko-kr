@@ -45,7 +45,7 @@ cluster1::> volume encryption conversion start -vserver vs1 -volume vol1
 볼륨 암호화 변환 표시
 
 +
-전체 명령 구문은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume encryption conversion show` link:https://docs.netapp.com/us-en/ontap-cli/volume-encryption-conversion-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 변환 작업의 상태가 표시됩니다.

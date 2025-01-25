@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exclude, network, name service, other settings, svm replication, disaster recovery 
 summary: SnapMirror create 명령의 -identity-preserve false 옵션을 사용하여 SVM의 볼륨 및 보안 구성만 복제할 수 있습니다. 
 ---
-= SVM 복제에서 네트워크, 이름 서비스 및 기타 설정을 제외합니다
+= ONTAP를 통한 SVM 복제에서 네트워크, 네임 서비스 및 기타 설정을 제외합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,7 +18,7 @@ summary: SnapMirror create 명령의 -identity-preserve false 옵션을 사용�
 .이 작업에 대해
 보존된 프로토콜 및 이름 서비스 설정 목록은 를 참조하십시오 link:snapmirror-svm-replication-concept.html#configurations-replicated-in-svm-disaster-recovery-relationships["SVM DR 관계에 복제된 구성"].
 
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .시작하기 전에
 소스 및 타겟 클러스터와 SVM을 피어링해야 합니다.

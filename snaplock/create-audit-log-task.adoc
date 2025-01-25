@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, audit, log, snaplock, protected, administrator, accounts 
 summary: 권한 있는 삭제 또는 SnapLock 볼륨 이동을 수행하기 전에 SnapLock으로 보호되는 감사 로그를 생성해야 합니다. 감사 로그는 SnapLock 관리자 계정의 생성 및 삭제, 로그 볼륨 수정, 권한 있는 삭제 활성화 여부, 권한 있는 삭제 작업 및 SnapLock 볼륨 이동 작업을 기록합니다. 
 ---
-= 감사 로그를 생성합니다
+= ONTAP에서 감사 로그를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -32,7 +32,7 @@ SnapLock Audit 로그는 감사 로그 볼륨의 루트 아래의 '/sSnapLock_lo
 * 'SnapLock log file archive' 명령을 사용하여 현재 로그 파일을 보관하고 새 로그 파일을 만들 수 있습니다. 이 명령은 별도의 파일에 감사 로그 정보를 기록해야 하는 경우에 유용합니다.
 
 
-자세한 내용은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snaplock log file` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snaplock+log+file["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [NOTE]
 ====

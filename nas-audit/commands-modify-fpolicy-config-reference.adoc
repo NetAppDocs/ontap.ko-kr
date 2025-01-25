@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, modify, fpolicy, configurations 
 summary: FPolicy 외부 엔진, 이벤트, 범위 및 정책을 수정할 수 있습니다. 
 ---
-= FPolicy 구성을 수정하는 명령입니다
+= ONTAP에서 FPolicy 구성을 수정하기 위한 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -56,4 +56,4 @@ FPolicy 구성은 구성을 구성하는 요소를 수정하여 수정할 수 �
 '가상 서버 FPolicy 정책 수정'
 
 |===
-자세한 내용은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver fpolicy policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+fpolicy+policy["ONTAP 명령 참조입니다"^]을 참조하십시오.

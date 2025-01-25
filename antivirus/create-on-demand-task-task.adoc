@@ -53,7 +53,7 @@ NOTE: job show 명령을 사용하여 작업의 상태를 볼 수 있습니다. 
 `vserver vscan on-demand-task show -instance data_SVM -task-name task_name`
 
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver vscan on-demand-task show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-on-demand-task-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 'Task1' 작업에 대한 세부 정보가 표시됩니다.

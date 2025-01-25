@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, managing, manage, security, policies, policy, display, information, delete, modify, commands for managing security policies 
 summary: 보안 정책을 관리하기 위한 특정 ONTAP 명령이 있습니다. 정책에 대한 정보를 표시하고 정책을 삭제할 수 있습니다. 보안 정책을 수정할 수 없습니다 
 ---
-= 보안 정책 관리를 위한 명령입니다
+= ONTAP에서 보안 정책을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,4 +37,4 @@ summary: 보안 정책을 관리하기 위한 특정 ONTAP 명령이 있습니�
 'vserver security file-directory policy delete
 
 |===
-자세한 내용은 'vserver security file-directory policy' 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver security file-directory policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+policy["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: encryption, new volume, NAE, NVE, volume create 
 summary: 볼륨 생성 명령을 사용하여 새 볼륨에서 암호화를 활성화할 수 있습니다. 
 ---
-= 새 볼륨에서 암호화를 활성화합니다
+= ONTAP에서 새 볼륨에 대해 암호화를 활성화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -74,7 +74,7 @@ NOTE: NAE가 지원되지 않는 ONTAP 9.6 및 이전 버전에서는 `-encrypt 
 볼륨 쇼는 암호화된 사실이다
 
 +
-전체 명령 구문은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^].
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

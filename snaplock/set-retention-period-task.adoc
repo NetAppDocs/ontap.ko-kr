@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, set, retention, time, default, explicit, file, modify, volume, period, ebr, event, based 
 summary: 파일의 보존 시간을 명시적으로 설정하거나 볼륨에 대한 기본 보존 기간을 사용하여 보존 시간을 파생시킬 수 있습니다. 보존 시간을 명시적으로 설정하지 않으면 SnapLock에서는 기본 보존 기간을 사용하여 보존 시간을 계산합니다. 이벤트 후에 파일 보존을 설정할 수도 있습니다. 
 ---
-= 보존 시간을 설정합니다
+= ONTAP에서 보존 시간을 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -150,7 +150,7 @@ ONTAP 9.10.1부터. 이전 ONTAP 릴리스의 경우 값은 0-70입니다.
 |===
 최대 및 최소 보존 기간의 값과 범위는 해당되지 않는 최대 및 최소 보존 기간을 제외하고 동일합니다. 이 작업에 대한 자세한 내용은 을 참조하십시오 link:set-retention-period-task.html["보존 시간 개요를 설정합니다"].
 
-'volume SnapLock show' 명령을 사용하여 볼륨에 대한 보존 기간 설정을 볼 수 있습니다. 자세한 내용은 명령에 대한 man 페이지를 참조하십시오.
+명령을 사용하여 볼륨의 보존 기간 설정을 볼 수 `volume snaplock show` 있습니다. 에 대한 자세한 내용은 `volume snaplock show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snaplock-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [NOTE]
 ====
@@ -163,7 +163,7 @@ ONTAP 9.10.1부터. 이전 ONTAP 릴리스의 경우 값은 0-70입니다.
 '* volume SnapLock modify -vserver_SVM_name_-volume_volume_name_-default-retention-period_default_retention_period_-minimum-retention-period_min_retention_period_-maximum-retention-period_max_retention_period_ *'
 
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume snaplock modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-snaplock-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]

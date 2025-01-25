@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, dacl, discretionary, access, control, list, access, control, entries, aces, ntfs, security, descriptor, acls, add ntfs dacl access control entries to the ntfs security 
 summary: 'NTFS 보안 설명자에 DACL(임의 액세스 제어 목록) ACE(액세스 제어 항목)를 추가하는 것은 파일이나 폴더에 NTFS ACL을 구성하고 적용하는 두 번째 단계입니다. 각 항목은 액세스가 허용되거나 거부된 개체를 식별하고 ACE에 정의된 파일 또는 폴더에 대해 개체가 수행할 수 있거나 수행할 수 없는 작업을 정의합니다.' 
 ---
-= NTFS DACL 액세스 제어 항목을 NTFS 보안 설명자에 추가합니다
+= ONTAP의 NTFS 보안 설명자에 NTFS DACL 액세스 제어 항목을 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -32,7 +32,7 @@ DACL 항목에 대한 권한을 지정하지 않으면 기본값은 "모든 권�
 ====
 선택적으로 상속 적용 방법을 지정하여 DACL 항목을 사용자 지정할 수 있습니다.
 
-선택적 매개 변수의 값은 Storage-Level Access Guard에서 무시됩니다. 자세한 내용은 man 페이지를 참조하십시오.
+선택적 매개 변수의 값은 Storage-Level Access Guard에서 무시됩니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 .단계
 . 보안 설명자에 DACL 항목을 추가합니다. 'vserver security file -directory NTFS DACL add -vserver vserver_name -ntfs -sd sd sd_name -access -type {allow | deny} -account name_or_SIDoptional_parameters'
@@ -56,3 +56,5 @@ DACL 항목에 대한 권한을 지정하지 않으면 기본값은 "모든 권�
                         Access Rights: full-control
 ----
 
+
+에 대한 자세한 내용은 `vserver security file-directory ntfs dacl` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+ntfs+dacl["ONTAP 명령 참조입니다"^]을 참조하십시오.

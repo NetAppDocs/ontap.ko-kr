@@ -6,12 +6,14 @@ summary: 'ARP(Autonomous Ransomware Protection) 9.15.1 이하의 경우 ARP 지�
 ---
 = 학습 기간 후 ARP 활성 모드로 전환합니다
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]
 FlexGroup 볼륨으로 실행되는 ARP(자율적 랜섬웨어 방어) 9.15.1 이하 또는 ARP의 경우 ARP 지원 볼륨을 학습 모드에서 활성 모드로 수동 또는 자동으로 전환합니다. ARP가 최소 30일의 권장 학습 모드 실행을 완료한 후 수동으로 활성 모드로 전환할 수 있습니다. ONTAP 9.13.1부터 ARP는 자동으로 최적의 학습 기간 간격을 결정하고 30일 이전에 발생할 수 있는 스위치를 자동화합니다.
 
-ONTAP 9.16.1 이상의 FlexVol 볼륨에서 ARP를 사용하는 경우 ARP/AI 기능은 학습 기간이 필요하지 않으며 기본적으로 활성 모드가 선택됩니다.
+ONTAP 9.16.1 이상의 FlexVol 볼륨에서 ARP를 사용하는 경우 ARP/AI 보호가 활성화되고 자동으로 활성화됩니다. 학습 기간은 필요하지 않습니다.
 
 
 NOTE: 기존 볼륨에서 학습 및 활성 모드는 볼륨의 기존 데이터가 아닌 새로 기록된 데이터에만 적용됩니다. ARP에 대해 볼륨이 활성화된 후 새 데이터를 기반으로 이전 일반 데이터 트래픽의 특성이 가정되기 때문에 기존 데이터는 스캔되고 분석되지 않습니다.
@@ -38,18 +40,24 @@ ONTAP 9.10.1 - 9.15.1 및 FlexGroup 볼륨을 사용하는 ARP의 경우 시스�
 .단계
 . 학습 기간이 끝나면 보호된 볼륨을 수정하여 아직 자동으로 실행되지 않은 경우 활성 모드로 전환합니다.
 +
-`security anti-ransomware volume enable -volume <vol_name> -vserver <svm_name>`
-
+[source, cli]
+----
+security anti-ransomware volume enable -volume <vol_name> -vserver <svm_name>
+----
 +
 볼륨 수정 명령을 사용하여 활성 모드로 전환할 수도 있습니다.
 
 +
-`volume modify -volume <vol_name> -vserver <svm_name> -anti-ransomware-state active`
-
+[source, cli]
+----
+volume modify -volume <vol_name> -vserver <svm_name> -anti-ransomware-state active
+----
 . 볼륨의 ARP 상태를 확인합니다.
 +
-'보안 안티 랜섬웨어 볼륨 쇼'
-
+[source, cli]
+----
+security anti-ransomware volume show
+----
 
 
 --

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deleting, external key manager, connection 
 summary: 서버가 더 이상 필요하지 않은 경우 노드에서 KMIP 서버를 분리할 수 있습니다. 예를 들어, 볼륨 암호화로 전환할 때 KMIP 서버를 분리할 수 있습니다. 
 ---
-= 외부 키 관리자 연결을 제거합니다
+= ONTAP에서 외부 키 관리자 연결을 제거합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,7 +49,7 @@ ONTAP 9.5 이하
 MetroCluster 환경에서는 admin SVM에 대해 두 클러스터 모두에서 이러한 명령을 반복해야 합니다.
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+및 `security key-manager delete` 에 대한 자세한 `security key-manager external remove-servers` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager["ONTAP 명령 참조입니다"^]참조하십시오.
 
 +
 다음 ONTAP 9.6 명령은 첫 번째 이름이 k1인 'cluster1'의 외부 키 관리 서버 2대에 대한 연결을 비활성화하며, 두 번째 주소는 IP 주소가 10.0.0.20인 기본 포트 5696에서 수신, 포트 24482에서 수신 대기 중입니다.

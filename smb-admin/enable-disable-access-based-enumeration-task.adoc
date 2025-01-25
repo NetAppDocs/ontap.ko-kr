@@ -4,9 +4,8 @@ sidebar: sidebar
 keywords: enable, disable, access-based, enumeration, abe, smb, allow, prevent, user, permission, access, enable or disable access-based enumeration on smb shares 
 summary: 'SMB 공유에서 ABE(Access-Based Enumeration)를 설정하거나 해제하여 사용자가 액세스 권한이 없는 공유 리소스를 볼 수 없도록 하거나 허용할 수 있습니다.' 
 ---
-= SMB 공유에서 액세스 기반 열거를 설정하거나 해제합니다
+= ONTAP의 SMB 공유에서 액세스 기반 열거를 사용하거나 사용하지 않도록 설정합니다
 :allow-uri-read: 
-:icons: font
 :imagesdir: ../media/
 
 
@@ -26,7 +25,7 @@ SMB 공유에서 ABE(Access-Based Enumeration)를 설정하거나 해제하여 �
  a| 
 새 공유에서 ABE를 활성화합니다
  a| 
-'vserver cifs share create -vserver vserver_name -share-name -path path path -share-properties access-based-enumeration' SMB 공유를 생성할 때 추가 선택적 공유 설정 및 추가 공유 속성을 지정할 수 있습니다. 자세한 내용은 'vserver cifs share create' 명령에 대한 man 페이지를 참조하십시오.
+`vserver cifs share create -vserver vserver_name -share-name share_name -path path -share-properties access-based-enumeration` SMB 공유를 생성할 때 추가 공유 설정 및 추가 공유 속성을 지정할 수 있습니다. 에 대한 자세한 내용은 `vserver cifs share create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

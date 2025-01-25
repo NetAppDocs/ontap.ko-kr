@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, information, custom, privilege, assign, domain, local, user, account, group, desire, right, applied, apply, display information about privilege overrides 
 summary: 도메인 또는 로컬 사용자 계정 또는 그룹에 할당된 사용자 지정 권한에 대한 정보를 표시할 수 있습니다. 이 정보를 통해 원하는 사용자 권한이 적용되는지 여부를 확인할 수 있습니다. 
 ---
-= 권한 재정의에 대한 정보를 표시합니다
+= ONTAP에서 권한 재정의에 대한 정보를 표시합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -34,7 +34,7 @@ SVM에서 특정 도메인 또는 로컬 사용자 및 그룹에 대한 사용�
 
 |===
 +
-이 명령을 실행할 때 선택할 수 있는 다른 선택적 매개 변수가 있습니다. 자세한 내용은 man 페이지를 참조하십시오.
+이 명령을 실행할 때 선택할 수 있는 다른 선택적 매개 변수가 있습니다. 에 대한 자세한 내용은 `vserver cifs users-and-groups privilege show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-users-and-groups-privilege-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

@@ -19,7 +19,7 @@ summary: 기본적으로 소스 SVM의 모든 RW 데이터 볼륨이 복제됩�
 'volume modify -vserver_SVM_-volume_volume_-vserver-dr-protection protected'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 SVM 복제에서 볼륨 'VolA_src'를 제외합니다.

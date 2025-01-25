@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, branchcache, exist, smb, share, add, share, property, exist, list, enable branchcache on an existing smb share 
 summary: 기존 SMB 공유에서 BranchCache 공유 속성을 기존 공유 속성 목록에 추가하여 BranchCache를 설정할 수 있습니다. 
 ---
-= 기존 SMB 공유에서 BranchCache를 사용하도록 설정합니다
+= ONTAP의 기존 SMB 공유에서 BranchCache를 활성화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,7 +24,7 @@ summary: 기존 SMB 공유에서 BranchCache 공유 속성을 기존 공유 속�
 
 * 공유에 "BranchCache" 공유 속성을 추가하면 기존 공유 설정과 공유 속성이 유지됩니다.
 +
-BranchCache 공유 속성이 기존 공유 속성 목록에 추가됩니다. 'vserver cifs share properties add' 명령 사용에 대한 자세한 내용은 man 페이지를 참조하십시오.
+BranchCache 공유 속성이 기존 공유 속성 목록에 추가됩니다. 에 대한 자세한 내용은 `vserver cifs share properties add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-properties-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

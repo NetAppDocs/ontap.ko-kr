@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enabling, cluster-wide, fips-compliant mode, kmip, server, connections 
 summary: 보안 구성 수정 명령을 -is-FIPS 지원 옵션과 함께 사용하여 사용 중인 데이터에 대해 클러스터 차원의 FIPS 호환 모드를 설정할 수 있습니다. 이렇게 하면 클러스터가 KMIP 서버에 연결할 때 FIPS 모드에서 OpenSSL을 사용하게 됩니다. 
 ---
-= KMIP 서버 연결을 위해 클러스터 차원의 FIPS 호환 모드를 지원합니다
+= ONTAP에서 KMIP 서버 연결을 위해 클러스터 차원의 FIPS 호환 모드를 사용하도록 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ summary: 보안 구성 수정 명령을 -is-FIPS 지원 옵션과 함께 사용�
 '보안 설정 표시 - 지원 - 프로토콜'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security config show` link:https://docs.netapp.com/us-en/ontap-cli/security-config-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -51,7 +51,7 @@ SSL       false      TLSv1.2, TLSv1.1, TLSv1 ALL:!LOW:         yes
 보안 설정 수정 - FIPS 활성화 True-Interface SSL
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security config modify` link:https://docs.netapp.com/us-en/ontap-cli/security-config-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 클러스터 노드를 수동으로 재부팅합니다.
 . 클러스터 차원에서 FIPS 호환 모드가 활성화되어 있는지 확인합니다.

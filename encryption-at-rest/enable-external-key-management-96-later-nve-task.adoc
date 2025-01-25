@@ -27,7 +27,7 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 'System license add-license-code <MT_EK_MGMT license code>'
 
 +
-전체 명령 구문은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `system license add` link:https://docs.netapp.com/us-en/ontap-cli/system-license-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -87,7 +87,7 @@ svm1l::> security key-manager external enable -vserver svm1 -key-servers keyserv
 +
 [NOTE]
 ====
-또한 'Security key-manager external add-servers' 명령을 사용하여 추가 SVM을 구성할 수도 있습니다. 보안 키 관리자 외부 서버 명령은 보안 키 관리자 추가 명령을 대체합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+명령을 사용하여 추가 SVM을 구성할 수도 있습니다 `security key-manager external add-servers`.  `security key-manager external add-servers`명령이 `security key-manager add` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager external add-servers` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-add-servers.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 . 구성된 모든 KMIP 서버가 연결되어 있는지 확인합니다.
@@ -97,7 +97,7 @@ svm1l::> security key-manager external enable -vserver svm1 -key-servers keyserv
 +
 [NOTE]
 ====
-보안 키-관리자 외부 show-status 명령은 보안 키-관리자 show-status 명령을 대체합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+ `security key-manager external show-status`명령이 `security key-manager show -status` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager external show-status` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-show-status.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +

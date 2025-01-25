@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, certificate, sign, request, cluster, csr, ca 
 summary: '보안 인증서 generate-csr 명령을 사용하여 인증서 서명 요청(CSR)을 생성할 수 있습니다. 요청을 처리한 후 CA(인증 기관)에서 서명된 디지털 인증서를 보냅니다.' 
 ---
-= 클러스터에 대한 인증서 서명 요청을 생성합니다
+= ONTAP에서 클러스터에 대한 인증서 서명 요청을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,7 +22,7 @@ summary: '보안 인증서 generate-csr 명령을 사용하여 인증서 서명 
 '* 보안 인증서 생성 - csr-common-name_FQDN_or_common_name_-size 512 | 1024 | 1536 | 2048-country_country_-state_-지역성_-organization_organization_-unit_unit_-email-addr_email_of_contact_-hash-function SHA1 | SHA256 | MD5*'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security certificate generate-csr` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령은 SHA256 해싱 기능에 의해 생성된 2,048비트 개인 키를 가진 CSR을 생성하고, 사용자 정의 공통 이름이 server1.companyname.com 인 회사의 IT 부서에서 사용하는 사용자 정의 공용 키가 미국 캘리포니아주 서니베일에 있습니다. SVM 연락처 관리자의 이메일 주소는 \web@example.com 입니다. 출력에 CSR과 개인 키가 표시됩니다.

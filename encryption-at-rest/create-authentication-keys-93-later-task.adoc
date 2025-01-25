@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: creating, authentication keys, ontap 9.5, earlier 
 summary: security key-manager create-key 명령을 사용하여 노드의 인증 키를 생성한 다음 구성된 KMIP 서버에 저장할 수 있습니다. 
 ---
-= ONTAP 9.5 이전 버전에서 인증 키를 만듭니다
+= ONTAP 9.5 이하에서 인증 키를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -34,7 +34,7 @@ ONTAP은 클러스터의 모든 노드에 대해 인증 키를 생성합니다.
 보안 키 관리자 만들기 키
 
 +
-전체 명령 구문은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security key-manager create-key` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 
@@ -68,7 +68,7 @@ Successfully restored key information.
 보안 키 관리자 쿼리
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security key-manager query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예제에서는 "cluster1"에 대해 인증 키가 생성되었는지 확인합니다.

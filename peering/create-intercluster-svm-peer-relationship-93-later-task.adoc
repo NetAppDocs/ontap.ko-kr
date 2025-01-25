@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, intercluster, svm, peer, relationship 
 summary: SVM 피어 생성 명령을 사용하여 로컬 및 원격 클러스터에서 SVM 간에 피어 관계를 생성할 수 있습니다. 
 ---
-= 인터클러스터 SVM 피어 관계를 생성합니다
+= ONTAP에서 인터클러스터 SVM 피어 관계를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -45,7 +45,7 @@ cluster02            vs1,vs2               snapmirror
 'vserver peer create-vserver_local_SVM_-peer-vserver_remote_SVM_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver peer create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 로컬 SVM 'pvs1'과 사전 승인된 원격 SVM 'VS1' 간에 피어 관계를 생성합니다.

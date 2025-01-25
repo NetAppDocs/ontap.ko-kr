@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fips, drive, sed, inaccessible, destroy, psid, physical secure ID, nrd plus, encrypt, 
 summary: 'FIPS 드라이브 또는 SED에 있는 데이터를 영구적으로 액세스할 수 없게 하고 드라이브를 다시 사용할 필요가 없는 경우 "저장소 암호화 디스크 폐기" 명령을 사용하여 디스크를 폐기할 수 있습니다.' 
 ---
-= FIPS 드라이브 또는 SED를 제거합니다
+= ONTAP에서 FIPS 드라이브 또는 SED를 제거합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ NOTE: Non-Returnable Disk Plus 서비스(NRD Plus)가 없는 경우 FIPS 드라�
 'Storage aggregate delete-aggregate aggregate_name'을 선택합니다
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage aggregate delete` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -41,7 +41,7 @@ cluster1::> storage aggregate delete -aggregate aggr1
 스토리지 암호화 디스크 표시
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage encryption disk show` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [listing]
@@ -59,7 +59,7 @@ Disk    Mode Data Key ID
 'Storage encryption disk destroy - disk disk_id'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage encryption disk destroy` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-destroy.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]

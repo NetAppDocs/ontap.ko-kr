@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: determine, statistics, objects, counters, cifs, smb, audit, branchcache, hash, monitor, performance 
 summary: CIFS, SMB, 감사 및 BranchCache 해시 통계에 대한 정보를 얻고 성능을 모니터링하려면 데이터를 가져올 수 있는 개체와 카운터를 알고 있어야 합니다. 
 ---
-= 사용할 수 있는 통계 개체 및 카운터를 확인합니다
+= ONTAP에서 사용할 수 있는 통계 개체 및 카운터를 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -45,7 +45,7 @@ CIFS, SMB, 감사 및 BranchCache 해시 통계에 대한 정보를 얻고 성�
 
 |===
 +
-사용할 수 있는 개체 및 카운터에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `statistics catalog` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics+catalog["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 관리자 권한 레벨로 돌아갑니다.
 +

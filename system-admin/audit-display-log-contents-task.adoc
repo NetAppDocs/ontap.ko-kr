@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: audit, log, cluster, display 
 summary: ONTAP CLI, System Manager 또는 웹 브라우저를 사용하여 /mroot/etc/log/mlog/audit.log 파일의 내용을 표시할 수 있습니다. 
 ---
-= 감사 로그 내용을 표시합니다
+= ONTAP에 감사 로그 내용을 표시합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,7 +42,7 @@ ONTAP CLI, System Manager 또는 웹 브라우저를 사용하여 클러스터�
 클러스터의 여러 노드에서 병합된 감사 항목을 표시하려면 + 를 입력합니다
 `security audit log show <[parameters]>`
 
-'security audit log show' 명령을 사용하면 개별 노드의 감사 항목을 표시하거나 클러스터의 여러 노드에서 병합한 감사 항목을 표시할 수 있습니다. 웹 브라우저를 사용하여 단일 노드에 '/mroot/etc/log/mlog' 디렉토리의 컨텐츠를 표시할 수도 있습니다. 자세한 내용은 man 페이지를 참조하십시오.
+명령을 사용하여 개별 노드에 대한 감사 항목을 표시하거나 클러스터의 여러 노드에서 병합할 수 `security audit log show` 있습니다. 웹 브라우저를 사용하여 단일 노드에 디렉토리의 컨텐츠를 표시할 수도 `/mroot/etc/log/mlog` 있습니다. 에 대한 자세한 내용은 `security audit log show` link:https://docs.netapp.com/us-en/ontap-cli/security-audit-log-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 .웹 브라우저

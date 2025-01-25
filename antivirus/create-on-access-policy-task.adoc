@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, on-access, policy 
 summary: 액세스 시 정책은 액세스 시 검사의 범위를 정의합니다. 개별 SVM 또는 클러스터의 모든 SVM에 대해 액세스 시 정책을 생성할 수 있습니다. 클러스터에서 모든 SVM에 대해 액세스 시 정책을 생성한 경우 각 SVM에 대해 개별적으로 정책을 활성화해야 합니다. 
 ---
-= 액세스 시 정책을 생성합니다
+= ONTAP에서 온-액세스 정책을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -56,7 +56,7 @@ cluster1::> vserver vscan on-access-policy create -vserver vs1 -policy-name Poli
 ----
 . 다음과 같이 on-access 정책이 생성되었는지 확인합니다. `vserver vscan on-access-policy show -instance _data_SVM|cluster_admin_SVM_ -policy-name _name_`
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver vscan on-access-policy` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-on-access-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 Policy1 정책에 대한 세부 정보가 표시됩니다.

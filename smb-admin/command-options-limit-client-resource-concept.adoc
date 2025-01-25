@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: option, vserver, cifs, modify, command, enable, control, resource, consumption, windows, client, bound, notify, request, command options to limit excessive windows client resource consumption 
 summary: 'vserver cifs options modify 명령에 대한 옵션을 사용하면 Windows 클라이언트의 리소스 사용을 제어할 수 있습니다. 이 기능은 클라이언트가 리소스 사용의 정상적인 범위를 벗어난 경우(예: 열려 있는 파일의 수가 비정상적으로 많거나 세션이 열려 있거나 변경 알림 요청이 있는 경우) 유용합니다.' 
 ---
-= 과도한 Windows 클라이언트 리소스 사용을 제한하는 명령 옵션입니다
+= ONTAP에서 과도한 Windows 클라이언트 리소스 사용을 제한하는 명령 옵션입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ CIFS 트리당 동일한 파일에 대한 최대 열기 수입니다
 
 
 
-기본 제한 및 현재 구성을 표시하려면 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver cifs options modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-options-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ONTAP 9.4부터 SMB 버전 2 이상을 실행하는 서버는 클라이언트가 SMB 연결을 통해 서버로 전송할 수 있는 미해결 요청(_smb 크레딧_) 수를 제한할 수 있습니다. SMB 크레딧의 관리는 클라이언트가 시작하고 서버에 의해 제어됩니다.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, initialize, load-sharing, mirror, relationship 
 summary: '클러스터의 각 루트 볼륨에 대해 LSM(Load-sharing mirror)을 생성해야 합니다. HA 쌍의 파트너 노드 또는 다른 HA 쌍 등 루트 볼륨이 포함된 노드 이외의 노드에 LSM을 생성할 수 있습니다. 2노드 클러스터의 경우, root volume이 있는 노드의 파트너 상에서 LSM을 생성해야 한다.' 
 ---
-= 로드 공유 미러 관계를 생성하고 초기화합니다
+= ONTAP와의 로드 공유 미러 관계를 생성하고 초기화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -38,7 +38,7 @@ volume create -vserver <SVM> -volume <volume> -aggregate <aggregate> -type DP -s
 루트 및 대상 볼륨에 접미사를 지정하는 것이 가장 좋습니다. 예를 들어, '_root' 및 '_m1' 등이 있습니다.
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 "cluster_src"에 루트 볼륨 svm1_root에 대한 로드 공유 미러 볼륨을 생성합니다.
@@ -56,7 +56,7 @@ cluster_src:> volume create -vserver svm1 -volume svm1_m1 -aggregate aggr_1 -siz
 snapmirror create -source-path <SVM:volume> -destination-path <SVM:volume> -type LS -schedule <schedule>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 루트 볼륨 'vm1_root'와 로드 공유 미러 볼륨 'svm1_m1' 간에 로드 공유 미러 관계를 생성합니다.
@@ -76,7 +76,7 @@ cluster_src::> snapmirror create -source-path svm1:svm1_root -destination-path s
 snapmirror initialize-ls-set -source-path <SVM:volume>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 루트 볼륨 'svm1_root'에 대한 로드 공유 미러를 초기화합니다.

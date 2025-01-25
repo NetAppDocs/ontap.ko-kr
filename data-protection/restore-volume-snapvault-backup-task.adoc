@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, content, volume, snapmirror, destination, snap mirror, snapshot, vault, snapvault, read-write, incremental 
 summary: SnapMirror 타겟 볼륨의 스냅샷 복사본에서 전체 볼륨의 콘텐츠를 복원할 수 있습니다. 볼륨 내용을 원래 소스 볼륨 또는 다른 볼륨으로 복원할 수 있습니다. 
 ---
-= SnapMirror 대상에서 볼륨 내용을 복원합니다
+= ONTAP를 사용하여 SnapMirror 대상에서 볼륨의 내용을 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ System Manager 또는 ONTAP CLI를 사용하여 볼륨의 콘텐츠를 복원할
 volume snapshot show -vserver <SVM> -volume <volume>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 "vserverB:secondary1" 대상의 스냅샷 복사본을 보여 줍니다.
@@ -90,7 +90,7 @@ vserverB    secondary1  hourly.2013-01-25_0005  valid   224KB     0%    0%
 `snapmirror restore -source-path <SVM:volume>|<cluster://SVM/volume> -destination-path <SVM:volume>|<cluster://SVM/volume> -source-snapshot <snapshot>`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 

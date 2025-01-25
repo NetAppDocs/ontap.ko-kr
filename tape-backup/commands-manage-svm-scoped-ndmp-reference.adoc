@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, manage, svm, scoped, ndmp, mode, vserver, storage, virtual, machine 
 summary: 'SVM 서비스 NDMP 명령을 사용하여 각 스토리지 가상 머신(SVM, 이전의 Vserver)에서 NDMP를 관리할 수 있습니다.' 
 ---
-= SVM 범위의 NDMP 모드를 관리하는 명령입니다
+= ONTAP에서 SVM 범위 NDMP 모드를 관리하기 위한 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -127,4 +127,4 @@ NDMP 확장 상태를 수정(설정 또는 해제)합니다
 이 명령은 고급 권한 수준에서 사용할 수 있습니다.
 
 |===
-이러한 명령에 대한 자세한 내용은 'vserver services ndmp' 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver services ndmp` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+services+ndmp["ONTAP 명령 참조입니다"^]을 참조하십시오.

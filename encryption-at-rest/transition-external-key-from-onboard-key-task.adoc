@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: transitioning, external key management, onboard key management 
 summary: 온보드 키 관리에서 외부 키 관리로 전환하려면 온보드 키 관리 구성을 삭제해야 외부 키 관리를 활성화할 수 있습니다. 
 ---
-= 온보드 키 관리에서 외부 키 관리로 전환
+= ONTAP의 온보드 키 관리에서 외부 키 관리로 전환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,4 +50,4 @@ ONTAP 9.5 이하
 |===
 
 
-전체 명령 구문에 대한 자세한 내용은 를 https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]참조하십시오.
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

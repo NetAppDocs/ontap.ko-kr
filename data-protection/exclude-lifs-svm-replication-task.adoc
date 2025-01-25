@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: lifs, network, settings, svm, replication 
 summary: 소스 및 타겟 SVM이 서로 다른 서브넷에 있는 경우 SnapMirror 정책 생성 명령의 -discard-configs 네트워크 옵션을 사용하여 LIF 및 관련 네트워크 설정을 SVM 복제에서 제외할 수 있습니다. 
 ---
-= SVM 복제에서 LIF 및 관련 네트워크 설정을 제외합니다
+= ONTAP을 통한 SVM 복제에서 LIF 및 관련 네트워크 설정을 제외합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,7 @@ summary: 소스 및 타겟 SVM이 서로 다른 서브넷에 있는 경우 SnapM
 .이 작업에 대해
 SVM 복제 관계를 생성할 때 'napmirror create' 명령의 '-identity-preserve' 옵션을 'true'로 설정해야 합니다.
 
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 대상 SVM 생성:
@@ -69,7 +69,7 @@ cluster_dst::> job schedule cron create -name my_weekly -dayofweek "Saturday" -h
 '스냅샷 정책 생성 - vserver_SVM_-policy_policy_-type async-mirror|vault|mirror-vault-comment_comment_- transfer_rs-priority low|normal-is-network-compression-enabled true|false-discard-configs network'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예제에서는 LIF를 제외한 SnapMirror DR에 대한 사용자 지정 복제 정책을 생성합니다.
@@ -139,7 +139,7 @@ cluster_dst::> vserver stop -vserver svm_backup
 '스냅샷 초기화-소스-경로_SVM_:-대상-경로_SVM_:'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 소스 'svm1'과 대상 'svm_backup' 간의 관계를 초기화합니다.

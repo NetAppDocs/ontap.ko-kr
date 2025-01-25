@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, volume, shanpshot, copy, create, complianceclock, file, worm, compliance, enterprise 
 summary: 'WORM 상태로 커밋하려는 파일 또는 스냅샷 복사본에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. "-snaplock-type" 옵션을 사용하여 준수 또는 엔터프라이즈 를 SnapLock 유형으로 지정하여 SnapLock 볼륨을 명시적으로 생성해야 합니다. 기본적으로 SnapLock 유형은 비 SnapLock으로 설정됩니다.' 
 ---
-= SnapLock 볼륨을 생성하고 마운트합니다
+= ONTAP에서 SnapLock 볼륨을 생성하고 마운트합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,7 +59,7 @@ ONTAP 9.12.1부터 시스템 관리자를 사용하여 SnapLock 볼륨을 생성
 volume create -vserver <SVM_name> -volume <volume_name> -aggregate <aggregate_name> -snaplock-type <compliance|enterprise>
 ----
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오. SnapLock 볼륨에는 '-nvfail', '-atime-update', '-is-AutoBalance-eligible', '-space-mgmt-try-first', ' vmalign' 옵션이 없습니다.
+에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오. SnapLock 볼륨에는 , `-atime-update`, , `-is-autobalance-eligible` `-space-mgmt-try-first` 및 `vmalign` 옵션을 사용할 수 없습니다 `-nvfail`.
 
 +
 다음 명령을 실행하면 vs1에 vol1이라는 SnapLock "Compliance" 볼륨이 생성됩니다.
@@ -93,7 +93,7 @@ SnapLock 볼륨이 온라인 상태여야 합니다.
 '* 볼륨 마운트 - vserver_SVM_name_-volume_volume_name_-junction-path_path_*'
 
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume mount` link:https://docs.netapp.com/us-en/ontap-cli/volume-mount.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 이름이 vol1인 SnapLock 볼륨이 VS1 네임스페이스에서 junction path/sales에 마운트됩니다.

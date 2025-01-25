@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: join, storage, virtual, machine, svm, active, directory, domain, delete, deleting, exist, smb, cifs, server, modify, domain, vserver, cifs, rejoin, join a svm to an active directory domain 
 summary: 'vserver cifs modify 명령을 사용하여 도메인을 수정하여 기존 SMB 서버를 삭제하지 않고 SVM(스토리지 가상 시스템)을 Active Directory 도메인에 연결할 수 있습니다. 현재 도메인에 다시 참가하거나 새 도메인에 가입할 수 있습니다.' 
 ---
-= SVM을 Active Directory 도메인에 연결합니다
+= SVM을 ONTAP의 Active Directory 도메인에 가입합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -30,7 +30,7 @@ DNS 서버에는 도메인 LDAP 및 도메인 컨트롤러 서버에 대한 SRV(
 .단계
 . SVM을 CIFS 서버 도메인에 가입합니다. 'vserver cifs modify -vserver_vserver_name_-domain_domain_name_-status -admin down'
 +
-자세한 내용은 'vserver cifs modify' 명령에 대한 man 페이지를 참조하십시오. 새 도메인에 대한 DNS를 재구성해야 하는 경우 'vserver DNS modify' 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver cifs modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 새 도메인에 대해 DNS를 다시 구성해야 하는 경우 에 대한 자세한 `vserver dns modify` 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+dns+modify["ONTAP 명령 참조입니다"^]참조하십시오.
 
 +
 SMB 서버에 대한 Active Directory 컴퓨터 계정을 만들려면 '_example_'.com 도메인 내의 'ou=_example_ou' 컨테이너에 컴퓨터를 추가할 수 있는 충분한 권한이 있는 Windows 계정의 이름과 암호를 제공해야 합니다.

@@ -35,7 +35,7 @@ NOTE: 를 사용할 수 없습니다 `volume encryption conversion start` SnapLo
 '볼륨 암호화 변환 시작 - SVM_NAME - volume volume volume_name'
 
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume encryption conversion start` link:https://docs.netapp.com/us-en/ontap-cli/volume-encryption-conversion-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 기존 볼륨의 암호화가 설정됩니다 `vol1`:
@@ -53,7 +53,7 @@ cluster1::> volume encryption conversion start -vserver vs1 -volume vol1
 볼륨 암호화 변환 표시
 
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume encryption conversion show` link:https://docs.netapp.com/us-en/ontap-cli/volume-encryption-conversion-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 변환 작업의 상태가 표시됩니다.
@@ -72,7 +72,7 @@ vs1       vol1     9/18/2017 17:51:41   Phase 2 of 2 is in progress.
 볼륨 쇼는 암호화된 사실이다
 
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 암호화된 볼륨이 'cluster1'에 표시됩니다.
@@ -154,7 +154,7 @@ NVE 볼륨을 일반 텍스트 볼륨으로
 
 |===
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume move start` link:https://docs.netapp.com/us-en/ontap-cli/volume-move-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 이름이 vol1인 일반 텍스트 볼륨이 NVE 볼륨으로 변환됩니다.
@@ -204,7 +204,7 @@ cluster1::> volume move start -vserver vs1 -volume vol2 -destination-aggregate a
 암호화 유형 필드는 ONTAP 9.6 이상에서 사용할 수 있습니다.
 
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 'cluster2'의 볼륨 암호화 유형이 표시됩니다.
@@ -225,7 +225,7 @@ vs3      vol3    aggregate
 볼륨 쇼는 암호화된 사실이다
 
 +
-전체 명령 구문을 보려면 명령의 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 암호화된 볼륨이 'cluster2'에 표시됩니다.

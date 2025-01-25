@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, export, rule 
 summary: 내보내기 규칙을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= 내보내기 규칙을 관리하는 명령입니다
+= ONTAP에서 내보내기 규칙을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,4 +52,4 @@ summary: 내보내기 규칙을 관리하기 위한 특정 ONTAP 명령이 있�
 서로 다른 클라이언트와 일치하는 동일한 내보내기 규칙을 여러 개 구성한 경우 내보내기 규칙을 관리할 때 해당 규칙을 동기화 상태로 유지해야 합니다.
 
 ====
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver export-policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+export-policy["ONTAP 명령 참조입니다"^]을 참조하십시오.

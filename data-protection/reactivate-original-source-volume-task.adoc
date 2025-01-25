@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reactivate, original, source, volume 
 summary: 대상에서 데이터를 더 이상 제공할 필요가 없을 때 소스 볼륨과 타겟 볼륨 간에 원래 데이터 보호 관계를 다시 설정할 수 있습니다. 
 ---
-= 원본 소스 볼륨을 다시 활성화합니다
+= ONTAP를 사용하여 원본 소스 볼륨을 다시 활성화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,7 +24,7 @@ summary: 대상에서 데이터를 더 이상 제공할 필요가 없을 때 소
 `snapmirror resync -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -45,7 +45,7 @@ cluster_src::> snapmirror resync -source-path svm_backup:volA_dst -destination-p
 'vserver stop-vserver_SVM_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver stop` link:https://docs.netapp.com/us-en/ontap-cli/vserver-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -66,7 +66,7 @@ cluster_dst::> vserver stop svm_backup
 `snapmirror update -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror update` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -87,7 +87,7 @@ cluster_src::> snapmirror update -source-path svm_backup:volA_dst -destination-p
 `snapmirror quiesce -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -108,7 +108,7 @@ cluster_src::> snapmirror quiesce -source-path svm_backup:volA_dst -destination-
 `snapmirror break -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -129,7 +129,7 @@ cluster_scr::> snapmirror break -source-path svm_backup:volA_dst -destination-pa
 `snapmirror delete -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -168,7 +168,7 @@ cluster_dst::> snapmirror release -source-path svm_backup:volA_dst -destination-
 `snapmirror resync -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 svm1의 원본 소스 볼륨 VolA와 sm_backup의 원래 대상 볼륨 VolA_dst 간의 관계를 다시 설정합니다.
@@ -183,7 +183,7 @@ cluster_dst::> snapmirror resync -source-path svm1:volA -destination-path svm_ba
 'vserver start-vserver_SVM_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver start` link:https://docs.netapp.com/us-en/ontap-cli/vserver-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 원래 대상 SVM을 시작합니다.
@@ -196,4 +196,4 @@ cluster_dst::> vserver start svm_backup
 
 
 .작업을 마친 후
-'snapmirror show' 명령을 사용하여 SnapMirror 관계가 생성되었는지 확인합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+명령을 사용하여 `snapmirror show` SnapMirror 관계가 생성되었는지 확인하십시오. 에 대한 자세한 내용은 `snapmirror show` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

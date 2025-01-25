@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, mapping, name 
 summary: 이름 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= 이름 매핑을 관리하는 명령입니다
+= ONTAP에서 이름 매핑을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -68,4 +68,4 @@ summary: 이름 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니�
 'vserver security file-directory show-Effective-permissions-vserver vs1-win-user-name user1-path/-share-name SH1'
 
 |===
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver name-mapping` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+name-mapping["ONTAP 명령 참조입니다"^]을 참조하십시오.

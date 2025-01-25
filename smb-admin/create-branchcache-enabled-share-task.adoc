@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, branchcache, smb, create, share, setting, property, create a bracnhcache-enabled smb share 
 summary: BranchCache 공유 속성을 설정하여 공유를 생성할 때 SMB 공유에서 BranchCache를 사용하도록 설정할 수 있습니다. 
 ---
-= BranchCache 지원 SMB 공유를 생성합니다
+= ONTAP에서 BranchCache 지원 SMB 공유를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,7 +24,7 @@ summary: BranchCache 공유 속성을 설정하여 공유를 생성할 때 SMB �
 그러나 공유 폴더에 캐시된 콘텐츠가 제공되도록 하려면 SVM에서 BranchCache를 구성하고 사용하도록 설정해야 합니다.
 
 * '-share-properties' 매개 변수를 사용할 때 공유에 적용되는 기본 공유 속성이 없으므로 쉼표로 구분된 목록을 사용하여 "BranchCache" 공유 속성 외에도 공유에 적용할 다른 모든 공유 속성을 지정해야 합니다.
-* 자세한 내용은 'vserver cifs share create' 명령에 대한 man 페이지를 참조하십시오.
+* 에 대한 자세한 내용은 `vserver cifs share create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 .단계

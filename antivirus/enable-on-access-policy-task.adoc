@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, on-access, policy 
 summary: 액세스 시 정책은 액세스 시 검사의 범위를 정의합니다. SVM의 파일을 스캔하려면 먼저 SVM에서 액세스 시 정책을 활성화해야 합니다. 
 ---
-= 액세스 시 정책을 설정합니다
+= ONTAP를 통해 온-액세스 정책을 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ cluster1::> vserver vscan on-access-policy enable -vserver vs1 -policy-name Poli
 `vserver vscan on-access-policy show -instance _data_SVM_ -policy-name _policy_name_`
 
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver vscan on-access-policy show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-on-access-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 "Policy1" 액세스 시 정책에 대한 세부 정보가 표시됩니다.

@@ -84,7 +84,7 @@ Reenter the cluster-wide passphrase:    <32..256 ASCII characters long text>
 +
 [NOTE]
 ====
-보안 키-관리자 키 쿼리 명령은 보안 키-관리자 쿼리 키 명령을 대체합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+ `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, pausing, pause, resuming, resume, stop, display, information, security, policy, job, commands for managing security policy jobs 
 summary: 보안 정책 작업에 대한 정보를 일시 중지, 다시 시작, 중지 및 표시하는 ONTAP 명령이 있습니다. 
 ---
-= 보안 정책 작업 관리를 위한 명령입니다
+= ONTAP에서 보안 정책 작업을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,4 +44,4 @@ summary: 보안 정책 작업에 대한 정보를 일시 중지, 다시 시작, 
 'vserver security file-directory job stop -vserver vserver_name -id integer'
 
 |===
-자세한 내용은 'vserver security file-directory job' 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver security file-directory job` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+job["ONTAP 명령 참조입니다"^]을 참조하십시오.

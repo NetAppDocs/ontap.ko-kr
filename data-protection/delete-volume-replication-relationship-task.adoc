@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, replication, relationship, replicate, synchronous, snapmirror, quiese, pause 
 summary: SnapMirror 삭제 및 SnapMirror 릴리즈 명령을 사용하여 볼륨 복제 관계를 삭제할 수 있습니다. 그런 다음 불필요한 대상 볼륨을 수동으로 삭제할 수 있습니다. 
 ---
-= 볼륨 복제 관계를 삭제합니다
+= ONTAP와의 볼륨 복제 관계를 삭제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,7 +40,7 @@ cluster_dst::> snapmirror break -source-path svm1:volA -destination-path svm_bac
 `snapmirror delete -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -61,7 +61,7 @@ cluster_dst::> snapmirror delete -source-path svm1:volA -destination-path svm_ba
 `snapmirror release -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]

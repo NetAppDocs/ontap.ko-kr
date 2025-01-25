@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: assign, tape, aliases, device, identification, drive, medium, changer, logical, names, backup 
 summary: 장치를 쉽게 식별할 수 있도록 테이프 드라이브 또는 미디어 체인저에 테이프 별칭을 할당할 수 있습니다. 별칭은 백업 디바이스의 논리적 이름과 테이프 드라이브 또는 미디어 체인저에 영구적으로 할당된 이름 간의 통신을 제공합니다. 
 ---
-= 테이프 별칭을 할당합니다
+= ONTAP에서 테이프 별칭을 할당합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ summary: 장치를 쉽게 식별할 수 있도록 테이프 드라이브 또는 
 .단계
 . 'Storage tape alias set' 명령을 사용하여 테이프 드라이브 또는 미디어 체인저에 별칭을 할당합니다.
 +
-이 명령에 대한 자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `storage tape alias set` link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-alias-set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 'system node hardware tape drive show' 명령을 사용하여 테이프 드라이브에 대한 SN(일련 번호) 정보와 'system node hardware tape library show' 명령을 사용하여 테이프 라이브러리에 대한 정보를 볼 수 있습니다.

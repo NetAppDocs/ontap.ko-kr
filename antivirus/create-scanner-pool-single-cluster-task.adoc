@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, scanner pool, single cluster 
 summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 개별 SVM 또는 클러스터의 모든 SVM에 대해 스캐너 풀을 생성할 수 있습니다. 
 ---
-= 단일 클러스터에 스캐너 풀을 생성합니다
+= ONTAP를 사용하여 단일 클러스터에 스캐너 풀을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 �
 +
 ** 개별 SVM용으로 정의된 풀에 대해 데이터 SVM을 지정하고, 클러스터의 모든 SVM에 대해 정의된 풀에 대해 클러스터 관리 SVM을 지정합니다.
 ** 각 Vscan 서버 호스트 이름에 대한 IP 주소 또는 FQDN을 지정합니다.
-** 권한이 있는 각 사용자의 도메인 및 사용자 이름을 지정합니다. 전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+** 권한이 있는 각 사용자의 도메인 및 사용자 이름을 지정합니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
 +
@@ -45,7 +45,7 @@ cluster1::> vserver vscan scanner-pool create -vserver vs1 -scanner-pool SP -hos
 `vserver vscan scanner-pool show -vserver _data_SVM|cluster_admin_SVM_ -scanner-pool _scanner_pool_`
 
 +
-전체 옵션 목록은 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 'S' 스캐너 풀에 대한 세부 정보가 표시됩니다.
@@ -66,6 +66,6 @@ List of Host Names of Allowed Vscan Servers: 1.1.1.1, vmwin204-27.fsct.nb
                    List of Privileged Users: cifs\u1, cifs\u2
 ----
 +
-SVM에서 모든 스캐너 풀을 보려면 'vserver vscan scanner -pool show' 명령을 사용할 수도 있습니다. 전체 명령 구문은 명령에 대한 man 페이지를 참조하십시오.
+또한 명령을 사용하여 SVM에 있는 모든 스캐너 풀을 볼 수도 있습니다 `vserver vscan scanner-pool show`. 에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

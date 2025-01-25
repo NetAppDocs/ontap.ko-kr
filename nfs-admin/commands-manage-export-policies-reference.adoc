@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, export, policy 
 summary: 내보내기 정책을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= 엑스포트 정책을 관리하는 명령입니다
+= ONTAP에서 엑스포트 정책을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,4 +47,4 @@ vserver export-policy show를 참조하십시오
 'vserver export-policy delete
 
 |===
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver export-policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+export-policy["ONTAP 명령 참조입니다"^]을 참조하십시오.

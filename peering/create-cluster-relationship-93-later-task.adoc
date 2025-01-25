@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, cluster, peer, relationship, System Manager, cli 
 summary: 데이터 백업 및 재해 복구를 위해 데이터를 원격 클러스터로 복제하여 데이터를 보호하기 전에 로컬 및 원격 클러스터 간에 클러스터 피어 관계를 생성합니다. 
 ---
-= 클러스터 피어 관계를 생성합니다
+= ONTAP에서 클러스터 피어 관계를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ cluster peer create -generate-passphrase -offer-expiration <MM/DD/YYYY HH:MM:SS|
 '-generate-passphrase와 '-peer-addrs'를 모두 지정하면 '-peer-addrs'에 지정된 인터클러스터 LIF가 있는 클러스터만 생성된 암호를 사용할 수 있습니다.
 
 +
-사용자 지정 IPspace를 사용하지 않는 경우 '-IPSpace' 옵션을 무시할 수 있습니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+사용자 지정 IPspace를 사용하지 않는 경우에는 이 옵션을 무시할 `-ipspace` 수 있습니다. 에 대한 자세한 내용은 `cluster peer create` link:https://docs.netapp.com/us-en/ontap-cli/cluster-peer-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 ONTAP 9.6 이상에서 피어링 관계를 생성하고 클러스터 간 피어링 통신을 암호화하지 않으려면, 암호화를 비활성화하려면 '-encryption-protocol-proposed none' 옵션을 사용해야 합니다.
@@ -122,7 +122,7 @@ Warning: make a note of the passphrase - it cannot be displayed again.
 cluster peer create -peer-addrs <peer_LIF_IPs> -ipspace <ipspace>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `cluster peer create` link:https://docs.netapp.com/us-en/ontap-cli/cluster-peer-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 인터클러스터 LIF IP 주소 192.140.112.101 및 192.140.112.102에서 원격 클러스터에 대한 로컬 클러스터를 인증합니다.

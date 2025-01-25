@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: setting, throughput, ceiling, qos 
 summary: '정책 그룹의 최대 처리량 필드를 사용하여 스토리지 오브젝트 워크로드의 처리량 한도(QoS Max)를 정의할 수 있습니다. 스토리지 객체를 생성하거나 수정할 때 정책 그룹을 적용할 수 있습니다.' 
 ---
-= QoS를 사용하여 처리량 한도를 설정합니다
+= ONTAP에서 QoS를 사용하여 처리량의 한계를 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -41,7 +41,7 @@ QoS policy-group create 명령에 대해 set '-is-shared=false'를 설정하여 
 "QoS policy-group create-policy-group_policy_group_-vserver_SVM_-max-throughput_number_of_IOPS_|MB/S|IOPS, MB/S-is-shared true|false
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오. 'QoS policy-group modify' 명령을 사용하여 처리량 한도를 조정할 수 있습니다.
+에 대한 자세한 내용은 `qos policy-group create` link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 명령을 사용하여 처리량 한도를 조정할 수 `qos policy-group modify` 있습니다.
 
 +
 다음 명령을 실행하면 최대 5,000 IOPS의 처리량을 갖는 공유 정책 그룹 'pg-vs1'이 생성됩니다.
@@ -72,7 +72,7 @@ cluster1::> qos policy-group create -policy-group pg-vs4 -vserver vs4 -is-shared
 '_storage_object_create-vserver_SVM_-QoS-policy-group_policy_group_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오. '_storage_object_modify' 명령을 사용하여 스토리지 객체에 다른 정책 그룹을 적용할 수 있습니다.
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오. 명령을 사용하여 스토리지 객체에 다른 정책 그룹을 적용할 수 `_storage_object_ modify` 있습니다.
 
 +
 다음 명령은 SVM 'VS1'에 정책 그룹 'pg-vs1'을 적용합니다.
@@ -100,7 +100,7 @@ cluster1::> volume create -vserver vs2 -volume app2 -aggregate aggr1 -qos-policy
 QoS 통계 성능 표시
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `qos statistics performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -127,7 +127,7 @@ _System-Background         30           0KB/s        0ms
 QoS 통계 워크로드 성능 표시
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `qos statistics workload performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -153,7 +153,7 @@ _Scan_Backgro..   5688       20            0KB/s        0ms
 +
 [NOTE]
 ====
-'QoS statistics workload latency show' 명령을 사용하여 QoS 워크로드에 대한 상세한 지연 시간 통계를 볼 수 있습니다.
+명령을 사용하여 QoS 워크로드에 대한 자세한 지연 시간 통계를 볼 수 `qos statistics workload latency show` 있습니다. 에 대한 자세한 내용은 `qos statistics workload latency show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-latency-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 

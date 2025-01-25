@@ -16,7 +16,7 @@ summary: SnapMirror delete 및 SnapMirror 릴리즈 명령을 사용하여 SVM �
 .이 작업에 대해
 'napMirror release' 명령은 소스에서 SnapMirror로 생성된 Snapshot 복사본을 삭제합니다. '-relationship-info-only' 옵션을 사용하여 스냅샷 복사본을 보존할 수 있습니다.
 
-명령에 대한 전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 타겟 SVM 또는 타겟 클러스터에서 다음 명령을 실행하여 복제 관계를 중단하십시오.

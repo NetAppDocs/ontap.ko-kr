@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define, rule, policy, data protection 
 summary: '"볼트" 또는 "볼트 미러" 정책 유형의 사용자 정의 정책의 경우 초기화 및 업데이트 중에 전송되는 스냅샷을 결정하는 규칙을 하나 이상 정의해야 합니다. "볼트" 또는 "미러 볼트" 정책 유형을 사용하여 기본 정책에 대한 규칙을 정의할 수도 있습니다.' 
 ---
-= 정책에 대한 규칙을 정의합니다
+= ONTAP를 사용하여 정책에 대한 규칙을 정의합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -90,7 +90,7 @@ app_consistent
 '스냅샷 정책 추가 규칙 -vserver_SVM_-policy_policy_for_rule_-snapmirror-label_snapmirror-label_-keep_retention_count_'
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror policy add-rule` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예제에서는 기본 MirorAndVault 정책에 SnapMirror 레이블 '격월'이 있는 규칙을 추가합니다.

@@ -30,7 +30,7 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 +
 [NOTE]
 ====
-** 보안 키 관리자 외부 활성화 명령은 보안 키 관리자 설정 명령을 대체합니다. 'Security key-manager external modify' 명령어를 실행하여 외부 키 관리 설정을 변경할 수 있다. 전체 명령 구문은 man 페이지를 참조하십시오.
+**  `security key-manager external enable`명령이 `security key-manager setup` 명령을 대체합니다. 명령을 실행하여 외부 키 관리 구성을 변경할 수 `security key-manager external modify` 있습니다. 에 대한 자세한 내용은 `security key-manager external enable` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-enable.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 ** MetroCluster 환경에서 관리 SVM에 대한 외부 키 관리를 구성하는 경우 를 반복해야 합니다 `security key-manager external enable` 명령을 파트너 클러스터에 표시합니다.
 
 
@@ -50,7 +50,7 @@ clusterl::> security key-manager external enable -key-servers ks1.local:15696,10
 +
 [NOTE]
 ====
-보안 키-관리자 외부 show-status 명령은 보안 키-관리자 show-status 명령을 대체합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+ `security key-manager external show-status`명령이 `security key-manager show -status` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager external show-status` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-show-status.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +

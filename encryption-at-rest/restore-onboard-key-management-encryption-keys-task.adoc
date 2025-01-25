@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restoring, onboard, key management encryption 
 summary: 경우에 따라 온보드 키 관리 암호화 키를 복원해야 할 수도 있습니다. 키를 복원해야 한다는 것을 확인한 후에는 Onboard Key Manager를 설정하여 키를 복원할 수 있습니다. 
 ---
-= 온보드 키 관리 암호화 키를 복원합니다
+= ONTAP에서 온보드 키 관리 암호화 키를 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,7 +31,7 @@ IMPORTANT: ONTAP 9.8 이상을 실행 중이고 루트 볼륨이 암호화된 �
 . 키를 복원해야 하는지 확인합니다. +'보안 키 관리자 키 쿼리 - node_node_'
 . 키 복원: + '보안 키 관리자 온보드 동기화
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security key-manager onboard sync` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-sync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 ONTAP 9.6 명령은 온보드 키 계층의 키를 동기화합니다.
@@ -73,7 +73,7 @@ ONTAP 9.6 또는 9.7을 실행 중이거나 ONTAP 9.8 이상을 실행 중이고
 
 . 키 복원: + S/S Security Key-manager setup -node_node_
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security key-manager setup` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 암호 프롬프트에서 클러스터의 온보드 키 관리 암호를 입력합니다.
 

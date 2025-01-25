@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, custom, replication, policy 
 summary: 관계의 기본 정책이 적합하지 않은 경우 사용자 지정 복제 정책을 생성할 수 있습니다. 예를 들어, 네트워크 전송 시 데이터를 압축하거나 SnapMirror가 스냅샷 복사본을 전송하기 위해 시도하는 횟수를 수정할 수 있습니다. 
 ---
-= 사용자 지정 복제 정책을 생성합니다
+= ONTAP를 사용하여 사용자 지정 복제 정책을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -92,7 +92,7 @@ System Manager 또는 ONTAP CLI를 사용하여 맞춤형 데이터 보호 정�
 snapmirror policy create -vserver <SVM> -policy _policy_ -type <async-mirror|vault|mirror-vault|strict-sync-mirror|sync-mirror> -comment <comment> -tries <transfer_tries> -transfer-priority <low|normal> -is-network-compression-enabled <true|false>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 ONTAP 9.5부터 `-common-snapshot-schedule` 매개 변수를 사용하여 SnapMirror 동기식 관계에 대한 일반 스냅샷 복사본 일정을 생성하도록 일정을 지정할 수 있습니다. 기본적으로 SnapMirror 동기식 관계에 대한 일반 스냅샷 복사본 일정은 1시간입니다. SnapMirror 동기식 관계의 스냅샷 복사본 일정에 대해 30분에서 2시간 사이의 값을 지정할 수 있습니다.
@@ -134,7 +134,7 @@ cluster_dst::> snapmirror policy create -vserver svm1 -policy my_strictsync -typ
 .작업을 마친 후
 "볼트" 및 "미러 볼트" 정책 유형의 경우 초기화 및 업데이트 중에 전송할 스냅샷 복사본을 결정하는 규칙을 정의해야 합니다.
 
-'snapmirror policy show' 명령을 사용하여 SnapMirror 정책이 생성되었는지 확인합니다. 전체 명령 구문은 man 페이지를 참조하십시오.
+명령을 사용하여 `snapmirror policy show` SnapMirror 정책이 생성되었는지 확인하십시오. 에 대한 자세한 내용은 `snapmirror policy show` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 ====

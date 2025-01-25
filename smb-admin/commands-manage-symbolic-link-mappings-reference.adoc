@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, managing, manage, symbol, link, map, commands for managing symbolic link mappings 
 summary: 심볼 링크 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= 심볼 링크 매핑을 관리하는 명령입니다
+= ONTAP에서 심볼 링크 매핑을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -44,4 +44,4 @@ summary: 심볼 링크 매핑을 관리하기 위한 특정 ONTAP 명령이 있�
 'vserver cifs symlink delete
 
 |===
-자세한 내용은 각 명령에 대한 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `vserver cifs symlink` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+symlink["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resynchronize, replication, relationship, snapmirror, mirror, snapshot copy, restore, disaster recovery, DR, resync, protection relationship, data protection 
 summary: 대상 볼륨을 쓰기 가능한 상태로 만든 후, 소스 볼륨과 대상 볼륨에 공통 Snapshot 복사본이 없기 때문에 업데이트가 실패한 후 또는 관계에 대한 복제 정책을 변경하려는 경우 복제 관계를 다시 동기화해야 합니다. 
 ---
-= 복제 관계를 다시 동기화합니다
+= ONTAP와 복제 관계를 다시 동기화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,7 +62,7 @@ link:make-destination-volume-writeable-task.html["관계를 끊습니다"]대상
 snapmirror resync -source-path <SVM:volume|cluster://SVM/volume> -destination-path <SVM:volume|cluster://SVM/volume> -type DP|XDP -policy <policy>
 ----
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 

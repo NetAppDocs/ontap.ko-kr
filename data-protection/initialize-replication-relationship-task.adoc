@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: initialize, replication, relationship, snapmirror, snap mirror, synchronous, transfer, snapshot copy, 
 summary: 모든 관계 유형에 대해 초기화는 기본 전송을 수행합니다. 즉, 소스 볼륨의 스냅샷 복사본을 만든 다음 해당 복사본과 대상 볼륨에 참조하는 모든 데이터 블록을 전송합니다. 그렇지 않으면 전송 내용이 정책에 따라 달라집니다. 
 ---
-= 복제 관계를 초기화합니다
+= ONTAP를 사용하여 복제 관계를 초기화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ ONTAP 9.5부터 SnapMirror 동기식 관계가 지원됩니다.
 `snapmirror initialize -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
 
 +
-전체 명령 구문은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
