@@ -50,7 +50,7 @@ summary: '동적 액세스 제어를 사용하고 Active Directory에서 중앙 
 .관련 정보
 xref:supported-gpos-concept.adoc[지원되는 GPO]
 
-xref:applying-group-policy-objects-concept.adoc[CIFS 서버에 그룹 정책 객체 적용]
+xref:applying-group-policy-objects-concept.adoc[SMB 서버에 그룹 정책 개체 적용]
 
 xref:enable-disable-gpo-support-task.adoc[CIFS 서버에서 GPO 지원을 설정하거나 해제합니다]
 

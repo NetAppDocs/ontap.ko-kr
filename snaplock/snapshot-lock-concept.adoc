@@ -57,7 +57,10 @@ ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock S
 다음 기능은 현재 변조 방지 스냅샷에서 지원되지 않습니다.
 
 * 정합성 보장 그룹
-* FabricPool
+* link:../fabricpool/index.html["FabricPool"]
++
+변조 방지 스냅샷은 삭제할 수 없는 변경 불가능한 보호를 제공합니다. FabricPool에는 데이터 삭제 기능이 필요하므로 동일한 볼륨에서 FabricPool 및 스냅샷 잠금을 활성화할 수 없습니다.
+
 * FlexCache 볼륨
 * SMTape
 * SnapMirror 활성 동기화

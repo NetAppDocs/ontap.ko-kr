@@ -346,8 +346,6 @@ entries:
       url: "/smb-admin/display-dynamic-access-control-security-task.html"
     - title: 동적 액세스 제어에 대한 복원 고려 사항
       url: "/smb-admin/revert-dynamic-access-control-concept.html"
-    - title: 동적 액세스 제어 및 중앙 액세스 정책을 구성하고 사용하는 방법에 대한 추가 정보를 찾을 수 있는 위치
-      url: "/smb-admin/additional-information-concept.html"
   - title: 내보내기 정책을 사용하여 SMB 액세스를 보호합니다
     entries:
     - title: SMB 액세스에 엑스포트 정책을 사용하는 방법

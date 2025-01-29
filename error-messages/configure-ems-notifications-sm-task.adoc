@@ -38,21 +38,6 @@ ONTAP 9.7 ~ 9.10.0
 SNMP traphosts만 구성합니다. ONTAP CLI로 다른 EMS 대상을 구성할 수 있다. 을 참조하십시오 link:index.html["EMS 구성 개요"].
 
 |===
-다음 절차를 수행할 수 있습니다.
-
-* <<add-ems-destination>>
-* <<create-ems-filter>>
-* <<edit-ems-destination>>
-* <<edit-ems-filter>>
-* <<delete-ems-destination>>
-* <<delete-ems-filter>>
-
-
-.관련 정보
-* link:https://docs.netapp.com/us-en/ontap-ems-9131/["ONTAP EMS 참조"^]
-* link:configure-snmp-traphosts-event-notifications-task.html["CLI를 사용하여 이벤트 알림을 수신하도록 SNMP traphosts를 구성합니다"]
-
-
 
 
 == EMS 이벤트 알림 대상을 추가합니다
@@ -225,4 +210,9 @@ NOTE: 시스템 정의 필터는 삭제할 수 없습니다.
 . 알림 관리 * 섹션에서 를 클릭한 image:../media/icon_kabob.gif["메뉴 옵션 아이콘"]다음 * 이벤트 대상 보기 * 를 클릭합니다.
 . 알림 관리 * 페이지에서 * 이벤트 필터 * 탭을 선택합니다.
 . 이벤트 필터 이름 옆에 있는 을 image:../media/icon_kabob.gif["메뉴 옵션 아이콘"]클릭한 다음 * 삭제 * 를 클릭합니다.
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-ems-9131/["ONTAP EMS 참조"^]
+* link:configure-snmp-traphosts-event-notifications-task.html["CLI를 사용하여 이벤트 알림을 수신하도록 SNMP traphosts를 구성합니다"]
 

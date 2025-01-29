@@ -10,8 +10,6 @@ entries:
     url: "/disks-aggregates/manage-local-tiers-overview-concept.html"
   - title: 로컬 계층(애그리게이트) 추가(생성)
     entries:
-    - title: 개요
-      url: "/disks-aggregates/add-local-tier-overview-task.html"
     - title: 로컬 계층 추가 워크플로우(애그리게이트)
       url: "/disks-aggregates/aggregate-creation-workflow-concept.html"
     - title: 로컬 계층에 필요한 디스크 또는 디스크 파티션 수 결정(애그리게이트)
@@ -24,8 +22,6 @@ entries:
       url: "/disks-aggregates/create-aggregates-manual-task.html"
   - title: 로컬 계층(애그리게이트) 사용 관리
     entries:
-    - title: 개요
-      url: "/disks-aggregates/manage-use-local-tiers-overview-task.html"
     - title: 로컬 계층 이름 바꾸기(집계)
       url: "/disks-aggregates/rename-local-tier-task.html"
     - title: 로컬 계층의 미디어 비용 설정(애그리게이트)
@@ -54,8 +50,6 @@ entries:
       url: "/disks-aggregates/commands-manage-aggregates-reference.html"
   - title: 용량(디스크)을 로컬 계층(애그리게이트)에 추가
     entries:
-    - title: 개요
-      url: "/disks-aggregates/add-capacity-local-tier-overview-task.html"
     - title: 로컬 계층에 용량을 추가하는 워크플로우(애그리게이트 확장)
       url: "/disks-aggregates/aggregate-expansion-workflow-concept.html"
     - title: 로컬 계층에 공간을 생성하는 방법(애그리게이트)
@@ -68,8 +62,6 @@ entries:
       url: "/disks-aggregates/correct-misaligned-spare-partitions-task.html"
 - title: 디스크를 관리합니다
   entries:
-  - title: 개요
-    url: "/disks-aggregates/manage-disks-overview-concept.html"
   - title: 핫 스페어 디스크의 작동 방식
     url: "/disks-aggregates/hot-spare-disks-work-concept.html"
   - title: 스페어 디스크 관리에 도움이 되는 스페어 부족 경고입니다
@@ -120,8 +112,6 @@ entries:
     url: "/disks-aggregates/commands-display-storage-shelves-reference.html"
 - title: RAID 구성을 관리합니다
   entries:
-  - title: 개요
-    url: "/disks-aggregates/manage-raid-configs-overview-concept.html"
   - title: 로컬 계층에 대한 기본 RAID 정책(애그리게이트)
     url: "/disks-aggregates/default-raid-policies-aggregates-concept.html"
   - title: 디스크의 RAID 보호 수준
@@ -138,8 +128,6 @@ entries:
     url: "/disks-aggregates/customize-size-raid-groups-task.html"
 - title: Flash Pool 로컬 계층 관리(애그리게이트)
   entries:
-  - title: 개요
-    url: "/disks-aggregates/manage-flash-pool-tiers-overview-concept.html"
   - title: Flash Pool 로컬 계층(애그리게이트) 캐싱 정책
     url: "/disks-aggregates/flash-pool-aggregate-caching-policies-concept.html"
   - title: Flash Pool 캐싱 정책 관리
