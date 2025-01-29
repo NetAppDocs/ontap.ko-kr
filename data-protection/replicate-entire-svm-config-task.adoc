@@ -21,7 +21,7 @@ SVM DR(재해 복구) 관계를 생성하여 하나의 SVM 구성을 다른 SVM 
 .이 작업에 대해
 이 워크플로우에서는 이미 기본 정책 또는 사용자 지정 복제 정책을 사용하고 있다고 가정합니다.
 
-ONTAP 9.9.1부터 미러 소산 정책을 사용할 경우 소스 및 타겟 SVM에 서로 다른 스냅샷 정책을 생성할 수 있으며, 소스의 스냅샷 복사본에 의해 대상의 스냅샷 복사본을 덮어쓰지 않습니다. 자세한 내용은 을 참조하십시오 link:snapmirror-svm-replication-concept.html["SnapMirror SVM 복제 이해"].
+ONTAP 9.9.1부터 미러 소산 정책을 사용할 때 소스 및 대상 SVM에 다른 스냅샷 정책을 생성할 수 있으며 대상의 스냅샷은 소스의 스냅샷으로 덮어쓰지 않습니다. 자세한 내용은 을 link:snapmirror-svm-replication-concept.html["SnapMirror SVM 복제 이해"]참조하십시오.
 
 대상에서 이 절차를 완료합니다. 예를 들어 소스 스토리지 VM에 SMB가 구성된 경우 새 보호 정책을 생성해야 하는 경우 정책을 생성하고 * Identity preserve * 옵션을 사용해야 합니다. 자세한 내용은 을 link:create-custom-replication-policy-concept.html["사용자 지정 데이터 보호 정책을 생성합니다"]참조하십시오.
 

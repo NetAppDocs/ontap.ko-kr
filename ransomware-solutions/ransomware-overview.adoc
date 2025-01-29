@@ -66,7 +66,7 @@ NetApp는 link:../ransomware-solutions/ransomware-protection.html["랜섬웨어 
 
 NetApp는 link:../ransomware-solutions/ransomware-bluexp-protection.html["BlueXP 랜섬웨어 보호"]단일 제어 플레인을 통해 운영 부담을 경감하여 엔드 투 엔드 워크로드 중심의 랜섬웨어 방어를 지능적으로 조정 및 실행하므로 클릭 한 번으로 중요 워크로드 데이터를 식별하고 보호하면서 잠재적 공격의 영향을 줄이고 며칠이 아닌 몇 분 내에 워크로드를 복구할 수 있으므로 중요한 워크로드 데이터를 보호하고 비용이 많이 드는 운영 중단을 최소화할 수 있습니다.
 
-데이터에 대한 무단 액세스를 보호하기 위한 기본 내장 ONTAP 솔루션에는 link:../multi-admin-verify/index.html["다중 관리자 인증(MAV)"]볼륨 삭제, 추가 관리 사용자 생성 또는 스냅샷 복사본 삭제와 같은 작업을 적어도 두 번째 지정된 관리자로부터 승인을 받은 후에만 수행할 수 있는 강력한 기능이 포함되어 있습니다. 따라서 손상되거나 악의적이거나 경험이 부족한 관리자가 원치 않는 변경 또는 데이터 삭제를 방지할 수 있습니다. 지정된 관리자 승인자를 원하는 수만큼 구성하여 스냅샷 복사본을 삭제할 수 있습니다.
+데이터에 대한 무단 액세스를 보호하기 위한 기본 내장 ONTAP 솔루션에는 link:../multi-admin-verify/index.html["다중 관리자 인증(MAV)"]볼륨 삭제, 추가 관리 사용자 생성 또는 스냅샷 삭제와 같은 작업을 적어도 두 번째 지정된 관리자로부터 승인을 받은 후에만 수행할 수 있는 강력한 기능이 있습니다. 따라서 손상되거나 악의적이거나 경험이 부족한 관리자가 원치 않는 변경 또는 데이터 삭제를 방지할 수 있습니다. 스냅샷을 삭제하기 전에 지정된 관리자 승인자를 원하는 수만큼 구성할 수 있습니다.
 
 
 NOTE: NetApp ONTAP는 https://www.netapp.com/pdf.html?item=/media/17055-tr4647pdf.pdf["다중 요소 인증(MFA)"^] System Manager와 SSH CLI 인증의 웹 기반 요구사항을 해결합니다.
@@ -77,7 +77,7 @@ NetApp의 랜섬웨어 방지 기능은 끊임없이 변화하는 위협 환경�
 * link:../ransomware-solutions/ransomware-active-iq.html["Digital Advisor 랜섬웨어 방어"]
 * link:../ransomware-solutions/ransomware-CI-workload-security.html["Cloud Insights 스토리지 워크로드 보안(CISWS)"]
 * link:../ransomware-solutions/ransomware-fpolicy.html["FPolicy를 참조하십시오"]
-* link:../ransomware-solutions/ransomware-snaplock-tamperproof-snapshots.html["SnapLock 및 변조 방지 스냅샷 복사본"]
+* link:../ransomware-solutions/ransomware-snaplock-tamperproof-snapshots.html["SnapLock 및 변조 방지 스냅샷"]
 
 
 

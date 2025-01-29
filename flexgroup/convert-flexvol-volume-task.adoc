@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: convert, flexvol, volume, flexgroup, conversion, flex vol, flex group, transitioned, 
 summary: ONTAP 9.7부터 데이터 복사본이나 추가 디스크 공간 없이 FlexVol 볼륨을 FlexGroup 볼륨으로 데이터 이동 없이 전환할 수 있습니다. 
 ---
-= FlexVol 볼륨을 FlexGroup 볼륨으로 변환합니다
+= ONTAP에서 FlexVol volume을 FlexGroup 볼륨으로 변환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,13 +23,13 @@ ONTAP 9.7부터 데이터 복사본이나 추가 디스크 공간 없이 FlexVol
 +
 ** 7MTT(ONTAP 9.7)를 사용하여 FlexVol 볼륨을 7-Mode에서 전환했습니다.
 +
-전환된 볼륨은 ONTAP 9.8을 기준으로 변환할 수 있습니다.
+전환된 볼륨은 ONTAP 9.8부터 변환될 수 있습니다.
 
-** FlexGroup 볼륨에서 아직 지원되지 않는 볼륨(예: SAN LUN, Windows NFS, SMB1, 스냅샷 이름 지정/자동 삭제, 가상 집합, SnapLock, 공간 SLO 또는 논리적 공간 적용/보고 자세한 내용은 을 link:supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다"]참조하십시오.
+** SAN LUN, Windows NFS, SMB1, 스냅샷 명명/자동 삭제, vmalign 세트, SnapLock, 공간 SLO, 논리적 공간 적용/보고 등 FlexGroup 볼륨에서 아직 지원되지 않는 볼륨에 대해 활성화되어 있습니다. 자세한 내용은 을 link:supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다"]참조하십시오.
 ** 변환하려는 FlexVol 볼륨이 위치한 SVM이 현재 SVM DR을 사용하고 있습니다.
 ** NetApp FlexClone 볼륨이 있고 FlexVol 볼륨이 상위 볼륨입니다. 변환 중인 볼륨은 상위 볼륨이거나 클론일 수 없습니다.
 ** 볼륨이 NetApp FlexCache 원본 볼륨입니다.
-** ONTAP 9.7 이하 버전의 경우 NetApp 스냅샷 복사본이 255개를 초과하지 않아야 합니다. ONTAP 9.8 이상에서는 1023개의 스냅샷 복사본이 지원됩니다.
+** ONTAP 9.7 이하 버전의 경우 NetApp 스냅샷이 255를 초과하지 않아야 합니다. ONTAP 9.8 이상에서는 1023개의 스냅샷이 지원됩니다.
 ** 스토리지 효율성이 지원됩니다. 이러한 설정은 비활성화해야 하며 변환 후 다시 활성화할 수 있습니다.
 ** 볼륨이 SnapMirror 관계의 소스이고 타겟이 아직 변환되지 않았습니다.
 ** 이 볼륨은 활성(정지되지 않음) SnapMirror 관계의 일부입니다.

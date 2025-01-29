@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/protect-task.html
 keywords: SM-BC, snapmirror business continuity, consistency group, remote protection, destination 
 summary: 비즈니스 연속성을 위해 보호를 구성하려면 ONTAP 소스 클러스터에서 LUN을 선택하고 일관성 그룹에 추가해야 합니다. 
 ---
-= SnapMirror 액티브 동기화로 보호
+= ONTAP에서 SnapMirror 활성 동기화를 사용하여 보호합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -43,7 +43,7 @@ SnapMirror 활성 동기화를 사용하여 비대칭 보호를 구성하려면 
 .단계
 ONTAP CLI 또는 System Manager를 사용하여 일관성 그룹을 구성할 수 있습니다.
 
-ONTAP 9.10.1부터 ONTAP은 추가 관리 유틸리티를 제공하는 일관성 그룹 엔드포인트 및 메뉴를 시스템 관리자에 제공합니다. ONTAP 9.10.1 이상을 사용하는 경우 를 참조하십시오 link:../consistency-groups/configure-task.html["일관성 그룹을 구성합니다"] 그런 다음 link:../consistency-groups/protect-task.html["보호 구성"] SnapMirror 활성 동기화 관계를 생성합니다.
+ONTAP 9.10.1부터 ONTAP는 System Manager에서 일관성 그룹 엔드포인트 및 메뉴를 제공하여 추가 관리 유틸리티를 제공합니다. ONTAP 9.10.1 이상을 사용 중인 경우  link:../consistency-groups/protect-task.html["보호 구성"]SnapMirror 활성 동기화 관계를 만들려면 다음을 참조하십시오.link:../consistency-groups/configure-task.html["일관성 그룹을 구성합니다"]
 
 
 IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.

@@ -32,7 +32,7 @@ NOTE: 볼륨을 다른 SVM에서 FlexClone 볼륨으로 클론 복제하는 것�
 
 +
 
-NOTE: 읽기-쓰기 상위 볼륨에서 읽기-쓰기 FlexClone 볼륨을 생성하는 동안에는 기본 스냅샷 복사본을 지정할 필요가 없습니다. 클론의 기본 스냅샷 복사본으로 사용될 특정 스냅샷 복사본의 이름을 지정하지 않은 경우 ONTAP에서 스냅샷 복사본을 생성합니다. 상위 볼륨이 데이터 보호 볼륨일 때 FlexClone 볼륨을 생성하기 위한 기본 스냅샷 복사본을 지정해야 합니다.
+NOTE: 읽기-쓰기 상위 볼륨에서 읽기-쓰기 FlexClone 볼륨을 생성하는 동안 기본 스냅샷을 지정할 필요가 없습니다. 클론의 기본 스냅샷으로 사용될 특정 스냅샷의 이름을 지정하지 않으면 ONTAP에서 스냅샷을 생성합니다. 상위 볼륨이 데이터 보호 볼륨인 경우 FlexClone 볼륨을 생성하기 위한 기본 스냅샷을 지정해야 합니다.
 
 
 
@@ -41,7 +41,7 @@ NOTE: 읽기-쓰기 상위 볼륨에서 읽기-쓰기 FlexClone 볼륨을 생성
 +
 '볼륨 클론 생성 - vserver vs0-FlexClone vol1_clone-type rw-parent-volume vol1'
 
-* 다음 명령을 실행하면 기본 스냅샷 복사본 snap1을 사용하여 상위 볼륨 DP_vol에서 데이터 보호 FlexClone 볼륨 vol_DP_clone을 생성합니다.
+* 다음 명령을 실행하면 기본 스냅샷 snap1을 사용하여 상위 볼륨 DP_vol에서 데이터 보호 FlexClone volume vol_dp_clone이 생성됩니다.
 +
 '볼륨 클론 생성 - vserver vs1-FlexClone vol_DP_clone-type DP-parent-volume DP_vol-parent-snap1'
 

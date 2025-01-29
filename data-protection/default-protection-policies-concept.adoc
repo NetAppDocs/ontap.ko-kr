@@ -44,7 +44,7 @@ ONTAP에는 데이터 보호 관계에 사용할 수 있는 몇 가지 기본 �
 | DailyBackup을 선택합니다 | 일일 규칙 및 일일 전송 일정이 포함된 볼트 정책 | 비동기식 
 
 
-| DPDefault(기본값) | 모든 Snapshot 복사본과 최신 액티브 파일 시스템을 미러링하기 위한 SnapMirror 비동기식 정책 | 비동기식 
+| DPDefault(기본값) | 모든 스냅샷과 최신 액티브 파일 시스템을 미러링하기 위한 SnapMirror 비동기식 정책 | 비동기식 
 
 
 | MirrorAllSnapshots을 선택합니다 | 모든 스냅샷과 최신 액티브 파일 시스템을 미러링하기 위한 SnapMirror 비동기식 정책 | 비동기식 

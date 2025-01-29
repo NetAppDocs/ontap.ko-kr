@@ -2,14 +2,14 @@
 :allow-uri-read: 
 
 
-. 볼륨의 스냅샷 복사본을 나열합니다.
+. 볼륨의 스냅샷을 나열합니다.
 +
 [source, cli]
 ----
 volume snapshot show -vserver <SVM> -volume <volume>
 ----
 +
-다음 예에서는 "vol1"의 스냅샷 복사본을 보여 줍니다.
+다음 예에서는 의 스냅샷을 `vol1` 보여 줍니다.
 
 +
 [listing]
@@ -29,7 +29,7 @@ vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 
 7 entries were displayed.
 ----
-. 스냅샷 복사본에서 볼륨 콘텐츠를 복원합니다.
+. 스냅숏에서 볼륨의 내용 복원:
 +
 [source, cli]
 ----

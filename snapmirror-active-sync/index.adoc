@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/index.html
 keywords: SM-BC, SMBC, failover, terms, benefits, snapmirror active sync, TR-4878 
 summary: SnapMirror 액티브 동기화를 사용하여 LUN이 있는 애플리케이션을 보호함으로써 애플리케이션이 투명하게 페일오버될 수 있도록 하여 재해 발생 시 비즈니스 연속성을 보장합니다. 
 ---
-= SnapMirror Active Sync 개요
+= ONTAP의 SnapMirror 활성 동기화 개요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -79,7 +79,7 @@ SnapMirror 활성 동기화 관계에서 보호되는 일관성 그룹의 일부
 이 ONTAP 중재자 상태 정보를 통해 클러스터는 서로 다른 유형의 장애를 구별하고 자동 페일오버를 수행할지 여부를 결정할 수 있습니다. ONTAP mediator는 ONTAP 클러스터(기본 및 보조) 모두와 함께 SnapMirror 액티브 동기화 쿼럼의 세 가지 파티 중 하나입니다. 합의에 도달하기 위해서는 정족수 중 적어도 두 당사자가 일정한 운영에 합의하여야 한다.
 
 
-NOTE: ONTAP 9.15.1부터는 System Manager에 두 클러스터의 SnapMirror 활성 동기화 관계 상태가 표시됩니다. System Manager의 두 클러스터 중 하나에서 ONTAP 중재자의 상태를 모니터링할 수도 있습니다. 이전 ONTAP 릴리즈에서는 소스 클러스터의 SnapMirror 활성 동기화 관계 상태가 System Manager에 표시됩니다.
+NOTE: ONTAP 9.15.1부터 System Manager는 두 클러스터의 SnapMirror 활성 동기화 관계 상태를 표시합니다. System Manager의 두 클러스터 중 하나에서 ONTAP 중재자의 상태를 모니터링할 수도 있습니다. 이전 ONTAP 릴리즈에서는 소스 클러스터의 SnapMirror 활성 동기화 관계 상태가 System Manager에 표시됩니다.
 
 .계획된 페일오버
 SnapMirror 활성 동기화 관계에서 복사본의 역할을 변경하기 위한 수동 작업입니다. 운영 사이트는 2차 사이트가 되고 2차 사이트는 1차 사이트가 됩니다.

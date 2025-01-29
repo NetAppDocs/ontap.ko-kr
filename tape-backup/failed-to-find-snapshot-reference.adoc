@@ -2,7 +2,7 @@
 permalink: tape-backup/failed-to-find-snapshot-reference.html 
 sidebar: sidebar 
 keywords: failed, find, snapshot, backup, unavailable 
-summary: 백업에 지정된 스냅샷 복사본을 사용할 수 없습니다. 
+summary: 백업에 지정된 스냅샷을 사용할 수 없습니다. 
 ---
 = 스냅샷을 찾지 못했습니다
 :allow-uri-read: 
@@ -17,10 +17,10 @@ summary: 백업에 지정된 스냅샷 복사본을 사용할 수 없습니다.
 
 * * 원인 *
 +
-백업에 지정된 스냅샷 복사본을 사용할 수 없습니다.
+백업에 지정된 스냅샷을 사용할 수 없습니다.
 
 * * 시정 조치 *
 +
-지정된 스냅샷 복사본을 사용할 수 있는지 확인합니다. 그렇지 않은 경우 올바른 스냅샷 복사본으로 재시도하십시오.
+지정된 스냅샷을 사용할 수 있는지 확인합니다. 그렇지 않은 경우 올바른 스냅샷을 사용하여 재시도하십시오.
 
 

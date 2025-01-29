@@ -61,7 +61,7 @@ snapmirror update -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destina
 +
 [NOTE]
 ====
-이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다. 소스와 대상에 공통 스냅샷 복사본이 없으면 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다.
+이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다. 소스와 대상에 공통 스냅샷이 없는 경우 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다.
 
 ====
 +

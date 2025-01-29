@@ -35,7 +35,7 @@ SnapMirror를 사용하여 재해 복구 및 기타 목적으로 WORM 파일을 
 
 대상과 소스가 다른 법적 구속이 있는 대상에는 재동기화가 허용되지 않습니다. 재동기화를 시도하기 전에 소스와 대상에서 동일한 법적 증거 자료 보관 또는 모든 법적 고지를 해제해야 합니다.
 
-에서 CLI를 사용하여 일관되지 않은 데이터를 캡처하기 위해 생성된 대상 볼륨의 잠긴 스냅샷 복사본을 소스에 복사할 수 있습니다 `snapmirror update -s snapshot` 명령. 복제된 스냅샷은 소스에서 계속 잠깁니다.
+다양한 데이터를 캡처하기 위해 생성된 대상 볼륨의 잠긴 스냅샷은 CLI를 사용하여 소스에 복사할 수 있습니다 `snapmirror update -s snapshot`. 복제된 스냅샷은 소스에서 계속 잠깁니다.
 
 * SVM 데이터 보호 관계는 지원되지 않습니다.
 * 로드 공유 데이터 보호 관계는 지원되지 않습니다.
@@ -90,7 +90,7 @@ cluster2::> volume create -vserver SVM2 -volume dstvolB -aggregate node01_aggr -
 ----
 . 대상 SVM에서 SnapMirror 정책을 생성합니다.
 +
-'* SnapMirror 정책 create-vserver_SVM_name_-policy_policy_name_*'
+`snapmirror policy create -vserver _SVM_name_ -policy _policy_name_`
 
 +
 다음 명령을 실행하면 SVM 전체의 정책 'VM1-mirror'가 생성됩니다.
@@ -114,7 +114,7 @@ SVM2::> job schedule cron create -name weekendcron -dayofweek "Saturday, Sunday"
 ----
 . 대상 SVM에서 SnapMirror 관계 생성:
 +
-'* SnapMirror create-source-path_source_path_-destination-path_destination_path_-type XDP|policy_policy_name_-schedule_schedule_name_*'
+`snapmirror create -source-path _source_path_ -destination-path _destination_path_ -type XDP|DP -policy _policy_name_ -schedule _schedule_name_`
 
 +
 다음 명령을 실행하면 'VM1'의 소스 볼륨 'rcvolA'와 'VM2'의 대상 볼륨 'dstvolB'의 SnapMirror 관계가 생성되고 정책 'VM1-mirror'와 스케줄 'weekendcron'이 할당됩니다.
@@ -130,10 +130,10 @@ NOTE: XDP 유형은 ONTAP 9.5 이상에서 사용할 수 있습니다. ONTAP 9.4
 
 . 대상 SVM에서 SnapMirror 관계를 초기화합니다.
 +
-'* SnapMirror initialize-destination-path_destination_path_*'
+`snapmirror initialize -destination-path _destination_path_`
 
 +
-초기화 프로세스는 대상 볼륨에 대해 _baseline 전송_을 수행합니다. SnapMirror는 소스 볼륨의 스냅샷 복사본을 만든 다음 해당 복사본과 이 복사본이 대상 볼륨에 참조하는 모든 데이터 블록을 전송합니다. 소스 볼륨의 다른 스냅샷 복사본도 타겟 볼륨으로 전송합니다.
+초기화 프로세스는 대상 볼륨에 대해 _baseline 전송_을 수행합니다. SnapMirror는 소스 볼륨의 스냅샷을 만든 다음 복사본과 이 복사본이 타겟 볼륨에 참조하는 모든 데이터 블록을 전송합니다. 또한 소스 볼륨의 다른 모든 스냅샷을 대상 볼륨으로 전송합니다.
 
 +
 다음 명령을 실행하면 'VM1'의 소스 볼륨 'rcvolA'와 'VM2'의 대상 볼륨 'dstvolB'의 관계가 초기화됩니다.

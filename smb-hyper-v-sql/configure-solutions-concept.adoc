@@ -25,7 +25,7 @@ Hyper-V 서버는 Windows 2012 Server 이상에서 구성해야 합니다. 독�
 
 ====
 * Microsoft 클러스터 및 Hyper-V 서버 생성에 대한 자세한 내용은 Microsoft 웹 사이트를 참조하십시오.
-* SnapManager for Hyper-V는 호스트 기반 애플리케이션으로, SMB 구성을 통해 Hyper-V와 통합되도록 설계된 빠른 스냅샷 복사본 기반 백업 서비스를 지원합니다.
+* SnapManager for Hyper-V는 SMB 구성을 통한 Hyper-V와 통합되도록 설계된 신속한 스냅샷 기반 백업 서비스를 지원하는 호스트 기반 애플리케이션입니다.
 +
 SMB 구성을 통한 Hyper-V에서 SnapManager를 사용하는 방법에 대한 자세한 내용은 _SnapManager for Hyper-V 설치 및 관리 가이드 _ 를 참조하십시오.
 
@@ -43,7 +43,7 @@ SQL Server는 Windows 2012 Server 이상에서 설치 및 구성해야 합니다
 
 ====
 * Microsoft 클러스터 만들기 및 SQL Server 설치 및 구성에 대한 자세한 내용은 Microsoft 웹 사이트를 참조하십시오.
-* Microsoft SQL Server용 SnapCenter 플러그인은 SMB 구성을 통해 SQL Server와 통합되도록 설계된, 신속한 Snapshot 복사본 기반 백업 서비스를 지원하는 호스트 기반 애플리케이션입니다.
+* Microsoft SQL Server용 SnapCenter 플러그인은 SMB 구성을 통해 SQL Server와 통합하도록 설계된 호스트 기반 애플리케이션으로, 신속한 스냅샷 기반 백업 서비스를 지원합니다.
 +
 Microsoft SQL Server용 SnapCenter 플러그인 사용에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/snapcenter/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html["Microsoft SQL Server용 SnapCenter 플러그인"] 문서화:
 

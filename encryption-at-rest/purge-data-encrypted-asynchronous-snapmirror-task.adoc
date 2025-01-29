@@ -42,32 +42,30 @@ NOTE: SAN 호스트에서 보안 제거를 수행하려면 제거할 파일이 �
 +
 SnapMirror 비동기식 관계의 각 볼륨에 대해 이 단계를 반복합니다.
 
-. 안전하게 제거할 파일이 스냅샷 복사본에 있는 경우 다음과 같이 스냅샷 복사본을 삭제합니다.
+. 안전하게 제거할 파일이 스냅샷에 있는 경우 스냅샷을 삭제합니다.
 +
 `snapshot delete -vserver _SVM_name_ -volume _volume_name_ -snapshot`
 
-. 안전하게 제거할 파일이 기본 스냅샷 복사본에 있는 경우 다음을 수행합니다.
+. 안전하게 제거할 파일이 기본 스냅샷에 있는 경우 다음을 수행합니다.
 +
-.. SnapMirror 비동기식 관계에서 타겟 볼륨에 스냅샷 복사본을 생성합니다.
+.. SnapMirror 비동기식 관계에서 대상 볼륨에 스냅샷을 생성합니다.
 +
 `volume snapshot create -snapshot snapshot_name -vserver _SVM_name_ -volume _volume_name_`
 
-.. SnapMirror를 업데이트하여 기본 스냅샷 복사본을 다음 단계로 이동합니다.
+.. SnapMirror를 업데이트하여 기본 스냅샷을 앞으로 이동합니다.
 +
 `snapmirror update -source-snapshot _snapshot_name_ -destination-path _destination_path_`
 
 +
 SnapMirror 비동기식 관계의 각 볼륨에 대해 이 단계를 반복합니다.
 
-.. (a) 및 (b) 단계를 기본 스냅샷 복사본 수에 1을 더한 값과 같게 반복합니다.
+.. 기본 스냅샷 수에 1을 더한 것과 같은 (a) 및 (b)단계를 반복합니다.
 +
-예를 들어, 기본 Snapshot 복사본이 2개인 경우 (a) 및 (b) 단계를 세 번 반복해야 합니다.
+예를 들어 기본 스냅샷이 두 개 있는 경우 (a) 및 (b) 단계를 세 번 반복해야 합니다.
 
-.. 기본 스냅샷 복사본이 있는지 확인:
- 를 누릅니다
+.. 기본 스냅샷이 있는지 확인합니다. +
 `snapshot show -vserver _SVM_name_ -volume _volume_name_`
-.. 기본 스냅샷 복사본을 삭제합니다.
- 를 누릅니다
+.. 기본 스냅샷 삭제: +
 `snapshot delete -vserver _svm_name_ -volume _volume_name_ -snapshot snapshot`
 
 

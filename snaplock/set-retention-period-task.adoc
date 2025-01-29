@@ -291,7 +291,7 @@ EBR은 기존 WORM 파일의 보존 기간을 연장하려는 경우에 편리�
 .단계
 . EBR 정책 생성:
 +
-``SnapLock 이벤트 보존 정책 생성 - vserver_SVM_name_-name_policy_name_-retention-period_retention_period_ *’
+`snaplock event-retention policy create -vserver _SVM_name_ -name _policy_name_ -retention-period _retention_period_`
 
 +
 다음 명령은 VS1, 보존 기간 10년을 포함한 EBR 정책 'EMPLOYEE_EXIT'를 생성한다.
@@ -303,7 +303,7 @@ cluster1::>snaplock event-retention policy create -vserver vs1 -name employee_ex
 ----
 . EBR 정책 적용:
 +
-'* SnapLock 이벤트-보존 적용 - vserver_SVM_name_-name_policy_name_-volume_volume_name_-path_path_name_*'
+`snaplock event-retention apply -vserver _SVM_name_ -name _policy_name_ -volume _volume_name_ -path _path_name_`
 
 +
 다음 명령을 실행하면 VS1 디렉토리에 있는 모든 파일에 VS1 의 EBR 정책 'EMPLOYEE_EXIT'가 적용됩니다.

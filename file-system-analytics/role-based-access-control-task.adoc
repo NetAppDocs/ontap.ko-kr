@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: rbac, file system analytics, control, pre-defined, admin-no-fsa 
 summary: 사용 중인 ONTAP 버전에 따라 파일 시스템 분석을 사용하기 위해 사용자 지정 RBAC 역할을 생성해야 할 수 있습니다. 
 ---
-= 파일 시스템 분석을 통한 역할 기반 액세스 제어
+= ONTAP의 파일 시스템 분석을 통해 역할 기반 액세스 제어
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 9.12.1부터 ONTAP에는 라는 사전 정의된 역할 기반 액세스 제어(RBAC) 역할이 포함되어 있습니다 `admin-no-fsa`. 를 클릭합니다 `admin-no-fsa` 역할은 관리자 수준의 권한을 부여하지만 사용자가 와 관련된 작업을 수행할 수 없습니다 `files` ONTAP CLI, REST API 및 System Manager의 엔드포인트(예: 파일 시스템 분석)
+ONTAP 9.12.1부터 ONTAP에는 이라는 미리 정의된 RBAC(역할 기반 액세스 제어) 역할이 포함되어 `admin-no-fsa` 있습니다. 이 `admin-no-fsa` 역할은 관리자 수준의 Privileges를 허용하지만 사용자가 ONTAP CLI, REST API 및 System Manager에서 엔드포인트(예: 파일 시스템 분석)와 관련된 작업을 수행할 수 없게 `files` 합니다.
 
 에 대한 자세한 내용은 를 참조하십시오 `admin-no-fsa` 역할, 을 참조하십시오 xref:../authentication/predefined-roles-cluster-administrators-concept.html[클러스터 관리자를 위한 사전 정의된 역할].
 
@@ -21,7 +21,7 @@ ONTAP 9.12.1 이전 버전의 ONTAP를 사용하는 경우 파일 시스템 분�
 ====
 .시스템 관리자
 --
-ONTAP 9.12.1부터는 System Manager를 사용하여 파일 시스템 분석에 대한 RBAC 권한을 구성할 수 있습니다.
+ONTAP 9.12.1부터 시스템 관리자를 사용하여 파일 시스템 분석에 대한 RBAC 권한을 구성할 수 있습니다.
 
 .단계
 . 클러스터 > 설정 * 을 선택합니다. 보안 * 에서 * 사용자 및 역할 * 로 이동하고 를 선택합니다 image:icon_arrow.gif["화살표 아이콘"].

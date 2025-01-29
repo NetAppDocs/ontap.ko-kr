@@ -2,24 +2,24 @@
 permalink: data-protection/restore-single-file-snapshot-task.html 
 sidebar: sidebar 
 keywords: restore, single file, snapshot copy 
-summary: volume snapshot restore-file 명령을 사용하여 스냅샷 복사본에서 단일 파일 또는 LUN을 복원할 수 있습니다. 기존 파일을 바꾸지 않으려는 경우 상위 읽기-쓰기 볼륨의 다른 위치로 파일을 복원할 수 있습니다. 
+summary: volume snapshot restore -file 명령을 사용하여 스냅샷에서 단일 파일 또는 LUN을 복원할 수 있습니다. 기존 파일을 바꾸지 않으려는 경우 상위 읽기-쓰기 볼륨의 다른 위치로 파일을 복원할 수 있습니다. 
 ---
-= ONTAP로 스냅샷 복사본에서 단일 파일 복원
+= ONTAP를 사용하여 스냅샷에서 단일 파일을 복구합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-'volume snapshot restore-file' 명령을 사용하여 스냅샷 복사본에서 단일 파일 또는 LUN을 복원할 수 있습니다. 기존 파일을 바꾸지 않으려는 경우 상위 읽기-쓰기 볼륨의 다른 위치로 파일을 복원할 수 있습니다.
+명령을 사용하여 스냅샷에서 단일 파일 또는 LUN을 복원할 수 `volume snapshot restore-file` 있습니다. 기존 파일을 바꾸지 않으려는 경우 상위 읽기-쓰기 볼륨의 다른 위치로 파일을 복원할 수 있습니다.
 
 .이 작업에 대해
-기존 LUN을 복원하는 경우 LUN 클론이 생성되고 스냅샷 복사본 형태로 백업됩니다. 복원 작업 중에 LUN에서 읽거나 LUN에 쓸 수 있습니다.
+기존 LUN을 복구하는 경우 LUN 클론이 생성되고 스냅샷 형태로 백업됩니다. 복원 작업 중에 LUN에서 읽거나 LUN에 쓸 수 있습니다.
 
 스트림이 있는 파일은 기본적으로 복원됩니다.
 
 .단계
-. 볼륨의 스냅샷 복사본을 나열합니다.
+. 볼륨의 스냅샷을 나열합니다.
 +
 'volume snapshot show -vserver_SVM_-volume_volume_'
 
@@ -27,7 +27,7 @@ summary: volume snapshot restore-file 명령을 사용하여 스냅샷 복사본
 에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-다음 예에서는 "vol1"의 스냅샷 복사본을 보여 줍니다.
+다음 예는 의 스냅샷을 `vol1` 보여 줍니다.
 
 +
 [listing]
@@ -47,7 +47,7 @@ vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 
 7 entries were displayed.
 ----
-. 스냅샷 복사본에서 파일 복원:
+. 스냅샷에서 파일 복구:
 +
 '볼륨 스냅샷 복원 - 파일 - vserver_SVM_-volume_volume_-snapshot_snapshot_-path_file_path_-restore-path_destination_path_'
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: s3-snapshots/index.html 
 keywords: s3 snapshots, S3 Snapshot copy overview, what is S3 snapshot, can you create S3 snapshots 
-summary: S3 Snapshot 기술을 사용하여 S3 버킷의 시점 백업을 생성합니다. 
+summary: S3 스냅샷 기술을 사용하여 S3 버킷의 시점 백업을 생성합니다. 
 ---
 = S3 스냅샷 개요
 :hardbreaks:

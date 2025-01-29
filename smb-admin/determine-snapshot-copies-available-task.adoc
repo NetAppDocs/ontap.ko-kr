@@ -2,31 +2,31 @@
 permalink: smb-admin/determine-snapshot-copies-available-task.html 
 sidebar: sidebar 
 keywords: view, snapshot, copies, copy, previous, version, enable, policy, applied, apply, contain, share, previous, version, access, determine whether snapshot copies are available for previous versions use 
-summary: 활성화된 스냅샷 정책이 공유가 포함된 볼륨에 적용되고 볼륨 구성에서 스냅샷 복사본에 액세스할 수 있는 경우에만 이전 버전 탭에서 스냅샷 복사본을 볼 수 있습니다. 이전 버전 액세스 권한을 가진 사용자를 지원할 때 스냅샷 복사본의 가용성을 확인하는 것이 좋습니다. 
+summary: 활성화된 스냅샷 정책이 공유를 포함하는 볼륨에 적용되고 볼륨 구성에서 스냅샷에 대한 액세스를 허용하는 경우에만 이전 버전 탭에서 스냅샷을 볼 수 있습니다. 스냅샷 가용성을 확인하는 것은 이전 버전 액세스 권한을 가진 사용자를 지원할 때 유용합니다. 
 ---
-= 이전 버전에서 사용할 수 있는 스냅샷 복사본이 있는지 확인합니다
+= 스냅샷을 이전 버전에서 사용할 수 있는지 여부를 결정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-활성화된 스냅샷 정책이 공유가 포함된 볼륨에 적용되고 볼륨 구성에서 스냅샷 복사본에 액세스할 수 있는 경우에만 이전 버전 탭에서 스냅샷 복사본을 볼 수 있습니다. 이전 버전 액세스 권한을 가진 사용자를 지원할 때 스냅샷 복사본의 가용성을 확인하는 것이 좋습니다.
+활성화된 스냅샷 정책이 공유를 포함하는 볼륨에 적용되고 볼륨 구성에서 스냅샷에 대한 액세스를 허용하는 경우에만 이전 버전 탭에서 스냅샷을 볼 수 있습니다. 스냅샷 가용성을 확인하는 것은 이전 버전 액세스 권한을 가진 사용자를 지원할 때 유용합니다.
 
 .단계
-. 공유 데이터가 상주하는 볼륨에 자동 스냅샷 복사본이 활성화되어 있는지 여부와 클라이언트가 스냅샷 디렉토리에 액세스할 수 있는지 여부를 확인합니다. 'volume show -vserver -name -volume volume -name -vserver 필드, 볼륨, snapdir -access, snapshot-policy, snapshot-count'
+. 공유 데이터가 있는 볼륨에 자동 스냅샷이 설정되어 있는지 여부와 클라이언트가 스냅샷 디렉토리에 액세스할 수 있는지 여부를 확인합니다. `volume show -vserver vserver-name -volume volume-name -fields vserver,volume,snapdir-access,snapshot-policy,snapshot-count`
 +
-출력에는 볼륨과 연관된 스냅샷 정책, 클라이언트 스냅샷 디렉토리 액세스 설정 여부 및 사용 가능한 스냅샷 복사본 수가 표시됩니다.
+이 출력에는 볼륨과 연결된 스냅샷 정책, 클라이언트 스냅샷 디렉토리 액세스 사용 여부 및 사용 가능한 스냅샷 수가 표시됩니다.
 
-. 연결된 스냅샷 정책이 'volume snapshot policy show-policy policy-name'으로 설정되어 있는지 확인합니다
-. 사용 가능한 스냅샷 복사본 'volume snapshot show-volume volume_name'을 나열합니다
+. 연결된 스냅샷 정책이 설정되었는지 확인합니다. `volume snapshot policy show -policy policy-name`
+. 사용 가능한 스냅샷 나열: `volume snapshot show -volume volume_name`
 +
-스냅샷 정책 및 스냅샷 일정 구성 및 관리에 대한 자세한 내용은 을 참조하십시오 link:../data-protection/index.html["데이터 보호"].
+스냅샷 정책 및 스냅샷 스케줄을 구성하고 관리하는 방법에 대한 자세한 내용은 을 참조하십시오.link:../data-protection/index.html["데이터 보호"]
 
 
 
 .예
-다음 예에서는 공유 데이터 및 "data1"의 사용 가능한 스냅샷 복사본이 포함된 "data1"이라는 볼륨과 연결된 스냅샷 정책에 대한 정보를 표시합니다.
+다음 예에서는 "'data1""의 공유 데이터 및 사용 가능한 스냅숏을 포함하는 "'data1" 볼륨과 연관된 스냅숏 정책에 대한 정보를 표시합니다.
 
 [listing]
 ----
@@ -64,6 +64,6 @@ vs1      data1
                  hourly.2012-12-23_1905    valid       184KB     0%    0%
 ----
 .관련 정보
-xref:create-snapshot-config-previous-versions-access-task.adoc[이전 버전 액세스를 사용하도록 스냅샷 구성을 생성합니다]
+xref:create-snapshot-config-previous-versions-access-task.adoc[스냅샷 구성을 생성하여 이전 버전 액세스를 설정합니다]
 
 link:../data-protection/index.html["데이터 보호"]

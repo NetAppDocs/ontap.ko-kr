@@ -2,16 +2,16 @@
 permalink: san-admin/restore-all-luns-volume-snapshot-copy-task.html 
 sidebar: sidebar 
 keywords: restore, all, luns in a volume, from, snapshot copy 
-summary: 볼륨 스냅샷 복원 명령을 사용하여 스냅샷 복사본에서 지정된 볼륨의 모든 LUN을 복원할 수 있습니다. 
+summary: volume snapshot restore 명령을 사용하여 스냅샷에서 지정된 볼륨의 모든 LUN을 복원할 수 있습니다. 
 ---
-= 스냅샷 복사본에서 볼륨의 모든 LUN을 복원합니다
+= 스냅샷에서 볼륨의 모든 LUN을 복구합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-"volume snapshot restore" 명령을 사용하여 스냅샷 복사본에서 지정된 볼륨의 모든 LUN을 복원할 수 있습니다.
+명령을 사용하여 스냅샷에서 지정된 볼륨의 모든 LUN을 복원할 수 `volume snapshot restore` 있습니다.
 
 .단계
 . 호스트에서 LUN에 대한 모든 호스트 액세스를 중지합니다.
@@ -23,7 +23,7 @@ summary: 볼륨 스냅샷 복원 명령을 사용하여 스냅샷 복사본에�
 +
 'LUN 매핑 삭제 - vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
 
-. 볼륨을 복원할 스냅샷 복사본을 확인합니다.
+. 볼륨을 복원할 스냅샷을 결정합니다.
 +
 'volume snapshot show -vserver_vserver_name_-volume_volume_name_'
 

@@ -4,10 +4,8 @@ permalink: anti-ransomware/switch-learning-to-active-mode.html
 keywords: ransomware, arp, mode, switch, active, learning, autonomous ransomware protection 
 summary: 'ARP(Autonomous Ransomware Protection) 9.15.1 이하의 경우 ARP 지원 볼륨을 학습 모드에서 활성 모드로 수동 또는 자동으로 전환합니다.' 
 ---
-= 학습 기간 후 ARP 활성 모드로 전환합니다
+= 학습 기간 후에 ONTAP ARP에서 활성 모드로 전환합니다
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

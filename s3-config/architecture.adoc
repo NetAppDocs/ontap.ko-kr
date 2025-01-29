@@ -23,7 +23,7 @@ image:s3-svm-layout.png["S3 SVM 버킷 액세스"]
 ====
 버킷을 FabricPool 엔드포인트로 사용하는 것을 포함하여 S3 애플리케이션에만 사용할 경우 기본 FlexGroup 볼륨은 S3 프로토콜만 지원합니다.
 
-ONTAP 9.12.1부터는 NAS 프로토콜을 사용하도록 미리 구성된 에서도 S3 프로토콜을 활성화할 수 link:../s3-multiprotocol/index.html["멀티프로토콜 NAS 볼륨"] 있습니다. 멀티프로토콜 NAS 볼륨에서 S3 프로토콜이 활성화된 경우 클라이언트 애플리케이션은 NFS, SMB 및 S3를 사용하여 데이터를 읽고 쓸 수 있습니다.
+ONTAP 9.12.1부터 NAS 프로토콜을 사용하도록 미리 구성된 에서도 S3 프로토콜을 활성화할 수 link:../s3-multiprotocol/index.html["멀티프로토콜 NAS 볼륨"]있습니다. 멀티프로토콜 NAS 볼륨에서 S3 프로토콜이 활성화된 경우 클라이언트 애플리케이션은 NFS, SMB 및 S3를 사용하여 데이터를 읽고 쓸 수 있습니다.
 
 ====
 

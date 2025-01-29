@@ -88,7 +88,7 @@ NOTE: '-source-path' 및 '-destination-path' 옵션에서 SVM 이름 뒤에 콜�
 
 +
 
-NOTE: 소스 및 타겟에 공통 스냅샷 복사본이 존재하지 않으면 명령이 실패합니다. '스냅샷 초기화'를 사용하여 관계를 다시 초기화합니다.
+NOTE: 소스와 대상에 공통 스냅샷이 없는 경우 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다.
 
 +
 다음 예에서는 원래 소스 SVM, svm1, 데이터를 제공하는 SVM, svm_backup의 관계를 반전시킵니다.

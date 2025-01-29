@@ -2,32 +2,32 @@
 permalink: smb-admin/create-snapshot-config-previous-versions-access-task.html 
 sidebar: sidebar 
 keywords: previous, version, functionality, available, client, access, snapshot, copies, copy, enable, snapshot, exist, configuration, requirement, create a snapshot configuration to enable previous versions access 
-summary: 스냅샷 복사본에 대한 클라이언트 액세스가 설정되어 있고 스냅샷 복사본이 있다면 이전 버전 기능은 항상 사용할 수 있습니다. 스냅샷 복사본 구성이 이러한 요구사항을 충족하지 않으면 이를 위한 스냅샷 복사본 구성을 생성할 수 있습니다. 
+summary: 스냅샷에 대한 클라이언트 액세스가 설정되어 있고 스냅샷이 있는 경우 이전 버전 기능을 항상 사용할 수 있습니다. 스냅샷 구성이 이러한 요구 사항을 충족하지 않는 경우 를 충족하는 스냅샷 구성을 생성할 수 있습니다. 
 ---
-= ONTAP에서 이전 버전에 액세스할 수 있도록 스냅샷 구성을 생성합니다
+= ONTAP에서 이전 버전을 액세스할 수 있도록 스냅샷 구성을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-스냅샷 복사본에 대한 클라이언트 액세스가 설정되어 있고 스냅샷 복사본이 있다면 이전 버전 기능은 항상 사용할 수 있습니다. 스냅샷 복사본 구성이 이러한 요구사항을 충족하지 않으면 이를 위한 스냅샷 복사본 구성을 생성할 수 있습니다.
+스냅샷에 대한 클라이언트 액세스가 설정되어 있고 스냅샷이 있는 경우 이전 버전 기능을 항상 사용할 수 있습니다. 스냅샷 구성이 이러한 요구 사항을 충족하지 않는 경우 를 충족하는 스냅샷 구성을 생성할 수 있습니다.
 
 .단계
-. 이전 버전 액세스를 허용할 공유가 포함된 볼륨에 연결된 스냅샷 정책이 없는 경우 스냅샷 정책을 볼륨에 연결하고 '볼륨 수정' 명령을 사용하여 활성화합니다.
+. 이전 버전 액세스를 허용하려는 공유가 포함된 볼륨에 연결된 스냅샷 정책이 없는 경우 스냅샷 정책을 볼륨에 연결하고 명령을 사용하여 활성화합니다. `volume modify`
 +
 에 대한 자세한 내용은 `volume modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. "volume modify" 명령을 사용하여 스냅샷 복사본에 대한 액세스를 설정하고 "-snap-dir" 옵션을 "true"로 설정합니다.
+. 명령을 사용하여 옵션을 로 `true` 설정하여 `-snap-dir` 스냅샷에 대한 액세스를 `volume modify` 설정합니다.
 +
 에 대한 자세한 내용은 `volume modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. "volume show" 및 "volume snapshot policy show" 명령을 사용하여 스냅샷 정책이 활성화되어 있고 스냅샷 디렉토리에 대한 액세스가 활성화되어 있는지 확인합니다.
+. 및 `volume snapshot policy show` 명령을 사용하여 스냅샷 정책이 설정되어 있고 스냅샷 디렉토리에 대한 액세스가 설정되어 있는지 `volume show` 확인합니다.
 +
 및 `volume snapshot policy show` 에 대한 자세한 `volume show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+show["ONTAP 명령 참조입니다"^]참조하십시오.
 
 +
-스냅샷 정책 및 스냅샷 일정 구성 및 관리에 대한 자세한 내용은 을 참조하십시오 link:../data-protection/index.html["데이터 보호"].
+스냅샷 정책 및 스냅샷 스케줄을 구성하고 관리하는 방법에 대한 자세한 내용은 을 참조하십시오.link:../data-protection/index.html["데이터 보호"]
 
 
 

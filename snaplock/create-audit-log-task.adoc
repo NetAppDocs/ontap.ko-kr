@@ -50,7 +50,7 @@ xref:create-snaplock-volume-task.adoc[SnapLock 볼륨을 생성합니다]
 
 . 감사 로깅을 위해 SVM 구성:
 +
-`*snaplock log create -vserver _SVM_name_ -volume _snaplock_volume_name_ -max-log-size _size_ -retention-period _default_retention_period_*`
+`snaplock log create -vserver _SVM_name_ -volume _snaplock_volume_name_ -max-log-size _size_ -retention-period _default_retention_period_`
 
 +
 [NOTE]

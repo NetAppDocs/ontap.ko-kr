@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: supported, unsupported, features, flexcache, volumes 
 summary: FlexCache 원본 볼륨과 FlexCache 볼륨에 지원되는 기능 및 프로토콜은 다양합니다. 
 ---
-= FlexCache 볼륨에 대해 지원 및 지원되지 않는 기능입니다
+= ONTAP에서 FlexCache 볼륨에 지원되는 기능 및 지원되지 않는 기능
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -389,7 +389,7 @@ SnapRestore
 
 
  a| 
-Snapshot 복사본
+스냅샷 수
  a| 
 예
  a| 

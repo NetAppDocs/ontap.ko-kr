@@ -33,7 +33,7 @@ https://docs.netapp.com/us-en/ontap-system-manager-classic/peering/index.html["�
 
 대상 볼륨의 이름은 '_source_volume_name_dst_' 형식입니다. 기존 이름과 충돌하는 경우 명령이 볼륨 이름에 번호를 추가합니다. 명령 옵션에서 접두사 및/또는 접미사를 지정할 수 있습니다. 접미사는 시스템 제공 st 접미사를 대체합니다.
 
-ONTAP 9.3 이전 버전에서는 타겟 볼륨에 최대 251개의 스냅샷 복사본이 포함될 수 있습니다. ONTAP 9.4 이상에서 타겟 볼륨에는 최대 1019개의 스냅샷 복사본이 포함될 수 있습니다.
+ONTAP 9.3 이하 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 포함할 수 있습니다. ONTAP 9.4 이상에서는 대상 볼륨에 최대 1019개의 스냅샷을 포함할 수 있습니다.
 
 [NOTE]
 ====
@@ -99,7 +99,7 @@ cluster_dst::> snapmirror protect -path-list svm1:volA, svm1:volB -destination-v
 +
 [NOTE]
 ====
-SnapVault 및 유니파이드 복제 정책의 경우, 마지막으로 전송된 스냅샷 복사본의 복사본을 대상에 생성하기 위한 일정을 정의하는 것이 유용할 수 있습니다. 자세한 내용은 을 참조하십시오 link:define-schedule-create-local-copy-destination-task.html["대상에 로컬 복제본을 생성하기 위한 스케줄 정의"].
+SnapVault 및 통합 복제 정책의 경우 대상에서 마지막으로 전송된 스냅샷의 복제본을 생성하기 위한 일정을 정의하는 것이 유용할 수 있습니다. 자세한 내용은 을 link:define-schedule-create-local-copy-destination-task.html["대상에 로컬 복제본을 생성하기 위한 스케줄 정의"]참조하십시오.
 
 ====
 

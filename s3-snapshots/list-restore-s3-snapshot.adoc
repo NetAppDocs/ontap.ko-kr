@@ -56,7 +56,7 @@ S3 스냅샷은 S3 클라이언트에 스냅샷 버킷으로 표시됩니다. �
 S3 스냅샷 버킷은 기본 버킷의 액세스 정책을 상속하며 읽기 전용 작업만 지원합니다. 기본 버킷에 액세스할 수 있는 권한이 있는 경우 `GetObject`, , `GetObjectTagging` `ListObjects`, 등의 읽기 전용 S3 API 작업을 S3 스냅샷 버킷에서 수행할 수도 있습니다 `HeadObject`. `ListObjectVersions`, `GetObjectAcl`, 및 `CopyObject`.
 
 
-NOTE: 이 `CopyObject` 작업은 S3 스냅샷 버킷이 소스 버킷의 스냅샷 복사본인 경우에만 지원되며, 스냅샷의 스토리지 타겟인 경우에는 지원되지 않습니다.
+NOTE: 이 `CopyObject` 작업은 S3 스냅샷 버킷이 소스 버킷의 스냅샷인 경우에만 지원되며, 스냅샷의 스토리지 타겟인 경우에는 지원되지 않습니다.
 
 이러한 작업에 대한 자세한 내용은 을 link:../s3-config/ontap-s3-supported-actions-reference.html["ONTAP S3가 지원되는 작업"]참조하십시오.
 

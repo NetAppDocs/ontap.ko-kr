@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/volume-move-snapshot-task.html 
 keywords: SM-BC, SMBC, volume move, troubleshooting, consistency group, Snapshot copy, snapmirror active sync 
-summary: 볼륨 이동 작업 후 볼륨 이동 작업의 참조 스냅샷 복사본이 SnapMirror 관계에 대한 최신 참조로 표시됩니다. 
+summary: 볼륨 이동 작업 후 볼륨 이동 작업에 대한 참조 스냅샷이 SnapMirror 관계에 대한 최신 스냅샷으로 표시됩니다. 
 ---
-= 볼륨 이동 참조 스냅샷 복사본이 최신 로 표시됩니다
+= 볼륨 이동 참조 스냅샷이 최신 스냅샷으로 표시됩니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,9 +15,9 @@ summary: 볼륨 이동 작업 후 볼륨 이동 작업의 참조 스냅샷 복�
 
 .문제:
 [role="lead"]
-일관성 그룹 볼륨에서 볼륨 이동 작업을 수행한 후 볼륨 이동 참조 스냅샷 복사본이 SnapMirror 관계에 대한 최신 내용으로 잘못 표시될 수 있습니다.
+정합성 보장 그룹 볼륨에서 볼륨 이동 작업을 수행한 후 볼륨 이동 참조 스냅샷이 SnapMirror 관계의 최신 스냅샷으로 잘못 표시될 수 있습니다.
 
-다음 명령을 사용하여 최신 스냅샷 복사본을 볼 수 있습니다.
+다음 명령을 사용하여 최신 스냅샷을 볼 수 있습니다.
 
 '스냅샷 표시-필드 최신-스냅샷 상태-확장'을 선택합니다
 

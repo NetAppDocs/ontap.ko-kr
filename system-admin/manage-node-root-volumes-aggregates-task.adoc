@@ -41,7 +41,7 @@ https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]
 
 == 노드의 루트 볼륨에서 공간을 확보합니다
 
-노드의 루트 볼륨이 꽉 찼거나 거의 꽉 찼을 때 경고 메시지가 나타납니다. 루트 볼륨이 꽉 찼을 때 노드가 제대로 작동하지 않습니다. 코어 덤프 파일, 패킷 추적 파일 및 루트 볼륨 스냅샷 복사본을 삭제하여 노드의 루트 볼륨에서 공간을 확보할 수 있습니다.
+노드의 루트 볼륨이 꽉 찼거나 거의 꽉 찼을 때 경고 메시지가 나타납니다. 루트 볼륨이 꽉 찼을 때 노드가 제대로 작동하지 않습니다. 코어 덤프 파일, 패킷 추적 파일 및 루트 볼륨 스냅샷을 삭제하여 노드의 루트 볼륨에서 공간을 확보할 수 있습니다.
 
 .단계
 . 노드의 코어 덤프 파일과 해당 이름을 표시합니다.
@@ -75,7 +75,7 @@ https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]
 
 
 
-. 노드 루트 볼륨 스냅샷 복사본을 식별하여 노드 쉘을 통해 삭제:
+. 노드 쉘을 통해 노드의 루트 볼륨 스냅샷을 식별하고 삭제합니다.
 +
 .. 루트 볼륨 이름 확인:
 +
@@ -96,13 +96,13 @@ node1*> vol status
            vol0 online          raid_dp, flex     root, nvfail=on
                                 64-bit
 ----
-.. 루트 볼륨 스냅샷 복사본 표시:
+.. 루트 볼륨 스냅샷 표시:
 +
-'* 스냅 목록 root_vol_name*'
+`snap list root_vol_name`
 
-.. 필요 없는 루트 볼륨 스냅샷 복사본 삭제:
+.. 원하지 않는 루트 볼륨 스냅샷 삭제:
 +
-' * snap delete root_vol_namesnapshot_name * '
+`snap delete root_vol_namesnapshot_name`
 
 
 

@@ -4,7 +4,7 @@ permalink: task_nas_file_system_analytics_enable.html
 keywords: capacity analytics, data visualization, File System Analytics 
 summary: 용량 분석과 같은 사용 데이터를 수집하고 표시하려면 파일 시스템 분석을 설정해야 합니다. 
 ---
-= 파일 시스템 분석 설정
+= ONTAP에서 파일 시스템 분석을 사용하도록 설정합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -41,7 +41,7 @@ ONTAP System Manager 또는 CLI를 사용하여 파일 시스템 분석을 활�
 .시스템 관리자
 --
 |===
-| ONTAP 9.8 및 9.9.1 | ONTAP 9.10.1에서 시작합니다 
+| ONTAP 9.8 및 9.9.1 | ONTAP 9.10.1부터 시작합니다 
 
 
  a| 
@@ -70,7 +70,7 @@ ONTAP System Manager 또는 CLI를 사용하여 파일 시스템 분석을 활�
 
 == 기본 파일 시스템 분석 설정을 수정합니다
 
-ONTAP 9.13.1 부터는 SVM 또는 클러스터 설정을 수정하여 새 볼륨에서 파일 시스템 분석을 기본적으로 사용하도록 설정할 수 있습니다.
+ONTAP 9.13.1부터 SVM 또는 클러스터 설정을 수정하여 새 볼륨에 대해 파일 시스템 분석을 기본적으로 활성화할 수 있습니다.
 
 .단계
 [role="tabbed-block"]

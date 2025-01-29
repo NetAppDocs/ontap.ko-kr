@@ -141,7 +141,7 @@ node1
 system node revert-to -node <nodename> -check-only true -version 9.x
 ----
 +
- `check-only`매개 변수는 스냅샷 정책을 사용하지 않도록 설정하거나 이후 ONTAP의 최신 버전으로 업그레이드한 후 생성된 스냅샷 복사본을 삭제하는 등 되돌리기 전에 해결해야 할 사전 조건을 식별합니다.
+ `check-only`매개 변수는 스냅샷 정책 비활성화 또는 최신 버전의 ONTAP로 업그레이드한 후 생성된 스냅샷 삭제와 같이 되돌리기 전에 해결해야 할 모든 사전 조건을 식별합니다.
 
 . 노드의 클러스터 구성을 되돌립니다.
 +
@@ -327,7 +327,7 @@ cluster modify -node <node_partner_name> -epsilon true
 system node revert-to -node <nodename> -check-only true -version 9.x
 ----
 +
- `check-only`매개 변수는 스냅샷 정책을 사용하지 않도록 설정하거나 이후 ONTAP의 최신 버전으로 업그레이드한 후 생성된 스냅샷 복사본을 삭제하는 등 되돌리기 전에 해결해야 할 모든 조건을 식별합니다.
+ `check-only`매개 변수는 스냅샷 정책 비활성화 또는 최신 버전의 ONTAP로 업그레이드한 후 생성된 스냅샷 삭제와 같이 되돌리기 전에 해결해야 할 모든 조건을 식별합니다.
 
 . 노드의 클러스터 구성을 되돌립니다.
 +

@@ -84,7 +84,7 @@ ONTAP 9.7부터link:../system-admin/manage-license-task.html#view-details-about-
 
 NetApp Volume Encryption(NVE)은 유휴 데이터를 한 번에 하나의 볼륨으로 암호화하는 소프트웨어 기반 기술입니다. 스토리지 시스템에서만 액세스할 수 있는 암호화 키를 사용하면 기본 디바이스가 시스템에서 분리되어 있는 경우 볼륨 데이터를 읽을 수 없습니다.
 
-Snapshot 복사본과 메타데이터를 비롯한 두 데이터가 모두 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다. 내장 Onboard Key Manager는 동일한 시스템에 있는 키를 데이터와 함께 보호합니다.
+스냅샷 및 메타데이터를 포함한 두 데이터가 모두 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다. 내장 Onboard Key Manager는 동일한 시스템에 있는 키를 데이터와 함께 보호합니다.
 
 NVE는 모든 유형의 애그리게이트(HDD, SSD, 하이브리드, 어레이 LUN), RAID 유형, ONTAP Select를 비롯한 지원되는 모든 ONTAP 구현에서 사용할 수 있습니다. NSE(NetApp 스토리지 암호화)와 NVE를 사용하여 NSE 드라이브의 데이터를 이중 암호화할 수 있습니다.
 

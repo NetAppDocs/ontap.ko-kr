@@ -60,7 +60,7 @@ SnapMirror 보호를 구성한 경우 관계를 SnapMirror 액티브 동기화�
 +
 `SiteB::>snapmirror delete -destination-path vs1_dst:vol2`
 
-. 소스 SnapMirror 관계를 릴리즈하고 공통 스냅샷 복사본을 유지합니다.
+. 소스 SnapMirror 관계를 해제하지만 공통 스냅샷은 보존합니다.
 +
 `SiteA::>snapmirror release -relationship-info-only true -destination-path vs1_dst:vol1`
 
@@ -114,7 +114,7 @@ ONTAP 9.15.1부터 기존 SnapMirror 관계를 SnapMirror 액티브 동기식 �
 +
 `SiteB::>snapmirror delete -destination-path vs1_dst:vol2`
 
-. 소스 SnapMirror 관계를 릴리즈하고 공통 스냅샷 복사본을 유지합니다.
+. 소스 SnapMirror 관계를 해제하지만 공통 스냅샷은 보존합니다.
 +
 `SiteA::>snapmirror release -relationship-info-only true -destination-path vs1_dst:vol1`
 

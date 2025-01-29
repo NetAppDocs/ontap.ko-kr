@@ -80,7 +80,7 @@ cluster1::> job schedule cron create -name my_weekly -dayofweek "Saturday" -hour
 . SnapVault 정책을 생성한 다음 SnapVault 정책에 대한 규칙을 정의합니다.
 +
 .. SnapVault 관계를 위한 '볼트' 유형의 사용자 정의 정책을 작성합니다: '스냅샷 정책 생성 - vserver svm_name - policy_name - type vault'
-.. 초기화 및 업데이트 작업 중에 전송할 스냅샷 복제본을 결정하는 SnapVault 정책의 규칙을 정의합니다. '스냅샷 미러 정책 add-rule-vserver svm_name-policy_for_rule-snapmirror-label snapmirror-keep retention_count-schedule'
+.. 초기화 및 업데이트 작업 중에 전송되는 스냅샷을 결정하는 SnapVault 정책에 대한 규칙을 정의합니다. `snapmirror policy add-rule -vserver svm_name -policy policy_for_rule - snapmirror-label snapmirror-label -keep retention_count -schedule schedule`
 
 
 +

@@ -19,7 +19,7 @@ summary: 볼륨 생성 명령을 사용하여 볼륨을 생성하고 해당 접�
 .시작하기 전에
 * 새 볼륨용 SVM과 볼륨에 스토리지를 제공할 애그리게이트가 이미 존재해야 합니다.
 * SVM에 관련 애그리게이트 목록이 있는 경우, 애그리게이트를 목록에 포함해야 합니다.
-* ONTAP 9.13.1 부터는 용량 분석 및 활동 추적 기능이 활성화된 볼륨을 생성할 수 있습니다. 용량 또는 활동 추적을 활성화하려면 을 실행합니다 `volume create` 명령을 사용합니다 `-analytics-state` 또는 `-activity-tracking-state` 를 로 설정합니다 `on`.
+* ONTAP 9.13.1부터 용량 분석 및 활동 추적이 활성화된 볼륨을 생성할 수 있습니다. 용량 또는 활동 추적을 활성화하려면 `volume create` 또는 `-activity-tracking-state` 를 로 설정하여 `on` 명령을 `-analytics-state` 실행합니다.
 +
 용량 분석 및 활동 추적에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_enable.html["파일 시스템 분석 설정"].
 

@@ -31,7 +31,7 @@ ONTAP 9의 FlexGroup 볼륨에서 지원되고 지원되지 않는 ONTAP 기능�
 
 == ONTAP 9.14.1부터 지원되는 기능
 
-* 스냅샷 복사본 태그 지정: 를 사용하여 FlexGroup 볼륨의 스냅샷 복사본에 대한 스냅샷 복사본 태그(SnapMirror 레이블 및 설명)를 생성, 수정 및 삭제할 수 있도록 지원합니다 `volume snapshot` 명령.
+* 스냅샷 태그 지정: 명령을 사용하여 FlexGroup 볼륨의 스냅샷에 대한 스냅샷 태그(SnapMirror 레이블 및 설명)를 생성, 수정 및 삭제할 `volume snapshot` 수 있습니다.
 
 
 
@@ -242,7 +242,7 @@ Data ONTAP 9.7에서 이전 버전으로 되돌릴 경우 이전 전송의 증�
 FlexGroup 볼륨은 여러 ONTAP 기능을 지원하며 ONTAP 9.1에 도입되었습니다.
 
 * SnapMirror 기술
-* Snapshot 복사본
+* 스냅샷 수
 * 디지털 자문업체
 * 인라인 적응형 압축
 * 인라인 중복제거

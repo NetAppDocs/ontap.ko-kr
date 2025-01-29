@@ -82,7 +82,7 @@ cluster1::> job schedule cron create -name my_weekly -dayofweek "Saturday" -hour
 . 'Mirror-vault' 유형의 사용자 지정 정책을 만든 다음 미러 및 볼트 정책에 대한 규칙을 정의합니다.
 +
 .. 'Mirror policy create-vserver svm_name-policy_name-type mirror-vault'라는 통합 데이터 보호 관계를 위한 'Mirror-vault' 유형의 사용자 지정 정책을 생성합니다
-.. 초기화 및 업데이트 작업 중에 전송할 스냅샷 복사본을 결정하는 미러 및 볼트 정책의 규칙을 정의합니다. 이 규칙은 '스냅샷 미러 정책 추가 규칙 - vserver svm_name - policy_for_rule - SnapMirror -label snapmirror -label -keep retention_count -schedule' 입니다
+.. 초기화 및 업데이트 작업 중에 전송되는 스냅샷을 결정하는 미러 및 볼트 정책에 대한 규칙을 정의합니다. `snapmirror policy add-rule -vserver svm_name -policy policy_for_rule - snapmirror-label snapmirror-label -keep retention_count -schedule schedule`
 
 
 +

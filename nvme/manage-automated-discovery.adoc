@@ -2,9 +2,9 @@
 permalink: nvme/manage-automated-discovery.html 
 sidebar: sidebar 
 keywords: nvme, tcp, nvme/tcp, disable, automated, discovery, controllers 
-summary: ONTAP 9.13.1부터는 IP 기반 패브릭에서 NVMe/TCP 프로토콜을 사용하여 컨트롤러의 호스트 검색이 기본적으로 자동화됩니다.  
+summary: ONTAP 9.13.1부터 IP 기반 패브릭에서 NVMe/TCP 프로토콜을 사용하여 컨트롤러의 호스트 검색이 기본적으로 자동화됩니다. 
 ---
-= NVMe/TCP 컨트롤러의 자동화된 호스트 검색을 관리합니다
+= ONTAP에서 NVMe/TCP 컨트롤러의 자동화된 호스트 검색을 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

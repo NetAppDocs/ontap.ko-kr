@@ -86,7 +86,7 @@ vs1     vv2    10.38MB                             0%
 ----
 +
 ** 'performance-tier-inactive-user-data' 필드에는 애그리게이트에 저장된 사용자 데이터의 비활성 양이 표시됩니다.
-** 'performance-tier-inactive-user-data-percent' 필드에는 액티브 파일 시스템과 스냅샷 복사본에서 비활성 상태인 데이터의 비율이 표시됩니다.
+**  `performance-tier-inactive-user-data-percent`이 필드에는 활성 파일 시스템 및 스냅샷에 걸쳐 비활성 상태의 데이터 비율이 표시됩니다.
 ** FabricPool에 사용되지 않는 애그리게이트의 경우 비활성 데이터 보고는 계층화 정책을 사용하여 콜드 데이터로 보고할 데이터의 양을 결정합니다.
 +
 *** 비계층화 정책에는 31일이 사용됩니다.

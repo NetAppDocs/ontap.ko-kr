@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/monitor-task.html
 keywords: SM-BC, SMBC, monitoring, Mediator status, EMS, errors, planned failover status, automatic unplanned failover status, , snapmirror active sync 
 summary: 모니터링할 수 있는 SnapMirror 활성 동기화 구성 요소 및 작업이 몇 가지 있습니다. 
 ---
-= SnapMirror 활성 동기화 작업 모니터링
+= ONTAP에서 SnapMirror 활성 동기화 작업 모니터링
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,7 +23,7 @@ summary: 모니터링할 수 있는 SnapMirror 활성 동기화 구성 요소 �
 
 
 
-NOTE: ONTAP 9.15.1부터는 System Manager에 두 클러스터의 SnapMirror 활성 동기화 관계 상태가 표시됩니다. System Manager의 두 클러스터 중 하나에서 ONTAP 중재자의 상태를 모니터링할 수도 있습니다.
+NOTE: ONTAP 9.15.1부터 System Manager는 두 클러스터의 SnapMirror 활성 동기화 관계 상태를 표시합니다. System Manager의 두 클러스터 중 하나에서 ONTAP 중재자의 상태를 모니터링할 수도 있습니다.
 
 
 

@@ -40,7 +40,7 @@ image:snapmirror-for-dp-pg.gif["SnapMirror 데이터 보호 관계 그림"]
 +
 link:../snaplock/index.html["SnapLock 기술을 사용한 아카이브 및 규정 준수"]
 
-* ONTAP 9.13.1부터 SnapMirror 비동기식을 사용하여 보호할 수 xref:../consistency-groups/index.html[정합성 보장 그룹]있습니다. ONTAP 9.14.1부터는 SnapMirror 비동기식을 사용하여 일관성 그룹 관계를 사용하여 볼륨 세분화 스냅샷을 대상 클러스터에 복제할 수 있습니다. 자세한 내용은 을 xref:../consistency-groups/protect-task.html#configure-snapmirror-asynchronous[SnapMirror 비동기식 보호를 구성합니다]참조하십시오.
+* ONTAP 9.13.1부터 SnapMirror 비동기식을 사용하여 보호할 수 xref:../consistency-groups/index.html[정합성 보장 그룹]있습니다. ONTAP 9.14.1부터 SnapMirror 비동기식을 사용하여 일관성 그룹 관계를 사용하여 볼륨 세분화 스냅샷을 타겟 클러스터에 복제할 수 있습니다. 자세한 내용은 을 xref:../consistency-groups/protect-task.html#configure-snapmirror-asynchronous[SnapMirror 비동기식 보호를 구성합니다]참조하십시오.
 
 
 
@@ -51,9 +51,9 @@ SnapMirror를 처음 호출하면 소스 볼륨에서 대상 볼륨으로 _basel
 
 기본 SnapMirror 정책 'MirorAllSnapshots'에 따른 기본 전송에는 다음 단계가 포함됩니다.
 
-* 소스 볼륨의 스냅샷 복사본을 만듭니다.
-* 스냅샷 복사본과 스냅샷 복사본이 대상 볼륨에 참조하는 모든 데이터 블록을 전송합니다.
-* ""활성" 미러가 손상된 경우에 사용할 수 있도록 소스 볼륨의 나머지 최신 스냅샷 복사본을 대상 볼륨으로 전송합니다.
+* 소스 볼륨의 스냅샷을 생성합니다.
+* 스냅샷과 해당 스냅샷이 참조하는 모든 데이터 블록을 대상 볼륨으로 전송합니다.
+* ""활성"" 미러가 손상된 경우 사용할 수 있도록 소스 볼륨의 나머지 덜 최근의 스냅샷을 대상 볼륨으로 전송합니다.
 
 
 
@@ -62,10 +62,10 @@ SnapMirror를 처음 호출하면 소스 볼륨에서 대상 볼륨으로 _basel
 
 업데이트는 구성한 일정에 따라 비동기식입니다. 보존은 소스의 스냅샷 정책을 미러링합니다.
 
-MirorAllSnapshots 정책의 각 업데이트 시 SnapMirror는 소스 볼륨의 스냅샷 복사본을 생성하고 이 스냅샷 복사본과 마지막 업데이트 이후 생성된 스냅샷 복사본을 전송합니다. 'irorAllSnapshots' 정책에 대한 'napmirror policy show' 명령의 출력은 다음과 같습니다.
+정책에 따라 업데이트될 때마다 `MirrorAllSnapshots` SnapMirror는 소스 볼륨의 스냅샷을 생성하고 해당 스냅샷과 마지막 업데이트 이후에 생성된 모든 스냅샷을 전송합니다. 정책의 다음 출력에서 다음 `snapmirror policy show` 사항에 `MirrorAllSnapshots` 유의하십시오.
 
-* "스냅샷 생성"은 "참"이며, 이는 SnapMirror가 관계를 업데이트할 때 "irorAllSnapshots"이 스냅샷 복사본을 생성함을 의미합니다.
-* 'MirorAllSnapshots'에는 'sm_created' 및 'all_source_snapshots' 규칙이 있습니다. 이는 SnapMirror에서 생성한 스냅샷 복사본과 마지막 업데이트 이후 생성된 스냅샷 복사본이 모두 SnapMirror에서 관계를 업데이트하면 전송됨을 나타냅니다.
+* `Create Snapshot` 는 SnapMirror에서 관계를 업데이트할 때 스냅샷을 생성함을 나타내는 ""true"" `MirrorAllSnapshots`입니다.
+* `MirrorAllSnapshots` 에는 SnapMirror가 관계를 업데이트할 때 SnapMirror에서 생성한 스냅샷과 마지막 업데이트 이후에 생성된 모든 스냅샷이 모두 전송됨을 나타내는 "'sm_created'" 및 "'all_source_snapshots"" 규칙이 있습니다.
 
 
 [listing]
@@ -95,7 +95,7 @@ cluster_dst::> snapmirror policy show -policy MirrorAllSnapshots -instance
 
 == 대칭 복사 정책
 
-사전 구성된 'irorLatest' 정책은 'irrorAllSnapshots'과 정확히 동일하게 작동합니다. 단, SnapMirror에서 생성한 스냅샷 복사본만 초기화 및 업데이트 시 전송됩니다.
+사전 구성된 `MirrorLatest` 정책은 SnapMirror에서 생성된 스냅샷만 초기화 및 업데이트 시 전송된다는 점을 제외하고 와 동일하게 `MirrorAllSnapshots` 작동합니다.
 
 [listing]
 ----

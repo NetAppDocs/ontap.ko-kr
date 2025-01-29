@@ -13,9 +13,9 @@ summary: SnapMirror 클라우드는 데이터 보호 워크플로우를 클라�
 [role="lead"]
 _SnapMirror CLOUD_는 데이터 보호 워크플로우를 클라우드로 전환하려는 ONTAP 사용자를 위해 설계된 백업 및 복구 기술입니다. 기존의 테이프 백업 아키텍처에서 벗어나 있는 조직은 오브젝트 스토리지를 장기 데이터 보존 및 아카이빙을 위한 대체 저장소로 사용할 수 있습니다. SnapMirror 클라우드는 증분 영구 백업 전략의 일부로 ONTAP-to-오브젝트 스토리지 복제를 제공합니다.
 
-SnapMirror 클라우드는 ONTAP 9 .8에 SnapMirror 복제 기술 제품군의 확장으로 도입되었습니다. SnapMirror는 ONTAP-to-ONTAP 백업에 자주 사용되지만, SnapMirror 클라우드는 동일한 복제 엔진을 사용하여 ONTAP의 스냅샷 복사본을 S3와 호환되는 오브젝트 스토리지 백업으로 전송합니다.
+SnapMirror 클라우드는 ONTAP 9 .8에 SnapMirror 복제 기술 제품군의 확장으로 도입되었습니다. SnapMirror는 ONTAP-to-ONTAP 백업에 자주 사용되지만, SnapMirror 클라우드는 동일한 복제 엔진을 사용하여 ONTAP의 스냅샷을 S3 호환 오브젝트 스토리지 백업으로 전송합니다.
 
-백업 사용 사례에 적합한 SnapMirror 클라우드는 장기 보존 및 아카이브 워크플로우를 모두 지원합니다. SnapMirror와 마찬가지로, 초기 SnapMirror 클라우드 백업은 볼륨의 기본 전송을 수행합니다. 이후 백업의 경우 SnapMirror 클라우드는 소스 볼륨의 스냅샷 복사본을 생성하고 변경된 데이터 블록만 가진 스냅샷 복사본을 오브젝트 스토리지 타겟으로 전송합니다.
+백업 사용 사례에 적합한 SnapMirror 클라우드는 장기 보존 및 아카이브 워크플로우를 모두 지원합니다. SnapMirror와 마찬가지로, 초기 SnapMirror 클라우드 백업은 볼륨의 기본 전송을 수행합니다. 이후 백업의 경우 SnapMirror 클라우드는 소스 볼륨의 스냅샷을 생성하고 변경된 데이터 블록만 가진 스냅샷을 오브젝트 스토리지 타겟으로 전송합니다.
 
 SnapMirror 클라우드 관계는 ONTAP 시스템 간에 구성할 수 있으며 Amazon S3, Google Cloud Storage, Microsoft Azure Blob Storage를 포함한 온프레미스 및 퍼블릭 클라우드 오브젝트 스토리지 타겟을 선택할 수 있습니다. 추가 사내 오브젝트 스토리지 타겟에는 StorageGRID 및 ONTAP S3가 포함됩니다.
 

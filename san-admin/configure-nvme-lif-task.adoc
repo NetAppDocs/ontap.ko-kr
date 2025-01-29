@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, nvme, lif 
 summary: NVMe LIF를 구성할 때 특정 요구사항을 충족해야 합니다. 
 ---
-= NVMe LIF를 구성합니다
+= ONTAP에서 NVMe LIF를 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ NVMe LIF를 구성할 때 특정 요구사항을 충족해야 합니다.
 NVMe는 LIF를 생성하는 FC 어댑터에서 지원되어야 합니다. 지원되는 어댑터는 에 나와 있습니다 https://hwu.netapp.com["Hardware Universe"^].
 
 .이 작업에 대해
-ONTAP 9.12.1 이상부터 최대 12개 노드에서 노드당 두 개의 NVMe LIF를 구성할 수 있다.  ONTAP 9.11.1 이하 버전에서는 최대 2개 노드에서 노드당 두 개의 NVMe LIF를 구성할 수 있다.
+ONTAP 9.12.1 이상부터 최대 12개 노드에서 노드당 두 개의 NVMe LIF를 구성할 수 있다. ONTAP 9.11.1 이하 버전에서는 최대 2개 노드에서 노드당 두 개의 NVMe LIF를 구성할 수 있다.
 
 NVMe LIF를 생성할 때 다음 규칙이 적용됩니다.
 

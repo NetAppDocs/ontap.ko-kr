@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, software, setup, create, cluster, first, node, autosupport, CLI 
 summary: '클러스터 설정 마법사를 사용하여 첫 번째 노드에서 클러스터를 생성합니다. 이 마법사를 사용하면 노드를 연결하는 클러스터 네트워크를 구성하고, 클러스터 관리 스토리지 가상 시스템(SVM)을 생성하고, 기능 라이센스 키를 추가하고, 첫 번째 노드의 노드 관리 인터페이스를 생성할 수 있습니다.' 
 ---
-= 첫 번째 노드에서 클러스터를 생성합니다
+= ONTAP의 첫 번째 노드에 클러스터를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -46,7 +46,7 @@ NOTE: AutoSupport는 기본적으로 사용하도록 설정되어 있습니다.
 
 . 화면의 지침에 따라 노드에 IP 주소를 할당합니다.
 +
-ONTAP 9.13.1 부터는 A800 및 FAS8700 플랫폼에서 관리 LIF에 IPv6 주소를 할당할 수 있습니다. ONTAP 9.13.1 이전 릴리즈 또는 다른 플랫폼에서 9.13.1 이상인 경우 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6로 변환해야 합니다.
+ONTAP 9.13.1부터 A800 및 FAS8700 플랫폼에서 관리 LIF에 IPv6 주소를 할당할 수 있습니다. ONTAP 9.13.1 이전 릴리즈 또는 다른 플랫폼에서 9.13.1 이상인 경우 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6로 변환해야 합니다.
 
 . 계속하려면 * Enter * 를 누르십시오.
 +

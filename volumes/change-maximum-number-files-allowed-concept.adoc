@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: considerations, changing, maximum number of files, allowed, flexvol volume, maximum, files, file 
 summary: FlexVol 볼륨에는 포함할 수 있는 최대 파일 수가 있습니다. 이 최대값을 변경할 수 있지만 이 값이 볼륨에 미치는 영향에 유의하십시오. 
 ---
-= FlexVol 볼륨에 허용되는 최대 파일 수입니다
+= ONTAP에서 FlexVol 볼륨에 허용되는 최대 파일 수입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

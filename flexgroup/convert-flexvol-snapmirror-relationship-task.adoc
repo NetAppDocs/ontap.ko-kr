@@ -19,7 +19,7 @@ FlexVol 볼륨 SnapMirror 관계를 ONTAP에서 FlexGroup 볼륨 SnapMirror 관�
 +
 ** 컨트롤러의 CPU입니다
 ** 다른 애플리케이션의 CPU 사용률
-** 최초 스냅샷 복사본에 있는 데이터의 양입니다
+** 초기 스냅샷의 데이터 양입니다
 ** 네트워크 대역폭
 ** 다른 응용 프로그램에서 사용하는 대역폭
 
@@ -147,7 +147,7 @@ cluster-1::> volume conversion start -vserver vs0 -volume src_xdp
 
 Warning: Converting flexible volume "src_xdp" in Vserver "vs0" to a FlexGroup
          will cause the state of all Snapshot copies from the volume to be set
-         to "pre-conversion". Pre-conversion Snapshot copies cannot be
+         to "pre-conversion". Pre-conversion snapshots cannot be
          restored.
 Do you want to continue? {y|n}: y
 [Job 57] Job succeeded: success

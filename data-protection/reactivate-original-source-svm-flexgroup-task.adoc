@@ -32,7 +32,7 @@ summary: 대상에서 데이터를 더 이상 사용할 필요가 없을 경우 
 ----
 cluster_dst::> snapmirror delete -source-path svm1: -destination-path svm_backup:
 ----
-. 원본 소스 SVM 또는 원본 소스 클러스터에서 스냅샷 복사본을 그대로 유지하면서 원래 관계를 해제합니다.
+. 원본 소스 SVM 또는 원본 소스 클러스터에서 스냅샷을 그대로 유지하면서 원본 관계를 해제합니다.
 +
 '냅미러 해제-소스-경로 SVM:-대상-경로 SVM:-관계-정보-전용 true'
 
@@ -84,7 +84,7 @@ cluster_src::> snapmirror create -source-path svm_backup: -destination-path svm1
 +
 [NOTE]
 ====
-소스 및 타겟에 공통 스냅샷 복사본이 존재하지 않으면 명령이 실패합니다. '스냅샷 초기화'를 사용하여 관계를 다시 초기화합니다.
+소스와 대상에 공통 스냅샷이 없는 경우 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다.
 
 ====
 +
@@ -201,7 +201,7 @@ cluster_src::> vserver start svm1
 ----
 cluster_src::> snapmirror delete -source-path svm_backup: -destination-path svm1:
 ----
-. 원래 대상 SVM 또는 원래 대상 클러스터에서 스냅샷 복사본을 그대로 유지하면서 역방향 관계를 해제합니다.
+. 원래의 대상 SVM 또는 원래의 대상 클러스터에서 스냅샷을 그대로 유지하면서 반대 관계를 해제합니다.
 +
 '냅미러 해제-소스-경로 SVM:-대상-경로 SVM:-관계-정보-전용 true'
 

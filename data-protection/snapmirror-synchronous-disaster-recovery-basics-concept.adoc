@@ -97,7 +97,7 @@ ONTAP Select
 | SnapMirror 동기식 관계의 운영 볼륨에 대한 바이러스 백신 | ONTAP 9.6 |  
 
 
-| 애플리케이션에서 생성한 스냅샷 복사본 복제 | ONTAP 9.7 |  `snapshot create`작업 시 스냅샷 복사본에 적절한 레이블로 태그가 지정된 경우 CLI 또는 ONTAP API를 사용하여 SnapMirror 동기는 애플리케이션을 일시 중지한 후 사용자가 생성했거나 외부 스크립트로 생성된 스냅샷 복사본을 모두 복제합니다. 스냅샷 정책을 사용하여 생성한 예약된 스냅샷 복사본은 복제되지 않습니다. 애플리케이션에서 생성된 스냅샷 복사본 복제에 대한 자세한 내용은 기술 자료 문서:link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/How_to_replicate_application_created_snapshots_with_SnapMirror_Synchronous["SnapMirror Synchronous를 사용하여 애플리케이션 생성 스냅샷을 복제하는 방법"^] 
+| 애플리케이션이 생성한 스냅샷 복제입니다 | ONTAP 9.7 | CLI 또는 ONTAP API를 사용하여 작업 시 스냅샷에 적절한 레이블이 지정된 경우 `snapshot create` SnapMirror 동기는 애플리케이션을 정지한 후 사용자가 생성하거나 외부 스크립트로 생성된 스냅샷을 모두 복제합니다. 스냅샷 정책을 사용하여 생성된 예약된 스냅샷은 복제되지 않습니다. 응용 프로그램에서 생성한 스냅샷 복제에 대한 자세한 내용은 기술 자료 문서:link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/How_to_replicate_application_created_snapshots_with_SnapMirror_Synchronous["SnapMirror Synchronous를 사용하여 애플리케이션 생성 스냅샷을 복제하는 방법"^] 
 
 
 | 클론 자동 삭제 | ONTAP 9.6 |  
@@ -130,7 +130,7 @@ ONTAP Select
 | LUN 클론 및 NVMe 네임스페이스 클론 | ONTAP 9.7 |  
 
 
-| 애플리케이션 생성 스냅샷 복사본을 통해 백업되는 LUN 클론 | ONTAP 9.7 |  
+| 애플리케이션 생성 스냅샷을 통해 백업되는 LUN 클론입니다 | ONTAP 9.7 |  
 
 
 | 혼합 프로토콜 액세스(NFS v3 및 SMB) | ONTAP 9.6 |  
@@ -197,7 +197,7 @@ ONTAP Select
 * 혼합 SAN 및 NVMe 액세스 LUN과 NVMe 네임스페이스는 동일한 볼륨 또는 SVM에서 지원되지 않습니다.
 * SnapCenter
 * SnapLock 볼륨
-* 스냅샷 복사본을 무단 복제했습니다
+* 변조 방지 스냅샷
 * 대상 볼륨에서 dump 및 SMTape를 사용하여 테이프 백업 또는 복구를 수행합니다
 * 소스 볼륨의 처리량(QoS Min
 * Volume SnapRestore를 참조하십시오

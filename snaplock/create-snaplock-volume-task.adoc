@@ -2,7 +2,7 @@
 permalink: snaplock/create-snaplock-volume-task.html 
 sidebar: sidebar 
 keywords: snaplock, volume, shanpshot, copy, create, complianceclock, file, worm, compliance, enterprise 
-summary: 'WORM 상태로 커밋하려는 파일 또는 스냅샷 복사본에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. "-snaplock-type" 옵션을 사용하여 준수 또는 엔터프라이즈 를 SnapLock 유형으로 지정하여 SnapLock 볼륨을 명시적으로 생성해야 합니다. 기본적으로 SnapLock 유형은 비 SnapLock으로 설정됩니다.' 
+summary: 'WORM 상태로 커밋하려는 파일 또는 스냅샷에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. SnapLock 유형으로 Compliance 또는 Enterprise를 지정하여 SnapLock 볼륨을 명시적으로 생성하려면 옵션을 사용해야 `-snaplock-type` 합니다. 기본적으로 SnapLock 유형은 로 `non-snaplock`설정됩니다.' 
 ---
 = ONTAP에서 SnapLock 볼륨을 생성하고 마운트합니다
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'WORM 상태로 커밋하려는 파일 또는 스냅샷 복사본에 �
 
 
 [role="lead"]
-WORM 상태로 커밋하려는 파일 또는 스냅샷 복사본에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. '-snaplock-type' 옵션을 사용하여 준수 또는 엔터프라이즈 를 SnapLock 유형으로 지정하여 SnapLock 볼륨을 명시적으로 생성해야 합니다. 기본적으로 SnapLock 유형은 비 SnapLock으로 설정됩니다.
+WORM 상태로 커밋하려는 파일 또는 스냅샷에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. SnapLock 유형으로 Compliance 또는 Enterprise를 지정하여 SnapLock 볼륨을 명시적으로 생성하려면 옵션을 사용해야 `-snaplock-type` 합니다. 기본적으로 SnapLock 유형은 로 `non-snaplock`설정됩니다.
 
 .시작하기 전에
 * SnapLock 애그리게이트는 온라인 상태여야 합니다.
@@ -26,7 +26,7 @@ SnapLock 볼륨의 클론을 생성할 수는 있지만 SnapLock 볼륨의 파�
 
 [NOTE]
 ====
-LUN은 SnapLock 볼륨에서 지원되지 않습니다. LUN은 비 SnapLock 볼륨에서 생성된 스냅샷 복사본이 SnapLock 볼트 관계의 일부로 보호를 위해 SnapLock 볼륨으로 전송되는 경우에만 SnapLock 볼륨에서 지원됩니다. LUN은 읽기/쓰기 SnapLock 볼륨에서 지원되지 않습니다. 그러나 SnapMirror 소스 볼륨과 LUN이 포함된 타겟 볼륨 모두에서 무단 스냅샷 복사본이 지원됩니다.
+LUN은 SnapLock 볼륨에서 지원되지 않습니다. LUN은 비 SnapLock 볼륨에서 생성된 스냅샷이 SnapLock 소산 관계의 일부로 보호를 위해 SnapLock 볼륨으로 전송되는 경우에만 SnapLock 볼륨에서 지원됩니다. LUN은 읽기/쓰기 SnapLock 볼륨에서 지원되지 않습니다. 변조 방지 스냅샷은 SnapMirror 소스 볼륨과 LUN이 포함된 타겟 볼륨 모두에서 지원됩니다.
 
 ====
 ONTAP 시스템 관리자 또는 ONTAP CLI를 사용하여 이 작업을 수행합니다.

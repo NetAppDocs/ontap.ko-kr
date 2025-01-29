@@ -106,7 +106,7 @@ DP를 명시적으로 호출하지 않으면 이 옵션은 무시됩니다.
 
 
 
-ONTAP 9.3 이전 버전에서는 타겟 볼륨에 최대 251개의 스냅샷 복사본이 포함될 수 있습니다. ONTAP 9.4 이상에서 타겟 볼륨에는 최대 1019개의 스냅샷 복사본이 포함될 수 있습니다.
+ONTAP 9.3 이하 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 포함할 수 있습니다. ONTAP 9.4 이상에서는 대상 볼륨에 최대 1019개의 스냅샷을 포함할 수 있습니다.
 
 ONTAP 9.5부터 SnapMirror 동기식 관계가 지원됩니다.
 
@@ -228,7 +228,7 @@ cluster_dst::> snapmirror create -source-path svm1:volA -destination-path svm_ba
 ----
 +
 
-NOTE: 미리 정의된 정책 '냅센터싱크'는 '동기화'입니다. 이 정책은 "app_consistent"의 'napmirror-label"으로 생성된 스냅샷 복사본을 복제합니다.
+NOTE: 미리 정의된 정책의 `SnapCenterSync` 유형이 `Sync`입니다. 이 정책은 "app_consistent"로 생성된 모든 스냅샷을 `snapmirror-label` 복제합니다.
 
 
 

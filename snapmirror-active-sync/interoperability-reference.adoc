@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/interoperability-reference.html
 keywords: SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris, aix, hp-ux, fanout, snapmirror active sync 
 summary: SnapMirror 활성 동기화는 ONTAP의 다양한 운영 체제 및 기타 기능과 호환됩니다. 
 ---
-= SnapMirror 활성 동기화 상호 운용성
+= ONTAP에서 SnapMirror 활성 동기화 상호 운용성
 :allow-uri-read: 
 :icons: font
 :linkattrs: 
@@ -87,7 +87,7 @@ SnapMirror 액티브 동기화는 없음, 스냅샷 또는 자동의 계층화 �
 
 image:fanout-diagram.png["팬아웃 구성의 다이어그램"]
 
-SnapMirror 액티브 동기화를 지원합니다 xref:../data-protection/supported-deployment-config-concept.html[팬아웃 구성] 를 사용하여 `MirrorAllSnapshots` 정책 및 은 ONTAP 9.11.1부터 시작됩니다 `MirrorAndVault` 정책. 과의 SnapMirror 액티브 동기화에서는 팬아웃 구성이 지원되지 않습니다 `XDPDefault` 정책.
+SnapMirror Active Sync는 xref:../data-protection/supported-deployment-config-concept.html[팬아웃 구성] `MirrorAllSnapshots`ONTAP 9.11.1부터 정책 및 `MirrorAndVault` 정책을 지원합니다. 정책을 사용하는 SnapMirror 활성 동기화에서는 팬아웃 구성이 지원되지 `XDPDefault` 않습니다.
 
 ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 페일오버 이벤트 후 팬아웃 구간의 자동 재구성을 지원합니다. 운영 사이트에서 보조 사이트로 페일오버가 성공하면 보조 사이트를 소스로 처리하도록 3차 사이트가 자동으로 다시 구성됩니다. 재구성이 계획된 또는 계획되지 않은 페일오버에 의해 트리거됩니다. 운영 사이트로 페일백할 때도 재구성이 수행됩니다.
 
@@ -97,13 +97,13 @@ ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 페일오버 이벤트 후 
 
 === NDMP 복구입니다
 
-ONTAP 9.13.1부터 를 사용할 수 있습니다 xref:../tape-backup/transfer-data-ndmpcopy-task.html[NDMP를 사용하여 데이터를 복제하고 복구합니다] SnapMirror 활성 동기화 사용 NDMP를 사용하면 데이터를 SnapMirror 활성 동기화 소스로 이동하여 보호를 일시 중지하지 않고 복원을 완료할 수 있습니다. 이 기능은 특히 팬아웃 구성에 유용합니다.
+ONTAP 9.13.1부터 SnapMirror 활성 동기화와 함께 을 사용할 수 xref:../tape-backup/transfer-data-ndmpcopy-task.html[NDMP를 사용하여 데이터를 복제하고 복구합니다]있습니다. NDMP를 사용하면 데이터를 SnapMirror 활성 동기화 소스로 이동하여 보호를 일시 중지하지 않고 복원을 완료할 수 있습니다. 이 기능은 특히 팬아웃 구성에 유용합니다.
 
 
 
 === SnapCenter
 
-SnapMirror 액티브 동기화는 부터 SnapCenter에서 지원됩니다 link:https://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 5.0 을 참조하십시오"^]. SnapCenter를 사용하면 애플리케이션 및 가상 머신을 보호하고 복구하는 데 사용할 수 있는 스냅샷을 생성할 수 있으므로, 애플리케이션 레벨 세분화로 상시 사용 가능한 스토리지 솔루션을 사용할 수 있습니다.
+SnapMirror 활성 동기화는 부터 SnapCenter에서 link:https://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 5.0 을 참조하십시오"^]지원됩니다. SnapCenter를 사용하면 애플리케이션 및 가상 머신을 보호하고 복구하는 데 사용할 수 있는 스냅샷을 생성할 수 있으므로, 애플리케이션 레벨 세분화로 상시 사용 가능한 스토리지 솔루션을 사용할 수 있습니다.
 
 
 
@@ -112,10 +112,10 @@ SnapMirror 액티브 동기화는 부터 SnapCenter에서 지원됩니다 link:h
 SnapMirror 활성 동기화는 부분 및 단일 파일 SnapRestore를 지원합니다.
 
 .단일 파일 SnapRestore
-ONTAP 9.11.1부터 xref:../data-protection/restore-single-file-snapshot-task.html[단일 파일 SnapRestore] SnapMirror 활성 동기화 볼륨에 대해 지원됩니다. SnapMirror 액티브 동기화 소스에서 타겟으로 복제된 스냅샷 복사본에서 단일 파일을 복원할 수 있습니다. 볼륨에는 하나 이상의 LUN이 포함될 수 있으므로 이 기능을 사용하면 중단이 적은 복원 작업을 구현하고 다른 LUN을 중단하지 않고 하나의 LUN을 세부적으로 복원할 수 있습니다. Single File SnapRestore에는 데이터 이동 없는 것과 원본 이동 없는 두 가지 옵션이 있습니다.
+ONTAP 9.11.1부터 xref:../data-protection/restore-single-file-snapshot-task.html[단일 파일 SnapRestore]SnapMirror 활성 동기화 볼륨에 대해 이 지원됩니다. SnapMirror 활성 동기화 소스에서 대상으로 복제된 스냅샷에서 단일 파일을 복구할 수 있습니다. 볼륨에는 하나 이상의 LUN이 포함될 수 있으므로 이 기능을 사용하면 중단이 적은 복원 작업을 구현하고 다른 LUN을 중단하지 않고 하나의 LUN을 세부적으로 복원할 수 있습니다. Single File SnapRestore에는 데이터 이동 없는 것과 원본 이동 없는 두 가지 옵션이 있습니다.
 
 .부분 파일 SnapRestore
-ONTAP 9.12.1부터 link:../data-protection/restore-part-file-snapshot-task.html["부분 LUN 복원"] SnapMirror 활성 동기화 볼륨에 대해 지원됩니다. SnapMirror 활성 동기화 소스(볼륨)와 타겟(스냅샷 복사본) 볼륨 간에 복제된 애플리케이션 생성 스냅샷 복사본에서 데이터를 복원할 수 있습니다. 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스를 복구해야 하는 경우 부분 LUN 또는 파일 복구가 필요할 수 있습니다. 이 기능을 사용하려면 데이터 및 바이트 수의 시작 바이트 오프셋을 알고 있어야 합니다.
+ONTAP 9.12.1부터 link:../data-protection/restore-part-file-snapshot-task.html["부분 LUN 복원"]SnapMirror 활성 동기화 볼륨에 대해 이 지원됩니다. SnapMirror 활성 동기화 소스(볼륨)와 대상(스냅샷) 볼륨 간에 복제된 응용 프로그램 생성 스냅샷에서 데이터를 복원할 수 있습니다. 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스를 복구해야 하는 경우 부분 LUN 또는 파일 복구가 필요할 수 있습니다. 이 기능을 사용하려면 데이터 및 바이트 수의 시작 바이트 오프셋을 알고 있어야 합니다.
 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'load balance, workload, latency, overload, reduce load, ceiling, limits, iops, "mb/s", qos, min, max, policy group, throughput, headroom, floor, adaptive qos' 
 summary: '노드의 작업 양이 사용 가능한 리소스를 초과하면 워크로드의 성능이 지연 시간의 영향을 받기 시작합니다. 사용 가능한 리소스를 증가(디스크 또는 CPU 업그레이드)하거나 로드를 감소(필요에 따라 볼륨 또는 LUN을 다른 노드로 이동)하여 과부하된 노드를 관리할 수 있습니다.' 
 ---
-= 로드 밸런싱
+= ONTAP의 로드 밸런싱
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -68,7 +68,7 @@ _Adaptive QoS_는 워크로드 크기에 따라 정책 그룹 값을 자동으�
 
 NOTE: ONTAP 9.5 이상의 처리량 층에서는 사용된 공간을 사용할 수 있습니다. ONTAP 9.4 및 이전 버전의 처리량 바닥재에서는 지원되지 않습니다.
 
-+ONTAP 9.13.1 부터는 적응형 QoS를 사용하여 SVM 레벨에서 처리량 바닥과 천장을 설정할 수 있습니다.
++ ONTAP 9.13.1부터 적응형 QoS를 사용하여 SVM 레벨에서 처리량 하한과 상한을 설정할 수 있습니다.
 
 * allocated space_policy는 스토리지 객체의 공칭 크기에 따라 IOPS/TB|GB 비율을 유지합니다. 비율이 100 IOPS/GB인 경우, 볼륨이 해당 크기로 유지되는 한 150 GB 볼륨의 처리량은 최대 15,000 IOPS입니다. 볼륨의 크기를 300GB로 변경하면 적응형 QoS는 처리량의 상한을 30,000 IOPS로 조정합니다.
 * a_used space_policy(기본값)는 스토리지 효율성 이전에 저장된 실제 데이터의 양에 따라 IOPS/TB|GB 비율을 유지합니다. 비율이 100 IOPS/GB인 경우 100GB 데이터가 저장된 150GB 볼륨의 처리량은 최대 10,000 IOPS입니다. 사용된 공간의 양이 변경되면 적응형 QoS는 비율에 따라 처리량 상한을 조정합니다.

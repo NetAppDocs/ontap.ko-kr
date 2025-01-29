@@ -13,7 +13,7 @@ summary: ONTAP 9.3부터 ONTAP 인스턴스 간 복제를 위한 라이센스가
 [role="lead"]
 ONTAP 9.3부터 ONTAP 인스턴스 간 복제를 위한 라이센스가 간소화되었습니다. ONTAP 9 릴리즈에서는 SnapMirror 라이센스가 볼트와 미러 관계를 모두 지원합니다. SnapMirror 라이센스를 사용하여 백업 및 재해 복구 사용 사례 모두에 대해 ONTAP 복제를 지원할 수 있습니다.
 
-ONTAP 9.3 릴리즈 이전에는 ONTAP 인스턴스 간에 _vault_관계를 구성하기 위해 별도의 SnapVault 라이센스가 필요했습니다. 이때 DP 인스턴스가 더 많은 수의 Snapshot 복사본을 유지하여 보존 시간이 더 긴 백업 사용 사례를 지원할 수 있었습니다. 그리고 ONTAP 인스턴스 간에 _MIRROR_관계를 구성하려면 SnapMirror 라이센스가 필요합니다. 각 ONTAP 인스턴스가 재해 복구 사용 사례를 지원하기 위해 동일한 수의 스냅샷 복사본(즉, _MIRROR_IMAGE)을 유지해야 합니다. SnapMirror 및 SnapVault 라이센스는 모두 ONTAP 8.x 및 9.x 릴리즈에 대해 계속 사용 및 지원됩니다.
+ONTAP 9.3 릴리즈 이전에는 ONTAP ONTAP 인스턴스 간의 _vault_관계를 구성하기 위해 별도의 SnapVault 라이센스가 필요했습니다. DP 인스턴스는 보존 시간이 더 긴 백업 사용 사례를 지원하기 위해 더 많은 스냅샷을 보존할 수 있고, ONTAP 인스턴스 간의 _mirror_관계를 구성하기 위해 SnapMirror 라이센스가 필요했습니다. SnapMirror 및 SnapVault 라이센스는 모두 ONTAP 8.x 및 9.x 릴리즈에 대해 계속 사용 및 지원됩니다.
 
 SnapVault 사용권은 계속 작동하고 ONTAP 8.x 및 9.x 릴리즈 모두에서 지원되지만, SnapVault 사용권 대신 SnapMirror 사용권을 사용할 수 있으며 미러 및 볼트 구성에 모두 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ SnapMirror 동기식 라이센스는 의 link:../system-admin/manage-licenses-co
 
 == SnapMirror 클라우드 라이센스
 
-ONTAP 9.8부터 SnapMirror 클라우드 라이센스는 ONTAP 인스턴스에서 오브젝트 스토리지 엔드포인트에 이르는 스냅샷 복사본의 비동기 복제를 제공합니다. 복제 대상은 사내 오브젝트 저장소뿐만 아니라 S3 및 S3 호환 퍼블릭 클라우드 오브젝트 스토리지 서비스를 사용하여 구성할 수 있습니다. SnapMirror 클라우드 관계는 ONTAP 시스템에서 사전 검증된 오브젝트 스토리지 대상까지 지원됩니다.
+ONTAP 9.8부터 SnapMirror 클라우드 라이센스는 ONTAP 인스턴스에서 오브젝트 스토리지 엔드포인트로 스냅샷의 비동기 복제를 제공합니다. 복제 대상은 사내 오브젝트 저장소뿐만 아니라 S3 및 S3 호환 퍼블릭 클라우드 오브젝트 스토리지 서비스를 사용하여 구성할 수 있습니다. SnapMirror 클라우드 관계는 ONTAP 시스템에서 사전 검증된 오브젝트 스토리지 대상까지 지원됩니다.
 
 SnapMirror 클라우드는 독립 실행형 라이센스로 사용할 수 없습니다. ONTAP 클러스터당 하나의 라이센스만 필요합니다. SnapMirror 클라우드 라이센스 외에 SnapMirror 비동기식 라이센스도 필요합니다.
 

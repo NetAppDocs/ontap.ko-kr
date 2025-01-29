@@ -2,7 +2,7 @@
 permalink: data-protection/restore-volume-snapvault-backup-task.html 
 sidebar: sidebar 
 keywords: restore, content, volume, snapmirror, destination, snap mirror, snapshot, vault, snapvault, read-write, incremental 
-summary: SnapMirror 타겟 볼륨의 스냅샷 복사본에서 전체 볼륨의 콘텐츠를 복원할 수 있습니다. 볼륨 내용을 원래 소스 볼륨 또는 다른 볼륨으로 복원할 수 있습니다. 
+summary: SnapMirror 대상 볼륨의 스냅숏에서 전체 볼륨의 내용을 복원할 수 있습니다. 볼륨 내용을 원래 소스 볼륨 또는 다른 볼륨으로 복원할 수 있습니다. 
 ---
 = ONTAP를 사용하여 SnapMirror 대상에서 볼륨의 내용을 복원합니다
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: SnapMirror 타겟 볼륨의 스냅샷 복사본에서 전체 볼륨의 
 
 
 [role="lead"]
-SnapMirror 타겟 볼륨의 스냅샷 복사본에서 전체 볼륨의 콘텐츠를 복원할 수 있습니다. 볼륨의 내용을 원래 소스 볼륨 또는 다른 볼륨으로 복원할 수 있습니다.
+SnapMirror 대상 볼륨의 스냅숏에서 전체 볼륨의 내용을 복원할 수 있습니다. 볼륨의 내용을 원래 소스 볼륨 또는 다른 볼륨으로 복원할 수 있습니다.
 
 .이 작업에 대해
 이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A70 또는 ASA A90)을 사용하는 경우 를 따라 link:https://docs.netapp.com/us-en/asa-r2/data-protection/restore-data.html["수행할 수 있습니다"^]데이터를 복구합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
 
 복원 작업의 대상 볼륨은 다음 중 하나여야 합니다.
 
-* 소스 볼륨과 타겟 볼륨에 공통 스냅샷 복사본이 있는 경우 SnapMirror에서 _incremental restore_를 수행하는 읽기-쓰기 볼륨입니다(일반적으로 원래 소스 볼륨으로 복원할 때와 동일).
+* 소스 및 대상 볼륨에 공통 스냅샷이 있는 경우(일반적으로 원래 소스 볼륨으로 복구할 때와 마찬가지로) 읽기-쓰기 볼륨인 경우 SnapMirror가 _증분 복구_를 수행합니다.
 +
 [NOTE]
 ====
-공통 스냅샷 복사본이 없으면 명령이 실패합니다. 볼륨의 내용을 빈 읽기-쓰기 볼륨으로 복원할 수 없습니다.
+공통 스냅샷이 없는 경우 명령이 실패합니다. 볼륨의 내용을 빈 읽기-쓰기 볼륨으로 복원할 수 없습니다.
 
 ====
-* 빈 데이터 보호 볼륨이며, 이 경우 SnapMirror는 _baseline restore_를 수행하고, 지정된 스냅샷 복사본과 이 볼륨이 참조하는 모든 데이터 블록을 소스 볼륨으로 전송합니다.
+* 빈 데이터 보호 볼륨으로서, 이 경우 SnapMirror가 _baseline restore_를 수행하고, 지정된 스냅샷과 해당 스냅샷이 참조하는 모든 데이터 블록이 소스 볼륨으로 전송됩니다.
 
 
 볼륨의 내용을 복원하는 것은 운영 중단이 발생합니다. 복원 작업이 실행 중일 때는 SnapVault 운영 볼륨에서 SMB 트래픽이 실행되고 있지 않아야 합니다.
@@ -34,9 +34,9 @@ SnapMirror 타겟 볼륨의 스냅샷 복사본에서 전체 볼륨의 콘텐츠
 
 대상 볼륨에 대해 정의된 할당량 규칙은 복구를 수행하기 전에 비활성화됩니다. 복원 작업이 완료된 후 "volume quota modify" 명령을 사용하여 할당량 규칙을 다시 활성화할 수 있습니다.
 
-볼륨의 데이터가 손실되거나 손상된 경우 이전 스냅샷 복사본에서 복원하여 데이터를 롤백할 수 있습니다.
+볼륨의 데이터가 손실되거나 손상된 경우 이전 스냅샷에서 복원하여 데이터를 롤백할 수 있습니다.
 
-이 절차는 소스 볼륨의 현재 데이터를 이전 스냅샷 복사본 버전의 데이터로 대체합니다. 대상 클러스터에서 이 작업을 수행해야 합니다.
+이 절차는 소스 볼륨의 현재 데이터를 이전 스냅샷 버전의 데이터로 대체합니다. 대상 클러스터에서 이 작업을 수행해야 합니다.
 
 .단계
 System Manager 또는 ONTAP CLI를 사용하여 볼륨의 콘텐츠를 복원할 수 있습니다.
@@ -48,14 +48,14 @@ System Manager 또는 ONTAP CLI를 사용하여 볼륨의 콘텐츠를 복원할
 . 보호 > 관계 * 를 클릭한 다음 소스 볼륨 이름을 클릭합니다.
 . 을 image:icon_kabob.gif["메뉴 옵션 아이콘"] 클릭한 다음 * 복원 * 을 선택합니다.
 . 소스 * 에서 소스 볼륨은 기본적으로 선택됩니다. 소스 이외의 볼륨을 선택하려면 * 기타 볼륨 * 을 클릭합니다.
-. 대상 * 에서 복원하려는 스냅샷 복사본을 선택합니다.
+. 대상 * 에서 복원할 스냅샷을 선택합니다.
 . 소스와 대상이 서로 다른 클러스터에 있는 경우 원격 클러스터에서 * 보호 > 관계 * 를 클릭하여 복구 진행률을 모니터링합니다.
 
 
 --
 .CLI를 참조하십시오
 --
-. 타겟 볼륨의 스냅샷 복사본을 나열합니다.
+. 대상 볼륨의 스냅샷을 나열합니다.
 +
 [source, cli]
 ----
@@ -65,7 +65,7 @@ volume snapshot show -vserver <SVM> -volume <volume>
 에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-다음 예에서는 "vserverB:secondary1" 대상의 스냅샷 복사본을 보여 줍니다.
+다음 예는 대상의 스냅샷을 보여 `vserverB:secondary1` 줍니다.
 
 +
 [listing]
@@ -85,7 +85,7 @@ vserverB    secondary1  hourly.2013-01-25_0005  valid   224KB     0%    0%
 
 7 entries were displayed.
 ----
-. SnapMirror 타겟 볼륨의 스냅샷 복사본에서 볼륨 콘텐츠를 복원합니다.
+. SnapMirror 대상 볼륨에 있는 스냅샷에서 볼륨의 내용 복원:
 +
 `snapmirror restore -source-path <SVM:volume>|<cluster://SVM/volume> -destination-path <SVM:volume>|<cluster://SVM/volume> -source-snapshot <snapshot>`
 
@@ -97,14 +97,14 @@ vserverB    secondary1  hourly.2013-01-25_0005  valid   224KB     0%    0%
 NOTE: 이 명령은 원래 소스 SVM 또는 원래 소스 클러스터에서 실행해야 합니다.
 
 +
-다음 명령을 실행하면 원래 타겟 볼륨 'econtary1'의 원래 소스 볼륨 'marpriy1'을 스냅샷 사본에서 복구합니다. 2013-01-25_0010
+다음 명령을 실행하면 원래 대상 볼륨에 있는 `secondary1` 스냅샷에서 `daily.2013-01-25_0010` 원본 소스 볼륨의 콘텐츠가 복원됩니다. `primary1`
 
 +
 [listing]
 ----
 cluster_src::> snapmirror restore -source-path vserverB:secondary1 -destination-path vserverA:primary1 -source-snapshot daily.2013-01-25_0010
 
-Warning: All data newer than Snapshot copy daily.2013-01-25_0010 on volume vserverA:primary1 will be deleted.
+Warning: All data newer than snapshot daily.2013-01-25_0010 on volume vserverA:primary1 will be deleted.
 
 Do you want to continue? {y|n}: y
 

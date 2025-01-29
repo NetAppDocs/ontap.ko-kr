@@ -36,7 +36,7 @@ Aggregate가 가득 찼습니다
 +
 볼륨 자동 증가를 사용하지 않는 경우 'volume modify-en자동 확장 모드'를 사용하여 활성화하십시오.
 
-* 'volume snapshot delete' 명령을 사용하여 스냅샷 복사본을 수동으로 삭제하거나 'volume snapshot autom자동 삭제 modify' 명령을 사용하여 스냅샷 복사본을 자동으로 삭제합니다.
+* 명령을 사용하여 스냅샷을 수동으로 `volume snapshot delete` 삭제하거나 명령을 사용하여 `volume snapshot autodelete modify` 스냅샷을 자동으로 삭제합니다.
 
 
 |===

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: features, do not support, volume rehost 
 summary: 볼륨 재호스트를 지원하지 않는 ONTAP 기능에는 몇 가지가 있습니다. 재호스트 작업을 시도하기 전에 이러한 기능을 숙지해야 합니다. 
 ---
-= 볼륨 재호스트에서는 지원되지 않는 기능입니다
+= ONTAP에서 볼륨 재호스트에서는 기능이 지원되지 않습니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ NOTE: 다른 SVM에서 볼륨을 FlexClone 볼륨으로 클론 복제하는 것�
 9.8 이전의 ONTAP 릴리스에서는 볼륨을 다시 호스팅하기 전에 볼륨의 암호화를 해제해야 합니다. 볼륨 암호화 키는 SVM 키에 따라 다릅니다. 볼륨이 다른 SVM으로 이동하고 소스 또는 타겟 SVM에서 멀티테넌트 키 구성이 활성화된 경우 볼륨 및 SVM 키가 일치하지 않습니다.
 
 +
-ONTAP 9.8부터는 NVE를 사용하여 볼륨을 다시 호스팅할 수 있습니다.
+ONTAP 9.8부터 NVE로 볼륨을 재호스팅할 수 있습니다.
 
 * FlexGroup 볼륨
 * 클론 볼륨

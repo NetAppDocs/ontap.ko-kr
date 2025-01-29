@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Azure, AKV, key vault, NVE keys, third-party, GCP, google cloud, Cloud KMS, AWS, amazon 
 summary: Azure, Google Cloud 또는 AWS 키 관리자를 사용하여 ONTAP 암호화 키 보호를 간소화합니다. 
 ---
-= 클라우드 공급자를 통해 키를 관리합니다
+= ONTAP에서 클라우드 공급자를 통해 키를 관리합니다
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: Azure, Google Cloud 또는 AWS 키 관리자를 사용하여 ONTAP 암�
 
 
 [role="lead"]
-ONTAP 9.10.1부터 를 사용할 수 있습니다 link:https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts["Azure 키 저장소(AKV)"^] 및 link:https://cloud.google.com/kms/docs["Google Cloud Platform의 키 관리 서비스(Cloud KMS)"^] 클라우드 호스팅 응용 프로그램에서 ONTAP 암호화 키를 보호합니다. ONTAP 9.12.0부터는 로 NVE 키를 보호할 수 있습니다 link:https://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS의 KMS"^].
+ONTAP 9.10.1부터 클라우드 호스팅 응용 프로그램에서 및 를 link:https://cloud.google.com/kms/docs["Google Cloud Platform의 키 관리 서비스(Cloud KMS)"^]사용하여 ONTAP 암호화 키를 보호할 수 link:https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts["Azure 키 저장소(AKV)"^]있습니다. ONTAP 9.12.0부터, 로 NVE 키를 보호할 수도 link:https://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS의 KMS"^]있습니다.
 
 AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:configure-netapp-volume-encryption-concept.html["NVE(NetApp Volume Encryption) 키"] 데이터 SVM에만 해당.
 

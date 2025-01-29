@@ -291,13 +291,13 @@ Job ID Name                 Vserver    Node           State
                             cluster1   -              Queued
        Description: Certificate Expiry Check
 ----
-. 실행 중이거나 대기열에 있는 애그리게이트, 볼륨 또는 스냅샷 복사본 작업을 삭제합니다.
+. 실행 중이거나 대기열에 있는 모든 집계, 볼륨 또는 스냅샷 작업을 삭제합니다.
 +
 [source, cli]
 ----
 job delete -id <job_id>
 ----
-. 집계, 볼륨 또는 스냅샷 작업이 실행되고 있지 않은지 또는 큐에 대기하고 있지 않은지 확인합니다.
+. 집계, 볼륨 또는 스냅샷 작업이 실행 중이거나 대기열에 있는지 확인합니다.
 +
 [source, cli]
 ----

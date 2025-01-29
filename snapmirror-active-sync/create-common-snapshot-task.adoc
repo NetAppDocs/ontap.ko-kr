@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/create-common-snapshot-task.html 
 keywords: SM-BC, SMBC, common Snapshot copy, manual Snapshot copy create, snapmirror active sync 
-summary: 정기적으로 예약된 스냅샷 복사본 작업 외에도, 기본 SnapMirror 일관성 그룹의 볼륨과 보조 SnapMirror 일관성 그룹의 볼륨 사이에 공통 스냅샷 복사본을 수동으로 생성할 수 있습니다. 
+summary: 정기적으로 예약된 스냅샷 작업 외에도 운영 SnapMirror 정합성 보장 그룹의 볼륨과 보조 SnapMirror 정합성 보장 그룹의 볼륨 간에 공통 스냅샷을 수동으로 생성할 수 있습니다. 
 ---
-= 공통 스냅샷 복사본을 생성합니다
+= 공통 스냅샷을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 정기적으로 예약된 스냅샷 복사본 작업 외에도, 기본 
 
 
 [role="lead"]
-정기적으로 예약된 스냅샷 복사본 작업 외에도 수동으로 공통 작업을 생성할 수 있습니다 link:../concepts/snapshot-copies-concept.html["스냅샷 복사본"] Primary SnapMirror 정합성 보장 그룹의 볼륨과 보조 SnapMirror 일관성 그룹의 볼륨 간
+정기적으로 예약된 스냅샷 작업 외에도 운영 SnapMirror 정합성 보장 그룹의 볼륨과 보조 SnapMirror 정합성 보장 그룹의 볼륨 간에 공통을 수동으로 생성할 수 link:../concepts/snapshot-copies-concept.html["스냅샷"]있습니다.
 
 .이 작업에 대해
 예약된 스냅샷 생성 간격은 12시간입니다.
@@ -24,7 +24,7 @@ summary: 정기적으로 예약된 스냅샷 복사본 작업 외에도, 기본 
 
 
 .단계
-. 공통 스냅샷 복사본 생성:
+. 일반 스냅샷 생성:
 +
 대상 경로 VS1_DST:/CG/CG_DST'의 경우, '목적지:: > SnapMirror update-destination-path VS1_DST:/CG/CG_DST'
 

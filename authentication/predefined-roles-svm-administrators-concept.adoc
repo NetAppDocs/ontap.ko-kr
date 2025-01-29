@@ -26,7 +26,7 @@ vsadmin을 선택합니다
  a| 
 * 사용자 계정 로컬 암호 및 키 정보 관리
 * 볼륨 이동을 제외한 볼륨 관리
-* 할당량, Qtree, 스냅샷 복사본 및 파일 관리
+* 할당량, qtree, 스냅샷 및 파일 관리
 * LUN 관리
 * 권한 있는 삭제를 제외한 SnapLock 작업 수행
 * 프로토콜 구성: NFS, SMB, iSCSI, FC, FCoE, NVMe/FC 및 NVMe/TCP
@@ -43,7 +43,7 @@ vsadmin - 볼륨
  a| 
 * 사용자 계정 로컬 암호 및 키 정보 관리
 * 볼륨 이동을 포함한 볼륨 관리
-* 할당량, Qtree, 스냅샷 복사본 및 파일 관리
+* 할당량, qtree, 스냅샷 및 파일 관리
 * LUN 관리
 * 프로토콜 구성: NFS, SMB, iSCSI, FC, FCoE, NVMe/FC 및 NVMe/TCP
 * 서비스 구성: DNS, LDAP 및 NIS
@@ -72,7 +72,7 @@ vsadmin - 백업
 * 사용자 계정 로컬 암호 및 키 정보 관리
 * NDMP 작업 관리
 * 복구된 볼륨을 읽기/쓰기로 만듭니다
-* SnapMirror 관계 및 Snapshot 복사본 관리
+* SnapMirror 관계 및 스냅샷 관리
 * 볼륨 및 네트워크 정보 보기
 
 
@@ -83,7 +83,7 @@ vsadmin - SnapLock
  a| 
 * 사용자 계정 로컬 암호 및 키 정보 관리
 * 볼륨 이동을 제외한 볼륨 관리
-* 할당량, Qtree, 스냅샷 복사본 및 파일 관리
+* 할당량, qtree, 스냅샷 및 파일 관리
 * 권한 있는 삭제를 포함한 SnapLock 작업 수행
 * 프로토콜 구성: NFS 및 SMB
 * 서비스 구성: DNS, LDAP 및 NIS

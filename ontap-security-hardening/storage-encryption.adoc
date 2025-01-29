@@ -4,7 +4,7 @@ permalink: ontap-security-hardening/storage-encryption.html
 keywords: tr-4569, ontap hardening guide, security, encryption, FIPS, FIPS 140-2, NVE, NAE, NSE, CSfC, NetApp Storage Encryption, NetApp Volume Encryption, NetApp Aggregate Encryption, Onboard Key Manager, External Key Manager, CryptoMod, FIPS-140-2, data at rest encryption 
 summary: 하드웨어 기반 NetApp 스토리지 암호화 또는 소프트웨어 기반 NetApp 볼륨 암호화/NetApp 애그리게이트 암호화로 중요 데이터를 보호합니다. 
 ---
-= 스토리지 암호화
+= ONTAP에서의 스토리지 암호화
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

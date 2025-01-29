@@ -22,7 +22,7 @@ SVM을 생성하여 고객에게 데이터를 제공해야 합니다.
 +
 이 SVM에서 Hyper-V 또는 SQL Server over SMB 솔루션을 구축하려는 경우 루트 볼륨에 NTFS 보안 스타일을 사용해야 합니다. Hyper-V 파일 또는 SQL 데이터베이스 파일이 포함된 볼륨은 만들 때 NTFS 보안으로 설정되어야 합니다. 루트 볼륨 보안 스타일을 NTFS로 설정하면 실수로 UNIX 또는 혼합 보안 스타일 데이터 볼륨을 만들지 않아도 됩니다.
 
-* ONTAP 9.13.1 부터는 스토리지 VM의 최대 용량을 설정할 수 있습니다. SVM이 임계값 용량 수준에 도달할 경우에도 경고를 구성할 수 있습니다. 자세한 내용은 을 xref:../volumes/manage-svm-capacity.html[SVM 용량 관리]참조하십시오.
+* ONTAP 9.13.1부터 스토리지 VM에 대한 최대 용량을 설정할 수 있습니다. SVM이 임계값 용량 수준에 도달할 경우에도 경고를 구성할 수 있습니다. 자세한 내용은 을 xref:../volumes/manage-svm-capacity.html[SVM 용량 관리]참조하십시오.
 
 
 [role="tabbed-block"]
@@ -315,7 +315,7 @@ NOTE: 기존 SVM에서 NAS 감사가 이미 활성화되어 있는 경우 애그
 +
 "vserver create-language?
 
-. SVM을 생성할 때 스냅샷 정책을 지정할 계획이고 정책 이름을 모를 경우 사용 가능한 정책을 나열하고 사용할 스냅샷 정책의 이름을 식별하고 기록합니다.
+. SVM을 생성할 때 스냅샷 정책을 지정할 계획이지만 정책 이름을 모르는 경우, 사용 가능한 정책을 나열하고 사용할 스냅샷 정책의 이름을 식별하여 기록합니다.
 +
 '볼륨 스냅샷 정책 표시 - vserver_vserver_name_'
 
@@ -373,4 +373,4 @@ Is Vserver Protected: false
 --
 ====
 
-NOTE: ONTAP 9.13.1 부터는 SVM의 볼륨에 처리량 플로어 및 최대 한도를 적용하여 적응형 QoS 정책 그룹 템플릿을 설정할 수 있습니다. SVM을 생성한 후에만 이 정책을 적용할 수 있습니다. 이 프로세스에 대한 자세한 내용은 을 참조하십시오 xref:../performance-admin/adaptive-policy-template-task.html[적응형 정책 그룹 템플릿을 설정합니다].
+NOTE: ONTAP 9.13.1부터 SVM의 볼륨에 처리량 하한 및 상한 제한을 적용하여 적응형 QoS 정책 그룹 템플릿을 설정할 수 있습니다. SVM을 생성한 후에만 이 정책을 적용할 수 있습니다. 이 프로세스에 대한 자세한 내용은 을 xref:../performance-admin/adaptive-policy-template-task.html[적응형 정책 그룹 템플릿을 설정합니다]참조하십시오.

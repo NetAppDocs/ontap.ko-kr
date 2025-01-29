@@ -13,8 +13,6 @@ summary: 트렁킹을 지원하는 Linux 및 VMware 클라이언트는 트렁킹
 [role="lead"]
 트렁킹을 지원하는 Linux 및 VMware 클라이언트는 트렁킹이 활성화된 ONTAP NFSv4.1 서버에서 볼륨 또는 데이터 공유를 마운트할 수 있습니다.
 
-클라이언트에 마운트 명령을 입력할 때 트렁킹 그룹에서 각 LIF의 IP 주소를 입력해야 합니다.
-
 에 대해 자세히 알아보십시오 link:index.html#supported-clients["지원되는 클라이언트"].
 
 [role="tabbed-block"]
@@ -23,14 +21,20 @@ summary: 트렁킹을 지원하는 Linux 및 VMware 클라이언트는 트렁킹
 --
 ONTAP 9.16.1 이상 및 Red Hat Enterprise Linux 버전 8.7 이상(RHEL 8의 경우) 또는 9.2 이상(RHEL 9의 경우)을 Linux 클라이언트로 사용하는 경우 트렁킹 그룹에 하나의 마운트 지점만 필요합니다. 다음 옵션을 사용하여 내보낸 볼륨을 이 명령으로 마운트합니다. `trunkdiscovery`
 
-`mount <lif1_ip>:<volume> </mnt/test1> -o trunkdiscovery,vers=4.1`
+[source, cli]
+----
+mount <lif_ip>:<volume_name> </mount_path> -o trunkdiscovery,vers=4.1
+----
+그렇지 않으면 트렁킹 그룹의 각 연결에 대해 별도의 마운트 지점이 필요합니다. 옵션을 사용하여 다음과 유사한 명령을 사용하여 내보낸 볼륨을 마운트합니다 `max_connect`.
 
-그렇지 않으면 트렁킹 그룹의 각 연결에 대해 별도의 마운트 지점이 필요합니다. 다음과 유사한 명령을 사용하여 내보낸 볼륨을 마운트합니다.
-
-`mount <lif1_ip>:<volume> </mnt/test1> -o vers=4.1,max_connect=16`
-
-`mount <lif2_ip>:<volume> </mnt/test2> -o vers=4.1,max_connect=16`
-
+[source, cli]
+----
+mount <lif1_ip>:<volume_name> </mount_path1> -o vers=4.1,max_connect=16
+----
+[source, cli]
+----
+mount <lif2_ip>:<volume_name> </mount_path2> -o vers=4.1,max_connect=16
+----
 버전 (`vers`) 값은 이어야 합니다 `4.1` 이상.
 
 를 클릭합니다 `max_connect` 값은 트렁킹 그룹의 연결 수에 해당합니다.

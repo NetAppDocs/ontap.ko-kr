@@ -33,7 +33,7 @@ ONTAP 9.16.1에서 사용 가능한 새로운 기능에 대해 알아보십시�
 
 
  a| 
-xref:../snapmirror-active-sync/[SnapMirror 액티브 동기화에 대한 다중 노드 지원]
+xref:../snapmirror-active-sync/index.html[SnapMirror 액티브 동기화에 대한 다중 노드 지원]
  a| 
 이전의 2노드 제한에서 확장된 SnapMirror 액티브 동기화는 4노드 클러스터를 지원하므로 대규모 워크로드를 위한 데이터 복제가 가능합니다.
 

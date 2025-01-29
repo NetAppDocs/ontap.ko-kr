@@ -35,13 +35,13 @@ ONTAP 9.14.1에서 사용할 수 있는 새로운 기능에 대해 알아보십�
 | xref:../encryption-at-rest/configure-netapp-volume-encryption-concept.html[SVM 루트 볼륨에서 NVE 지원] | NetApp 볼륨 암호화가 있는 고유 키를 사용하여 SVM 루트 볼륨을 암호화할 수 있습니다. 
 
 
-| xref:../snaplock/snapshot-lock-concept.html[장기 보존 스냅샷 복사본에 대한 스냅샷 복사본 잠금을 설정 하는 기능 ] 및 xref:../snaplock/initialize-complianceclock-task.html[규정 준수 시계를 다시 초기화하려면] | SnapLock 라이센스가 있는 클러스터에서 비 SnapLock SnapMirror 대상 볼륨에 생성된 스냅샷 복사본에 대해 장기 보존이 가능한 스냅샷 복사본에 대해 위조 방지 스냅샷 복사본 잠금을 설정할 수 있으며, SnapLock 볼륨이 없을 때는 규정 준수 클록을 초기화할 수 있습니다. 
+| xref:../snaplock/snapshot-lock-concept.html[장기 보존 스냅샷에 대한 스냅샷 잠금을 설정할 수 있습니다] 및 xref:../snaplock/initialize-complianceclock-task.html[규정 준수 시계를 다시 초기화하려면] | SnapLock 라이센스가 있는 클러스터에서 장기 보존이 가능한 스냅샷에 대한 무단 스냅샷 잠금을 SnapLock SnapMirror가 아닌 대상 볼륨에 생성된 스냅샷에 대해 설정할 수 있으며 SnapLock 볼륨이 없는 경우 규정 준수 클록을 초기화할 수 있습니다. 
 
 
 | xref:../snapmirror-active-sync/index.html[SnapMirror 활성 동기화는 SCIS3 영구 예약 및 Windows 페일오버 클러스터링을 지원합니다] | SCSI3 영구 예약 및 Window Failover Clustering for SnapMirror Active Sync는 여러 노드를 장치에 액세스하는 동시에 다른 노드에 대한 액세스를 차단하므로 서로 다른 애플리케이션 환경에 대한 클러스터링이 일관적이고 안정적으로 유지됩니다. 
 
 
-| xref:../data-protection/snapmirror-svm-replication-concept.html[볼륨 세분화 스냅샷을 정합성 보장 그룹으로 복제합니다] | 일관성 그룹을 활용하여 비동기식 SnapMirror 스냅샷 및 볼륨 세분화 스냅샷을 대상 일관성 그룹에 복제하여 추가 재해 복구 계층을 수행할 수 있습니다. 
+| xref:../data-protection/snapmirror-svm-replication-concept.html[볼륨 세분화 스냅샷을 일관성 그룹으로 복사합니다] | 정합성 보장 그룹을 활용하여 비동기식 SnapMirror 스냅샷 및 볼륨 세분화 스냅샷을 대상 정합성 보장 그룹에 복제하여 추가 재해 복구 계층을 수행할 수 있습니다. 
 
 
 | xref:../task_dp_configure_storage_vm_dr.html[SVM 재해 복구 관계 내 일관성 그룹을 위한 비동기식 데이터 보호 지원] | SVM 재해 복구용으로 구성된 SVM은 SVM에 일관성 그룹이 포함된 경우 일관성 그룹 정보를 2차 사이트로 복제할 수 있습니다. 
@@ -141,7 +141,7 @@ ONTAP는 과 같은 변수를 지원합니다 `$aws:username` 버킷 정책 및 
 | link:../authentication/oauth2-deploy-ontap.html["OAuth 2.0 권한 부여 프레임워크"] | OAuth 2.0(Open Authorization) 프레임워크가 추가되고 ONTAP REST API 클라이언트에 토큰 기반 인증을 제공합니다. 따라서 REST API 스크립트 또는 Ansible에서 제공하는 자동화 워크플로우를 사용하여 ONTAP 클러스터를 더욱 안전하게 관리하고 관리할 수 있습니다. 발급사, 대상, 로컬 검증, 원격 검사, 원격 사용자 클레임 및 프록시 지원 클라이언트 권한 부여는 자체 포함된 OAuth 2.0 범위를 사용하거나 로컬 ONTAP 사용자를 매핑하여 구성할 수 있습니다. 지원되는 ID 공급자(IDP)에는 여러 개의 동시 서버를 사용하는 Auth0 및 Keycloak이 포함됩니다. 
 
 
-| xref:../anti-ransomware/manage-parameters-task.html[자율적 랜섬웨어 방어에 대한 조정 가능한 경고] | 새 파일 확장명이 감지될 때마다 또는 ARP 스냅샷이 생성될 때 발생 가능한 랜섬웨어 이벤트에 대한 조기 경고를 수신하도록 Autonomous Ransomware Protection을 구성합니다. 
+| xref:../anti-ransomware/manage-parameters-task.html[자율적 랜섬웨어 방어에 대한 조정 가능한 경고] | 새 파일 확장명이 감지되거나 ARP 스냅샷이 생성될 때 알림을 수신하도록 Autonomous 랜섬웨어 방지 기능을 구성하여 가능한 랜섬웨어 이벤트에 대한 조기 경고를 수신합니다. 
 
 
 | xref:https://docs.netapp.com/us-en/ontap/nas-audit/persistent-stores.html[FPolicy는 영구 저장소를 지원하여 지연 시간을 줄여줍니다] | FPolicy를 사용하면 SVM에서 의무 사항이 아닌 비동기 정책의 파일 액세스 이벤트를 캡처하는 영구 저장소를 설정할 수 있습니다. 영구 저장소는 클라이언트 I/O 처리를 FPolicy 알림 처리와 분리하여 클라이언트 지연 시간을 줄여 줍니다. 동기 및 비동기 필수 구성은 지원되지 않습니다. 
@@ -182,7 +182,7 @@ FabricPool의 경우, 의 값입니다 `-physical-used` 는 용량 계층과 성
 | xref:../flexgroup/manage-flexgroup-rebalance-task.html[사전 예방을 위한 FlexGroup 재조정] | FlexGroup 볼륨은 디렉토리에서 증가하는 파일을 원격 구성요소로 자동 이동하여 로컬 구성요소에서 I/O 병목 현상을 줄일 수 있도록 지원합니다. 
 
 
-| xref:../flexgroup/supported-unsupported-config-concept.html[FlexGroup 볼륨의 스냅샷 복사본 태그 지정] | 에서 태그 및 레이블(메모)을 추가, 수정 및 삭제하여 스냅샷 복사본을 식별하고 FlexGroup 볼륨에서 스냅샷 복사본을 실수로 삭제하지 않도록 할 수 있습니다. 
+| xref:../flexgroup/supported-unsupported-config-concept.html[FlexGroup 볼륨의 스냅샷 태그 지정] | 에서 태그 및 레이블(주석)을 추가, 수정 및 삭제하여 스냅샷을 식별하고 FlexGroup 볼륨에서 실수로 스냅샷을 삭제하지 않도록 할 수 있습니다. 
 
 
 | xref:../fabricpool/enable-disable-volume-cloud-write-task.html[FabricPool 를 사용하여 클라우드에 직접 쓰십시오] | FabricPool는 FabricPool의 볼륨에 데이터를 쓰는 기능을 추가하여 계층화 스캔을 기다리지 않고 클라우드로 직접 이동합니다. 

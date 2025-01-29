@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: throughput, qos, understand, ceilings, floors, shared, policy, adaptive, general, support, workloads, 
 summary: '스토리지 QoS(서비스 품질)를 사용하여 주요 워크로드의 성능이 다른 워크로드에 의해 저하되지 않도록 보장할 수 있습니다. 경쟁 워크로드에 대한 처리 성능 제한을 설정하여 시스템 리소스에 미치는 영향을 제한하거나 중요한 워크로드에 대한 처리 속도를 설정할 수 있습니다. 따라서 경쟁 워크로드에 의한 요구 사항에 관계없이 최소 처리량 목표를 충족할 수 있습니다. 동일한 워크로드에 대해 천장과 바닥을 설정할 수도 있습니다.' 
 ---
-= QoS 개요를 통해 처리량 보장
+= ONTAP에서 QoS 개요를 통해 처리량을 보장합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,7 +37,7 @@ TIP: 예를 들어, 처리량 상한은 처리량을 직접 조절합니다. 처
 
 정책 그룹을 생성할 때 층을 지정하거나 워크로드를 모니터링하여 지정할 때까지 기다릴 수 있습니다.
 
-ONTAP 9.13.1 부터는 을 사용하여 SVM 범위에서 처리량 플로어를 설정할 수 있습니다 <<adaptive-qos-templates>>. 9.13.1 이전의 ONTAP 릴리즈에서는 처리량 플로어를 정의하는 정책 그룹을 SVM에 적용할 수 없습니다.
+ONTAP 9.13.1부터 를 사용하여 SVM 범위에서 처리량 플로트를 설정할 수 있습니다<<adaptive-qos-templates>>. 9.13.1 이전의 ONTAP 릴리즈에서는 처리량 플로어를 정의하는 정책 그룹을 SVM에 적용할 수 없습니다.
 
 [NOTE]
 ====
@@ -95,7 +95,7 @@ ONTAP 9.6부터 SSD가 장착된 ONTAP Select 프리미엄에서 처리량 플�
 
 === 적응형 정책 그룹 템플릿입니다
 
-ONTAP 9.13.1 부터는 SVM에 적응형 QoS 템플릿을 설정할 수 있습니다. 적응형 정책 그룹 템플릿을 사용하면 SVM에서 모든 볼륨의 처리량 플로어 및 한도를 설정할 수 있습니다.
+ONTAP 9.13.1부터 SVM에 적응형 QoS 템플릿을 설정할 수 있습니다. 적응형 정책 그룹 템플릿을 사용하면 SVM에서 모든 볼륨의 처리량 플로어 및 한도를 설정할 수 있습니다.
 
 적응형 정책 그룹 템플릿은 SVM이 생성된 후에만 설정할 수 있습니다. 를 사용합니다 `vserver modify` 명령과 함께 `-qos-adaptive-policy-group-template` 매개 변수를 사용하여 정책을 설정합니다.
 

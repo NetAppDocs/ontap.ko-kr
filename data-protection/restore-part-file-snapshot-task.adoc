@@ -2,21 +2,21 @@
 permalink: data-protection/restore-part-file-snapshot-task.html 
 sidebar: sidebar 
 keywords: restore, part, file, snapshot copy 
-summary: 데이터의 시작 바이트 오프셋과 바이트 수를 알고 있다고 가정할 때, 볼륨 스냅샷 부분 복원 파일 명령을 사용하여 스냅샷 복사본에서 LUN 또는 NFS 또는 SMB 컨테이너 파일로 데이터 범위를 복원할 수 있습니다. 이 명령을 사용하여 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스 중 하나를 복원할 수 있습니다. 
+summary: 데이터의 시작 바이트 오프셋과 바이트 수를 알고 있다고 가정하면 volume snapshot partial-restore-file 명령을 사용하여 스냅샷에서 LUN 또는 NFS 또는 SMB 컨테이너 파일로 데이터 범위를 복원할 수 있습니다. 이 명령을 사용하여 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스 중 하나를 복원할 수 있습니다. 
 ---
-= ONTAP 를 사용하여 스냅샷 복사본에서 파일의 일부를 복원합니다
+= ONTAP를 사용하여 스냅샷에서 파일의 일부를 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-'volume snapshot partial-restore-file' 명령을 사용하면 데이터의 시작 바이트 오프셋과 바이트 수를 알고 있다고 가정하여 스냅샷 복사본에서 LUN 또는 NFS 또는 SMB 컨테이너 파일로 데이터 범위를 복원할 수 있습니다. 이 명령을 사용하여 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스 중 하나를 복원할 수 있습니다.
+데이터의 시작 바이트 오프셋과 바이트 수를 알고 있다고 가정하면 명령을 사용하여 스냅샷에서 LUN으로 데이터 범위를 복원할 수 있습니다 `volume snapshot partial-restore-file`. 이 명령을 사용하여 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스 중 하나를 복원할 수 있습니다.
 
-ONTAP 9.12.1부터 를 사용하는 볼륨에 대해 부분 복원을 사용할 수 있습니다 xref:../snapmirror-active-sync/index.html[SnapMirror 활성 동기화].
+ONTAP 9.12.1부터 를 사용하는 볼륨에 대해 부분 복원을 사용할 수 xref:../snapmirror-active-sync/index.html[SnapMirror 활성 동기화]있습니다.
 
 .단계
-. 볼륨의 스냅샷 복사본을 나열합니다.
+. 볼륨의 스냅샷을 나열합니다.
 +
 'volume snapshot show -vserver_SVM_-volume_volume_'
 
@@ -24,7 +24,7 @@ ONTAP 9.12.1부터 를 사용하는 볼륨에 대해 부분 복원을 사용할 
 에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-다음 예에서는 "vol1"의 스냅샷 복사본을 보여 줍니다.
+다음 예는 의 스냅샷을 `vol1` 보여 줍니다.
 
 +
 [listing]
@@ -44,7 +44,7 @@ vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 
 7 entries were displayed.
 ----
-. 스냅샷 복사본에서 파일 부분 복원:
+. 스냅샷에서 파일의 일부를 복원합니다.
 +
 '볼륨 스냅샷 부분 복구 파일 - vserver_SVM_-volume_volume_-snapshot_snapshot_-path_file_path_-start-byte_starting_byte_-byte-count_byte_count_'
 

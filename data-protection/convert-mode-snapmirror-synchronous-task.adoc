@@ -35,7 +35,7 @@ cluster2::> snapmirror quiesce -destination-path vs1_dr:vol1
 ----
 cluster2::> snapmirror delete -destination-path vs1_dr:vol1
 ----
-. 소스 클러스터에서 공통 스냅샷 복사본을 삭제하지 않고 SnapMirror 관계를 놓습니다.
+. 소스 클러스터에서 일반 스냅샷을 삭제하지 않고 SnapMirror 관계를 해제합니다.
 +
 `snapmirror release -relationship-info-only true -destination-path <destination_SVM>:<destination_volume>`
 
