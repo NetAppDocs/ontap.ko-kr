@@ -30,6 +30,6 @@ summary: 정기적으로 예약된 스냅샷 작업 외에도 운영 SnapMirror 
 
 . 업데이트 진행 상황 모니터링:
 +
-대상::> SnapMirror show-fields-m최신형 스냅샷
+`destination::>snapmirror show -fields newest-snapshot`
 
 

@@ -79,7 +79,7 @@ NOTE: ONTAP 9.13.1에서는 REST API를 사용하여 기간별 메트릭만 검�
 
 일관성 그룹에 대한 보호를 구성하려면 를 참조하십시오 link:protect-task.html["일관성 그룹 보호"].
 
-원격 보호를 활용하려면 에 대한 요구 사항을 충족해야 합니다 xref:../snapmirror-active-sync/prerequisites-reference.html[SnapMirror 활성 동기화].
+원격 보호를 사용하려면 에 대한 요구 사항을 충족해야 xref:../snapmirror-active-sync/prerequisites-reference.html[SnapMirror 활성 동기화]합니다.
 
 
 NOTE: NAS 액세스를 위해 마운트된 볼륨에 SnapMirror 활성 동기화 관계를 설정할 수 없습니다.

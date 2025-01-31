@@ -2,13 +2,16 @@
 permalink: san-admin/lun-san-environments-concept.html 
 sidebar: sidebar 
 keywords: lun, guidelines, assigning, assign, ids, mapping, map, igroups 
-summary: 클러스터에서 LUN을 설정하기 전에 LUN 지침을 검토해야 합니다. 
+summary: 클러스터에서 LUN 설정을 시작하기 전에 이러한 LUN 지침을 검토해야 합니다. 
 ---
 = LUN을 생성하기 전에 알아야 할 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+클러스터에서 LUN 설정을 시작하기 전에 이러한 LUN 지침을 검토해야 합니다.
 
 
 

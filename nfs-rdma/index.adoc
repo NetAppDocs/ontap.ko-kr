@@ -2,7 +2,7 @@
 permalink: nfs-rdma/index.html 
 sidebar: sidebar 
 keywords: NFS over RDMA, GPU, NVIDIA GDX 
-summary: RDMA 기반 NFS는 RDMA 지원 어댑터를 사용하므로 CPU 중단과 오버헤드 없이 스토리지와 호스트 시스템 메모리 간에 데이터를 직접 복사할 수 있습니다. 
+summary: RDMA 기반 NFS는 RDMA 지원 어댑터를 사용하여 CPU 중단과 오버헤드 없이 스토리지와 호스트 시스템 메모리 간에 데이터를 직접 복사할 수 있습니다. 
 ---
 = ONTAP에서 RDMA를 통한 NFS에 대해 알아보십시오
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: RDMA 기반 NFS는 RDMA 지원 어댑터를 사용하므로 CPU 중단�
 
 
 [role="lead"]
-RDMA 기반 NFS는 RDMA 지원 네트워크 어댑터를 활용하여 스토리지 시스템 메모리와 호스트 시스템 메모리 간에 데이터를 직접 복사할 수 있으므로 CPU 중단과 오버헤드를 피할 수 있습니다.
+RDMA 기반 NFS는 RDMA 지원 네트워크 어댑터를 사용하여 스토리지 시스템 메모리와 호스트 시스템 메모리 간에 데이터를 직접 복사할 수 있으므로 CPU 중단과 오버헤드를 피할 수 있습니다.
 
 RDMA 상 NFS 구성은 머신 러닝 및 분석과 같은 지연 시간에 민감하거나 대역폭이 높은 워크로드를 사용하는 고객을 위해 설계되었습니다. RDMA 기반 ONTAP NFS는 모든 NFS 기반 워크로드에 사용할 수 있습니다. 또한 NVIDIA는 GDS(GPU Direct Storage)를 지원하기 위해 RDMA를 통해 NFS를 확장했습니다. GDS는 RDMA를 사용하여 스토리지 시스템과 GPU 메모리 간에 데이터를 직접 전송함으로써 CPU와 메인 메모리를 모두 우회함으로써 GPU 지원 워크로드를 더욱 가속화합니다.
 

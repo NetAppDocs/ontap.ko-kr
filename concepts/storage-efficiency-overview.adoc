@@ -2,7 +2,7 @@
 permalink: concepts/storage-efficiency-overview.html 
 sidebar: sidebar 
 keywords: storage efficiency, storage efficiencies, storage efficiency technologies, space utliziation, space savings, optimizing, space optimization, minimizing, wasted space, reducing, footprint, thin provisioning, deduplication, zero block, zero-block, inline, deduplication, backgroud deduplication, postprocessing, post-processing, compression, compaction, flex-clone technologies 
-summary: 스토리지 효율성은 스토리지 리소스를 최적화하고, 낭비되는 공간을 최소화하고, 쓰인 데이터의 물리적 설치 공간을 줄임으로써 스토리지 시스템이 사용 가능한 공간을 얼마나 효과적으로 활용하는지 나타내는 척도입니다. 
+summary: 스토리지 효율성은 스토리지 리소스를 최적화하고, 낭비되는 공간을 최소화하고, 쓰인 데이터의 물리적 설치 공간을 줄임으로써 스토리지 시스템이 사용 가능한 공간을 얼마나 효과적으로 사용하는지를 측정한 것입니다. 
 ---
 = ONTAP 스토리지 효율성 개요
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 스토리지 효율성은 스토리지 리소스를 최적화하고, �
 
 
 [role="lead"]
-스토리지 효율성은 스토리지 리소스를 최적화하고, 낭비되는 공간을 최소화하고, 쓰인 데이터의 물리적 설치 공간을 줄임으로써 스토리지 시스템이 사용 가능한 공간을 얼마나 효과적으로 활용하는지 나타내는 척도입니다. 스토리지 효율성을 높이면 최소 공간 내에 최저 비용으로 최대한 많은 양의 데이터를 저장할 수 있습니다. 예를 들어, 중복 데이터 블록과 0으로 채워진 데이터 블록을 감지하여 제거하는 스토리지 효율적인 기술을 사용하면 필요한 전체 물리적 스토리지의 양을 줄이고 전체 비용을 절감할 수 있습니다.
+스토리지 효율성은 스토리지 리소스를 최적화하고, 낭비되는 공간을 최소화하고, 쓰인 데이터의 물리적 설치 공간을 줄임으로써 스토리지 시스템이 사용 가능한 공간을 얼마나 효과적으로 사용하는지를 측정한 것입니다. 스토리지 효율성을 높이면 최소 공간 내에 최저 비용으로 최대한 많은 양의 데이터를 저장할 수 있습니다. 예를 들어, 중복 데이터 블록과 0으로 채워진 데이터 블록을 감지하여 제거하는 스토리지 효율적인 기술을 사용하면 필요한 전체 물리적 스토리지의 양을 줄이고 전체 비용을 절감할 수 있습니다.
 
 ONTAP은 다양한 스토리지 효율성 기술을 제공하여 데이터에 사용되는 물리적 하드웨어 또는 클라우드 스토리지의 양을 줄이고, 데이터 읽기 속도 향상, 데이터 세트 복사 속도 향상, VM 프로비저닝 속도 향상 등 시스템 성능을 크게 개선합니다.
 
