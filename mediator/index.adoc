@@ -37,9 +37,43 @@ CAUTION: 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이�
 
 
 
-=== OS 요구 사항
+=== 호스트 요구 사항
 
-운영 체제는 다음 요구 사항을 충족해야 합니다.
+RHEL(Red Hat Enterprise Linux) 또는 Rocky Linux를 설치하고 관련 리포지토리를 구성할 때 다음 요구 사항을 따르십시오.
+
+[NOTE]
+====
+설치 또는 구성 프로세스를 수정하는 경우 추가 단계를 수행해야 할 수 있습니다.
+
+====
+.Linux 배포 요구 사항
+* Red Hat의 모범 사례에 따라 RHEL 또는 Rocky Linux를 설치합니다. CentOS 8.x의 수명이 다했으므로 호환되는 버전의 CentOS 8.x는 권장되지 않습니다.
+* ONTAP 중재자 서비스를 설치할 때 설치 프로그램이 필요한 모든 소프트웨어 종속성을 검색하고 설치할 수 있도록 시스템이 필요한 리포지토리에 액세스할 수 있는지 확인합니다.
+* yum 설치 관리자가 RHEL 리포지토리에서 종속 소프트웨어를 찾을 수 있도록 하려면 설치 중 또는 이후에 유효한 Red Hat 서브스크립션을 사용하여 시스템을 등록합니다.
++
+[NOTE]
+====
+자세한 내용은 Red Hat 서브스크립션 관리자 설명서를 참조하십시오.
+
+====
+
+
+.네트워킹 요구 사항
+* 다음 포트가 ONTAP 중재자에 사용 가능하고 사용되지 않는지 확인합니다.
++
+** 31784
+** 3260
+
+
+* 타사 방화벽을 사용하는 경우 을 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#firewall-requirements-for-ontap-mediator["ONTAP 중재자를 위한 방화벽 요구 사항"^]참조하십시오.
+* 인터넷에 액세스할 수 없는 Linux 호스트의 경우 로컬 리포지토리에서 필요한 패키지를 사용할 수 있는지 확인합니다.
++
+Linux 환경에서 LACP(Link Aggregation Control Protocol)를 사용하는 경우 커널을 구성하고 `sysctl net.ipv4.conf.all.arp_ignore` 을 로 `2`설정합니다.
+
+
+
+.OS 요구 사항
+OS는 다음 요구 사항을 충족해야 합니다.
 
 * 64비트 물리적 설치 또는 가상 머신
 * 8GB RAM
@@ -47,7 +81,7 @@ CAUTION: 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이�
 * 사용자: 루트 액세스
 
 
-다음 표는 각 ONTAP 중재자 버전에 대해 지원되는 운영 체제를 보여줍니다.
+다음 표는 ONTAP mediator 버전별로 지원되는 운영 체제를 보여줍니다.
 
 [cols="30,70"]
 |===
@@ -135,6 +169,58 @@ CAUTION: 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이�
 . 호환되는 것은 RHEL이 더 이상 이 버전을 지원하지 않지만 ONTAP mediator는 계속 설치할 수 있다는 의미입니다.
 
 
+.OS 필수 패키지
+ONTAP 중재자 서비스에는 다음 패키지가 필요합니다.
+
+
+NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에 의해 자동으로 설치됩니다.
+
+[cols="34,33,33"]
+|===
+
+
+| 모든 RHEL/CentOS 버전 | RHEL 8.x/Rocky Linux 8용 추가 패키지 | RHEL 9.x/Rocky Linux 9용 추가 패키지 
+
+
+ a| 
+* OpenSSL
+* OpenSSL - devel
+* kernel-devel-$(uname-r)
+* GCC 를 참조하십시오
+* 만듭니다
+* libselinux-utils
+* 패치
+* bzip2
+* Perl - 데이터 - 덤프
+* Perl-ExtUtils-MakeMaker
+* efootmgr
+* mokutil
+
+ a| 
+* python3-PIP
+* elfutils -libelf -devel
+* 정책 코어 유틸리티 - 비톤 - 유틸리티
+* redhat-LSB-core를 참조하십시오
+* python39
+* 피톤39-데블
+
+ a| 
+* python3-PIP
+* elfutils -libelf -devel
+* 정책 코어 유틸리티 - 비톤 - 유틸리티
+* 3단계
+* python3-devel
+
+
+|===
+중재자 설치 패키지는 다음을 포함하는 자동 압축 tar 파일입니다.
+
+* 지원되는 릴리즈의 리포지토리에서 가져올 수 없는 모든 종속성을 포함하는 RPM 파일입니다.
+* 설치 스크립트
+
+
+유효한 SSL 인증이 권장됩니다.
+
 
 
 === OS 업그레이드 고려 사항 및 커널 호환성
@@ -166,7 +252,7 @@ ONTAP mediator는 UEFI 보안 부팅이 활성화되어 있거나 활성화되�
 
 [NOTE]
 ====
-UEFI 보안 부팅을 비활성화하는 방법에 대한 자세한 내용은 시스템별 지침을 참조하십시오.
+UEFI 보안 부팅을 비활성화하는 방법에 대한 자세한 지침은 호스트 OS 설명서를 참조하십시오.
 
 ====
 UEFI 보안 부팅이 활성화된 ONTAP 중재자를 설치하려면 서비스를 시작하기 전에 보안 키를 등록해야 합니다. 이 키는 SCST 설치의 컴파일 단계 중에 생성되며 컴퓨터에 개인 공개 키 쌍으로 저장됩니다. 유틸리티를 사용하여 `mokutil` 공개 키를 UEFI 펌웨어에 컴퓨터 소유자 키(Mok)로 추가하여 시스템이 서명된 모듈을 신뢰하고 로드할 수 있도록 합니다.  `mokutil`Mok를 활성화하기 위해 시스템을 재부팅할 때 필요하므로 암호를 안전한 위치에 저장합니다.
