@@ -20,17 +20,19 @@ ONTAP은 클러스터의 모든 노드에 대해 인증 키를 생성합니다.
 
 * Onboard Key Manager가 활성화된 경우 이 명령은 지원되지 않습니다. 그러나 Onboard Key Manager가 활성화되면 두 개의 인증 키가 자동으로 생성됩니다. 키는 다음 명령을 사용하여 볼 수 있습니다.
 +
-'보안 키 관리자 키 쿼리 - 키 유형 NSE-AK'
-
+[listing]
+----
+security key-manager key query -key-type NSE-AK
+----
 * 구성된 키 관리 서버가 이미 128개 이상의 인증 키를 저장하고 있으면 경고가 표시됩니다.
-* 'Security key-manager key delete' 명령어를 이용하여 사용하지 않는 키를 삭제할 수 있다. 지정된 키가 현재 ONTAP에서 사용 중이면 보안 키 관리자 키 삭제 명령이 실패합니다. (이 명령을 사용하려면 ""admin"" 이상의 권한이 있어야 합니다.)
+*  사용하여명령을 수 `security key-manager key delete` 사용하지 않는 키를 삭제할 있습니다.  `security key-manager key delete`지정된 키가 현재 ONTAP에서 사용 중인 경우 명령이 실패합니다. (이 명령을 사용하려면 보다 큰 Privileges가 있어야 `admin` 합니다.)
 +
 [NOTE]
 ====
 MetroCluster 환경에서 키를 삭제하기 전에 키가 파트너 클러스터에서 사용되고 있지 않은지 확인해야 합니다. 파트너 클러스터에서 다음 명령을 사용하여 키가 사용되고 있지 않은지 확인할 수 있습니다.
 
-** `storage encryption disk show -data-key-id _key-id_`
-** `storage encryption disk show -fips-key-id _key-id_`
+** `storage encryption disk show -data-key-id <key-id>`
+** `storage encryption disk show -fips-key-id <key-id>`
 
 
 ====
@@ -42,8 +44,10 @@ MetroCluster 환경에서 키를 삭제하기 전에 키가 파트너 클러스�
 .단계
 . 클러스터 노드의 인증 키를 생성합니다.
 +
-'보안 키-관리자 키 만들기-키-태그 passphrase_label-prompt-for-key true|false'
-
+[source, cli]
+----
+security key-manager key create -key-tag <passphrase_label> -prompt-for-key true|false
+----
 +
 [NOTE]
 ====
@@ -57,12 +61,14 @@ MetroCluster 환경에서 키를 삭제하기 전에 키가 파트너 클러스�
 [listing]
 ----
 cluster1::> security key-manager key create
-Key ID: 000000000000000002000000000001006268333f870860128fbe17d393e5083b0000000000000000
+Key ID: <id_value>
 ----
 . 인증 키가 생성되었는지 확인합니다.
 +
-'보안 키 관리자 키 쿼리 노드
-
+[listing]
+----
+security key-manager key query -node node
+----
 +
 [NOTE]
 ====
@@ -83,9 +89,9 @@ cluster1::> security key-manager key query
 Key Tag                               Key Type  Restored
 ------------------------------------  --------  --------
 node1                                 NSE-AK    yes
-    Key ID: 000000000000000002000000000001000c11b3863f78c2273343d7ec5a67762e0000000000000000
+    Key ID: <id_value>
 node1                                 NSE-AK    yes
-    Key ID: 000000000000000002000000000001006f4e2513353a674305872a4c9f3bf7970000000000000000
+    Key ID: <id_value>
 
        Vserver: cluster1
    Key Manager: external
@@ -94,8 +100,8 @@ node1                                 NSE-AK    yes
 Key Tag                               Key Type  Restored
 ------------------------------------  --------  --------
 node2                                 NSE-AK    yes
-    Key ID: 000000000000000002000000000001000c11b3863f78c2273343d7ec5a67762e0000000000000000
+    Key ID: <id_value>
 node2                                 NSE-AK    yes
-    Key ID: 000000000000000002000000000001006f4e2513353a674305872a4c9f3bf7970000000000000000
+    Key ID: <id_value>
 ----
 
