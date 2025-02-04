@@ -174,5 +174,5 @@ vserver modify -vserver <vserver_name> -storage-limit 0
 
 .관련 정보
 * xref:../concepts/capacity-measurements-in-sm-concept.adoc[System Manager의 용량 측정]
-* xref:../task_admin_monitor_capacity_in_sm.html[System Manager에서 용량을 모니터링합니다]
+* xref:../task_admin_monitor_capacity_in_sm.html[System Manager에서 클러스터, 계층, SVM 용량 모니터링]
 

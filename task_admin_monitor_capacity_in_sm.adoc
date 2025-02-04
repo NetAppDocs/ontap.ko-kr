@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_admin_monitor_capacity_in_sm.html 
-keywords: used storage, digital advisor, local tier capacity, aggregate capacity, add capacity, used capacity, available capacity, total capacity, inactive data, overprovision, overflows, snapshot copy reserves, reserves, clone, maximum capacity limit, storage VM, allocated 
+keywords: used storage, digital advisor, local tier capacity, aggregate capacity, add capacity, used capacity, available, total capacity, inactive data, overprovision, overflows, snapshot copy reserves, reserves, clone, maximum capacity limit, storage VM, allocate 
 summary: System Manager를 사용하면 사용된 스토리지 용량과 클러스터, 로컬 계층 또는 스토리지 VM에 대해 사용 가능한 스토리지 용량을 모니터링할 수 있습니다. 
 ---
-= System Manager에서 용량을 모니터링합니다
+= ONTAP System Manager에서 클러스터, 계층, SVM 용량 모니터링
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -20,13 +20,13 @@ System Manager를 사용하면 사용된 스토리지 용량과 클러스터, �
 
 각 ONTAP 버전에서 System Manager는 더욱 강력한 용량 모니터링 정보를 제공합니다.
 
-* ONTAP 9.10.1부터 System Manager를 사용하면 클러스터 용량에 대한 기간별 데이터를 보고 향후 사용 또는 사용 가능한 용량을 예측할 수 있습니다. 로컬 계층 및 볼륨의 용량을 모니터링할 수도 있습니다.
+* ONTAP 9.10.1부터 System Manager에서는 클러스터 용량에 대한 기간별 데이터를 확인하고 향후 사용하거나 사용할 수 있는 용량에 대한 예측을 볼 수 있습니다. 로컬 계층 및 볼륨의 용량을 모니터링할 수도 있습니다.
 * ONTAP 9.12.1부터 시스템 관리자는 로컬 계층에 대해 커밋된 용량을 표시합니다.
 * ONTAP 9.13.1 부터는 스토리지 VM에 대해 최대 용량 제한을 설정하고 사용된 스토리지가 최대 용량의 특정 비율에 도달하면 경고를 트리거하도록 임계값을 설정할 수 있습니다.
 
 
 
-NOTE: 사용된 용량의 측정치는 ONTAP 버전에 따라 다르게 표시됩니다. 자세한 내용은 을 참조하십시오 link:./concepts/capacity-measurements-in-sm-concept.html["System Manager의 용량 측정"].
+NOTE: 사용된 용량의 측정치는 ONTAP 버전에 따라 다르게 표시됩니다. 자세한 내용은 을 link:./concepts/capacity-measurements-in-sm-concept.html["System Manager의 용량 측정"]참조하십시오.
 
 
 

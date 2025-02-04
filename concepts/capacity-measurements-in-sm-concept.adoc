@@ -206,6 +206,6 @@ PIB
 
 |===
 .관련 정보
-link:../task_admin_monitor_capacity_in_sm.html["System Manager에서 용량을 모니터링합니다"]
+link:../task_admin_monitor_capacity_in_sm.html["System Manager에서 클러스터, 계층, SVM 용량 모니터링"]
 
 link:../volumes/logical-space-reporting-enforcement-concept.html["볼륨에 대한 논리적 공간 보고 및 적용"]
