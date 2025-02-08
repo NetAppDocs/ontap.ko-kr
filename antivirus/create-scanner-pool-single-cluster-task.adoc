@@ -2,7 +2,7 @@
 permalink: antivirus/create-scanner-pool-single-cluster-task.html 
 sidebar: sidebar 
 keywords: create, scanner pool, single cluster 
-summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 개별 SVM 또는 클러스터의 모든 SVM에 대해 스캐너 풀을 생성할 수 있습니다. 
+summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 
 ---
 = ONTAP를 사용하여 단일 클러스터에 스캐너 풀을 생성합니다
 :allow-uri-read: 
@@ -11,41 +11,29 @@ summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 �
 
 
 [role="lead"]
-스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 개별 SVM 또는 클러스터의 모든 SVM에 대해 스캐너 풀을 생성할 수 있습니다.
+스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다.
 
-.필요한 것
+.시작하기 전에
 * SVM과 Vscan 서버는 동일한 도메인 또는 신뢰할 수 있는 도메인에 있어야 합니다.
-* 개별 SVM용으로 정의된 스캐너 풀의 경우 ONTAP 바이러스 백신 커넥터를 SVM 관리 LIF 또는 SVM 데이터 LIF와 함께 구성해야 합니다.
-* 클러스터의 모든 SVM에 대해 정의된 스캐너 풀의 경우 클러스터 관리 LIF에서 ONTAP 바이러스 백신 커넥터를 구성해야 합니다.
-* 권한이 있는 사용자 목록에는 Vscan 서버가 SVM에 연결하는 데 사용하는 도메인 사용자 계정이 포함되어야 합니다.
+* 클러스터 관리 LIF를 사용하여 ONTAP 바이러스 백신 커넥터를 구성합니다.
+* 권한이 있는 사용자 목록에는 Vscan 서버가 SVM에 연결하는 데 사용하는 도메인 및 사용자 이름이 포함되어야 합니다.
 * 스캐너 풀이 구성되면 서버에 대한 연결 상태를 확인합니다.
 
 
 .단계
 . 스캐너 풀 생성:
 +
-'vserver vscan scanner -pool create -vserver data_SVM|cluster_admin_SVM-scanner -pool scanner_pool -hostname vscan_server_hostname -privileged-users privileged_users'
+`vserver vscan scanner-pool create -vserver cluster_admin_SVM -scanner-pool scanner_pool -hostnames Vscan_server_hostnames -privileged-users privileged_users`
 
 +
-** 개별 SVM용으로 정의된 풀에 대해 데이터 SVM을 지정하고, 클러스터의 모든 SVM에 대해 정의된 풀에 대해 클러스터 관리 SVM을 지정합니다.
+** 클러스터 관리자 SVM을 지정합니다.
 ** 각 Vscan 서버 호스트 이름에 대한 IP 주소 또는 FQDN을 지정합니다.
 ** 권한이 있는 각 사용자의 도메인 및 사용자 이름을 지정합니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
-+
-다음 명령을 실행하면 이라는 스캐너 풀이 생성됩니다 `SP` 를 누릅니다 `vs1` SVM:
-
-+
-[listing]
-----
-cluster1::> vserver vscan scanner-pool create -vserver vs1 -scanner-pool SP -hostnames 1.1.1.1,vmwin204-27.fsct.nb -privileged-users cifs\u1,cifs\u2
-----
 . 스캐너 풀이 생성되었는지 확인합니다.
 +
-`vserver vscan scanner-pool show -vserver _data_SVM|cluster_admin_SVM_ -scanner-pool _scanner_pool_`
-
-+
-에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+`vserver vscan scanner-pool show -vserver cluster_admin_SVM -scanner-pool _scanner_pool_`
 
 +
 다음 명령을 실행하면 'S' 스캐너 풀에 대한 세부 정보가 표시됩니다.
@@ -53,19 +41,19 @@ cluster1::> vserver vscan scanner-pool create -vserver vs1 -scanner-pool SP -hos
 +
 [listing]
 ----
-cluster1::> vserver vscan scanner-pool show -vserver vs1 -scanner-pool SP
+cluster1::> vserver vscan scanner-pool show -vserver cluster_admin_SVM -scanner-pool SP
 
-                                    Vserver: vs1
+                                    Vserver: cluster_admin_SVM
                                Scanner Pool: SP
                              Applied Policy: idle
                              Current Status: off
          Cluster on Which Policy Is Applied: -
-                  Scanner Pool Config Owner: vserver
+                  Scanner Pool Config Owner: cluster
        List of IPs of Allowed Vscan Servers: 1.1.1.1, 10.72.204.27
 List of Host Names of Allowed Vscan Servers: 1.1.1.1, vmwin204-27.fsct.nb
                    List of Privileged Users: cifs\u1, cifs\u2
 ----
 +
-또한 명령을 사용하여 SVM에 있는 모든 스캐너 풀을 볼 수도 있습니다 `vserver vscan scanner-pool show`. 에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+명령을 사용하여 클러스터의 모든 스캐너 풀을 볼 수도 `vserver vscan scanner-pool show` 있습니다. 에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

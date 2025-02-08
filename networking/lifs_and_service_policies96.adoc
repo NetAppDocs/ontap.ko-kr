@@ -244,7 +244,7 @@ ONTAP 9.12.1에서 도입되었습니다. 감사 로그 전달을 위한 서비�
  a| 
 기본 관리
  a| 
-관리 - https, management-http, management-ssh, management-dns-client, management-ad-client, 관리 - LDAP-클라이언트, 관리 - NIS-클라이언트
+data-core, management-https, management-ssh, management-dns-client, management-ad-client, management-ldap-client, management-nis-client
  a| 
 없음
  a| 
@@ -266,7 +266,7 @@ iSCSI
  a| 
 default-data-files 를 선택합니다
  a| 
-데이터 - FPolicy - 클라이언트, 데이터 - DNS - 서버, 데이터 - FlexCache, 데이터 - CIFS, 데이터 - NFS, 관리 - DNS - 클라이언트, 관리 - ad - 클라이언트, 관리 - LDAP - 클라이언트, 관리 - NIS - 클라이언트
+데이터 코어, 데이터-FPolicy-Client, 데이터-dns-server, 데이터-FlexCache, 데이터-cifs, 데이터-nfs, 관리-dns-client, 관리-add-client, 관리-ldap-client, 관리-NIS-client
  a| 
 NFS, CIFS, FCache가 있습니다
  a| 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: ontap-security-hardening/sysadmin-methods.html 
-keywords: tr-4569, ontap hardening guide, security, access, encryption, MFA, multi-factor authentication, ssh, MOTD, CLI timeout, SAML access for System Manager, Insights 
-summary: 강력한 ONTAP 시스템 관리를 위해 이러한 방법을 배포합니다. 
+keywords: tr-4569, ontap hardening guide, security, access, encryption, MFA, multi-factor authentication, ssh, MOTD, timeout, SAML access for System Manager, Insights 
+summary: 강력한 ONTAP 시스템 관리를 위한 CLI 및 System Manager 방법을 고려하십시오. 
 ---
 = 시스템 관리 방법
 :hardbreaks:
@@ -224,3 +224,19 @@ ONTAP 9.11.1부터 ONTAP System Manager는 클러스터 관리자가 일상 작�
 | 클러스터가 알림에 대해 구성되지 않았습니다 | 이메일, Webhook 또는 SNMP traphosts가 알림을 수신하도록 구성되지 않았습니다. 
 |===
 ONTAP System Manager 인사이트에 대한 자세한 내용은 를 link:../insights-system-optimization-task.html#view-optimization-insights["ONTAP System Manager 인사이트 설명서"]참조하십시오.
+
+
+
+=== System Manager 세션 시간이 초과되었습니다
+
+System Manager 세션 비활성 시간 초과를 변경할 수 있습니다. 기본 비활성 시간 제한은 30분입니다. 시간 초과는 부실 세션 및 세션 피기백킹을 방지하는 데 중요합니다.
+
+
+NOTE: SAML이 구성된 경우 IdP의 설정에 의해 비활성 시간 초과가 제어됩니다.
+
+.단계
+. 클러스터 > 설정 * 을 선택합니다.
+. UI settings * 에서 를 image:icon_pencil.gif["편집 아이콘"]선택합니다.
+. Inactivity timeout * 상자에 2에서 180 사이의 분 값을 입력하거나 "0"을 입력하여 시간 초과를 비활성화합니다.
+. 저장 * 을 선택합니다.
+

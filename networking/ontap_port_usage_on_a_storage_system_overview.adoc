@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: networking/ontap_port_usage_on_a_storage_system_overview.html 
-keywords: port, tcp, udp, ontap, external, externally, service, services, introduce, introduction, introducing, overview, ontap port usage overview, ontap port usage, network ports, ontap ports, tcp ports, udp ports, ssh, port 22, telnet, port 23, dns, port 53, http, port 80, rpcbind, port 111, ntp, port 123, msrpc, port 135, netbios-ssn, port 139, snmp, port 161, https, port 443, microsoft-ds, port 445, mount, port 635, named, port 953, nfs, port 2049, nrv, port 2050, iscsi, port 3260, lockd, port 4045, nsm, port 4046, rquotad, port 4049, krb524, port 4444, mdns, port 5353, https, port 5986, port 8443, ndmp, port 10000, cluster peering, port 11104, port 11105, ports 18600 through 18699, cifs witness, port 40001, tls, port 50000, port 65200 
+keywords: port, tcp, udp, http, https, ssh, ontap ports overview, communication ports, port conflicts, ontap ports for inbound traffic, ontap ports for outbound traffic, internal ports 
 summary: 특정 서비스와 ONTAP 통신을 위한 예약된 포트입니다 
 ---
 = ONTAP 포트 개요
@@ -14,121 +14,232 @@ summary: 특정 서비스와 ONTAP 통신을 위한 예약된 포트입니다
 
 
 [role="lead"]
-잘 알려진 여러 포트는 특정 서비스와 ONTAP 통신을 위해 예약되어 있습니다. 스토리지 네트워크 환경의 포트 값이 ONTAP 포트와 동일한 경우 포트 충돌이 발생합니다.
+잘 알려진 여러 포트가 특정 서비스와의 ONTAP 통신용으로 예약되어 있습니다. 스토리지 네트워크 환경의 포트 값이 ONTAP 포트의 값과 같으면 포트 충돌이 발생합니다.
 
-다음 표에는 ONTAP에서 사용하는 TCP 포트 및 UDP 포트가 나와 있습니다.
+
+
+== 인바운드 트래픽
+
+ONTAP 스토리지의 인바운드 트래픽은 다음 프로토콜 및 포트를 사용합니다.
 
 [cols="25,25,50"]
 |===
 
 
-| 서비스 | 포트/프로토콜 | 설명 
+| 프로토콜 | 포트 | 목적 
 
 
-| SSH를 클릭합니다 | 22/TCP | 보안 쉘 로그인 
+| 모든 ICMP | 모두 | 인스턴스에 Ping을 수행 중입니다 
 
 
-| 텔넷 | 23/TCP | 원격 로그인 
+| TCP | 22 | 클러스터 관리 LIF 또는 노드 관리 LIF의 IP 주소에 대한 보안 셸 액세스 
 
 
-| DNS | 53/TCP | 균형 잡힌 DNS를 로드합니다 
+| TCP | 80 | 클러스터 관리 LIF의 IP 주소에 대한 웹 페이지 액세스 
 
 
-| HTTP | 80/TCP | Hyper Text Transfer Protocol의 약어입니다 
+| TCP/UDP입니다 | 111 | rpcbind, NFS에 대한 원격 프로시저 호출 
 
 
-| rpcbind | 111/TCP | 원격 프로시저 호출 
+| UDP입니다 | 123을 선택합니다 | NTP, 네트워크 시간 프로토콜 
 
 
-| rpcbind | 111/UDP | 원격 프로시저 호출 
+| UDP입니다 | 135 | MSRPC, Microsoft 원격 프로시저 호출 
 
 
-| NTP | 123/UDP입니다 | Network Time Protocol의 약어입니다 
+| TCP | 139 | NetBIOS - SSN, CIFS에 대한 NetBIOS 서비스 세션입니다 
 
 
-| MSRPC | 135/UDP | MSRPC 
+| TCP/UDP입니다 | 161-162 을 참조하십시오 | SNMP, 단순 네트워크 관리 프로토콜 
 
 
-| NetBIOS-SSN | 139/TCP 를 참조하십시오 | NetBIOS 서비스 세션입니다 
+| TCP | 443 | 클러스터 관리 LIF의 IP 주소에 대한 웹 페이지 액세스를 보호합니다 
 
 
-| SNMP를 선택합니다 | 161/UDP | 단순한 네트워크 관리 프로토콜 
+| TCP | 445 | MS Active Domain Services, NetBIOS 프레이밍이 있는 TCP 기반 Microsoft SMB/CIFS 
 
 
-| HTTPS | 443/TCP | TLS를 통한 HTTP 
+| TCP/UDP입니다 | 635 | NFS 마운트로 원격 파일 시스템이 로컬인 것처럼 상호 작용합니다 
 
 
-| Microsoft - DS | 445/TCP | Microsoft - DS 
+| TCP | 749 | Kerberos 
 
 
-| 마운트 | 635/TCP | NFS 마운트 
+| UDP입니다 | 953 | 이름 데몬입니다 
 
 
-| 마운트 | 635/UDP | NFS 마운트 
+| TCP/UDP입니다 | 2049 | NFS 서버 데몬 
 
 
-| 이름 지정 | 953/UDP | 이름 데몬입니다 
+| TCP | 2050 | NRV, NetApp 원격 볼륨 프로토콜 
 
 
-| NFS 를 참조하십시오 | 2049/UDP | NFS 서버 데몬 
+| TCP | 3260 | iSCSI 데이터 LIF를 통한 iSCSI 액세스 
 
 
-| NFS 를 참조하십시오 | 2049/TCP | NFS 서버 데몬 
+| TCP/UDP입니다 | 4045 | NFS 잠금 데몬 
 
 
-| NRV | 2050/TCP | NetApp 원격 볼륨 프로토콜 
+| TCP/UDP입니다 | 4046 | NFS에 대한 네트워크 상태 모니터 
 
 
-| iSCSI | 3260/TCP | iSCSI 타겟 포트입니다 
+| UDP입니다 | 4049 | NFS RPC 견적 
 
 
-| 잠금 | 4045/TCP | NFS 잠금 데몬 
+| UDP입니다 | 4444 | KRB524, Kerberos 524 
 
 
-| 잠금 | 4045/UDP | NFS 잠금 데몬 
+| UDP입니다 | 5353 | 멀티캐스트 DNS 
 
 
-| NSM | 4046/TCP | 네트워크 상태 모니터 
+| TCP | 10000 | NDMP(Network Data Management Protocol)를 사용한 백업 
 
 
-| NSM | 4046/UDP | 네트워크 상태 모니터 
+| TCP | 11104 | SnapMirror용 클러스터 간 통신 세션의 클러스터 피어링, 양방향 관리 
 
 
-| rquotad | 4049/UDP | NFS rquotad 프로토콜 
+| TCP | 11105 | 클러스터 피어링, 양방향으로 SnapMirror 데이터를 통해 인터클러스터 LIF를 사용하여 전송 
+|===
 
 
-| krb524)를 참조하십시오 | 4444/UDP | Kerberos 524 
+== 아웃바운드 트래픽
 
+비즈니스 요구사항에 따라 ONTAP 스토리지의 아웃바운드 트래픽은 기본 규칙 또는 고급 규칙을 사용하여 설정할 수 있습니다.
 
-| mDNS | 5353/UDP | 멀티캐스트 DNS 
 
 
-| HTTPS | 5986/UDP | HTTPS 포트 수신 이진 프로토콜 
+=== 기본 아웃바운드 규칙
 
+ICMP, TCP 및 UDP 프로토콜을 통한 모든 아웃바운드 트래픽에 모든 포트를 사용할 수 있습니다.
 
-| HTTPS | 8443/TCP | https를 통해 7MTT GUI 툴 사용 
+[cols="25,25,50"]
+|===
 
 
-| NDMP | 10000/TCP | 네트워크 데이터 관리 프로토콜 
+| 프로토콜 | 포트 | 목적 
 
 
-| 클러스터 피어링 | 11104/TCP | 클러스터 피어링, 양방향 
+| 모든 ICMP | 모두 | 모든 아웃바운드 트래픽 
 
 
-| 클러스터 피어링, 양방향 | 11105/TCP | 클러스터 피어링 
+| 모든 TCP | 모두 | 모든 아웃바운드 트래픽 
 
 
-| NDMP | 18600-18699/TCP | NDMP 
+| 모든 UDP | 모두 | 모든 아웃바운드 트래픽 
+|===
 
 
-| NDMP | 30000/TCP입니다 | 보안 소켓을 통해 제어 연결을 수락합니다 
+=== 고급 아웃바운드 규칙
 
+아웃바운드 트래픽에 대해 엄격한 규칙이 필요한 경우 다음 정보를 사용하여 ONTAP의 아웃바운드 통신에 필요한 포트만 열 수 있습니다.
 
-| CIFS 감시 포트입니다 | 40001/TCP | CIFS 감시 포트입니다 
 
 
-| TLS | 50000/TCP | 전송 계층 보안 
+==== Active Directory를 클릭합니다
 
+[cols="10,10,30,25,25"]
+|===
 
-| iSCSI | 65200/TCP | iSCSI 포트 
+
+| 프로토콜 | 포트 | 출처 | 목적지 | 목적 
+
+
+| TCP | 88 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS, iSCSI) | Active Directory 포리스트입니다 | Kerberos V 인증 
+
+
+| UDP입니다 | 137 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | NetBIOS 이름 서비스입니다 
+
+
+| UDP입니다 | 138 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | NetBIOS 데이터그램 서비스 
+
+
+| TCP | 139 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | NetBIOS 서비스 세션입니다 
+
+
+| TCP | 389 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | LDAP를 지원합니다 
+
+
+| UDP입니다 | 389 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | LDAP를 지원합니다 
+
+
+| TCP | 445 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | Microsoft SMB/CIFS over TCP 및 NetBIOS 프레임 
+
+
+| TCP | 464 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | Kerberos V 암호 변경 및 설정(set_change) 
+
+
+| UDP입니다 | 464 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | Kerberos 키 관리 
+
+
+| TCP | 749 | 노드 관리 LIF, 데이터 LIF(NFS, CIFS) | Active Directory 포리스트입니다 | Kerberos V 암호 변경 및 설정(RPCSEC_GSS) 
+|===
+
+
+==== AutoSupport
+
+[cols="10,10,30,25,25"]
+|===
+
+
+| 프로토콜 | 포트 | 출처 | 목적지 | 목적 
+
+
+| TCP | 80 | 노드 관리 LIF | support.netapp.com | AutoSupport(전송 프로토콜이 HTTPS에서 HTTP로 변경된 경우에만 해당) 
+|===
+
+
+==== SNMP를 선택합니다
+
+[cols="10,10,30,25,25"]
+|===
+
+
+| 프로토콜 | 포트 | 출처 | 목적지 | 목적 
+
+
+| TCP/UDP입니다 | 162 | 노드 관리 LIF | 서버 모니터링 | SNMP 트랩으로 모니터링 
+|===
+
+
+==== SnapMirror를 참조하십시오
+
+[cols="10,10,30,25,25"]
+|===
+
+
+| 프로토콜 | 포트 | 출처 | 목적지 | 목적 
+
+
+| TCP | 11104 | 인터클러스터 LIF | ONTAP 인터클러스터 LIF | SnapMirror에 대한 인터클러스터 통신 세션의 관리 
+|===
+
+
+==== 기타 서비스
+
+[cols="10,10,30,25,25"]
+|===
+
+
+| 프로토콜 | 포트 | 출처 | 목적지 | 목적 
+
+
+| TCP | 25 | 노드 관리 LIF | 메일 서버 | AutoSupport에 사용할 수 있는 SMTP 경고 
+
+
+| UDP입니다 | 53 | 노드 관리 LIF 및 데이터 LIF(NFS, CIFS) | DNS | DNS 
+
+
+| UDP입니다 | 67 | 노드 관리 LIF | DHCP를 선택합니다 | DHCP 서버 
+
+
+| UDP입니다 | 68 | 노드 관리 LIF | DHCP를 선택합니다 | 처음으로 설정하는 DHCP 클라이언트 
+
+
+| UDP입니다 | 514 | 노드 관리 LIF | Syslog 서버 | Syslog 메시지를 전달합니다 
+
+
+| TCP | 5010 | 인터클러스터 LIF | 엔드포인트 백업 또는 복원 | S3로 백업 기능의 백업 및 복원 작업 
+
+
+| TCP | 18600 - 18699 | 노드 관리 LIF | 대상 서버 | NDMP 복제 
 |===

@@ -223,13 +223,13 @@ ONTAP 9.16.1부터 다음 MetroCluster SVM 마이그레이션이 지원됩니다
 
 
 
-| NetApp 애그리게이트 암호화(NAE) | 지원되지 않습니다 | NAE를 사용하는 엔드포인트에 대해서는 마이그레이션이 지원되지 않습니다. 
+| NetApp 애그리게이트 암호화(NAE) | ONTAP 9.11.1 | NAE 용적은 NAE 지원 대상에 배치해야 합니다. NAE 대상을 사용할 수 없는 경우 마이그레이션 작업이 실패합니다. 
 
 
 | NDMP 구성 | 지원되지 않습니다 |  
 
 
-| NetApp 볼륨 암호화(NVE) | ONTAP 9.10.1 |  
+| NetApp 볼륨 암호화(NVE) | ONTAP 9.10.1 | NVE 볼륨은 타겟에서 NVE 볼륨으로 마이그레이션됩니다. 
 
 
 | NFS 및 SMB 감사 로그 | ONTAP 9.13.1  a| 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: ontap-security-hardening/default-admin-accounts.html 
-keywords: tr-4569, ontap hardening guide, security, RBAC, roles, Restricting access, admin, diag 
-summary: admin 및 diag 계정에 대한 액세스 제한 
+keywords: tr-4569, ontap hardening guide, security, RBAC, roles, restrict access, admin, diag 
+summary: admin 및 diag 계정에 대한 액세스 제한 고려 사항 
 ---
 = 기본 관리 계정
 :hardbreaks:

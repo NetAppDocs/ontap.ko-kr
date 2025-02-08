@@ -38,7 +38,7 @@ FlexGroup 볼륨당 버킷 1,000개 또는 클러스터당 버킷 12,000개(Flex
 
 == ONTAP 9.14.1 이상을 사용한 자동 FlexGroup 사이징
 
-ONTAP 9.14.1부터 기본 FlexGroup 크기는 기본 버킷의 크기를 기준으로 합니다. 버킷을 추가하거나 제거하면 FlexGroup 볼륨이 자동으로 증가 또는 감소합니다.
+ONTAP 9.14.1부터 기본 FlexGroup 크기는 포함된 버킷 크기를 기반으로 합니다. 버킷을 추가하거나 제거하면 FlexGroup 볼륨이 자동으로 증가 또는 감소합니다.
 
 예를 들어 초기 Bucket_A가 100GB로 프로비저닝되면 FlexGroup는 100GB로 씬 프로비저닝됩니다. 300GB의 Bucket_B, 500GB의 Bucket_C라는 두 개의 추가 버킷을 생성하면 FlexGroup 볼륨이 900GB로 증가합니다.
 

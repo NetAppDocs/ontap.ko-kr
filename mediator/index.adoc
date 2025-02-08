@@ -61,8 +61,8 @@ RHEL(Red Hat Enterprise Linux) 또는 Rocky Linux를 설치하고 관련 리포�
 .네트워킹 요구 사항
 * 다음 포트가 ONTAP 중재자에 사용 가능하고 사용되지 않는지 확인합니다.
 +
-** 31784
-** 3260
+** 31784: HTTPS 포트이며 들어오는 트래픽만 허용하기 때문에 인바운드 요청에 대해 이 포트를 구성합니다.
+** 3260: iSCSI 프로토콜에 양방향 연결이 필요하므로 이 포트는 양방향입니다.
 
 
 * 타사 방화벽을 사용하는 경우 을 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#firewall-requirements-for-ontap-mediator["ONTAP 중재자를 위한 방화벽 요구 사항"^]참조하십시오.
