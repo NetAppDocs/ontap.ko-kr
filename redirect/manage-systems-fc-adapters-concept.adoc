@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+'''
+Permalink: san-config/manage-systems-fc-adapters-concept.html 리디렉션: ONTAP/san-config/configure-fc-adapters-initiator-target.html

@@ -2,16 +2,16 @@
 permalink: abac/abac-approaches.html 
 sidebar: sidebar 
 keywords: technical report, tr, abac, attribute, access control, attribute based, nfs, security labels, xattrs, nfs 4.2, nist, abac compliant, data management, role-based access control, rbac, policy enforcement point, pep, policy decision point, pdp 
-summary: ONTAP는 NFS v4.2 보안 레이블 및 NFS를 사용한 xattrs 등 고객이 파일 수준 ABAC를 구현하기 위해 사용할 수 있는 다양한 접근 방식을 제공합니다. 
+summary: 'NFS v4.2 보안 레이블 및 NFS를 사용한 확장 특성(xattrs)을 비롯한 ONTAP를 통해 파일 수준 ABAC(속성 기반 액세스 제어)를 달성합니다.' 
 ---
-= ONTAP의 ABAC에 대한 접근 방식
+= ONTAP의 ABAC(속성 기반 액세스 제어)에 대한 접근 방식입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP는 NFS v4.2 보안 레이블 및 NFS를 사용한 확장 특성(xattrs)을 비롯하여 고객이 파일 수준 속성 기반 액세스 제어(ABAC)를 달성하기 위해 사용할 수 있는 몇 가지 접근 방식을 제공합니다.
+ONTAP는 NFS v4.2 보안 레이블 및 NFS를 사용한 확장 특성(xattrs)을 비롯하여 파일 수준 ABAC(속성 기반 액세스 제어)를 달성하는 데 사용할 수 있는 몇 가지 접근 방식을 제공합니다.
 
 
 
@@ -638,6 +638,7 @@ IC-TDF 메타데이터가 파일과 별도로 저장되는 시나리오에서 Ne
 * link:https://www.netapp.com/media/10720-tr-4067.pdf["NFS in NetApp ONTAP: 모범 사례 및 구축 가이드"^]
 * 설명 요청(RFC)
 +
+** link:https://datatracker.ietf.org/doc/html/rfc7204["RFC 7204: 레이블이 지정된 NFS에 대한 요구 사항"^]
 ** link:https://datatracker.ietf.org/doc/html/rfc2203["RFC 2203: RPCSEC_GSS 프로토콜 사양"^]
 ** link:https://datatracker.ietf.org/doc/html/rfc3530["RFC 3530: NFS(Network File System) 버전 4 프로토콜"^]
 
