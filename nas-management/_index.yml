@@ -58,7 +58,7 @@ indexpage:
       url: "/../nfs-admin/ontap-name-service-switch-config-concept.html"
     - title: 이름 서비스 문제를 해결합니다
       url: "/../nfs-admin/troubleshoot-name-service-issues-task.html"
-  - title: Kerberos 및 TLS
+  - title: Kerberos
     links:
     - title: Kerberos에 대한 ONTAP 지원
       url: "/../nfs-admin/ontap-support-kerberos-concept.html"
@@ -66,8 +66,6 @@ indexpage:
       url: "/../task_nas_secure_client_access_with_kerberos.html"
     - title: CLI를 사용하여 Kerberos를 구성합니다
       url: "/../nfs-config/kerberos-nfs-strong-security-concept.html"
-    - title: TLS를 통한 보안 NFS 클라이언트 액세스를 사용하거나 사용하지 않도록 설정합니다
-      url: "/../task_nas_enable_disable_secure_nfs_client_access_with_tls.html"
   - title: RDMA 상의 NFS
     links:
     - title: NFS over RDMA 개요
