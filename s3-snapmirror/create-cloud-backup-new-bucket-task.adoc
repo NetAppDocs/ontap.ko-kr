@@ -54,7 +54,7 @@ summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 �
 
 
 
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책을 생성합니다.
 +
 .. 보호 > 개요 * 를 클릭한 다음 * 로컬 정책 설정 * 을 클릭합니다.
 .. image:../media/icon_arrow.gif["화살표 아이콘"]보호 정책 * 옆에 있는 * 추가 * 를 클릭합니다.
@@ -73,14 +73,14 @@ summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 �
 .. 이름을 입력하고 스토리지 VM을 선택한 다음 크기를 입력한 다음 * 추가 옵션 * 을 클릭합니다.
 .. 사용 권한 * 에서 * 추가 * 를 클릭합니다. 사용 권한 확인은 선택 사항이지만 사용하는 것이 좋습니다.
 +
-*** * Principal * 및 * Effect * - 사용자 그룹 설정에 해당하는 값을 선택하거나 기본값을 그대로 사용합니다.
-*** * 조치 * - 다음 값이 표시되는지 확인합니다.
+*** * Principal * and * Effect *: 사용자 그룹 설정에 해당하는 값을 선택하거나 기본값을 적용합니다.
+*** * 조치 *: 다음 값이 표시되는지 확인하십시오.
 +
 [listing]
 ----
-`GetObject,PutObject,DeleteObject,ListBucket,GetBucketAcl,GetObjectAcl,ListBucketMultipartUploads,ListMultipartUploadParts`
+GetObject,PutObject,DeleteObject,ListBucket,GetBucketAcl,GetObjectAcl,ListBucketMultipartUploads,ListMultipartUploadParts
 ----
-*** * 리소스 * - 기본값(_(버켓 이름, 버켓 이름/ *) 또는 필요한 기타 값을 사용합니다.
+*** * 리소스 *: 필요한 기본값 `_(bucketname, bucketname/*)` 또는 기타 값을 사용합니다.
 +
 을 참조하십시오 link:../task_object_provision_manage_bucket_access.html["버킷에 대한 사용자 액세스를 관리합니다"] 이 필드에 대한 자세한 내용은 를 참조하십시오.
 

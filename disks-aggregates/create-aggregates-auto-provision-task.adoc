@@ -1,8 +1,8 @@
 ---
 permalink: disks-aggregates/create-aggregates-auto-provision-task.html 
 sidebar: sidebar 
-keywords: ontap 9, create, aggregates, auto-provision, add, local tier, automatic, automatically 
-summary: 'ONTAP가 로컬 계층을 자동으로 추가하는 데 제공하는 Best Practice 권장 사항(자동 프로비저닝을 통해 애그리게이트 생성)이 사용자 환경에 적합한 경우, 권장 사항을 수락하고 ONTAP가 로컬 계층을 추가하도록 할 수 있습니다.' 
+keywords: create, aggregates, auto-provision, add, local tier, automatic, automatically, create, aggregate, auto-provisioning, System Manager, CLI, storage, disk, ownership, assign 
+summary: '로컬 계층을 자동으로 추가(자동 프로비저닝을 통해 애그리게이트 생성)하는 ONTAP 권장 사항을 수락하고 ONTAP에서 로컬 계층을 추가하도록 할 수 있습니다.' 
 ---
 = ONTAP에서 로컬 계층을 자동으로 추가(자동 프로비저닝을 통해 애그리게이트 생성
 :allow-uri-read: 
@@ -89,7 +89,7 @@ System Manager의 권장 사항을 수락합니다.
 --
 'Storage aggregate auto-provision' 명령을 실행하여 애그리게이트 레이아웃 권장 사항을 생성합니다. 그런 다음 ONTAP 권장사항을 검토하고 승인한 후 애그리게이트를 생성할 수 있습니다.
 
-.필요한 것
+.시작하기 전에
 ONTAP 9.2 이상이 클러스터에서 실행 중이어야 합니다.
 
 .이 작업에 대해
