@@ -20,7 +20,7 @@ ONTAP 9.15.1부터 비대칭에서 대칭 액티브/액티브로, 또는 그 반
 
 == 대칭 액티브/액티브 관계로 변환합니다
 
-비동기 보호 기능이 있는 SnapMirror 액티브 동기식 관계를 변환하여 대칭 액티브/액티브를 사용할 수 있습니다.
+비대칭 보호 기능이 있는 SnapMirror 액티브 동기화 관계를 변환하여 대칭 액티브/액티브를 사용할 수 있습니다.
 
 .시작하기 전에
 * 두 클러스터에서 모두 ONTAP 9.15.1 이상을 실행해야 한다.
@@ -106,9 +106,17 @@ NOTE: igroup에 복제되지 않은 LUN에 대한 맵이 포함되어 있지 않
 +
 `SiteB::> lun mapping delete -vserver <svm_name> -igroup <igroup> -path <>`
 
-. 운영 사이트에서 기존 호스트의 이니시에이터 구성을 수정하여 로컬 클러스터의 이니시에이터에 대한 근위 경로를 설정합니다.
+. 운영 사이트에서 권한 수준을 다음과 같이 설정합니다 `advanced`.
 +
-`SiteA::> igroup initiator add-proximal-vserver -vserver <svm_name> -initiator <host> -proximal-vserver <server>`
+`SiteA::> set -privilege advanced`
+
+. 기존 호스트의 이니시에이터 구성을 수정하여 로컬 클러스터의 이니시에이터에 대한 근위 경로를 설정합니다.
++
+`SiteA::*> igroup initiator add-proximal-vserver -vserver <svm_name> -initiator <host> -proximal-vserver <server>`
+
++
+
+NOTE: 이 단계를 완료한 후 권한 수준을 admin으로 다시 설정할 수 있습니다.
 
 . 새로운 호스트에 대한 새로운 igroup 및 이니시에이터를 추가하고 호스트 선호도를 해당 로컬 사이트에 근접하게 설정합니다. Ennable igroup replication으로 구성을 복제하고 원격 클러스터에서 호스트 인접성을 반전합니다.
 +
@@ -131,18 +139,6 @@ SiteA::> igroup initiator add-proximal-vserver -vserver vsA -initiator host2 -pr
 `snapmirror show -destination-path <destination_path>`
 
 . 기존 호스트가 운영 클러스터에 로컬인 경우 호스트를 두 번째 클러스터에 추가하고 각 클러스터에 대한 각 액세스 권한을 사용하여 연결을 설정합니다.
-. 2차 사이트에서 원격 호스트와 연결된 igroup에서 LUN 매핑을 삭제합니다.
-+
-
-NOTE: igroup에 복제되지 않은 LUN에 대한 맵이 포함되어 있지 않은지 확인합니다.
-
-+
-`SiteB::> lun mapping delete -vserver <svm_name> -igroup <igroup> -path <>`
-
-. 운영 사이트에서 기존 호스트의 이니시에이터 구성을 수정하여 로컬 클러스터의 이니시에이터에 대한 근위 경로를 설정합니다.
-+
-`SiteA::> igroup initiator add-proximal-vserver -vserver <svm_name> -initiator <host> -proximal-vserver <server>`
-
 . 2차 사이트에서 새로운 호스트에 대한 새로운 igroup 및 이니시에이터를 추가하고 호스트 유사성을 로컬 사이트에 설정합니다. LUN을 igroup에 매핑합니다.
 +
 ``

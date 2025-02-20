@@ -64,7 +64,7 @@ NOTE: 페일오버 그룹이 반드시 있어야 하는 것은 아니지만 이 
 
 ** `-home-port` LIF에서 네트워크 인터페이스 되돌리기 명령을 실행할 때 LIF가 반환되는 물리적 포트 또는 논리 포트입니다.
 ** 를 사용하여 IP 주소를 지정할 수 있습니다 `-address` 및 `-netmask` 옵션이 아닌 옵션 `-subnet` 옵션을 선택합니다.
-** IP 주소를 할당할 때 다른 IP 서브넷에 클라이언트 또는 도메인 컨트롤러가 있는 경우 게이트웨이에 대한 기본 경로를 구성해야 할 수 있습니다. 를 클릭합니다 `network route create` man 페이지에는 SVM 내에서 정적 라우트를 생성하는 방법에 대한 정보가 포함되어 있습니다.
+** IP 주소를 할당할 때 다른 IP 서브넷에 클라이언트 또는 도메인 컨트롤러가 있는 경우 게이트웨이에 대한 기본 경로를 구성해야 할 수 있습니다. SVM 내에서 정적 라우트를 생성하는 방법에 대한 자세한 `network route create` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/network-route-create.html["ONTAP 명령 참조입니다"^]참조하십시오.
 ** `-service-policy` - LIF에 대한 서비스 정책. 정책을 지정하지 않으면 기본 정책이 자동으로 할당됩니다. 를 사용합니다 `network interface service-policy show` 명령을 사용하여 사용 가능한 서비스 정책을 검토합니다.
 ** `-auto-revert` - 시작, 관리 데이터베이스 상태 변경 또는 네트워크 연결이 이루어질 때 데이터 LIF가 홈 노드로 자동 복구되는지 여부를 지정합니다. 기본 설정은 false 이지만 환경의 네트워크 관리 정책에 따라 true로 설정할 수 있습니다.
 +

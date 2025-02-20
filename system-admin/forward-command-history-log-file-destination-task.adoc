@@ -74,7 +74,7 @@ Destination Host          Port   Protocol        Server Facility
 ----
 
 
- `cluster log-forwarding create`자세한 내용은 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `cluster log-forwarding create` link:https://docs.netapp.com/us-en/ontap-cli/cluster-log-forwarding-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 ====

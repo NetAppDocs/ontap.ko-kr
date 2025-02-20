@@ -23,7 +23,7 @@ IPspace별로 다양한 프로토콜에 대한 QoS(서비스 품질) 표시 값�
 network QoS-marking modify 명령을 사용하여 QoS marking 값을 수정한다.
 
 * '–IPSpace' 매개변수는 QoS 마킹 항목을 수정할 IPspace를 지정합니다.
-* '–protocol' 매개변수는 QoS 마킹 항목을 수정할 프로토콜을 지정합니다. 네트워크 QoS 표시 수정 man 페이지는 프로토콜의 가능한 값을 기술한다.
+*  `–protocol`매개 변수는 QoS 표시 항목을 수정할 프로토콜을 지정합니다. 에서 프로토콜의 가능한 값과 에 대해 자세히 `network qos-marking modify`link:https://docs.netapp.com/us-en/ontap-cli/network-qos-marking-modify.html["ONTAP 명령 참조입니다"^] 알아보십시오.
 * '–DSCP' 파라미터는 DSCP(Differentiated Services Code Point) 값을 지정한다. 가능한 값의 범위는 0 ~ 63입니다.
 * '-is-enabled' 매개 변수는 '–IPSpace' 매개 변수에서 제공하는 IPspace에서 지정된 프로토콜에 대한 QoS 마킹을 활성화 또는 비활성화하는 데 사용됩니다.
 

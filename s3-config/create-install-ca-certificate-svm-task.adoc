@@ -22,7 +22,7 @@ IP 트래픽이 클러스터 LIF만 통과하는 로컬 계층화 사용 사례�
 
 link:../authentication/index.html["관리자 인증 및 RBAC"]
 
-추가 구성 옵션은 보안 인증서 man 페이지를 참조하십시오.
+및 추가 구성 옵션에 대한 자세한 `security certificate` 내용은 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+certificate["ONTAP 명령 참조입니다"^]를 참조하십시오.
 
 .단계
 . 자체 서명된 디지털 인증서 생성:

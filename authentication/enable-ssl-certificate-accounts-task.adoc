@@ -36,7 +36,7 @@ NOTE: 클러스터 관리자 계정의 경우 에서 인증서 인증이 지원�
 '보안 로그인 생성 - vserver SVM_name -user -or -group -name user_or_group_name -application application application -AuthMethod authentication_method -role role role-comment'
 
 +
-전체 명령 구문에 대한 자세한 내용은 를 link:../concepts/manual-pages.html["ONTAP man 페이지를 릴리스별로 표시합니다"]참조하십시오.
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 +
 다음 명령을 실행하면 SSL 디지털 인증서를 사용하여 SVM "engData2"에 액세스할 수 있는 기본 "vsadmin" 역할을 가진 SVM 관리자 계정 'vmadmin2'가 활성화됩니다.

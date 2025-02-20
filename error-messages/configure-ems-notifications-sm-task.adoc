@@ -44,7 +44,7 @@ SNMP traphosts만 구성합니다. ONTAP CLI로 다른 EMS 대상을 구성할 �
 
 System Manager를 사용하여 EMS 메시지를 보낼 위치를 지정할 수 있습니다.
 
-ONTAP 9.12.1부터 EMS 이벤트는 TLS(Transport Layer Security) 프로토콜을 통해 원격 syslog 서버의 지정된 포트로 전송될 수 있습니다. 자세한 내용은 를 참조하십시오 `event notification destination create` Man 페이지.
+ONTAP 9.12.1부터 EMS 이벤트는 TLS(Transport Layer Security) 프로토콜을 통해 원격 syslog 서버의 지정된 포트로 전송될 수 있습니다. 에 대한 자세한 내용은 `event notification destination create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-destination-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 클러스터 > 설정 * 을 클릭합니다.

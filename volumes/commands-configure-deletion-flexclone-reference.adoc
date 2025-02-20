@@ -49,4 +49,4 @@ NetApp Manageability SDK를 사용하여 고객이 볼륨에서 FlexClone 파일
 '볼륨 파일 클론 삭제 표시
 
 |===
-이러한 명령에 대한 자세한 내용은 해당 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `volume file clone deletion` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+file+clone+deletion["ONTAP 명령 참조입니다"^]을 참조하십시오.

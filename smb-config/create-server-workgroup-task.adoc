@@ -28,7 +28,7 @@ summary: vserver cifs create 명령을 사용하여 SVM에 SMB 서버를 생성�
 * VSS(볼륨 스냅샷 서비스)
 
 
-'vserver cifs' man 페이지에는 추가 옵션 구성 매개 변수 및 명명 요구 사항이 포함되어 있습니다.
+및 선택적 구성 매개 변수 및 명명 요구 사항에 대한 자세한 `vserver cifs` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs["ONTAP 명령 참조입니다"^]참조하십시오.
 
 .단계
 . smb 라이센스가 클러스터에 있는지 확인합니다: 'system license show-package cifs'

@@ -34,7 +34,7 @@ summary: 수동 업그레이드를 위해 ONTAP 소프트웨어 패키지를 다
 ----
 system node image update -node * -package <location> -replace-package true -setdefault true -background true
 ----
-`<location>` ONTAP 버전에 따라 웹 서버 또는 로컬 폴더일 수 있습니다.  `system node image update`자세한 내용은 man 페이지를 참조하십시오.
+`<location>` ONTAP 버전에 따라 웹 서버 또는 로컬 폴더일 수 있습니다. 에 대한 자세한 내용은 `system node image update` link:https://docs.netapp.com/us-en/ontap-cli/system-node-image-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 이 명령은 모든 노드에 소프트웨어 이미지를 동시에 설치합니다. 각 노드에 이미지를 한 번에 하나씩 설치하려면 를 지정하지 마십시오 `-background` 매개 변수.
 

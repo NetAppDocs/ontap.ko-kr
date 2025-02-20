@@ -66,8 +66,6 @@ entries:
     url: "/data-protection/vault-archive-snapmirror-technology-concept.html"
   - title: SnapMirror 통합 복제 기본 사항
     url: "/data-protection/snapmirror-unified-replication-concept.html"
-  - title: XDP는 DP를 SnapMirror 기본값으로 바꿉니다
-    url: "/data-protection/version-flexible-snapmirror-default-concept.html"
   - title: 타겟 볼륨이 자동으로 증가하는 경우
     url: "/data-protection/destination-volume-grows-automatically-concept.html"
   - title: 팬아웃 및 캐스케이드 데이터 보호 구축

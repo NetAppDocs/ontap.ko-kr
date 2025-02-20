@@ -58,7 +58,8 @@ Your user name is 'admin'. Your last login was Wed Apr 08 16:46:53 2015 from 10.
 ** 로그인 장치 이름 또는 IP 주소입니다
 ** 운영 체제 이름입니다
 ** 소프트웨어 릴리스 버전
-** 효과적인 클러스터 버전 문자열 '보안 로그인 모트 수정' man 페이지는 MOTD가 동적으로 생성된 컨텐츠를 표시할 수 있도록 하는 데 사용할 수 있는 이스케이프 시퀀스를 설명합니다.
+** 효과적인 클러스터 버전 문자열
+** MOTD가 동적으로 생성된 콘텐츠를 에서 표시할 수 있도록 하는 데 사용할 수 있는 이스케이프 시퀀스와 에 대해 자세히 `security login motd modify`link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-modify.html["ONTAP 명령 참조입니다"^] 알아보십시오.
 
 
 +

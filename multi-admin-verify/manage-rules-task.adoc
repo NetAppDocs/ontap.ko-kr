@@ -122,4 +122,4 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 '보안 멀티-관리-검증 규칙 표시'
 
 |===
-명령 구문에 대한 자세한 내용은 보안 다중 관리 확인 규칙 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security multi-admin-verify rule` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+rule["ONTAP 명령 참조입니다"^]을 참조하십시오.

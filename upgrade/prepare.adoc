@@ -16,9 +16,9 @@ ONTAP 소프트웨어 업그레이드를 올바르게 준비하면 업그레이�
 에 대해 활성 SupportEdge 계약이 있는 link:https://docs.netapp.com/us-en/active-iq/upgrade_advisor_overview.html["디지털 자문업체"^] link:create-upgrade-plan.html["Upgrade Advisor로 업그레이드를 계획하십시오"]경우. Active IQ 디지털 어드바이저(디지털 어드바이저)에 액세스할 수 없는 경우 다음을 수행하여 ONTAP 업그레이드를 준비해야 합니다.
 
 . link:choose-target-version.html["대상 ONTAP 릴리스를 선택합니다"].
-. 대상 릴리스의 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508 [ONTAP 9 릴리스 정보] 링크에서 _업그레이드 주의 사항_및 _알려진 문제와 제한 사항_섹션을 검토하십시오.
+. 대상 릴리스에 대한 의 _업그레이드 주의_및_알려진 문제 및 제한 사항_섹션을 검토하십시오link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"].
 +
-업그레이드 주의 사항은 업그레이드하기 전에 알아야 할 잠재적인 문제에 대해 설명합니다. 알려진 문제 및 제한 사항은 업그레이드 후 발생할 수 있는 예기치 않은 시스템 동작을 설명합니다.
+_업그레이드 주의 사항_ 업그레이드하기 전에 알아야 할 잠재적인 문제에 대해 설명합니다. _알려진 문제 및 제한 사항_ 업그레이드 후 발생할 수 있는 예기치 않은 시스템 동작을 설명합니다.
 
 +
 릴리스 정보에 액세스하려면 NetApp 계정으로 로그인하거나 계정을 만들어야 합니다.

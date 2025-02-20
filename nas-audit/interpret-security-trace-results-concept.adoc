@@ -17,7 +17,7 @@ summary: 보안 추적 결과는 요청이 허용 또는 거부된 이유를 제
 
 == 결과 유형 및 필터 세부 정보 목록에 대한 정보 찾기
 
-보안 추적 결과에 포함될 수 있는 결과 유형 및 필터 세부 정보의 목록을 'vserver security trace -result show' 명령의 man 페이지에 찾을 수 있습니다.
+명령에서 보안 추적 결과에 포함될 수 있는 결과 형식 및 필터 세부 정보 목록을 찾을 수 `vserver security trace trace-result show` 있습니다. 에 대한 자세한 내용은 `vserver security trace trace-result show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-security-trace-trace-result-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .의 출력 예 `Reason` 의 필드 `Allow` 결과 유형
 다음은 추적 결과 로그에 나타나는 "Reason" 필드의 출력 예입니다. 결과 유형은 "Allow"입니다.

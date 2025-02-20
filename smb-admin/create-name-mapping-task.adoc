@@ -21,7 +21,7 @@ summary: vserver name-mapping create 명령을 사용하여 이름 매핑을 생
 +
 [NOTE]
 ====
-'-pattern' 및 '-replacement' 문은 정규식으로 공식화할 수 있습니다. 또한 '-replacement' 문을 사용하여 null 대체 문자열 ""(공백 문자)를 사용하여 사용자에 대한 매핑을 명시적으로 거부할 수 있습니다. 자세한 내용은 'vserver name-mapping create' man 페이지를 참조하십시오.
+ `-pattern`및 `-replacement` 문은 정규식으로 공식화할 수 있습니다. 또한 이 문을 사용하여 null 대체 문자열(공백 문자)을 사용하여 사용자에 대한 매핑을 명시적으로 거부할 `" "` 수도 `-replacement` 있습니다. 에 대한 자세한 내용은 `vserver name-mapping create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-name-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +

@@ -16,6 +16,8 @@ ONTAP의 Best Practice 권장 사항을 사용하여 로컬 계층을 추가(애
 .시작하기 전에
 디스크를 로컬 계층(애그리게이트)에서 사용하려면 먼저 노드가 디스크를 소유해야 합니다.  클러스터가 자동 디스크 소유권 할당을 사용하도록 구성되어 있지 않은 경우, 반드시 해야 합니다 link:manual-assign-disks-ownership-prep-task.html["소유권을 수동으로 할당합니다"].
 
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
 [role="tabbed-block"]
 ====
 .시스템 관리자
@@ -76,7 +78,7 @@ Aggregate에 필요한 디스크 수와 핫 스페어 디스크의 수를 결정
 
 NOTE: FlexGroups에서 사용할 Aggregate를 여러 개 생성할 경우 Aggregate의 크기가 최대한 근접해야 합니다.
 
-'스토리지 애그리게이트 생성' man 페이지에는 집계 생성 옵션 및 요구 사항에 대한 자세한 정보가 나와 있습니다.
+및 집계 생성 옵션 및 요구 사항에 대한 자세한 `storage aggregate create` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["ONTAP 명령 참조입니다"^]참조하십시오.
 
 .단계
 . 스페어 디스크 파티션 목록을 보고 애그리게이트를 만들 수 있을 만큼 충분한지 확인합니다.

@@ -17,7 +17,7 @@ null 세션 공유는 인증이 필요하지 않으므로 null 세션 액세스�
 
 [NOTE]
 ====
-ONTAP는 '–restricting-anonymous' 옵션을 사용하여 Windows RestrictAnonymous 레지스트리 설정 값을 지원합니다. 이렇게 하면 매핑되지 않은 null 사용자가 시스템 리소스를 보거나 액세스할 수 있는 범위를 제어할 수 있습니다. 예를 들어 공유 열거를 사용하지 않도록 설정하고 IPC$ 공유(숨겨진 명명된 파이프 공유)에 액세스할 수 있습니다. 'vserver cifs options modify' 및 'vserver cifs options'에 man page가 표시되어 '–restrict-anonymous' 옵션에 대한 자세한 정보를 제공합니다.
+ONTAP에서는 옵션을 사용하여 Windows RestrictAnonymous 레지스트리 설정 값을 `–restrict-anonymous` 지원합니다. 이렇게 하면 매핑되지 않은 null 사용자가 시스템 리소스를 보거나 액세스할 수 있는 범위를 제어할 수 있습니다. 예를 들어 공유 열거를 사용하지 않도록 설정하고 IPC$ 공유(숨겨진 명명된 파이프 공유)에 액세스할 수 있습니다. 및 `vserver cifs options show` `–restrict-anonymous` 의 옵션에 대해 자세히 `vserver cifs options modify`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+options["ONTAP 명령 참조입니다"^] 알아봅니다.
 
 ====
 달리 구성하지 않는 한 null 세션을 통해 스토리지 시스템 액세스를 요청하는 로컬 프로세스를 실행하는 클라이언트는 ""Everyone""과 같은 제한적이지 않은 그룹의 구성원입니다. 선택한 스토리지 시스템 리소스에 대해 null 세션 액세스를 제한하려면 모든 null 세션 클라이언트가 속한 그룹을 생성해야 합니다. 이 그룹을 생성하면 스토리지 시스템 액세스를 제한하고 null 세션 클라이언트에 적용되는 스토리지 시스템 리소스 권한을 설정할 수 있습니다.

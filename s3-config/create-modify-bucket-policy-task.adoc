@@ -19,7 +19,7 @@ S3 서버와 버킷이 포함된 S3 지원 스토리지 VM이 이미 존재해�
 권한을 부여하기 전에 사용자 또는 그룹을 이미 만들어야 합니다.
 
 .이 작업에 대해
-새 사용자와 그룹에 대한 새 문을 추가하거나 기존 문의 특성을 수정할 수 있습니다. 더 많은 옵션은 'vserver object-store-server bucket policy' man 페이지를 참조하십시오.
+새 사용자와 그룹에 대한 새 문을 추가하거나 기존 문의 특성을 수정할 수 있습니다. 에 대한 자세한 내용은 `vserver object-store-server bucket policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+object-store-server+bucket+policy["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 사용자 및 그룹 권한은 버킷이 생성될 때 또는 나중에 필요할 때 부여할 수 있습니다. 버킷 용량과 QoS 정책 그룹 할당을 수정할 수도 있습니다.
 

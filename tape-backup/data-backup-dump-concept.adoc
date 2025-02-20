@@ -27,4 +27,4 @@ Data ONTAP 8.3 이전의 릴리즈로 되돌린 후에는 증분 백업 작업�
 
 ====
 .관련 정보
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ug-rdg/home.html["업그레이드, 되돌리기 또는 다운그레이드를 수행할 수 있습니다"]
+https://docs.netapp.com/us-en/ontap/setup-upgrade/index.html["업그레이드, 되돌리기 또는 다운그레이드를 수행할 수 있습니다"]

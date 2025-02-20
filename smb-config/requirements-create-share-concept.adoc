@@ -54,4 +54,8 @@ SMB 공유를 생성하려면 클라이언트가 액세스할 디렉토리 경�
 * 관리자 또는 사용자가 공유를 사용하여 다른 사용자의 홈 디렉토리에 연결하는 경우('vserver cifs home-directory modify' 명령 옵션 사용) 동적 공유 이름 패턴 앞에는 물결표('~')가 와야 합니다.
 
 
-link:../smb-admin/index.html["SMB 관리"] 그리고 'vserver cifs share' man 페이지에 추가 정보가 있습니다.
+에 대한 자세한 내용은 `vserver cifs share` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+share["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+.관련 정보
+* link:../smb-admin/index.html["SMB 관리"]
+

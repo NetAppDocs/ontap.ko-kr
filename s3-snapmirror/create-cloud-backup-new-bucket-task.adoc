@@ -120,12 +120,12 @@ clusterA::> snapmirror policy create -vserver vs0 -type continuous -rpo 0 -polic
 ----
 . 타겟이 StorageGRID 시스템인 경우 소스 클러스터의 관리 SVM에 StorageGRID CA 서버 인증서를 설치합니다. '보안 인증서 설치 유형 server-ca-vserver_src_admin_svm_-cert-name_storage_grid_server_certificate_'
 +
-자세한 내용은 보안 인증서 설치 man 페이지를 참조하십시오.
+에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . SnapMirror S3 대상 오브젝트 저장소 정의:
 `snapmirror object-store config create -vserver _svm_name_ -object-store-name _target_store_name_ -usage data -provider-type {AWS_S3|SGWS} -server _target_FQDN_ -container-name _remote_bucket_name_ -is-ssl-enabled true -port _port_number_ -access-key target_access_key -secret-password _target_secret_key_`
 +
-매개 변수: * '-object-store-name' - 로컬 ONTAP 시스템에 있는 오브젝트 저장소 타겟의 이름입니다. 이 워크플로에는 '-usage' – 'data'를 사용합니다. ' *'-provider-type' –'AWS_S3','sgws'(StorageGRID) 대상이 지원됩니다. * '-server' – 대상 서버의 FQDN 또는 IP 주소입니다. * '-is-ssl-enabled' – SSL 활성화는 선택 사항이지만 권장됩니다. + 자세한 내용은 '스냅샷 객체 저장 구성 생성' man 페이지를 참조하십시오.
+매개 변수: * `-object-store-name` – 로컬 ONTAP 시스템에 있는 개체 저장소 대상의 이름입니다.  `-usage`* – `data` 이 워크플로에 사용합니다. * `-provider-type` – `AWS_S3` 및 `SGWS` (StorageGRID) 타겟이 지원됩니다.  `-server`* – 대상 서버의 FQDN 또는 IP 주소입니다.  `-is-ssl-enabled`* – SSL 활성화는 선택 사항이지만 권장됩니다. + 에서 에 대해 자세히 `snapmirror object-store config create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-object-store-config-create.html["ONTAP 명령 참조입니다"^]알아보십시오.
 
 +
 .예

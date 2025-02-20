@@ -35,7 +35,7 @@ ONTAP 9.16.1 이상의 경우 시스템 관리자를 사용하여 ARP/AI만 업�
 자동 펌웨어 및 시스템 업데이트에 이미 등록된 경우 System Manager에서 보안 파일에 대한 자동 업데이트 활성화 페이지의 설정이 로 `Show notifications` 설정됩니다. ONTAP에서 최신 업데이트를 자동으로 적용하도록 하려면 업데이트 설정을 로 변경할 수 `Automatically update` 있습니다. 다크 사이트를 사용하거나 수동으로 업데이트를 수행하려는 경우 알림을 표시하거나 보안 업데이트를 자동으로 해제하도록 선택할 수 있습니다.
 
 .시작하기 전에
-자동 보안 업데이트의 https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["AutoSupport 및 AutoSupport OnDemand가 활성화되고 전송 프로토콜이 HTTPS로 설정되어야 합니다"] 경우.
+자동 보안 업데이트의 link:../system-admin/setup-autosupport-task.html["AutoSupport 및 AutoSupport OnDemand가 활성화되고 전송 프로토콜이 HTTPS로 설정되어야 합니다"]경우.
 
 .단계
 . System Manager에서 * 클러스터 > 설정 > 소프트웨어 업데이트 * 를 클릭합니다.

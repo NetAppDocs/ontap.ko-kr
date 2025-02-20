@@ -28,7 +28,7 @@ ONTAP는 로컬 계층을 자동으로 추가하기 위한 모범 사례 권장 
 * 유지 관리 테스트를 진행 중인 디스크
 
 
-Storage aggregate auto-provision man 페이지에 이러한 요구 사항에 대한 자세한 정보가 나와 있습니다.
+에 대한 자세한 내용은 `storage aggregate auto-provision` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-auto-provision.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

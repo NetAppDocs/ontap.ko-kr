@@ -32,7 +32,7 @@ FabricPool 지원 애그리게이트 및 모든 계층화 정책 유형에서 �
 
 자세한 내용은 을 link:../volumes/storage-efficiency-behavior-snapmirror-reference.html["볼륨 이동 및 SnapMirror 작업에 대한 스토리지 효율성 동작"]참조하십시오.
 
-기존 볼륨의 경우 온도에 민감한 스토리지 효율성이 자동으로 활성화되지 않지만link:../volumes/change-efficiency-mode-task.html["스토리지 효율성 모드를 수정합니다"], 수동으로 효율성 모드로 변경할 수 있습니다.
+기존 볼륨의 경우 온도에 민감한 스토리지 효율성이 자동으로 활성화되지 않지만, 효율성 모드로 수동으로 변경할 수 있습니다link:../volumes/change-efficiency-mode-task.html["스토리지 효율성 모드를 수정합니다"].
 
 
 NOTE: 스토리지 효율성 모드를 효율적으로 변경한 후에는 다시 변경할 수 없습니다.
