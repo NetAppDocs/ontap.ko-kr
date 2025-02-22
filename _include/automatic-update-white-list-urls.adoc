@@ -1,0 +1,7 @@
+= 
+:allow-uri-read: 
+
+
+ONTAP 9.10.1부터 자동 업데이트를 사용하도록 설정한 경우 다음 추가 URL에 HTTPS 연결이 있는지 확인합니다.
+
+\https://support-sg-emea.netapp.com** \https://support-sg-naeast.netapp.com** \https://support-sg-nawest.netapp.com

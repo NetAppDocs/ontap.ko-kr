@@ -2,7 +2,7 @@
 permalink: software_setup/task_join_remaining_nodes_to_the_cluster.html 
 sidebar: sidebar 
 keywords: ontap, software, setup, join, remaining, nodes, cluster, HA, high availability, autosupport 
-summary: 새 클러스터를 생성한 후 클러스터 설정 마법사를 사용하여 나머지 각 노드를 한 번에 하나씩 클러스터에 결합할 수 있습니다. 이 마법사를 사용하면 각 노드의 노드 관리 인터페이스를 구성할 수 있습니다. 
+summary: 새 클러스터를 생성한 후 클러스터 설정 마법사를 사용하여 나머지 각 노드를 클러스터에 연결하고 각 노드의 노드 관리 인터페이스를 구성합니다. 
 ---
 = ONTAP의 클러스터에 나머지 노드를 연결합니다
 :allow-uri-read: 
@@ -20,7 +20,7 @@ NOTE: 이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA R2
 
 한 번에 하나의 노드만 클러스터에 결합할 수 있습니다. 클러스터에 노드를 연결하려면 해당 노드에 대해 연결 작업을 완료해야 하며, 다음 노드에 가입하기 전에 노드가 클러스터의 일부여야 합니다.
 
-* 모범 사례: * 24개 이하의 NL-SAS 드라이브에 FAS2720을 사용하는 경우 스토리지 구성 기본값이 Active/Passive로 설정되어 성능을 최적화할 수 있는지 확인해야 합니다. 자세한 내용은 의 설명서를 link:../disks-aggregates/setup-active-passive-config-root-data-task.html["루트 데이터 파티셔닝을 사용하여 노드에 대한 액티브-패시브 구성을 설정합니다"]참조하십시오.
+NL-SAS 드라이브가 24개 이하인 FAS2720를 사용하는 경우 성능을 최적화하려면 스토리지 구성 기본값이 Active/Passive로 설정되어 있는지 확인해야 합니다. 자세한 내용은 의 설명서를 link:../disks-aggregates/setup-active-passive-config-root-data-task.html["루트 데이터 파티셔닝을 사용하여 노드에 대한 액티브-패시브 구성을 설정합니다"]참조하십시오.
 
 . 클러스터에 참여하려는 노드에 로그인합니다.
 +

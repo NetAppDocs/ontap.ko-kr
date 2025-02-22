@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/prerequisites-reference.html
 keywords: SM-BC, SMBC, prerequisites, planning, software, hardware, licensing, protocols, network, snapmirror active sync 
 summary: SnapMirror 액티브 동기화 솔루션 배포를 계획할 때 고려해야 할 몇 가지 사전 요구 사항이 있습니다. 
 ---
-= 필수 구성 요소
+= ONTAP에서 SnapMirror 활성 동기화를 위한 사전 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ SnapMirror 활성 동기화 배포를 계획할 때 다양한 하드웨어, 소�
 
 == 하드웨어
 
-* 2노드 HA 클러스터만 지원됩니다.
+* SnapMirror 액티브 동기화는 2노드 HA 클러스터를 지원합니다. ONTAP 9.16.1부터 SnapMirror 액티브 동기화는 4노드 클러스터도 지원합니다.
 * 두 클러스터 모두 AFF(A-Series 및 C-Series) 또는 ASA(A-Series 및 C-Series)여야 합니다. AFF와 ASA를 함께 사용할 수 없습니다. 복제는 AFF A-Series와 C-Series 간에 지원됩니다.
 
 

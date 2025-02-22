@@ -51,6 +51,15 @@ summary: 자동 업데이트를 활성화하면 ONTAP에서 사용자의 개입 
 
 NOTE: AutoSupport OnDemand는 HTTPS 전송 프로토콜을 사용하여 기술 지원 부서로 메시지를 보내도록 구성된 경우 기본적으로 활성화되며 작동합니다.
 
+* ONTAP 9.10.1부터 자동 업데이트를 사용하도록 설정한 경우 다음 추가 URL에 HTTPS 연결이 있는지 확인합니다.
++
+** https://support-sg-emea.netapp.com 으로 문의하십시오
+** https://support-sg-naeast.netapp.com 으로 문의하십시오
+** https://support-sg-nawest.netapp.com 으로 문의하십시오
+
+
+
+
 .이 작업에 대해
 ONTAP 버전에 따라 펌웨어, 시스템 또는 보안 파일에 대한 * 자동 업데이트 활성화 * 페이지의 기본 설정이 자동으로 업데이트되거나 알림을 표시하도록 설정됩니다. 해당 버전별 절차를 완료하기 전에 해당 설정이 사용자 환경에 적합한지 확인하십시오.
 

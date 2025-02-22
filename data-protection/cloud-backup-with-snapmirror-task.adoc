@@ -18,7 +18,11 @@ summary: ONTAP 9.9.1부터 System Manager를 사용하여 데이터를 클라우
 [role="lead"]
 ONTAP 9.9.1부터 System Manager를 사용하여 데이터를 클라우드로 백업하고 클라우드 스토리지에서 다른 볼륨으로 데이터를 복원할 수 있습니다. StorageGRID 또는 ONTAP S3를 클라우드 오브젝트 저장소로 사용할 수 있습니다.
 
-ONTAP 9.16.1부터 SnapMirror 클라우드 백업은 팬아웃 관계를 지원합니다. 즉, 서로 다른 두 오브젝트 저장소에서 SnapMirror 백업을 동시에 생성할 수 있습니다.
+ONTAP 9.16.1부터:
+
+* SnapMirror 클라우드 백업은 팬아웃 관계를 지원합니다. 즉, 서로 다른 두 오브젝트 저장소에서 SnapMirror 백업을 동시에 생성할 수 있습니다.
+* SnapMirror 클라우드는 기존 볼륨을 사용하는 보다 효율적인 동기화 프로세스를 사용하여 클라우드로 마이그레이션된 볼륨을 백업할 수 있도록 link:https://docs.netapp.com/us-en/ontap-automation/get-started/access_rest_api.html["ONTAP REST API"^]지원합니다. 이 기능은 기준선 변경 작업을 수행할 필요 없이 클라우드의 마이그레이션된 볼륨에서 동일한 타겟 오브젝트 저장소 엔드포인트로 SnapMirror 클라우드 백업을 지원합니다. FlexVol 볼륨과 FlexGroup 볼륨이 모두 지원됩니다.
+
 
 SnapMirror 클라우드 기능을 사용하기 전에 NetApp 지원 사이트에서 SnapMirror 클라우드 API 라이센스 키를 요청해야 합니다link:https://mysupport.netapp.com/site/tools/snapmirror-cloud-api-key["SnapMirror 클라우드 API 라이센스 키를 요청합니다"^]. 지침에 따라 비즈니스 기회에 대한 간단한 설명을 제공하고 제공된 이메일 주소로 이메일을 보내 API 키를 요청해야 합니다. API 키를 얻는 방법에 대한 추가 지침이 포함된 이메일 응답을 24시간 이내에 받아야 합니다.
 
