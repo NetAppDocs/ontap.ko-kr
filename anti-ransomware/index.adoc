@@ -4,7 +4,7 @@ permalink: anti-ransomware/index.html
 keywords: ransomware, arp, autonomous protection, ai, arp ai, security, detect, detection, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, antiransomware, extension conformity, ransomware protection strategy 
 summary: 자율적 랜섬웨어 방어는 NAS 환경의 워크로드 분석을 사용하여 랜섬웨어 공격으로 이어질 수 있는 비정상적인 활동을 감지하여 경고합니다. 
 ---
-= ONTAP의 자율적 랜섬웨어 방어에 대해 알아보십시오
+= ONTAP 자율적 랜섬웨어 방어에 대해 알아보십시오
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

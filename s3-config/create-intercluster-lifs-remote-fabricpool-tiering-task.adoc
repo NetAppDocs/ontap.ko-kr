@@ -86,7 +86,7 @@ cluster01
 ----
 . 인터클러스터 LIF가 중복되는지 확인합니다.
 +
-'network interface show – service-policy default-인터클러스터-failover'
+네트워크 인터페이스 show-service-policy default-인터클러스터-failover를 선택합니다
 
 +
 다음 예에서는 e0c 포트의 인터클러스터 LIF 'cluster01_icl01'과 cluster01_icl02가 e0d 포트로 페일오버된다는 것을 보여 줍니다.
@@ -94,7 +94,7 @@ cluster01
 +
 [listing]
 ----
-cluster01::> network interface show -service-policy default-intercluster –failover
+cluster01::> network interface show -service-policy default-intercluster -failover
          Logical         Home                  Failover        Failover
 Vserver  Interface       Node:Port             Policy          Group
 -------- --------------- --------------------- --------------- --------

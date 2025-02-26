@@ -14,6 +14,9 @@ summary: 'ONTAP 9.8부터 ONTAP 클러스터에서 ONTAP S3(Simple Storage Servi
 ONTAP 9.8부터는 ONTAP System Manager와 같은 친숙한 관리 효율성 툴을 사용하여 ONTAP 클러스터에서 ONTAP S3(Simple Storage Service) 오브젝트 스토리지 서버를 사용하여 ONTAP에서 개발 및 운영을 위한 고성능 오브젝트 스토리지를 신속하게 프로비저닝하고 ONTAP의 스토리지 효율성 및 보안을 활용할 수 있습니다.
 
 
+NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐츠가 ONTAP 제품 설명서와 통합되었습니다. 이제 ONTAP S3 문서에 ONTAP 모범 사례 _ TR-4814:S3의 콘텐츠가 포함되어 있습니다.
+
+
 
 == System Manager 및 ONTAP CLI를 사용하는 S3 구성
 

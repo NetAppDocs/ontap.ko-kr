@@ -94,7 +94,7 @@ xref:../consistency-groups/protect-task.html[2단계 정합성 보장 그룹 스
 
 | link:https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_cluster_connections.html#which-connections-to-move["MetroCluster FC 구성에서 AFF A250 또는 FAS500f MetroCluster IP 구성으로 전환"^] | MetroCluster FC 구성에서 AFF A250 또는 FAS500f MetroCluster IP 구성으로 전환할 수 있습니다. 
 |===
-MetroCluster 구성에 대한 플랫폼 및 스위치 구성 개선 사항에 대한 자세한 내용은 _ 을(를) 참조하십시오link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"^]_.
+MetroCluster 구성에 대한 플랫폼 및 스위치 구성의 향상된 기능에 대한 자세한 내용은 를 참조하십시오link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"^].
 
 
 

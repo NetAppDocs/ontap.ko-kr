@@ -54,9 +54,9 @@ entries:
     url: "/tape-backup/add-drives-libraries-concept.html"
   - title: 테이프 예약이란
     url: "/tape-backup/tape-reservations-concept.html"
-- title: ndmpcopy를 사용하여 데이터를 전송합니다
+- title: 스토리지 시스템 간 데이터 전송
   entries:
-  - title: 개요
+  - title: ndmpcopy를 사용하여 데이터를 전송합니다
     url: "/tape-backup/transfer-data-ndmpcopy-task.html"
   - title: ndmpcopy 명령에 대한 옵션입니다
     url: "/tape-backup/options-ndmpcopy-command-reference.html"

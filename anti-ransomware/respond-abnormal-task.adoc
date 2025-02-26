@@ -4,7 +4,7 @@ permalink: anti-ransomware/respond-abnormal-task.html
 keywords: abnormal activity, data entropy, unusual file extensions, potential ransomware attack, false positive, ransomware attack, abnormal activity notification, ransomware alert, detected abnormal volume, suspected file types, attack report, anti-ransomware attack, ransomware ems 
 summary: ONTAP의 ARP 알림에 대해 알아보고 랜섬웨어 공격이 발생하는지 여부와 대응 방법을 확인하십시오. 
 ---
-= 비정상적인 활동에 응답합니다
+= ONTAP ARP가 감지한 비정상적인 활동에 응답합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

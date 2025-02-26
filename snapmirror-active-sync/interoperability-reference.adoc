@@ -89,7 +89,7 @@ image:fanout-diagram.png["팬아웃 구성의 다이어그램"]
 
 SnapMirror Active Sync는 xref:../data-protection/supported-deployment-config-concept.html[팬아웃 구성] `MirrorAllSnapshots`ONTAP 9.11.1부터 정책 및 `MirrorAndVault` 정책을 지원합니다. 정책을 사용하는 SnapMirror 활성 동기화에서는 팬아웃 구성이 지원되지 `XDPDefault` 않습니다.
 
-ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 페일오버 이벤트 후 팬아웃 구간의 자동 재구성을 지원합니다. 운영 사이트에서 보조 사이트로 페일오버가 성공하면 보조 사이트를 소스로 처리하도록 3차 사이트가 자동으로 다시 구성됩니다. 재구성이 계획된 또는 계획되지 않은 페일오버에 의해 트리거됩니다. 운영 사이트로 페일백할 때도 재구성이 수행됩니다.
+ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 페일오버 이벤트 후 팬아웃 구간의 자동 재구성을 지원합니다. 운영 사이트에서 보조 사이트로 페일오버가 성공하면 보조 사이트를 소스로 처리하도록 3차 사이트가 자동으로 다시 구성됩니다. 비동기 팬아웃 구간은 정합성 보장 그룹 관계 또는 독립 볼륨 관계일 수 있습니다. 두 경우 모두 재구성을 수행할 수 있습니다. 재구성이 계획된 또는 계획되지 않은 페일오버에 의해 트리거됩니다. 운영 사이트로 페일백할 때도 재구성이 수행됩니다.
 
 이전 릴리스의 ONTAP에서 팬아웃 구성을 관리하는 방법에 대한 자세한 내용은 을 참조하십시오 xref:recover-unplanned-failover-task.adoc[팬아웃 구성에서 보호를 재개합니다].
 

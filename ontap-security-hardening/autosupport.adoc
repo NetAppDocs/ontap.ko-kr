@@ -27,7 +27,7 @@ AutoSupport 메시지에는 다음 항목을 포함하되 이에 국한되지 �
 * 성능 데이터
 
 
-AutoSupport는 전송 프로토콜을 위해 HTTPS, HTTP 및 SMTP를 지원합니다. AutoSupport 메시지는 기본적으로 민감하므로 NetApp 지원에 AutoSupport 메시지를 보낼 때 HTTPS를 기본 전송 프로토콜로 사용하는 것이 좋습니다.
+AutoSupport는 전송 프로토콜에 HTTPS 및 SMTP를 지원합니다. AutoSupport 메시지는 기본적으로 민감하므로 NetApp 지원에 AutoSupport 메시지를 보낼 때 HTTPS를 기본 전송 프로토콜로 사용하는 것이 좋습니다.
 
 또한 명령을 활용하여 `system node autosupport modify` AutoSupport 데이터의 타겟을 지정해야 합니다(예: NetApp 기술 지원, 조직의 내부 운영, 파트너). 이 명령을 사용하여 보낼 특정 AutoSupport 세부 정보(예: 성능 데이터, 로그 파일 등)를 지정할 수도 있습니다.
 

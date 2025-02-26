@@ -4,7 +4,7 @@ permalink: anti-ransomware/enable-arp-ai-with-au.html
 keywords: ransomware, arp, enable, ai, automatic, update, upgrade, autonomous ransomware protection 
 summary: ONTAP 9.16.1부터 ARP가 활성화된 FlexVol 설치에 ARP/AI를 자동으로 활성화하거나 사전 요구 사항을 충족한 후 수동으로 활성화하십시오. 
 ---
-= 자동 업데이트로 ARP/AI를 활성화합니다
+= 자동 업데이트로 ONTAP ARP/AI를 활성화합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

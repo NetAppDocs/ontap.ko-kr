@@ -1,10 +1,10 @@
 ---
 permalink: fabricpool/setup-ontap-s3-cloud-tier-task.html 
 sidebar: sidebar 
-keywords: setting up, ontap s3, cloud tier 
+keywords: tr-4814, fabricpool, setting up, ontap s3, cloud tier, local tier, tiering, storage tiering, storage tier, lif 
 summary: ONTAP 9.8 이상을 실행 중인 경우 ONTAP S3를 FabricPool의 클라우드 계층으로 설정할 수 있습니다. 
 ---
-= ONTAP S3를 ONTAP FabricPool 클라우드 계층으로 설정합니다
+= ONTAP S3를 FabricPool 클라우드 계층으로 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,17 +13,22 @@ summary: ONTAP 9.8 이상을 실행 중인 경우 ONTAP S3를 FabricPool의 클�
 [role="lead"]
 ONTAP 9.8 이상을 실행 중인 경우 ONTAP S3를 FabricPool의 클라우드 계층으로 설정할 수 있습니다.
 
-.필요한 것
-원격 클러스터에 연결된 LIF의 ONTAP S3 서버 이름과 IP 주소가 있어야 합니다.
+.시작하기 전에
+* 원격 클러스터에 연결된 LIF의 ONTAP S3 서버 이름과 IP 주소가 있어야 합니다.
++
 
-[NOTE]
-====
-서버 이름은 클라이언트 응용 프로그램에서 FQDN(정규화된 도메인 이름)으로 사용됩니다. ONTAP 외부에서 DNS 레코드가 사용 중인 SVM 데이터 LIF와 일치하는지 확인합니다.
+NOTE: 서버 이름은 클라이언트 응용 프로그램에서 FQDN(정규화된 도메인 이름)으로 사용됩니다. ONTAP 외부에서 DNS 레코드가 사용 중인 SVM 데이터 LIF와 일치하는지 확인합니다.
 
-====
-로컬 클러스터에 대한 인터클러스터 LIF가 있어야 합니다.
+* 로컬 클러스터에 있어야 <<create-lif,클러스터 간 LIF>>합니다.
++
+로컬 클러스터 계층화를 위해 구성하면 로컬 계층(ONTAP CLI에서 스토리지 애그리게이트라고도 함)이 로컬 버킷에 연결됩니다. FabricPool는 클러스터 간 트래픽에 클러스터 LIF를 사용합니다.
 
-link:../s3-config/create-intercluster-lifs-remote-fabricpool-tiering-task.html["원격 FabricPool 계층화를 위한 인터클러스터 LIF 만들기"]
++
+
+NOTE: 클러스터 LIF 리소스가 포화 상태가 되면 성능 저하가 발생할 수 있습니다. 이를 방지하기 위해 NetApp은 로컬 버킷에 계층화할 때 로컬 계층의 HA 쌍, 로컬 버킷의 HA 쌍 등과 함께 4노드 이상 클러스터를 사용하는 것이 좋습니다. 단일 HA 쌍에서 로컬 버킷으로 계층화하는 것은 권장되지 않습니다.
+
+* ONTAP S3를 사용하여 원격 FabricPool 용량(클라우드) 계층화를 사용하려면 FabricPool 클라이언트와 link:../s3-config/create-data-lifs-task.html["데이터 LIF 구성"]오브젝트 저장소 서버에 있어야 합니다link:../s3-config/create-intercluster-lifs-remote-fabricpool-tiering-task.html["인터클러스터 LIF를 구성합니다"].
+
 
 .이 작업에 대해
 ONTAP 9.8 이상에서 ONTAP S3 서버에 대해 로드 밸런싱이 활성화됩니다. 서버의 호스트 이름이 둘 이상의 IP 주소로 확인되는 경우 ONTAP는 반환된 모든 IP 주소(최대 16개의 IP 주소)를 사용하여 클라이언트 연결을 설정합니다. 연결이 설정되면 IP 주소가 라운드 로빈 방식으로 선택됩니다.
@@ -65,8 +70,10 @@ DNS 서버 관리자에게 S3 서버 이름 및 IP 주소를 지정합니다.
  a| 
 다음 명령을 입력합니다.
 
-dns host create -vserver svm_name -address ip_address -hostname s3_server_name"을 선택합니다
-
+[listing]
+----
+dns host create -vserver <svm_name> -address ip_address -hostname <s3_server_name>
+----
 |===
 . '-provider-type ''ontap_s3' 파라미터를 사용하여 'storage aggregate object-store config create' 명령을 사용하여 ONTAP S3 구성 정보를 지정합니다.
 +
@@ -96,3 +103,8 @@ cluster1::> storage aggregate object-store config create
 
 --
 ====
+[[create-lif]]
+.관련 정보
+* link:../smb-config/create-lif-task.html["SMB용 LIF를 생성합니다"]
+* link:../nfs-config/create-lif-task.html["NFS용 LIF를 생성합니다"]
+
