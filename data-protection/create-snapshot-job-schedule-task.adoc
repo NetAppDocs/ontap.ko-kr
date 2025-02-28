@@ -14,7 +14,7 @@ summary: 스냅샷 정책에는 스냅샷 작업 스케줄이 하나 이상 필�
 스냅샷 정책에는 스냅샷 작업 스케줄이 하나 이상 필요합니다. System Manager 또는 명령을 사용하여 작업 일정을 생성할 수 있습니다 `job schedule cron create`.
 
 .이 작업에 대해
-이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A70 또는 ASA A90)이 있는 경우 에 따라 link:https://docs.netapp.com/us-en/asa-r2/data-protection/policies-schedules.html#create-a-new-protection-policy-schedule["수행할 수 있습니다"^]스냅샷 작업 일정을 생성합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
+이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)이 있는 경우 에 따라 link:https://docs.netapp.com/us-en/asa-r2/data-protection/policies-schedules.html#create-a-new-protection-policy-schedule["수행할 수 있습니다"^]스냅샷 작업 일정을 생성합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
 
 기본적으로 ONTAP는 작업 일정 이름에 타임스탬프를 추가하여 스냅샷의 이름을 구성합니다.
 

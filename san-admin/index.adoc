@@ -33,4 +33,4 @@ iSCSI 및 FC에서는 스토리지 타겟을 LUN(논리 유닛)이라고 하며 
 FC 대상은 FC 스위치 및 호스트 측 어댑터를 통해 네트워크에 연결되며 WWPN(World Wide Port Name)으로 식별됩니다. iSCSI 대상은 표준 이더넷 네트워크 어댑터(NIC), 소프트웨어 이니시에이터가 있는 TCP 오프로드 엔진(TOE) 카드, 통합 네트워크 어댑터(CNA) 또는 전용 호스트 파스트 어댑터(HBA)를 통해 네트워크에 연결되며 iSCSI 공인 이름(IQN)으로 식별됩니다.
 
 .를 참조하십시오
-ASA R2 스토리지 시스템(ASA A1K, ASA A70, ASA A90)을 사용하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2 스토리지 시스템 설명서"].
+ASA R2 스토리지 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)을 사용하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2 스토리지 시스템 설명서"].

@@ -16,12 +16,16 @@ summary: '모든 SSL 연결에 대해 FIPS(Federal Information Processing Standa
 [role="lead"]
 ONTAP는 모든 SSL 연결에 대해 FIPS(Federal Information Processing Standards) 140-2를 준수합니다. SSL FIPS 모드를 설정 및 끄고, SSL 프로토콜을 전역적으로 설정하고, ONTAP 내에서 RC4와 같은 약한 암호를 해제할 수 있습니다.
 
-기본적으로 ONTAP의 SSL은 FIPS 준수를 사용하지 않도록 설정하고 다음을 통해 SSL 프로토콜을 사용하도록 설정됩니다.
+기본적으로 ONTAP의 SSL은 FIPS 준수가 비활성화되고 다음 TLS 프로토콜이 활성화된 상태로 설정됩니다.
 
 * TLSv1.3(ONTAP 9.11.1부터 시작)
 * TLSv1.2
-* TLSv1.1
-* TLSv1
+
+
+이전 ONTAP 릴리스에는 기본적으로 다음과 같은 TLS 프로토콜이 활성화되어 있었습니다.
+
+* TLSv1.1(ONTAP 9.12.1부터 기본적으로 비활성화됨)
+* TLSv1(ONTAP 9.8부터 기본적으로 비활성화됨)
 
 
 SSL FIPS 모드가 활성화되면 ONTAP에서 외부 클라이언트 또는 ONTAP 외부의 서버 구성 요소로의 SSL 통신은 SSL에 FIPS 호환 암호화를 사용합니다.

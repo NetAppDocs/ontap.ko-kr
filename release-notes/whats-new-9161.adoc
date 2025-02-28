@@ -51,13 +51,6 @@ xref:../data-protection/cloud-backup-with-snapmirror-task.html[마이그레이�
  a| 
 SnapMirror 클라우드는 보다 효율적인 동기화 프로세스를 사용하여 클라우드로 마이그레이션된 볼륨을 백업할 수 있도록 지원합니다. 새로운 기능은 기준 변경 작업을 수행할 필요 없이 클라우드의 마이그레이션된 볼륨에서 동일한 대상 오브젝트 저장소 엔드포인트로 SnapMirror 클라우드 백업을 지원합니다. FlexVol 볼륨과 FlexGroup 볼륨이 모두 지원됩니다.
 
-
-
- a| 
-xref:../encryption-at-rest/migrate-keys-between-key-managers.html[키 관리자 간 암호화 키 마이그레이션 지원]
- a| 
-ONTAP 온보드 키 관리자에서 클러스터 수준의 외부 키 관리자로 전환할 경우 ONTAP CLI(Command Line Interface)를 사용하여 한 키 관리자에서 다른 키 관리자로 암호화 키를 손쉽게 마이그레이션할 수 있습니다.
-
 |===
 
 

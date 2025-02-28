@@ -66,5 +66,5 @@ NVMe 하위 시스템에는 하나 이상의 NVMe 컨트롤러, 네임스페이�
 * link:create-nvme-namespace-subsystem-task.html["NVMe 스토리지 프로비저닝"]ASA, AFF 및 FAS 시스템에 대해 알아보십시오
 * link:map-nvme-namespace-subsystem-task.html["NVMe 네임스페이스를 서브시스템에 매핑합니다"]ASA AFF 및 FAS 시스템에 대해 알아보십시오.
 * link:https://docs.netapp.com/us-en/ontap-sanhost/["SAN 호스트 및 클라우드 클라이언트를 구성합니다"^]
-* link:https://docs.netapp.com/us-en/asa-r2/manage-data/provision-san-storage.html["SAN 스토리지 프로비저닝"^]ASA R2(ASA A1K, ASA A70 또는 ASA A90) 스토리지 시스템에 대해 알아보십시오.
+* ASA R2(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20) 스토리지 시스템에 대해 알아보십시오.link:https://docs.netapp.com/us-en/asa-r2/manage-data/provision-san-storage.html["SAN 스토리지 프로비저닝"^]
 
