@@ -66,3 +66,7 @@ FSA 출력을 해석할 때는 다음 사항을 염두에 두십시오.
 | Storage > Volumes * 를 클릭하고 원하는 볼륨을 선택한 다음 * Explorer * 를 클릭합니다. | Storage > Volumes * 를 선택하고 원하는 볼륨을 선택합니다. 개별 볼륨 메뉴에서 * 파일 시스템 > 탐색기 * 를 선택합니다. 
 |===
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

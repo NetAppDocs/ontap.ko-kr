@@ -55,12 +55,6 @@ security login modify -user-or-group-name <user_or_group_name> \
 
 
 --
+에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 ====
-
-
-== 자세한 정보
-
-이 명령에 대한 ONTAP 설명서 페이지를 참조하십시오.
-
-* https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["보안 로그인 수정"^]
-

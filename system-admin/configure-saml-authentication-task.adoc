@@ -286,4 +286,5 @@ SAML Service Provider Enabled: false
 
 
 .관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

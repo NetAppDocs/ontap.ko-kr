@@ -40,7 +40,7 @@ xref:modify-role-assigned-administrator-task.adoc[관리자에게 할당된 역�
 '보안 로그인 생성 - vserver SVM_name -user -or -group -name user_name -application application -AuthMethod nsswitch -role role -comment comment comment -is -ns -switch -group yes | no [-is -ldap -fastbind true]'를 참조하십시오
 
 +
-전체 명령 구문은 을 참조하십시오 link:config-worksheets-reference.html["워크시트"].
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 link:config-worksheets-reference.html["로그인 계정 생성 또는 수정"]

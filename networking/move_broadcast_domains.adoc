@@ -48,3 +48,7 @@ summary: 시스템에서 생성한 브로드캐스트 도메인을 생성한 IPs
 네트워크 포트 브로드캐스트-도메인 이동-IPSpace 기본-브로드캐스트-도메인 기본-IPSpace IPS1
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+port["네트워크 포트"^]
+

@@ -13,6 +13,8 @@ summary: '로그인 계정을 생성하고 역할 기반 액세스 제어(RBAC)�
 [role="lead"]
 로그인 계정을 생성하고 역할 기반 액세스 제어(RBAC)를 설정하기 전에 구성 워크시트의 각 항목에 대한 정보를 수집해야 합니다.
 
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
 
 
 == 로그인 계정을 만들거나 수정합니다
@@ -386,7 +388,7 @@ X.509 인증서를 SSH 공개 키와 연결하면 ONTAP는 SSH 로그인 시 이
 
 == 동적 권한 부여 전역 설정을 구성합니다
 
-ONTAP 9.15.1부터 에 이러한 값을 제공합니다 `security dynamic-authorization modify` 명령. 동적 권한 부여 구성에 대한 자세한 내용은 을 참조하십시오 link:dynamic-authorization-overview.html["동적 인증 개요"].
+ONTAP 9.15.1부터 명령에 이러한 값을 `security dynamic-authorization modify` 제공합니다. 에 대한 자세한 내용은 `security dynamic-authorization modify` link:https://docs.netapp.com/us-en/ontap-cli/security-dynamic-authorization-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===

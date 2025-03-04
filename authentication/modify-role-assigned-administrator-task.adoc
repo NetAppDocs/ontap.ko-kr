@@ -22,7 +22,7 @@ summary: security login modify 명령을 사용하여 클러스터 또는 SVM �
 '보안 로그인 수정 - vserver SVM_name -user -or -group -name user_or_group_name -application application application -AuthMethod authentication_method -role role role-comment
 
 +
-전체 명령 구문은 을 참조하십시오 link:config-worksheets-reference.html["워크시트"].
+에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 link:config-worksheets-reference.html["로그인 계정 생성 또는 수정"]

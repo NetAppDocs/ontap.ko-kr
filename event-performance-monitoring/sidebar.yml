@@ -15,8 +15,6 @@ entries:
     url: "/task_admin_modify_qos.html"
   - title: Digital Advisor로 위험 모니터링
     url: "/task_admin_monitor_risks.html"
-  - title: System Manager 인사이트
-    url: "/concepts/insights-system-optimization-concept.html"
   - title: 시스템 최적화를 위한 통찰력 확보
     url: "/insights-system-optimization-task.html"
   - title: 기본 FPolicy를 구성합니다

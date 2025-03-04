@@ -105,8 +105,6 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 
 
 
-이러한 명령에 대한 자세한 내용은 를 참조하십시오 https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]
-
 .포트 추가 및 제거의 예
 다음 명령을 실행하면 노드 클러스터 -1-01의 포트 e0g 및 노드 클러스터 -1-02의 포트 e0g가 기본 IPspace의 브로드캐스트 도메인 bcast1에 추가됩니다.
 
@@ -122,3 +120,6 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

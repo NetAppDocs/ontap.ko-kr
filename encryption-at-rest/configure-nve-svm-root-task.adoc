@@ -56,7 +56,7 @@ ONTAP CLI 또는 System Manager를 사용하여 SVM 루트 볼륨에서 NVE를 �
 `volume move start -vserver _svm_name_ -volume _volume_ -destination-aggregate _aggregate_ -encrypt-with-aggr-key false -encrypt-destination true`
 
 +
-에 대한 자세한 내용은 `volume move`를 참조하십시오 xref:../volumes/move-volume-task.html[볼륨을 이동합니다].
+에 대한 자세한 내용은 `volume move` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+move["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 를 확인합니다 `volume move` 에서 작업이 성공했습니다 `volume move show` 명령. 를 클릭합니다 `volume show -encryption-type volume` NVE를 사용하는 모든 볼륨의 목록을 표시합니다.
 

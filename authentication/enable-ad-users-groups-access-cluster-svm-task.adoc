@@ -73,7 +73,7 @@ NOTE: Kerberos 인증은 항상 먼저 시도됩니다. 오류가 발생하면 N
 `security login domain-tunnel create -vserver _svm_name_`
 
 +
-전체 명령 구문은 을 참조하십시오 link:config-worksheets-reference.html["워크시트"].
+에 대한 자세한 내용은 `security login domain-tunnel create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-domain-tunnel-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -109,7 +109,7 @@ cluster1::>security login domain-tunnel create -vserver engData
 'vserver active-directory create-vserver_SVM_name_-account-name_NetBIOS_account_name_-domain_domain_-ou_조직_unit_'
 
 +
-전체 명령 구문은 을 참조하십시오 link:config-worksheets-reference.html["워크시트"].
+에 대한 자세한 내용은 `vserver active-directory create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-active-directory-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 SVM ""engData"" 도메인인 ""example.com`"""ADSERVER1""이라는 컴퓨터 계정이 생성됩니다. 명령을 입력한 후 AD 사용자 계정 자격 증명을 입력하라는 메시지가 표시됩니다.

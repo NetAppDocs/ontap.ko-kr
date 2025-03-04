@@ -41,7 +41,7 @@ SSH 공개 키와 X.509 인증서를 모두 사용하여 SSH를 통해 계정을
 `security login publickey create -vserver _SVM_name_ -username _user_name_ -index _index_ -publickey _certificate_ -x509-certificate install`
 
 +
-전체 명령 구문은 에 대한 워크시트 참조를 참고하십시오 link:config-worksheets-reference.html#associate-a-public-key-with-a-user-account["공개 키를 사용자 계정과 연결"^].
+에 대한 자세한 내용은 `security login publickey create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +

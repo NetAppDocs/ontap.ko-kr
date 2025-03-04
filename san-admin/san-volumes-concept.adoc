@@ -118,4 +118,4 @@ ONTAP의 pace-allocation 설정을 사용하면 LUN에서 T10 씬 프로비저�
 
 ONTAP 명령 참조 설명서 의 [-space-allocation{enabled|disabled}] 명령에 T10 씬 프로비저닝 지원을 설정/해제하고 LUN에 T10 SCSI 씬 프로비저닝을 설정하는 데 필요한 자세한 정보가 나와 있습니다.
 
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

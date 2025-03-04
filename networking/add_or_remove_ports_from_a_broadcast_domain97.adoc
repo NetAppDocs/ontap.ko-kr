@@ -80,8 +80,6 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 
 
 
-이러한 명령에 대한 자세한 내용은 를 https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]참조하십시오.
-
 
 
 == 포트 추가 및 제거의 예
@@ -97,3 +95,7 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 다음 명령은 기본 IPspace의 브로드캐스트 도메인 bcast1에서 노드 cluster1-01의 포트 e0e를 제거합니다.
 
 'cluster-1::> network port broadcast-domain remove-ports-broadcast-domain bcast1-ports cluster-1-01:e0e'
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

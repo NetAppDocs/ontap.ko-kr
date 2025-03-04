@@ -42,3 +42,6 @@ NOTE: 인터클러스터 및 관리 LIF가 동일한 서브넷에 구성된 경�
 
 | VIP LIF | VIP LIF는 VIP 포트에 생성된 모든 데이터 LIF입니다. 자세한 내용은 을 참조하십시오link:../networking/configure_virtual_ip_vip_lifs.html["가상 IP(VIP) LIF를 구성합니다"]. 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["네트워크 인터페이스 수정"^]
+

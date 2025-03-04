@@ -110,3 +110,6 @@ ONTAP CLI를 사용하여 새 볼륨에서 파일 시스템 분석을 기본적�
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

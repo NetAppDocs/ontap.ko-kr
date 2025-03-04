@@ -60,3 +60,7 @@ NOTE: 기본값은 '-is-global-file-locking'입니다. 이후에 볼륨에 대�
 'volume FlexCache origin config show/modify -volume_volume_name_-is-global-file-locking-enabled true
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

@@ -151,4 +151,5 @@ security certificate show
 ====
 .관련 정보
 * link:../system-admin/setup-autosupport-task.html["AutoSupport를 설정합니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 

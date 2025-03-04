@@ -2204,3 +2204,7 @@ ONTAP 9.4, 9.3, 9.2, 9.1 및 9.0의 업그레이드 경로는 자동 업그레�
 Data ONTAP 8.3.x에서:: ONTAP 9.1로 직접 업그레이드한 다음 이후 릴리즈로 업그레이드할 수 있습니다.
 8.2.x를 포함한 Data ONTAP 8.3.x 이전 버전에서:: 먼저 Data ONTAP 8.3.x로 업그레이드한 다음 ONTAP 9.1로 업그레이드한 다음 이후 릴리즈로 업그레이드해야 합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

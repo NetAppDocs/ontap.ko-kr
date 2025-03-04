@@ -147,7 +147,7 @@ ONTAP 9.4 이상
 
 [source, cli]
 ----
-cluster remove-node -name <node_name>
+cluster remove-node -node <node_name>
 ----
 노드 IP 사용:
 

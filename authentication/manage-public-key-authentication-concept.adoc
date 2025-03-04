@@ -27,7 +27,7 @@ SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 있으려�
 '보안 로그인 공개 키 생성 - vserver_SVM_name_-username_user_name_-index_index_-publickey_certificate_-comment_comment_'
 
 +
-전체 명령 구문은 에 대한 워크시트 참조를 참고하십시오 link:config-worksheets-reference.html["공개 키를 사용자 계정과 연결"^].
+에 대한 자세한 내용은 `security login publickey create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +
