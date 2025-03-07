@@ -2,18 +2,18 @@
 permalink: disks-aggregates/create-ssd-storage-pool-task.html 
 sidebar: sidebar 
 keywords: create, provision, ssd, storage, flash, pool, add, cache, local tier, aggregate 
-summary: '2~4개의 Flash Pool 로컬 계층(애그리게이트)에 SSD 캐시를 제공하기 위해 SSD(Solid State Drive) 스토리지 풀을 생성할 수 있습니다.' 
+summary: 'SSD(Solid State Drive) 스토리지 풀을 생성하여 2~4개의 Flash Pool 로컬 계층에 SSD 캐시를 제공할 수 있습니다.' 
 ---
-= SSD 스토리지 풀을 생성하여 캐시를 로컬 계층(애그리게이트)에 추가합니다
+= ONTAP에서 SSD 스토리지 풀을 생성하여 캐시를 로컬 계층에 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SSD(Solid State Drive)를 추가하여 기존 로컬 계층(애그리게이트)을 Flash Pool 로컬 계층(애그리게이트)으로 변환하여 캐시를 프로비저닝할 수 있습니다.
+SSD(Solid State Drive)를 추가하여 기존 로컬 계층을 Flash Pool 로컬 계층으로 변환하여 캐시를 프로비저닝할 수 있습니다.
 
-2~4개의 Flash Pool 로컬 계층(애그리게이트)에 SSD 캐시를 제공하기 위해 SSD(Solid State Drive) 스토리지 풀을 생성할 수 있습니다. Flash Pool 애그리게이트는 사용 중인 데이터 세트에 플래시를 고성능 캐시로 구축하는 동시에 저렴한 HDD를 사용하여 자주 액세스하지 않는 데이터를 지원합니다.
+SSD(Solid State Drive) 스토리지 풀을 생성하여 2~4개의 Flash Pool 로컬 계층에 SSD 캐시를 제공할 수 있습니다. Flash Pool 로컬 계층을 사용하면 작업 데이터 세트를 위한 고성능 캐시로 플래시를 구축하고 액세스 빈도가 낮은 데이터에는 경제적인 HDD를 사용할 수 있습니다.
 
 .이 작업에 대해
 * 스토리지 풀에 디스크를 생성하거나 추가할 때 디스크 목록을 제공해야 합니다.
@@ -55,10 +55,10 @@ NOTE: ONTAP 9.7 이상 또는 ONTAP 9.12.1 이전 버전의 ONTAP를 사용하�
 .단계
 . (클래식 버전으로 돌아가기) * 를 클릭합니다.
 . 스토리지 > 애그리게이트 및 디스크 > 애그리게이트 * 를 클릭합니다.
-. 로컬 계층(집계)을 선택한 다음 * 작업 > 캐시 추가 * 를 클릭합니다.
+. 로컬 계층을 선택한 다음 * Actions > Add Cache * 를 클릭합니다.
 . 캐시 소스를 "스토리지 풀" 또는 "전용 SSD"로 선택합니다.
 . (새로운 환경으로 전환) * 을 클릭합니다.
-. Storage > Tiers * 를 클릭하여 새 애그리게이트의 크기를 확인합니다.
+. 스토리지 > 계층 * 을 클릭하여 새로운 로컬 계층의 크기를 확인합니다.
 
 
 =====

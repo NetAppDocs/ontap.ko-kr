@@ -2,9 +2,9 @@
 permalink: disks-aggregates/add-disks-local-tier-aggr-task.html 
 sidebar: sidebar 
 keywords: add, expand, aggregate, add drives, add disks, add capacity, local tier, add disks to local tier, add disks to aggregate, increase storage, increase aggregate size, local tier, capacity, disk, expand storage, add drives, add disks, add capacity 
-summary: '로컬 계층(애그리게이트)에 디스크를 추가하여 연결된 볼륨에 더 많은 스토리지를 제공할 수 있습니다.' 
+summary: 연결된 볼륨에 더 많은 스토리지를 제공할 수 있도록 디스크를 로컬 계층에 추가할 수 있습니다. 
 ---
-= 로컬 계층에 용량 추가(애그리게이트에 디스크 추가)
+= ONTAP의 로컬 계층에 용량 추가
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -16,7 +16,10 @@ summary: '로컬 계층(애그리게이트)에 디스크를 추가하여 연결�
 
 
 [role="lead"]
-로컬 계층(애그리게이트)에 디스크를 추가하여 연결된 볼륨에 더 많은 스토리지를 제공할 수 있습니다.
+연결된 볼륨에 더 많은 스토리지를 제공할 수 있도록 디스크를 로컬 계층에 추가할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 [role="tabbed-block"]
 ====
@@ -70,30 +73,30 @@ ONTAP 9.11.1부터 시작합니다
 .단계
 . (ONTAP 9.7에만 해당) * (클래식 버전으로 돌아가기) * 를 선택합니다.
 . 하드웨어 및 진단 > 애그리게이트 * 를 선택합니다.
-. 용량 디스크를 추가할 애그리게이트를 선택한 다음 * Actions > Add Capacity * 를 선택합니다.
+. 용량 디스크를 추가할 로컬 계층을 선택한 다음 * Actions > Add Capacity * 를 선택합니다.
 +
 
-NOTE: Aggregate의 다른 디스크와 동일한 크기의 디스크를 추가해야 합니다.
+NOTE: 로컬 계층의 다른 디스크와 크기가 같은 디스크를 추가해야 합니다.
 
 . (ONTAP 9.7에만 해당) * 새 환경으로 전환 * 을 선택합니다.
-. 스토리지 > 계층 * 을 선택하여 새 애그리게이트의 크기를 확인합니다.
+. 스토리지 > 계층 * 을 선택하여 새로운 로컬 계층의 크기를 확인합니다.
 
 
 --
 .CLI를 참조하십시오
 --
 .시작하기 전에
-스토리지를 추가하고 있는 애그리게이트의 RAID 그룹 크기를 알아야 합니다.
+스토리지를 추가할 로컬 계층에 대한 RAID 그룹 크기를 알아야 합니다.
 
 .이 작업에 대해
-분할된 디스크를 애그리게이트에 추가하는 절차는 분할되지 않은 디스크를 추가하는 절차와 비슷합니다.
+분할된 디스크를 로컬 계층에 추가하는 절차는 분할되지 않은 디스크를 추가하는 절차와 비슷합니다.
 
-Aggregate를 확장할 때 분할 또는 분할되지 않은 디스크를 Aggregate에 추가할지 여부를 알아야 합니다. 분할되지 않은 드라이브를 기존 aggregate에 추가하면 기존 RAID 그룹의 크기가 새 RAID 그룹에 상속되며, 이는 필요한 패리티 디스크 수에 영향을 줄 수 있습니다. 분할되지 않은 디스크가 분할된 디스크로 구성된 RAID 그룹에 추가되는 경우 새 디스크는 분할되어 사용되지 않은 스페어 파티션을 남겨둡니다.
+로컬 계층을 확장할 때 파티션 또는 분할되지 않은 디스크를 로컬 계층에 추가하는지 여부를 확인해야 합니다. 파티셔닝되지 않은 드라이브를 기존 로컬 계층에 추가하면 기존 RAID 그룹의 크기가 새 RAID 그룹에 상속되어 필요한 패리티 디스크 수에 영향을 줄 수 있습니다. 분할되지 않은 디스크가 분할된 디스크로 구성된 RAID 그룹에 추가되는 경우 새 디스크는 분할되어 사용되지 않은 스페어 파티션을 남겨둡니다.
 
 파티션을 프로비저닝할 때 두 파티션이 모두 스페어로 된 드라이브 없이 노드를 떠나지 않도록 해야 합니다. 이렇게 하면 노드에 컨트롤러 중단이 발생할 경우 문제(코어 파일)에 대한 중요 정보를 기술 지원 팀에 제공하지 못할 수 있습니다.
 
 .단계
-. Aggregate를 소유한 시스템에서 사용 가능한 스페어 스토리지를 표시합니다.
+. 로컬 계층을 소유하는 시스템에서 사용 가능한 스페어 스토리지를 표시합니다.
 +
 'Storage aggregate show-spare-disks-original-owner_node_name_'
 
@@ -121,7 +124,7 @@ Original Owner: cl1-s2
  1.0.10                      BSAS    7200 block                0B  73.89GB  828.0GB zeroed
 2 entries were displayed.
 ----
-. Aggregate의 현재 RAID 그룹을 표시합니다.
+. 로컬 계층에 대한 현재 RAID 그룹을 표시합니다.
 +
 [source, cli]
 ----
@@ -184,13 +187,13 @@ Aggregate capacity available for volume use would be increased by 1.83TB.
 storage aggregate add-disks -aggregate <aggr_name> -raidgroup new -diskcount <number_of_disks_or_partitions>
 ----
 +
-Flash Pool 애그리게이트를 생성할 때, 체크섬이 Aggregate와 다른 디스크를 추가하거나, 혼합 체크섬 애그리게이트에 디스크를 추가할 경우 '-checksumstyle' 매개 변수를 사용해야 합니다.
+Flash Pool 로컬 계층을 생성할 때 로컬 계층과 다른 체크섬을 가진 디스크를 추가하거나 혼합 체크섬 로컬 계층에 디스크를 추가하는 경우 매개 변수를 사용해야 `-checksumstyle` 합니다.
 
 +
-Flash Pool Aggregate에 디스크를 추가하려면 '-disktype' 매개 변수를 사용하여 디스크 유형을 지정해야 합니다.
+Flash Pool 로컬 계층에 디스크를 추가하는 경우 매개 변수를 사용하여 `-disktype` 디스크 유형을 지정해야 합니다.
 
 +
-'-disksize' 매개변수를 사용하여 추가할 디스크의 크기를 지정할 수 있습니다. Aggregate에 추가하기 위해 지정된 크기가 거의 있는 디스크만 선택됩니다.
+매개 변수를 사용하여 추가할 디스크의 크기를 지정할 수 `-disksize` 있습니다. 로컬 계층에 추가할 디스크의 크기가 대략 지정된 디스크만 선택됩니다.
 
 +
 [listing]

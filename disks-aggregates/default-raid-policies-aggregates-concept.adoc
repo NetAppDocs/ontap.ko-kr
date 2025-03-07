@@ -2,18 +2,18 @@
 permalink: disks-aggregates/default-raid-policies-aggregates-concept.html 
 sidebar: sidebar 
 keywords: raid-dp, raid-tec, default raid policies, raid policy, aggregate, local tier 
-summary: 'RAID-DP 또는 RAID-TEC가 모든 새로운 로컬 계층(애그리게이트)에 대한 기본 RAID 정책입니다. RAID 정책은 디스크 장애 시 발생하는 패리티 보호를 결정합니다.' 
+summary: RAID-DP 또는 RAID-TEC는 모든 새로운 로컬 계층에 대한 기본 RAID 정책입니다. RAID 정책은 디스크 장애 시 발생하는 패리티 보호를 결정합니다. 
 ---
-= 로컬 계층에 대한 기본 RAID 정책(애그리게이트)
+= ONTAP의 로컬 계층에 대한 기본 RAID 정책
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-RAID-DP 또는 RAID-TEC가 모든 새로운 로컬 계층(애그리게이트)에 대한 기본 RAID 정책입니다. RAID 정책은 디스크 장애 시 발생하는 패리티 보호를 결정합니다.
+RAID-DP 또는 RAID-TEC는 모든 새로운 로컬 계층에 대한 기본 RAID 정책입니다. RAID 정책은 디스크 장애 시 발생하는 패리티 보호를 결정합니다.
 
-RAID-DP는 단일 또는 이중 디스크 장애 시 이중 패리티 보호를 제공합니다. RAID-DP는 다음 로컬 계층(애그리게이트) 유형에 대한 기본 RAID 정책입니다.
+RAID-DP는 단일 또는 이중 디스크 장애 시 이중 패리티 보호를 제공합니다. RAID-DP는 다음 로컬 계층 유형에 대한 기본 RAID 정책입니다.
 
 * All Flash 로컬 계층
 * Flash Pool 로컬 계층

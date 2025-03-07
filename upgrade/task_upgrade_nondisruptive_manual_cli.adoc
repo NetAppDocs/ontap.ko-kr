@@ -149,7 +149,7 @@ network interface migrate-all -node nodenameA
 network interface show
 ----
 +
-LIF 상태를 확인하는 데 사용할 수 있는 매개 변수에 대한 자세한 내용은 네트워크 인터페이스 show man 페이지를 참조하십시오.
+에서 LIF 상태를 확인하는 데 사용할 수 있는 매개 변수와 에 대해 자세히 `network interface show`link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^] 알아보십시오.
 
 +
 다음 예에서는 Node0의 데이터 LIF가 성공적으로 마이그레이션되었음을 보여 줍니다. 이 예에 포함된 필드를 각 LIF의 홈 노드 및 포트, LIF가 마이그레이션된 현재 노드 및 포트, LIF의 운영 및 관리 상태를 확인할 수 있습니다.
@@ -488,7 +488,7 @@ network interface migrate-all -node nodenameB
 network interface show
 ----
 +
-LIF 상태를 확인하는 데 사용할 수 있는 매개 변수에 대한 자세한 내용은 네트워크 인터페이스 show man 페이지를 참조하십시오.
+에서 LIF 상태를 확인하는 데 사용할 수 있는 매개 변수와 에 대해 자세히 `network interface show`link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^] 알아보십시오.
 
 +
 다음 예에서는 node1의 데이터 LIF가 성공적으로 마이그레이션되었음을 보여 줍니다. 이 예에 포함된 필드를 각 LIF의 홈 노드 및 포트, LIF가 마이그레이션된 현재 노드 및 포트, LIF의 운영 및 관리 상태를 확인할 수 있습니다.
@@ -761,3 +761,5 @@ set -privilege admin
 ----
 . 추가 HA 쌍을 업그레이드합니다.
 
+
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

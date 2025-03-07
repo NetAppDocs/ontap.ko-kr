@@ -2,19 +2,22 @@
 permalink: disks-aggregates/create-aggregates-auto-provision-task.html 
 sidebar: sidebar 
 keywords: create, aggregates, auto-provision, add, local tier, automatic, automatically, create, aggregate, auto-provisioning, System Manager, CLI, storage, disk, ownership, assign 
-summary: '로컬 계층을 자동으로 추가(자동 프로비저닝을 통해 애그리게이트 생성)하는 ONTAP 권장 사항을 수락하고 ONTAP에서 로컬 계층을 추가하도록 할 수 있습니다.' 
+summary: 로컬 계층을 자동으로 추가하는 ONTAP 권장 사항을 수락하고 ONTAP가 로컬 계층을 추가하도록 할 수 있습니다. 
 ---
-= ONTAP에서 로컬 계층을 자동으로 추가(자동 프로비저닝을 통해 애그리게이트 생성
+= ONTAP에서 로컬 계층을 자동으로 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP가 로컬 계층을 자동으로 추가하는 데 제공하는 Best Practice 권장 사항(자동 프로비저닝을 통해 애그리게이트 생성)이 사용자 환경에 적합한 경우, 권장 사항을 수락하고 ONTAP가 로컬 계층을 추가하도록 할 수 있습니다.
+로컬 계층을 자동으로 추가하기 위해 ONTAP에서 제공하는 Best Practice 권장 사항이 환경에 적합한 경우 권장 사항을 수락하고 ONTAP에서 로컬 계층을 추가하도록 할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .시작하기 전에
-디스크를 로컬 계층(애그리게이트)에서 사용하려면 먼저 노드가 디스크를 소유해야 합니다.  클러스터가 자동 디스크 소유권 할당을 사용하도록 구성되어 있지 않은 경우, 반드시 해야 합니다 link:manual-assign-disks-ownership-prep-task.html["소유권을 수동으로 할당합니다"].
+디스크를 로컬 계층에서 사용하려면 먼저 노드에서 소유해야 합니다. 클러스터가 자동 디스크 소유권 할당을 사용하도록 구성되어 있지 않은 경우, 반드시 해야 link:manual-assign-disks-ownership-prep-task.html["소유권을 수동으로 할당합니다"]합니다.
 
 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
@@ -66,7 +69,7 @@ System Manager의 권장 사항을 수락합니다.
  a| 
 로컬 계층을 수동으로 구성하고 *_NOT_ * 는 System Manager의 권장 사항을 사용합니다.
  a| 
-로 진행합니다 link:create-aggregates-manual-task.html["로컬 계층을 수동으로 추가합니다(애그리게이트 생성)"]:
+link:create-aggregates-manual-task.html["로컬 계층을 수동으로 추가합니다"]다음으로 진행합니다.
 
 ** ONTAP 9.10.1 이전 버전의 경우 CLI 사용 단계를 따릅니다.
 ** ONTAP 9.11.1부터 시스템 관리자 사용 단계를 따릅니다.
@@ -87,23 +90,23 @@ System Manager의 권장 사항을 수락합니다.
 --
 .CLI를 참조하십시오
 --
-'Storage aggregate auto-provision' 명령을 실행하여 애그리게이트 레이아웃 권장 사항을 생성합니다. 그런 다음 ONTAP 권장사항을 검토하고 승인한 후 애그리게이트를 생성할 수 있습니다.
+ `storage aggregate auto-provision`명령을 실행하여 로컬 계층 레이아웃 권장 사항을 생성합니다. 그런 다음 ONTAP 권장 사항을 검토하고 승인한 후에 로컬 계층을 생성할 수 있습니다.
 
 .시작하기 전에
 ONTAP 9.2 이상이 클러스터에서 실행 중이어야 합니다.
 
 .이 작업에 대해
-'Storage aggregate auto-provision' 명령을 통해 생성된 기본 요약에는 이름과 사용 가능한 크기를 비롯하여 생성할 권장 애그리게이트가 나열됩니다. 목록을 보고 메시지가 표시될 때 권장 애그리게이트를 만들 것인지 결정할 수 있습니다.
+명령을 사용하여 생성된 기본 요약에는 `storage aggregate auto-provision` 이름 및 사용 가능한 크기 등 생성할 권장 로컬 계층이 나열됩니다. 목록을 보고 메시지가 표시되면 권장되는 로컬 계층을 생성할지 여부를 결정할 수 있습니다.
 
 다음 보고서를 표시하는 '-verbose' 옵션을 사용하여 자세한 요약을 표시할 수도 있습니다.
 
-* 애그리게이트를 생성한 후 생성, 검색된 스페어 및 나머지 스페어 디스크와 파티션을 생성할 새 애그리게이트의 노드 요약
-* 사용할 디스크 및 파티션 수로 생성할 새로운 데이터 애그리게이트
-* 생성할 새 데이터 애그리게이트에서 스페어 디스크 및 파티션을 사용하는 방법을 보여주는 RAID 그룹 레이아웃
-* Aggregate 생성 후 남아 있는 스페어 디스크 및 파티션에 대한 세부 정보입니다
+* 로컬 계층 생성 후 스페어 생성, 검색된 스페어, 남은 스페어 디스크 및 파티션을 생성할 새 로컬 계층의 노드별 요약
+* 사용할 디스크 및 파티션 수가 포함된 새로운 데이터 로컬 계층
+* 생성할 새 데이터 로컬 계층에서 스페어 디스크 및 파티션을 사용하는 방법을 보여 주는 RAID 그룹 레이아웃입니다
+* 로컬 계층 생성 후 남은 스페어 디스크 및 파티션에 대한 세부 정보입니다
 
 
-자동 프로비저닝 방법에 익숙하고 환경이 제대로 준비되었으면 '-skip-confirmation' 옵션을 사용하여 표시 및 확인 없이 권장 집계를 생성할 수 있습니다. 스토리지 집계 자동 프로비저닝 명령은 CLI 세션 확인 설정의 영향을 받지 않습니다.
+자동 프로비저닝 방법에 익숙하고 환경이 올바르게 준비된 경우 옵션을 사용하여 표시 및 확인 없이 권장 로컬 계층을 생성할 수 `-skip-confirmation` 있습니다.  `storage aggregate auto-provision`명령은 CLI 세션 설정의 영향을 받지 `-confirmations` 않습니다.
 
 에 대한 자세한 내용은 `storage aggregate auto-provision` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-auto-provision.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
@@ -112,7 +115,7 @@ ONTAP 9.2 이상이 클러스터에서 실행 중이어야 합니다.
 +
 ** 옵션 없음: 표준 요약을 표시합니다
 ** '-verbose' 옵션: 상세 요약 표시
-** '-skip-confirmation' 옵션: 표시 또는 확인 없이 권장 집계를 생성합니다
+** `-skip-confirmation` 옵션: 표시 또는 확인 없이 권장되는 로컬 계층을 생성합니다
 
 
 . 다음 단계 중 하나를 수행합니다.
@@ -127,7 +130,7 @@ ONTAP 9.2 이상이 클러스터에서 실행 중이어야 합니다.
  a| 
 ONTAP의 권장 사항을 수락합니다.
  a| 
-권장 애그리게이트 표시를 검토한 다음 프롬프트에 응답하여 권장 애그리게이트를 생성합니다.
+권장 로컬 계층 표시를 검토한 다음 권장 로컬 계층을 생성하라는 메시지에 응답합니다.
 
 [listing]
 ----
@@ -152,7 +155,7 @@ myA400-44556677::>
  a| 
 로컬 계층을 수동으로 구성하고 ONTAP의 권장 사항을 * _NOT_* 사용하십시오.
  a| 
-로 진행합니다 link:create-aggregates-manual-task.html["로컬 계층을 수동으로 추가합니다(애그리게이트 생성)"].
+로 이동합니다link:create-aggregates-manual-task.html["로컬 계층을 수동으로 추가합니다"].
 
 |===
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, manage, ssd, storage, pools 
 summary: ONTAP에서는 SSD 스토리지 풀을 관리하기 위한 스토리지 풀 명령을 제공합니다. 
 ---
-= SSD 스토리지 풀을 관리하는 명령입니다
+= ONTAP에서 SSD 스토리지 풀을 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -20,7 +20,7 @@ ONTAP는 SSD 스토리지 풀 관리를 위한 '스토리지 풀' 명령을 제�
 
 
  a| 
-스토리지 풀에서 애그리게이트에 제공하는 스토리지 용량을 표시합니다
+스토리지 풀이 어떤 로컬 계층에 제공하고 있는지 표시합니다
  a| 
 스토리지 풀 show-aggregate를 선택합니다
 

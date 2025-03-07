@@ -116,3 +116,4 @@ man_command_name _
 'run-node_node_name_system hardware unified-connect show
 
 |===
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

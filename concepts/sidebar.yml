@@ -24,13 +24,13 @@ entries:
     url: "/concepts/rdma-concept.html"
 - title: 클라이언트 프로토콜
   url: "/concepts/client-protocols-concept.html"
-- title: 디스크와 애그리게이트
+- title: 디스크 및 로컬 계층
   entries:
   - title: 개요
     url: "/disks-aggregates/index.html"
-  - title: Aggregate 및 RAID 그룹
+  - title: RAID 그룹 및 로컬 계층
     url: "/concepts/aggregates-raid-groups-concept.html"
-  - title: 미러링되지 않은 로컬 계층(애그리게이트)
+  - title: 미러링 및 미러링되지 않은 로컬 계층
     url: "/concepts/mirrored-unmirrored-aggregates-concept.html"
   - title: 루트 데이터 파티셔닝
     url: "/concepts/root-data-partitioning-concept.html"

@@ -2,16 +2,19 @@
 permalink: disks-aggregates/determine-flash-pool-candidacy-cache-size-task.html 
 sidebar: sidebar 
 keywords: flash pool, candidacy, optimal cache size, local tier, aggregate 
-summary: '기존 로컬 계층(애그리게이트)을 Flash Pool 로컬 계층으로 변환하기 전에 로컬 계층이 I/O에 바인딩되어 있는지 그리고 워크로드와 예산에 적합한 Flash Pool 캐시 크기를 결정할 수 있습니다. 또한 기존 Flash Pool 로컬 계층의 캐시가 올바르게 사이징되었는지 확인할 수 있습니다.' 
+summary: 기존 로컬 계층을 Flash Pool 로컬 계층으로 변환하기 전에 먼저 로컬 계층이 I/O 바인딩인지, 워크로드와 예산에 맞는 최상의 Flash Pool 캐시 크기인지 확인할 수 있습니다. 또한 기존 Flash Pool 로컬 계층의 캐시가 올바르게 사이징되었는지 확인할 수 있습니다. 
 ---
-= Flash Pool 적합성 및 최적의 캐시 크기를 결정합니다
+= ONTAP에서 Flash Pool의 적합성과 최적의 캐시 크기를 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-기존 로컬 계층(애그리게이트)을 Flash Pool 로컬 계층으로 변환하기 전에 로컬 계층이 I/O에 바인딩되어 있는지 그리고 워크로드와 예산에 적합한 Flash Pool 캐시 크기를 결정할 수 있습니다. 또한 기존 Flash Pool 로컬 계층의 캐시가 올바르게 사이징되었는지 확인할 수 있습니다.
+기존 로컬 계층을 Flash Pool 로컬 계층으로 변환하기 전에 먼저 로컬 계층이 I/O 바인딩인지, 워크로드와 예산에 맞는 최상의 Flash Pool 캐시 크기인지 확인할 수 있습니다. 또한 기존 Flash Pool 로컬 계층의 캐시가 올바르게 사이징되었는지 확인할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .시작하기 전에
 분석 중인 로컬 계층에 최대 로드가 발생하는 경우 대략 알아야 합니다.
@@ -21,15 +24,15 @@ summary: '기존 로컬 계층(애그리게이트)을 Flash Pool 로컬 계층�
 +
 진일진일보한 것
 
-. 기존 로컬 계층(애그리게이트)이 Flash Pool 애그리게이트로 변환하는 데 적합한 대상인지 확인해야 하는 경우, 최대 로드 일정 기간 동안 애그리게이트의 디스크 사용량이 얼마인지, 지연 시간에 미치는 영향이 있는지 확인할 수 있습니다.
+. 기존 로컬 계층이 Flash Pool 로컬 계층으로 변환하는 데 적합한지 여부를 판단해야 하는 경우, 로컬 계층의 디스크 사용량이 가장 많은 기간 동안 얼마나 사용되고 있는지, 그리고 이것이 지연 시간에 어떤 영향을 미치는지 확인하십시오.
 +
 S tistics show -periodic -object disk:raid_group -instance_raid_group_name _ -counter disk_busy|user_read_latency -interval 1 - iterations 60
 
 +
-Flash Pool 캐시를 추가하여 지연 시간을 줄이는지 이 애그리게이트에 맞게 결정할 수 있습니다.
+이 로컬 계층에 Flash Pool 캐시를 추가하여 지연 시간 단축 여부를 결정할 수 있습니다.
 
 +
-다음 명령을 실행하면 aggregate ""aggr1""의 첫 번째 RAID 그룹에 대한 통계가 표시됩니다.
+다음 명령은 로컬 계층 "'aggr1'"의 첫 번째 RAID 그룹에 대한 통계를 보여 줍니다.
 
 +
 S tistics show -periodic -object disk:raid_group -instance/aggr1/plex0/rg0 -counter disk_busy|user_read_latency -interval 1 -iterations 60'
@@ -39,14 +42,14 @@ S tistics show -periodic -object disk:raid_group -instance/aggr1/plex0/rg0 -coun
 'Storage automated-working-set-analyzer start-node_node_name_-aggregate_aggr_name_'
 
 +
-Awa는 지정된 aggregate와 연결된 볼륨의 워크로드 데이터 수집을 시작합니다.
+Awa는 지정된 로컬 계층과 연결된 볼륨에 대한 워크로드 데이터를 수집하기 시작합니다.
 
 . 고급 모드 종료:
 +
 '관리자 설정'을 선택합니다
 
 +
-최대 부하 간격이 하나 이상 발생할 때까지 AWA가 실행되도록 합니다. Awa는 지정된 집계와 연결된 볼륨에 대한 워크로드 통계를 수집하고 최대 1주 동안 데이터를 분석합니다. 1주일 이상 AWA를 실행하면 가장 최근 주로부터 수집된 데이터만 보고됩니다. 캐시 크기 추정치는 데이터 수집 기간 동안 가장 높은 로드를 기준으로 하며, 전체 데이터 수집 기간 동안 로드가 높을 필요는 없습니다.
+최대 부하 간격이 하나 이상 발생할 때까지 AWA가 실행되도록 합니다. Awa는 지정된 로컬 계층과 연결된 볼륨에 대한 워크로드 통계를 취합하고 최대 1주간의 연속 데이터를 분석합니다. 1주일 이상 AWA를 실행하면 가장 최근 주로부터 수집된 데이터만 보고됩니다. 캐시 크기 추정치는 데이터 수집 기간 동안 가장 높은 로드를 기준으로 하며, 전체 데이터 수집 기간 동안 로드가 높을 필요는 없습니다.
 
 . 고급 모드 진입:
 +

@@ -2,23 +2,26 @@
 permalink: disks-aggregates/determine-volumes-reside-aggregate-task.html 
 sidebar: sidebar 
 keywords: volumes, reside, aggregate, local tier 
-summary: '로컬 계층에 대한 작업을 수행하기 전에 로컬 계층에 상주하는 볼륨(애그리게이트)을 확인해야 할 수도 있습니다. 예를 들어, 로컬 계층을 재배치하거나 오프라인 상태로 전환해야 합니다.' 
+summary: 로컬 계층에 대해 작업을 수행하기 전에 재배치 또는 오프라인 상태로 전환 등의 작업을 수행하기 전에 로컬 계층에 상주하는 볼륨을 확인해야 할 수 있습니다. 
 ---
-= 로컬 계층에 상주하는 볼륨 확인(애그리게이트)
+= ONTAP의 로컬 계층에 상주하는 볼륨을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-로컬 계층에 대한 작업을 수행하기 전에 로컬 계층에 상주하는 볼륨(애그리게이트)을 확인해야 할 수도 있습니다. 예를 들어, 로컬 계층을 재배치하거나 오프라인 상태로 전환해야 합니다.
+로컬 계층에 대해 작업을 수행하기 전에 재배치 또는 오프라인 상태로 전환 등의 작업을 수행하기 전에 로컬 계층에 상주하는 볼륨을 확인해야 할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .단계
-. Aggregate에 상주하는 볼륨을 표시하려면 를 입력합니다
+. 로컬 계층에 있는 볼륨을 표시하려면 를 입력합니다
 +
 'volume show-aggregate aggregate_name'입니다
 
 +
-지정된 Aggregate에 상주하는 모든 볼륨이 표시됩니다.
+지정된 로컬 계층에 있는 모든 볼륨이 표시됩니다.
 
 

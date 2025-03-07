@@ -69,7 +69,7 @@ LIF가 를 사용하여 홈 노드 및 홈 포트로 자동으로 되돌리는�
 
 ** `-home-port` LIF에서 네트워크 인터페이스 되돌리기 명령을 실행할 때 LIF가 반환되는 물리적 포트 또는 논리 포트입니다.
 ** 를 사용하여 IP 주소를 지정할 수 있습니다 `-address` 및 `-netmask` 옵션.
-** 서브넷을 사용하지 않고 IP 주소를 수동으로 할당하는 경우 다른 IP 서브넷에 클라이언트 또는 도메인 컨트롤러가 있는 경우 게이트웨이에 대한 기본 경로를 구성해야 할 수 있습니다. network route create man 페이지에는 SVM 내에서 정적 라우트를 생성하는 방법에 대한 정보가 포함되어 있습니다.
+** 서브넷을 사용하지 않고 IP 주소를 수동으로 할당하는 경우 다른 IP 서브넷에 클라이언트 또는 도메인 컨트롤러가 있는 경우 게이트웨이에 대한 기본 경로를 구성해야 할 수 있습니다.  `network route create`명령 페이지에는 SVM 내에서 정적 라우트를 생성하는 방법에 대한 정보가 포함되어 있습니다. 에 대한 자세한 내용은 `network route create` link:https://docs.netapp.com/us-en/ontap-cli/network-route-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 ** `-service-policy` - LIF에 대한 서비스 정책. 정책을 지정하지 않으면 기본 정책이 자동으로 할당됩니다. 를 사용합니다 `network interface service-policy show` 명령을 사용하여 사용 가능한 서비스 정책을 검토합니다.
 ** `-auto-revert` - 시작, 관리 데이터베이스 상태 변경 또는 네트워크 연결이 이루어질 때 데이터 LIF가 홈 노드로 자동 복구되는지 여부를 지정합니다. *기본 설정은 false*이지만 사용자 환경의 네트워크 관리 정책에 따라 true로 설정할 수 있습니다.
 +
@@ -105,3 +105,5 @@ network interface show
 | IPv6 주소입니다 | 네트워크 핑6 
 |===
 
+
+에 대한 자세한 내용은 `network interface` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["ONTAP 명령 참조입니다"^]을 참조하십시오.

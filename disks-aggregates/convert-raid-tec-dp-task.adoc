@@ -2,16 +2,19 @@
 permalink: disks-aggregates/convert-raid-tec-dp-task.html 
 sidebar: sidebar 
 keywords: convert, raid-tec, raid-dp, raid policy 
-summary: '로컬 계층(애그리게이트)의 크기를 줄이고 더 이상 3중 패리티가 필요하지 않은 경우, RAID 정책을 RAID-TEC에서 RAID-DP로 전환하고 RAID 패리티에 필요한 디스크 수를 줄일 수 있습니다.' 
+summary: 로컬 계층의 크기를 줄이고 3중 패리티가 더 이상 필요하지 않은 경우 RAID 정책을 RAID-TEC에서 RAID-DP로 변환하고 RAID 패리티에 필요한 디스크 수를 줄일 수 있습니다. 
 ---
-= RAID-TEC에서 RAID-DP로 변환
+= ONTAP의 RAID-TEC에서 RAID-DP로 변환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-로컬 계층(애그리게이트)의 크기를 줄이고 더 이상 3중 패리티가 필요하지 않은 경우, RAID 정책을 RAID-TEC에서 RAID-DP로 전환하고 RAID 패리티에 필요한 디스크 수를 줄일 수 있습니다.
+로컬 계층의 크기를 줄이고 3중 패리티가 더 이상 필요하지 않은 경우 RAID 정책을 RAID-TEC에서 RAID-DP로 변환하고 RAID 패리티에 필요한 디스크 수를 줄일 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .시작하기 전에
 RAID-TEC의 최대 RAID 그룹 크기가 RAID-DP의 최대 RAID 그룹 크기보다 큽니다. 최대 RAID-TEC 그룹 크기가 RAID-DP 제한 범위 내에 있지 않으면 RAID-DP로 변환할 수 없습니다.
@@ -20,15 +23,15 @@ RAID-TEC의 최대 RAID 그룹 크기가 RAID-DP의 최대 RAID 그룹 크기보
 RAID 유형 간 변환의 의미를 이해하려면 명령의 를 참조하십시오 https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html#parameters["매개 변수"^] `storage aggregate modify` .
 
 .단계
-. Aggregate가 온라인 상태이고 최소 6개의 디스크가 있는지 확인합니다.
+. 로컬 계층이 온라인 상태이고 최소 6개의 디스크가 있는지 확인합니다.
 +
 'Storage aggregate show-status-aggregate_aggregate_name_'
 
-. RAID-TEC에서 RAID-DP로 애그리게이트 변환:
+. 로컬 계층을 RAID-TEC에서 RAID-DP로 전환:
 +
 'Storage aggregate modify -aggregate_aggregate_name_-raidtype RAID_DP'
 
-. 애그리게이트 RAID 정책이 RAID-DP인지 확인합니다.
+. 로컬 계층 RAID 정책이 RAID-DP인지 확인합니다.
 +
 'STORAGE AGGATE SHOW_AGGATE_NAME_'
 

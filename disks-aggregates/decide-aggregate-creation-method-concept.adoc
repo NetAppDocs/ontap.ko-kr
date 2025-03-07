@@ -2,18 +2,21 @@
 permalink: disks-aggregates/decide-aggregate-creation-method-concept.html 
 sidebar: sidebar 
 keywords: decide, aggregate, create, add, method, local tier 
-summary: 'ONTAP는 로컬 계층(애그리게이트)을 자동으로 생성하는 모범 사례 권장 사항을 제공하지만(자동 프로비저닝 사용) 해당 환경에서 권장 구성이 지원되는지 여부를 확인해야 합니다. 그렇지 않은 경우 RAID 정책 및 디스크 구성에 대한 결정을 내린 다음 로컬 계층을 수동으로 생성해야 합니다.' 
+summary: ONTAP는 로컬 계층을 자동으로 생성하기 위한 모범 사례 권장 사항을 제공하지만 권장 구성이 사용자 환경에서 지원되는지 여부를 결정해야 합니다. 그렇지 않은 경우 RAID 정책 및 디스크 구성에 대한 결정을 내린 다음 로컬 계층을 수동으로 생성해야 합니다. 
 ---
-= 로컬 계층을 생성하는 데 사용할 방법 결정(애그리게이트)
+= ONTAP에서 로컬 계층을 생성하는 데 사용할 방법을 결정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP는 로컬 계층을 자동으로 추가하기 위한 모범 사례 권장 사항을 제공하지만(자동 프로비저닝을 통해 애그리게이트 생성), 권장 구성이 사용자 환경에서 지원되는지 여부를 확인해야 합니다. 그렇지 않은 경우 RAID 정책 및 디스크 구성에 대한 결정을 내린 다음 로컬 계층을 수동으로 생성해야 합니다.
+ONTAP는 로컬 계층을 자동으로 추가하기 위한 Best Practice 권장 사항을 제공하지만 권장 구성이 사용자 환경에서 지원되는지 여부를 결정해야 합니다. 그렇지 않은 경우 RAID 정책 및 디스크 구성에 대한 결정을 내린 다음 로컬 계층을 수동으로 생성해야 합니다.
 
 로컬 계층이 자동으로 생성되면 ONTAP는 클러스터에서 사용 가능한 스페어 디스크를 분석하고 Best Practice에 따라 스페어 디스크를 사용하여 로컬 계층을 추가하는 방법에 대한 권장 사항을 생성합니다. ONTAP에서 권장 구성을 표시합니다. 권장 사항을 수락하거나 로컬 계층을 수동으로 추가할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 
 
@@ -39,23 +42,23 @@ ONTAP는 로컬 계층을 자동으로 추가하기 위한 모범 사례 권장 
 
 NOTE: ONTAP 9.11.1부터 System Manager를 사용하여 로컬 계층을 수동으로 추가할 수 있습니다.
 
-* 타사 어레이 LUN을 사용하는 Aggregate
+* 타사 어레이 LUN을 사용하는 로컬 계층
 * Cloud Volumes ONTAP 또는 ONTAP Select가 있는 가상 디스크
 * MetroCluster 시스템
 * SyncMirror
 * mSATA 디스크
-* FlashPool 계층(애그리게이트)
+* FlashPool 계층
 * 노드에 여러 디스크 유형 또는 크기가 접속되어 있습니다
 
 
 
 
-== 로컬 계층 생성 방법 선택(애그리게이트)
+== 로컬 계층을 생성할 방법을 선택합니다
 
 사용할 방법 선택:
 
-* link:create-aggregates-auto-provision-task.html["로컬 계층(애그리게이트)을 자동으로 추가(생성)합니다"]
-* link:create-aggregates-manual-task.html["로컬 계층(애그리게이트)을 수동으로 추가(생성)합니다"]
+* link:create-aggregates-auto-provision-task.html["로컬 계층을 자동으로 추가(생성"]
+* link:create-aggregates-manual-task.html["로컬 계층을 수동으로 추가(생성)합니다"]
 
 
 .관련 정보

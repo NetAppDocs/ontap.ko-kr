@@ -2,19 +2,22 @@
 permalink: disks-aggregates/customize-size-raid-groups-task.html 
 sidebar: sidebar 
 keywords: raidsize, customize, raid groups 
-summary: 'RAID 그룹의 크기를 사용자 지정하여 로컬 계층(애그리게이트)에 포함할 스토리지 크기에 맞게 RAID 그룹 크기를 조정할 수 있습니다.' 
+summary: RAID 그룹의 크기를 사용자 지정하여 RAID 그룹 크기가 로컬 계층에 포함할 스토리지 양에 적합한지 확인할 수 있습니다. 
 ---
-= RAID 그룹의 크기를 사용자 지정합니다
+= ONTAP에서 RAID 그룹의 크기를 사용자 지정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-RAID 그룹의 크기를 사용자 지정하여 로컬 계층(애그리게이트)에 포함할 스토리지 크기에 맞게 RAID 그룹 크기를 조정할 수 있습니다.
+RAID 그룹의 크기를 사용자 지정하여 RAID 그룹 크기가 로컬 계층에 포함할 스토리지 양에 적합한지 확인할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .이 작업에 대해
-표준 로컬 계층(애그리게이트)의 경우 각 로컬 계층에 대한 RAID 그룹의 크기를 개별적으로 변경합니다. Flash Pool 로컬 계층의 경우 SSD RAID 그룹 및 HDD RAID 그룹에 대한 RAID 그룹 크기를 독립적으로 변경할 수 있습니다.
+표준 로컬 계층의 경우 각 로컬 계층에 대한 RAID 그룹 크기를 개별적으로 변경합니다. Flash Pool 로컬 계층의 경우 SSD RAID 그룹 및 HDD RAID 그룹에 대한 RAID 그룹 크기를 독립적으로 변경할 수 있습니다.
 
 다음 목록에서는 RAID 그룹 크기 변경에 대한 몇 가지 사항을 설명합니다.
 
@@ -35,7 +38,7 @@ RAID 그룹의 크기를 사용자 지정하여 로컬 계층(애그리게이트
 
 
  a| 
-Flash Pool 애그리게이트의 SSD RAID 그룹의 최대 RAID 그룹 크기를 변경합니다
+Flash Pool 로컬 계층의 SSD RAID 그룹에 대한 최대 RAID 그룹 크기를 변경합니다
  a| 
 'Storage aggregate modify-aggregate aggr_name-cache-raid-group-size'를 선택합니다
 
@@ -50,10 +53,10 @@ Flash Pool 애그리게이트의 SSD RAID 그룹의 최대 RAID 그룹 크기를
 
 
 .예
-다음 명령을 실행하면 aggregate n1_A4의 최대 RAID 그룹 크기가 20개의 디스크 또는 어레이 LUN으로 변경됩니다.
+다음 명령을 실행하면 로컬 계층 n1_A4의 최대 RAID 그룹 크기가 20개의 디스크 또는 어레이 LUN으로 변경됩니다.
 
 'Storage aggregate modify -aggregate n1_A4-maxraidsize 20'을 선택합니다
 
-다음 명령을 실행하면 Flash Pool 애그리게이트 n1_cache_a2의 SSD 캐시 RAID 그룹의 최대 RAID 그룹 크기가 24로 변경됩니다.
+다음 명령을 실행하면 Flash Pool 로컬 계층 n1_cache_A2의 SSD 캐시 RAID 그룹의 최대 RAID 그룹 크기가 24로 변경됩니다.
 
 'Storage aggregate modify-aggregate n1_cache_a2-cache-raid-group-size 24'를 선택합니다

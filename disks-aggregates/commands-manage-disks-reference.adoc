@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, manage, disks 
 summary: 스토리지 디스크 및 스토리지 애그리게이트 명령을 사용하여 디스크를 관리할 수 있습니다. 
 ---
-= 디스크 관리를 위한 명령입니다
+= ONTAP에서 디스크를 관리하는 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,9 @@ summary: 스토리지 디스크 및 스토리지 애그리게이트 명령을 �
 
 [role="lead"]
 '스토리지 디스크' 및 '스토리지 집계' 명령을 사용하여 디스크를 관리할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 |===
 
@@ -27,14 +30,14 @@ summary: 스토리지 디스크 및 스토리지 애그리게이트 명령을 �
 
 
  a| 
-디스크 RAID 유형, 현재 사용량 및 RAID 그룹을 Aggregate 별로 표시합니다
+디스크 RAID 유형, 현재 사용량 및 로컬 계층별 RAID 그룹을 표시합니다
  a| 
 '스토리지 집계 표시 상태'
 
 
 
  a| 
-스페어 디스크를 포함하여 RAID 유형, 현재 사용, 애그리게이트 및 RAID 그룹을 표시합니다. 물리적 디스크의 경우
+물리 디스크의 RAID 유형, 현재 사용량, 로컬 계층 및 스페어를 포함한 RAID 그룹을 표시합니다
  a| 
 스토리지 디스크 show-raid
 

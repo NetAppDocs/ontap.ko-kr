@@ -2,16 +2,19 @@
 permalink: disks-aggregates/commands-aggregate-relocation-reference.html 
 sidebar: sidebar 
 keywords: commands, aggregate, relocation 
-summary: HA 쌍 내에서 애그리게이트 소유권을 재배치할 수 있는 특정 ONTAP 명령이 있습니다. 
+summary: HA 쌍 내에서 로컬 계층 소유권을 재배치하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= 집계 재배치를 위한 명령입니다
+= ONTAP에서 로컬 계층 재배치를 위한 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-HA 쌍 내에서 애그리게이트 소유권을 재배치할 수 있는 특정 ONTAP 명령이 있습니다.
+HA 쌍 내에서 로컬 계층 소유권을 재배치하기 위한 특정 ONTAP 명령이 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 |===
 
@@ -20,14 +23,14 @@ HA 쌍 내에서 애그리게이트 소유권을 재배치할 수 있는 특정 
 
 
  a| 
-집계 재배치 프로세스를 시작합니다
+로컬 계층 재배치 프로세스를 시작합니다
  a| 
 '스토리지 집계 재배치 시작
 
 
 
  a| 
-집계 재배치 프로세스를 모니터링합니다
+로컬 계층 재배치 프로세스 모니터링
  a| 
 스토리지 골재 재배치 쇼
 

@@ -2,16 +2,16 @@
 permalink: disks-aggregates/add-storage-ssd-pool-task.html 
 sidebar: sidebar 
 keywords: add, ssd, storage, pool 
-summary: 'SSD(Solid State Drive)를 SSD 스토리지 풀에 추가하면 스토리지 풀의 물리적 크기 및 사용 가능한 크기와 할당 유닛 크기가 증가합니다. 더 큰 할당 유닛 크기는 Flash Pool 로컬 계층(애그리게이트)에 이미 할당된 할당 유닛에도 영향을 미칩니다.' 
+summary: 'SSD(Solid State Drive)를 SSD 스토리지 풀에 추가하면 스토리지 풀의 물리적 크기 및 사용 가능한 크기와 할당 유닛 크기가 증가합니다. 할당 유닛의 크기가 클수록 Flash Pool 로컬 계층에 이미 할당된 할당 유닛에도 영향을 미칩니다.' 
 ---
-= SSD 스토리지 풀에 SSD를 추가합니다
+= ONTAP의 SSD 스토리지 풀에 SSD를 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-SSD(Solid State Drive)를 SSD 스토리지 풀에 추가하면 스토리지 풀의 물리적 크기 및 사용 가능한 크기와 할당 유닛 크기가 증가합니다. 또한 더 큰 할당 단위 크기는 로컬 계층(애그리게이트)에 이미 할당된 할당 단위에 영향을 미칩니다.
+SSD(Solid State Drive)를 SSD 스토리지 풀에 추가하면 스토리지 풀의 물리적 크기 및 사용 가능한 크기와 할당 유닛 크기가 증가합니다. 할당 유닛 크기가 클수록 로컬 계층에 이미 할당된 할당 유닛에도 영향을 미칩니다.
 
 .시작하기 전에
 이 작업으로 인해 HA 쌍의 캐시 제한이 초과되지 않는지 확인해야 합니다. ONTAP에서는 SSD 스토리지 풀에 SSD를 추가할 때 캐시 한도를 초과하지 않도록 방지할 수 없으며 그렇게 할 경우 새로 추가된 스토리지 용량을 사용할 수 없게 될 수 있습니다.
@@ -51,7 +51,7 @@ ONTAP 9.12.1부터 시스템 관리자를 사용하여 SSD 스토리지 풀에 S
 스토리지 풀 add-storage-pool sp_name-disk-list_disk1, disk2…_
 
 +
-이 작업을 수행하면 시스템에서 어떤 Flash Pool 애그리게이트의 크기가 증가하게 되며, 이에 따라 작업을 확인하라는 메시지가 표시됩니다.
+이 작업을 통해 어떤 Flash Pool 로컬 계층이 어느 Flash Pool 로컬 계층에 얼마만큼 증가할 것인지 시스템에 표시되고 작업을 확인하라는 메시지가 표시됩니다.
 
 
 

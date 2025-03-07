@@ -44,7 +44,7 @@ entries:
         url: "/fabricpool/setup-object-stores-mcc-task.html"
     - title: ONTAP 클라우드 계층 지연 시간 및 처리량 성능을 테스트합니다
       url: "/fabricpool/test-object-store-performance-task.html"
-    - title: ONTAP 클라우드 계층을 로컬 계층(애그리게이트)과 연결
+    - title: ONTAP 클라우드 계층을 로컬 계층에 연결합니다
       url: "/fabricpool/attach-cloud-tier-aggregate-task.html"
     - title: 데이터를 로컬 버킷에 계층화
       url: "/fabricpool/local-bucket-tier-data-task.html"

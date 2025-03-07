@@ -2,21 +2,24 @@
 permalink: disks-aggregates/create-flash-pool-aggregate-physical-ssds-task.html 
 sidebar: sidebar 
 keywords: create, flash, pool, aggregate, local tier, physical, ssds 
-summary: 'HDD RAID 그룹으로 구성된 기존 로컬 계층에서 기능을 활성화한 다음, 해당 로컬 계층에 하나 이상의 SSD RAID 그룹을 추가하여 Flash Pool 로컬 계층(애그리게이트)을 생성합니다. 따라서 로컬 계층에 대해 SSD RAID 그룹(SSD 캐시)과 HDD RAID 그룹의 두 RAID 그룹 세트가 생성됩니다.' 
+summary: 'Flash Pool 로컬 계층은 HDD RAID 그룹으로 구성된 기존 로컬 계층에 대해 기능을 활성화한 다음 해당 로컬 계층에 하나 이상의 SSD RAID 그룹을 추가하여 Flash Pool 로컬 계층을 생성합니다. 따라서 로컬 계층에 대해 SSD RAID 그룹(SSD 캐시)과 HDD RAID 그룹의 두 RAID 그룹 세트가 생성됩니다.' 
 ---
-= 물리적 SSD를 사용하여 Flash Pool 로컬 계층(애그리게이트)을 생성합니다
+= ONTAP에서 물리적 SSD를 사용하여 Flash Pool 로컬 계층을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-HDD RAID 그룹으로 구성된 기존 로컬 계층에서 기능을 활성화한 다음, 해당 로컬 계층에 하나 이상의 SSD RAID 그룹을 추가하여 Flash Pool 로컬 계층(애그리게이트)을 생성합니다. 따라서 로컬 계층에 대해 SSD RAID 그룹(SSD 캐시)과 HDD RAID 그룹의 두 RAID 그룹 세트가 생성됩니다.
+Flash Pool 로컬 계층은 HDD RAID 그룹으로 구성된 기존 로컬 계층에 대해 기능을 활성화한 다음 해당 로컬 계층에 하나 이상의 SSD RAID 그룹을 추가하여 Flash Pool 로컬 계층을 생성합니다. 따라서 로컬 계층에 대해 SSD RAID 그룹(SSD 캐시)과 HDD RAID 그룹의 두 RAID 그룹 세트가 생성됩니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 .이 작업에 대해
 SSD 캐시를 로컬 계층에 추가하여 Flash Pool 로컬 계층을 생성한 후에는 SSD 캐시를 제거하여 로컬 계층을 다시 원래 구성으로 변환할 수 없습니다.
 
-기본적으로 SSD 캐시의 RAID 레벨은 HDD RAID 그룹의 RAID 레벨과 같습니다. 첫 번째 SSD RAID 그룹을 추가할 때 ""raidtype"" 옵션을 지정하여 이 기본 선택을 재정의할 수 있습니다.
+기본적으로 SSD 캐시의 RAID 레벨은 HDD RAID 그룹의 RAID 레벨과 같습니다. 첫 번째 SSD RAID 그룹을 추가할 때 옵션을 지정하여 이 기본 선택 항목을 재정의할 수 있습니다 `raidtype`.
 
 .시작하기 전에
 * Flash Pool 로컬 계층으로 변환하려면 HDD로 구성된 유효한 로컬 계층을 식별해야 합니다.
@@ -33,7 +36,7 @@ SSD 캐시에 더 적은 RAID 그룹을 사용하면 필요한 패리티 디스�
 
 
 .단계
-System Manager 또는 ONTAP CLI를 사용하여 FlashPool 애그리게이트를 생성할 수 있습니다.
+System Manager 또는 ONTAP CLI를 사용하여 FlashPool 로컬 계층을 생성할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -56,17 +59,17 @@ ONTAP 9.12.1부터는 시스템 관리자를 사용하여 물리적 SSD를 사�
 .CLI를 참조하십시오
 --
 .단계
-. 로컬 계층(애그리게이트)을 Flash Pool 애그리게이트로 적격 으로 표시:
+. 로컬 계층을 Flash Pool 로컬 계층으로 지정할 수 있음:
 +
 'Storage aggregate modify -aggregate_aggr_name_-hybrid-enabled true'
 
 +
-이 단계가 성공하지 못할 경우 타겟 Aggregate에 대한 쓰기 캐싱 적격성을 결정합니다.
+이 단계가 성공하지 못하면 타겟 로컬 계층에 대한 쓰기 캐싱 적합성을 확인합니다.
 
-. '스토리지 애그리게이트 추가' 명령을 사용하여 애그리게이트에 SSD를 추가합니다.
+. 명령을 사용하여 로컬 계층에 SSD를 추가합니다 `storage aggregate add`.
 +
 ** ID를 기준으로 또는 disskcount와 dissktype 매개 변수를 사용하여 SSD를 지정할 수 있습니다.
-** HDD와 SSD의 체크섬 유형이 동일하지 않거나, 애그리게이팅이 혼합 체크섬 애그리게이트인 경우 'checksumstyle' 매개 변수를 사용하여 애그리게이트에 추가할 디스크의 체크섬 유형을 지정해야 합니다.
+** HDD와 SSD의 체크섬 유형이 동일하지 않거나 로컬 계층이 혼합 체크섬 로컬 계층인 경우 매개 변수를 사용하여 로컬 계층에 추가할 디스크의 체크섬 `checksumstyle` 유형을 지정해야 합니다.
 ** "raidtype" 매개 변수를 사용하여 SSD 캐시에 다른 RAID 유형을 지정할 수 있습니다.
 ** 캐시 RAID 그룹 크기를 사용 중인 RAID 유형의 기본값과 다르게 하려면 '-cache-raid-group-size' 매개 변수를 사용하여 캐시 RAID 그룹 크기를 변경해야 합니다.
 

@@ -28,7 +28,7 @@ xref:configure-client-access-shared-storage-concept.adoc[공유 스토리지에 
 
 
 
-명령 man 페이지에는 매개 변수에 대한 세부 정보가 포함되어 있습니다.
+매개 변수에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
 
@@ -36,7 +36,7 @@ xref:configure-client-access-shared-storage-concept.adoc[공유 스토리지에 
 
 * SVM 생성을 위한 매개 변수 *
 
-새 SVM을 생성하는 경우 이러한 값을 'vserver create' 명령으로 제공합니다.
+새로운 SVM을 생성하는 경우 명령을 통해 이러한 값을 `vserver create` 제공합니다. 에 대한 자세한 내용은 `vserver create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -93,7 +93,7 @@ C. UTF-8
 |===
 * LIF 생성을 위한 매개 변수 *
 
-LIF를 생성할 때 이러한 값을 'network interface create' 명령으로 제공합니다.
+LIF를 생성할 때 이러한 값을 명령과 함께 `network interface create` 제공합니다. 에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -183,7 +183,7 @@ IP 주소 풀입니다. 주소와 넷마스크를 자동으로 할당하기 위�
 |===
 * DNS 호스트 이름 확인을 위한 매개 변수 *
 
-DNS를 구성할 때 이러한 값을 'vserver services name-service dns create' 명령으로 제공합니다.
+DNS를 구성할 때 명령과 함께 이러한 값을 `vserver services name-service dns create` 제공합니다. 에 대한 자세한 내용은 `vserver services name-service dns create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-dns-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -210,7 +210,7 @@ DNS를 구성할 때 이러한 값을 'vserver services name-service dns create'
 
 시간 서비스 구성에 대한 매개 변수 *
 
-시간 서비스를 구성할 때 이러한 값을 'cluster time-service ntp server create' 명령으로 제공합니다.
+시간 서비스를 구성할 때 이러한 값을 명령과 함께 `cluster time-service ntp server create` 제공합니다. 에 대한 자세한 내용은 `cluster time-service ntp server create` link:https://docs.netapp.com/us-en/ontap-cli/cluster-time-service-ntp-server-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -225,7 +225,7 @@ Active Directory 도메인에 대한 NTP 서버의 호스트 이름 또는 IP �
 |===
 * Active Directory 도메인에서 SMB 서버를 생성하기 위한 매개 변수 *
 
-새 SMB 서버를 생성하고 도메인 정보를 지정할 때 이러한 값을 'vserver cifs create' 명령으로 제공합니다.
+새 SMB 서버를 생성하고 도메인 정보를 지정할 때 이러한 값을 명령과 함께 `vserver cifs create` 제공합니다. 에 대한 자세한 내용은 `vserver cifs create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -284,7 +284,7 @@ SMB 서버와 연결할 Active Directory 도메인의 FQDN(정규화된 도메�
 
 * 작업 그룹에서 SMB 서버를 생성하기 위한 매개 변수 *
 
-새 SMB 서버를 생성하고 지원되는 SMB 버전을 지정할 때 이러한 값을 'vserver cifs create' 명령으로 제공합니다.
+새 SMB 서버를 생성하고 지원되는 SMB 버전을 지정할 때 이러한 값에 명령을 입력합니다 `vserver cifs create`. 에 대한 자세한 내용은 `vserver cifs create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -323,7 +323,7 @@ SMB 서버의 이름(최대 15자).
 |===
 * 로컬 사용자 생성을 위한 매개 변수 *
 
-'vserver cifs users-and-groups local-user create' 명령을 사용하여 로컬 사용자를 생성할 때 이러한 값을 제공합니다. 이러한 서버는 작업 그룹의 SMB 서버에 필요하며 AD 도메인의 선택적 서버에 필요합니다.
+명령을 사용하여 로컬 사용자를 만들 때 이러한 값을 `vserver cifs users-and-groups local-user create` 제공합니다. 이러한 서버는 작업 그룹의 SMB 서버에 필요하며 AD 도메인의 선택적 서버에 필요합니다. 에 대한 자세한 내용은 `vserver cifs users-and-groups local-user create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-users-and-groups-local-user-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -370,7 +370,7 @@ SMB 서버의 이름(최대 15자).
 |===
 * 로컬 그룹 생성을 위한 매개 변수 *
 
-'vserver cifs users-and-groups local-group create' 명령을 사용하여 로컬 그룹을 생성할 때 이러한 값을 제공합니다. AD 도메인 및 워크그룹의 SMB 서버에 대해서는 선택 사항입니다.
+명령을 사용하여 로컬 그룹을 만들 때 이러한 값을 `vserver cifs users-and-groups local-group create` 제공합니다. AD 도메인 및 워크그룹의 SMB 서버에 대해서는 선택 사항입니다. 에 대한 자세한 내용은 `vserver cifs users-and-groups local-group create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-users-and-groups-local-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -405,7 +405,7 @@ SMB 서버의 이름(최대 15자).
 
 * 볼륨 생성을 위한 매개 변수 *
 
-Qtree 대신 볼륨을 생성하는 경우 이 값에 'volume create' 명령을 입력합니다.
+qtree가 아닌 볼륨을 생성하는 경우 명령과 함께 이러한 값을 `volume create` 제공합니다. 에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -461,7 +461,7 @@ NTFS
 |===
 * qtree 생성을 위한 매개 변수 *
 
-볼륨 대신 qtree를 생성하는 경우 이 값에 'volume qtree create' 명령을 입력합니다.
+볼륨 대신 qtree를 생성하는 경우 명령과 함께 이러한 값을 `volume qtree create` 제공합니다. 에 대한 자세한 내용은 `volume qtree create` link:https://docs.netapp.com/us-en/ontap-cli/volume-qtree-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -500,7 +500,7 @@ qtree가 포함된 볼륨이 있는 SVM의 이름입니다.
 |===
 * SMB 공유 생성을 위한 매개 변수 *
 
-이러한 값은 'vserver cifs share create' 명령을 사용하여 제공합니다.
+명령을 사용하여 이러한 값을 `vserver cifs share create` 입력합니다. 에 대한 자세한 내용은 `vserver cifs share create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 
@@ -547,7 +547,7 @@ SMB 공유의 경로 이름(최대 256자). 공유를 생성하기 전에 이 �
 |===
 * SMB ACL(공유 액세스 제어 목록) 생성을 위한 매개 변수 *
 
-이러한 값은 'vserver cifs share access-control create' 명령을 사용하여 제공합니다.
+명령을 사용하여 이러한 값을 `vserver cifs share access-control create` 입력합니다. 에 대한 자세한 내용은 `vserver cifs share access-control create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-share-access-control-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 |===
 | 필드에 입력합니다 | 설명 | 귀사의 가치 

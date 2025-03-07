@@ -41,6 +41,8 @@ NFS v4.2 보안 레이블의 사용 사례는 다음과 같습니다.
 ----
 vserver nfs modify -vserver <svm_name> -v4.2-seclabel <disabled|enabled>
 ----
+에 대한 자세한 내용은 `vserver nfs modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nfs-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 === NFS v4.2 보안 레이블에 대한 적용 모드입니다
@@ -635,6 +637,7 @@ IC-TDF 메타데이터가 파일과 별도로 저장되는 시나리오에서 Ne
 |===
 .관련 정보
 * link:https://www.netapp.com/media/10720-tr-4067.pdf["NFS in NetApp ONTAP: 모범 사례 및 구축 가이드"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 * 설명 요청(RFC)
 +
 ** link:https://datatracker.ietf.org/doc/html/rfc7204["RFC 7204: 레이블이 지정된 NFS에 대한 요구 사항"^]
