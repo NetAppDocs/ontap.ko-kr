@@ -2,7 +2,7 @@
 permalink: system-admin/configure-saml-authentication-task.html 
 sidebar: sidebar 
 keywords: tdp, ldap, identity, provider, saml, security, assertion, markup, lanaguage, active, directory, disable, authentication, idp, active directory, troubleshoot, repair 
-summary: 'ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다. SAML 인증이 구성 및 설정되면 사용자는 Active Directory 및 LDAP와 같은 디렉터리 서비스 공급자 대신 외부 ID 공급자(IDP)에 의해 인증됩니다. SAML 인증이 비활성화되면 Active Directory 및 LDAP와 같이 구성된 디렉터리 서비스 공급자가 인증에 사용됩니다.' 
+summary: 'ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다.' 
 ---
 = SAML 인증을 구성합니다
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup
 
 
 [role="lead"]
-ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다. SAML 인증이 구성 및 설정되면 사용자는 Active Directory 및 LDAP와 같은 디렉터리 서비스 공급자 대신 외부 ID 공급자(IDP)에 의해 인증됩니다.
+ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다. SAML 인증이 구성 및 설정되면 사용자는 Active Directory 및 LDAP와 같은 디렉터리 서비스 공급자 대신 외부 ID 공급자(IDP)에 의해 인증됩니다. SAML 인증이 해제되면 Active Directory 및 LDAP와 같이 구성된 디렉터리 서비스 공급자가 인증에 사용됩니다
 
 
 
@@ -89,7 +89,7 @@ http와 ontapi 애플리케이션은 서비스 프로세서 인프라, ONTAP API
 --
 . SAML 구성을 생성하여 ONTAP가 IDP 메타데이터에 액세스할 수 있도록 합니다.
 +
-'* security SAML-SP create-IDP-Uri_IDP_Uri_-sp-host_ontap_host_name_ * '
+`security saml-sp create -idp-uri <idp_uri> -sp-host <ontap_host_name>`
 
 +
 IDP_Uri는 IDP 메타데이터를 다운로드할 수 있는 IDP 호스트의 FTP 또는 HTTP 주소입니다.
@@ -122,14 +122,24 @@ IDP 구성에 대한 자세한 내용은 IDP 설명서를 참조하십시오.
 
 . SAML 구성 활성화:
 +
-'* security SAML-SP modify -is-enabled true*'
+`security saml-sp modify -is-enabled true`
 
 +
 'http' 또는 'ontapi' 애플리케이션에 액세스하는 기존 사용자는 자동으로 SAML 인증을 위해 구성됩니다.
 
 . SAML이 구성된 후 'http' 또는 'ontapi' 애플리케이션에 대한 사용자를 생성하려면 SAML을 새 사용자의 인증 방법으로 지정합니다.
 +
-.. SAML 인증을 사용하여 새 사용자에 대한 로그인 방법을 생성합니다. + `* 보안 로그인 create-user-or-group-name_user_name_-application [http|ontapi] -authentication-method SAML-vserver_svm_name_ * '
+.. SAML 인증을 사용하여 새 사용자에 대한 로그인 방법을 생성합니다.
++
+
+NOTE:  `user_name`값은 대/소문자를 구분합니다. 사용자 이름만 포함시키고 도메인의 일부를 포함하지 마십시오.
+
++
+`security login create -user-or-group-name <user_name> -application [http | ontapi] -authentication-method saml -vserver <svm_name>`
+
++
+예:
+
 +
 [listing]
 ----
@@ -137,10 +147,13 @@ cluster_12::> security login create -user-or-group-name admin1 -application http
 ----
 .. 사용자 항목이 생성되었는지 확인합니다.
 +
-'* 보안 로그인 쇼 * '
+'보안 로그인 쇼'
 
 +
-[listing]
+예:
+
++
+[listing, subs="+quotes"]
 ----
 cluster_12::> security login show
 
@@ -158,7 +171,7 @@ admin          service-processor
                            password      admin            no     none
 admin          ssh         password      admin            no     none
 admin1         http        password      backup           no     none
-**admin1       http        saml          backup           -      none**
+**admin1         http        saml          backup           -      none**
 ----
 
 
@@ -189,11 +202,11 @@ admin1         http        password      backup           no     none
 --
 . SAML 인증 비활성화:
 +
-'* security SAML-SP modify -is-enabled false * '
+`security saml-sp modify -is-enabled false`
 
 . SAML 인증을 더 이상 사용하지 않거나 IDP를 수정하려는 경우 SAML 구성을 삭제합니다.
 +
-'* 보안 SAML-SP 삭제 * '
+`security saml-sp delete`
 
 
 
@@ -211,11 +224,14 @@ SAML 인증을 구성할 경우 ONTAP는 노드별로 SAML 구성을 적용합�
 .단계
 . 고급 권한 레벨에 로그인합니다.
 +
-' * set-Privilege advanced * '
+세트 프리빌리지 고급
 
 . SAML 구성이 실패한 노드 식별:
 +
-' * security SAML-SP status show-instance * '
+`security saml-sp status show -instance`
+
++
+예:
 
 +
 [listing]
@@ -241,7 +257,10 @@ SAML Service Provider Enabled: false
 ----
 . 장애가 발생한 노드에서 SAML 구성을 복구합니다.
 +
-'* security SAML-SP repair-node_node_name_ * '
+`security saml-sp repair -node <node_name>`
+
++
+예:
 
 +
 [listing]
@@ -259,15 +278,18 @@ Do you want to continue? {y|n}: y
 
 . 모든 노드에서 SAML이 구성되었는지 확인합니다.
 +
-' * security SAML-SP status show-instance * '
+`security saml-sp status show -instance`
 
 +
-[listing]
+예:
+
++
+[listing, subs="+quotes"]
 ----
 cluster_12::*> security saml-sp status show -instance
 
                          Node: node1
-                Update Status: config-success
+                Update Status: **config-success**
                Database Epoch: 9
    Database Transaction Count: 997
                    Error Text:

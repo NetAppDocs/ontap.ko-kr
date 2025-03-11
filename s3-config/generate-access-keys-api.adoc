@@ -14,7 +14,10 @@ summary: S3 사용자가 API를 사용하여 S3 클라이언트에 액세스하�
 [role="lead"]
 ONTAP 9.14.1부터 ONTAP 관리자는 사용자 지정 역할을 만들고 로컬 또는 도메인 그룹이나 LDAP(Lightweight Directory Access Protocol) 그룹에 부여하여 해당 그룹에 속한 사용자가 S3 클라이언트 액세스에 대한 자체 액세스 및 비밀 키를 생성할 수 있습니다.
 
-스토리지 VM에서 몇 가지 구성 단계를 수행해야 사용자 지정 역할을 생성하고 액세스 키 생성을 위해 API를 호출하는 사용자에게 할당할 수 있습니다.
+액세스 키 생성을 위해 API를 호출하는 사용자에게 사용자 지정 역할을 생성하고 할당할 수 있도록 스토리지 VM에서 몇 가지 구성 단계를 수행해야 합니다.
+
+
+NOTE: LDAP가 비활성화된 경우 를 사용하여 액세스 키를 생성할 수 link:../smb-config/create-server-active-directory-domain-task.html["도메인 기반 인증을 사용하는 Active Directory 및 SMB"]있습니다.
 
 .시작하기 전에
 다음을 확인합니다.

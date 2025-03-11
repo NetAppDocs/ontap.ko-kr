@@ -381,11 +381,7 @@ SMB 공유에서는 공간 사용량을 계산할 때 다음 사항을 고려해
 .단계
 . 대상에 대한 할당량 규칙 생성: ' 볼륨 할당량 정책 규칙 create -vserver vs0 -policy -name quota_policy_of_the_rule -volume flexgroup_vol -type {tree | user | group} -target target_for_rule -qtree_name [-disk -limit hard_disk_limit_number] 소프트 제한값 [-file_limit_soft_file
 +
-** ONTAP 9.2 및 ONTAP 9.1에서 할당량 대상 유형은 FlexGroup 볼륨에 대한 "사용자" 또는 "그룹"일 수 있습니다.
-+
-FlexGroup 9.2 및 ONTAP 9.1의 ONTAP 볼륨에는 트리 할당량 유형이 지원되지 않습니다.
-
-** ONTAP 9.3 이상에서는 FlexGroup 볼륨에 대한 할당량 대상 유형이 사용자 그룹 트리 일 수 있습니다.
+** 할당량 대상 유형은 `group`, 또는 `tree` FlexGroup 볼륨의 경우 일 수 `user` 있습니다.
 ** FlexGroup 볼륨에 대한 할당량 규칙을 생성할 때 경로는 타겟으로 지원되지 않습니다.
 ** ONTAP 9.5부터 FlexGroup 볼륨에 대한 하드 디스크 제한, 하드 파일 제한, 소프트 디스크 제한, 소프트 파일 제한 및 임계값 제한 할당량을 지정할 수 있습니다.
 +

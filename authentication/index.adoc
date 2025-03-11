@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: decide, overview, administrator, authentication, rbac, role-based, access, control 
 summary: 'ONTAP 클러스터 관리자 및 SVM(스토리지 가상 시스템) 관리자의 로그인 계정을 활성화할 수 있습니다. 역할 기반 액세스 제어(RBAC)를 사용하여 관리자의 기능을 정의할 수도 있습니다.' 
 ---
-= CLI를 사용한 관리자 인증 및 RBAC 개요
+= ONTAP 관리자 인증 및 RBAC 개요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,29 @@ summary: 'ONTAP 클러스터 관리자 및 SVM(스토리지 가상 시스템) �
 [role="lead"]
 ONTAP 클러스터 관리자 및 SVM(스토리지 가상 시스템) 관리자의 로그인 계정을 활성화할 수 있습니다. 역할 기반 액세스 제어(RBAC)를 사용하여 관리자의 기능을 정의할 수도 있습니다.
 
-다음과 같은 방법으로 로그인 계정 및 RBAC를 사용할 수 있습니다.
+로컬 관리자 계정이 다음 유형의 인증을 통해 SVM(관리 스토리지 가상 시스템) 또는 데이터 SVM에 액세스할 수 있도록 설정할 수 있습니다.
 
-* System Manager나 자동화된 스크립팅 도구가 아니라 ONTAP CLI(Command-Line Interface)를 사용하려는 경우
-* 사용 가능한 모든 옵션을 탐색하는 것이 아니라 모범 사례를 사용하려고 합니다.
-* SNMP를 사용하여 클러스터에 대한 정보를 수집하지 않습니다.
+* link:enable-password-account-access-task.html["암호"]
+* link:enable-ssh-public-key-accounts-task.html["SSH 공개 키"]
+* link:enable-ssl-certificate-accounts-task.html["SSL 인증서"]
+* link:mfa-overview.html["SSH 다단계 인증(MFA)"]
++
+ONTAP 9.3부터 암호 및 공개 키로 인증이 지원됩니다.
+
+
+
+원격 관리자 계정에서 다음 인증 유형을 사용하여 관리 SVM 또는 데이터 SVM에 액세스할 수 있습니다.
+
+* link:grant-access-active-directory-users-groups-task.html["Active Directory를 클릭합니다"]
++
+ONTAP 9.13.1부터 Active Directory 사용자에 대한 기본 또는 보조 인증 방법으로 SSH 공개 키를 사용할 수 있습니다.
+
+* link:../system-admin/configure-saml-authentication-task.html["SAML 인증(관리 SVM에만 해당)"]
++
+ONTAP 9.3부터 SAML(Security Assertion Markup Language) 인증은 서비스 프로세서 인프라, ONTAP API 또는 System Manager 웹 서비스를 사용하여 관리 SVM에 액세스하는 데 사용할 수 있습니다.
+
+* link:grant-access-nis-ldap-user-accounts-task.html["LDAP 또는 NIS"]
++
+ONTAP 9.4부터 SSH MFA를 LDAP 또는 NIS 서버의 원격 사용자에게 사용할 수 있습니다. nsswitch 및 공개 키를 사용한 인증이 지원됩니다.
+
 

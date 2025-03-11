@@ -268,7 +268,7 @@ system image modify -node <nodename> -image <target_image> -isdefault true
 system image show
 ----
 +
-다음 예제에서는 버전 9.1이 Node0의 기본 이미지로 설정된 것을 보여 줍니다.
+다음 예에서는 Node0에서 버전 9.13.1 이 기본 이미지로 설정되어 있음을 보여 줍니다.
 
 +
 [listing]
@@ -278,11 +278,11 @@ cluster1::*> system image show
 Node     Image   Default Current Version    Date
 -------- ------- ------- ------- --------   -------------------
 node0
-         image1  false   true    9.2        MM/DD/YYYY TIME
-         image2  true    false   9.1        MM/DD/YYYY TIME
+         image1  false   true    9.14.1      MM/DD/YYYY TIME
+         image2  true    false   9.13.1      MM/DD/YYYY TIME
 node1
-         image1  true    true    9.2        MM/DD/YYYY TIME
-         image2  false   false   9.1        MM/DD/YYYY TIME
+         image1  true    true    9.14.1      MM/DD/YYYY TIME
+         image2  false   false   9.13.1      MM/DD/YYYY TIME
 4 entries were displayed.
 ----
 . 노드에 현재 epsilon이 있는지 확인합니다.

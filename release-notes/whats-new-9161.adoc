@@ -42,14 +42,14 @@ xref:../snapmirror-active-sync/index.html[SnapMirror 액티브 동기화에 대�
  a| 
 xref:../data-protection/cloud-backup-with-snapmirror-task.html[팬아웃 관계를 구축하기 위한 SnapMirror 클라우드 지원]
  a| 
-SnapMirror 클라우드는 동일한 소스 볼륨 또는 FlexGroup에서 서로 다른 오브젝트 저장소에 있는 하나 또는 여러 버킷에 이르는 팬아웃 관계를 지원합니다.
+SnapMirror 클라우드는 동일한 소스 볼륨 또는 FlexGroup에서 두 개의 서로 다른 오브젝트 저장소로 팬아웃 관계를 지원합니다. 팬아웃은 두 개의 오브젝트 저장소와 오브젝트 저장소의 한 개 또는 두 개의 버킷으로 구성될 수 있습니다.
 
 
 
  a| 
 xref:../data-protection/cloud-backup-with-snapmirror-task.html[마이그레이션된 볼륨에서 SnapMirror 클라우드 백업 지원]
  a| 
-SnapMirror 클라우드는 보다 효율적인 동기화 프로세스를 사용하여 클라우드로 마이그레이션된 볼륨을 백업할 수 있도록 지원합니다. 새로운 기능은 기준 변경 작업을 수행할 필요 없이 클라우드의 마이그레이션된 볼륨에서 동일한 대상 오브젝트 저장소 엔드포인트로 SnapMirror 클라우드 백업을 지원합니다. FlexVol 볼륨과 FlexGroup 볼륨이 모두 지원됩니다.
+SnapMirror 클라우드는 기존 ONTAP REST API를 사용하여 클라우드로 마이그레이션된 볼륨을 백업할 수 있습니다. 새로운 기능은 기준 변경 작업을 수행할 필요 없이 클라우드의 마이그레이션된 볼륨에서 동일한 대상 오브젝트 저장소 엔드포인트로 SnapMirror 클라우드 백업을 지원합니다. FlexVol 볼륨과 FlexGroup 볼륨이 모두 지원됩니다.
 
 |===
 

@@ -170,8 +170,6 @@ entries:
       url: "/smb-admin/add-preferred-domain-controllers-task.html"
     - title: 기본 도메인 컨트롤러를 관리하는 명령입니다
       url: "/smb-admin/commands-manage-preferred-domain-controllers-reference.html"
-    - title: 도메인 컨트롤러에 대한 SMB2 연결을 설정합니다
-      url: "/smb-admin/enable-smb2-connections-domain-controllers-task.html"
     - title: 도메인 컨트롤러에 대한 암호화된 연결을 활성화합니다
       url: "/smb-admin/enable-encrypted-connections-domain-controllers-task.html"
   - title: null 세션을 사용하여 Kerberos가 아닌 환경의 스토리지에 액세스합니다

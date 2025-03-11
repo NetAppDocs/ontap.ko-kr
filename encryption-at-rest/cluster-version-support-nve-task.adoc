@@ -1,8 +1,8 @@
 ---
 permalink: encryption-at-rest/cluster-version-support-nve-task.html 
 sidebar: sidebar 
-keywords: determining, whether, cluster, version, supports, nve 
-summary: 라이센스를 설치하기 전에 클러스터 버전이 NVE를 지원하는지 확인해야 합니다. version 명령을 사용하여 클러스터 버전을 확인할 수 있습니다. 
+keywords: determining, show version, cluster, version, supports, nve 
+summary: 라이센스를 설치하기 전에 클러스터 버전이 NVE를 지원하는지 확인해야 합니다. version 명령을 사용하여 클러스터 버전을 확인합니다. 
 ---
 = 클러스터 버전이 NVE를 지원하는지 확인합니다
 :allow-uri-read: 
@@ -22,18 +22,6 @@ summary: 라이센스를 설치하기 전에 클러스터 버전이 NVE를 지�
 안절부절부절부절도
 
 +
-명령 출력에 ""1Ono-DARE""" 텍스트(""저장된 데이터 암호화 없음")가 표시되거나 에 나열되지 않은 플랫폼을 사용 중인 경우에는 NVE가 지원되지 않습니다 link:configure-netapp-volume-encryption-concept.html#support-details["지원 세부 정보"].
-
-+
-다음 명령어는 NVE가 'cluster1'에서 지원되는지 여부를 결정합니다.
-
-+
-[listing]
-----
-cluster1::> version -v
-NetApp Release 9.1.0: Tue May 10 19:30:23 UTC 2016 <1Ono-DARE>
-----
-+
-의 출력입니다 `1Ono-DARE` NVE가 클러스터 버전에서 지원되지 않음을 나타냅니다.
+명령 출력에 "no Data at Rest Encryption" 텍스트가 표시되는 경우 또는 에 나와 있지 않은 플랫폼을 사용하는 경우에는 NVE가 지원되지 않습니다 `1Ono-DARE`link:configure-netapp-volume-encryption-concept.html#support-details["지원 세부 정보"].
 
 

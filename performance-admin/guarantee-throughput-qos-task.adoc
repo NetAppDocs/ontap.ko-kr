@@ -15,7 +15,7 @@ summary: '스토리지 QoS(서비스 품질)를 사용하여 주요 워크로드
 
 
 
-== 처리량 천장 정보(QoS Max)
+== 처리량 한도(QoS 최대)
 
 처리량 상한은 워크로드의 처리량을 최대 IOPS 또는 MBps, 즉 IOPS 및 MBps로 제한합니다. 아래 그림에서는 워크로드 2의 처리량 상한을 통해 워크로드 1과 3이 "괴롭지" 않도록 합니다.
 
@@ -28,7 +28,7 @@ image:qos-ceiling.gif["처리량 천장을 적용하기 전과 후의 QoS를 비
 
 
 
-== 처리량 기준(QoS Min)
+== 처리량 최저액(QoS Min)
 
 처리량 한도 에서는 워크로드의 처리량이 최소 IOPS 또는 MBps, 즉 IOPS 및 MBps 미만으로 떨어지지 않도록 보장합니다. 아래 그림에서 워크로드 1과 워크로드 3의 처리량 플로어는 워크로드 2의 수요에 관계없이 최소 처리량 목표를 충족할 수 있도록 합니다.
 
@@ -52,7 +52,7 @@ image:qos-floor.gif["Floor 적용 전후 QoS throughput을 비교한 2개 Chart"
 
 
 
-== 공유 및 비공유 QoS 정책 그룹에 대한 정보를 제공합니다
+== 공유 및 비공유 QoS 정책 그룹
 
 ONTAP 9.4부터 _non-shared_QoS 정책 그룹을 사용하여 정의된 처리량 상한 또는 최저가 각 구성원 워크로드에 개별적으로 적용되도록 지정할 수 있습니다. shared_policy 그룹의 동작은 정책 유형에 따라 달라집니다.
 
@@ -62,7 +62,7 @@ ONTAP 9.4부터 _non-shared_QoS 정책 그룹을 사용하여 정의된 처리�
 
 
 
-== 적응형 QoS에 대해 알아보십시오
+== 적응형 QoS
 
 일반적으로 스토리지 객체에 할당한 정책 그룹의 값은 고정됩니다. 스토리지 오브젝트의 크기가 변경되면 값을 수동으로 변경해야 합니다. 예를 들어, 볼륨에 사용된 공간의 양을 늘리려면 일반적으로 볼륨에 지정된 처리량 상한을 늘려야 합니다.
 
@@ -132,8 +132,8 @@ ONTAP 9 버전
 모두
  a| 
 * AFF
-* C190 *
-* SSD * 가 포함된 ONTAP Select 프리미엄
+* C190(1)
+* ONTAP Select 프리미엄 및 SSD 1
 
  a| 
 * AFF
@@ -183,7 +183,7 @@ SnapMirror Synchronous
 예
 
 |===
-C190 및 ONTAP Select 지원은 ONTAP 9.6 릴리스부터 시작되었습니다.
+ONTAP 9.6 릴리스부터 C190 및 ONTAP Select 지원이 시작되었습니다.
 
 
 
@@ -192,17 +192,11 @@ C190 및 ONTAP Select 지원은 ONTAP 9.6 릴리스부터 시작되었습니다.
 다음 표에서는 ONTAP 9 버전별 처리량 천장에 대한 워크로드 지원을 보여 줍니다. 루트 볼륨, 로드 공유 미러 및 데이터 보호 미러는 지원되지 않습니다.
 
 |===
-| 워크로드 지원 - 최고 | ONTAP 9.0 | ONTAP 9.1 | ONTAP 9.2 | ONTAP 9.3 | ONTAP 9.4-9.7 | ONTAP 9.8 이상 
+| 워크로드 지원 | ONTAP 9.3 및 이전 버전 | ONTAP 9.4 - 9.7 | ONTAP 9.8 이상 
 
 
  a| 
 볼륨
- a| 
-예
- a| 
-예
- a| 
-예
  a| 
 예
  a| 
@@ -220,23 +214,11 @@ C190 및 ONTAP Select 지원은 ONTAP 9.6 릴리스부터 시작되었습니다.
 예
  a| 
 예
- a| 
-예
- a| 
-예
- a| 
-예
 
 
 
  a| 
 LUN을 클릭합니다
- a| 
-예
- a| 
-예
- a| 
-예
  a| 
 예
  a| 
@@ -254,25 +236,13 @@ SVM
 예
  a| 
 예
- a| 
-예
- a| 
-예
- a| 
-예
 
 
 
  a| 
 FlexGroup 볼륨
  a| 
-아니요
- a| 
-아니요
- a| 
-아니요
- a| 
-예
+예(ONTAP 9.3만 해당)
  a| 
 예
  a| 
@@ -281,13 +251,7 @@ FlexGroup 볼륨
 
 
  a| 
-Qtree *
- a| 
-아니요
- a| 
-아니요
- a| 
-아니요
+qtree(1)
  a| 
 아니요
  a| 
@@ -305,12 +269,6 @@ Qtree *
 예
  a| 
 예
- a| 
-예
- a| 
-예
- a| 
-예
 
 
 
@@ -319,18 +277,12 @@ Qtree *
  a| 
 아니요
  a| 
-아니요
- a| 
-아니요
- a| 
-아니요
- a| 
 예
  a| 
 예
 
 |===
-ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qtree에서 NFS 액세스가 지원됩니다. ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.
+ONTAP 9.8부터 NFS 액세스가 FlexVol 및 FlexGroup 볼륨에서 지원됩니다. ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.
 
 
 
@@ -339,7 +291,7 @@ ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qt
 다음 표에는 ONTAP 9 버전별 처리량 플로어에 대한 워크로드 지원이 나와 있습니다. 루트 볼륨, 로드 공유 미러 및 데이터 보호 미러는 지원되지 않습니다.
 
 |===
-| 워크로드 지원 - 현장 | ONTAP 9.2 | ONTAP 9.3 | ONTAP 9.4-9.7 | ONTAP 9.8-9.13.0 | ONTAP 9.13.1 이상 
+| 워크로드 지원 | ONTAP 9.2 | ONTAP 9.3 | ONTAP 9.4 - 9.7 | ONTAP 9.8 ~ 9.13.0 | ONTAP 9.13.1 이상 
 
 
 | 볼륨 | 예 | 예 | 예 | 예 | 예 
@@ -357,7 +309,7 @@ ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qt
 | FlexGroup 볼륨 | 아니요 | 아니요 | 예 | 예 | 예 
 
 
-| Qtree * | 아니요 | 아니요 | 아니요 | 예 | 예 
+| qtree(1) | 아니요 | 아니요 | 아니요 | 예 | 예 
 
 
 | 정책 그룹당 워크로드가 여러 개일 수 있습니다 | 아니요 | 아니요 | 예 | 예 | 예 
@@ -365,7 +317,7 @@ ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qt
 
 | 비공유 정책 그룹입니다 | 아니요 | 아니요 | 예 | 예 | 예 
 |===
-\ * ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qtree에서 NFS 액세스가 지원됩니다. ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.
+ONTAP 9.8부터 NFS 액세스가 FlexVol 및 FlexGroup 볼륨에서 지원됩니다. ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.
 
 
 
@@ -374,7 +326,7 @@ ONTAP 9.8부터 NFS 액세스가 지원되는 FlexVol 및 FlexGroup 볼륨의 qt
 다음 표는 ONTAP 9 버전별 적응형 QoS에 대한 워크로드 지원을 보여줍니다. 루트 볼륨, 로드 공유 미러 및 데이터 보호 미러는 지원되지 않습니다.
 
 |===
-| 워크로드 지원 - 적응형 QoS | ONTAP 9.3 | ONTAP 9.4-9.13.0 | ONTAP 9.13.1 이상 
+| 워크로드 지원 | ONTAP 9.3 | ONTAP 9.4 ~ 9.13.0 | ONTAP 9.13.1 이상 
 
 
 | 볼륨 | 예 | 예 | 예 
