@@ -27,8 +27,6 @@ ONTAP 9.12.1부터 EMS 이벤트는 TLS(Transport Layer Security) 프로토콜�
 `syslog-port`:: 기본값입니다 `syslog-port` 매개 변수는 의 설정에 따라 다릅니다 `syslog-transport` 매개 변수. If(경우 `syslog-transport` 가 로 설정되어 있습니다 `tcp-encrypted`, `syslog-port` 기본값은 6514입니다.
 
 
-에 대한 자세한 내용은 `event notification destination create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-destination-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 .단계
 . 중요한 이벤트에 대한 syslog 서버 대상을 생성합니다.
 +
@@ -44,10 +42,12 @@ ONTAP 9.12.1부터 에 대해 다음 값을 지정할 수 있습니다 `syslog-t
 
 
 +
-기본 프로토콜은 입니다 `udp-unencrypted``.
+기본 프로토콜은 `udp-unencrypted` 입니다.
 
 . syslog 서버로 알림을 전달할 중요 이벤트를 구성합니다.
 +
 `event notification create -filter-name _important-events_ -destinations _syslog-ems_`
 
 
+
+에 대한 자세한 내용은 `event notification destination create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-destination-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

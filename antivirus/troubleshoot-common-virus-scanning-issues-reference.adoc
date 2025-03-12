@@ -54,3 +54,7 @@ clustered ONTAP 스토리지 시스템을 활용할 수 있습니다.
 정책 구성에 _scan-mandatory_setting이 지정되어 있는지 확인한다. 이 설정은 연결된 Vscan 서버가 없는 경우 데이터 액세스를 거부합니다. 필요에 따라 설정을 수정합니다.
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["Vscan vscan scanner -pool show를 선택합니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-on-access-policy-show.html["vserver Vscan on-access-policy show 를 참조하십시오"^]
+

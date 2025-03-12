@@ -54,6 +54,9 @@ NOTE: ONTAP 9.13.1 부터, ARP 설정을 보호하기 위해 MAV를 사용하는
 +
 'Security Anti-랜섬웨어 volume resume - vserver_svm_name_-volume_vol_name_'
 
++
+에 대한 자세한 내용은 `security anti-ransomware volume` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume+["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . ARP 설정을 보호하기 위해 MAV(ONTAP 9.13.1로 시작하는 ARP에서 사용 가능)를 사용하는 경우, 일시정지 작업은 하나 이상의 추가 관리자의 승인을 얻도록 요청합니다. MAV 승인 그룹과 연결된 모든 관리자로부터 승인을 받아야 합니다. 그렇지 않으면 작업이 실패합니다.
 +
 MAV를 사용 중이고 예상 일시 중지 작업에 추가 승인이 필요한 경우 각 MAV 그룹 승인자는 다음을 수행합니다.
@@ -75,6 +78,9 @@ MAV를 사용하고 있고 MAV 그룹 승인자인 경우 일시 중지 작업 �
 
 +
 `security multi-admin-verify request veto -index[_number returned from show request_]`
+
++
+에 대한 자세한 내용은 `security multi-admin-verify request` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+request["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

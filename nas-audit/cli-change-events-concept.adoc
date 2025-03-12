@@ -162,3 +162,6 @@ authorization-policy-change를 참조하십시오
 'vserver cifs users-and-groups Privilege remove-Privilege|reset-Privilege
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver["SVM"^]
+

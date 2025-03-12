@@ -28,8 +28,14 @@ NFS v4.2 보안 레이블은 현재 NDMP 덤프 작업에 지원되지 않습니
 +
 '세트 프리빌리지 어드밴스드'
 
++
+에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 보안 레이블 활성화:
 +
 ``vserver nfs modify -vserver svm_name -v4.2-seclabel enabled’’라는 이름의 가상 서버가 있습니다
+
++
+에 대한 자세한 내용은 `vserver nfs modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nfs-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

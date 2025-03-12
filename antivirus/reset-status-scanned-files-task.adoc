@@ -42,3 +42,5 @@ summary: 경우에 따라 SVM Vscan reset 명령을 사용하여 파일에 대�
 cluster1::> vserver vscan reset -vserver vs1
 ----
 
+
+에 대한 자세한 내용은 `vserver vscan reset` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-reset.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

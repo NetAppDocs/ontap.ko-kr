@@ -79,7 +79,7 @@ image:dwg_trafford_drawer_with_hdds_callouts.gif["이 그림에서는 DS460C 드
 
 +
 .. 소유되지 않은 모든 디스크 표시:
-`storage disk show -container-type unassigned``
+`storage disk show -container-type unassigned`
 .. 루트 디스크 할당:
 `storage disk assign -disk disk_name -owner owner_name`
 +
@@ -88,5 +88,7 @@ image:dwg_trafford_drawer_with_hdds_callouts.gif["이 그림에서는 DS460C 드
 
 
 
+
+에 대한 자세한 내용은 `storage disk` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+disk["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====

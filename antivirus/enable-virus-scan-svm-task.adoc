@@ -19,9 +19,12 @@ summary: 액세스 또는 온디맨드 검사를 실행하려면 SVM에서 바�
 'vserver Vscan enable - vserver data_SVM'
 
 +
+에 대한 자세한 내용은 `vserver vscan enable` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-enable.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 [NOTE]
 ====
-를 사용할 수 있습니다 `vserver vscan disable` 명령을 사용하여 바이러스 검사를 비활성화합니다(필요한 경우).
+필요한 경우 명령을 사용하여 바이러스 검사를 비활성화할 수 `vserver vscan disable` 있습니다. 에 대한 자세한 내용은 `vserver vscan disable` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-disable.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +

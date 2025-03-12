@@ -19,7 +19,7 @@ summary: '로그인 계정을 생성하고 역할 기반 액세스 제어(RBAC)�
 
 == 로그인 계정을 만들거나 수정합니다
 
-이러한 값은 에 제공됩니다 `security login create` 스토리지 VM에 액세스하기 위해 로그인 계정을 설정할 때 명령을 실행합니다. 에 동일한 값을 제공합니다 `security login modify` 계정이 스토리지 VM에 액세스하는 방법을 수정할 때 명령입니다.
+로그인 계정을 사용하여 스토리지 VM에 액세스할 수 있도록 설정할 때 이러한 값을 명령과 함께 `security login create` 제공합니다. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 계정이 스토리지 VM에 액세스하는 방식을 수정할 때 명령에 동일한 값을 `security login modify` 제공합니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -139,7 +139,7 @@ ONTAP 9.11.1부터 true로 설정하면 nsswitch 인증에 대한 LDAP 고속 �
 
 == Cisco Duo 보안 정보를 구성합니다
 
-이러한 값은 에 제공됩니다 `security login duo create` 스토리지 VM에 대해 SSH 로그인으로 Cisco Duo 2단계 인증을 사용하도록 설정하는 명령입니다.
+스토리지 VM에 대해 SSH 로그인으로 Cisco Duo 2단계 인증을 사용하도록 설정할 때 이 값을 `security login duo create` 명령에 입력합니다. 에 대한 자세한 내용은 `security login duo create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-duo-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -247,7 +247,7 @@ Duo 이중 인증을 활성화합니다. 를 로 설정합니다 `true` 기본�
 
 == 사용자 지정 역할을 정의합니다
 
-사용자 지정 역할을 정의할 때 이러한 값에 '보안 로그인 역할 생성' 명령을 제공합니다.
+사용자 지정 역할을 정의할 때 이러한 값을 명령과 함께 `security login role create` 제공합니다. 에 대한 자세한 내용은 `security login role create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -313,7 +313,7 @@ Duo 이중 인증을 활성화합니다. 를 로 설정합니다 `true` 기본�
 
 == 공개 키를 사용자 계정에 연결합니다
 
-SSH 공개 키를 사용자 계정에 연결할 때 이 값을 '보안 로그인 공개 키 생성' 명령과 함께 제공합니다.
+SSH 공개 키를 사용자 계정에 연결할 때 이러한 값을 `security login publickey create` 명령에 제공합니다. 에 대한 자세한 내용은 `security login publickey create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -445,7 +445,7 @@ ONTAP 9.15.1부터 명령에 이러한 값을 `security dynamic-authorization mo
 
 == CA 서명 서버 디지털 인증서를 설치합니다
 
-이러한 값은 에 제공됩니다 `security certificate generate-csr` 스토리지 VM을 SSL 서버로 인증하는 데 사용할 디지털 인증서 서명 요청(CSR)을 생성하는 명령
+저장소 VM을 SSL 서버로 인증하는 데 사용할 CSR(디지털 인증서 서명 요청)을 생성할 때 이러한 값을 명령과 함께 `security certificate generate-csr` 제공합니다. 에 대한 자세한 내용은 `security certificate generate-csr` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -525,7 +525,7 @@ ONTAP 9.15.1부터 명령에 이러한 값을 `security dynamic-authorization mo
  a| 
 
 |===
-이러한 값은 에 제공됩니다 `security certificate install` 클러스터 또는 스토리지 VM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치할 때 사용하는 명령입니다. 다음 표에는 계정 구성과 관련된 옵션만 나와 있습니다.
+클러스터 또는 스토리지 VM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치할 때 이러한 값을 명령과 함께 `security certificate install` 제공합니다. 다음 표에는 계정 구성과 관련된 옵션만 나와 있습니다. 에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -559,7 +559,7 @@ ONTAP 9.15.1부터 명령에 이러한 값을 `security dynamic-authorization mo
 
 == Active Directory 도메인 컨트롤러 액세스를 구성합니다
 
-이러한 값은 에 제공됩니다 `security login domain-tunnel create` 데이터 스토리지 VM에 사용할 SMB 서버를 이미 구성한 상태에서 스토리지 VM을 게이트웨이로 구성하거나 클러스터에 대한 Active Directory 도메인 컨트롤러 액세스를 위해 _tunnel_을 구성하려는 경우에 명령을 실행합니다.
+데이터 스토리지 VM에 대해 SMB 서버를 이미 구성한 경우 스토리지 VM을 게이트웨이로 구성하거나 클러스터에 대한 Active Directory 도메인 컨트롤러 액세스를 위해 _tunnel_로 구성하려는 경우 이 값을 명령과 함께 `security login domain-tunnel create` 제공합니다. 에 대한 자세한 내용은 `security login domain-tunnel create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-domain-tunnel-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -575,7 +575,7 @@ SMB 서버가 구성된 스토리지 VM의 이름입니다.
  a| 
 
 |===
-이러한 값은 에 제공됩니다 `vserver active-directory create` SMB 서버를 구성하지 않은 상태에서 Active Directory 도메인에 스토리지 VM 컴퓨터 계정을 생성하려는 경우 명령
+SMB 서버를 구성하지 않은 상태에서 Active Directory 도메인에 스토리지 VM 컴퓨터 계정을 생성하려는 경우 이 값을 명령과 함께 `vserver active-directory create` 제공합니다. 에 대한 자세한 내용은 `vserver active-directory create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-active-directory-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -619,7 +619,7 @@ FQDN(정규화된 도메인 이름)입니다.
 
 == LDAP 또는 NIS 서버 액세스를 구성합니다
 
-이러한 값은 에 제공됩니다 `vserver services name-service ldap client create` 명령을 사용하여 스토리지 VM에 대한 LDAP 클라이언트 구성을 생성할 수 있습니다.
+스토리지 VM에 대한 LDAP 클라이언트 구성을 생성할 때 이러한 값을 명령과 함께 `vserver services name-service ldap client create` 제공합니다. 에 대한 자세한 내용은 `vserver services name-service ldap client create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-ldap-client-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 다음 표에는 계정 구성과 관련된 옵션만 나와 있습니다.
 
@@ -674,7 +674,7 @@ TLS 시작은 데이터 스토리지 VM에 대한 액세스에만 지원됩니�
 ==== a| 
 
 |===
-이러한 값은 에 제공됩니다 `vserver services name-service ldap create` LDAP 클라이언트 구성을 스토리지 VM에 연결하는 명령입니다.
+LDAP 클라이언트 구성을 스토리지 VM에 연결할 때 이러한 값을 명령과 함께 `vserver services name-service ldap create` 제공합니다. 에 대한 자세한 내용은 `vserver services name-service ldap create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-ldap-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -706,7 +706,7 @@ TLS 시작은 데이터 스토리지 VM에 대한 액세스에만 지원됩니�
  a| 
 
 |===
-이러한 값은 에 제공됩니다 `vserver services name-service nis-domain create` 명령을 사용하여 스토리지 VM에 NIS 도메인 구성을 생성할 수 있습니다.
+스토리지 VM에서 NIS 도메인 구성을 생성할 때 명령과 함께 이러한 값을 `vserver services name-service nis-domain create` 제공합니다. 에 대한 자세한 내용은 `vserver services name-service nis-domain create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-nis-domain-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -738,7 +738,7 @@ TLS 시작은 데이터 스토리지 VM에 대한 액세스에만 지원됩니�
  a| 
 
 |===
-이름 서비스 소스에 대한 조회 순서를 지정할 때 이러한 값을 'vserver services name-service ns-switch create' 명령과 함께 제공합니다.
+이름 서비스 소스의 조회 순서를 지정할 때 이러한 값을 명령과 함께 `vserver services name-service ns-switch create` 제공합니다. 에 대한 자세한 내용은 `vserver services name-service ns-switch create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-ns-switch-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===
@@ -787,7 +787,7 @@ TLS 시작은 데이터 스토리지 VM에 대한 액세스에만 지원됩니�
 
 == SAML 액세스를 구성합니다
 
-ONTAP 9.3부터는 SAML 인증을 구성하기 위해 'Security SAML-SP create' 명령을 사용하여 이러한 값을 제공합니다.
+ONTAP 9.3부터 SAML 인증을 구성하는 명령과 함께 이러한 값을 `security saml-sp create` 제공합니다. 에 대한 자세한 내용은 `security saml-sp create` link:https://docs.netapp.com/us-en/ontap-cli/security-saml-sp-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [cols="3*"]
 |===

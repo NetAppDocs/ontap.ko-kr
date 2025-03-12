@@ -26,6 +26,9 @@ summary: 스캐너 정책은 스캐너 풀이 활성 상태인지 여부를 결�
 'vserver vscan scanner -pool apply -policy -vserver_data_SVM_ -scanner -pool_scanner_pool_ -scanner -policy primary|secondary|idle -cluster_cluster_to_apply_policy_on_'
 
 +
+에 대한 자세한 내용은 `vserver vscan scanner-pool apply-policy` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-apply-policy.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 스캐너 정책은 다음 값 중 하나를 가질 수 있습니다.
 
 +
@@ -63,7 +66,7 @@ cluster1::>vserver vscan scanner-pool apply-policy -vserver cifssvm1
 'vserver vscan scanner -pool show -vserver data_SVM|cluster_admin_SVM-scanner -pool scanner_pool'
 
 +
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+에 대한 자세한 내용은 `vserver vscan scanner-pool show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-scanner-pool-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 스캐너 풀 'pool1'에 대한 세부 정보가 표시됩니다.

@@ -85,12 +85,15 @@ ARP는 활성 상태에서도 감지 매개변수에 대한 기준값을 계속 
 +
 `security anti-ransomware volume workload-behavior clear-surge -vserver <svm_name> -volume <volume_name>`
 
++
+에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior clear-surge` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-clear-surge.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .기준선 서지 수정
 . 보고된 서지가 정상적인 응용 프로그램 동작으로 간주되어야 하는 경우 서지를 보고하여 기준 서지 값을 수정합니다.
 +
-`security anti-ransomware volume workload-behavior update-baseline-from-surge -vserver <svm_name> -volume <volume_name>`
+`security anti-ransomware volume workload-behavior update-baseline-from-surge -vserver <svm_name> -volume <volume_name>` 에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior update-baseline-from-surge` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-update-baseline-from-surge.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -139,6 +142,9 @@ ONTAP 9.14.1부터 ARP를 사용하면 두 ARP 이벤트에 대한 경고를 지
 `security anti-ransomware volume event-log modify -vserver <svm_name> -is-enabled-on-snapshot-copy-creation true`
 
 * 를 사용하여 설정을 확인합니다 `anti-ransomware volume event-log show` 명령.
++
+에 대한 자세한 내용은 `security anti-ransomware volume event-log show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-event-log-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .SVM에 대한 알림 설정
@@ -150,11 +156,18 @@ ONTAP 9.14.1부터 ARP를 사용하면 두 ARP 이벤트에 대한 경고를 지
 +
 `security anti-ransomware vserver event-log modify -vserver <svm_name> -is-enabled-on-snapshot-copy-creation true`
 
++
+에 대한 자세한 내용은 `security anti-ransomware vserver event-log modify` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-vserver-event-log-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * 를 사용하여 설정을 확인합니다 `security anti-ransomware vserver event-log show` 명령.
++
+에 대한 자세한 내용은 `security anti-ransomware vserver event-log show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-vserver-event-log-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
 ====
 .관련 정보
 * link:https://kb.netapp.com/onprem/ontap/da/NAS/Understanding_Autonomous_Ransomware_Protection_attacks_and_the_Autonomous_Ransomware_Protection_snapshot["자율적 랜섬웨어 방어 공격 및 자율적 랜섬웨어 방어 스냅샷을 이해합니다"^]..
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 

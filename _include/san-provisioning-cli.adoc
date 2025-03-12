@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 'system license show' 명령을 사용하여 FC 또는 iSCSI 라이센스가 있는지 확인합니다.
+.  `system license show`명령을 사용하여 FC 또는 iSCSI에 대한 라이센스가 있는지 확인하십시오. 에 대한 자세한 내용은 `system license show` link:https://docs.netapp.com/us-en/ontap-cli/system-license-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 '시스템 사용권 프로그램'
 
@@ -18,7 +18,7 @@ Package           Type    Description           Expiration
  iSCSI             site    iSCSI License         -
  FCP               site    FCP License           -
 ----
-. FC 또는 iSCSI 라이센스가 없는 경우 'license add' 명령을 사용합니다.
+. FC 또는 iSCSI에 대한 라이센스가 없는 경우 `license add` 명령을 사용하십시오. 에 대한 자세한 내용은 `license add` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=license+add["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 'license add-license-code_your_license_code_'
 
@@ -27,25 +27,34 @@ Package           Type    Description           Expiration
 iSCSI의 경우: * 'vserver iSCSI create-vserver_vserver_name_-target-alias_vserver_name_'
 
 +
+에 대한 자세한 내용은 `vserver iscsi create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-iscsi-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 FC: * 의 경우 * 'vserver FCP create-vserver_vserver_name_-status-admin up'
+
++
+에 대한 자세한 내용은 `vserver fcp create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-fcp-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 각 노드에서 SVM에 대해 2개의 LIF를 생성합니다.
 +
 'network interface create-vserver_vserver_name_-lif_lif_name_-role data-protocol iscsi|fc-home-node_node_name_-home-port_port_name_-address_netmask-mask'
 
 +
-NetApp은 각 SVM에서 데이터를 제공할 수 있도록 노드당 최소 하나의 iSCSI 또는 FC LIF를 지원합니다. 그러나 이중화를 위해서는 노드당 두 개의 LIF가 필요합니다.
+NetApp은 각 SVM에서 데이터를 제공할 수 있도록 노드당 최소 하나의 iSCSI 또는 FC LIF를 지원합니다. 그러나 이중화를 위해서는 노드당 두 개의 LIF가 필요합니다. 에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . LIF가 생성되었으며 운영 상태가 '온라인'인지 확인합니다.
 +
 'network interface show -vserver_vserver_name__lif_name_'
+
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . LUN 생성:
 +
 'lun create - vserver vserver_name - volume_volume_name_-lun_lun_name_-size_lun_size_-OSType linux-space-reserve enabled|disabled'
 
 +
-LUN 이름은 255자를 초과할 수 없으며 공백을 포함할 수 없습니다.
+LUN 이름은 255자를 초과할 수 없으며 공백을 포함할 수 없습니다. 에 대한 자세한 내용은 `lun create` link:https://docs.netapp.com/us-en/ontap-cli/lun-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 
@@ -55,13 +64,22 @@ NOTE: NVFAIL 옵션은 볼륨에 LUN이 생성될 때 자동으로 활성화됩�
 +
 'igroup create-vserver_vserver_name_-igroup_name_-protocol fcp|iscsi|mixed-OSType linux-initiator_initiator_name_'
 
++
+에 대한 자세한 내용은 `igroup create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=igroup+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LUN을 igroup에 매핑:
 +
 'LUN 매핑 create-vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
 
++
+에 대한 자세한 내용은 `lun mapping create` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LUN이 올바르게 구성되었는지 확인합니다.
 +
 'lun show -vserver_vserver_name _'
+
++
+에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . link:san-admin/create-port-sets-binding-igroups-task.html["포트 세트를 생성하고 igroup에 바인딩합니다"] (선택 사항).
 . 호스트 설명서의 단계를 따라 특정 호스트에서 블록 액세스를 설정합니다.

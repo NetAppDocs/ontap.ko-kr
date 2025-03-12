@@ -98,4 +98,7 @@ Vserver: vs1
 
 
 .관련 정보
-xref:enable-disable-gpo-support-task.adoc[CIFS 서버에서 GPO 지원을 설정하거나 해제합니다]
+* xref:enable-disable-gpo-support-task.adoc[CIFS 서버에서 GPO 지원을 설정하거나 해제합니다]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-group-policy-show-defined.html["SVM CIFS 그룹 - policy show-defined"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-group-policy-show-applied.html["SVM CIFS 그룹 - policy show-applied"^]
+

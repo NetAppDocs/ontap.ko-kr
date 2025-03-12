@@ -31,7 +31,11 @@ cluster1::> vserver vscan on-demand-task schedule -vserver vs2 -task-name Task2 
 [Job 142]: Vscan On-Demand job is queued. Use the "job show -id 142" command to view the status.
 ----
 +
-작업의 상태를 보려면 를 사용하십시오 `job show` 명령. 를 클릭합니다 `job pause` 및 `job resume` 명령을 사용하여 각각 작업을 일시 중지하고 다시 시작합니다 `job stop` 명령이 작업을 종료합니다.
+에 대한 자세한 내용은 `vserver vscan on-demand-task schedule` link:https://docs.netapp.com/us-en/ontap-cli/vserver-vscan-on-demand-task-schedule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
+
+NOTE: 작업 상태를 보려면 `job show` 명령을 사용하십시오.  `job pause`및 `job resume` 명령은 각각 작업을 일시 중지하고 다시 시작합니다. 명령은 작업을 종료합니다. `job stop` 에 대한 자세한 내용은 `job` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=job["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 필요 시 작업이 예약되었는지 확인합니다.
 +
