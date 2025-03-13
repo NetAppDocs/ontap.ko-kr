@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consider, create, snapmirror, cascade, fanout, relationship, flexgroup 
 summary: FlexGroup 볼륨에 대한 계단식 배열 및 팬아웃 관계를 만들 때 유의해야 할 지원 고려 사항 및 제한 사항이 있습니다. 
 ---
-= FlexGroups에 대한 계단식 SnapMirror 및 팬아웃 관계를 생성할 때의 고려 사항
+= FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계를 생성할 때의 고려 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -45,8 +45,8 @@ FlexGroup 볼륨에 대한 계단식 배열 및 팬아웃 관계를 만들 때 �
 * 동시 업데이트는 두 관계에 대해 지원됩니다.
 * 모든 확장 및 자동 확장 기능이 지원됩니다.
 * 관계의 팬아웃 레그의 구성 요소 SnapMirror 관계 수가 서로 다른 경우 소스에서 B 및 A와 C 사이의 관계에 대해 중단 작업이 지원되지 않습니다.
-* 소스 및 대상 FlexGroups가 상주하는 클러스터의 모든 노드에서 ONTAP 9.9.1 이상을 실행해야 합니다.
+* 소스 및 대상 FlexGroup 볼륨이 상주하는 클러스터의 모든 노드에서 ONTAP 9.9.1 이상을 실행해야 합니다.
 * 현재 FlexGroup SnapMirror에 대해 지원되는 모든 비동기식 정책 유형은 팬아웃 관계에서 지원됩니다.
-* B에서 C FlexGroups로 복구 작업을 수행할 수 있습니다.
+* B에서 C FlexGroup 볼륨으로 복원 작업을 수행할 수 있습니다.
 * REST에서 지원하는 정책 유형의 모든 팬아웃 구성은 FlexGroup 팬아웃 구성의 REST API에도 지원됩니다.
 

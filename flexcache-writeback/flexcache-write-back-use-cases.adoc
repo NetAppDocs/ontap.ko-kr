@@ -54,7 +54,7 @@ FlexCache가 Write-back 모드로 작동하는 경우 지연 시간이 증가함
 
 다음 그래프는 NetApp 랩 테스트에서 Write-back에 대한 반환 지점을 보여 줍니다.  `x`축은 파일 크기이고 `y` 축은 경과 시간입니다. 이 테스트에서는 NFSv3, 256KB 및 64ms의 WAN 지연 시간으로 마운트했습니다. `rsize` `wsize` 이 테스트는 캐시와 오리진에 대해 작은 ONTAP Select 인스턴스와 단일 스레드 쓰기 작업을 사용하여 수행되었습니다. 결과는 다를 수 있습니다.
 
-image::flexcache-write-back-point-of-return-nfs3.png[반품 시점]
+image:flexcache-write-back-point-of-return-nfs3.png["반품 시점"]
 
 
 IMPORTANT: 클러스터 내 캐싱에는 Write-back을 사용해서는 안 됩니다. 클러스터 내 캐싱은 오리진과 캐시가 같은 클러스터에 있을 때 발생합니다.

@@ -1,0 +1,38 @@
+---
+permalink: flexcache-hot-spot/flexcache-hotspot-remediation-hdfa-examples.html 
+sidebar: sidebar 
+keywords: tr, hotspot, hot-spot, flexcache, hdfa, compare, examples 
+summary: FlexCache 스토리지 집적도를 결정하고 핫 스팟을 개선하는 데 어떤 도움이 되는지 알아보십시오. 
+---
+= ONTAP FlexCache 밀도 결정
+:allow-uri-read: 
+
+
+[role="lead"]
+첫 번째 핫스팟 개선 설계 결정은 FlexCache 밀도를 파악하는 것입니다. 다음 예는 4노드 클러스터입니다. 파일 수가 각 HDF의 모든 구성 요소에 균등하게 분포되어 있다고 가정합니다. 또한 모든 노드에 걸쳐 프런트엔드 NAS 연결이 고르게 분포되어 있다고 가정합니다.
+
+이러한 예만 사용할 수 있는 구성은 아니지만 공간 요구 사항과 사용 가능한 리소스가 허용하는 한 많은 HDFS를 만드는 기본 설계 원칙을 이해해야 합니다.
+
+
+NOTE: HDFA는 다음 구문을 사용하여 표현됩니다. `HDFs per HDFA x nodes per HDF x constituents per node per HDF`
+
+
+
+== 2x2x2 HDFA 구성
+
+<<Figure-1,그림 1>> 은 2x2x2x2 HDFA 구성의 예입니다. 두 개의 HDFS, 각각 두 개의 노드를 스패닝하고 각 노드는 두 개의 구성 볼륨을 포함합니다. 이 예에서 각 클라이언트는 핫 파일에 직접 액세스할 확률이 50%입니다. 네 고객 중 두 명은 동서 트래픽을 가지고 있습니다. 중요한 것은 이제 두 개의 HDFS가 존재한다는 것입니다. 즉, 핫 파일의 두 가지 캐시를 의미합니다. 현재 핫 파일에 대한 액세스를 처리하는 CPU/볼륨 선호도가 2개 있습니다.
+
+.그림 1: 2x2x2 HDFA 구성
+image:flexcache-hotspot-hdfa-2x2x2.png["그림 1: 2x2x2 HDFA 구성"]
+
+
+
+== 4x1x4 HDFA 구성
+
+<<Figure-2,그림 2>> 최적의 구성을 나타냅니다. 4x1x4 HDFA 구성의 한 예로 4개의 HDFS가 단일 노드에 포함되고 각 노드는 4개의 구성 요소를 포함합니다. 이 예에서는 각 클라이언트가 핫 파일의 캐시에 직접 액세스할 수 있도록 보장합니다. 4개의 다른 노드에 4개의 캐시된 파일이 있으므로 4개의 서로 다른 CPU/볼륨 선호도가 핫 파일에 대한 서비스 액세스를 지원합니다. 또한 동서 트래픽이 생성되지 않습니다.
+
+.그림 2: 4x1x4 HDFA 구성
+image:flexcache-hotspot-hdfa-4x1x4.png["그림 2: 4x1x4 HDFA"]
+
+.다음 단계
+HDFS의 집적도를 결정한 후 NFS를 사용하여 HDFS에 액세스할 경우 다른 설계 결정을 내려야 link:flexcache-hotspot-remediation-intra-inter-svm-hdfa.html["SVM 간 HDFA 및 SVM 내 HDFA"]합니다.

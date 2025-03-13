@@ -197,9 +197,9 @@ ONTAP 9.2부터 SnapLock는 규정 준수 및 엔터프라이즈 모드 모두�
 
 
  a| 
-FlexGroups를 선택합니다
+FlexGroup 볼륨
  a| 
-ONTAP 9.2부터는 FlexGroups가 지원됩니다. 대상 애그리게이트는 소스 애그리게이트와 볼륨 레벨 또는 애그리게이트 레벨에서 동일한 유형이어야 합니다. ONTAP 9.5부터 FlexGroup 볼륨을 제자리에서 다시 입력하다
+ONTAP 9.2부터 FlexGroup 볼륨이 지원됩니다. 대상 애그리게이트는 소스 애그리게이트와 볼륨 레벨 또는 애그리게이트 레벨에서 동일한 유형이어야 합니다. ONTAP 9.5부터 FlexGroup 볼륨을 제자리에서 다시 입력하다
 
 
 

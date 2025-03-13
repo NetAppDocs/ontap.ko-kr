@@ -59,6 +59,10 @@ ONTAP S3 서버에서 기존 버킷을 보호하거나 데이터 보호를 즉�
 +
 소스 및 대상 클러스터에서 ONTAP 9.10.1 이상이 실행되고 있어야 합니다.
 
++
+
+NOTE: SnapMirror S3는 MetroCluster 구성에서 지원되지 않습니다.
+
 * 라이센싱
 +
 에서 사용할 수 있는 라이센스는 다음과 같습니다 link:../system-admin/manage-licenses-concept.html["ONTAP 1 을 참조하십시오"] ONTAP 소스 및 대상 시스템에서 다음 항목에 대한 액세스를 제공하려면 소프트웨어 제품군이 필요합니다.

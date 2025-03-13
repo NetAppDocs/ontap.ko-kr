@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: flexcache-hot-spot/flexcache-hotspot-remediation-overview.html 
+keywords: hotspot, FlexCache, HDFA, problem, solution, ONTAP 
+summary: 애니메이션 렌더링 또는 EDA와 같은 다수의 고성능 컴퓨팅 워크로드에서 흔히 발생하는 문제인 핫스팟을 FlexCache로 해결하는 방법에 대해 알아보십시오. 
+---
+= ONTAP로 고성능 컴퓨팅 워크로드의 핫 스팟 해결
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+애니메이션 렌더링 또는 EDA와 같은 여러 고성능 컴퓨팅 워크로드에서 흔히 발생하는 문제는 주목을 받고 있습니다. 핫스팟팅은 클러스터 또는 네트워크의 특정 부분이 다른 영역에 비해 상당한 부하를 경험하여 해당 위치에 집중된 과도한 데이터 트래픽으로 인해 성능 병목 현상이 발생하고 전반적인 효율성이 감소되는 상황을 말합니다. 예를 들어, 파일 또는 여러 파일이 실행 중인 작업에 대한 수요가 많아 해당 파일에 대한 요청을 처리하는 데 사용되는 CPU에 병목 현상이 발생합니다(볼륨 선호도를 통해). FlexCache는 이 병목 현상을 완화할 수 있지만 올바르게 설정해야 합니다.
+
+이 문서에서는 핫 스팟팅을 개선하기 위해 FlexCache를 설정하는 방법에 대해 설명합니다.
+
+
+NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐츠가 ONTAP 제품 문서와 통합되었습니다. 이 ONTAP 핫스팟 개선 기술 보고서 내용은 발행일 현재 완전히 새로 작성되었으며 이전 형식은 아직 작성되지 않았습니다.
+
+
+
+== 주요 개념
+
+핫스팟 개선 계획을 세울 때는 이러한 필수 개념을 이해하는 것이 중요합니다.
+
+* * 고밀도 FlexCache(HDF) *: 캐시 용량 요구 사항이 허용하는 한 몇 개의 노드로 확장되도록 압축된 FlexCache
+* * HDF Array(HDFA) *: 클러스터 전체에 분산된 동일한 오리진의 캐시인 HDFS 그룹입니다
+* * SVM 간 HDFA *: 서버 가상 머신(SVM)당 HDFA의 HDF 1개
+* * 내부 SVM HDFA *: HDFA의 모든 HDFS가 하나의 SVM에 있음
+* * 동서 트래픽 *: 클러스터 백엔드 트래픽은 간접 데이터 액세스로부터 생성됩니다
+
+
+.다음 단계
+* link:flexcache-hotspot-remediation-architecture.html["고밀도 FlexCache를 사용하여 핫 스팟을 개선하는 방법을 이해합니다"]
+* link:flexcache-hotspot-remediation-hdfa-examples.html["FlexCache 어레이 밀도를 결정합니다"]
+* link:flexcache-hotspot-remediation-intra-inter-svm-hdfa.html["HDFS의 밀도를 결정하고 SVM 간 HDFA 및 SVM 내 HDFA와 함께 NFS를 사용하여 HDFS에 액세스할지 여부를 결정합니다"]
+* link:flexcache-hotspot-remediation-ontap-config.html["HDFA 및 데이터 LIF를 구성하여 ONTAP 구성에서 클러스터 내 캐싱을 사용할 경우의 이점을 실현하십시오"]
+* link:flexcache-hotspot-remediation-client-config.html["클라이언트 구성을 사용하여 ONTAP NAS 연결을 분산하도록 클라이언트를 구성하는 방법에 대해 알아봅니다"]
+

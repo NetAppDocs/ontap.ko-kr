@@ -64,7 +64,7 @@ entries:
     url: "/flexgroup/transition-snapmirror-relationship-svm-dr-task.html"
   - title: SVM-DR 관계 내에서 FlexVol 볼륨을 FlexGroup 볼륨으로 변환합니다
     url: "/flexgroup/convert-flexvol-svm-dr-relationship-task.html"
-  - title: FlexGroups에 대한 계단식 SnapMirror 및 팬아웃 관계를 생성할 때의 고려 사항
+  - title: FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계를 생성할 때의 고려 사항
     url: "/flexgroup/create-snapmirror-cascade-fanout-reference.html"
   - title: SnapVault 백업 관계를 생성할 때의 고려 사항 및 FlexGroup 볼륨에 대한 통합 데이터 보호 관계
     url: "/flexgroup/snapvault-backup-concept.html"

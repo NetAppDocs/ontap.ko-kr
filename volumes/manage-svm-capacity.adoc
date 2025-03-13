@@ -42,7 +42,7 @@ SVM의 용량은 FlexVol, FlexGroup 볼륨, FlexClone, FlexCache 볼륨의 합�
 +
 ** SnapMirror 볼트 관계
 ** SnapMirror 활성 동기화
-** FlexGroups를 선택합니다
+** FlexGroup 볼륨
 ** 정합성 보장 그룹
 ** SVM DR
 ** 계단식 배열

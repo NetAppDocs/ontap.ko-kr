@@ -98,11 +98,11 @@ SVM DR 관계에 있는 FlexGroup 볼륨의 클론 복제는 지원되지 않습
 
 * 최대 8개의 팬아웃 다리로 구성된 2개 이상의 SnapMirror 팬아웃 관계(A에서 B, A에서 C까지)입니다.
 +
-xref:create-snapmirror-cascade-fanout-reference.adoc[FlexGroups에 대한 계단식 SnapMirror 및 팬아웃 관계를 생성할 때의 고려 사항]
+xref:create-snapmirror-cascade-fanout-reference.adoc[FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계를 생성할 때의 고려 사항]
 
 * 최대 2개 수준(A~B~C)의 SnapMirror 계단식 관계
 +
-xref:create-snapmirror-cascade-fanout-reference.adoc[FlexGroups에 대한 계단식 SnapMirror 및 팬아웃 관계를 생성할 때의 고려 사항]
+xref:create-snapmirror-cascade-fanout-reference.adoc[FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계를 생성할 때의 고려 사항]
 
 
 

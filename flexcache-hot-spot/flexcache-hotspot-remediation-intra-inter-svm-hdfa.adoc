@@ -1,0 +1,40 @@
+---
+permalink: flexcache-hot-spot/flexcache-hotspot-remediation-intra-inter-svm-hdfa.html 
+sidebar: sidebar 
+keywords: tr, hotspot, flexcache, hdfa, configuration, inter-svm, intra-svm, architecture 
+summary: HDFS의 밀도를 확인한 후 NFS를 사용하여 HDFS에 액세스할지 여부를 결정합니다. 
+---
+= ONTAP SVM 간 또는 SVM 내 HDFA 옵션을 결정합니다
+:allow-uri-read: 
+
+
+[role="lead"]
+HDFS의 밀도를 확인한 후 NFS를 사용하여 HDFS에 액세스할지 여부를 결정하고 SVM 간 HDFA 및 SVM 내 HDFA 옵션에 대해 알아봅니다.
+
+
+TIP: SMB 클라이언트만 HDFS에 액세스하는 경우 모든 HDFS를 단일 SVM에 생성해야 합니다. DFS 대상을 로드 밸런싱에 사용하는 방법은 Windows 클라이언트 구성을 참조하십시오.
+
+
+
+== SVM 간 HDFA 구축
+
+SVM 간 HDFA는 HDFA의 각 HDF에 대해 SVM을 생성해야 합니다. 따라서 HDFA 내의 모든 HDFS가 동일한 접합 경로를 갖게 되므로 클라이언트 측에서 보다 쉽게 구성할 수 있습니다.
+
+이 <<Figure-1,그림 1>> 예에서 각 HDF는 자체 SVM에 있습니다. 이는 SVM 간 HDFA 구축입니다. 각 HDF에는 /핫스팟의 접합 경로가 있습니다. 또한 모든 IP에는 호스트 이름 캐시의 DNS A 레코드가 있습니다. 이 구성은 DNS 라운드 로빈을 활용하여 다양한 HDFS에 대한 로드 밸런싱 마운트를 수행합니다.
+
+.그림 1: 4x1x4 SVM 간 HDFA 구성
+image:flexcache-hotspot-hdfa-one-hdf-per-svm.png["그림 1: 4x1x4 SVM 간 HDFA 구성"]
+
+
+
+== SVM HDFA 내부 구축
+
+SVM 내부의 경우 각 HDF에 고유한 접합 경로가 필요하지만 모든 HDFS는 하나의 SVM에 있습니다. ONTAP에서는 하나의 SVM만 필요하기 때문에 이 설정은 더 쉬울 수 있지만 Linux 측면에서는 고급 구성이 필요하며 ONTAP에 데이터 LIF가 배치되어야 `autofs` 합니다.
+
+이 <<Figure-2,그림 2>> 예에서 모든 HDF는 동일한 SVM에 있습니다. 이는 SVM 내 HDFA 구축이며 접합 경로가 고유해야 합니다. 로드 밸런싱이 제대로 작동하려면 각 IP에 대해 고유한 DNS 이름을 생성하고 호스트 이름이 확인되는 데이터 LIF를 HDF가 상주하는 노드에만 배치해야 합니다. 또한 에서 설명한 대로 여러 항목으로 를 구성해야 `autofs`link:flexcache-hotspot-remediation-client-config.html["Linux 클라이언트 구성"] 합니다.
+
+.그림 2: 4x1x4 내부 SVM HDFA 구성
+image:flexcache-hotspot-hdfa-4x1x4-intra-svm-hdfa.png["그림 2: 4x1x4 내부 SVM HDFA"]
+
+.다음 단계
+이제 HDFA를 구축하는 방법에 대해 알아보았습니다.link:flexcache-hotspot-remediation-ontap-config.html["HDFA를 배포하고 클라이언트가 분산 방식으로 액세스할 수 있도록 구성합니다"]

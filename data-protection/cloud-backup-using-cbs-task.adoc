@@ -203,7 +203,7 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 * 클러스터가 MetroCluster 환경에 있을 수 없습니다.
 * SVM-DR은 지원되지 않습니다.
-* BlueXP  백업 및 복구를 사용하여 FlexGroups를 백업할 수 없습니다.
+* BlueXP  백업 및 복구를 사용하여 FlexGroup 볼륨을 백업할 수 없습니다.
 
 
 .단계

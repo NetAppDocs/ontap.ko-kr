@@ -1,0 +1,16 @@
+---
+section: flexcache-hot-spot
+title: 핫스팟 교정을 위한 FlexCache
+entries:
+- title: 개요
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-overview.html"
+- title: 있습니다
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-architecture.html"
+- title: FlexCache 어레이 밀도를 확인합니다
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-hdfa-examples.html"
+- title: SVM 간 또는 SVM 내 HDFA 결정
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-intra-inter-svm-hdfa.html"
+- title: HDFA 및 데이터 LIF를 구성합니다
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-ontap-config.html"
+- title: 클라이언트 구성
+  url: "/flexcache-hot-spot/flexcache-hotspot-remediation-client-config.html"

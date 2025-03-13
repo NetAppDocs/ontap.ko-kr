@@ -1,0 +1,108 @@
+---
+permalink: flexcache-hot-spot/flexcache-hotspot-remediation-ontap-config.html 
+sidebar: sidebar 
+keywords: tr, hotspot, FlexCache, HDFA, configuration, ONTAP 
+summary: HDFA 및 데이터 LIF를 구성하여 클러스터 내 캐싱 사용의 이점을 실현하십시오 
+---
+= ONTAP에서 HDFA 및 데이터 LIF를 구성합니다
+:allow-uri-read: 
+
+
+[role="lead"]
+이 핫스팟 교정 솔루션의 이점을 실현하려면 HDFA 및 데이터 LIF를 적절히 구성해야 합니다. 이 솔루션은 동일한 클러스터에서 오리진 및 HDFA와 함께 클러스터 내 캐싱을 사용합니다.
+
+다음은 두 가지 HDFA 샘플 구성입니다.
+
+* 2x2x2 SVM 간 HDFA
+* 4x1x4 내부 SVM HDFA
+
+
+.이 작업에 대해
+ONTAP CLI를 사용하여 이 고급 구성을 수행합니다. 명령에서 두 가지 구성을 사용해야 `flexcache create` 하며 한 가지 구성을 구성하지 않도록 해야 합니다.
+
+* `-aggr-list`: HDF를 제한하려는 노드의 노드 또는 하위 집합에 상주하는 애그리게이트 또는 애그리게이트 목록을 제공합니다.
+* `-aggr-list-multiplier`: 옵션에 나열된 애그리게이트당 생성할 구성 요소의 수를 `aggr-list` 결정합니다. 두 개의 애그리게이트가 나열되고 이 값을 로 설정하면 `2` 4개의 구성요소가 됩니다. NetApp에서는 애그리게이트당 최대 8개의 구성요소를 사용할 것을 권장하지만 16개로도 충분합니다.
+* `-auto-provision-as`: 탭 아웃 경우, CLI는 자동 채우기를 시도하고 값을 로 `flexgroup`설정합니다. 이 설정이 구성되어 있지 않은지 확인합니다. 이 메시지가 나타나면 삭제합니다.
+
+
+
+
+== 2x2x2 Inter-SVM HDFA 구성을 생성합니다
+
+. 그림 1과 같이 2x2x2x2 SVM 간 HDFA 구성을 지원하려면 준비 시트를 작성합니다.
++
+.그림 1: 2x2x2 Inter-SVM HDFA 레이아웃
+image:flexcache-hotspot-hdfa-2x2x2-inter-svm-hdfa.png["그림 1: 2x2x2 Inter-SVM HDFA 레이아웃"]
+
++
+[cols="1,1,1,1,1,1"]
+|===
+| SVM | HDF당 노드 수 | 애그리게이트 | 노드당 구성 요소 | 접합 경로 | 데이터 LIF IP 
+
+
+| svm1를 참조하십시오 | node1, node2 | aggr1, aggr2 | 2 | /핫스팟 | 192.168.0.11,192.168.0.12 
+
+
+| svm2를 참조하십시오 | node3, node4 | aggr3, aggr4 | 2 | /핫스팟 | 192.168.0.13,192.168.0.14 
+|===
+. HDFS를 생성합니다. 준비 시트의 각 행에 대해 다음 명령을 두 번 실행합니다. 두 번째 반복의 및 `aggr-list` 값을 조정해야 `vserver` 합니다.
++
+[listing]
+----
+cache::> flexcache create -vserver svm1 -volume hotspot -aggr-list aggr1,aggr2 -aggr-list-multiplier 2 -origin-volume <origin_vol> -origin-vserver <origin_svm> -size <size> -junction-path /hotspot
+----
+. 데이터 LIF를 생성합니다. 명령을 4회 실행하여 준비 시트에 나열된 노드에서 SVM당 데이터 LIF 두 개를 생성합니다. 각 반복에 맞게 값을 적절히 조정해야 합니다.
++
+[listing]
+----
+cache::> net int create -vserver svm1 -home-port e0a -home-node node1 -address 192.168.0.11 -netmask-length 24
+----
++
+.다음 단계
+이제 HDFA를 적절히 활용할 수 있도록 클라이언트를 구성해야 합니다. 을 link:flexcache-hotspot-remediation-client-config.html["클라이언트 구성"]참조하십시오.
+
+
+
+
+
+== 4x1x4 내부 SVM HDFA를 생성합니다
+
+. 그림 2와 같이 4x1x4 SVM 간 HDFA 구성을 지원하려면 준비 시트를 작성합니다.
++
+.그림 2: 4x1x4 내부 SVM HDFA 레이아웃
+image:flexcache-hotspot-hdfa-4x1x4-intra-svm-hdfa.png["그림 2: 4x1x4 내부 SVM HDFA 레이아웃"]
+
++
+[cols="1,1,1,1,1,1"]
+|===
+| SVM | HDF당 노드 수 | 애그리게이트 | 노드당 구성 요소 | 접합 경로 | 데이터 LIF IP 
+
+
+| svm1를 참조하십시오 | 노드1 | aggr1를 참조하십시오 | 4 | /hotspot1 을 참조하십시오 | 192.168.0.11 
+
+
+| svm1를 참조하십시오 | 노드2 | aggr2를 참조하십시오 | 4 | /hotspot2 를 참조하십시오 | 192.168.0.12 
+
+
+| svm1를 참조하십시오 | node3를 참조하십시오 | aggr3를 참조하십시오 | 4 | /hotspot3 을 참조하십시오 | 192.168.0.13 
+
+
+| svm1를 참조하십시오 | node4를 참조하십시오 | aggr4를 참조하십시오 | 4 | /hotspot4 를 참조하십시오 | 192.168.0.14 
+|===
+. HDFS를 생성합니다. 준비 시트의 각 행에 대해 다음 명령을 네 번 실행합니다. 각 반복에 대한 및 `junction-path` 값을 조정해야 `aggr-list` 합니다.
++
+[listing]
+----
+cache::> flexcache create -vserver svm1 -volume hotspot1 -aggr-list aggr1 -aggr-list-multiplier 4 -origin-volume <origin_vol> -origin-vserver <origin_svm> -size <size> -junction-path /hotspot1
+----
+. 데이터 LIF를 생성합니다. 명령을 4회 실행하여 SVM에 총 4개의 데이터 LIF를 생성합니다. 노드당 데이터 LIF는 하나만 있어야 합니다. 각 반복에 맞게 값을 적절히 조정해야 합니다.
++
+[listing]
+----
+cache::> net int create -vserver svm1 -home-port e0a -home-node node1 -address 192.168.0.11 -netmask-length 24
+----
++
+.다음 단계
+이제 HDFA를 적절히 활용할 수 있도록 클라이언트를 구성해야 합니다. 을 link:flexcache-hotspot-remediation-client-config.html["클라이언트 구성"]참조하십시오.
+
+

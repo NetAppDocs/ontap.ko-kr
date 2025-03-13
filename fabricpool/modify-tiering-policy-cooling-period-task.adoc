@@ -23,6 +23,9 @@ summary: '볼륨의 계층화 정책을 변경하여 데이터가 비활성(콜�
 
 link:tiering-policies-concept.html#what-happens-when-you-modify-the-tiering-policy-of-a-volume-in-fabricpool["FabricPool에서 볼륨의 계층화 정책을 수정하면 어떻게 됩니까"]
 
+
+NOTE: SVM DR 관계인 경우 소스 및 타겟 볼륨에서 FabricPool 애그리게이트를 사용할 필요가 없지만 동일한 계층화 정책을 사용해야 합니다.
+
 .단계
 . '-Tiering-policy' 매개 변수와 함께 'volume modify' 명령을 사용하여 기존 볼륨의 계층화 정책을 수정합니다.
 +

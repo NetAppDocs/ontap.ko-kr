@@ -376,7 +376,7 @@ SMB 공유에서는 공간 사용량을 계산할 때 다음 사항을 고려해
 
 
 
-== FlexGroups 볼륨에 규칙 및 제한을 적용합니다
+== FlexGroup 볼륨에 규칙 및 제한을 적용합니다
 
 .단계
 . 대상에 대한 할당량 규칙 생성: ' 볼륨 할당량 정책 규칙 create -vserver vs0 -policy -name quota_policy_of_the_rule -volume flexgroup_vol -type {tree | user | group} -target target_for_rule -qtree_name [-disk -limit hard_disk_limit_number] 소프트 제한값 [-file_limit_soft_file
@@ -462,7 +462,7 @@ fg1              tree      *           0B      -       0       -   *
 
 
 .결과
-할당량 규칙 및 제한은 FlexGroups 볼륨에 적용됩니다.
+할당량 규칙 및 제한은 FlexGroup 볼륨에 적용됩니다.
 
 ONTAP에서 추가 트래픽을 거부하여 할당량을 적용하기 전에 사용량이 구성된 하드 제한보다 최대 5% 높을 수 있습니다.
 

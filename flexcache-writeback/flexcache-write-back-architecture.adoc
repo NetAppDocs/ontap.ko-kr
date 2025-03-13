@@ -112,10 +112,10 @@ ONTAP에는 타이머 만료 또는 공간 임계값이 위반되는 것과 같�
 
 === 쓰기
 
-image::flexcache-write-around-sequence-diagram.png[FlexCache write-around 시퀀스 다이어그램]
+image:flexcache-write-around-sequence-diagram.png["FlexCache write-around 시퀀스 다이어그램"]
 
 
 
 === 다시 쓰기
 
-image::flexcache-write-back-sequence-diagram.png[FlexCache-write-back 시퀀스 다이어그램]
+image:flexcache-write-back-sequence-diagram.png["FlexCache-write-back 시퀀스 다이어그램"]

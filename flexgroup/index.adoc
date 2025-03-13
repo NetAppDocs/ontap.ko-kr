@@ -20,7 +20,7 @@ summary: 확장성과 성능을 위해 FlexGroup 볼륨을 설정, 관리, 보�
 
 
 
-NOTE: ONTAP 9.5부터 FlexGroups는 ONTAP 9.5 이상 릴리즈에서 지원되지 않는 무한 확장 볼륨을 대체합니다.
+NOTE: ONTAP 9.5부터 FlexGroup 볼륨은 ONTAP 9.5 이상 릴리즈에서 지원되지 않는 무한 확장 볼륨을 대체합니다.
 
 를 참조하십시오 link:supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원되고 지원되지 않는 구성입니다"] 를 참조하십시오.
 

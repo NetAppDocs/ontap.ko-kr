@@ -185,7 +185,9 @@ ONTAP 9.14.1부터 일관성 그룹이 있을 경우 최대 32개의 SVM 재해 
  a| 
 FabricPool
  a| 
-ONTAP 9.6부터 SnapMirror SVM 복제는 FabricPools에서 지원됩니다.
+ONTAP 9.6부터 FabricPool에서 SnapMirror SVM 복제가 지원됩니다. SVM DR 관계인 경우 소스 및 타겟 볼륨에서 FabricPool 애그리게이트를 사용할 필요가 없지만 동일한 계층화 정책을 사용해야 합니다.
+
+ONTAP 9.12.1부터 SnapMirror SVM 복제는 FabricPool 및 FlexGroup 볼륨이 함께 작동하는 경우에 지원됩니다. 9.12.1 이전에는 이러한 기능 중 두 가지가 함께 작동했지만 세 가지 기능이 모두 함께 작동되지는 않았습니다.
 
 
 
