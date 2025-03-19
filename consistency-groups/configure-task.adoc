@@ -78,10 +78,16 @@ ONTAP 9.14.1부터 ONTAP CLI를 사용하여 새 볼륨으로 새로운 일관�
 +
 `consistency-group create -vserver <SVM_name> -consistency-group <consistency_group_name> -namespace <namespace_name> -volume-count <number> -namespace-count <number> -size <size> -subsystem <subsystem_name>`
 
++
+에 대한 자세한 내용은 `consistency-group create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .모두 끝냈군요
 . 를 사용하여 일관성 그룹이 생성되었는지 확인합니다 `consistency-group show` 명령.
++
+에 대한 자세한 내용은 `consistency-group show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -132,7 +138,13 @@ ONTAP 9.14.1부터 ONTAP CLI를 사용하여 기존 볼륨과 함께 일관성 �
 +
 `consistency-group create -vserver <SVM_name> -consistency-group <consistency-group-name> -volume <volumes>`
 
++
+에 대한 자세한 내용은 `consistency-group create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 를 사용하여 일관성 그룹을 확인합니다 `consistency-group show` 명령.
++
+에 대한 자세한 내용은 `consistency-group show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

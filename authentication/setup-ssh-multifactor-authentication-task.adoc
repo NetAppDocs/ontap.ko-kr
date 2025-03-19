@@ -15,7 +15,7 @@ summary: '다단계 인증(MFA)을 사용하면 사용자가 admin 또는 data S
 
 .이 작업에 대해
 * 이 작업을 수행하려면 클러스터 관리자여야 합니다.
-* 로그인 계정에 할당할 액세스 제어 역할을 잘 모르는 경우 '보안 로그인 수정' 명령을 사용하여 나중에 역할을 추가할 수 있습니다.
+* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 link:modify-role-assigned-administrator-task.html["관리자에게 할당된 역할 수정"]
 
@@ -53,6 +53,9 @@ Please enter a password for user 'admin2':
 Please enter it again:
 Warning: To use public-key authentication, you must create a public key for user "admin2".
 ----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 
@@ -127,6 +130,8 @@ security login show
 
 
 --
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
 ====
 .작업을 마친 후
 * 공개 키를 관리자 계정에 연결하지 않은 경우, 계정이 SVM에 액세스하려면 먼저 연결해야 합니다.
@@ -140,4 +145,6 @@ link:configure-local-account-mfa-totp-task.html["TOTP로 MFA에 대한 로컬 �
 
 
 .관련 정보
-에 대해 자세히 알아보십시오 link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647pdf.pdf["ONTAP 9의 다단계 인증(TR-4647)"^].
+* link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647pdf.pdf["ONTAP 9의 다단계 인증(TR-4647)"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

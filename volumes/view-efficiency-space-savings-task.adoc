@@ -39,3 +39,4 @@ cluster1::> volume show -vserver vs1 -volume VolA
         Percentage Space Saved by Compression: 97%
 																											...
 ----
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

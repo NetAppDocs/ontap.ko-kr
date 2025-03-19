@@ -72,6 +72,9 @@ CLI에서 새 볼륨으로 계층적 정합성 보장 그룹을 생성할 때는
 
 . CLI에서 메시지가 표시되면 새 부모 일관성 그룹을 생성할지 확인합니다. 를 `y`입력합니다.
 . 필요한 경우 1단계를 반복하여 하위 정합성 보장 그룹을 추가로 생성합니다.
++
+에 대한 자세한 내용은 `consistency-group create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -119,6 +122,9 @@ ONTAP 9.14.1부터 CLI를 사용하여 계층적 일관성 그룹을 생성할 �
 `consistency-group create -vserver <svm_name> -consistency-group <child_consistency_group_name> -parent-consistency-group <parent_consistency_group_name> -volumes <volume_names>`
 
 . 를 입력합니다 `y` 새 부모 및 자식 일관성 그룹을 생성하려면 다음을 수행합니다.
++
+에 대한 자세한 내용은 `consistency-group create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=consistency-group+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

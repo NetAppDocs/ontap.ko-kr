@@ -1,17 +1,20 @@
 ---
 permalink: fabricpool/create-volume-task.html 
 sidebar: sidebar 
-keywords: creating, volume, fabricpool, tiering, policy, policies, create, snap shot, snapshot, aggregate, flexgroup, cloud retrieval 
+keywords: aggreate, local tier, creating, volume, fabricpool, tiering, policy, policies, create, snap shot, snapshot, aggregate, flexgroup, cloud retrieval 
 summary: FabricPool용 볼륨을 생성할 때 계층화 정책을 지정할 수 있습니다. 계층화 정책을 지정하지 않으면 생성된 볼륨은 기본 스냅샷 전용 계층화 정책을 사용합니다. 스냅샷 전용 또는 자동 계층화 정책이 있는 볼륨의 경우 계층화 최소 냉각 기간을 지정할 수도 있습니다. 
 ---
-= FabricPool 지원 ONTAP 애그리게이트에서 볼륨을 생성합니다
+= FabricPool 지원 ONTAP 로컬 계층에 볼륨을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-FabricPool 지원 애그리게이트에서 직접 새 볼륨을 생성하거나 기존 볼륨을 다른 애그리게이트에서 FabricPool 지원 애그리게이트로 이동하여 FabricPool에 볼륨을 추가할 수 있습니다.
+FabricPool 지원 로컬 계층에서 직접 새 볼륨을 생성하거나 기존 볼륨을 다른 로컬 계층에서 FabricPool 지원 로컬 계층으로 이동하여 FabricPool에 볼륨을 추가할 수 있습니다.
+
+
+NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 로컬 계층을 설명합니다. ONTAP 버전에 관계없이 ONTAP CLI에서는 _aggregate_라는 용어를 사용합니다. 로컬 계층에 대한 자세한 내용은 을 link:../disks-aggregates/index.html["디스크 및 로컬 계층"]참조하십시오.
 
 FabricPool용 볼륨을 생성할 때 계층화 정책을 지정할 수 있습니다. 계층화 정책을 지정하지 않으면 생성된 볼륨은 기본 '스냅샷 전용' 계층화 정책을 사용합니다. '스냅샷 전용' 또는 '자동' 계층화 정책을 사용하는 볼륨의 경우 계층화 최소 냉각 기간을 지정할 수도 있습니다.
 
@@ -80,7 +83,7 @@ ONTAP 9.8부터 계층화 최소 냉각 시간을 2에서 183 사이의 값으�
 
 
 .FabricPool에 대한 볼륨 생성 예
-다음 예에서는 "myFabricPool" FabricPool 지원 애그리게이트에서 "mvol1"이라는 볼륨을 생성합니다. 계층화 정책은 'auto'로 설정되고 계층화 최소 냉각 기간은 45일로 설정됩니다.
+다음 예에서는 ""myFabricPool"" FabricPool 지원 로컬 계층에 ""myvol1""이라는 볼륨을 생성합니다. 계층화 정책이 로 설정되고 `auto` 계층화 최소 냉각 기간은 45일로 설정됩니다.
 
 [listing]
 ----

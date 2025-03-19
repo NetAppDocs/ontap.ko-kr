@@ -11,7 +11,7 @@ summary: security login modify 명령을 사용하여 클러스터 또는 SVM �
 
 
 [role="lead"]
-'security login modify' 명령을 사용하여 클러스터 또는 SVM 관리자 계정의 역할을 변경할 수 있습니다. 미리 정의된 역할 또는 사용자 지정 역할을 할당할 수 있습니다.
+명령을 사용하여 클러스터 또는 SVM 관리자 계정의 역할을 변경할 수 있습니다 `security login modify`. 미리 정의된 역할 또는 사용자 지정 역할을 할당할 수 있습니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .시작하기 전에
 이 작업을 수행하려면 클러스터 관리자여야 합니다.
@@ -20,9 +20,6 @@ summary: security login modify 명령을 사용하여 클러스터 또는 SVM �
 . 클러스터 또는 SVM 관리자의 역할 변경:
 +
 '보안 로그인 수정 - vserver SVM_name -user -or -group -name user_or_group_name -application application application -AuthMethod authentication_method -role role role-comment
-
-+
-에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 link:config-worksheets-reference.html["로그인 계정 생성 또는 수정"]

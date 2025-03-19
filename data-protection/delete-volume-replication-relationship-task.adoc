@@ -26,6 +26,9 @@ summary: SnapMirror 삭제 및 SnapMirror 릴리즈 명령을 사용하여 볼�
 ----
 cluster_dst::> snapmirror quiesce -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . (선택 사항) 대상 볼륨이 읽기/쓰기 볼륨이어야 하는 경우 복제 관계를 끊으십시오. 대상 볼륨을 삭제할 계획이거나 읽기/쓰기가 필요한 볼륨이 없는 경우 이 단계를 건너뛸 수 있습니다.
 +
 `snapmirror break -source-path <SVM:volume>|<cluster://SVM/volume>, …​ -destination-path <SVM:volume>|<cluster://SVM/volume>, …​`
@@ -35,12 +38,12 @@ cluster_dst::> snapmirror quiesce -destination-path svm_backup:volA_dst
 ----
 cluster_dst::> snapmirror break -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 복제 관계를 삭제합니다.
 +
 `snapmirror delete -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
-
-+
-에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -56,12 +59,12 @@ cluster_dst::> snapmirror break -source-path svm1:volA -destination-path svm_bac
 ----
 cluster_dst::> snapmirror delete -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 소스 SVM에서 복제 관계 정보 해제:
 +
 `snapmirror release -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
-
-+
-에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -77,4 +80,7 @@ cluster_dst::> snapmirror delete -source-path svm1:volA -destination-path svm_ba
 ----
 cluster_src::> snapmirror release -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

@@ -112,11 +112,11 @@ entries:
     url: "/disks-aggregates/commands-display-storage-shelves-reference.html"
 - title: RAID 구성을 관리합니다
   entries:
-  - title: 로컬 계층에 대한 기본 RAID 정책(애그리게이트)
+  - title: 로컬 계층에 대한 기본 RAID 정책
     url: "/disks-aggregates/default-raid-policies-aggregates-concept.html"
   - title: 디스크의 RAID 보호 수준
     url: "/disks-aggregates/raid-protection-levels-disks-concept.html"
-  - title: 로컬 계층에 대한 드라이브 및 RAID 그룹 정보(애그리게이트)
+  - title: 로컬 계층에 대한 드라이브 및 RAID 그룹 정보입니다
     url: "/disks-aggregates/drive-raid-group-information-local-tier-task.html"
   - title: RAID-DP에서 RAID-TEC로 변환
     url: "/disks-aggregates/convert-raid-dp-tec-task.html"
@@ -126,31 +126,31 @@ entries:
     url: "/disks-aggregates/sizing-raid-groups-concept.html"
   - title: RAID 그룹의 크기를 사용자 지정합니다
     url: "/disks-aggregates/customize-size-raid-groups-task.html"
-- title: Flash Pool 로컬 계층 관리(애그리게이트)
+- title: Flash Pool 로컬 계층 관리
   entries:
-  - title: Flash Pool 로컬 계층(애그리게이트) 캐싱 정책
+  - title: Flash Pool 로컬 계층 캐싱 정책
     url: "/disks-aggregates/flash-pool-aggregate-caching-policies-concept.html"
   - title: Flash Pool 캐싱 정책 관리
     entries:
     - title: 개요
       url: "/disks-aggregates/manage-flash-pool-caching-policies-overview-concept.html"
-    - title: Flash Pool 로컬 계층(Aggregate)의 캐싱 정책을 수정할지 결정
+    - title: Flash Pool 로컬 계층의 캐싱 정책을 수정할지 여부를 결정합니다
       url: "/disks-aggregates/determine-modify-caching-policy-flash-pool-task.html"
-    - title: Flash Pool 로컬 계층(애그리게이트)의 캐싱 정책 수정
+    - title: Flash Pool 로컬 계층의 캐싱 정책 수정
       url: "/disks-aggregates/modify-caching-policies-flash-pool-aggregates-task.html"
-    - title: Flash Pool 로컬 계층(애그리게이트)에 대한 캐시 보존 정책 설정
+    - title: Flash Pool 로컬 계층에 대한 캐시 보존 정책을 설정합니다
       url: "/disks-aggregates/set-cache-data-retention-policy-flash-pool-task.html"
-  - title: 스토리지 풀을 사용하여 Flash Pool 로컬 계층(애그리게이트)에서 Flash Pool SSD 파티셔닝
+  - title: 스토리지 풀을 사용하여 Flash Pool 로컬 계층에 Flash Pool SSD 파티셔닝
     url: "/disks-aggregates/flash-pool-ssd-partitioning-aggregates-concept.html"
   - title: Flash Pool 적합성 및 최적의 캐시 크기
     url: "/disks-aggregates/determine-flash-pool-candidacy-cache-size-task.html"
-  - title: 물리적 SSD를 사용하여 Flash Pool 로컬 계층(애그리게이트)을 생성합니다
+  - title: 물리적 SSD를 사용하여 Flash Pool 로컬 계층을 생성합니다
     url: "/disks-aggregates/create-flash-pool-aggregate-physical-ssds-task.html"
-  - title: SSD 스토리지 풀을 사용하여 Flash Pool 로컬 계층(애그리게이트)을 생성합니다
+  - title: SSD 스토리지 풀을 사용하여 Flash Pool 로컬 계층을 생성합니다
     entries:
     - title: 개요
       url: "/disks-aggregates/create-flash-pool-ssds-storage-pools-overview-concept.html"
-    - title: Flash Pool 로컬 계층(애그리게이트)에서 SSD 스토리지 풀을 사용하고 있는지 확인합니다
+    - title: Flash Pool 로컬 계층에서 SSD 스토리지 풀을 사용하고 있는지 확인합니다
       url: "/disks-aggregates/determine-flash-pool-aggregate-ssd-storage-task.html"
     - title: SSD 스토리지 풀을 추가하여 캐시를 추가합니다
       url: "/disks-aggregates/create-ssd-storage-pool-task.html"

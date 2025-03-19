@@ -34,4 +34,7 @@ summary: 시스템에 의해 효율성 작업이 중지되면 동일한 지점�
 +
 '볼륨 효율성 시작 - vserver vs1-volume vola-scan-old-data TRUE-use-checkpoint true'
 
++
+에 대한 자세한 내용은 `volume efficiency start` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

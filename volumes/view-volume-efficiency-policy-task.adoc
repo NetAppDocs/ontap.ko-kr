@@ -29,3 +29,5 @@ summary: 이름, 일정, 기간, 설명이 포함된 볼륨 효율성 정책을 
 
 다음 명령을 실행하면 기간이 10시간으로 설정된 정책이 표시됩니다.
 `volume efficiency policy show -duration 10`
+
+에 대한 자세한 내용은 `volume efficiency policy show` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

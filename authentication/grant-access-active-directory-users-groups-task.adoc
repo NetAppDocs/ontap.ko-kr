@@ -11,7 +11,7 @@ summary: '보안 로그인 create 명령을 사용하여 AD(Active Directory) �
 
 
 [role="lead"]
-'보안 로그인 생성' 명령을 사용하여 AD(Active Directory) 사용자 또는 그룹 계정을 활성화하여 admin 또는 data SVM에 액세스할 수 있습니다. AD 그룹의 모든 사용자는 그룹에 할당된 역할을 통해 SVM에 액세스할 수 있습니다.
+명령을 사용하여 AD(Active Directory) 사용자 또는 그룹 계정을 활성화하여 관리자 또는 데이터 SVM에 액세스할 수 있습니다 `security login create`. AD 그룹의 모든 사용자는 그룹에 할당된 역할을 통해 SVM에 액세스할 수 있습니다. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .이 작업에 대해
 * 계정이 SVM에 액세스하려면 먼저 클러스터 또는 SVM에 대한 AD 도메인 컨트롤러 액세스를 구성해야 합니다.
@@ -26,7 +26,7 @@ xref:enable-ad-users-groups-access-cluster-svm-task.adoc[Active Directory 도메
 SSH 공개 키를 기본 인증으로 사용하도록 선택하면 AD 인증이 수행되지 않습니다.
 
 * ONTAP 9.11.1부터 를 사용할 수 있습니다 link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["nsswitch 인증을 위한 LDAP 빠른 바인딩"] AD LDAP 서버에서 지원하는 경우
-* 로그인 계정에 할당할 액세스 제어 역할을 잘 모르는 경우 '보안 로그인 수정' 명령을 사용하여 나중에 역할을 추가할 수 있습니다.
+* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 xref:modify-role-assigned-administrator-task.adoc[관리자에게 할당된 역할 수정]
 
@@ -94,9 +94,6 @@ AD 그룹의 경우 *
 security login create -vserver <svm_name> -user-or-group-name <user_name> -application <application> -authentication-method domain -role <role> -comment <comment> [-is-ldap-fastbind true]
 ----
 |===
-+
-에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 
 
 .작업을 마친 후

@@ -70,6 +70,9 @@ volume modify -vserver <SVM_name> -volume <vol_name> -snapdir-access <true|false
 clus1::> volume modify -vserver vs0 -volume vol1 -snapdir-access true
 Volume modify successful on volume vol1 of Vserver vs0.
 ----
++
+및 `volume modify` 에 대한 자세한 `volume show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume["ONTAP 명령 참조입니다"^]참조하십시오.
+
 
 
 --

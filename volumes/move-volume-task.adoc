@@ -69,3 +69,6 @@ vs2       user_max   healthy  cutover     -                -
 볼륨 이동은 'volume move show' 명령 출력에 더 이상 나타나지 않으면 완료됩니다.
 
 
+
+.관련 정보
+link:recommendations-moving-concept.html["볼륨 이동 시 고려 사항 및 권장 사항"]

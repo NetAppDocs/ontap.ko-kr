@@ -11,7 +11,7 @@ summary: 운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증�
 
 
 [role="lead"]
-운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 'Security certificate generate -csr' 명령어를 이용하여 CSR(certificate signing request)과 'security certificate install' 명령어를 이용하여 인증 기관으로부터 받은 인증서를 설치할 수 있다.
+운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 명령을 사용하여 인증서 서명 요청(CSR)을 생성하고, `security certificate install` 명령을 사용하여 인증 기관으로부터 받은 인증서를 설치할 수 `security certificate generate-csr` 있습니다. 및 `security certificate install` 에 대한 자세한 `security certificate generate-csr` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+certificate["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
 
@@ -64,7 +64,7 @@ NOTE: Keep a copy of your certificate request and private key for future referen
 
 == CA 서명 서버 인증서를 설치합니다
 
-'보안 인증서 설치' 명령을 사용하여 SVM에 CA 서명 서버 인증서를 설치할 수 있습니다. ONTAP는 서버 인증서의 인증서 체인을 형성하는 CA(인증 기관) 루트 및 중간 인증서를 입력하라는 메시지를 표시합니다.
+명령을 사용하여 SVM에 CA 서명 서버 인증서를 설치할 수 있습니다 `security certificate install`. ONTAP는 서버 인증서의 인증서 체인을 형성하는 CA(인증 기관) 루트 및 중간 인증서를 입력하라는 메시지를 표시합니다. 에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .시작하기 전에
 이 작업을 수행하려면 클러스터 또는 SVM 관리자여야 합니다.
@@ -76,9 +76,6 @@ NOTE: Keep a copy of your certificate request and private key for future referen
 ----
 security certificate install -vserver SVM_name -type certificate_type
 ----
-+
-에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 +
 [NOTE]
 ====

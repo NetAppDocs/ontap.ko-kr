@@ -30,4 +30,5 @@ num은 백분율을 지정하는 두 자리 숫자입니다.
 
 .관련 정보
 * link:run-efficiency-operations-scheduling-task.html["일정을 사용하여 효율성 작업을 실행합니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-modify.html["볼륨 효율성 수정"^]
 

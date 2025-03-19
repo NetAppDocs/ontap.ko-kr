@@ -32,6 +32,33 @@ ONTAP 9.10.1부터 X1151A 클러스터 NIC와 함께 사용할 경우 특정 하
 
 
  a| 
+* AFF A50 를 참조하십시오
+* AFF A30 를 참조하십시오
+* AFF A20 를 참조하십시오
+* AFF C80 를 참조하십시오
+* AFF C60 를 참조하십시오
+* AFF C30 를 참조하십시오
+* ASA A50
+* ASA A30
+* ASA A20
+
+| ONTAP 9.16.1 이상 
+
+
+ a| 
+* AFF A1K 를 참조하십시오
+* AFF A90 를 참조하십시오
+* AFF A70 를 참조하십시오
+* ASA A1K
+* ASA A90
+* ASA A70
+* FAS90를 참조하십시오
+* FAS70를 참조하십시오
+
+| ONTAP 9.15.1 이상 
+
+
+ a| 
 * AFF A400
 * ASA A400
 

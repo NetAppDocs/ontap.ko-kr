@@ -74,3 +74,16 @@ summary: 기존 할당량 정의를 크게 변경한 후에는 영향을 받는 
 . "volume quota show -instance" 명령을 사용하여 초기화에 실패한 할당량 규칙과 같은 초기화 오류를 확인합니다.
 . "volume quota report" 명령을 사용하여 할당량 보고서를 표시하면 적용된 할당량이 기대에 맞는지 확인할 수 있습니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-show.html["vserver show 를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-create.html["볼륨 할당량 정책 규칙을 생성합니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-modify.html["볼륨 할당량 정책 규칙이 수정됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-delete.html["볼륨 할당량 정책 규칙 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-show.html["볼륨 할당량 정책 규칙이 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-off.html["볼륨 할당량이 꺼져 있습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-on.html["볼륨 할당량이 켜져 있습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-show.html["볼륨 할당량이 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-report.html["볼륨 할당량 보고서"^]
+

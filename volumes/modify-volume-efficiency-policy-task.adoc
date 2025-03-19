@@ -11,7 +11,7 @@ summary: 볼륨 효율성 정책을 수정하여 중복제거 및 데이터 압�
 
 
 [role="lead"]
-볼륨 효율성 정책을 수정하여 다른 기간 동안 중복제거 및 데이터 압축을 실행하거나 '볼륨 효율성 정책 수정' 명령을 사용하여 작업 스케줄을 변경할 수 있습니다.
+볼륨 효율성 정책을 수정하여 다른 기간 동안 중복제거 및 데이터 압축을 실행하거나 명령을 사용하여 작업 일정을 변경할 수 있습니다 `volume efficiency policy modify`. 에 대한 자세한 내용은 `volume efficiency policy modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-policy-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 볼륨 효율성 정책을 수정하려면 'volume Efficiency policy modify' 명령을 사용하십시오.

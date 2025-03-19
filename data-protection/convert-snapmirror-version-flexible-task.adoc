@@ -203,6 +203,9 @@ cluster_dst::> snapmirror delete -destination-path svm_backup:volA_dst
 snapmirror release -destination-path <SVM:volume> -relationship-info-only true
 ----
 +
+에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 다음 예에서는 SVM 재해 복구 관계를 해제합니다.
 
 +

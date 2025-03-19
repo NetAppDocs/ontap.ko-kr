@@ -11,7 +11,7 @@ summary: SSH 공개 키 인증의 경우 관리자 계정의 공개 키와 X.509
 
 
 [role="lead"]
-관리자 계정으로 SSH 인증 보안을 강화하기 위해 를 사용할 수 있습니다 `security login publickey` SSH 공개 키 및 X.509 인증서와의 연결을 관리하는 명령 집합입니다.
+관리자 계정으로 SSH 인증 보안을 강화하기 위해 명령 집합을 사용하여 SSH 공개 키 및 X.509 인증서와의 연결을 관리할 수 `security login publickey` 있습니다. 에 대한 자세한 내용은 `security login publickey` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login+publickey["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -29,7 +29,7 @@ SSH 공개 키와 X.509 인증서를 모두 사용하여 SSH를 통해 계정을
 * X.509 인증서의 만료 및 해지 여부를 확인해야 하는 경우:
 +
 ** CA(인증 기관)로부터 인증서를 받아야 합니다.
-** 를 사용하여 인증서 체인(중간 및 루트 CA 인증서)을 설치해야 합니다 `security certificate install` 명령.
+** 명령을 사용하여 인증서 체인(중간 및 루트 CA 인증서)을 `security certificate install` 설치해야 합니다. 에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 ** SSH용 OCSP를 활성화해야 합니다. 을 참조하십시오 link:../system-admin/verify-digital-certificates-valid-ocsp-task.html["디지털 인증서가 OCSP를 사용하여 유효한지 확인합니다"^] 를 참조하십시오.
 
 
@@ -46,6 +46,9 @@ SSH 공개 키와 X.509 인증서를 모두 사용하여 SSH를 통해 계정을
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +
 `security login publickey show -vserver _SVM_name_ -username _user_name_ -index _index_`
+
++
+에 대한 자세한 내용은 `security login publickey show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -73,6 +76,9 @@ Please enter Certificate: Press <Enter> when done
 +
 `security login publickey modify -vserver SVM_name -username user_name -index index -x509-certificate delete`
 
++
+에 대한 자세한 내용은 `security login publickey modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +
 `security login publickey show -vserver _SVM_name_ -username _user_name_ -index _index_`
@@ -99,6 +105,9 @@ cluster1::> security login publickey modify -vserver engData2 -username svmadmin
 . 관리자 계정에서 공개 키와 X.509 인증서 연결을 제거합니다.
 +
 `security login publickey delete -vserver _SVM_name_ -username _user_name_ -index _index_`
+
++
+에 대한 자세한 내용은 `security login publickey delete` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +

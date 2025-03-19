@@ -31,3 +31,5 @@ summary: 중복제거 또는 사후 처리 압축 작업을 중지할 수 있습
 다음 명령을 실행하면 볼륨 VolA에서 활성 및 대기 상태의 중복제거 또는 사후 처리 압축 작업이 모두 중단됩니다.
 
 '볼륨 효율성 중지 - vserver vs1-volume vola - 모두 TRUE'
+
+에 대한 자세한 내용은 `volume efficiency stop` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -29,3 +29,4 @@ cluster1::> volume efficiency stat -vserver vs1 -volume VolA
                 Volume Path: /vol/VolA
 Inline Compression Attempts: 0
 ----
+에 대한 자세한 내용은 `volume efficiency stat` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-stat.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

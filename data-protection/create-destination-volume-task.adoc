@@ -11,15 +11,12 @@ summary: 대상에서 volume create 명령을 사용하여 대상 볼륨을 생�
 
 
 [role="lead"]
-대상에서 'volume create' 명령을 사용하여 대상 볼륨을 생성할 수 있습니다. 대상 볼륨의 크기는 소스 볼륨보다 크거나 같아야 합니다.
+타겟에서 명령을 사용하여 대상 볼륨을 생성할 수 `volume create` 있습니다. 대상 볼륨의 크기는 소스 볼륨보다 크거나 같아야 합니다. 에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . 대상 볼륨 생성:
 +
 'volume create-vserver_SVM_-volume volume-aggregate_aggregate_-type DP-size_size_'
-
-+
-에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 이름이 "VolA_DST"인 2GB 대상 볼륨을 생성합니다.

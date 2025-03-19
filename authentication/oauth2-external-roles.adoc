@@ -19,10 +19,6 @@ summary: 외부 역할은 ONTAP에서 사용하도록 구성된 식별 공급자
 
 NOTE: ONTAP REST API를 사용하여 외부 역할 매핑 기능을 구성할 수도 있습니다. 자세한 내용은 을 https://docs.netapp.com/us-en/ontap-automation/["ONTAP 자동화 설명서"^]참조하십시오.
 
-.관련 정보
-* https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI 명령"^]..
-
-
 
 
 == 액세스 토큰의 외부 역할
@@ -53,7 +49,7 @@ ONTAP 명령줄 인터페이스를 사용하여 외부 역할 매핑 기능을 �
 
 === 생성
 
-명령을 사용하여 역할 매핑 구성을 정의할 수 `security login external-role-mapping create` 있습니다. 이 명령과 관련 옵션을 실행하려면 ONTAP * admin * 권한 수준이어야 합니다.
+명령을 사용하여 역할 매핑 구성을 정의할 수 `security login external-role-mapping create` 있습니다. 이 명령과 관련 옵션을 실행하려면 ONTAP * admin * 권한 수준이어야 합니다. 에 대한 자세한 내용은 `security login external-role-mapping create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-external-role-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .매개 변수
 그룹 매핑을 생성하는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
@@ -87,4 +83,6 @@ security login external-role-mapping create -external-role "Global Administrator
 * 삭제
 
 
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

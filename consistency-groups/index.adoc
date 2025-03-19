@@ -194,4 +194,5 @@ video::j0jfXDcdyzE[youtube,width=848,height=480]
 * xref:../data-protection/snapmirror-disaster-recovery-concept.html[SnapMirror 비동기식 재해 복구 기본 사항]
 * link:https://docs.netapp.com/us-en/ontap-metrocluster/["MetroCluster 설명서"]
 * link:../multi-admin-verify/index.html["다중 관리 검증"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 
