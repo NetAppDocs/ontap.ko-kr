@@ -32,12 +32,12 @@ summary: 예를 들어 RPO 및 스로틀 값을 조정하려면 S3 미러 정책
 .CLI를 참조하십시오
 --
 SnapMirror S3 정책 수정:
-`snapmirror policy modify -vserver svm_name -policy policy_name [-rpo _integer_] [-throttle _throttle_type_] [-comment _text_]`
+`snapmirror policy modify -vserver <svm_name> -policy <policy_name> [-rpo <integer>] [-throttle <throttle_type>] [-comment <text>]`
 
 매개 변수:
 
-* '-RPO' – 복구 시점 목표의 시간(초)을 지정합니다.
-* '-throttle' – 처리량/대역폭의 상한값을 킬로바이트/초로 지정합니다.
+* `-rpo`: 복구 지점 목표의 시간을 초 단위로 지정합니다.
+* `-throttle`: 처리량/대역폭에 대한 상한을 킬로바이트/초 단위로 지정합니다.
 
 
 ....

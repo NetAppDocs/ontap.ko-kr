@@ -66,10 +66,10 @@ vserver volume         atime-update atime-update-period
 ------- -------------- ------------ -------------------
 vs2_c1  cache1_origin1 true         86400
 ----
-. 이 활성화되면 `-atime-update` FlexCache 볼륨의 파일을 자동으로 스크러빙할 수 있는지 여부를 지정할 수 있습니다.
+.  활성화되면 `-atime-update`이 FlexCache 볼륨의 파일을 자동으로 스크러빙할 수 있는지 여부를 지정할 수 있습니다.
 +
 `volume flexcache config modify -vserver <SVM name> -volume <volume_name> -is-atime-scrub-enabled <true|false>`
 
 
 
-매개 변수에 대한 자세한 `-is-atime-scrub-enabled` 내용은 를 참조하십시오link:https://docs.netapp.com/us-en/ontap-cli/volume-flexcache-config-modify.html#parameters["ONTAP 명령 참조"^].
+매개 변수에 대한 자세한 `-is-atime-scrub-enabled` 내용은 link:https://docs.netapp.com/us-en/ontap-cli/volume-flexcache-config-modify.html#parameters["ONTAP 명령 참조입니다"^]를 참조하십시오.

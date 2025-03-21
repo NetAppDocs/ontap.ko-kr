@@ -23,7 +23,7 @@ summary: '클러스터 또는 SVM에 액세스하려고 하는 사람에게 메�
  a| 
 한 줄인 메시지를 지정합니다
  a| 
-텍스트를 지정하려면 "- message "[.code]""text"" 매개 변수를 사용합니다.
+[.code]``<text>``"" 매개변수를 사용하여 `-message` 텍스트를 지정합니다.
 
 
 
@@ -67,7 +67,7 @@ cluster1::> security login banner modify -message "Authorized users only!"
 
 cluster1::>
 ----
-다음 예에서는 대화형 모드를 사용하여 "vm1" SVM용 배너를 생성합니다.
+다음 예에서는 대화형 모드를 사용하여 SVM에 대한 배너를 `svm1` 생성합니다.
 
 [listing]
 ----

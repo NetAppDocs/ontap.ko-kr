@@ -25,7 +25,7 @@ summary: 클러스터 또는 SVM 레벨에서 배너를 관리할 수 있습니�
  a| 
 클러스터 레벨 배너 설정:
 
-"* 보안 로그인 배너 modify -vserver_cluster_name_{[-message "text"]|[_-Uri ftp_or_http_addr_]} *
+`security login banner modify -vserver <cluster_name> { [-message "text"] | [-uri <ftp_or_http_addr>] }`
 
 
 
@@ -34,7 +34,7 @@ summary: 클러스터 또는 SVM 레벨에서 배너를 관리할 수 있습니�
  a| 
 배너를 빈 문자열(""")로 설정합니다.
 
-"* 보안 로그인 배너 수정 - vserver* - 메시지 ""*"
+`security login banner modify -vserver * -message ""`
 
 
 
@@ -43,12 +43,12 @@ SVM 관리자가 생성한 배너를 재정의합니다
  a| 
 SVM 배너 메시지를 수정합니다.
 
-"* 보안 로그인 배너 수정 - vserver_svm_name_{[-message "_text_"]|[-Uri_ftp_or_http_addr_]} *
+`security login banner modify -vserver <svm_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 
 |===
 * SVM 레벨에서 배너 관리
 +
-SVM 컨텍스트에서 '-vserver_svm_name_'을 지정할 필요가 없습니다.
+SVM 컨텍스트에서 지정할 `-vserver <svm_name>` 필요가 없습니다.
 
 +
 |===
@@ -60,7 +60,7 @@ SVM 컨텍스트에서 '-vserver_svm_name_'을 지정할 필요가 없습니다.
  a| 
 SVM을 위한 배너 생성:
 
-"* 보안 로그인 배너 modify -vserver_svm_name_{[-message "text"]|[-Uri ftp_or_http_addr]} *
+`security login banner modify -vserver <svm_name> { [-message "text"] | [-uri <ftp_or_http_addr>] }`
 
 
 
@@ -69,7 +69,7 @@ SVM에 대한 배너가 표시되지 않도록 클러스터 관리자가 제공�
  a| 
 SVM 배너를 SVM용 빈 문자열로 설정합니다.
 
-"* 보안 로그인 배너 수정 - vserver_svm_name_ - 메시지 ""*"
+`security login banner modify -vserver <svm_name> -message ""`
 
 
 
@@ -78,7 +78,7 @@ SVM에서 현재 SVM 레벨 배너를 사용하는 경우 클러스터 레벨 �
  a| 
 SVM 배너를 "-" 로 설정한다.
 
-"* 보안 로그인 배너 modify -vserver_svm_name_-message "-" * "
+`security login banner modify -vserver <svm_name> -message "-"`
 
 |===
 
