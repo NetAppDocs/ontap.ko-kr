@@ -21,3 +21,5 @@ summary: 효율성 작업을 수동으로 실행하여 효율성 작업이 볼�
 
 
 '-fields' 옵션의 값으로 'schedule'과 함께 'volume Efficiency show' 명령을 사용하여 볼륨에 할당된 스케줄을 볼 수 있습니다.
+
+에 대한 자세한 내용은 `volume efficiency show` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

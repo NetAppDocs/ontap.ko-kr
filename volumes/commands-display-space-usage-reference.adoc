@@ -52,3 +52,8 @@ Storage aggregate show'Storage aggregate show'Storage aggregate show-space-field
 볼륨 쇼 풋프린트
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-compute-reclaimable.html["볼륨 스냅샷 계산 - 재확보 가능"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["볼륨 표시"^]
+

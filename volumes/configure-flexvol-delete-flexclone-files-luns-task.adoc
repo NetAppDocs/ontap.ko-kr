@@ -19,7 +19,7 @@ summary: 볼륨의 여유 공간이 특정 임계값 아래로 감소할 경우 
 
 
 .단계
-. '볼륨 스냅샷 자동 삭제 수정' 명령을 사용하여 FlexVol 볼륨에서 FlexClone 파일 및 FlexClone LUN을 자동으로 삭제할 수 있도록 설정합니다.
+. 명령을 사용하여 FlexVol volume에서 FlexClone 파일과 FlexClone LUN을 자동으로 삭제할 수 `volume snapshot autodelete modify` 있습니다. 에 대한 자세한 내용은 `volume snapshot autodelete modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-autodelete-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 ** '-trigger' 파라미터는 volume 또는 snap_reserve를 지정할 수 있다.
 ** '-destroy-list' 매개 변수의 경우 한 가지 유형의 클론만 삭제할지 여부와 관계없이 항상 lun_clone, file_clone을 지정해야 합니다. 다음 예에서는 볼륨의 25%가 사용 가능한 공간으로 구성될 때까지 공간 재확보를 위해 FlexClone 파일 및 FlexClone LUN의 자동 삭제를 트리거하도록 볼륨 vol1을 설정하는 방법을 보여줍니다.
@@ -38,7 +38,7 @@ Volume modify successful on volume:vol1
 ====
 
 
-. '볼륨 스냅샷 자동 삭제 표시' 명령을 사용하여 FlexVol 볼륨에서 FlexClone 파일 및 FlexClone LUN을 자동으로 삭제할 수 있는지 확인합니다.
+. 명령을 사용하여 FlexVol volume에서 FlexClone 파일 및 FlexClone LUN 자동 삭제가 설정되어 있는지 확인합니다 `volume snapshot autodelete show`. 에 대한 자세한 내용은 `volume snapshot autodelete show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-autodelete-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 다음 예에서는 FlexClone 파일 및 FlexClone LUN을 자동으로 삭제하기 위해 볼륨 vol1이 활성화되어 있는 것을 보여 줍니다.
 
@@ -61,7 +61,7 @@ Is Constituent Volume: false
 ----
 . 다음 단계를 수행하여 삭제할 볼륨의 FlexClone 파일 및 FlexClone LUN에 대해 자동 삭제를 사용하도록 설정했는지 확인합니다.
 +
-.. '볼륨 파일 클론 자동 삭제' 명령을 사용하여 특정 FlexClone 파일 또는 FlexClone LUN을 자동으로 삭제할 수 있습니다.
+.. 명령을 사용하여 특정 FlexClone 파일이나 FlexClone LUN을 자동으로 삭제할 수 있습니다 `volume file clone autodelete`. 에 대한 자세한 내용은 `volume file clone autodelete` link:https://docs.netapp.com/us-en/ontap-cli/volume-file-clone-autodelete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 '-force' 매개 변수와 함께 'volume file clone autom자동 삭제' 명령을 사용하면 특정 FlexClone 파일 또는 FlexClone LUN을 강제로 자동으로 삭제할 수 있습니다.
 
@@ -76,7 +76,7 @@ cluster1::> volume file clone autodelete -vserver vs1 -clone-path /vol/vol1/lun1
 +
 FlexClone 파일 및 FlexClone LUN을 생성할 때 자동 삭제를 설정할 수 있습니다.
 
-.. 'volume file clone show -autom자동 삭제' 명령을 사용하여 FlexClone 파일 또는 FlexClone LUN이 자동 삭제되도록 설정되었는지 확인합니다.
+.. 명령을 사용하여 FlexClone 파일 또는 FlexClone LUN이 자동 삭제되도록 설정되어 있는지 확인합니다 `volume file clone show-autodelete`. 에 대한 자세한 내용은 `volume file clone show-autodelete` link:https://docs.netapp.com/us-en/ontap-cli/volume-file-clone-show-autodelete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
 다음 예에서는 FlexClone LUN lun1_clone이 자동 삭제를 위해 설정되었음을 보여 줍니다.
 

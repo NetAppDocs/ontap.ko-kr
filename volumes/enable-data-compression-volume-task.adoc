@@ -11,7 +11,7 @@ summary: ' `volume efficiency modify`명령을 사용하여 데이터 압축을 
 
 
 [role="lead"]
-'볼륨 효율성 수정' 명령을 사용하여 FlexVol 볼륨의 데이터 압축을 활성화하여 공간을 절약할 수 있습니다. 기본 압축 유형을 사용하지 않으려면 볼륨에 압축 유형을 할당할 수도 있습니다.
+FlexVol volume에서 데이터 압축을 활성화하면 명령을 사용하여 공간을 절약할 수 있습니다. `volume efficiency modify` 기본 압축 유형을 사용하지 않으려면 볼륨에 압축 유형을 할당할 수도 있습니다. 에 대한 자세한 내용은 `volume efficiency modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .시작하기 전에
 볼륨에 대해 중복 제거를 설정해야 합니다.

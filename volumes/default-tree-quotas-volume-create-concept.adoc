@@ -24,7 +24,7 @@ FlexVol 볼륨에 기본 트리 할당량을 생성하면 해당 볼륨의 모�
 모든 파생 할당량과 마찬가지로 파생된 트리 할당량에는 다음과 같은 동작이 표시됩니다.
 
 * 타겟에 명시적 할당량이 없는 경우에만 생성됩니다.
-* 할당량 보고서에 표시되지만 'volume quota policy rule show' 명령을 사용하여 할당량 규칙을 표시할 때는 표시되지 않습니다.
+* 할당량 보고서에는 표시되지만 명령을 사용하여 할당량 규칙을 표시할 때는 나타나지 않습니다 `volume quota policy rule show`. 에 대한 자세한 내용은 `volume quota policy rule show` link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 .파생된 트리 할당량의 예

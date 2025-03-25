@@ -26,4 +26,7 @@ summary: 백업에 지정된 스냅샷을 사용할 수 없습니다.
 +
 명령을 사용하여 `snap list` 사용 가능한 스냅샷 목록을 봅니다.
 
++
+에 대한 자세한 내용은 `snap list` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snap+list["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

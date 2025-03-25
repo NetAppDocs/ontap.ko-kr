@@ -27,3 +27,5 @@ inline-only_와 _default_predefined 효율성 정책은 삭제할 수 없습니�
 
 .예
 다음 명령을 실행하면 policy1:'볼륨 효율성 정책 삭제 - vserver vs1-policy policy1'이라는 볼륨 효율성 정책이 삭제됩니다
+
+에 대한 자세한 내용은 `volume efficiency policy delete` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-policy-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

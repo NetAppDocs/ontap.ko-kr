@@ -45,4 +45,11 @@ summary: 볼륨 할당량 명령을 사용하면 할당량의 상태를 변경�
 볼륨 할당량 수정
 
 |===
-에 대한 자세한 내용은 `volume quota` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota["ONTAP 명령 참조입니다"^]을 참조하십시오.
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-on.html["볼륨 할당량이 켜져 있습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-resize.html["볼륨 할당량 크기 조정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-off.html["볼륨 할당량이 꺼져 있습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-modify.html["볼륨 할당량 수정"^]
+

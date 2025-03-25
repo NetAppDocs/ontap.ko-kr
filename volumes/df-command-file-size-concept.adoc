@@ -76,3 +76,4 @@ Filesystem          1M-blocks  Used Available Use% Mounted on
 172.21.76.153:/vol2      2919  1709      1211  59% /mnt/vol2
 ----
 ====
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

@@ -21,3 +21,5 @@ ONTAP 9.10.1부터 볼륨 레벨 스토리지 효율성 모드_default_and_effic
 volume efficiency modify -vserver <vserver name> -volume <volume name> -storage-efficiency-mode <default|efficient>
 ----
 
+
+에 대한 자세한 내용은 `volume efficiency modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

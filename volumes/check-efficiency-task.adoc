@@ -19,3 +19,5 @@ AFF 볼륨에서 'volume-Efficiency-show' 명령을 사용하여 효율성이 �
 `volume efficiency show -vserver <vserver name> -volume <volume name> -fields storage-efficiency-mode`
 
 
+
+에 대한 자세한 내용은 `volume efficiency show` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -2207,4 +2207,6 @@ Data ONTAP 8.3.x에서:: ONTAP 9.1로 직접 업그레이드한 다음 이후 �
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-image-show.html["클러스터 이미지가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/system-node-image-show.html["시스템 노드 이미지가 표시됩니다"^]
 

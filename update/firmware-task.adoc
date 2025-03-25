@@ -21,7 +21,7 @@ summary: '디스크, 디스크 쉘프, 서비스 프로세서(SP) 또는 베이�
 ONTAP 9 .8을 실행 중이거나 Active IQ Unified Manager에 등록되어 있지 않은 경우 NetApp 지원 사이트 로 이동하여 펌웨어 업데이트를 다운로드하십시오.
 
 .시작하기 전에
-원활한 펌웨어 업데이트를 준비하려면 업데이트를 시작하기 전에 SP 또는 BMC를 재부팅해야 합니다.  `system service-processor reboot-sp -node node_name`명령을 사용하여 재부팅합니다.
+원활한 펌웨어 업데이트를 준비하려면 업데이트를 시작하기 전에 SP 또는 BMC를 재부팅해야 합니다.  `system service-processor reboot-sp -node node_name`명령을 사용하여 재부팅합니다. 에 대한 자세한 내용은 `system service-processor reboot-sp` link:https://docs.netapp.com/us-en/ontap-cli/system-service-processor-reboot-sp.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 사용 중인 ONTAP 버전과 Active IQ Unified Manager에 등록된 경우 해당 절차를 따르십시오.

@@ -25,9 +25,18 @@ summary: 기본 할당량을 사용하여 지정된 할당량 유형의 모든 �
 할당량은 컨텍스트에 따라 빈 문자열("") 또는 별표(*)로 표시됩니다.
 
 * 'volume quota policy rule create' 명령을 사용하여 할당량을 생성할 때 '-target' 매개 변수를 빈 문자열("")로 설정하면 기본 할당량이 생성됩니다.
++
+에 대한 자세한 내용은 `volume quota policy rule create` link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * 'volume quota policy rule create' 명령에서 '-qtree' 매개 변수는 할당량 규칙이 적용되는 qtree의 이름을 지정합니다. 트리 유형 규칙에는 이 매개 변수를 사용할 수 없습니다. 볼륨 레벨의 사용자 또는 그룹 유형 규칙의 경우 이 매개 변수에 ""가 포함되어야 합니다.
 * 'volume quota policy rule show' 명령의 출력에서 기본 할당량이 빈 문자열("")과 함께 타겟으로 표시됩니다.
++
+에 대한 자세한 내용은 `volume quota policy rule show` link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-policy-rule-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * 'volume quota report' 명령의 출력에서 기본 할당량은 ID 및 할당량 지정자로 별표(*)와 함께 표시됩니다.
++
+에 대한 자세한 내용은 `volume quota report` link:https://docs.netapp.com/us-en/ontap-cli/volume-quota-report.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

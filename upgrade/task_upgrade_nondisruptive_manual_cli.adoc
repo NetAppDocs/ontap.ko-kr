@@ -762,4 +762,12 @@ set -privilege admin
 . 추가 HA 쌍을 업그레이드합니다.
 
 
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/system-node-autosupport-invoke.html["AutoSupport 호출"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+image["시스템 이미지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+node["시스템 노드"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+failover["스토리지 페일오버"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+port+show["네트워크 포트가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=set["고급 설정 권한"^]
+

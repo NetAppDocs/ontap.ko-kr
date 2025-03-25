@@ -51,7 +51,7 @@ SVM의 용량은 FlexVol, FlexGroup 볼륨, FlexClone, FlexCache 볼륨의 합�
 
 * SVM을 마이그레이션할 때 소스 SVM에서 스토리지 제한을 설정할 수 없습니다. 마이그레이션 작업을 완료하려면 소스에서 스토리지 제한을 해제한 다음 마이그레이션을 완료합니다.
 * SVM 용량은 와 다릅니다 xref:../volumes/quotas-concept.html[할당량]. 할당량은 최대 크기를 초과할 수 없습니다.
-* SVM에서 다른 작업이 진행 중인 경우에는 스토리지 제한을 설정할 수 없습니다.  `job show vserver <svm_name>`기존 작업을 보려면 명령을 사용하십시오. 작업이 완료되면 명령을 다시 실행해 보십시오.
+* SVM에서 다른 작업이 진행 중인 경우에는 스토리지 제한을 설정할 수 없습니다.  `job show vserver <svm_name>`기존 작업을 보려면 명령을 사용하십시오. 작업이 완료되면 명령을 다시 실행해 보십시오. 에 대한 자세한 내용은 `job show` link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -175,4 +175,7 @@ vserver modify -vserver <vserver_name> -storage-limit 0
 .관련 정보
 * xref:../concepts/capacity-measurements-in-sm-concept.adoc[System Manager의 용량 측정]
 * xref:../task_admin_monitor_capacity_in_sm.html[System Manager에서 클러스터, 계층, SVM 용량 모니터링]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["SVM 생성"]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-show.html["vserver show 를 참조하십시오"]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-modify.html["SVM 수정"]
 

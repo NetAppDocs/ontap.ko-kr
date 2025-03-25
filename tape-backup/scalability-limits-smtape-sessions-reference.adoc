@@ -45,6 +45,6 @@ SMTape 백업 및 복구 세션 확장성 제한은 NDMP 세션 제한 및 덤�
 명령(노드 쉘을 통해 사용 가능)을 사용하여 스토리지 시스템의 시스템 메모리를 확보할 수 `sysconfig -a` 있습니다. 에 대한 자세한 내용은 `sysconfig -a` link:https://docs.netapp.com/us-en/ontap-cli/system-node-run.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .관련 정보
-xref:scalability-limits-ndmp-sessions-reference.adoc[NDMP 세션의 확장성 제한]
+* xref:scalability-limits-ndmp-sessions-reference.adoc[NDMP 세션의 확장성 제한]
+* xref:scalability-limits-dump-backup-restore-sessions-concept.adoc[덤프 백업 및 복원 세션에 대한 확장성 제한]
 
-xref:scalability-limits-dump-backup-restore-sessions-concept.adoc[덤프 백업 및 복원 세션에 대한 확장성 제한]

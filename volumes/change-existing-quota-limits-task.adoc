@@ -44,3 +44,8 @@ summary: 영향을 받는 모든 볼륨에서 할당량을 변경하거나 크�
 
 . "volume quota report" 명령을 사용하여 할당량 보고서를 표시하여 사용자 요구 사항에 맞게 적용된 할당량을 설정할 수 있습니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota+policy+rule["볼륨 할당량 정책 규칙입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota["볼륨 할당량"^]
+

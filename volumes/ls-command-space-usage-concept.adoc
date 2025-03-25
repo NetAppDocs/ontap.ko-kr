@@ -39,3 +39,4 @@ ls 명령의 출력은 파일의 크기만 표시하고 파일에 사용되는 �
 [user1@lin-sys1 q1]$ ls -lh
 -rwxr-xr-x  1 user1 nfsuser  **27M** Apr 09  2013 file1
 ----
+에 대한 자세한 내용은 `ls` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=ls["ONTAP 명령 참조입니다"^]을 참조하십시오.

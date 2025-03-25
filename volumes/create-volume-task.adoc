@@ -54,6 +54,9 @@ summary: 볼륨 생성 명령을 사용하여 볼륨을 생성하고 해당 접�
 +
 `volume show -vserver _svm_name_ -volume _volume_name_ -junction`
 
++
+에 대한 자세한 내용은 `volume show` link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .예

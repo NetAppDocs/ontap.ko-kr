@@ -66,4 +66,6 @@ ONTAP CLI는 볼륨 이동을 관리하기 위한 특정 명령을 제공합니�
 '-cutover-action' 매개 변수를 사용하여 볼륨 이동 시작 또는 볼륨 이동 수정 볼륨 이동 수정 명령은 고급 명령이고 -cutover-action은 고급 매개 변수입니다.
 
 |===
-에 대한 자세한 내용은 `volume move` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+move["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+move["볼륨 이동"^]
+

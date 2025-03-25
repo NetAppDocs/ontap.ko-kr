@@ -24,7 +24,7 @@ summary: 클러스터에서 ONTAP 버전을 중단 없이 업데이트할 수 �
 NOTE: BlueXP 를 통해 ONTAP 9.15.1 이상으로 업그레이드하려면 를 link:https://docs.netapp.com/us-en/bluexp-software-updates/get-started/software-updates.html["BlueXP  설명서의 업그레이드 절차"^]따르십시오.
 
 
-IMPORTANT: 자동 무중단 업그레이드(ANDU)를 시작하기 전에 '스토리지 페일오버 수정-자동 반환' 명령 옵션의 설정을 수정해도 업그레이드 프로세스에 영향을 미치지 않습니다. ANDU 프로세스는 업데이트에 필요한 Takeover/Giveback 중 이 옵션의 사전 설정 값을 무시합니다. 예를 들어, ANDU를 시작하기 전에 '-automiveback'을 false로 설정하면 반환 전에 자동 업그레이드가 중단되지 않습니다.
+IMPORTANT: 자동 무중단 업그레이드(ANDU)를 시작하기 전에 명령 옵션 설정을 수정해도 `storage failover modify-auto-giveback` 업그레이드 프로세스에는 영향을 미치지 않습니다. ANDU 프로세스는 업데이트에 필요한 Takeover/Giveback 중 이 옵션의 사전 설정 값을 무시합니다. 예를 들어, ANDU를 시작하기 전에 false로 설정하면 `-autogiveback` 반환 전에 자동 업그레이드가 중단되지 않습니다. 에 대한 자세한 내용은 `storage failover modify-auto-giveback` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+failover+modify-auto-giveback["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .시작하기 전에
 * 당신은 해야 한다 link:prepare.html["업그레이드를 준비합니다"].
@@ -480,4 +480,7 @@ video::xwwX8vrrmIk[youtube,width=848,height=480]
 .관련 정보
 * https://aiq.netapp.com/["Active IQ Digital Advisor를 시작합니다"]
 * https://docs.netapp.com/us-en/active-iq/["Active IQ 디지털 자문 문서"]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+image["클러스터 이미지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=autosupport+invoke["AutoSupport 호출"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=metrocluster["MetroCluster"^]
 
