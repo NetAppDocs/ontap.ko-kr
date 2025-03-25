@@ -48,7 +48,7 @@ vs01    volume snapshot delete                 -         -
 
 NOTE: 제외된 구성 요소는 MAV로 보호되지 않으므로 관리자가 삭제하거나 이름을 바꿀 수 있습니다.
 
-기본적으로 규칙은 해당 을 지정합니다 `security multi-admin-verify request create _“protected_operation”_` 보호된 작업이 입력되면 명령이 자동으로 생성됩니다. 이 기본값을 수정하여 을 요구할 수 있습니다 `request create` 명령을 별도로 입력합니다.
+기본적으로 규칙은 보호된 작업이 입력될 때 해당 명령이 자동으로 생성되도록 `security multi-admin-verify request create _"protected_operation"_` 지정합니다. 명령을 별도로 입력하도록 이 기본값을 수정할 수 `request create` 있습니다.
 
 기본적으로 규칙별 예외를 지정할 수 있지만 규칙은 다음과 같은 전역 MAV 설정을 상속합니다.
 
@@ -95,7 +95,7 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 
 
 | 규칙을 만듭니다  a| 
-'Security multi-admin-verify rule create-operation_"protected_operation"_[-query_operation_subset_][_parameters_]'
+`security multi-admin-verify rule create -operation _"protected_operation"_ [-query _operation_subset_] [_parameters_]`
 
 
 
@@ -109,12 +109,12 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 
 
 | 규칙을 수정합니다  a| 
-'Security multi-admin-verify rule modify -operation_“protected_operation”_[_parameters_]'
+`security multi-admin-verify rule modify -operation _"protected_operation"_ [_parameters_]`
 
 
 
 | 규칙을 삭제합니다  a| 
-'Security multi-admin - verify rule delete - operation_“protected_operation” _'
+`security multi-admin-verify rule delete -operation _"protected_operation"_`
 
 
 

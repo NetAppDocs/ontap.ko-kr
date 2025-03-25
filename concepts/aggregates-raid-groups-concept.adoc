@@ -2,7 +2,7 @@
 permalink: concepts/aggregates-raid-groups-concept.html 
 sidebar: sidebar 
 keywords: aggregate, local tier, raid group, raid-dp, parity disk 
-summary: '최신 RAID 기술은 장애가 발생한 디스크의 데이터를 스페어 디스크에 재구축하여 디스크 장애로부터 보호합니다. 시스템은 "패리티 디스크"의 인덱스 정보를 나머지 정상 디스크에 있는 데이터와 비교하여 다운타임 또는 상당한 성능 비용 없이 누락된 데이터를 재구성합니다.' 
+summary: '최신 RAID 기술은 장애가 발생한 디스크의 데이터를 스페어 디스크에 재구축하여 디스크 장애로부터 보호합니다. 시스템은 "패리티 디스크"의 인덱스 정보를 나머지 정상 디스크의 데이터와 비교하여 가동 중지 시간이나 상당한 성능 비용 없이 누락된 데이터를 재구성합니다.' 
 ---
 = ONTAP RAID 그룹 및 로컬 계층
 :allow-uri-read: 

@@ -79,7 +79,7 @@ Warning: This operation requires multi-admin verification. To create a
 Error: command failed: The security multi-admin-verify request (index 3) is
        auto-generated and requires approval.
 ----
-** 보안 다중 관리 - 확인 요청은 "볼륨 삭제"를 생성합니다
+** `security multi-admin-verify request create "volume delete"`
 +
 [listing]
 ----

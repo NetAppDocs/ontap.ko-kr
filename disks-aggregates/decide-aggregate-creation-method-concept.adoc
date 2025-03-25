@@ -47,7 +47,7 @@ NOTE: ONTAP 9.11.1부터 System Manager를 사용하여 로컬 계층을 수동�
 * MetroCluster 시스템
 * SyncMirror
 * mSATA 디스크
-* FlashPool 계층
+* Flash Pool 계층
 * 노드에 여러 디스크 유형 또는 크기가 접속되어 있습니다
 
 

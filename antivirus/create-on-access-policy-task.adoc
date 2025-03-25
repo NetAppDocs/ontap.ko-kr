@@ -52,7 +52,7 @@ summary: 액세스 시 정책은 액세스 시 검사의 범위를 정의합니�
 +
 [listing]
 ----
-cluster1::> vserver vscan on-access-policy create -vserver vs1 -policy-name Policy1 -protocol CIFS -filters scan-ro-volume -max-file-size 3GB -file-ext-to-include “mp*”,"tx*" -file-ext-to-exclude "mp3","txt" -scan-files-with-no-ext false -paths-to-exclude "\vol\a b\","\vol\a,b\"
+cluster1::> vserver vscan on-access-policy create -vserver vs1 -policy-name Policy1 -protocol CIFS -filters scan-ro-volume -max-file-size 3GB -file-ext-to-include "mp*","tx*" -file-ext-to-exclude "mp3","txt" -scan-files-with-no-ext false -paths-to-exclude "\vol\a b\","\vol\a,b\"
 ----
 . 다음과 같이 on-access 정책이 생성되었는지 확인합니다. `vserver vscan on-access-policy show -instance _data_SVM|cluster_admin_SVM_ -policy-name _name_`
 +

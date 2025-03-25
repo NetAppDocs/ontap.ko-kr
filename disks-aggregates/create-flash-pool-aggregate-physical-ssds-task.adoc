@@ -36,7 +36,7 @@ SSD 캐시에 더 적은 RAID 그룹을 사용하면 필요한 패리티 디스�
 
 
 .단계
-System Manager 또는 ONTAP CLI를 사용하여 FlashPool 로컬 계층을 생성할 수 있습니다.
+System Manager 또는 ONTAP CLI를 사용하여 Flash Pool 로컬 계층을 생성할 수 있습니다.
 
 [role="tabbed-block"]
 ====
