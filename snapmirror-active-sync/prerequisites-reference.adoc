@@ -92,11 +92,11 @@ ASA
 
 
  a| 
-ASA(레거시) 1
+ASA 1
  a| 
 ASA r2
  a| 
-ASA(레거시)
+아니요
 
 |===
 . ASA가 지원하는 클러스터 유형에 대한 자세한 내용은 을 참조하십시오link:../asa/support-limitations.html["All-Flash SAN 어레이 구성 제한 및 지원"].

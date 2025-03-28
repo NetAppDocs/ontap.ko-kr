@@ -103,7 +103,7 @@ ONTAP 9.5부터 매개 변수를 사용하여 SnapMirror 동기식 관계에 대
 +
 [listing]
 ----
-cluster_dst::> snapmirror policy create -vserver svm1 -policy DR_compressed -type async-mirror -comment “DR with network compression enabled” -is-network-compression-enabled true
+cluster_dst::> snapmirror policy create -vserver svm1 -policy DR_compressed -type async-mirror -comment "DR with network compression enabled" -is-network-compression-enabled true
 ----
 +
 다음 예에서는 SnapVault에 대한 사용자 지정 복제 정책을 생성합니다.

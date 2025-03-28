@@ -21,7 +21,7 @@ null 세션 클라이언트가 사용할 그룹을 할당하고 null 세션 클�
 +
 [listing]
 ----
-vserver name-mapping create –direction win-unix  -position 1 –pattern “ANONYMOUS LOGON” –replacement user1 – hostname google.com
+vserver name-mapping create -direction win-unix  -position 1 -pattern "ANONYMOUS LOGON" -replacement user1 - hostname google.com
 ----
 +
 다음 명령을 실행하면 유효한 IP 주소가 10.238.2.54/32인 user1에 null 사용자가 매핑됩니다.
@@ -29,7 +29,7 @@ vserver name-mapping create –direction win-unix  -position 1 –pattern “ANO
 +
 [listing]
 ----
-vserver name-mapping create –direction win-unix  -position 2 –pattern “ANONYMOUS LOGON” –replacement user1 –address 10.238.2.54/32
+vserver name-mapping create -direction win-unix  -position 2 -pattern "ANONYMOUS LOGON" -replacement user1 -address 10.238.2.54/32
 ----
 . 이름 매핑을 확인하려면 'vserver name-mapping show' 명령을 사용하십시오.
 +

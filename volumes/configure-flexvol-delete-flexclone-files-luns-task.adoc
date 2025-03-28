@@ -13,7 +13,7 @@ summary: 볼륨의 여유 공간이 특정 임계값 아래로 감소할 경우 
 [role="lead"]
 볼륨의 여유 공간이 특정 임계값 아래로 감소할 경우 FlexVol volume에서 FlexClone 파일 및 FlexClone LUN을 자동으로 삭제하도록 설정할 수 있습니다.
 
-.필요한 것
+.시작하기 전에
 * FlexVol 볼륨은 FlexClone 파일과 FlexClone LUN을 포함해야 하며 온라인 상태여야 합니다.
 * FlexVol 볼륨은 읽기 전용 볼륨이 아니어야 합니다.
 

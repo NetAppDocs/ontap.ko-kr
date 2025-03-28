@@ -2,7 +2,7 @@
 permalink: data-protection/example-configure-vault-vault-cascade-task.html 
 sidebar: sidebar 
 keywords: example, configure, vault-vault, cascade 
-summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구체적으로 보여 주는 예가 나와 있습니다. 예제에 구성된 볼트-볼트 캐스케이드 배포를 사용하여 "my-weekly"라는 레이블이 붙은 251개 이상의 스냅샷을 보존할 수 있습니다.' 
+summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구체적으로 보여 주는 예가 나와 있습니다. 예제에 구성된 볼트-볼트 캐스케이드 배포를 사용하여 "y-weekly"라는 레이블이 붙은 251개 이상의 스냅샷을 보존할 수 있습니다.' 
 ---
 = 예: 볼트-볼트 계단식 배열 설정
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구�
 
 
 [role="lead"]
-한 번에 한 단계씩 복제 관계를 구성하는 방법을 구체적으로 보여 주는 예가 나와 있습니다. 예제에 구성된 볼트-볼트 캐스케이드 배포를 사용하여 "'my-weekly'" 레이블이 지정된 251개 이상의 스냅샷을 보존할 수 있습니다.
+한 번에 한 단계씩 복제 관계를 구성하는 방법을 구체적으로 보여 주는 예가 나와 있습니다. 이 예제에서 구성한 볼트-볼트 캐스케이드 배포를 사용하여 라벨이 붙은 251개 이상의 스냅샷을 보존할 수 `my-weekly` 있습니다.
 
-.필요한 것
+.시작하기 전에
 * 소스 및 타겟 클러스터와 SVM을 피어링해야 합니다.
 * ONTAP 9.2 이상을 실행해야 합니다. 볼트 볼트 볼트 계단식 전환은 이전 ONTAP 릴리즈에서 지원되지 않습니다.
 
@@ -21,31 +21,31 @@ summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구�
 .이 작업에 대해
 이 예제에서는 다음을 가정합니다.
 
-* 소스 클러스터에 SnapMirror ""mmy-daily"", "'my-weekly", "'my-monthly"" 레이블이 있는 스냅샷을 구성했습니다.
-* 2차 및 3차 대상 클러스터에서 ""VolA""라는 대상 볼륨을 구성했습니다.
-* 2차 및 3차 대상 클러스터에서 " my_snapvault "라는 복제 작업 일정을 구성했습니다.
+* 소스 클러스터에 SnapMirror 레이블, `my-weekly` 및 `my-monthly` 을 사용하여 스냅샷을 구성했습니다. `my-daily`
+* 2차 및 3차 대상 클러스터에 이라는 대상 볼륨을 구성했습니다. `volA`
+* 2차 및 3차 대상 클러스터에서 이름이 지정된 복제 작업 일정을 구성했습니다. `my_snapvault`
 
 
 이 예에서는 두 개의 사용자 지정 정책을 기반으로 복제 관계를 생성하는 방법을 보여 줍니다.
 
-* "SnapVault_secondary" 정책은 2차 대상 클러스터에 매일 7개, 매주 52개, 월별 180개의 스냅샷을 보존합니다.
-* "'SnapVault_TARRANTRY POLICY'는 3차 대상 클러스터에 주간 250개의 스냅샷을 보존합니다.
+* 이 `snapvault_secondary` 정책은 2차 대상 클러스터에 매일 7개, 주별 52개 및 월별 180개의 스냅샷을 보존합니다.
+* 는 `snapvault_tertiary policy` 3차 대상 클러스터에 매주 250개의 스냅샷을 보존합니다.
 
 
 .단계
-. 보조 대상 클러스터에서 "sapvault_secondary" 정책을 생성합니다.
+. 보조 대상 클러스터에서 정책을 생성합니다 `snapvault_secondary`.
 +
-"cluster_secondary::> SnapMirror 정책 create-policy snapvault_secondary-type vault-comment "볼트-볼트 캐스케이드까지의 보조 정책" -vserver svm_secondary"
+`cluster_secondary::> snapmirror policy create -policy snapvault_secondary -type vault -comment "Policy on secondary for vault to vault cascade" -vserver svm_secondary`
 
-. 2차 대상 클러스터에서 정책에 대한 "매일의" 규칙을 정의합니다.
+. 보조 대상 클러스터에서 정책에 대한 규칙을 정의합니다 `my-daily`.
 +
 'cluster_secondary::> snapmirror policy add-rule-policy snapvault_secondary-snapmirror-label my-daily-keep 7-vserver svm_secondary'
 
-. 보조 대상 클러스터에서 정책에 대한 "y-weekly" 규칙을 정의합니다.
+. 보조 대상 클러스터에서 정책에 대한 규칙을 정의합니다 `my-weekly`.
 +
 'cluster_secondary::> snapmirror policy add-rule-policy snapvault_secondary-snapmirror-label my-weekly-keep 52-vserver svm_secondary'
 
-. 보조 대상 클러스터에서 정책에 대한 "월간" 규칙을 정의합니다.
+. 보조 대상 클러스터에서 정책에 대한 규칙을 정의합니다 `my-monthly`.
 +
 'cluster_secondary::> SnapMirror 정책 add-rule-policy snapvault_secondary-snapmirror-label my-monthly-keep 180-vserver svm_secondary'
 
@@ -83,11 +83,11 @@ summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구�
 +
 'cluster_secondary::> snapmirror initialize-source-path svm_primary: VolA-destination-path svm_secondary: VolA'
 
-. 3차 대상 클러스터에서 "sapvault_Tertiary" 정책을 생성합니다.
+. 3차 대상 클러스터에서 `snapvault_tertiary` 정책을 생성합니다.
 +
-"cluster_tertiary::> SnapMirror 정책 create-policy snapvault_tertiary-type vault-comment "볼트-볼트 캐스케이드까지의 3차 정책" -vserver svm_tertiary"
+`cluster_tertiary::> snapmirror policy create -policy snapvault_tertiary -type vault -comment "Policy on tertiary for vault to vault cascade" -vserver svm_tertiary`
 
-. 3차 대상 클러스터에서 정책에 대한 "y-weekly" 규칙을 정의합니다.
+. 3차 대상 클러스터에서 정책에 대한 규칙을 정의합니다 `my-weekly`.
 +
 'cluster_tertiary::> SnapMirror 정책 add-rule-policy snapvault_tertiary-snapmirror-label my-weekly-keep 250-vserver svm_tertiary'
 
