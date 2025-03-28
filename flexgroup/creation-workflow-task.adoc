@@ -15,7 +15,7 @@ summary: 최적의 성능을 위한 모범 사례에 따라 ONTAP가 애그리�
 
 image:flexgroups-setup-workflow.gif["FlexGroup 볼륨 설정 워크플로우"]
 
-.필요한 것
+.시작하기 전에
 SVM에 대해 허용되는 프로토콜 목록에 NFS 및 SMB를 추가하여 SVM을 생성해야 합니다.
 
 .이 작업에 대해

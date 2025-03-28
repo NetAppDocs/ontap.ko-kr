@@ -108,7 +108,7 @@ NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정
 
 그렇게 하려면 SVM이 Active Directory로 인증되고 필요한 사용자 및 그룹 정보를 가져올 수 있도록 을 link:../authentication/enable-ad-users-groups-access-cluster-svm-task.html["SVM active-directory create 를 참조하십시오"]사용하십시오.
 
-또는 를 사용하여 link:..authentication/enable-ad-users-groups-access-cluster-svm-task.html["SVM CIFS 생성"]Active Directory 도메인에 SMB 서버를 생성합니다.
+또는 를 사용하여 link:../authentication/enable-ad-users-groups-access-cluster-svm-task.html["SVM CIFS 생성"]Active Directory 도메인에 SMB 서버를 생성합니다.
 
 조회 실패를 방지하려면 NetApp UPN 형식의 리소스 인증에 신뢰할 수 있는 도메인을 사용하는 것이 좋습니다. `nasgroup/group@trusted_domain.com`
 

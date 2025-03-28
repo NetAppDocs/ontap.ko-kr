@@ -13,7 +13,7 @@ summary: ONTAP 9.3부터는 현재 필요한 공간에 따라 FlexGroup 볼륨�
 [role="lead"]
 ONTAP 9.3부터는 현재 필요한 공간에 따라 FlexGroup 볼륨이 자동으로 증가 및 축소되도록 구성할 수 있습니다.
 
-.필요한 것
+.시작하기 전에
 FlexGroup 볼륨이 온라인 상태여야 합니다.
 
 .이 작업에 대해

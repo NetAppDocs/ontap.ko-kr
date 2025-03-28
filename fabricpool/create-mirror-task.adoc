@@ -13,7 +13,7 @@ summary: FabricPool 미러를 생성하려면 두 개의 오브젝트 저장소�
 [role="lead"]
 FabricPool 미러를 생성하려면 두 개의 오브젝트 저장소를 단일 FabricPool에 연결합니다. 두 번째 개체 저장소를 기존 단일 개체 저장소 FabricPool 구성에 연결하여 FabricPool 미러를 만들거나, 새 단일 개체 저장소 FabricPool 구성을 만든 다음 두 번째 개체 저장소를 연결할 수 있습니다. MetroCluster 구성에서 FabricPool 미러를 생성할 수도 있습니다.
 
-.필요한 것
+.시작하기 전에
 * 'Storage aggregate object-store config' 명령을 사용하여 이미 두 개의 오브젝트 저장소를 만들어야 합니다.
 * MetroCluster 구성에서 FabricPool 미러를 생성하는 경우
 +

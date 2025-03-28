@@ -95,6 +95,10 @@ http와 ontapi 애플리케이션은 서비스 프로세서 인프라, ONTAP API
 IDP_Uri는 IDP 메타데이터를 다운로드할 수 있는 IDP 호스트의 FTP 또는 HTTP 주소입니다.
 
 +
+
+NOTE: 물음표(`?`)는 명령줄 활성 도움말을 활성화합니다. URI의 일부로 물음표를 입력하려면 명령으로 활성 도움말을 사용하지 않도록 설정해야 `set -active-help false` 합니다. 나중에 명령을 사용하여 활성 도움말을 다시 활성화할 수 `set -active-help true` 있습니다. 에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 'ontap_host_name'은 SAML 서비스 공급자 호스트의 호스트 이름 또는 IP 주소이며, 이 경우 ONTAP 시스템입니다. 기본적으로 클러스터 관리 LIF의 IP 주소가 사용됩니다.
 
 +
