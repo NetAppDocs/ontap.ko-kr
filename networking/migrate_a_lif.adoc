@@ -4,7 +4,7 @@ permalink: networking/migrate_a_lif.html
 keywords: move the lif, change lif port, migrate a lif, migrate a LIF to a different port on the same node or a different node within the cluster 
 summary: LIF를 동일한 노드의 다른 포트 또는 클러스터 내의 다른 노드로 마이그레이션합니다 
 ---
-= LIF 마이그레이션
+= ONTAP LIF 마이그레이션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

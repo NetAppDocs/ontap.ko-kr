@@ -4,7 +4,7 @@ permalink: networking/create_an_snmp_community_and_assigning_it_to_a_lif.html
 keywords: create, creation, creating, add, adding, snmp, community, assign, assigning, lif, logical, interface, create an snmp community and assigning it to a lif, snmpwalk, snmpget, snmp community add 
 summary: 관리 스테이션과 SVM 간 인증 메커니즘 역할을 하는 SNMP 커뮤니티를 생성합니다 
 ---
-= SNMP 커뮤니티를 생성하여 LIF에 할당합니다
+= ONTAP 네트워크용 SNMP 커뮤니티를 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

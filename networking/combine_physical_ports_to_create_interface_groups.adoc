@@ -4,7 +4,7 @@ permalink: networking/combine_physical_ports_to_create_interface_groups.html
 keywords: combine, ports, ifgrp, interface, group, create, creating, add, adding, types, single-mode, single, mode, static, dynamic, multimode, best, practice, port-based, port, based, load, balance, balancing, ip, address, mac, sequential, remove, removing, delete, deleting, combine physical ports to create interface groups, interface group types, characteristics of single-mode interface groups, characteristics of static multimode interface groups, dynamic multimode interface group, load balancing in multimode interface groups, port-based load balancing, ip address and mac address load balancing, sequential load balancing, create an interface group, add a port to an interface group, remove a port from an interface group, delete an interface group 
 summary: 두 개 이상의 물리적 포트를 단일 논리 포트로 결합하여 인터페이스 그룹을 생성합니다 
 ---
-= 물리적 포트를 결합하여 인터페이스 그룹을 생성합니다
+= 물리적 포트를 결합하여 ONTAP 인터페이스 그룹을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -247,7 +247,7 @@ interface group을 생성하기 위해 'network port ifgrp create' 명령어를 
 
 'network port ifgrp add-port'를 참조하십시오
 
-에 대한 자세한 내용은 `network port ifgrp add-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 에 대한 자세한 내용은 `network port ifgrp add-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `network port ifgrp add-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 다음 예에서는 a0a라는 인터페이스 그룹에 e0c 포트를 추가하는 방법을 보여줍니다.
 
@@ -290,6 +290,8 @@ ONTAP 9.8부터 인터페이스 그룹은 인터페이스 그룹에 첫 번째 �
 
 'network port ifgrp remove-port
 
+에 대한 자세한 내용은 `network port ifgrp remove-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-remove-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 다음 예는 a0a라는 인터페이스 그룹에서 포트 e0c를 제거하는 방법을 보여줍니다.
 
 'network port ifgrp remove-port-node_cluster-1-01_-ifgrp_a0a_-port_e0c_'
@@ -329,7 +331,7 @@ ONTAP 9.8부터 인터페이스 그룹은 인터페이스 그룹에 첫 번째 �
 .단계
 interface group을 삭제하려면 network port ifgrp delete 명령을 사용한다.
 
-에 대한 자세한 내용은 `network port ifgrp delete` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 에 대한 자세한 내용은 `network port ifgrp delete` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `network port ifgrp delete` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 다음 예에서는 a0b라는 인터페이스 그룹을 삭제하는 방법을 보여줍니다.
 

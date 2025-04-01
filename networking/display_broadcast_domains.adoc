@@ -4,7 +4,7 @@ permalink: networking/display_broadcast_domains.html
 keywords: display, view, show, broadcast, domain, display broadcast domains, view a list of broadcast domains within each ipspace in a cluster 
 summary: 클러스터 내 각 IPspace 내의 브로드캐스트 도메인 목록을 봅니다 
 ---
-= 브로드캐스트 도메인 표시(ONTAP 9.8 이상)
+= ONTAP 브로드캐스트 도메인을 봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,9 @@ summary: 클러스터 내 각 IPspace 내의 브로드캐스트 도메인 목록
 
 [role="lead"]
 클러스터의 각 IPspace 내에서 브로드캐스트 도메인 목록을 표시할 수 있습니다. 출력에는 각 브로드캐스트 도메인의 포트 목록과 MTU 값도 표시됩니다.
+
+
+NOTE: 브로드캐스트 도메인을 표시하는 절차는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에 브로드캐스트 도메인을 표시해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/display_broadcast_domains97.html["브로드캐스트 도메인 표시(ONTAP 9.7 이하)"^].
 
 .단계
 클러스터의 브로드캐스트 도메인 및 관련 포트를 표시합니다.
@@ -58,4 +61,6 @@ Name    Domain Name  MTU   Port List             Status Details
 Default Default-1   1500
                            cluster-1-02:e0g       error
 ....
-자세한 내용은 를 https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-show.html["네트워크 포트 브로드캐스트 - 도메인 표시"^]
+

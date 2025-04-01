@@ -4,7 +4,7 @@ permalink: networking/display_interface_group_information_cluster_administrators
 keywords: 'display, view, show, interface, group, information, display interface group information (cluster administrators only), verify interface group configuration, network port ifgrp show' 
 summary: 인터페이스 그룹 구성을 확인합니다 
 ---
-= 인터페이스 그룹 정보 표시(클러스터 관리자만 해당)
+= ONTAP 인터페이스 그룹 정보를 봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

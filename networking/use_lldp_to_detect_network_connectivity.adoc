@@ -4,7 +4,7 @@ permalink: networking/use_lldp_to_detect_network_connectivity.html
 keywords: display, view, show, network, connectivity, neighbor, discovery, protocol, ndp, link, layer, lldp, use lldp to detect network connectivity, enable or disable lldp, view lldp neighbor information, adjust the interval for transmitting lldp advertisements 
 summary: LLDP를 사용하여 네트워크 연결을 탐지하는 작업은 배포 고려 사항을 검토하고, 모든 포트에서 활성화하고, 인접 장치를 보고, 필요에 따라 LLDP 구성 값을 조정하는 것으로 구성됩니다. 
 ---
-= LLDP를 사용하여 네트워크 연결을 감지합니다
+= LLDP를 사용하여 ONTAP 네트워크 연결을 검색합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/change_the_mtu_value_for_ports_in_a_broadcast_domain.html
 keywords: modify, modifying, mtu, mtu_value, change, changing, broadcast, domain, ports, port, change the mtu value for ports in a broadcast domain 
 summary: 브로드캐스트 도메인의 MTU 값을 수정하여 브로드캐스트 도메인의 모든 포트에 대해 해당 값을 변경합니다 
 ---
-= 브로드캐스트 도메인의 포트에 대한 MTU 값 변경(ONTAP 9.8 이상)
+= ONTAP 브로드캐스트 도메인의 포트에 대한 MTU 값을 변경합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,9 @@ summary: 브로드캐스트 도메인의 MTU 값을 수정하여 브로드캐스
 
 [role="lead"]
 브로드캐스트 도메인의 MTU 값을 수정하여 해당 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경할 수 있습니다. 이 작업은 네트워크에서 수행된 토폴로지 변경을 지원하기 위해 수행할 수 있습니다.
+
+
+NOTE: 브로드캐스트 도메인 포트의 MTU 값을 변경하는 절차는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에서 브로드캐스트 도메인 포트의 MTU 값을 변경해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/change_the_mtu_value_for_ports_in_a_broadcast_domain97.html["브로드캐스트 도메인의 포트에 대한 MTU 값 변경(ONTAP 9.7 이하)"^].
 
 .시작하기 전에
 MTU 값은 e0M 포트 처리 관리 트래픽을 제외하고 해당 계층 2 네트워크에 연결된 모든 장치와 일치해야 합니다.
@@ -38,3 +41,6 @@ network port broadcast-domain modify -broadcast-domain <Default-1> -mtu < 9000 >
 Warning: Changing broadcast domain settings will cause a momentary data-serving interruption.
 Do you want to continue? {y|n}: <y>
 ....
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-modify.html["네트워크 포트 브로드캐스트 - 도메인 수정"^]
+

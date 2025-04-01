@@ -4,7 +4,7 @@ permalink: networking/display_lif_information.html
 keywords: display, view, show, lif, logical, interface, display lif information, view detailed information about a lif to determine its configuration 
 summary: LIF에 대한 자세한 정보를 보고 해당 구성을 결정하십시오 
 ---
-= LIF 정보를 표시합니다
+= ONTAP LIF 정보 를 참조하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

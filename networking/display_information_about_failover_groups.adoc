@@ -4,7 +4,7 @@ permalink: networking/display_information_about_failover_groups.html
 keywords: display, view, show, failover, fail, over, groups, display information about failover groups, view information about failover groups, network interface failover-groups show, network interface failover-groups show, network interface show 
 summary: 페일오버 그룹에 대한 정보를 봅니다 
 ---
-= 페일오버 그룹에 대한 정보를 표시합니다
+= ONTAP 페일오버 그룹 정보를 봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

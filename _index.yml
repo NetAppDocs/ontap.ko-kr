@@ -60,10 +60,8 @@ indexpage:
       url: "/network-management/index.html"
     - title: System Manager를 사용한 네트워크 시각화
       url: "/networking/networking_reference.html"
-    - title: CLI를 사용하여 ONTAP 9.8 이상에 대한 NAS 경로 장애 조치를 설정합니다
+    - title: ONTAP 네트워크의 NAS 페일오버에 대해 알아봅니다
       url: "/networking/set_up_nas_path_failover_98_and_later_cli.html"
-    - title: CLI를 사용하여 ONTAP 9.7 이하에 대한 NAS 경로 페일오버 설정
-      url: "/networking/set_up_nas_path_failover_9_to_97_cli.html"
   - title: NAS 스토리지 관리
     links:
     - title: 모든 항목

@@ -4,7 +4,7 @@ permalink: networking/delete_a_lif.html
 keywords: 'remove a lif, destroy a lif, delete, deleting, remove, removing, logical, interface, lif, delete a lif, delete a network interface (lif) that is no longer required, network interface delete' 
 summary: '더 이상 필요하지 않은 네트워크 인터페이스(LIF)를 삭제합니다' 
 ---
-= LIF를 삭제합니다
+= ONTAP LIF를 삭제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

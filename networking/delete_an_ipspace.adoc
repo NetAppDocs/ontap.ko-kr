@@ -4,7 +4,7 @@ permalink: networking/delete_an_ipspace.html
 keywords: delete, deleting, remove, removing, ipspace, delete an ipspace, remove unneeded ipspaces 
 summary: 불필요한 IPspace를 제거합니다 
 ---
-= IPspace 삭제
+= ONTAP 네트워크에서 IPspace를 삭제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

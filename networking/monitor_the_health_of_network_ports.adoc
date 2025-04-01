@@ -4,7 +4,7 @@ permalink: networking/monitor_the_health_of_network_ports.html
 keywords: monitor, monitoring, manage, managing, automatic, health, port, monitor the health of network ports, automatic health monitoring and a set of health monitors help you identify network ports that might not be suitable for hosting lifs, network options port-health-monitor modify 
 summary: 자동 상태 모니터링과 상태 모니터 세트를 사용하면 LIF 호스팅에 적합하지 않을 수 있는 네트워크 포트를 식별할 수 있습니다 
 ---
-= 네트워크 포트의 상태를 모니터링합니다
+= ONTAP 네트워크 포트의 상태를 모니터링합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/delete_a_static_route.html
 keywords: delete, deleting, remove, removing, static, route, delete a static route, remove an unneeded static route from an svm, network route delete 
 summary: SVM에서 불필요한 정적 경로를 제거합니다 
 ---
-= ONTAP에서 정적 라우트를 삭제합니다
+= ONTAP 네트워크에서 정적 라우트를 삭제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

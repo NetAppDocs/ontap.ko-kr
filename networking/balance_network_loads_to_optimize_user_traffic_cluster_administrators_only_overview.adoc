@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: networking/balance_network_loads_to_optimize_user_traffic_cluster_administrators_only_overview.html 
-keywords: balance, balanced, load, utilization, usage, lif, port, cluster, performance 
+keywords: balance, balanced, load, utilization, usage, lif, port, cluster, performance, optimize ontap network traffic using dns load balancing 
 summary: 적절하게 로드된 LIF의 클라이언트 요청을 처리하도록 클러스터를 구성합니다. 
 ---
-= 밸런스 네트워크 개요
+= DNS 로드 밸런싱을 사용하여 ONTAP 네트워크 트래픽을 최적화합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/manage_the_hosts_table_cluster_administrators_only.html
 keywords: snmp, monitor, monitoring, troubleshooting, error detection, traps, hosts, host, table, add, modify, change, create, delete, vserver services name-service dns hosts 
 summary: 관리 SVM의 호스트 테이블에서 호스트 이름 항목을 관리합니다 
 ---
-= 호스트 테이블 관리(클러스터 관리자만 해당)
+= ONTAP hosts 테이블을 관리하는 ONTAP 명령
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

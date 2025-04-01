@@ -4,7 +4,7 @@ permalink: networking/configure_vlans_over_physical_ports.html
 keywords: configure, configuration, configuring, setup, setting, set, up, vlans, virtual local area network, physical, port, logical, segmentation, configure vlans over physical ports, vlans provide logical segmentation of networks, create a vlan, network port vlan create, delete a vlan, network port vlan delete 
 summary: ONTAP의 VLAN을 사용하여 물리적 경계에 정의된 기존 브로드캐스트 도메인과 달리 스위치 포트 단위로 정의된 별도의 브로드캐스트 도메인을 생성하여 네트워크의 논리적 분할을 제공할 수 있습니다. 
 ---
-= 물리적 포트를 통해 VLAN을 구성합니다
+= 물리적 포트를 통해 ONTAP VLAN을 구성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -94,7 +94,7 @@ network port vlan create -node cluster-1-01 -vlan-name e1c-80
 ....
 ONTAP 9.8부터 VLAN은 생성 후 1분 정도 적절한 브로드캐스트 도메인에 자동으로 배치됩니다. ONTAP가 이 작업을 수행하지 않고 수동으로 VLAN을 브로드캐스트 도메인에 배치하려는 경우 "VLAN create" 명령의 일부로 '-skip-broadcast-domain-placement' 매개 변수를 지정합니다.
 
-에 대한 자세한 내용은 `vlan create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vlan+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `vlan create` link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 ====

@@ -4,7 +4,7 @@ permalink: networking/add_broadcast_domain.html
 keywords: broadcast, domain, adding, add, network, ports, cluster, svm, IPspace, mtu 
 summary: 브로드캐스트 도메인은 동일한 계층 2 네트워크에 속한 클러스터의 네트워크 포트를 그룹화합니다. 그런 다음 SVM에서 포트를 사용할 수 있습니다. 
 ---
-= 브로드캐스트 도메인을 추가합니다
+= ONTAP 브로드캐스트 도메인을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,10 @@ summary: 브로드캐스트 도메인은 동일한 계층 2 네트워크에 속�
 [role="lead"]
 브로드캐스트 도메인은 동일한 계층 2 네트워크에 속한 클러스터의 네트워크 포트를 그룹화합니다. 그런 다음 SVM에서 포트를 사용할 수 있습니다.
 
-ONTAP 9.8부터는 클러스터 생성 또는 연결 작업 중에 브로드캐스트 도메인이 자동으로 생성됩니다. ONTAP 9.12.0부터는 자동으로 생성된 브로드캐스트 도메인 외에도 시스템 관리자에서 수동으로 브로드캐스트 도메인을 추가할 수 있습니다.
+브로드캐스트 도메인은 클러스터 생성 또는 연결 작업 중에 자동으로 생성됩니다. ONTAP 9.12.0부터는 자동으로 생성된 브로드캐스트 도메인 외에도 시스템 관리자에서 수동으로 브로드캐스트 도메인을 추가할 수 있습니다.
+
+
+NOTE: 브로드캐스트 도메인을 만드는 절차는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에서 브로드캐스트 도메인을 만들어야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/create_a_broadcast_domain97.html["브로드캐스트 도메인 생성(ONTAP 9.7 이하)"^].
 
 .시작하기 전에
 브로드캐스트 도메인에 추가할 포트는 다른 브로드캐스트 도메인에 속하지 않아야 합니다. 사용하려는 포트가 다른 브로드캐스트 도메인에 속하지만 사용되지 않는 경우 원래 브로드캐스트 도메인에서 해당 포트를 제거합니다.
@@ -50,9 +53,9 @@ ONTAP 9.8부터는 클러스터 생성 또는 연결 작업 중에 브로드캐�
 --
 .CLI를 참조하십시오
 --
-ONTAP 9.7 이하에서는 브로드캐스트 도메인을 수동으로 생성할 수 있습니다.
-
 ONTAP 9.8 이상을 사용 중인 경우, 레이어 2 접근성에 따라 브로드캐스트 도메인이 자동으로 생성됩니다. 자세한 내용은 을 참조하십시오 link:repair_port_reachability.html["수리 포트 도달 가능성"].
+
+브로드캐스트 도메인을 수동으로 만들 수도 있습니다.
 
 .단계
 . 브로드캐스트 도메인에 현재 할당되지 않은 포트 보기:
@@ -97,6 +100,10 @@ ONTAP 9.8 이상을 사용 중인 경우, 레이어 2 접근성에 따라 브로
 서브넷을 생성하여 브로드캐스트 도메인에서 사용할 IP 주소 풀을 정의하거나, 현재 IPspace에 SVM 및 인터페이스를 할당할 수 있습니다. 자세한 내용은 을 link:../peering/index.html["클러스터 및 SVM 피어링"]참조하십시오.
 
 기존 브로드캐스트 도메인의 이름을 변경해야 할 경우 'network port broadcast-domain rename' 명령어를 사용한다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-create.html["네트워크 포트 브로드캐스트 - 도메인 생성"^]
+
 
 --
 ====

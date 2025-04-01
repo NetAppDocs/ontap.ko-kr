@@ -4,7 +4,7 @@ permalink: networking/ontap_internal_ports.html
 keywords: port, tcp, udp, ontap, internal, internally, ontap internal ports, port list, tcp ports, udp ports, port to establish intracluster lif communication, syslog, rpc 
 summary: ONTAP에서 내부적으로 사용되는 TCP 포트 및 UDP 포트입니다 
 ---
-= ONTAP 내부 포트
+= ONTAP 내부 포트에 대해 알아봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

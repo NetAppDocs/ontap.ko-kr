@@ -4,7 +4,7 @@ permalink: networking/modify_mtu_setting_for_interface_group_ports.html
 keywords: modify, modifying, change, changing, mtu, modify mtu setting for interface group ports, modify the mtu of the broadcast domain 
 summary: 브로드캐스트 도메인의 MTU를 수정합니다 
 ---
-= 인터페이스 그룹 포트에 대한 MTU 설정을 수정합니다
+= ONTAP 인터페이스 그룹 포트에 대한 MTU 설정을 수정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

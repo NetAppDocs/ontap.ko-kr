@@ -4,7 +4,7 @@ permalink: networking/display_qos_marking_values.html
 keywords: qos, quality, service, marking, ipspace, display, show, display qos marking values, display the qos marking values for different protocols, by ipspace, network qos-marking show 
 summary: IPspace별로 다양한 프로토콜에 대한 QoS 마킹 값을 표시한다 
 ---
-= QoS 표시 값을 표시합니다
+= ONTAP 네트워크 QoS 표시 값을 확인합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

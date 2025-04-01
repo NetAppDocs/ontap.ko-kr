@@ -4,7 +4,7 @@ permalink: networking/modify_network_port_attributes.html
 keywords: change, changing, modify, modifying, network, port, attributes, modify network port attributes, change the autonegotiation, duplex, flow control, speed, and health settings of a physical network port 
 summary: 물리적 네트워크 포트의 자동 협상, 이중, 흐름 제어, 속도 및 상태 설정을 변경합니다 
 ---
-= 네트워크 포트 속성을 수정합니다
+= ONTAP 네트워크 포트 특성을 수정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/modify_qos_marking_values.html
 keywords: change, changing, modify, modifying, qos, quality, service, marking, performance, modify qos marking values, change the qos marking values for different protocols, network qos-marking modify 
 summary: 다른 프로토콜에 대한 QoS 표시 값을 변경합니다 
 ---
-= QoS 표시 값을 수정합니다
+= ONTAP 네트워크 QoS 표시 값을 수정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

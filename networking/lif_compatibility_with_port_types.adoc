@@ -4,7 +4,7 @@ permalink: networking/lif_compatibility_with_port_types.html
 keywords: lif, compatibility, port, types, lif compatibility with port types 
 summary: LIF는 다양한 포트 유형을 지원하는 다양한 특성을 가질 수 있습니다 
 ---
-= LIF가 포트 유형과 호환됩니다
+= 포트 유형별 ONTAP LIF 호환성에 대해 알아보십시오
 :allow-uri-read: 
 :nofooter: 
 :icons: font

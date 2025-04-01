@@ -4,7 +4,7 @@ permalink: networking/enable_multipath_routing.html
 keywords: enable, multipath, routing, load balance, available routes, network, traffic, outgoing traffic, ECMP routing, multipath routing, network options, advanced privilege level, cluster, nodes, metrics 
 summary: 로드 밸런싱을 위해 다중 경로 라우팅을 활성화하고 사용 가능한 모든 경로를 사용합니다 
 ---
-= 다중 경로 라우팅 활성화
+= ONTAP 네트워크에 대해 다중 경로 라우팅을 활성화합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

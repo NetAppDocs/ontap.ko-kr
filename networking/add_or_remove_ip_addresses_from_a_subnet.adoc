@@ -4,7 +4,7 @@ permalink: networking/add_or_remove_ip_addresses_from_a_subnet.html
 keywords: adding, add, create, creating, remove, removing, delete, deleting, ip, internet, protocol, address, addresses, subnet, add or remove ip addresses from a subnet, force update lif associations, network subnet add ranges, network subnet remove ranges 
 summary: 서브넷을 생성할 때 IP 주소를 추가하거나 기존 서브넷에 IP 주소를 추가하거나 제거합니다 
 ---
-= ONTAP의 서브넷에서 IP 주소를 추가하거나 제거합니다
+= ONTAP 네트워크의 서브넷에서 IP 주소를 추가하거나 제거합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -69,7 +69,7 @@ IP 주소를 서브넷에 추가합니다
 네트워크 서브넷 remove-range
 
 |===
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+이 절차에서 설명하는 명령 또는 link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-remove-ranges.html["네트워크 서브넷 범위를 제거합니다"^]명령에 대해 자세히 link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-add-ranges.html["네트워크 서브넷 추가 범위"^]알아보십시오.
 
 다음 명령을 실행하면 서브넷 sub1에 IP 주소 192.0.2.82 ~ 192.0.2.85 가 추가됩니다.
 

@@ -4,7 +4,7 @@ permalink: networking/ipsec-configure.html
 keywords: ip security, ipsec, data-in-motion, in-flight, encryption, security ipsec config show, ipsec config modify, ipsec config show, security ipsec policy create, local-ports, remote-ports, spd, security policy database,ipsec identities 
 summary: ONTAP 클러스터에서 IPsec 전송 중 암호화를 구성하고 활성화하려면 몇 가지 작업을 수행해야 합니다. 
 ---
-= ONTAP에서 IP 보안을 구성합니다
+= ONTAP 네트워크에 대한 IP 보안을 구성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -23,7 +23,7 @@ LDAP 그룹을 구성하고 그룹 액세스를 위해 빠른 바인딩 모드�
 
 . S3 서버가 포함된 S3 사용 스토리지 VM이 생성되었습니다. 을 참조하십시오 link:../s3-config/create-svm-s3-task.html["S3를 위해 SVM을 생성합니다"].
 . 해당 스토리지 VM에 버킷이 생성되었습니다. 을 참조하십시오 link:../s3-config/create-bucket-task.html["버킷을 만듭니다"].
-. 스토리지 VM에 DNS가 구성되어 있다. 을 참조하십시오 link:../networking/configure_dns_services_manual.html["DNS 서비스를 구성합니다"].
+. 스토리지 VM에 DNS가 구성되어 있다. 을 link:../networking/configure_dns_services_auto.html["DNS 서비스를 구성합니다"]참조하십시오.
 . LDAP 서버의 자체 서명된 루트 CA(인증 기관) 인증서가 스토리지 VM에 설치되어 있습니다. 을 참조하십시오 link:../nfs-config/install-self-signed-root-ca-certificate-svm-task.html["SVM에 자체 서명된 루트 CA 인증서를 설치합니다"].
 . LDAP 클라이언트는 SVM에서 TLS를 사용하도록 구성했습니다. 을 참조하십시오 link:../nfs-config/create-ldap-client-config-task.html["LDAP 클라이언트 구성을 생성합니다"] 및 link:../nfs-config/enable-ldap-svms-task.html["정보를 위해 LDAP 클라이언트 구성을 SVM에 연결합니다"].
 

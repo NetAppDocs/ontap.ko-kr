@@ -4,7 +4,7 @@ permalink: networking/display_lifs_in_a_load_balancing_zone.html
 keywords: display, view, show, lif, logical, interface, load, balancing, zone, balance, performance, display lifs in a load balancing zone, verify whether a load balancing zone is configured correctly by displaying all of the lifs that belong to it, examples of displaying load balancing zones for lifs 
 summary: 로드 밸런싱 존에 속하는 모든 LIF를 표시하여 로드 밸런싱 존이 올바르게 구성되었는지 확인합니다 
 ---
-= 로드 밸런싱 영역에 LIF를 표시합니다
+= 로드 밸런싱 존에서 ONTAP LIF를 확인하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

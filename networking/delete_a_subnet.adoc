@@ -4,7 +4,7 @@ permalink: networking/delete_a_subnet.html
 keywords: delete, deleting, remove, removing, subnet, deallocate, ip, address, delete a subnet, remove unneeded subnets and deallocate the associated ip addresses 
 summary: 불필요한 서브넷을 제거하고 관련 IP 주소를 할당 취소합니다 
 ---
-= 서브넷을 삭제합니다
+= ONTAP 네트워크에서 서브넷을 삭제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

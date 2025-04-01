@@ -4,7 +4,7 @@ permalink: networking/create_a_lif.html
 keywords: example LIFs, add LIFs, configure LIFs, create, creation, creating, add, adding, logical, interface, service, policies, policy, create a lif, network interface capacity show, lif examples 
 summary: 물리적 또는 논리적 포트와 연결된 IP 주소인 LIF를 생성합니다. 
 ---
-= ONTAP에서 LIF(네트워크 인터페이스)를 생성합니다
+= ONTAP LIF를 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/create_a_static_route.html
 keywords: create, creation, creating, add, adding, static, route, svm, traffic, network, create a static route, network route create 
 summary: SVM 내에서 정적 경로를 생성하여 LIF가 아웃바운드 트래픽에 네트워크를 사용하는 방법을 제어합니다 
 ---
-= 정적 배관을 작성합니다
+= ONTAP 네트워크에 대한 정적 라우트를 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/configure_lifs_cluster_administrators_only_overview.html
 keywords: configure, configuring, configuration, setup, set, up, introducing, introduction, overview, introducing lif configuration, configure lifs 
 summary: LIF 구성을 소개합니다 
 ---
-= LIF 개요 구성
+= ONTAP 클러스터의 LIF 구성에 대해 자세히 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -52,7 +52,7 @@ LIF 페일오버는 LIF가 홈 노드 또는 포트에서 HA 파트너 노드 �
 LIF 페일오버 및 기브백의 경우 각 노드의 포트는 동일한 브로드캐스트 도메인에 속해야 합니다. 각 노드의 관련 포트가 동일한 브로드캐스트 도메인에 속해 있는지 확인하려면 다음을 참조하십시오.
 
 * ONTAP 9.8 이상: link:../networking/repair_port_reachability.html["수리 포트 도달 가능성"]
-* ONTAP 9.7 이하: link:../networking/add_or_remove_ports_from_a_broadcast_domain97.html["브로드캐스트 도메인에서 포트를 추가하거나 제거합니다"]
+* ONTAP 9.7 이하: link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/add_or_remove_ports_from_a_broadcast_domain97.html["브로드캐스트 도메인에서 포트를 추가하거나 제거합니다"^]
 
 
 LIF 페일오버가 사용되도록 설정된 LIF의 경우(자동 또는 수동) 다음이 적용됩니다.
@@ -60,7 +60,7 @@ LIF 페일오버가 사용되도록 설정된 LIF의 경우(자동 또는 수동
 * 데이터 서비스 정책을 사용하는 LIF의 경우 페일오버 정책 제한 사항을 확인할 수 있습니다.
 +
 ** ONTAP 9.6 이상: link:lifs_and_service_policies96.html["ONTAP 9.6 이상의 LIF 및 서비스 정책"]
-** ONTAP 9.5 이하: link:lif_roles95.html["ONTAP 9.5 이전 버전에서 LIF 역할"]
+** ONTAP 9.5 이하: link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking/lif_roles95.html["ONTAP 9.5 이전 버전에서 LIF 역할"]
 
 
 * LIF 자동 되돌리기는 자동 되돌리기가 로 설정된 경우 발생합니다 `true` LIF의 홈 포트가 정상 상태이고 LIF를 호스팅할 수 있는 경우,

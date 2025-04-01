@@ -4,7 +4,7 @@ permalink: networking/delete_a_broadcast_domain.html
 keywords: 'delete, deleting, remove, removing, broadcast, domain, delete a broadcast domain, delete unnecessary broadcast domains; this moves associated ports to the "default" IPspace' 
 summary: '불필요한 브로드캐스트 도메인을 삭제합니다. 그러면 연결된 포트가 "기본" IPspace로 이동합니다' 
 ---
-= 브로드캐스트 도메인을 삭제합니다
+= ONTAP 브로드캐스트 도메인을 삭제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -52,6 +52,10 @@ summary: '불필요한 브로드캐스트 도메인을 삭제합니다. 그러�
 다음 명령을 실행하면 IPspace ipspac1에서 브로드캐스트 도메인 Default-1이 삭제됩니다.
 
 'network port broadcast-domain delete-broadcast-domain_Default-1_-IPSpace_ipspace1_'
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-delete.html["네트워크 포트 브로드캐스트 - 도메인 삭제"^]
+
 
 --
 ====

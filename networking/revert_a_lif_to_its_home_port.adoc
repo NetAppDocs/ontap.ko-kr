@@ -4,7 +4,7 @@ permalink: networking/revert_a_lif_to_its_home_port.html
 keywords: revert, home, port, home port, lif, logical, interface, migrate, migration, migrating, reverting, reversion, manual, manually, automatic, automatically, auto-revert, revert a lif to its home port, revert a lif to its home port after it fails over or is migrated, network interface revert, network interface modify 
 summary: 페일오버되거나 마이그레이션된 후 LIF를 홈 포트로 되돌립니다 
 ---
-= LIF를 홈 포트로 되돌립니다
+= ONTAP 노드 페일오버 또는 포트 마이그레이션 후에 LIF를 홈 포트로 되돌립니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/create_ipspaces.html
 keywords: create, creation, creating, add, adding, ipspace, create ipspaces, ipspace create, ipspace show, create ipspaces, ipspace create, broadcast-domain move 
 summary: 클러스터에서 각 SVM을 위한 IPspace 생성 
 ---
-= IPspace 생성
+= ONTAP 네트워크용 IPspace를 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

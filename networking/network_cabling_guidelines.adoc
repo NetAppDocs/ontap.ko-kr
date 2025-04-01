@@ -4,7 +4,7 @@ permalink: networking/network_cabling_guidelines.html
 keywords: network, cable, wire, cabling, wiring, best practice, best practices, intracluster, interconnect, traffic, network cabling guidelines, management, data, network cabling, network cabling best practices, network cabling diagram 
 summary: 네트워크 케이블 연결 모범 사례 
 ---
-= 네트워크 케이블 연결 지침
+= ONTAP 네트워크 케이블 연결에 대한 모범 사례
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

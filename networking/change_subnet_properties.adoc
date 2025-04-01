@@ -4,7 +4,7 @@ permalink: networking/change_subnet_properties.html
 keywords: change, changing, modify, modifying, gateway, ip, address, internet, protocol, mask, value, subnet, address, range, property, properties, change subnet properties, network subnet modify, subnet-name, -ipspace, -subnet, -gateway, -ip-ranges, -force-update-lif-associations 
 summary: 서브넷 주소, 마스크 값, 게이트웨이 주소 또는 IP 주소 범위를 변경합니다 
 ---
-= 서브넷 속성을 변경합니다
+= ONTAP 네트워크의 서브넷 속성을 변경합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -65,5 +65,9 @@ network subnet modify -subnet-name <subnet_name> [-ipspace <ipspace_name>] [-sub
 ....
 network subnet modify -subnet-name <sub3> -gateway <192.0.3.1>
 ....
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-modify.html["네트워크 서브넷 수정"^]
+
+
 --
 ====

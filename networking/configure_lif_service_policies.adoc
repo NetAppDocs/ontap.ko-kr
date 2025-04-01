@@ -4,7 +4,7 @@ permalink: networking/configure_lif_service_policies.html
 keywords: create service policy, assign service policy, service policy commands, configure lif service policies, create and assign a service policy for lifs, configure lif service policies, create a service policy for lifs, network interface service show, service-policy create, assign a service policy to a lif, examples, commands for managing lif service policies 
 summary: LIF에 대한 서비스 정책을 생성하고 할당합니다 
 ---
-= LIF 서비스 정책을 구성합니다
+= ONTAP 클러스터에 대한 LIF 서비스 정책을 구성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

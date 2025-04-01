@@ -4,7 +4,7 @@ permalink: networking/ipsec-prepare.html
 keywords: ip security, ipsec, data-in-motion, in-flight encryption, ONTAP ipsec evolution, security policy database, spd, hardware offload, nic 
 summary: 'ONTAP 9.8부터 IP 보안(IPsec)을 사용하여 네트워크 트래픽을 보호할 수 있습니다. IPsec은 ONTAP에서 사용할 수 있는 여러 가지 데이터 이동 중 또는 전송 중 암호화 옵션 중 하나입니다. IPsec을 프로덕션 환경에서 사용하기 전에 구성할 준비를 해야 합니다.' 
 ---
-= IP 보안 사용을 준비합니다
+= ONTAP 네트워크에서 IP 보안 사용을 준비합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

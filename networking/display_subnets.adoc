@@ -4,7 +4,7 @@ permalink: networking/display_subnets.html
 keywords: display, view, show, subnet, display subnets, view the list of ip addresses that are allocated to each subnet within an ipspace 
 summary: IPspace 내의 각 서브넷에 할당된 IP 주소 목록을 봅니다 
 ---
-= 서브넷을 표시합니다
+= ONTAP 네트워크의 서브넷을 봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

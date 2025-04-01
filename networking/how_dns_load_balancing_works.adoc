@@ -4,7 +4,7 @@ permalink: networking/how_dns_load_balancing_works.html
 keywords: introducing, introduction, overview, dns, naming, name, service, load, balance, balancing, performance, how dns load balancing works, introducing dns load balancing 
 summary: DNS 로드 밸런싱 소개 
 ---
-= DNS 로드 균형 조정 작동 방식
+= ONTAP 네트워크의 DNS 로드 밸런싱에 대해 알아봅니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

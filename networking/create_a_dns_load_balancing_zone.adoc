@@ -4,7 +4,7 @@ permalink: networking/create_a_dns_load_balancing_zone.html
 keywords: create, creation, creating, add, adding, dns, naming, name, service, load, balancing, balance, zone, lif, create a dns load balancing zone, improve lif performance 
 summary: DNS 로드 밸런싱 영역을 생성하여 LIF 성능을 개선합니다 
 ---
-= DNS 부하 분산 영역을 만듭니다
+= ONTAP 네트워크에 대한 DNS 로드 밸런싱 존을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

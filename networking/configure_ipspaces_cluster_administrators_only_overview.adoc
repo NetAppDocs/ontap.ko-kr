@@ -4,7 +4,7 @@ permalink: networking/configure_ipspaces_cluster_administrators_only_overview.ht
 keywords: ipspace, ipspaces, introduction, introducing, overview, ipv4, ipv6, routing, route, domain, configure ipspaces overview, example, sample, ipspace, example of using ipspaces, sample using ipspaces, hosts.equiv, standard, property, properties, ipspace, special, ipspaces, svm, cluster, default, understanding, cluster, initialization, initialized, introducing, introduction, overview, standard properties of ipspaces, introducing the default and cluster ipspaces created during cluster initialization, default ipspace, cluster ipspace, system svm 
 summary: 'IPspace는 SVM(스토리지 가상 머신)이 상주하는 고유 IP 주소 공간을 정의합니다' 
 ---
-= IPspace 구성 개요
+= ONTAP IPspace 구성에 대해 자세히 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: networking/networking_reference.html
 keywords: network, components, cluster, networking, ontap 9 networking reference, network management reference, how to configure and manage physical and virtual network ports, lifs, routing, and host-resolution services in clusters, vlans and interface groups, ipv4 and ipv6, optimize network traffic, load balancing, monitor the cluster using snmp, system manager 
 summary: ONTAP 9 네트워킹 참조 설명서 포털에 오신 것을 환영합니다 
 ---
-= 네트워크 관리 개요
+= System Manager를 사용하여 ONTAP 네트워크를 시각화합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

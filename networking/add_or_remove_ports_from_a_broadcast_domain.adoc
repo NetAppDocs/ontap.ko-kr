@@ -4,7 +4,7 @@ permalink: networking/add_or_remove_ports_from_a_broadcast_domain.html
 keywords: adding, add, create, creating, remove, removing, delete, deleting, port, broadcast, domain, reachability, repair, physical, switch, configuration, add or remove ports from a broadcast domain, system manager, reassign, broadcast domain, port, unassign, move, change 
 summary: 브로드캐스트 도메인에서 포트를 수동으로 추가 및 제거할 필요는 없으며, 이 방법은 권장되지 않습니다 
 ---
-= 브로드캐스트 도메인에서 포트 추가 또는 제거(ONTAP 9.8 이상)
+= ONTAP 브로드캐스트 도메인에서 포트를 추가하거나 제거합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,6 +19,9 @@ summary: 브로드캐스트 도메인에서 포트를 수동으로 추가 및 �
 물리적 네트워크 연결 또는 스위치 구성을 통해 네트워크 포트 도달 능력이 변경되었고 네트워크 포트가 다른 브로드캐스트 도메인에 속해 있는 경우 다음 항목을 참조하십시오.
 
 link:repair_port_reachability.html["수리 포트 도달 가능성"]
+
+
+NOTE: 브로드캐스트 도메인의 포트를 추가하거나 제거하는 절차는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크의 브로드캐스트 도메인에서 포트를 추가하거나 제거해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/add_or_remove_ports_from_a_broadcast_domain97.html["브로드캐스트 도메인에서 포트 추가 또는 제거(ONTAP 9.7 이하)"^].
 
 [role="tabbed-block"]
 ====
@@ -118,8 +121,9 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 
 'cluster-1::> network port broadcast-domain remove-ports-broadcast-domain bcast1-ports cluster-1-01:e0e'
 
---
-====
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 
+
+--
+====

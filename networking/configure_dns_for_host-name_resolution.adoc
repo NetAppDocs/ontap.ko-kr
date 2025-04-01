@@ -4,7 +4,7 @@ permalink: networking/configure_dns_for_host-name_resolution.html
 keywords: configure, configuring, configuration, setup, set, setting, dns, local, remote, host, name, host-name, resolution, configure dns for host-name resolution, nsswitch.conf, configure an svm and data lifs for host-name resolution using an external dns server, vserver services name-service dns, vserver services name-service dns create, network interface modify -lif lifname -dns-zone, network interface create -lif lifname -dns-zone, vserver services name-service dns check, configure the name service switch table for host-name resolution 
 summary: DNS를 사용하여 호스트 정보에 대한 로컬 또는 원격 소스에 액세스합니다 
 ---
-= 호스트 이름 확인을 위해 DNS를 구성합니다
+= ONTAP 네트워크의 호스트 이름 확인을 위해 DNS를 구성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

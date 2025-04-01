@@ -4,7 +4,7 @@ permalink: networking/use_cdp_to_detect_network_connectivity.html
 keywords: display, view, show, network, connectivity, neighbor, discovery, protocol, cdp, use cdp to detect network connectivity, considerations for using cdp, enable or disable cdp, view cdp neighbor information, example of showing and clearing statistics, cisco 
 summary: '데이터 센터에서 인접 검색 프로토콜을 사용하여 물리적 또는 가상 시스템 쌍과 해당 네트워크 인터페이스 간의 네트워크 연결을 볼 수 있습니다. ONTAP는 CDP(Cisco Discovery Protocol)와 LLDP(Link Layer Discovery Protocol)라는 두 가지 인접 검색 프로토콜을 지원합니다.' 
 ---
-= CDP를 사용하여 네트워크 연결을 감지합니다
+= CDP를 사용하여 ONTAP 네트워크 연결을 감지합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

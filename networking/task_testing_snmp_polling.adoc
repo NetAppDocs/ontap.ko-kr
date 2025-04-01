@@ -4,7 +4,7 @@ permalink: networking/task_testing_snmp_polling.html
 keywords: configure, snmp, verify, poll, cluster, test, test snmp poll 
 summary: SNMP를 구성한 후에는 클러스터를 폴링할 수 있는지 확인해야 합니다. 
 ---
-= SNMP 폴링을 테스트합니다
+= ONTAP 클러스터에서 SNMP 폴링을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

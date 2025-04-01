@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: change, uta2, port, cna mode, fc mode 
 summary: 포트를 네트워크에 연결하거나 FC 이니시에이터 및 타겟을 지원하는 물리적 미디어를 변경해야 하는 경우 UTA2 속성을 CNA 모드에서 FC 모드로 변경합니다. 
 ---
-= ONTAP의 UTA2 포트를 숨깁니다
+= ONTAP 네트워크에서 사용할 UTA2 포트를 변환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

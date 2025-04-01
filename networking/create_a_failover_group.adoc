@@ -4,7 +4,7 @@ permalink: networking/create_a_failover_group.html
 keywords: create, creation, creating, add, adding, failover, fail, over, group, create a failover group, failover group of network ports automatically migrate a lif to a different port when a link failure occurs, failover-groups create, ifgrps 
 summary: 네트워크 포트의 페일오버 그룹을 생성하면 링크 장애가 발생할 경우 LIF를 다른 포트로 자동으로 마이그레이션합니다 
 ---
-= 페일오버 그룹을 생성합니다
+= ONTAP 페일오버 그룹을 생성합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
