@@ -175,3 +175,7 @@ ARP는 검증된 ONTAP 데이터 보호 및 재해 복구 기술을 기반으로
 == ARP에 대한 다중 관리자 인증 보호
 
 ONTAP 9.13.1부터 ARP(자율 랜섬웨어 차단) 구성을 위해 인증된 사용자 관리자 2명 이상이 필요할 수 있도록 MAV(다중 관리자 검증)를 활성화하는 것이 좋습니다. 자세한 내용은 을 link:../multi-admin-verify/enable-disable-task.html["다중 관리 검증을 활성화합니다"]참조하십시오.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

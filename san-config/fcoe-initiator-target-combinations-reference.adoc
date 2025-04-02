@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fcoe, initiator, target, combinations 
 summary: FCoE와 기존 FC Initiator와 타겟의 특정 조합이 지원됩니다. 
 ---
-= FCoE 이니시에이터 및 타겟 조합
+= ONTAP는 FCoE 이니시에이터 및 타겟 포트 조합을 지원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, ssh, multifactor authentication, mfa, hardware authentication device 
 summary: 계정 보안을 보호하려면 TOTP 비밀 키가 손상되었거나 손실된 경우 이를 비활성화하고 새 키를 만들어야 합니다. 
 ---
-= TOTP 비밀 키를 재설정합니다
+= ONTAP 사용자 계정에 대한 TOTP 비밀 키를 재설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

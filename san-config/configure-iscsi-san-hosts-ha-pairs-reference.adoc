@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ways, configure, iscsi, san hosts, ha pairs, direct-attachment, single-network configuration, multi-network configuration 
 summary: 'iSCSI SAN 호스트에 직접 연결하거나 하나 이상의 IP 스위치를 통해 호스트에 연결하는 고가용성(HA) 쌍을 사용하여 iSCSI 구성을 설정해야 합니다.  ' 
 ---
-= iSCSI SAN 호스트를 구성하는 방법입니다
+= ONTAP 시스템으로 iSCSI 네트워크를 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

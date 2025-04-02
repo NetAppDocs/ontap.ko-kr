@@ -55,6 +55,9 @@ Personality * 는 * All-Flash SAN Array * 로 표시됩니다.
 +
 ASA 시스템에 대해 "All-Flash SAN 어레이" 값이 true로 반환됩니다.
 
++
+에 대한 자세한 내용은 `san config show` link:https://docs.netapp.com/us-en/ontap-cli/san-config-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .관련 정보

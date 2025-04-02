@@ -14,13 +14,16 @@ summary: 소스 SVM에 SMB 구성이 있고 ID 보존이 false로 설정된 경�
 소스 SVM에 SMB 구성이 있고 'identity-preserve'를 'false'로 설정한 경우, 대상 SVM을 위한 SMB 서버를 생성해야 합니다. SMB 서버는 SnapMirror 관계를 초기화하는 동안 공유와 같은 일부 SMB 구성에 필요합니다.
 
 .단계
-. 명령을 사용하여 타겟 SVM을 `vserver start` 시작합니다. 에 대한 자세한 내용은 `vserver start` link:https://docs.netapp.com/us-en/ontap-cli/vserver-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+. 명령을 사용하여 타겟 SVM을 `vserver start` 시작합니다.
 +
 [listing]
 ----
 destination_cluster::> vserver start -vserver dvs1
 [Job 30] Job succeeded: DONE
 ----
++
+에 대한 자세한 내용은 `vserver start` link:https://docs.netapp.com/us-en/ontap-cli/vserver-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . vserver show 명령을 사용하여 대상 SVM이 "Running" 상태이고 하위 유형이 dp-destination인지 확인하십시오.
 +
 [listing]
@@ -31,12 +34,18 @@ Vserver  Type    Subtype           State      State       Volume     Aggregate
 -------- ------- ----------       ---------- ----------- ---------- ----------
 dvs1     data    dp-destination    running    running       -         -
 ----
++
+에 대한 자세한 내용은 `vserver show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 네트워크 인터페이스 생성 명령을 사용하여 LIF를 생성합니다.
 +
 [listing]
 ----
 destination_cluster::>network interface create -vserver dvs1 -lif NAS1 -role data -data-protocol cifs -home-node destination_cluster-01 -home-port a0a-101  -address 192.0.2.128 -netmask 255.255.255.128
 ----
++
+에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . network route create 명령을 사용하여 route를 생성한다.
 +
 [listing]
@@ -47,6 +56,9 @@ destination_cluster::>network route create -vserver dvs1 -destination 0.0.0.0/0
 +
 link:../networking/networking_reference.html["네트워크 관리"]
 
++
+에 대한 자세한 내용은 `network route create` link:https://docs.netapp.com/us-en/ontap-cli/network-route-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'vserver services dns create' 명령을 사용하여 DNS를 구성합니다.
 +
 [listing]
@@ -54,6 +66,9 @@ link:../networking/networking_reference.html["네트워크 관리"]
 destination_cluster::>vserver services dns create -domains mydomain.example.com -vserver
 dvs1 -name-servers 192.0.2.128 -state enabled
 ----
++
+에 대한 자세한 내용은 `vserver services dns create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+services+dns+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'vserver cifs domain preferred-dc add' 명령을 사용하여 기본 도메인 컨트롤러를 추가합니다.
 +
 [listing]
@@ -61,6 +76,9 @@ dvs1 -name-servers 192.0.2.128 -state enabled
 destination_cluster::>vserver cifs domain preferred-dc add -vserver dvs1 -preferred-dc
 192.0.2.128 -domain mydomain.example.com
 ----
++
+에 대한 자세한 내용은 `vserver cifs domain preferred-dc add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-domain-preferred-dc-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'vserver cifs create' 명령을 사용하여 SMB 서버를 생성합니다.
 +
 [listing]
@@ -68,6 +86,9 @@ destination_cluster::>vserver cifs domain preferred-dc add -vserver dvs1 -prefer
 destination_cluster::>vserver cifs create -vserver dvs1 -domain mydomain.example.com
 -cifs-server CIFS1
 ----
++
+에 대한 자세한 내용은 `vserver cifs create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'vserver stop' 명령을 사용하여 대상 SVM을 중지합니다.
 +
 [listing]
@@ -75,4 +96,7 @@ destination_cluster::>vserver cifs create -vserver dvs1 -domain mydomain.example
 destination_cluster::> vserver stop -vserver dvs1
 [Job 46] Job succeeded: DONE
 ----
++
+에 대한 자세한 내용은 `vserver stop` link:https://docs.netapp.com/us-en/ontap-cli/vserver-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

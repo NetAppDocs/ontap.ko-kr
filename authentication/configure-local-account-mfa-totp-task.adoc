@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, ssh, multifactor authentication, mfa, hardware authentication device 
 summary: 'TOTP(Time-Based One-Time Password)를 통한 MFA(Multifactor Authentication)를 통해 계정 보안 강화를 활용하려면 TOTP 사용을 위한 로컬 사용자 계정을 구성해야 합니다.' 
 ---
-= ONTAP에서 TOTP를 사용하여 MFA에 대한 로컬 사용자 계정을 구성합니다
+= TOTP를 사용하여 MFA에 대한 로컬 ONTAP 사용자 계정을 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

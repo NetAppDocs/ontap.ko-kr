@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fc, target, port, configuration, recommendations 
 summary: 최상의 성능과 가용성을 얻으려면 권장되는 FC 타겟 포트 구성을 사용해야 합니다. 
 ---
-= FC 타겟 포트 구성 권장 사항
+= ONTAP 시스템에 권장되는 FC 타겟 포트 구성 및 속도
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

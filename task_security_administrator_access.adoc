@@ -4,7 +4,7 @@ permalink: task_security_administrator_access.html
 keywords: netapp, ontap, role based access control, rbac, assign, access, assigning, role, user role, administrative access, admin access, admin role, administrative role, predefined role, cluster administrator, storage VM administrator, public key, digital certificate, AD, LDAP, NIS 
 summary: 특정_역할_을 관리자에게 할당하여 관리자가 System Manager에서 수행할 수 있는 기능을 지정할 수 있습니다. 
 ---
-= 관리자 액세스 제어
+= System Manager를 사용하여 ONTAP 관리자 액세스 관리
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

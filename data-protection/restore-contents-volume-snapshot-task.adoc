@@ -11,7 +11,7 @@ summary: volume snapshot restore 명령을 사용하여 스냅샷에서 볼륨�
 
 
 [role="lead"]
-스냅숏에서 복원하면 볼륨을 이전 시점으로 복구할 수 있습니다. System Manager 또는 명령을 사용하여 스냅샷에서 볼륨의 내용을 복원할 수 `volume snapshot restore` 있습니다.
+스냅숏에서 복원하면 볼륨을 이전 시점으로 복구할 수 있습니다. System Manager 또는 명령을 사용하여 스냅샷에서 볼륨의 내용을 복원할 수 `volume snapshot restore` 있습니다. 에 대한 자세한 내용은 `volume snapshot restore` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .이 작업에 대해
 볼륨에 SnapMirror 관계가 있는 경우 스냅샷에서 복구한 직후 볼륨의 모든 미러 복사본을 수동으로 복제합니다. 그렇지 않으면 미러 복사본을 사용할 수 없게 되므로 복사본을 삭제하고 다시 생성해야 합니다.

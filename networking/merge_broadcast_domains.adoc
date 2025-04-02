@@ -33,5 +33,5 @@ network port broadcast-domain merge -ipspace <ipspace_name> -broadcast-domain <b
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-merge["네트워크 포트 브로드캐스트-도메인-병합"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-merge.html["네트워크 포트 브로드캐스트-도메인-병합"^]
 

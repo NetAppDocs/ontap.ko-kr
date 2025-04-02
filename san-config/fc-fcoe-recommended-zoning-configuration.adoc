@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: individual zones 
 summary: 권장 FC 및 FCoE 조닝 구성에서는 존당 호스트 이니시에이터가 하나씩 있습니다. 존은 대상당 원하는 경로 수까지 LUN에 대한 액세스를 제공하는 스토리지 노드에 있는 하나 이상의 대상 LIF와 호스트 이니시에이터 포트로 구성됩니다. 이렇게 구성하면 각 호스트 이니시에이터가 모든 노드에 액세스할 수 있고 동일한 노드에 액세스하는 호스트가 서로의 포트를 볼 수 없습니다 
 ---
-= 권장되는 FC 및 FCoE 조닝 구성
+= ONTAP 시스템에 권장되는 FC 및 FCoE 조닝 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

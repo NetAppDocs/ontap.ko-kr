@@ -59,9 +59,15 @@ SVM 이름은 소스 및 타겟 클러스터 전체에서 고유해야 합니다
 ----
 cluster_dst:> vserver create -vserver svm_backup -subtype dp-destination
 ----
++
+에 대한 자세한 내용은 `vserver create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 클러스터에서 'vserver peer create' 명령을 사용하여 SVM 피어 관계를 생성합니다.
 +
 자세한 내용은 을 참조하십시오 link:../peering/create-intercluster-svm-peer-relationship-93-later-task.html["SVM 인터클러스터 피어 관계를 생성합니다"].
+
++
+에 대한 자세한 내용은 `vserver peer create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 복제 작업 스케줄 생성:
 +
@@ -84,6 +90,9 @@ NOTE: SVM SnapMirror 관계에서 FlexVol 볼륨의 최소 지원 일정(RPO)은
 ----
 cluster_dst::> job schedule cron create -name my_weekly -dayofweek saturday -hour 3 -minute 0
 ----
++
+에 대한 자세한 내용은 `job schedule cron create` link:https://docs.netapp.com/us-en/ontap-cli/job-schedule-cron-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 타겟 SVM 또는 타겟 클러스터에서 복제 관계를 생성합니다.
 +
 [source, cli]
@@ -126,6 +135,9 @@ cluster_dst::> snapmirror create -source-path svm1: -destination-path svm_backup
 ----
 cluster_dst::> snapmirror create -source-path svm1: -destination-path svm_backup: -type XDP -schedule my_daily -policy my_unified -identity-preserve true
 ----
++
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 SVM 중지:
 +
 [source, cli]
@@ -140,6 +152,9 @@ vserver stop -vserver <SVM_name>
 ----
 cluster_dst::> vserver stop -vserver svm_backup
 ----
++
+에 대한 자세한 내용은 `vserver stop` link:https://docs.netapp.com/us-en/ontap-cli/vserver-stop.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 SVM 또는 대상 클러스터에서 SVM 복제 관계를 초기화합니다.
 +
 [source, cli]
@@ -158,6 +173,9 @@ NOTE: '-source-path' 및 '-destination-path' 옵션에서 SVM 이름 뒤에 콜�
 ----
 cluster_dst::> snapmirror initialize -source-path svm1: -destination-path svm_backup:
 ----
++
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

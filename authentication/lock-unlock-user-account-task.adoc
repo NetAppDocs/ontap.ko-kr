@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: lock, unlock, administrator account 
 summary: 보안 로그인 잠금 명령을 사용하여 관리자 계정을 잠그고 보안 로그인 잠금 해제 명령을 사용하여 계정을 잠금 해제할 수 있습니다. 
 ---
-= 관리자 계정 잠금 및 잠금 해제
+= ONTAP 관리자 계정을 잠그고 잠금 해제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,6 +29,9 @@ summary: 보안 로그인 잠금 명령을 사용하여 관리자 계정을 잠�
 ----
 cluster1::>security login lock -vserver engData -username admin1
 ----
++
+에 대한 자세한 내용은 `security login lock` link:https://docs.netapp.com/us-en/ontap-cli/security-login-lock.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 관리자 계정 잠금 해제:
 +
 'Security login unlock - vserver SVM_name - username user_name'
@@ -41,6 +44,9 @@ cluster1::>security login lock -vserver engData -username admin1
 ----
 cluster1::>security login unlock -vserver engData -username admin1
 ----
++
+에 대한 자세한 내용은 `security login unlock` link:https://docs.netapp.com/us-en/ontap-cli/security-login-unlock.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
-및 `security login unlock` 에 대한 자세한 `security login lock` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["ONTAP 명령 참조입니다"^]참조하십시오.
+
+에 대한 자세한 내용은 `security login` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -57,7 +57,7 @@ xref:../mediator/index.html[ONTAP 중재자 서비스를 설치하거나 업그�
 NOTE: 클러스터 피어 관계를 위한 SnapMirror 액티브 동기화에 기본 IPspace가 필요합니다. 사용자 지정 IPspace는 지원되지 않습니다.
 
 +
-xref:../task_dp_prepare_mirror.html[피어 관계를 구성합니다]
+xref:../peering/create-cluster-relationship-93-later-task.html[클러스터 피어 관계 생성]
 
 . 각 클러스터에 SVM이 생성되었는지 확인합니다.
 +
@@ -270,6 +270,49 @@ Notice: Enter the mediator password.
 Enter the password: ******
 Enter the password again: ******
 ----
+. 선택적으로 작업 ID 상태를 `job show -id` 확인하여 SnapMirror mediator add 명령이 성공적인지 확인합니다.
++
+* 예 *
+
++
+[listing]
+----
+C1_test_cluster::*> snapmirror mediator show
+This table is currently empty.
+
+
+C1_test_cluster::*> snapmirror mediator add -peer-cluster C2_test_cluster -type on-prem -mediator-address 1.2.3.4 -username mediatoradmin
+
+Notice: Enter the mediator password.
+
+Enter the password:
+Enter the password again:
+
+Info: [Job: 87] 'mediator add' job queued
+
+C1_test_cluster::*> job show -id 87
+                            Owning
+Job ID Name                 Vserver           Node           State
+------ -------------------- ----------------- -------------- ----------
+87     mediator add         C1_test_cluster   C2_test        Running
+
+Description: Creating a mediator entry
+
+C1_test_cluster::*> job show -id 87
+                            Owning
+Job ID Name                 Vserver           Node           State
+------ -------------------- ----------------- -------------- ----------
+87     mediator add         C1_test_cluster   C2_test        Success
+
+Description: Creating a mediator entry
+
+C1_test_cluster::*> snapmirror mediator show
+Mediator Address Peer Cluster     Connection Status Quorum Status Type
+---------------- ---------------- ----------------- ------------- -------
+1.2.3.4          C2_test_cluster  connected         true          on-prem
+
+C1_test_cluster::*>
+----
 . ONTAP 중재자 구성의 상태를 점검한다.
 +
 스냅미러 중재자 쇼
@@ -381,6 +424,49 @@ Notice: Enter the mediator password.
 
 Enter the password: ******
 Enter the password again: ******
+----
+. 선택적으로 작업 ID 상태를 `job show -id` 확인하여 SnapMirror mediator add 명령이 성공적인지 확인합니다.
++
+* 예 *
+
++
+[listing]
+----
+C1_test_cluster::*> snapmirror mediator show
+This table is currently empty.
+
+
+C1_test_cluster::*> snapmirror mediator add -peer-cluster C2_test_cluster -type on-prem -mediator-address 1.2.3.4 -username mediatoradmin
+
+Notice: Enter the mediator password.
+
+Enter the password:
+Enter the password again:
+
+Info: [Job: 87] 'mediator add' job queued
+
+C1_test_cluster::*> job show -id 87
+                            Owning
+Job ID Name                 Vserver           Node           State
+------ -------------------- ----------------- -------------- ----------
+87     mediator add         C1_test_cluster   C2_test        Running
+
+Description: Creating a mediator entry
+
+C1_test_cluster::*> job show -id 87
+                            Owning
+Job ID Name                 Vserver           Node           State
+------ -------------------- ----------------- -------------- ----------
+87     mediator add         C1_test_cluster   C2_test        Success
+
+Description: Creating a mediator entry
+
+C1_test_cluster::*> snapmirror mediator show
+Mediator Address Peer Cluster     Connection Status Quorum Status Type
+---------------- ---------------- ----------------- ------------- -------
+1.2.3.4          C2_test_cluster  connected         true          on-prem
+
+C1_test_cluster::*>
 ----
 . ONTAP 중재자 구성의 상태를 점검한다.
 +

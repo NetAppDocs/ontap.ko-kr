@@ -61,3 +61,4 @@ vs1:sm_src2
               DP   vs2:sm_dest1
                                 Snapmirrored  Idle           -          true    -
 ----
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

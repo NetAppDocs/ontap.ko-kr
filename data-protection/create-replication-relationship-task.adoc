@@ -249,3 +249,6 @@ NOTE: 미리 정의된 정책의 `SnapCenterSync` 유형이 `Sync`입니다. 이
 
 | System Manager Classic(ONTAP 9.7 이하에서 사용 가능) | link:https://docs.netapp.com/us-en/ontap-system-manager-classic/volume-backup-snapvault/index.html["SnapVault를 사용한 볼륨 백업 개요"^] 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["SnapMirror를 참조하십시오"^]
+

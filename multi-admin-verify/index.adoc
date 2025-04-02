@@ -4,7 +4,7 @@ permalink: multi-admin-verify/index.html
 keywords: ontap, mav, multi admin verify, RBAC, protected, operation, multi-admin, administrator, verification, approval, rules 
 summary: 'ONTAP 9.11.1부터 MAV(다중 관리자 확인)를 사용하여 지정된 관리자의 승인 후에만 일부 작업을 실행할 수 있습니다' 
 ---
-= ONTAP 다중 관리자 인증 개요
+= ONTAP 다중 관리자 인증에 대해 알아봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

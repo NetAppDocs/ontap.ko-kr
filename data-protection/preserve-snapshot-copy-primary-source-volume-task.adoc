@@ -11,7 +11,7 @@ summary: SnapMirror snapshot-owner create 명령을 사용하여 미러 볼트 �
 
 
 [role="lead"]
-명령을 사용하여 미러 볼트 배포의 보조 서버에서 레이블 지정된 스냅샷을 보존할 수 `snapmirror snapshot-owner create` 있습니다. 이렇게 하면 볼트 관계 업데이트를 위한 공통 스냅샷이 존재하게 됩니다.
+명령을 사용하여 미러 볼트 배포의 보조 서버에서 레이블 지정된 스냅샷을 보존할 수 `snapmirror snapshot-owner create` 있습니다. 이렇게 하면 볼트 관계 업데이트를 위한 공통 스냅샷이 존재하게 됩니다. 에 대한 자세한 내용은 `snapmirror snapshot-owner create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-snapshot-owner-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .이 작업에 대해
 미러 볼트 팬 아웃 또는 캐스케이드 배포를 함께 사용하는 경우 소스 및 대상 볼륨에 공통 스냅샷이 없으면 업데이트가 실패한다는 점에 유의해야 합니다.
@@ -72,4 +72,7 @@ clust1::> snapmirror update -vserver vs1 -volume vol1
 clust1::> snapmirror snapshot-owner delete -vserver vs1 -volume vol1
 -snapshot snap1 -owner ApplicationA
 ----
++
+에 대한 자세한 내용은 `snapmirror snapshot-owner delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-snapshot-owner-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

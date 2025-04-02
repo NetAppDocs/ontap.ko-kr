@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, install, ca-signed, server, certificate, csr, signing request, signed 
 summary: 운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 
 ---
-= CA 서명 서버 인증서 개요 생성 및 설치
+= ONTAP에서 CA 서명 서버 인증서를 생성하고 설치합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

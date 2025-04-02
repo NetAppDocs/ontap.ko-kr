@@ -86,10 +86,6 @@ NOTE: ONTAP REST API를 사용하여 이 기능을 구성할 수도 있습니다
 
 NOTE: ONTAP REST API를 사용하여 이러한 기능을 구성할 수도 있습니다. 자세한 내용은 을 https://docs.netapp.com/us-en/ontap-automation/["ONTAP 자동화 설명서"^]참조하십시오.
 
-.관련 정보
-* https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI 명령"^]
-
-
 
 
 === 그룹 UUID를 그룹 이름에 매핑합니다
@@ -100,7 +96,7 @@ UUID 값을 사용하여 그룹을 나타내는 인증 서버를 사용하는 �
 
 ==== 생성
 
-명령을 사용하여 새 그룹 매핑 구성을 정의할 수 `security login group create` 있습니다. 그룹 UUID 및 이름은 인증 서버의 구성과 일치해야 합니다.
+명령을 사용하여 새 그룹 매핑 구성을 정의할 수 `security login group create` 있습니다. 그룹 UUID 및 이름은 인증 서버의 구성과 일치해야 합니다. 에 대한 자세한 내용은 `security login group create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .매개 변수
 그룹 매핑을 생성하는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
@@ -156,7 +152,7 @@ NOTE: 먼저 그룹에 대해 생성된 고유 정수 ID를 검색해야 <<그�
 
 ==== 생성
 
-명령을 사용하여 새 역할 매핑을 정의할 수 `security login group role-mapping create` 있습니다.
+명령을 사용하여 새 역할 매핑을 정의할 수 `security login group role-mapping create` 있습니다. 에 대한 자세한 내용은 `security login group role-mapping create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-group-role-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .매개 변수
 그룹을 역할에 매핑하는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
@@ -188,3 +184,7 @@ security login group role-mapping create -group-id 1 -role admin
 
 
 자세한 내용은 ONTAP 명령 참조 문서를 참조하십시오.
+
+.관련 정보
+* https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI 명령"^]
+

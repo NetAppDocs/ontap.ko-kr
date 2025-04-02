@@ -2,49 +2,49 @@
 section: san-config
 title: SAN 구성 참조
 entries:
-- title: 개요
+- title: SAN 구성에 대해 자세히 알아보십시오
   url: "/san-config/index.html"
 - title: iSCSI 구성
   entries:
-  - title: iSCSI SAN 호스트를 구성하는 방법입니다
+  - title: iSCSI 네트워크를 구성합니다
     url: "/san-config/configure-iscsi-san-hosts-ha-pairs-reference.html"
   - title: iSCSI 구성에서 VLAN을 사용할 때의 이점
     url: "/san-config/benefits-vlans-iscsi-concept.html"
 - title: FC 구성
   entries:
-  - title: FC 및 FC-NVMe SAN 호스트를 구성하는 방법
+  - title: FC 및 FC-NVMe 패브릭 구성
     url: "/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html"
   - title: FC 스위치 구성 모범 사례
     url: "/san-config/fc-switch-config-best-practices-concept.html"
-  - title: FC 타겟 포트 구성 권장 사항
+  - title: 권장되는 FC 타겟 포트 구성 및 속도
     url: "/san-config/fc-target-port-config-recommendations-concept.html"
-  - title: FC 어댑터를 구성합니다
+  - title: FC 어댑터 포트를 구성합니다
     url: "/san-config/configure-fc-adapters-initiator-target.html"
   - title: FC 어댑터를 관리하는 명령입니다
     url: "/san-config/commands-manage-fc-adapters-reference.html"
-  - title: X1133A-R6 어댑터를 사용할 경우 연결 끊김 방지
+  - title: X1133A-R6 어댑터를 사용할 때 연결이 끊어지지 않도록 하십시오
     url: "/san-config/prevent-loss-connectivity-x1133a-r6-adapter-concept.html"
 - title: FCoE 구성
   entries:
-  - title: FCoE SAN 호스트를 구성하는 방법
+  - title: FCoE Fabric 구성
     url: "/san-config/configure-fcoe-reference.html"
-  - title: FCoE 이니시에이터 및 타겟 조합
+  - title: 지원되는 FCoE 이니시에이터 및 타겟 포트 조합
     url: "/san-config/fcoe-initiator-target-combinations-reference.html"
 - title: FC 및 FCoE 조닝
   entries:
-  - title: 개요
+  - title: FC 및 FCoE 조인에 대해 자세히 알아보십시오
     url: "/san-config/fibre-channel-fcoe-zoning-concept.html"
-  - title: FC 및 FCoE 조닝 구성
+  - title: 권장되는 FC 및 FCoE 조닝 구성
     url: "/san-config/fc-fcoe-recommended-zoning-configuration.html"
-- title: 공유 SAN 구성
+- title: ONTAP 시스템 및 비 NetApp 시스템에 연결된 SAN 호스트의 요구 사항
   url: "/san-config/support-shared-san-config-concept.html"
 - title: MetroCluster 환경의 SAN 구성입니다
   entries:
-  - title: 개요
+  - title: MetroCluster 환경에서 지원되는 SAN 구성
     url: "/san-admin/san-config-mcc-concept.html"
-  - title: 스위치오버와 스위치백 간에 포트가 중복되지 않도록 합니다
+  - title: MetroCluster 스위치오버 및 스위치백 중에는 포트 중첩을 방지합니다
     url: "/san-admin/prevent_port_overlap_between_switchover.html"
-- title: SAN 호스트 다중 경로
+- title: SAN 호스트 다중 경로 지원
   url: "/san-config/host-support-multipathing-concept.html"
 - title: 구성 제한
   entries:
@@ -54,7 +54,7 @@ entries:
     url: "/san-config/fc-switch-config-limits-reference.html"
   - title: 지원되는 최대 FC 및 FCoE 홉 수
     url: "/san-config/fc-fcoe-supported-hop-counts.html"
-  - title: 대기열 길이를 계산합니다
+  - title: FC 호스트에 대한 큐 길이를 계산합니다
     url: "/san-config/calculate-queue-depth-task.html"
-  - title: 대기열 깊이를 설정합니다
+  - title: 큐 길이를 수정합니다
     url: "/san-config/set-queue-depth-task.html"

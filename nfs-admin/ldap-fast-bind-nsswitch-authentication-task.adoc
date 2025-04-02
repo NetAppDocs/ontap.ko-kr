@@ -61,7 +61,7 @@ link:../nfs-config/configure-name-service-switch-table-task.html["nsswitch 구�
 +
 '-is-ldap-fastbind true'
 
-** 새 관리자는 를 참조하십시오 link:../authentication/grant-access-nis-ldap-user-accounts-task.html["LDAP 또는 NIS 계정 액세스를 설정합니다."]
+** 새 관리자는 를 참조하십시오link:../authentication/grant-access-nis-ldap-user-accounts-task.html["LDAP 또는 NIS ONTAP 계정 액세스를 설정합니다"].
 
 
 

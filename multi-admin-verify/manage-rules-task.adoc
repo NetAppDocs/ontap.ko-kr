@@ -4,7 +4,7 @@ permalink: multi-admin-verify/manage-rules-task.html
 keywords: ontap, mav, multi, admin, multi admin verify, verification, administrator, protected, operation, rules, manage 
 summary: 'MAV(Multi-admin verification) 규칙을 만들어 승인이 필요한 작업을 지정합니다. 작업이 시작될 때마다 보호된 작업이 차단되고 승인 요청이 생성됩니다' 
 ---
-= 보호된 작업 규칙을 관리합니다
+= ONTAP에서 보호된 작업에 대한 다중 관리자 인증 규칙을 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
