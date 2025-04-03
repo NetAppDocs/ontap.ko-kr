@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mediator, new, release, update, install, 
 summary: ONTAP 중재자가 설치 프로세스 중에 필요한 패키지에 액세스할 수 있도록 리포지토리에 대한 액세스를 활성화합니다. 
 ---
-= 리포지토리에 대한 액세스를 활성화합니다
+= ONTAP 중재자 설치를 위한 리포지토리 액세스를 제공합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

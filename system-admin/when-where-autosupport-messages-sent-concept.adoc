@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: active, iq, digital advisor, active iq, autosupport, messages, email, manual, scheduled, event, triggered 
 summary: AutoSupport는 메시지 유형에 따라 다른 수신자에게 메시지를 보냅니다. AutoSupport에서 메시지를 보내는 시기와 위치를 파악하면 디지털 어드바이저 웹 사이트에서 전자 메일 또는 보기를 통해 받는 메시지를 이해하는 데 도움이 됩니다. 
 ---
-= AutoSupport 메시지가 전송되는 시기 및 위치
+= ONTAP AutoSupport 메시지를 보내는 시기와 위치에 대해 알아봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

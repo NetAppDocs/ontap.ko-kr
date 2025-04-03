@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mediator, new, release, update, install, verify, verification 
 summary: ONTAP 중재자를 설치한 후에는 ONTAP 중재자 서비스가 실행 중인지 확인해야 합니다. 
 ---
-= 설치를 확인합니다
+= ONTAP 중재자 설치 상태를 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

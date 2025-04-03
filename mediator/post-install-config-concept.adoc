@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mediator, new, release, update, install, configuration, post-installation, after installation, metrocluster ip, snapmirror business continuity, snapmirror active sync 
 summary: ONTAP 중재자 서비스를 설치하고 실행한 후 ONTAP 스토리지 시스템에서 중재자 기능을 사용하려면 추가 구성 작업을 수행해야 합니다. 
 ---
-= 설치 후 구성
+= 설치 후 ONTAP 중재자 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

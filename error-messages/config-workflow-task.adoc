@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ems, ems notification, send ems 
 summary: 중요한 EMS 이벤트 알림을 e-메일로 보내거나, syslog 서버로 전달하거나, SNMP traphost로 전달하거나, webhook 애플리케이션으로 전달되도록 구성해야 합니다. 
 ---
-= EMS 구성 작업 흐름
+= ONTAP EMS 구성 워크플로우
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

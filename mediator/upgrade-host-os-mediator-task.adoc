@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mediator, new, release, update, install, 
 summary: 설치 프로세스의 일부로 호스트 운영 체제를 업그레이드한 다음 ONTAP 중재자를 업그레이드합니다. 
 ---
-= 호스트 운영 체제를 업그레이드한 다음 ONTAP 중재자를 업그레이드합니다
+= 호스트 OS 및 ONTAP 중재자를 업그레이드합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

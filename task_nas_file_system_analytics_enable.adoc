@@ -4,7 +4,7 @@ permalink: task_nas_file_system_analytics_enable.html
 keywords: capacity analytics, data visualization, File System Analytics 
 summary: 용량 분석과 같은 사용 데이터를 수집하고 표시하려면 파일 시스템 분석을 설정해야 합니다. 
 ---
-= ONTAP에서 파일 시스템 분석을 사용하도록 설정합니다
+= ONTAP 파일 시스템 분석 활성화
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

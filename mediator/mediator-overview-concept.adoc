@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap mediator service, install requirements, mediator requirements 
 summary: ONTAP 중재자가 ONTAP 기능을 위한 몇 가지 기능을 제공합니다. 
 ---
-= ONTAP 중재자 개요
+= ONTAP 중재자에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

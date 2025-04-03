@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: transition, flexgroup, snapmirror, relationship, svm, dr 
 summary: 기존 FlexGroup 볼륨 SnapMirror 관계를 전환하여 FlexGroup SVM DR 관계를 생성할 수 있습니다. 
 ---
-= 기존 ONTAP FlexGroup SnapMirror 관계를 SVM DR으로 전환
+= ONTAP FlexGroup SnapMirror 관계를 SVM DR으로 전환
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

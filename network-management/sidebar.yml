@@ -21,7 +21,7 @@ entries:
     url: "/networking/worksheet_for_nas_path_failover_configuration_auto.html"
 - title: 네트워크 포트
   entries:
-  - title: ONTAP 네트워크 포트를 구성합니다
+  - title: ONTAP 네트워크 포트 구성에 대해 자세히 알아보십시오
     url: "/networking/configure_network_ports_cluster_administrators_only_overview.html"
   - title: 네트워크 포트를 구성합니다
     entries:
@@ -39,7 +39,7 @@ entries:
       url: "/networking/convert-uta2-port-cna-fc.html"
     - title: CNA/UTA2 광 모듈을 변환합니다
       url: "/networking/convert-cna-uta2-optical-modules.html"
-    - title: NIC 및 ONTAP 클러스터 노드 제거
+    - title: ONTAP 클러스터 노드에서 NIC 제거
       url: "/networking/removing_a_nic_from_the_node.html"
     - title: 네트워크 포트를 모니터링합니다
       entries:
@@ -207,7 +207,7 @@ entries:
     url: "/networking/enable_multipath_routing.html"
   - title: 정적 라우트를 삭제합니다
     url: "/networking/delete_a_static_route.html"
-  - title: 라우팅 정보를 표시합니다
+  - title: 라우팅 정보를 봅니다
     url: "/networking/display_routing_information.html"
   - title: 라우팅 테이블에서 동적 경로를 제거합니다
     url: "/networking/remove_dynamic_routes_from_routing_tables.html"
