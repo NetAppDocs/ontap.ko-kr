@@ -1,20 +1,20 @@
 ---
 permalink: system-admin/display-nodes-cluster-task.html 
 sidebar: sidebar 
-keywords: display, information, node, cluster, name, healthy, epsilon 
+keywords: display, view, information, node, cluster, name, healthy, epsilon 
 summary: 노드 이름, 노드가 정상 상태인지, 클러스터에 참여할 수 있는지 여부를 표시할 수 있습니다. 고급 권한 수준에서는 노드에 epsilon이 있는지 여부도 표시할 수 있습니다. 
 ---
-= 클러스터의 노드에 대한 정보를 표시합니다
+= ONTAP 클러스터에서 노드 레벨의 세부 정보를 봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-노드 이름, 노드가 정상 상태인지, 클러스터에 참여할 수 있는지 여부를 표시할 수 있습니다. 고급 권한 수준에서는 노드에 epsilon이 있는지 여부도 표시할 수 있습니다.
+노드 이름, 노드 상태 및 해당 노드가 클러스터에 참여할 수 있는지 여부를 확인할 수 있습니다. 고급 권한 수준에서는 노드에 epsilon이 있는지 여부도 표시할 수 있습니다.
 
 .단계
-. 클러스터의 노드 정보를 표시하려면 cluster show 명령을 사용합니다.
+. 클러스터의 노드에 대한 정보를 보려면 `cluster show` 명령을 사용하십시오.
 +
 출력에 노드가 epsilon을 보유하고 있는지 여부를 표시하려면 고급 권한 수준에서 명령을 실행합니다.
 

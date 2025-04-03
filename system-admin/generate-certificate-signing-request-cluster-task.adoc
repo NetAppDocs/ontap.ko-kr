@@ -19,8 +19,10 @@ summary: '보안 인증서 generate-csr 명령을 사용하여 인증서 서명 
 .단계
 . CSR 생성:
 +
-'* 보안 인증서 생성 - csr-common-name_FQDN_or_common_name_-size 512 | 1024 | 1536 | 2048-country_country_-state_-지역성_-organization_organization_-unit_unit_-email-addr_email_of_contact_-hash-function SHA1 | SHA256 | MD5*'
-
+[source, cli]
+----
+security certificate generate-csr -common-name <FQDN_or_common_name> -size 512|1024|1536|2048 -country <country> -state <state> -locality <locality> -organization <organization> -unit <unit> -email-addr <email_of_contact> -hash-function SHA1|SHA256|MD5
+----
 +
 에 대한 자세한 내용은 `security certificate generate-csr` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 

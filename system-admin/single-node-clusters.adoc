@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ways, configure, iscsi, san, hosts, single, nodes 
 summary: 단일 노드 클러스터는 독립 실행형 노드에서 실행되는 클러스터의 특수한 구현입니다.  단일 노드 클러스터는 이중화를 제공하지 않기 때문에 권장되지 않습니다.  노드가 다운되면 데이터 액세스가 손실됩니다. 
 ---
-= 단일 노드 클러스터를 관리합니다
+= 단일 노드 ONTAP 클러스터를 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

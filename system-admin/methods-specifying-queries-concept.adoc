@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: method, use, query, operator, interface, management, unix, patterns, wildcards, command, parameter, argument 
 summary: 관리 인터페이스는 쿼리 및 UNIX 스타일 패턴과 와일드카드를 지원하여 명령 매개 변수 인수의 여러 값을 일치시킬 수 있습니다. 
 ---
-= 쿼리 연산자 사용 방법
+= ONTAP CLI에서 쿼리 연산자를 사용합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

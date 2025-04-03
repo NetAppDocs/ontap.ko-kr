@@ -4,7 +4,7 @@ title: CLI를 사용한 FlexGroup 볼륨 관리
 entries:
 - title: 개요
   url: "/flexgroup/index.html"
-- title: FlexGroup 볼륨이란
+- title: ONTAP FlexGroup 볼륨에 대해 알아보십시오
   url: "/flexgroup/definition-concept.html"
 - title: FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다
   url: "/flexgroup/supported-unsupported-config-concept.html"

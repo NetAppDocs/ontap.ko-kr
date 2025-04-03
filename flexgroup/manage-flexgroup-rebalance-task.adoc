@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, storage, rebalance, modify, stop, status, flexgroup, volume 
 summary: ONTAP 9.12.1부터 FlexGroup의 한 구성 요소에서 다른 구성 요소까지 중단 없이 파일을 이동하여 FlexGroup 볼륨의 균형을 재조정할 수 있습니다. 
 ---
-= 파일을 이동하여 FlexGroup 볼륨의 균형을 조정합니다
+= 파일을 이동하여 ONTAP FlexGroup 볼륨의 균형을 조정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

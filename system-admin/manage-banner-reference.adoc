@@ -2,9 +2,9 @@
 permalink: system-admin/manage-banner-reference.html 
 sidebar: sidebar 
 keywords: manage, banner, svm, cluster, configure 
-summary: 클러스터 또는 SVM 레벨에서 배너를 관리할 수 있습니다. 배너 메시지가 정의되지 않은 모든 SVM에 대해 클러스터에 구성된 배너도 사용됩니다. 이후에 SVM을 위해 생성된 배너는 해당 SVM을 위한 클러스터 배너보다 우선합니다. 
+summary: 클러스터 또는 SVM 레벨에서 배너를 관리하고 배너가 표시되는 방식을 변경할 수 있습니다 
 ---
-= 배너 관리
+= ONTAP 클러스터 및 SVM 레벨에 표시되는 배너 텍스트를 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

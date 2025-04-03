@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: system, manager, manage, node, boot, menu, configuration, problems, password, reset, initialize, disks, restore, device 
 summary: 부팅 메뉴를 사용하여 노드의 구성 문제를 해결하고, admin 암호를 재설정하고, 디스크를 초기화하고, 노드 구성을 재설정하고, 노드 구성 정보를 부팅 장치로 복원할 수 있습니다. 
 ---
-= 부팅 메뉴를 사용하여 노드를 관리합니다
+= 부팅 메뉴를 사용하여 ONTAP 노드를 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -84,7 +84,7 @@ Selection (1-11)?
 
 내부 또는 외부 디스크 쉘프가 있는 FlexArray 가상화를 실행하는 시스템의 경우 어레이 LUN이 초기화되지 않습니다. 내부 또는 외부 쉘프의 모든 네이티브 디스크가 초기화됩니다.
 
-어레이 LUN만 사용하고 내부 또는 외부 디스크 쉘프가 없는 FlexArray 가상화를 실행하는 시스템의 경우, 스토리지 어레이 LUN의 루트 볼륨이 초기화됩니다. 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-flexarray/pdfs/sidebar/Installing_FlexArray.pdf["FlexArray를 설치하는 중입니다"].
+어레이 LUN만 사용하고 내부 또는 외부 디스크 쉘프가 없는 FlexArray 가상화를 실행하는 시스템의 경우 스토리지 어레이 LUN의 루트 볼륨이 초기화됩니다.
 
 초기화하려는 노드에 루트 데이터 파티셔닝을 위한 디스크가 있는 경우, 노드를 초기화하기 전에 디스크를 파티셔닝하지 않아야 합니다. 참조: * 9) 고급 드라이브 파티셔닝 구성 * 및 link:../disks-aggregates/index.html["디스크 및 애그리게이트 관리"].
 

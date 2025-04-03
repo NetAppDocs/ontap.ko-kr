@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: node, governing, root, volume, aggregate, files, special, directories, free, space, full, delete, file, core, dump 
 summary: 노드의 루트 볼륨은 공장 출하 시 또는 설치 소프트웨어에 의해 설치되는 FlexVol 볼륨입니다. 
 ---
-= 노드 루트 볼륨 및 루트 애그리게이트 관리
+= ONTAP 노드 루트 볼륨 및 루트 애그리게이트를 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

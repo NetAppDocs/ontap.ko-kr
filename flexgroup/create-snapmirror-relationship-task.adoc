@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapmirror, relationship, flexgroup, volume, snap mirror, flex group, peered svm, replicate, replicating, disaster 
 summary: 재해 복구를 위해 데이터를 복제하기 위해 피어링된 SVM에서 소스 FlexGroup 볼륨과 타겟 FlexGroup 볼륨 간에 SnapMirror 관계를 생성합니다. 
 ---
-= FlexGroup 볼륨에 대한 SnapMirror 관계를 생성합니다
+= ONTAP FlexGroup 볼륨에 대한 SnapMirror 관계를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

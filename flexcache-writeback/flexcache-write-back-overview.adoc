@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tr-4743, flexcache writeback, flexcache write-back, overview, technical report, netapp tr, ontap tr 
 summary: ONTAP 9.15.1에 도입된 FlexCache Write-Back은 캐시에서 쓰는 대체 작업 모드입니다. 
 ---
-= ONTAP FlexCache 후기입 개요
+= ONTAP FlexCache Write-Back에 대해 자세히 알아보십시오
 :allow-uri-read: 
 
 

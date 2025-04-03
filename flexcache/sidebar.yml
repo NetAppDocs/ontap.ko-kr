@@ -13,7 +13,7 @@ entries:
 - section: flexcache-writeback
 - title: FlexCache 볼륨 관리
   entries:
-  - title: FlexCache 볼륨을 감사할 때의 고려 사항
+  - title: FlexCache 볼륨 감사에 대해 자세히 알아보십시오
     url: "/flexcache/audit-flexcache-volumes-concept.html"
   - title: 원본 볼륨에서 FlexCache 볼륨의 속성을 동기화합니다
     url: "/flexcache/synchronize-properties-origin-volume-task.html"

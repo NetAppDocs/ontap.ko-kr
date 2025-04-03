@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: flexcache, volumes, faster, data, access, configure, manage, overview, origin volumes 
 summary: 데이터 액세스를 가속하기 위해 FlexCache 볼륨을 구성하고 관리할 수 있습니다. 
 ---
-= FlexCache 개요
+= ONTAP FlexCache 볼륨에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

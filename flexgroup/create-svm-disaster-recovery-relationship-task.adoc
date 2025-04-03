@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, svm, disaster, recovery, svm dr, svm-dr, relationship, flexgroup, volume, flex group, flexclone, flex clone 
 summary: 'ONTAP 9.9.1부터 FlexGroup 볼륨을 사용하여 SVM 재해 복구(SVM DR) 관계를 생성할 수 있습니다. SVM DR 관계는 SVM 구성과 해당 데이터를 동기화 및 복제하여 재해 발생 시 FlexGroup 볼륨을 복구하는 기능과 이중화를 제공합니다. SVM DR에는 SnapMirror 라이센스가 필요합니다.' 
 ---
-= FlexGroup 볼륨에 대한 SVM 재해 복구 관계를 생성합니다
+= ONTAP FlexGroup 볼륨에 대한 SVM 재해 복구 관계를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

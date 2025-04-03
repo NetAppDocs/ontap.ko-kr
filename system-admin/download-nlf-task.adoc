@@ -25,7 +25,7 @@ NOTE: SnapMirror 클라우드 및 SnapMirror S3 라이센스는 ONTAP One에 포
 --
 . NetApp 세일즈 팀에 문의하여 업그레이드하거나 변환할 라이센스 파일 번들을 요청합니다(예: ONTAP Base에서 ONTAP One으로 또는 코어 번들 및 데이터 보호 번들을 ONTAP One으로).
 +
-요청이 처리되면 netappsw@netapp.com 으로부터 "SO#[SO 번호]에 대한 NetApp 소프트웨어 라이센스 알림"이라는 제목의 이메일을 받게 되며 이메일에는 라이센스 일련 번호가 포함된 PDF 첨부 파일이 포함됩니다.
+요청이 처리되면 netappsw@netapp.com 에서 "SO#[SO 번호]에 대한 NetApp 소프트웨어 라이센스 알림"이라는 제목의 이메일을 받게 되며 이메일에는 라이센스 일련 번호가 포함된 PDF 첨부 파일이 포함됩니다.
 
 . 에 로그인합니다 link:https://mysupport.netapp.com/site/["NetApp Support 사이트"^].
 . 시스템 > 소프트웨어 라이센스 * 를 선택합니다.

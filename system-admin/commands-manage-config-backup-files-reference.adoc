@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, configuration, backup, file 
 summary: 시스템 구성 백업 명령을 사용하여 클러스터 및 노드 구성 백업 파일을 관리합니다. 
 ---
-= 구성 백업 파일을 관리하는 명령입니다
+= 노드 구성 백업 파일을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

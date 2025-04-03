@@ -4,7 +4,7 @@ permalink: flexcache-hot-spot/flexcache-hotspot-remediation-overview.html
 keywords: hotspot, FlexCache, HDFA, problem, solution, ONTAP 
 summary: 애니메이션 렌더링 또는 EDA와 같은 다수의 고성능 컴퓨팅 워크로드에서 흔히 발생하는 문제인 핫스팟을 FlexCache로 해결하는 방법에 대해 알아보십시오. 
 ---
-= ONTAP로 고성능 컴퓨팅 워크로드의 핫 스팟 해결
+= ONTAP FlexCache 볼륨으로 고성능 컴퓨팅 워크로드의 핫 스팟 해결
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

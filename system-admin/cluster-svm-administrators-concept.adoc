@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cluster, svm, administrators,cluster, storage, virtual, machines, svm, vserver 
 summary: '클러스터 관리자는 전체 클러스터와 SVM(이전 명칭: vserver)에 포함된 스토리지 가상 머신(SVM)을 관리합니다. SVM 관리자는 자체 데이터 SVM만 관리합니다.' 
 ---
-= 클러스터 및 SVM 관리자
+= ONTAP 클러스터 및 SVM 관리자 역할에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

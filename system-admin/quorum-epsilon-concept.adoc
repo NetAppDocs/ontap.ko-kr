@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: understand, quorum, epsilon, cluster, health, potential, communications, connectivity, challenges 
 summary: 쿼럼 및 epsilon은 클러스터 상태 및 기능의 중요한 측정치로서, 클러스터를 통해 잠재적인 통신 및 연결 문제를 해결하는 방법을 함께 나타냅니다. 
 ---
-= 쿼럼 및 epsilon 정보
+= quorum 및 epsilon을 사용한 ONTAP 클러스터 상태 평가
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

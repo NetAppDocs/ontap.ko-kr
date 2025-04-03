@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage, banner, motd, clu, user, svm, storage, virtual, machine, cluster 
 summary: 'ONTAP를 사용하면 로그인 배너 또는 오늘의 메시지(MOTD)를 구성하여 클러스터 또는 SVM(스토리지 가상 머신)의 System Manager 및 CLI 사용자에게 관리 정보를 전달할 수 있습니다.' 
 ---
-= 배너 및 MOTD 개요를 관리합니다
+= ONTAP 로그인 배너 및 오늘의 메시지 텍스트에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
