@@ -44,7 +44,7 @@ ONTAP 스토리지의 인바운드 트래픽은 다음 프로토콜 및 포트�
 | UDP입니다 | 123을 선택합니다 | NTP, 네트워크 시간 프로토콜 
 
 
-| UDP입니다 | 135 | MSRPC, Microsoft 원격 프로시저 호출 
+| TCP | 135 | MSRPC, Microsoft 원격 프로시저 호출 
 
 
 | TCP | 139 | NetBIOS - SSN, CIFS에 대한 NetBIOS 서비스 세션입니다 

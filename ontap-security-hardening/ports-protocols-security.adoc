@@ -48,7 +48,7 @@ summary: ONTAP는 일반적으로 이러한 포트와 프로토콜을 사용하�
 | `NTP` | 123/UDP입니다 | Network Time Protocol의 약어입니다 
 
 
-| `msrpc` | 135/UDP | Microsoft 원격 프로시저 호출 
+| `msrpc` | 135/TCP입니다 | Microsoft 원격 프로시저 호출 
 
 
 | `Netbios-name`  a| 
