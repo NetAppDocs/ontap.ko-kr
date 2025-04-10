@@ -224,7 +224,7 @@ ONTAP은 다음 MetroCluster SVM 마이그레이션을 지원합니다.
 
 * 비 MetroCluster 구성과 MetroCluster IP 구성 간에 SVM 마이그레이션
 * 2개의 MetroCluster IP 구성 간에 SVM 마이그레이션
-* MetroCluster FC 구성과 MetroCluster IP 구성 간에 SVM 마이그레이션
+* MetroCluster FC 구성에서 MetroCluster IP 구성으로 SVM 마이그레이션
 
 
 |===

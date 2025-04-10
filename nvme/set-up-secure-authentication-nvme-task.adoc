@@ -56,6 +56,9 @@ DH-HMAC-CHAP 키는 NVMe 호스트 또는 컨트롤러의 NQN과 관리자가 �
 ----
 vserver nvme subsystem host add -vserver <svm_name> -subsystem <subsystem> -host-nqn <host_nqn> -dhchap-host-secret <authentication_host_secret> -dhchap-controller-secret <authentication_controller_secret> -dhchap-hash-function <sha-256|sha-512> -dhchap-group <none|2048-bit|3072-bit|4096-bit|6144-bit|8192-bit>
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem host add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . DH-HMAC CHAP 인증 프로토콜이 호스트에 추가되었는지 확인합니다.
 +
 [source, cli]
@@ -73,6 +76,9 @@ vserver nvme subsystem host show
                                                Authentication Mode
 
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem host show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . NVMe 컨트롤러 생성 중에 DH-HMAC CHAP 인증이 수행되었는지 확인합니다.
 +
 [source, cli]
@@ -89,6 +95,9 @@ vserver nvme subsystem controller show
  [ -dhchap-mode {none|unidirectional|bidirectional} ]
                                                Authentication Mode
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem controller show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-controller-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

@@ -26,7 +26,7 @@ TIP: AutoSupport OnDemand와의 통신 및 대용량 파일 업로드에 가능�
 
 * NetApp AutoSupport 메시지에 대해 하나의 전달 채널만 구성할 수 있습니다. 두 프로토콜을 사용하여 AutoSupport 메시지를 NetApp에 전달할 수는 없습니다.
 * AutoSupport는 각 프로토콜의 최대 파일 크기를 제한합니다. AutoSupport 메시지의 크기가 구성된 제한을 초과하는 경우 AutoSupport는 메시지를 최대한 많이 전달하지만 잘립니다.
-* 필요한 경우 최대 파일 크기를 변경할 수 있습니다. ONTAP 명령 참조에서 + [ ] 명령에 대해[`system node autosupport modify` 자세히 알아보십시오.
+* 필요한 경우 최대 파일 크기를 변경할 수 있습니다. 에 대한 자세한 내용은 `system node autosupport modify` link:https://docs.netapp.com/us-en/ontap-cli/system-node-autosupport-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 * 두 프로토콜 모두 이름이 확인되는 주소 패밀리에 따라 IPv4 또는 IPv6를 통해 전송할 수 있습니다.
 * ONTAP에서 AutoSupport 메시지를 보내기 위해 설정한 TCP 연결은 일시적이며 단기간 동안 사용됩니다.
 
@@ -117,6 +117,9 @@ ONTAP에는 미리 설치된 루트 CA 인증서가 다수 포함되어 있습�
 ----
 security certificate install -type server-ca
 ----
++
+에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 다음 콘솔 메시지를 찾습니다.
 +
 [listing]
@@ -145,6 +148,9 @@ security certificate show-user-installed
 ----
 security certificate show
 ----
++
+에 대한 자세한 내용은 `security certificate show` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

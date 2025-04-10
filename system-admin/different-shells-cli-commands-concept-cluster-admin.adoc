@@ -15,14 +15,14 @@ summary: 클러스터에는 클러스터 셸, 노드 쉘, 시스템 쉘과 같�
 
 * 클러스터 쉘은 클러스터에 로그인할 때 자동으로 시작되는 네이티브 셸입니다.
 +
-클러스터 구성 및 관리에 필요한 모든 명령을 제공합니다. clustershell CLI 도움말(clustershell 프롬프트에서 트리거됨)에는 `?` 사용 가능한 clustershell 명령이 표시됩니다.  `man _command_name_`clustershell의 명령은 지정된 clustershell 명령에 대한 man 페이지를 표시합니다. 에 대한 자세한 내용은 `man _command_name_` link:https://docs.netapp.com/us-en/ontap-cli/man.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+클러스터 구성 및 관리에 필요한 모든 명령을 제공합니다. clustershell CLI 도움말(clustershell 프롬프트에서 트리거됨)에는 `?` 사용 가능한 clustershell 명령이 표시됩니다.  `man`clustershell의 명령은 지정된 clustershell 명령에 대한 man 페이지를 (`man <command_name>`표시합니다.) 에 대한 자세한 내용은 `man` link:https://docs.netapp.com/us-en/ontap-cli/man.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 * 노드 수준에서만 적용되는 명령을 위한 특수 셸입니다.
 +
 노드 쉘은 명령을 통해 액세스할 수 `system node run` 있습니다. 에 대한 자세한 내용은 `system node run` link:https://docs.netapp.com/us-en/ontap-cli/system-node-run.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-notes지옥의 CLI 도움말 (? 로 트리거됨 또는 '도움말'을 선택하면 사용 가능한 노드 지옥의 명령이 표시됩니다. 노드 쉘의 man_command_name_ 명령은 지정된 노드 쉘의 명령에 대한 man 페이지를 표시합니다.
+노드 쉘 CLI 도움말(또는 `help` 노드 쉘 프롬프트에서 트리거됨 `?`)에는 사용 가능한 노드 쉘 명령이 표시됩니다.  `man`노드 쉘의 명령은 지정된 노드 쉘 명령에 대한 man 페이지를 표시합니다.
 
 +
 일반적으로 사용되는 노드 쉘의 명령 및 옵션은 클러스터 쉘에 터널링되거나 별칭되어 클러스터 쉘에서도 실행될 수 있습니다.

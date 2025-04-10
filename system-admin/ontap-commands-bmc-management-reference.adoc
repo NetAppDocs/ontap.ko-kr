@@ -88,5 +88,5 @@ BMC 펌웨어에서 지원하지 않는 명령의 경우 다음 오류 메시지
 ::> Error: Command not supported on this platform.
 ----
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+service-processor["시스템 서비스 - 프로세서"^]
 

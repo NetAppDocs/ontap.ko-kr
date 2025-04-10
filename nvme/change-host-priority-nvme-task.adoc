@@ -22,22 +22,34 @@ ONTAP CLI(명령줄 인터페이스)를 사용하여 기본 우선 순위를 보
 ----
 vserver nvme show-host-priority
 ----
++
+에 대한 자세한 내용은 `vserver nvme show-host-priority` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-show-host-priority.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 서브시스템에서 호스트 제거:
 +
 [source, cli]
 ----
 vserver nvme subsystem host remove –vserver <svm_name> -subsystem <subsystem> -host-nqn <host_nqn>
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem host remove` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-remove.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 호스트가 서브시스템에서 제거되었는지 확인합니다.
 +
 [source, cli]
 ----
 vserver nvme subsystem host show
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem host show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 우선 순위가 높은 하위 시스템에 호스트를 다시 추가합니다.
 +
 [source, cli]
 ----
 vserver nvme subsystem host add -vserver <SVM_name> -subsystem <subsystem_name> -host-nqn <Host_NQN_:subsystem._subsystem_name> -priority high
 ----
++
+에 대한 자세한 내용은 `vserver nvme subsystem host add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

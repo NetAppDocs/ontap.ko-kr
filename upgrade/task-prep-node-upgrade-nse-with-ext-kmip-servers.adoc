@@ -20,42 +20,63 @@ ONTAP를 업그레이드하기 전에 NetApp Storage Encryption(NSE)을 통해 O
 ----
 storage encryption disk show -disk *
 ----
++
+에 대한 자세한 내용은 `storage encryption disk show` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 고급 권한 모드로 들어갑니다.
 +
 [source, cli]
 ----
 set -privilege advanced
 ----
++
+에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 기본 제조업체 보안 ID 0x0을 사용하여 SED(자체 암호화 디스크)에 FIPS 키를 할당합니다.
 +
 [source, cli]
 ----
 storage encryption disk modify -fips-key-id 0x0 -disk *
 ----
++
+에 대한 자세한 내용은 `storage encryption disk modify` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 모든 디스크에 FIPS 키 할당이 완료되었는지 확인합니다.
 +
 [source, cli]
 ----
 storage encryption disk show-status
 ----
++
+에 대한 자세한 내용은 `storage encryption disk show-status` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show-status.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 모든 디스크의 * 모드 * 가 데이터로 설정되어 있는지 확인합니다
 +
 [source, cli]
 ----
 storage encryption disk show
 ----
++
+에 대한 자세한 내용은 `storage encryption disk show` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 구성된 KMIP 서버 보기:
 +
 [source, cli]
 ----
 security key-manager show
 ----
++
+에 대한 자세한 내용은 `security key-manager show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 구성된 KMIP 서버를 삭제합니다.
 +
 [source, cli]
 ----
 security key-manager delete -address <kmip_ip_address>
 ----
++
+에 대한 자세한 내용은 `security key-manager delete` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 외부 키 관리자 구성을 삭제합니다.
 +
 [source, cli]
@@ -64,7 +85,7 @@ security key-manager delete-kmip-config
 ----
 +
 
-NOTE: 이 단계에서는 NSE 인증서가 제거되지 않습니다.
+NOTE: 이 단계에서는 NSE 인증서가 제거되지 않습니다. 에 대한 자세한 내용은 `security key-manager delete-kmip-config` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-delete-kmip-config.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

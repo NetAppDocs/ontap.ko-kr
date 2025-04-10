@@ -30,7 +30,7 @@ NOTE: ONTAP 9.13.1 이하 버전에서 하위 시스템에 추가된 호스트�
 vserver nvme subsystem host add -vserver <SVM_name> -subsystem <subsystem_name> -host-nqn <Host_NQN_:subsystem._subsystem_name>
 ----
 +
-호스트의 기본 우선 순위를 보통에서 높음으로 변경하려면 를 사용합니다 `-priority high` 옵션을 선택합니다. 이 옵션은 ONTAP 9.14.1부터 사용할 수 있습니다.
+호스트의 기본 우선 순위를 보통에서 높음으로 변경하려면 `-priority high` 옵션을 사용합니다. 이 옵션은 ONTAP 9.14.1부터 사용할 수 있습니다. 에 대한 자세한 내용은 `vserver nvme subsystem host add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-host-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 네임스페이스를 하위 시스템에 매핑합니다.
 +
@@ -39,7 +39,7 @@ vserver nvme subsystem host add -vserver <SVM_name> -subsystem <subsystem_name> 
 vserver nvme subsystem map add -vserver <SVM_name> -subsystem <subsystem_name> -path <path>
 ----
 +
-네임스페이스는 단일 하위 시스템에만 매핑할 수 있습니다.
+네임스페이스는 단일 하위 시스템에만 매핑할 수 있습니다. 에 대한 자세한 내용은 `vserver nvme subsystem map add` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-map-add.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 네임스페이스가 하위 시스템에 매핑되어 있는지 확인합니다.
 +
@@ -48,6 +48,6 @@ vserver nvme subsystem map add -vserver <SVM_name> -subsystem <subsystem_name> -
 vserver nvme namespace show -vserver <SVM_name> -instance
 ----
 +
-하위 시스템은 연결된 하위 시스템으로 나열되어야 합니다.
+하위 시스템이 로 나열되어야 `Attached subsystem` 합니다. 에 대한 자세한 내용은 `vserver nvme namespace show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-namespace-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

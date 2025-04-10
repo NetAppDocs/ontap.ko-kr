@@ -62,3 +62,8 @@ Aggregate 레벨의 백그라운드 중복제거를 지원합니다
 
 
 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-modify.html["볼륨 효율성 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-efficiency-cross-volume-dedupe-show.html["애그리게이트 효율성 볼륨 간 중복제거 표시"^]
+

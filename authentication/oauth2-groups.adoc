@@ -137,7 +137,7 @@ security login group create -vserver ontap-cls-1 -name IAM_Dev -type entra -uuid
 * 삭제
 
 
-옵션을 사용하여 그룹에 대해 생성된 고유한 그룹 ID를 검색할 수 `show` 있습니다. 자세한 내용은 ONTAP 명령 참조 문서를 참조하십시오.
+옵션을 사용하여 그룹에 대해 생성된 고유한 그룹 ID를 검색할 수 `show` 있습니다. 에 대한 자세한 내용은 `show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=show["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -183,8 +183,4 @@ security login group role-mapping create -group-id 1 -role admin
 * 삭제
 
 
-자세한 내용은 ONTAP 명령 참조 문서를 참조하십시오.
-
-.관련 정보
-* https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI 명령"^]
-
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.

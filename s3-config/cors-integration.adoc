@@ -138,7 +138,7 @@ ONTAP CLI를 사용하여 CORS 규칙을 관리할 수 있습니다. 주요 작�
 
 === 생성
 
-명령을 사용하여 CORS 규칙을 정의할 수 `vserver object-store-server bucket cors-rule create` 있습니다.
+명령을 사용하여 CORS 규칙을 정의할 수 `vserver object-store-server bucket cors-rule create` 있습니다. 에 대한 자세한 내용은 `vserver object-store-server bucket cors-rule create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-cors-rule-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .매개 변수
 규칙을 만드는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
@@ -219,7 +219,7 @@ vserver object-store-server bucket cors-rule create -vserver vs1 -bucket bucket1
 
 === 표시
 
-명령을 사용하여 현재 규칙 및 해당 내용의 목록을 표시할 수 `vserver object-store-server bucket cors-rule show` 있습니다.
+명령을 사용하여 현재 규칙 및 해당 내용의 목록을 표시할 수 `vserver object-store-server bucket cors-rule show` 있습니다. 에 대한 자세한 내용은 `vserver object-store-server bucket cors-rule show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-cors-rule-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 NOTE: 매개 변수를 포함하면 `-instance` 각 규칙에 대해 제공되는 데이터가 확장됩니다. 원하는 필드를 지정할 수도 있습니다.

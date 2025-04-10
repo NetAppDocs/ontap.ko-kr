@@ -46,6 +46,8 @@ vs1             aes256-ctr,   diffie-hellman-group-     hmac-sha1-96
 3 entries were displayed.
 
 ----
+에 대한 자세한 내용은 `security ssh show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+ssh+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 === 로그인 배너
@@ -56,6 +58,8 @@ vs1             aes256-ctr,   diffie-hellman-group-     hmac-sha1-96
 ----
 cluster1::> security login banner modify -vserver cluster1 -message "Authorized users ONLY!"
 ----
+에 대한 자세한 내용은 `security login banner modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-banner-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 === 로그인 배너 매개 변수
@@ -89,7 +93,7 @@ ASCII가 아닌 문자는 유니코드 UTF-8을 사용해야 합니다.
 
 === 오늘의 메시지
 
-이 `security login motd modify` 명령은 MOTD(오늘의 메시지)를 업데이트합니다.
+이 `security login motd modify` 명령은 MOTD(오늘의 메시지)를 업데이트합니다. 에 대한 자세한 내용은 `security login motd modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 MOTD에는 클러스터 레벨 MOTD와 데이터 SVM 레벨 MOTD라는 두 가지 범주가 있습니다. 데이터 SVM의 클러스터 쉘에 로그인하는 사용자는 클러스터 레벨 MOTD 다음에 해당 SVM에 대한 SVM 레벨 MOTD라는 두 가지 메시지를 볼 수 있습니다.
 
@@ -136,7 +140,7 @@ ONTAP에서 오늘의 메시지를 구성하는 방법에 대한 자세한 내�
 
 기본 CLI 세션 시간 초과는 30분입니다. 시간 초과는 부실 세션 및 세션 피기백킹을 방지하는 데 중요합니다.
 
-명령을 사용하여 `system timeout show` 현재 CLI 세션 시간 초과를 봅니다. 시간 초과 값을 설정하려면 `system timeout modify -timeout <minutes>` 명령을 사용합니다.
+명령을 사용하여 `system timeout show` 현재 CLI 세션 시간 초과를 봅니다. 시간 초과 값을 설정하려면 `system timeout modify -timeout <minutes>` 명령을 사용합니다. 및 `system timeout modify` 에 대한 자세한 `system timeout show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+timeout["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
 

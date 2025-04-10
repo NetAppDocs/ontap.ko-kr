@@ -35,3 +35,7 @@ node2         15.97TB         0B         100MB    15.97TB
 2 entries were displayed.
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-file-clone-split-load-show.html["볼륨 파일 클론 분할 로드가 표시됩니다"^]
+
