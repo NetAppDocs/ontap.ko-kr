@@ -49,7 +49,7 @@ ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있�
 | SnapLock 
 
 
-.3+| 데이터 보호 번들 | SnapMirror(비동기식, 동기식, 비즈니스 연속성) 
+.3+| 데이터 보호 번들 | SnapMirror(비동기식, 동기식, 액티브 동기식) 
 
 
 | SnapCenter 
@@ -151,7 +151,7 @@ SAN용 ONTAP One은 ASA A-Series 및 C-Series 시스템에 사용할 수 있습�
 | SnapLock 
 
 
-| SnapMirror(비동기식, 동기식, 비즈니스 연속성) 
+| SnapMirror(비동기식, 동기식, 액티브 동기식) 
 
 
 | SnapCenter 
