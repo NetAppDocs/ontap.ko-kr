@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, custom, replication, policy 
 summary: 관계의 기본 정책이 적합하지 않은 경우 사용자 지정 복제 정책을 생성할 수 있습니다. 예를 들어 네트워크 전송에서 데이터를 압축하거나 SnapMirror에서 스냅샷을 전송하는 시도 횟수를 수정할 수 있습니다. 
 ---
-= ONTAP를 사용하여 사용자 지정 복제 정책을 생성합니다
+= 사용자 지정 ONTAP SnapMirror 복제 정책을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

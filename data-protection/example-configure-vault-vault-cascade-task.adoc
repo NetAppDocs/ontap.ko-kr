@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: example, configure, vault-vault, cascade 
 summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구체적으로 보여 주는 예가 나와 있습니다. 예제에 구성된 볼트-볼트 캐스케이드 배포를 사용하여 "y-weekly"라는 레이블이 붙은 251개 이상의 스냅샷을 보존할 수 있습니다.' 
 ---
-= 예: 볼트-볼트 계단식 배열 설정
+= 예: ONTAP SnapMirror 볼트-볼트 캐스케이드를 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

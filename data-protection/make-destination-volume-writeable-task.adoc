@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: destination, volume, writeable, write, serve data, snapmirror, quiesce, pause, abort, transfers 
 summary: 볼륨에서 클라이언트로 데이터를 제공하려면 먼저 대상 볼륨을 쓰기 가능하게 만들어야 합니다. 
 ---
-= ONTAP를 사용하여 대상 볼륨을 쓰기 가능하게 만듭니다
+= ONTAP SnapMirror 대상 볼륨을 쓰기 가능하게 만듭니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

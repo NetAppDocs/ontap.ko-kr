@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fan-out, fanout, fan out, cascade, data, protection, deployments, snapmirror, snap mirror, snapvault, synchronous, asynchronous, unified, replication, replicate, vault-mirror, vault-vault 
 summary: 팬아웃 구축을 사용하여 데이터 보호를 여러 보조 시스템으로 확장할 수 있습니다. 계단식 구축을 사용하여 데이터 보호를 3차 시스템으로 확장할 수 있습니다. 
 ---
-= 팬아웃 및 캐스케이드 데이터 보호 구축
+= ONTAP 데이터 보호 팬아웃 및 캐스케이드 구축에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, single file, lun, nvme, namespace, snapmirror, destination, snapshot, copy, snap mirror, baseline, 
 summary: 단일 파일, LUN, 스냅샷에서 파일 또는 LUN 세트를 복원하거나 SnapMirror 대상 볼륨에서 NVMe 네임스페이스를 복원할 수 있습니다. ONTAP 9.7부터는 SnapMirror 동기식 대상에서 NVMe 네임스페이스를 복원할 수도 있습니다. 파일을 원래 소스 볼륨이나 다른 볼륨으로 복원할 수 있습니다. 
 ---
-= ONTAP를 통해 SnapMirror 대상에서 단일 파일, LUN 또는 NVMe 네임스페이스를 복원합니다
+= ONTAP SnapMirror 대상에서 파일, LUN 또는 NVMe 네임스페이스를 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

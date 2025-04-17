@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, synchronous, disaster, recovery 
 summary: 'ONTAP 9.5부터, SnapMirror 동기(SM-S) 기술은 최소 16GB의 메모리가 있는 모든 FAS 및 AFF 플랫폼 및 모든 ONTAP Select 플랫폼에서 지원됩니다. SnapMirror 동기식 기술은 볼륨 레벨에서 동기식 데이터 복제를 제공하는 라이센스된 노드별 기능입니다.' 
 ---
-= SnapMirror 동기식 재해 복구 기초
+= ONTAP SnapMirror 동기식 재해 복구 에 대해 알아보십시오
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

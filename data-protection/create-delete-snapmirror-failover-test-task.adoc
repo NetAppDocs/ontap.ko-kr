@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, delete, failover, dress rehearsal, SnapMirror 
 summary: ONTAP 9.14.1부터 System Manager를 사용하여 활성 SnapMirror 관계를 중단하지 않고 SnapMirror 페일오버 및 재해 복구를 테스트하는 볼륨 클론을 생성할 수 있습니다. 
 ---
-= SnapMirror 페일오버 테스트 볼륨을 생성하고 삭제합니다
+= ONTAP SnapMirror 페일오버 테스트 볼륨을 생성하고 삭제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

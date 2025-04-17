@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define, rule, policy, data protection 
 summary: '"볼트" 또는 "볼트 대칭 복사" 정책 유형의 사용자 정의 정책의 경우 초기화 및 업데이트 중에 전송되는 스냅샷을 결정하는 규칙을 하나 이상 정의해야 합니다. "볼트" 또는 "볼트 대칭 복사" 정책 유형으로 기본 정책에 대한 규칙을 정의할 수도 있습니다.' 
 ---
-= ONTAP를 사용하여 정책에 대한 규칙을 정의합니다
+= ONTAP SnapMirror 정책에 대한 규칙을 정의합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

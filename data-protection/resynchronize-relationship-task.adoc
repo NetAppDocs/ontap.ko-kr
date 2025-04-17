@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resynchronize, replication, relationship, snapmirror, mirror, snapshot copy, restore, disaster recovery, DR, resync, protection relationship, data protection 
 summary: 대상 볼륨을 쓰기 가능하게 만든 후, 소스 및 대상 볼륨에 공통 스냅샷이 없기 때문에 업데이트가 실패한 후 또는 관계에 대한 복제 정책을 변경하려는 경우 복제 관계를 다시 동기화해야 합니다. 
 ---
-= ONTAP와 복제 관계를 다시 동기화합니다
+= ONTAP SnapMirror 복제 관계를 다시 동기화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

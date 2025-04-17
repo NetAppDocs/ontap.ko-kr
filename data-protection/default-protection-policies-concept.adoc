@@ -1,10 +1,10 @@
 ---
 permalink: data-protection/default-protection-policies-concept.html 
 sidebar: sidebar 
-keywords: snapmirror, policy, default, replicate, protection, predefined 
+keywords: snapmirror, policy, default, replicate, data protection, predefined 
 summary: ONTAP에는 몇 가지 기본 보호 정책이 포함되어 있으며, 이러한 정책은 데이터 보호 관계를 생성할 때 사용할 수 있는 사전 정의된 일정이 있습니다. 
 ---
-= 기본 보호 정책
+= 기본 ONTAP 데이터 보호 정책
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, efficiency, manage, storage, snap mirror, compression, compress, postprocess, post-process, update relationship, volume 
 summary: SnapMirror를 사용하여 소스 볼륨과 타겟 볼륨 간에 스토리지 효율성을 유지하려면 타겟 볼륨에서 사후 처리 압축을 비활성화해야 합니다 
 ---
-= ONTAP로 스토리지 효율성 관리
+= ONTAP SnapMirror 볼륨에서 스토리지 효율성 관리
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
