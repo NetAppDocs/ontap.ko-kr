@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_nas_provision_windows_smb.html 
 keywords: nas, windows, servers, provision, cifs, share access permissions, share access properties, hyper-v over smb, sql server over smb 
-summary: ONTAP 9.7 이상 ONTAP 9 릴리즈에서 제공되는 System Manager를 사용하여 SMB 프로토콜을 사용하여 Windows 서버용 스토리지를 제공할 볼륨을 생성합니다. 
+summary: ONTAP 9.7 이상에서 사용할 수 있는 System Manager를 사용하여 SMB 프로토콜을 사용하여 Windows 서버용 스토리지를 제공할 볼륨을 생성합니다. 
 ---
 = SMB를 사용하여 Windows 서버용 NAS 스토리지 용량 할당
 :hardbreaks:
@@ -93,10 +93,10 @@ SMB 프로토콜로 구성된 스토리지 VM만 나열됩니다. SMB 프로토�
 
 
 
-.절차를 참조하십시오
-SMB 지원 볼륨에 새 공유를 추가하려면** 스토리지 > 공유** 를 클릭하고** 추가** 를 클릭한 다음** 공유** 를 선택합니다.
+.단계
+. SMB 지원 볼륨에 새 공유를 추가하려면** 스토리지 > 공유** 를 클릭하고** 추가** 를 클릭한 다음** 공유** 를 선택합니다.
+. 기존 공유를 수정하려면 ** 스토리지 > 공유** 를 클릭한 다음 image:icon_kabob.gif["메뉴 옵션 아이콘"] ** 편집** 을 선택합니다.
 
-기존 공유를 수정하려면 ** 스토리지 > 공유** 를 클릭한 다음 image:icon_kabob.gif["메뉴 옵션 아이콘"] ** 편집** 을 선택합니다.
 
 
 
@@ -104,9 +104,7 @@ SMB 지원 볼륨에 새 공유를 추가하려면** 스토리지 > 공유** 를
 
 시스템 기본값을 수락하는 대신 볼륨을 추가할 때 볼륨 구성을 사용자 지정할 수 있습니다.
 
-시스템 기본값을 수락하는 대신 볼륨을 추가할 때 볼륨 구성을 사용자 지정할 수 있습니다.
-
-.절차를 참조하십시오
+.단계
 추가 옵션 * 을 클릭한 후 필요한 기능을 선택하고 필요한 값을 입력합니다.
 
 * 원격 볼륨의 캐시입니다.

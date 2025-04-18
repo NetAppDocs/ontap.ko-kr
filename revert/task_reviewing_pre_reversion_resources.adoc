@@ -13,7 +13,7 @@ summary: ONTAP를 되돌리기 전에 하드웨어 지원을 확인하고 리소
 [role="lead"]
 ONTAP 클러스터를 복구하기 전에 하드웨어 지원을 확인하고 리소스를 검토하여 발생 가능하거나 해결해야 할 문제를 파악해야 합니다.
 
-. 를 검토합니다 link:https://library.netapp.com/ecmdocs/ECMLP2492508/html/frameset.html["ONTAP 9 릴리즈 노트"] 타겟 릴리즈용
+. 대상 릴리스에 대한 를 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"]검토합니다.
 +
 ""중요 주의 사항" 섹션에서는 다운그레이드 또는 되돌리기 전에 숙지해야 할 잠재적인 문제에 대해 설명합니다.
 

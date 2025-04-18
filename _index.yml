@@ -118,8 +118,6 @@ indexpage:
     links:
     - title: 모든 항목
       url: "/security-encryption/index.html"
-    - title: NetApp 랜섬웨어 방어 포트폴리오
-      url: "/ransomware-solutions/ransomware-overview.html"
     - title: CLI를 사용하여 관리자 인증 및 RBAC를 관리합니다
       url: "/authentication/index.html"
     - title: NAS 감사 및 보안 추적
@@ -158,6 +156,8 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-ems-9131/
   - title: 더 많은 리소스
     links:
+    - title: NetApp 랜섬웨어 방어 포트폴리오
+      url: https://docs.netapp.com/us-en/ontap-technical-reports/ransomware-solutions/ransomware-overview.html
     - title: AFF, ASA 및 FAS 플랫폼
       url: https://docs.netapp.com/us-en/ontap-systems/index.html
     - title: ASA(All Flash SAN 어레이) 시스템

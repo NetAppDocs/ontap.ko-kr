@@ -548,7 +548,7 @@ entries:
       url: "/smb-admin/file-locking-between-protocols-concept.html"
     - title: ONTAP에서 읽기 전용 비트를 처리하는 방법
       url: "/smb-admin/ontap-treats-read-only-bits-concept.html"
-    - title: 공유 경로 구성 요소의 잠금 처리에 대한 ONTAP와 Windows의 차이점
+    - title: 공유 경로 구성 요소에 대한 잠금 처리에서 ONTAP가 Windows와 어떻게 다른지 설명합니다
       url: "/smb-admin/ontap-differs-windows-locks-share-path-concept.html"
     - title: 잠금에 대한 정보를 표시합니다
       url: "/smb-admin/display-locks-task.html"

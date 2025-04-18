@@ -71,7 +71,7 @@ indexpage:
   - title: 더 많은 리소스
     links:
     - title: ONTAP 보안 강화
-      url: "/../ontap-security-hardening/security-hardening-overview.html"
+      url: https://docs.netapp.com/us-en/ontap-technical-reports/ontap-security-hardening/security-hardening-overview.html
     - title: 시험 구동이 포함된 NetApp 제품 시험 사용(신규 고객의 경우)
       url: https://www.netapp.com/test-drives/
     - title: 'TR-4647: ONTAP 모범 사례 및 구현 가이드의 다중 요소 인증'

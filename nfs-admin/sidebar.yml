@@ -102,7 +102,7 @@ entries:
       url: "/nfs-admin/ontap-support-kerberos-concept.html"
     - title: NFS로 Kerberos 구성 요구 사항
       url: "/nfs-admin/requirements-configuring-kerberos-concept.html"
-    - title: NFSv4의 사용자 ID 도메인 지정
+    - title: NFSv4의 사용자 ID 도메인을 지정합니다
       url: "/nfs-admin/specify-user-id-domain-nfsv4-task.html"
   - title: 이름 서비스 구성
     pdf-filename: 환경에 대한 이름 서비스를 구성합니다
@@ -234,7 +234,7 @@ entries:
       url: "/nfs-admin/file-locking-between-protocols-concept.html"
     - title: ONTAP에서 읽기 전용 비트를 처리하는 방법
       url: "/nfs-admin/ontap-treats-read-only-bits-concept.html"
-    - title: 공유 경로 구성 요소의 잠금 처리에 대한 ONTAP와 Windows의 차이점
+    - title: 공유 경로 구성 요소에 대한 잠금 처리에서 ONTAP가 Windows와 어떻게 다른지 설명합니다
       url: "/nfs-admin/ontap-differs-windows-locks-share-path-concept.html"
     - title: 잠금에 대한 정보를 표시합니다
       url: "/nfs-admin/display-locks-task.html"

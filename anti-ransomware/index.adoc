@@ -79,7 +79,7 @@ link:../revert/anti-ransomware-license-task.html["ARP를 되돌리는 방법에 
 
 ONTAP에는 랜섬웨어로부터 보호하기 위한 FPolicy, 스냅샷, SnapLock 및 Active IQ 디지털 어드바이저(디지털 자문이라고도 함)와 같은 기능이 포함되어 있지만, 머신 러닝 기능을 갖춘 ARP 온박스 기능에 중점을 둡니다.
 
-ONTAP의 다른 안티 랜섬웨어 기능에 대한 자세한 내용은 를 참조하십시오link:../ransomware-solutions/ransomware-overview.html["Ransomware 및 NetApp의 보호 포트폴리오"].
+ONTAP의 다른 안티 랜섬웨어 기능에 대한 자세한 내용은 를 참조하십시오link:https://docs.netapp.com/us-en/ontap-technical-reports/ransomware-solutions/ransomware-active-iq.html["Ransomware 및 NetApp의 보호 포트폴리오"^].
 
 
 
