@@ -1,17 +1,17 @@
 ---
 permalink: data-protection/create-smb-server-task.html 
 sidebar: sidebar 
-keywords: cifs, create, server 
+keywords: cifs, create, smb, server 
 summary: 소스 SVM에 SMB 구성이 있고 ID 보존이 false로 설정된 경우, 대상 SVM을 위한 SMB 서버를 생성해야 합니다. SMB 서버는 SnapMirror 관계를 초기화하는 동안 공유와 같은 일부 SMB 구성에 필요합니다. 
 ---
-= DR 관계에서 ONTAP 대상 SVM에 대한 SMB 서버를 생성합니다
+= DR 관계에서 ONTAP SnapMirror 대상 SVM에 대한 SMB 서버를 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-소스 SVM에 SMB 구성이 있고 'identity-preserve'를 'false'로 설정한 경우, 대상 SVM을 위한 SMB 서버를 생성해야 합니다. SMB 서버는 SnapMirror 관계를 초기화하는 동안 공유와 같은 일부 SMB 구성에 필요합니다.
+소스 SVM에 SMB 구성이 있으며 을 로 `false` 설정하도록 선택한 경우 `identity-preserve`, 대상 SVM에 대한 SMB 서버를 생성해야 합니다. SnapMirror 관계를 초기화할 때 공유와 같은 일부 SMB 구성에는 SMB 서버가 필요합니다.
 
 .단계
 . 명령을 사용하여 타겟 SVM을 `vserver start` 시작합니다.

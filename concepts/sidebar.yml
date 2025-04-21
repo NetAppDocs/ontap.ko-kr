@@ -1,11 +1,13 @@
 ---
-section: concepts
-title: ONTAP 개념
+section: learn-about
+title: ONTAP에 대해 알아보십시오
 entries:
 - title: ONTAP 플랫폼
   url: "/concepts/ontap-platforms-concept.html"
 - title: ONTAP 사용자 인터페이스
   url: "/concepts/introducing-ontap-interfaces-concept.html"
+- title: System Manager와 BlueXP의 통합
+  url: "/concepts/sysmgr-integration-bluexp-concept.html"
 - title: 클러스터 스토리지
   url: "/concepts/cluster-storage-concept.html"
 - title: 고가용성 쌍

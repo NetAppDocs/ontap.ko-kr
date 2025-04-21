@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: software_setup/configure-protocols.html 
+keywords: install, installing, cluster, set up, setup, configure, disk, data ports, guided setup, local tiers, aggregate, vserver, volume, configuring ONTAP on a new cluster, configuring a new cluster, assign a node-management IP address, node, DNS server, host name, hostname, NTP server, synchronize time, create a local tier, configure protocol, SSD, provision storage, add LUN, add volume, add namespace, volume, vserver, configure ONTAP on a new cluster, configuration 
+summary: System Manager는 클러스터를 설정하고 스토리지를 구성하기 위한 간단하고 쉬운 워크플로우를 제공합니다. 
+---
+= ONTAP 클러스터에 프로토콜을 구성합니다
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+클러스터에서 활성화된 라이센스에 따라 클러스터에서 원하는 프로토콜을 활성화할 수 있습니다. 그런 다음 스토리지를 액세스할 수 있는 네트워크 인터페이스를 생성합니다.
+
+.이 작업에 대해
+이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)이 있는 경우 link:https://docs.netapp.com/us-en/asa-r2/install-setup/initialize-ontap-cluster.html["수행할 수 있습니다"^]시스템 관리자를 사용하여 ONTAP 클러스터를 설정합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
+
+.단계
+. Dashboard * 를 선택한 다음 * Configure Protocols * 를 클릭합니다.
++
+** NAS 프로토콜을 활성화하려면 * NFS * 또는 * SMB * 를 선택합니다.
+** SAN 프로토콜을 활성화하려면 * iSCSI * 또는 * FC * 를 선택합니다.
+** NVMe 프로토콜을 활성화하려면 * NVMe * 를 선택하십시오.
+
+
+

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: software_setup/workflow-summary.html 
+keywords: cluster, setup, set up get started, workflow, summary 
+summary: NetApp은 System Manager를 사용하여 새 클러스터를 설정할 것을 권장합니다. System Manager에서 노드 관리 IP 주소의 할당 및 클러스터 초기화를 포함하여 클러스터 설정을 위한 간단하고 쉬운 작업 흐름을 제공합니다. 
+---
+= ONTAP 클러스터 설정 워크플로 요약
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+클러스터를 설정하려면 필요한 정보를 수집하고, 클러스터를 생성하고, 노드를 추가하고, 관리 LIF를 IPv4에서 IPv6로 변환하고, Active IQ Config Advisor로 클러스터를 확인하고, 클러스터 전체에서 시스템 시간을 동기화해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"]link:gather_cluster_setup_information.html["정보를 수집합니다"]
+[role="quick-margin-para"]
+클러스터 설정을 시작하기 전에 설정 프로세스를 완료하는 데 필요한 정보를 수집합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"]link:setup-cluster.html["ONTAP 클러스터를 생성하고 노드를 결합합니다"]
+[role="quick-margin-para"]
+NetApp은 System Manager를 사용하여 새 클러스터를 설정할 것을 권장합니다. System Manager에서 노드 관리 IP 주소의 할당 및 클러스터 초기화를 포함하여 클러스터 설정을 위한 간단하고 쉬운 워크플로를 제공합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"]link:convert-ipv4-to-ipv6-task.html["관리 LIF를 IPv4에서 IPv6로 변환합니다"]
+[role="quick-margin-para"]
+ONTAP 9.13.1부터 초기 클러스터 설정 중에 ONTAP CLI(Command Line Interface)를 사용하여 IPv6 주소를 AFF A800 및 FAS 8700 플랫폼의 관리 LIF에 할당할 수 있습니다. ONTAP 9.13.1 이전 릴리즈 또는 다른 플랫폼에서 9.13.1 이상인 경우, 먼저 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6 주소로 변환해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"]link:task_check_cluster_with_config_advisor.html["Active IQ Config Advisor에서 클러스터를 확인하십시오"]
+[role="quick-margin-para"]
+모든 노드를 새 클러스터에 결합했으면 Active IQ Config Advisor를 실행하여 구성을 검증하고 일반적인 구성 오류를 확인해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"]link:task_synchronize_the_system_time_across_the_cluster.html["클러스터 전체에서 시스템 시간을 동기화합니다"]
+[role="quick-margin-para"]
+클러스터 전체의 시스템 시간을 동기화하여 클러스터의 모든 노드가 동일한 시간을 유지하고 CIFS 및 Kerberos 장애를 방지합니다.

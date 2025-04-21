@@ -6,6 +6,8 @@ entries:
   entries:
   - title: 개요
     url: "/san-admin/index.html"
+  - title: ASA 구성에 대해 자세히 알아보십시오
+    url: "/san-admin/learn-about-asa.html"
   - title: FCoE에 대한 스위치를 구성합니다
     url: "/san-admin/configure-switches-fcoe-task.html"
   - title: 시스템 요구 사항

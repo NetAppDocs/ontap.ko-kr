@@ -1,0 +1,9 @@
+---
+section: get-started
+title: 시작하십시오
+url: "/get-started/index.html"
+entries:
+- section: learn-about
+- title: 빠른 시작
+  url: "/quick-start.html"
+- section: setup-cluster

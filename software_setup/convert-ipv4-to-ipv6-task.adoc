@@ -2,16 +2,19 @@
 permalink: software_setup/convert-ipv4-to-ipv6-task.html 
 sidebar: sidebar 
 keywords: software, setup, ontap, covert, converting, ipv4, ipv6 
-summary: ONTAP 9.13.1부터 A800 및 FAS8700 플랫폼에서 관리 LIF에 IPv6 주소를 할당할 수 있습니다. 다른 플랫폼에서 9.13.1 이전의 ONTAP 릴리스의 경우, 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6 주소를 변환해야 합니다. 
+summary: ONTAP 9.13.1부터 AFF A800 nd FAS 8700 플랫폼에 관리 LIF에 IPv6 주소를 할당할 수 있습니다. 다른 플랫폼에서 9.13.1 이전의 ONTAP 릴리스의 경우, 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6 주소를 변환해야 합니다. 
 ---
-= ONTAP의 관리 LIF를 IPv4에서 IPv6로 변환합니다
+= 선택적으로 ONTAP 관리 LIF를 IPv4에서 IPv6로 변환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 9.13.1부터 초기 클러스터 설정 중에 A800 및 FAS8700 플랫폼의 관리 LIF에 IPv6 주소를 할당할 수 있습니다. ONTAP 9.13.1 이전 릴리즈 또는 다른 플랫폼에서 9.13.1 이상인 경우, 먼저 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6 주소로 변환해야 합니다.
+ONTAP 9.13.1부터 초기 클러스터 설정 중에 ONTAP CLI(Command Line Interface)를 사용하여 IPv6 주소를 AFF A800 및 FAS 8700 플랫폼의 관리 LIF에 할당할 수 있습니다. ONTAP 9.13.1 이전 릴리즈 또는 다른 플랫폼에서 9.13.1 이상인 경우, 먼저 관리 LIF에 IPv4 주소를 할당한 다음 클러스터 설정을 완료한 후 IPv6 주소로 변환해야 합니다.
+
+
+NOTE: 자동으로 할당된 IP 주소와 DHCP를 사용하여 하드웨어 설정을 완료하고 Windows 검색을 통해 System Manager를 시작하면 System Manager에서 IPv6 관리 주소를 구성할 수 있습니다.
 
 .단계
 . 클러스터에 대해 IPv6 사용:

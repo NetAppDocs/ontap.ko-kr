@@ -9,6 +9,8 @@ entries:
     url: "/concept_administration_overview.html"
   - title: System Manager를 사용하여 클러스터에 액세스합니다
     url: "/system-admin/access-cluster-system-manager-browser-task.html"
+  - title: 프로토콜을 구성합니다
+    url: "/software_setup/configure-protocols.html"
   - title: 새로운 기능 활성화
     url: "/task_admin_enable_new_features.html"
   - title: 클러스터 구성을 다운로드합니다

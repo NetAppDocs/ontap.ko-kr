@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, software, setup, synchronize, system, time, across, cluster 
 summary: 시간을 동기화하면 클러스터의 모든 노드가 동일한 시간을 가지고 CIFS 및 Kerberos 장애를 방지할 수 있습니다. 
 ---
-= 클러스터 전체에서 시스템 시간을 동기화합니다
+= ONTAP 클러스터 전체에서 시스템 시간을 동기화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,12 +17,18 @@ summary: 시간을 동기화하면 클러스터의 모든 노드가 동일한 �
 
 클러스터를 하나 이상의 NTP 서버와 연결하여 클러스터 전체에서 시간을 동기화할 수 있습니다.
 
-. 각 노드에 대해 시스템 시간 및 시간대가 올바르게 설정되었는지 확인합니다.
+. 각 노드에 대해 시스템 시간과 시간대가 올바르게 설정되었는지 확인합니다.
++
+[source, cli]
+----
+cluster date show
+----
 +
 클러스터의 모든 노드는 동일한 시간대로 설정되어야 합니다.
 
 +
-.. cluster date show 명령을 사용하여 각 노드의 현재 날짜, 시간 및 시간대를 표시합니다.
+이 예는 클러스터의 각 노드에 대한 날짜 및 시간대를 보여줍니다.
+
 +
 [listing]
 ----
@@ -35,7 +41,12 @@ cluster1-03  01/06/2015 09:35:15 America/New_York
 cluster1-04  01/06/2015 09:35:15 America/New_York
 4 entries were displayed.
 ----
-.. 클러스터 날짜 수정 명령을 사용하여 모든 노드의 날짜 또는 시간대를 변경하십시오.
+. 모든 노드의 날짜 또는 시간대를 변경합니다.
++
+[source, cli]
+----
+cluster date modify
+----
 +
 이 예에서는 클러스터의 시간대를 GMT로 변경합니다.
 
@@ -44,12 +55,23 @@ cluster1-04  01/06/2015 09:35:15 America/New_York
 ----
 cluster1::> cluster date modify -timezone GMT
 ----
-
-
-. 클러스터 시간 서비스 NTP 서버 생성 명령을 사용하여 클러스터를 NTP 서버와 연결합니다.
+. 클러스터를 NTP 서버에 연결합니다.
 +
-** 대칭 인증 없이 NTP 서버를 설정하려면 클러스터 시간 서비스 NTP 서버 create -server server_name 명령을 입력합니다
-** 대칭 인증을 사용하여 NTP 서버를 설정하려면 'cluster time-service ntp server create-server_ip_address-key-id key_id' 명령을 입력합니다
+대칭 인증 없이 NTP 서버를 설정하려면 다음 명령을 입력합니다.
+
++
+[source, cli]
+----
+cluster time-service ntp server create -server <server_name>
+----
++
+대칭 인증을 사용하여 NTP 서버를 설정하려면 다음 명령을 입력합니다.
+
++
+[source, cli]
+----
+cluster time-service ntp server create -server <server_ip_address> -key-id <key_id>
+----
 +
 
 NOTE: 대칭 인증은 ONTAP 9.5부터 사용할 수 있습니다. ONTAP 9.4 이하에서는 사용할 수 없습니다.
@@ -62,9 +84,15 @@ NOTE: 대칭 인증은 ONTAP 9.5부터 사용할 수 있습니다. ONTAP 9.4 이
 ----
 cluster1::> cluster time-service ntp server create -server ntp1.example.com
 ----
+. 클러스터가 NTP 서버와 연결되어 있는지 확인합니다.
++
+[source, cli]
+----
+cluster time-service ntp server show
+----
++
+이 예에서는 클러스터가 NTP 서버 ntp1.example.com 에 연결되어 있음을 보여 줍니다.
 
-
-. 클러스터가 NTP 서버와 연결되어 있는지 확인합니다. 'cluster time-service ntp server show'
 +
 [listing]
 ----
@@ -75,5 +103,82 @@ ntp1.example.com     auto
 ----
 
 
-.관련 정보
-link:../system-admin/index.html["시스템 관리"]
+
+
+== NTP 서버에서 대칭 인증을 관리하는 명령입니다
+
+ONTAP 9.5부터 NTP(네트워크 시간 프로토콜) 버전 3이 지원됩니다. NTPv3에는 SHA-1 키를 사용한 대칭 인증이 포함되어 있어 네트워크 보안을 강화합니다.
+
+[cols="2*"]
+|===
+| 수행할 작업... | 이 명령 사용... 
+
+
+ a| 
+대칭 인증 없이 NTP 서버를 구성합니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp server create -server server_name
+----
+
+
+ a| 
+대칭 인증을 사용하여 NTP 서버를 구성합니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp server create -server server_ip_address -key-id key_id
+----
+
+
+ a| 
+기존 NTP 서버에 대해 대칭 인증을 설정합니다
+
+필요한 키 ID를 추가하여 인증을 사용하도록 기존 NTP 서버를 수정할 수 있습니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp server modify -server server_name -key-id key_id
+----
+
+
+ a| 
+공유 NTP 키를 구성합니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp key create -id shared_key_id -type shared_key_type -value shared_key_value
+----
+* 참고: * 공유 키는 ID로 참조됩니다. ID, 유형 및 값은 노드와 NTP 서버 모두에서 동일해야 합니다
+
+
+
+ a| 
+알 수 없는 키 ID로 NTP 서버를 구성합니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp server create -server server_name -key-id key_id
+----
+
+
+ a| 
+NTP 서버에 키 ID가 구성되지 않은 서버를 구성합니다.
+ a| 
+[source, cli]
+----
+cluster time-service ntp server create -server server_name -key-id key_id
+----
+* 참고: * 키 ID, 유형 및 값은 NTP 서버에 구성된 키 ID, 유형 및 값과 동일해야 합니다.
+
+
+
+ a| 
+대칭 인증을 사용하지 않도록 설정합니다
+ a| 
+[source, cli]
+----
+cluster time-service ntp server modify -server server_name -authentication disabled
+----
+|===

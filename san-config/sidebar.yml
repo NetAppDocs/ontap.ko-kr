@@ -50,6 +50,8 @@ entries:
   entries:
   - title: 클러스터당 지원되는 최대 노드 및 SAN 호스트를 확인합니다
     url: "/san-config/determine-supported-nodes-task.html"
+  - title: ASA 어레이 구성 제한 및 지원
+    url: "/san-config/asa-support-limitations.html"
   - title: FC 스위치 구성 제한
     url: "/san-config/fc-switch-config-limits-reference.html"
   - title: 지원되는 최대 FC 및 FCoE 홉 수

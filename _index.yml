@@ -16,16 +16,16 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
     - title: ONTAP REST API를 사용하여 자동화합니다
       url: https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_rest_api.html
-    - title: ONTAP 개념
-      url: "/introduction-concepts/index.html"
+    - title: ONTAP 빠른 시작
+      url: "/quick-start.html"
+    - title: ONTAP를 설정합니다
+      url: "/software_setup/workflow-summary.html"
     - title: ONTAP 설명서 페이지
       url: https://docs.netapp.com/us-en/ontap-cli/index.html
-  - title: 설정, 업그레이드 및 되돌리기
+  - title: 업그레이드 및 되돌리기
     links:
     - title: 모든 항목
       url: "/setup-upgrade/index.html"
-    - title: ONTAP를 설정합니다
-      url: "/task_configure_ontap.html"
     - title: ONTAP를 업그레이드합니다
       url: "/upgrade/index.html"
     - title: 펌웨어를 업데이트합니다

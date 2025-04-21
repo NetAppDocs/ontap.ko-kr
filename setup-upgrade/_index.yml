@@ -1,26 +1,16 @@
 ---
 indexpage:
-  title: ONTAP 소프트웨어 및 펌웨어의 설정, 업그레이드 및 되돌리기
-  summary: 새로운 ONTAP 클러스터를 설정하거나, 호환성 및 구성 검사로 소프트웨어 업그레이드를 수행하거나, 이전 ONTAP 릴리즈로 되돌릴
-    수 있습니다.
+  title: ONTAP 소프트웨어 및 펌웨어를 업그레이드하고 되돌립니다
+  summary: 호환성 및 구성 검사를 통해 소프트웨어 업그레이드를 수행하거나 이전 ONTAP 릴리즈로 되돌릴 수 있습니다.
   keywords: upgrade, revert, ontap, firmware, cluster
-  lead: 새로운 ONTAP 클러스터를 설정하거나, 호환성 및 구성 검사로 소프트웨어 업그레이드를 수행하거나, 이전 ONTAP 릴리즈로 되돌릴
-    수 있습니다.
+  lead: 호환성 및 구성 검사를 통해 소프트웨어 업그레이드를 수행하거나 이전 ONTAP 릴리즈로 되돌릴 수 있습니다.
   tiles:
   - title: 시작하십시오
     links:
-    - title: ONTAP를 설정합니다
-      url: "/../software_setup/index.html"
     - title: ONTAP를 업그레이드합니다
       url: "/../upgrade/index.html"
     - title: ONTAP를 되돌립니다
       url: "/../revert/index.html"
-  - title: 클러스터 설정
-    links:
-    - title: System Manager로 클러스터 설정
-      url: "/../task_configure_ontap.html"
-    - title: CLI를 사용하여 클러스터 설정
-      url: "/../software_setup/task_create_the_cluster_on_the_first_node.html"
   - title: 클러스터를 업그레이드합니다
     links:
     - title: 업그레이드 경로
@@ -37,7 +27,5 @@ indexpage:
       url: "/../revert/task_reverting_an_ontap_cluster.html"
   - title: 더 많은 리소스
     links:
-    - title: NetApp TechCommTV에서 새로운 클러스터 비디오에 ONTAP를 구성합니다
-      url: https://www.youtube.com/watch?v=6WjyADPXDZ0
     - title: Active IQ는 스토리지 업그레이드 - NeApp 블로그 에 도움을 줍니다
       url: https://www.youtube.com/watch?v=6WjyADPXDZ0

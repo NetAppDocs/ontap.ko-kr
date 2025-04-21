@@ -1,0 +1,47 @@
+---
+permalink: quick-start.html 
+sidebar: sidebar 
+keywords: ontap, setup, getting started, get started, quick start, quick, start 
+summary: '클러스터를 설정한 후에는 System Manager 또는 ONTAP CLI\(Command-Line Interface)를 사용하여 클러스터를 계속 구성할 수 있습니다.' 
+---
+= ONTAP를 위한 빠른 시작
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP를 시작하려면 클러스터를 설정하고, 네트워크를 구성하고, BMC 자동 네트워크 구성을 활성화하고, 로컬 계층을 생성하고, 프로토콜을 구성하고, 스토리지를 프로비저닝해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 클러스터 설정
+[role="quick-margin-para"]
+NetApp은 경우에 System Manager를 사용할 것을 link:software_setup/setup-cluster.html["새 ONTAP 클러스터 설정"]권장합니다. System Manager에서 노드 관리 IP 주소의 할당 및 클러스터 초기화를 포함하여 클러스터 설정을 위한 간단하고 쉬운 워크플로를 제공합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 네트워크를 구성합니다
+[role="quick-margin-para"]
+link:networking/add_broadcast_domain.html["브로드캐스트 도메인"], link:networking/create_a_subnet.html["서브넷"]및 선택적으로 를 만들어 네트워크를 link:networking/create_ipspaces.html["IP 공간"]구성합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] BMC 자동 네트워크 구성을 활성화합니다
+[role="quick-margin-para"]
+link:system-admin/enable-sp-bmc-automatic-network-config-task.html["BMC 자동 네트워크 구성을 활성화합니다"], 따라서 각 노드의 BMC에 대한 IP 주소를 수동으로 할당할 필요가 없습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"] 로컬 계층을 생성합니다
+[role="quick-margin-para"]
+link:disks-aggregates/create-aggregates-auto-provision-task.html["로컬 계층 생성"] 노드의 가용 디스크 또는 SSD에서 데이터를 관리합니다. System Manager는 하드웨어에 따라 최적의 계층 구성을 자동으로 계산합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"] 프로토콜을 구성합니다
+[role="quick-margin-para"]
+link:software_setup/configure-protocols.html["NAS, SAN 또는 NVMe 프로토콜을 지원합니다"] 클러스터 위에 있습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["6개"] 스토리지를 프로비저닝합니다
+[role="quick-margin-para"]
+또는 link:san-admin/provision-storage.html["산"] 구성을 위한 스토리지 프로비저닝link:concept_nas_provision_overview.html["NAS"]
+
+.다음 단계
+* link:insights-system-optimization-task.html["시스템 최적화를 위한 통찰력 확보"]..
+* link:authentication/index.html["ONTAP 관리자 인증 및 RBAC(역할 기반 액세스 제어) 설정"] 관리자의 기능을 정의합니다.
+* link:error-messages//configure-ems-notifications-sm-task.html["가져오기 EMS(이벤트 관리 시스템) 알림을 보내도록 ONTAP를 구성합니다"] 주의를 요하는 시스템 문제에 대해 즉시 알림을 받을 수 있습니다.
+* 에서 ONTAP를 사용하는 방법과 에서 를 link:ransomware-solutions/ransomware-overview.html["랜섬웨어 공격으로부터 데이터를 보호합니다"]사용하는 방법에 대해 link:peering/index.html["재해 복구를 위해 데이터를 백업합니다"]알아봅니다.
+* link:system-admin/autosupport-active-iq-digital-advisor-concept.html["디지털 자문 및 AutoSupport에 대해 알아보기"]..
+* 에 System Manager를 link:task_cp_dashboard_tour.html["클러스터의 상태를 모니터링합니다"]사용합니다.
+

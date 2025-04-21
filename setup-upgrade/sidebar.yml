@@ -1,9 +1,8 @@
 ---
 section: setup-upgrade
-title: ONTAP 설정, 업그레이드 및 복원
+title: ONTAP 업그레이드 및 되돌리기
 url: "/setup-upgrade/index.html"
 entries:
-- section: software_setup
 - section: upgrade
 - section: update
 - section: revert
