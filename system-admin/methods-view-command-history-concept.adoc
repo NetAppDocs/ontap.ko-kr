@@ -37,3 +37,8 @@ summary: 각 CLI 세션은 해당 세션에서 실행된 모든 명령의 기록
 ----
 cluster1::> redo -3
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/history.html["기록"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/redo.html["다시 실행"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume["볼륨"^]
+

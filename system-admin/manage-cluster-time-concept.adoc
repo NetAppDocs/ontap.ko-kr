@@ -165,4 +165,7 @@ ONTAP 9.5 이상에서 사용할 수 있습니다
 
 |===
 .관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-date-show.html["클러스터 날짜가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-date-modify.html["클러스터 날짜 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+time-service+ntp["클러스터 시간 - 서비스 NTP"^]
+

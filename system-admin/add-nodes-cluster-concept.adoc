@@ -58,6 +58,9 @@ Enter the node management interface port [e0M]:
 +
 노드 설정 마법사가 종료되고 설치 작업을 완료하지 않았다는 로그인 프롬프트가 나타납니다.
 
++
+에 대한 자세한 내용은 `exit` link:https://docs.netapp.com/us-en/ontap-cli/exit.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . admin 사용자 이름을 사용하여 admin 계정에 로그인합니다.
 . 클러스터 설정 마법사를 시작합니다.
 +

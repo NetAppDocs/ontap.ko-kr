@@ -4,7 +4,7 @@ permalink: s3-snapshots/list-restore-s3-snapshot.html
 keywords: s3 snapshots, list, restore, browse S3 snapshots 
 summary: ONTAP S3 스냅샷 기능을 사용하면 S3 클라이언트에서 버킷의 S3 스냅샷 콘텐츠를 확인, 탐색 및 복원할 수 있습니다. 
 ---
-= S3 스냅샷을 보고 복원합니다
+= ONTAP S3 스냅샷을 보고 복원합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -46,6 +46,9 @@ raid.aggr.log.CP.count           DEBUG          test           0       0
 ----
 . 이러한 모든 이벤트 하위 집합을 포함하는 해당 이벤트 필터를 만듭니다. 예를 들어, 'raid.aggr.' * 이벤트만 포함하려면 필터를 생성할 때 'essage-name' 매개 변수에 와일드카드를 사용합니다. 단일 이벤트에 대한 필터를 만들 수도 있습니다.
 +
+에 대한 자세한 내용은 `event filter` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+filter["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 
 NOTE: 최대 50개의 이벤트 필터를 만들 수 있습니다.
 
@@ -78,6 +81,9 @@ dest1           email       test@xyz.com (via "localhost" from "admin@localhost"
 snmp-traphost   snmp        - (from "system snmp traphost")
 2 entries were displayed.
 ----
++
+및 `event destination` 에 대한 자세한 `event notification destination` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+destination["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 이벤트 필터를 이벤트 알림 대상에 매핑하여 이벤트 알림을 생성합니다.
 +
 [listing]

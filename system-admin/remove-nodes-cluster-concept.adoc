@@ -191,3 +191,7 @@ set -privilege admin
 ----
 . 클러스터에서 페일오버 파트너를 제거하려면 위의 단계를 반복합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove-node.html["클러스터 제거 노드"^]
+

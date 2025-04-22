@@ -23,6 +23,8 @@ cluster1::> storage
 cluster1::storage> disk
 cluster1::storage disk> show
 ----
+에 대한 자세한 내용은 `storage disk show` link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 현재 디렉터리에 고유한 명령을 만드는 명령의 최소 문자 수만 입력하여 명령을 축약할 수 있습니다. 예를 들어, 이전 예제의 명령을 축약하려면 'st d sh'를 입력할 수 있습니다. Tab 키를 사용하여 약식 명령을 확장하고 기본 매개 변수 값을 비롯한 명령의 매개 변수를 표시할 수도 있습니다.
 
 'top' 명령을 사용하여 명령어 계층구조의 최상위 수준으로 이동하고 'up' 명령이나...' 명령을 사용하여 명령어 계층구조에서 한 단계 위로 이동할 수 있습니다.
@@ -32,3 +34,7 @@ cluster1::storage disk> show
 CLI에서 별표(*)가 앞에 오는 명령 및 명령 옵션은 고급 권한 수준 이상에서만 실행할 수 있습니다.
 
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/top.html["위쪽"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/up.html["위로"^]
+

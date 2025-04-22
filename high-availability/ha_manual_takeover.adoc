@@ -104,6 +104,9 @@ NOTE: 'cluster modify -eligibility false' 명령을 사용하여 클러스터 �
 +
 인수하려는 노드에 epsilon이 없는 경우 4단계를 진행합니다.
 
++
+에 대한 자세한 내용은 `cluster show` link:https://docs.netapp.com/us-en/ontap-cli/cluster-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 . 인수하려는 노드에서 epsilon을 제거합니다.

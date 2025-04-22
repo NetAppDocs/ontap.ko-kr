@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: s3-snapmirror/requirements-cloud-targets-concept.html 
-keywords: requirements for cloud target relationships 
+keywords: requirements for cloud target relationships, ontap s3, snapmirror, s3, cloud target 
 summary: 소스 및 타겟 환경이 클라우드 타겟에 대한 SnapMirror S3 백업 보호 요구사항을 충족하는지 확인하십시오. 
 ---
-= 클라우드 타겟 관계에 대한 요구사항
+= ONTAP SnapMirror S3 클라우드 타겟 관계 요구사항
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

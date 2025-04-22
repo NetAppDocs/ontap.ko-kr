@@ -107,6 +107,9 @@ SAN 관리 데몬
 
 |===
 +
+에 대한 자세한 내용은 `cluster ring show` link:https://docs.netapp.com/us-en/ontap-cli/cluster-ring-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 이 예에서는 볼륨 위치 데이터베이스 프로세스를 보여 줍니다.
 
 

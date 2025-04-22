@@ -75,7 +75,7 @@ node1      e0d  up
 
 
 
-. LIF가 연결되어야 하는 홈 포트 네트워크 인터페이스가 'UP' 상태가 아닌 경우, 해당 인터페이스가 UP 상태가 되도록 문제를 해결하십시오.
+. LIF와 연결되어야 하는 홈 포트 네트워크 인터페이스 중 하나가 상태에 있지 않은 경우 `up`, 이러한 인터페이스가 작동되도록 문제를 해결하십시오. 에 대한 자세한 내용은 `up` link:https://docs.netapp.com/us-en/ontap-cli/up.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 . 필요한 경우 LIF를 홈 포트로 되돌립니다.
 +
 '* 네트워크 인터페이스 되돌리기 - vserver_vserver_name_-lif_lif_name_*'

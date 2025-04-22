@@ -23,7 +23,7 @@ image:epsilon-preserving-quorum.gif["이 이미지는 주변 텍스트로 설명
 
 Epsilon은 클러스터를 생성할 때 첫 번째 노드에 자동으로 할당됩니다. epsilon이 있는 노드가 정상 상태가 아니거나 고가용성 파트너를 인수하거나 고가용성 파트너가 인수하는 경우 epsilon은 다른 HA 쌍의 정상 노드에 자동으로 재할당됩니다.
 
-노드를 오프라인 상태로 전환하면 클러스터의 쿼럼 유지 기능에 영향을 줄 수 있습니다. 따라서 클러스터를 쿼럼에서 제외시키거나 quorum이 손실된 상태에서 한 번의 작동 중지가 발생하지 않는 작업을 시도할 경우 ONTAP에서 경고 메시지를 표시합니다. 고급 권한 수준에서 클러스터 quorum-service options modify 명령을 사용하여 quorum 경고 메시지를 비활성화할 수 있습니다.
+노드를 오프라인 상태로 전환하면 클러스터의 쿼럼 유지 기능에 영향을 줄 수 있습니다. 따라서 클러스터를 쿼럼에서 제외시키거나 quorum이 손실된 상태에서 한 번의 작동 중지가 발생하지 않는 작업을 시도할 경우 ONTAP에서 경고 메시지를 표시합니다. advanced 권한 수준에서 명령을 사용하여 쿼럼 경고 메시지를 사용하지 않도록 설정할 수 `cluster quorum-service options modify` 있습니다. 에 대한 자세한 내용은 `cluster quorum-service options modify` link:https://docs.netapp.com/us-en/ontap-cli/cluster-quorum-service-options-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 일반적으로, 클러스터의 노드 간에 안정적인 연결을 가정하면 더 큰 클러스터는 더 작은 클러스터보다 더 안정적입니다. 노드 과반수의 단순한 정수에 epsilon을 더한 quorum 요구 사항은 노드 2개로 구성된 클러스터보다 노드 24개로 구성된 클러스터에서 유지하기가 더 쉽습니다.
 

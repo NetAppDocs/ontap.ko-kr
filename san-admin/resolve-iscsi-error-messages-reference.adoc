@@ -43,3 +43,4 @@ CHAP 설정을 확인해야 합니다. 스토리지 시스템의 인바운드 �
 
 
 |===
+에 대한 자세한 내용은 `event log show` link:https://docs.netapp.com/us-en/ontap-cli/event-log-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

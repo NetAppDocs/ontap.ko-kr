@@ -4,7 +4,7 @@ permalink: s3-snapshots/delete-s3-snapshot.html
 keywords: s3 snapshots, delete S3 snapshots 
 summary: 더 이상 필요하지 않은 S3 스냅샷을 삭제하고 버킷에서 스토리지 공간을 확보할 수 있습니다. 
 ---
-= S3 스냅샷을 삭제합니다
+= ONTAP S3 스냅샷을 삭제합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

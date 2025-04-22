@@ -28,6 +28,9 @@ SED를 살균하려면 '스토리지 암호화 디스크 완전 삭제' 명령�
 +
 link:../encryption-at-rest/index.html["유휴 데이터의 암호화"]
 
++
+에 대한 자세한 내용은 `storage encryption disk sanitize` link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-sanitize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .단계
@@ -205,6 +208,9 @@ NOTE: 삭제 중에 노드 전원을 끄거나 스토리지 연결을 중단하�
 
 
 |===
++
+에 대한 자세한 내용은 `storage aggregate show-spare-disks` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-spare-disks.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 ====

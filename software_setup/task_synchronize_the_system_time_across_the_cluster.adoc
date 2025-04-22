@@ -182,3 +182,7 @@ cluster time-service ntp server create -server server_name -key-id key_id
 cluster time-service ntp server modify -server server_name -authentication disabled
 ----
 |===
+.관련 정보
+* link:../system-admin/index.html["시스템 관리"]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+time-service+ntp["클러스터 시간 - 서비스 NTP"^]
+

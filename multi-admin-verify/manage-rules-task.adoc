@@ -28,6 +28,11 @@ MAV 시스템 기본 명령에 대한 규칙인 입니다 `security multi-admin-
 * '세트'
 
 
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
+
+
 
 
 == 규칙 제약 조건

@@ -66,4 +66,6 @@ ONTAP CLI 또는 API의 GET 요청을 기본 설정 요청과 함께 감사 로�
 
 |===
 .관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+log-forwarding["클러스터 로그 전달"^]
+

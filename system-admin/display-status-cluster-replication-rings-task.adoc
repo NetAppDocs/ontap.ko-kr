@@ -38,3 +38,4 @@ DB Transaction: 56
  Number Online: 4
       RDB UUID: e492d2c1-fc50-11e1-bae3-123478563412
 ----
+에 대한 자세한 내용은 `cluster ring show` link:https://docs.netapp.com/us-en/ontap-cli/cluster-ring-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

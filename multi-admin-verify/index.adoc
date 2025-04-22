@@ -85,6 +85,11 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * '세트'
 
 
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
+
+
 각 ONTAP 버전은 다중 관리자 확인 규칙으로 보호할 수 있는 더 많은 명령을 제공합니다. 보호에 사용할 수 있는 명령의 전체 목록을 보려면 ONTAP 릴리스를 선택하십시오.
 
 [role="tabbed-block"]
@@ -469,3 +474,11 @@ NOTE: 요청자는 승인 그룹에 있는 경우에도 자신의 요청을 승�
 보호된 작업에 대해 실행이 승인되면 요청 사용자는 메시지가 표시될 때 작업을 계속합니다. 작업이 거부되면 요청 사용자는 계속하기 전에 요청을 삭제해야 합니다.
 
 MAV 규칙은 RBAC 권한 이후에 평가됩니다. 따라서 작업 실행에 대한 충분한 RBAC 권한이 없는 사용자는 MAV 요청 프로세스를 시작할 수 없습니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-date-modify.html["클러스터 날짜 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+log-forwarding["클러스터 로그 전달"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-peer-create.html["클러스터 피어 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+time-service+ntp["클러스터 시간 - 서비스 NTP"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/event-config-modify.html["이벤트 구성 수정"^]
+

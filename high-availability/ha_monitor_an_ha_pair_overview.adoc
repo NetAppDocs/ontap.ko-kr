@@ -292,4 +292,5 @@ HA 인터커넥트는 활성 상태이며 데이터를 파트너 노드로 전�
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-ha-show.html["클러스터 ha show"^]
 

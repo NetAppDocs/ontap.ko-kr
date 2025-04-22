@@ -37,3 +37,7 @@ summary: 필요에 따라 노드의 특성을 수정할 수 있습니다. 수정
 ----
 cluster1::> system node modify -node node1 -owner "Joe Smith" -assettag js1234
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/system-node-modify.html["시스템 노드 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-modify.html["클러스터 수정"^]
+

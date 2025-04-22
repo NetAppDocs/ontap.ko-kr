@@ -47,3 +47,8 @@ summary: set command and rows 명령을 사용하여 CLI 세션에 대한 디스
 cluster1::> set -showseparator "," -units GB
 cluster1::> rows 50
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=show["표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/rows.html["행"^]
+

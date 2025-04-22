@@ -83,6 +83,9 @@ cluster01::> event config show
 +
 ''이벤트 구성 수정-메일-보낸 사람_이메일_주소_-메일-서버_서버_이름_'
 
++
+및 `event config modify` 에 대한 자세한 `event config show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+config["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 여러 관리자 검증을 받을 관리자 식별
 +
 [cols="50,50"]

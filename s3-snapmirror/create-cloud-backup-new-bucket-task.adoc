@@ -4,7 +4,7 @@ permalink: s3-snapmirror/create-cloud-backup-new-bucket-task.html
 keywords: create, backup, relationship, new, bucket 
 summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 구축과 같은 오브젝트 저장소 공급자의 SnapMirror S3 타겟 버킷에 즉시 백업할 수 있습니다. 
 ---
-= 새 버킷에 대한 백업 관계 생성(클라우드 타겟)
+= 새 ONTAP S3 버킷에 대한 클라우드 백업 관계를 생성한다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -24,12 +24,21 @@ ONTAP 명령줄에 명령을 입력하여 클러스터가 실행 중일 때마�
 +
 'event config modify-mail-server mailhost.your_domain-mail-from cluster_admin@your_domain'
 
++
+에 대한 자세한 내용은 `event config modify` link:https://docs.netapp.com/us-en/ontap-cli/event-config-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 이벤트 알림을 위한 e-메일 대상 생성:
 +
 '이벤트 알림 대상 create-name storage-admins-email@your_domain'으로 이메일을 보냅니다
 
++
+에 대한 자세한 내용은 `event notification destination create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-destination-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . e-메일 알림을 보내도록 중요한 이벤트를 구성합니다.
 +
 이벤트 알림 create-filter-name important-events-destinations storage-admins입니다
+
++
+에 대한 자세한 내용은 `event notification create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

@@ -42,7 +42,7 @@ summary: 시스템에서 예상 AutoSupport 메시지를 보내지 않고 HTTPS�
 network interface show -home-node local -role node-mgmt -fields vserver,lif,status-oper,status-admin,address,role
 ----
 +
-'돌격대'와 '상태-관리자' 필드는 '위로'가 되어야 합니다.
+ `status-oper`및 `status-admin` 필드가 `up` 반환됩니다. 에 대한 자세한 내용은 `up` link:https://docs.netapp.com/us-en/ontap-cli/up.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 나중에 사용할 수 있도록 SVM 이름, LIF 이름 및 LIF IP 주소를 기록합니다.
 . DNS가 올바르게 설정 및 구성되었는지 확인합니다.

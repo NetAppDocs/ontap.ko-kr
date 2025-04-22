@@ -4,7 +4,7 @@ permalink: s3-snapmirror/modify-policy-task.html
 keywords: modify a mirror policy, snapmirror s3, snapmirror s3 policy, modify snapmirror s3 policy, change snapmirror policy, edit snapmirror policy, 
 summary: RPO 및 스로틀 값을 조정하려는 경우 S3 SnapMirror 정책을 수정할 수 있습니다. 
 ---
-= S3 SnapMirror 정책을 수정합니다
+= ONTAP SnapMirror S3 정책을 수정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

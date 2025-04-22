@@ -30,3 +30,4 @@ cluster1::> cluster identity show
       Cluster Location: Sunnyvale
        Cluster Contact: jsmith@example.com
 ----
+에 대한 자세한 내용은 `cluster identity show` link:https://docs.netapp.com/us-en/ontap-cli/cluster-identity-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

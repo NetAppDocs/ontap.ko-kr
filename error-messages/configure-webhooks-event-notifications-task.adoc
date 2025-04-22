@@ -59,9 +59,15 @@ HTTP를 사용하여 웹 후크 응용 프로그램에 이벤트 알림을 전�
 +
 위 명령에서 대상에 대해 * HTTP * 체계를 사용해야 합니다.
 
++
+에 대한 자세한 내용은 `event notification destination create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-destination-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 중요 이벤트 필터를 "restapi-EMS" 대상으로 연결하는 알림 생성:
 +
 이벤트 알림 create-filter-name important-events-destinations reapi-EMS
+
++
+에 대한 자세한 내용은 `event notification create` link:https://docs.netapp.com/us-en/ontap-cli/event-notification-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

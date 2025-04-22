@@ -34,6 +34,9 @@ summary: 복구 노드에서 식별하여 사용할 수 있도록 만든 구성 
 ----
 cluster1::*> cluster modify -node node2 -eligibility false
 ----
++
+에 대한 자세한 내용은 `cluster modify` link:https://docs.netapp.com/us-en/ontap-cli/cluster-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 를 사용합니다 `system configuration recovery node restore` 고급 권한 레벨의 명령을 사용하여 구성 백업 파일에서 노드의 구성을 복원합니다.
 +
 노드 이름을 포함하여 노드의 ID가 손실되면 를 사용해야 합니다 `-nodename-in-backup` 구성 백업 파일에 노드 이름을 지정하는 매개 변수입니다.

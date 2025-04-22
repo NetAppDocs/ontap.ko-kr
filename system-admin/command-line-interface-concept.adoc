@@ -18,3 +18,5 @@ CLI 명령 프롬프트는 cluster_name:::>'로 표시됩니다.
 권한 수준(즉, 'set' 명령의 '-Privilege' 매개 변수)을 'advanced'로 설정하면 다음과 같은 별표(*)가 표시됩니다.
 
 'cluster_name:: *>'
+
+에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

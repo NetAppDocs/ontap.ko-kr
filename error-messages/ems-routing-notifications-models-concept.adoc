@@ -15,7 +15,7 @@ ONTAP 9.0 이전에는 EMS 이벤트가 이벤트 이름 패턴 일치를 기준
 
 ONTAP 9.0부터 ONTAP EMS 이벤트 대상 매핑의 모범 사례는 이벤트 필터, 이벤트 알림, 이벤트 알림 대상 명령 집합을 사용하여 여러 필드에서 패턴 일치를 수행하는 보다 확장 가능한 이벤트 필터 모델을 사용하는 것입니다.
 
-더 이상 사용되지 않는 명령어를 이용하여 EMS mapping을 설정한 경우, 'event filter', 'event notification', 'event notification destination' 명령어 세트를 사용하도록 mapping을 업데이트해야 한다.
+더 이상 사용되지 않는 명령을 사용하여 EMS 매핑을 구성한 경우 `event notification`, 및 `event notification destination` 명령 집합을 사용하도록 매핑을 업데이트해야 `event filter` 합니다. 에 대한 자세한 내용은 `event` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 이벤트 대상에는 두 가지 유형이 있습니다.
 

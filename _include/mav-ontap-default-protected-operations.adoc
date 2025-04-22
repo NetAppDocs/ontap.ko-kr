@@ -8,3 +8,8 @@
 * 보안 로그인 잠금 해제
 * '세트'
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
+

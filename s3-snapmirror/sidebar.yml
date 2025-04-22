@@ -2,7 +2,7 @@
 section: s3-snapmirror
 title: SnapMirror S3로 버킷 보호
 entries:
-- title: 개요
+- title: SnapMirror S3에 대해 알아보십시오
   url: "/s3-snapmirror/index.html"
 - title: 원격 클러스터의 미러링 및 백업 보호
   entries:

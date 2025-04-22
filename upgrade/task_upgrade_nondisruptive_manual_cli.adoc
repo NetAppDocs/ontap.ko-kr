@@ -753,6 +753,9 @@ storage failover modify -node nodenameA -auto-giveback true
 +
 추가 HA 쌍을 업그레이드하기 전에 이 단계를 수행해야 합니다.
 
++
+및 `cluster ring show` 에 대한 자세한 `cluster show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+show["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 관리자 권한 레벨로 돌아갑니다.
 +
 [source, cli]

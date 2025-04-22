@@ -27,3 +27,4 @@ Warning: These advanced commands are potentially dangerous; use them only when d
 Do you wish to continue? (y or n): y
 cluster1::*> set -privilege admin
 ----
+에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

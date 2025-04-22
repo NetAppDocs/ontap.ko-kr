@@ -12,7 +12,7 @@ indexpage:
     links:
     - title: S3 구성 개요
       url: "/../s3-config/index.html"
-    - title: SnapMirror S3 개요
+    - title: ONTAP SnapMirror S3에 대해 알아보십시오
       url: "/../s3-snapmirror/index.html"
     - title: S3 감사 개요
       url: "/../s3-audit/index.html"

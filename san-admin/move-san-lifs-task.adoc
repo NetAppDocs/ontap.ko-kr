@@ -36,6 +36,9 @@ LIF가 포트 세트의 구성원인 경우 LIF를 다른 노드로 이동하기
 +
 'network interface modify -vserver_vserver_name_-lif_LIF_name_-status-admin up
 
++
+에 대한 자세한 내용은 `up` link:https://docs.netapp.com/us-en/ontap-cli/up.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 변경 사항 확인:
 +
 'network interface show -vserver_vserver_name_'
