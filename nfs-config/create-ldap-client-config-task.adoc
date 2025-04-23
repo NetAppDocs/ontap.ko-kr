@@ -13,7 +13,7 @@ summary: ONTAP가 사용자 환경의 외부 LDAP 서버에 액세스하도록 �
 [role="lead"]
 ONTAP가 사용자 환경의 외부 LDAP 또는 Active Directory 서비스에 액세스하도록 하려면 먼저 스토리지 시스템에서 LDAP 클라이언트를 설정해야 합니다.
 
-.필요한 것
+.시작하기 전에
 Active Directory 도메인 확인됨 목록의 처음 세 개 서버 중 하나가 작동 중이고 데이터를 제공하고 있어야 합니다. 그렇지 않으면 이 작업이 실패합니다.
 
 [NOTE]

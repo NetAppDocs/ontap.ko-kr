@@ -50,6 +50,9 @@ ONTAP에서 AWS S3 API를 사용하여 다음 작업이 지원됩니다.
 | 머리버킷 | ONTAP 9.8 
 
 
+| ListAllMyBucket 을 참조하십시오 | ONTAP 9.8 
+
+
 | ListBucket | ONTAP 9.8 
 
 

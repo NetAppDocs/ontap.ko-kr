@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ensure, snapshot, copy, mirror-vault, deployment 
 summary: SnapMirror snapshot-owner create 명령을 사용하여 미러 볼트 배포의 보조 서버에서 레이블 지정된 스냅샷을 보존할 수 있습니다. 이렇게 하면 볼트 관계 업데이트를 위한 공통 스냅샷이 존재하게 됩니다. 
 ---
-= ONTAP를 사용하여 미러 볼트 배포에서 공통 스냅샷을 보장합니다
+= ONTAP 미러 볼트 배포에서 공통 스냅샷을 보장합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,7 +18,7 @@ summary: SnapMirror snapshot-owner create 명령을 사용하여 미러 볼트 �
 
 SnapMirror는 업데이트를 수행하기 전에 항상 소스 볼륨의 스냅샷을 생성하므로 미러 볼트 팬아웃 또는 캐스케이드 배포에서는 미러 관계에 문제가 되지 않습니다.
 
-그러나 SnapMirror는 볼트 관계를 업데이트할 때 원본 볼륨의 스냅샷을 생성하지 않기 때문에 볼트 관계의 문제일 수 있습니다. 볼트 관계의 원본과 대상 모두에 공통 스냅샷이 하나 이상 있는지 확인하려면 을 사용해야 `snapmirror snapshot-owner create` 합니다.
+그러나 SnapMirror는 볼트 관계를 업데이트할 때 원본 볼륨의 스냅샷을 생성하지 않기 때문에 볼트 관계의 문제일 수 있습니다. 볼트 관계의 원본과 대상 모두에 공통 스냅샷이 하나 이상 있는지 확인하려면 을 사용해야 `snapmirror snapshot-owner create` 합니다. link:supported-deployment-config-concept.html["데이터 보호 팬아웃 및 캐스케이드 구축에 대해 자세히 알아보십시오"]..
 
 .단계
 . 소스 볼륨에서 보존하려는 레이블이 지정된 스냅샷에 소유자를 할당합니다.

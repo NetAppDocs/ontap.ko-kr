@@ -4,7 +4,7 @@ permalink: data-protection/cloud-backup-with-snapmirror-task.html
 keywords: netapp, ontap, System Manager, ONTAP 9.9.1, cloud backup, SnapMirror cloud, cloud object store, add cloud object store, remove cloud object store, StorageGRID, ONTAP S3, cloud restore, restore from cloud 
 summary: ONTAP 9.9.1부터 System Manager를 사용하여 데이터를 클라우드로 백업하고 클라우드 스토리지에서 다른 볼륨으로 데이터를 복원할 수 있습니다. StorageGRID 또는 ONTAP S3를 클라우드 오브젝트 저장소로 사용할 수 있습니다. 
 ---
-= SnapMirror를 사용하여 데이터를 클라우드에 백업합니다
+= ONTAP SnapMirror를 사용하여 클라우드에 데이터를 백업합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
