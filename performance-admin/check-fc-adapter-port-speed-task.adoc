@@ -21,9 +21,15 @@ summary: 어댑터 대상 포트 속도는 성능을 최적화하기 위해 연�
 +
 'network fcp adapter modify -node_nodename_-adapter_adapter_-state_down_'
 
++
+에 대한 자세한 내용은 `network fcp adapter modify` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 포트 어댑터의 최대 속도를 확인합니다.
 +
 FCP 어댑터 show-instance(FCP 어댑터 show-instance)
+
++
+에 대한 자세한 내용은 `fcp adapter show` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 필요한 경우 포트 속도를 변경합니다.
 +
@@ -36,6 +42,9 @@ FCP 어댑터 show-instance(FCP 어댑터 show-instance)
 . 어댑터에 있는 모든 LIF를 온라인으로 전환합니다.
 +
 'network interface modify -vserver * -lif * {-home-node node1 -home-port e0c} -status -admin up'
+
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

@@ -27,8 +27,14 @@ summary: 삭제하거나 이동하려는 LIF가 포트 세트에 있는 경우 L
 +
 'cluster1::> lun igroup unbind-vserver vs1-igroup ig1'
 
++
+에 대한 자세한 내용은 `lun igroup unbind` link:https://docs.netapp.com/us-en/ontap-cli/lun-igroup-unbind.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'lun 포트셋 제거' 명령을 사용하여 포트 세트에서 LIF를 제거합니다.
 +
 'cluster1::> port set remove-vserver vs1-포트셋 PS1-port-name liff 1'
+
++
+에 대한 자세한 내용은 `lun portset remove` link:https://docs.netapp.com/us-en/ontap-cli/lun-portset-remove.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 

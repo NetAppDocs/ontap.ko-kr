@@ -27,4 +27,7 @@ ONTAP 9.11.1부터는 ONTAP CLI를 사용하여 데이터 이동 없이 기존 N
 +
 'LUN convert-from-namespace-vserver-namespace-path'
 
++
+에 대한 자세한 내용은 `lun convert-from-namespace` link:https://docs.netapp.com/us-en/ontap-cli/lun-convert-from-namespace.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

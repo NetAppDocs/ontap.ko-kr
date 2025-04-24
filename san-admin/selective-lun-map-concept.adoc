@@ -27,6 +27,8 @@ SLM은 모든 새로운 LUN 맵에서 기본적으로 활성화됩니다.
 
 의 출력에 표시된 정보를 사용할 수 있습니다 `lun mapping show -fields reporting-nodes, node` 명령을 사용하여 LUN 맵에서 SLM이 활성화되어 있는지 여부를 확인합니다. SLM이 활성화되지 않은 경우 명령 출력의 "노드 재이식" 열 아래의 셀에 "-"가 표시됩니다. SLM이 활성화된 경우 ""노드" 열 아래에 표시되는 노드 목록이 "노드 재이식" 열에 복제됩니다.
 
+에 대한 자세한 내용은 `lun mapping show` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 == SLM 보고 노드 목록을 수정합니다

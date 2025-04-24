@@ -90,6 +90,9 @@ MB sent:            198.31
 MB received:        198.31
 Avg latency in ms:  2301.47
 ----
++
+에 대한 자세한 내용은 `network test-path` link:https://docs.netapp.com/us-en/ontap-cli/network-test-path.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 관리 권한으로 돌아가기:
 +
 'Set-Privilege admin'입니다

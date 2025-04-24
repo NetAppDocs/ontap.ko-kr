@@ -42,6 +42,9 @@ summary: 단일 LUN이 포함된 전체 볼륨을 복원하지 않고 스냅샷�
 +
 'LUN 매핑 삭제 - vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
 
++
+에 대한 자세한 내용은 `lun mapping delete` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LUN을 복구할 스냅샷을 결정합니다.
 +
 'volume snapshot show -vserver_vserver_name_-volume_volume_name_'
@@ -59,9 +62,15 @@ summary: 단일 LUN이 포함된 전체 볼륨을 복원하지 않고 스냅샷�
 +
 'lun modify -vserver_vserver_name_-path_lun_path_-state online
 
++
+에 대한 자세한 내용은 `lun modify` link:https://docs.netapp.com/us-en/ontap-cli/lun-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 필요한 경우 LUN을 다시 매핑합니다.
 +
 'LUN 매핑 create-vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
+
++
+에 대한 자세한 내용은 `lun mapping create` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 호스트에서 LUN을 다시 마운트합니다.
 . 호스트에서 LUN에 대한 액세스를 다시 시작합니다.

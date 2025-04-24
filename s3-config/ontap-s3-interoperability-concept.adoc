@@ -70,6 +70,15 @@ Cloud Volumes ONTAP
 
 
  a| 
+MetroCluster 환경
+ a| 
+-
+ a| 
+SnapMirror S3
+
+
+
+ a| 
 스토리지 효율성
  a| 
 * 중복 제거

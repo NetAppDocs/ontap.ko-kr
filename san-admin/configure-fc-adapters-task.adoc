@@ -38,6 +38,9 @@ FC 프로토콜과 FC-NVMe 프로토콜을 위해 FC 어댑터를 구성할 때�
 +
 'network fcp adapter show-node_name _'
 
++
+에 대한 자세한 내용은 `network fcp adapter show` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 어댑터를 온라인으로 전환합니다.
 +
 'network fcp adapter modify -node_node_name_-adapter_adapter_port_-state up

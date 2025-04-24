@@ -35,4 +35,7 @@ vs3     /vol/vol0/lun2          75.00GB disabled      0B
 vs3     /vol/volspace/lun0      5.00GB  enabled       4.50GB
 4 entries were displayed.
 ----
++
+에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

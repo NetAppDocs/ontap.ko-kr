@@ -28,3 +28,5 @@ LUN을 복사하는 것은 무중단 운영입니다.
 * 로드 공유 관계에 있는 LUN입니다
 * 프로토콜 엔드포인트 클래스 LUN
 
+
+에 대한 자세한 내용은 `lun copy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=lun+copy["ONTAP 명령 참조입니다"^]을 참조하십시오.

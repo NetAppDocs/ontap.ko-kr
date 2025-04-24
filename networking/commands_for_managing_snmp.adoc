@@ -229,4 +229,8 @@ SNMP 트랩 기록 레코드를 삭제합니다
 이벤트 스내피스토리 삭제
 
 |===
-, 및 명령에 대한 자세한 `system snmp` `security` `event` 내용은 를 https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+snmp["시스템 SNMP"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security["보안"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event["이벤트"^]
+

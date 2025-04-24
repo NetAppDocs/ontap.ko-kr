@@ -37,4 +37,6 @@ SAN 환경에서는 7-Mode 볼륨을 ONTAP로 전환하는 동안 서비스 중�
 
 
 .관련 정보
-link:https://docs.netapp.com/us-en/ontap-7mode-transition/copy-based/index.html["복사 기반 전환"]
+* link:https://docs.netapp.com/us-en/ontap-7mode-transition/copy-based/index.html["복사 기반 전환"]
+* link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["LUN 표시"^]
+

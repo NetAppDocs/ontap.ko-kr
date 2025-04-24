@@ -106,4 +106,7 @@ node-mgmt-home-node net-f8040-34-01 -home-port e0e -address 10.1.1.1
 +
 CNA의 경우 10Gb 이더넷 SFP를 사용해야 합니다. FC의 경우 노드에서 구성을 변경하기 전에 8Gb SFP 또는 16Gb SFP를 사용해야 합니다.
 
++
+에 대한 자세한 내용은 `network fcp adapter show` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

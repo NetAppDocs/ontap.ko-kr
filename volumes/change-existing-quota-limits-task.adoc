@@ -48,4 +48,5 @@ summary: 영향을 받는 모든 볼륨에서 할당량을 변경하거나 크�
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota+policy+rule["볼륨 할당량 정책 규칙입니다"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+quota["볼륨 할당량"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
 

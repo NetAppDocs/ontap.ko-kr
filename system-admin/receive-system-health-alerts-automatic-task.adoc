@@ -11,7 +11,7 @@ summary: 'system health alert show 명령을 사용하여 시스템 상태 알�
 
 
 [role="lead"]
-'system health alert show' 명령을 사용하여 시스템 상태 경고를 수동으로 볼 수 있습니다. 그러나 상태 모니터에서 알림을 생성할 때 알림을 자동으로 수신하려면 특정 EMS(이벤트 관리 시스템) 메시지에 가입해야 합니다.
+명령을 사용하여 시스템 상태 경고를 수동으로 확인할 수 `system health alert show` 있습니다. 그러나 상태 모니터에서 알림을 생성할 때 알림을 자동으로 수신하려면 특정 EMS(이벤트 관리 시스템) 메시지에 가입해야 합니다. 에 대한 자세한 내용은 `system health alert show` link:https://docs.netapp.com/us-en/ontap-cli/system-health-alert-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .이 작업에 대해
 다음 절차에서는 모든 HM.ALERT.Raised 메시지 및 모든 HM.ALERT.clLEALEed 메시지에 대한 알림을 설정하는 방법을 보여 줍니다.
@@ -25,13 +25,20 @@ summary: 'system health alert show 명령을 사용하여 시스템 상태 알�
 ----
 cluster1::> event destination create -name health_alerts -mail admin@example.com
 ----
++
+에 대한 자세한 내용은 `event destination create` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+destination+create["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . event route add-destinations 명령을 사용하여 hm.alert.Raised 메시지와 hm.alert.clined 메시지를 목적지로 라우트한다.
 +
 [listing]
 ----
 cluster1::> event route add-destinations -messagename hm.alert* -destinations health_alerts
 ----
++
+에 대한 자세한 내용은 `event route add-destinations` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+route+add-destinations["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .관련 정보
-link:../networking/networking_reference.html["네트워크 관리"]
+* link:../networking/networking_reference.html["네트워크 관리"]
+

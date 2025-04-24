@@ -23,4 +23,7 @@ summary: '통합 타겟 어댑터(X1143A-R6)를 구성하려면 동일한 퍼스
 +
 CNA의 경우 10Gb 이더넷 SFP를 사용해야 합니다. FC의 경우 연결 중인 FC 패브릭을 기반으로 8Gb SFP 또는 16Gb SFP를 사용해야 합니다.
 
++
+에 대한 자세한 내용은 `network fcp adapter show` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

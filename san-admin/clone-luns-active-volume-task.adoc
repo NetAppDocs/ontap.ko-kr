@@ -55,4 +55,7 @@ Vserver  Path                    State    Mapped   Type     Size
 vs1      /vol/volX/lun1          online   unmapped windows  47.07MB
 vs1      /vol/volX/lun1_clone    online   unmapped windows  47.07MB
 ----
++
+에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

@@ -56,6 +56,8 @@ NOTE: ONTAP 9.14.1 이상으로 업그레이드할 때 이전 ONTAP 릴리즈와
 
 데이터 SVM을 위해 SMB 서버를 이미 구성한 경우 'security login domain-tunnel create' 명령을 사용하여 SVM을 게이트웨이로 구성하거나, AD에서 클러스터에 액세스하도록 _tunnel_을 사용할 수 있습니다.
 
+ONTAP 9.16.1 이전에는 인증 터널을 사용하여 AD로 클러스터 관리자 계정을 관리해야 합니다.
+
 .시작하기 전에
 * 데이터 SVM을 위해 SMB 서버를 구성해야 합니다.
 * 클러스터의 admin SVM에 액세스하려면 AD 도메인 사용자 계정을 활성화해야 합니다.
@@ -70,8 +72,10 @@ NOTE: Kerberos 인증은 항상 먼저 시도됩니다. 오류가 발생하면 N
 .단계
 . 클러스터에 대한 AD 도메인 컨트롤러 액세스를 위한 인증 터널로 SMB 지원 데이터 SVM 구성:
 +
-`security login domain-tunnel create -vserver _svm_name_`
-
+[source, cli]
+----
+security login domain-tunnel create -vserver <svm_name>
+----
 +
 에 대한 자세한 내용은 `security login domain-tunnel create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-domain-tunnel-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
@@ -82,7 +86,7 @@ NOTE: Kerberos 인증은 항상 먼저 시도됩니다. 오류가 발생하면 N
 
 ====
 +
-다음 명령은 SMB 지원 데이터 SVM ""engData""를 인증 터널로 구성합니다.
+다음 명령은 SMB 지원 데이터 SVM `engData`을 인증 터널로 구성합니다.
 
 +
 [listing]
@@ -100,19 +104,23 @@ cluster1::>security login domain-tunnel create -vserver engData
 .이 작업에 대해
 'vserver active-directory create' 명령을 입력하면 도메인의 지정된 조직 단위에 컴퓨터를 추가할 수 있는 충분한 권한이 있는 AD 사용자 계정에 대한 자격 증명을 제공하라는 메시지가 표시됩니다. 계정의 암호는 비워둘 수 없습니다.
 
+ONTAP 9.16.1부터 이 절차를 사용하여 AD로 클러스터 관리자 계정을 관리할 수 있습니다.
+
 .시작하기 전에
 이 작업을 수행하려면 클러스터 또는 SVM 관리자여야 합니다.
 
 .단계
 . AD 도메인에서 SVM을 위한 컴퓨터 계정을 생성합니다.
 +
-'vserver active-directory create-vserver_SVM_name_-account-name_NetBIOS_account_name_-domain_domain_-ou_조직_unit_'
+[source, cli]
+----
+vserver active-directory create -vserver <SVM_name> -account-name <NetBIOS_account_name> -domain <domain> -ou <organizational_unit>
+----
++
+ONTAP 9.16.1부터 `-vserver` 매개 변수에는 관리 SVM을 사용할 수 있습니다. 에 대한 자세한 내용은 `vserver active-directory create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-active-directory-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-에 대한 자세한 내용은 `vserver active-directory create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-active-directory-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
-다음 명령을 실행하면 SVM ""engData"" 도메인인 ""example.com`"""ADSERVER1""이라는 컴퓨터 계정이 생성됩니다. 명령을 입력한 후 AD 사용자 계정 자격 증명을 입력하라는 메시지가 표시됩니다.
+다음 명령을 실행하면 SVM용 `engData` 도메인에 `example.com` 이라는 컴퓨터 계정이 생성됩니다 `ADSERVER1`. 명령을 입력한 후 AD 사용자 계정 자격 증명을 입력하라는 메시지가 표시됩니다.
 
 +
 [listing]

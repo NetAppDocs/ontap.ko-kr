@@ -23,6 +23,9 @@ summary: volume snapshot restore 명령을 사용하여 스냅샷에서 지정�
 +
 'LUN 매핑 삭제 - vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
 
++
+에 대한 자세한 내용은 `lun mapping delete` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 볼륨을 복원할 스냅샷을 결정합니다.
 +
 'volume snapshot show -vserver_vserver_name_-volume_volume_name_'
@@ -40,13 +43,22 @@ summary: volume snapshot restore 명령을 사용하여 스냅샷에서 지정�
 +
 'LUN 매핑 create-vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
 
++
+에 대한 자세한 내용은 `lun mapping create` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LUN이 온라인 상태인지 확인합니다.
 +
 'lun show -vserver_vserver_name_-path_lun_path_-fields state
 
++
+에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LUN이 온라인 상태가 아닌 경우 온라인 상태로 전환합니다.
 +
 'lun modify -vserver_vserver_name_-path_lun_path_-state online
+
++
+에 대한 자세한 내용은 `lun modify` link:https://docs.netapp.com/us-en/ontap-cli/lun-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 권한 설정을 admin으로 변경합니다.
 +

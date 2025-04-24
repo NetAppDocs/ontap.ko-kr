@@ -52,8 +52,6 @@ AFF, FAS 및 ASA 플랫폼의 경우 128TB
 |===
 크기를 늘리기 위해 LUN을 오프라인 상태로 전환하지 않아도 됩니다. 그러나 크기를 늘린 후에는 호스트에서 LUN을 재검색하여 크기 변경을 인식해야 합니다.
 
-에 대한 자세한 내용은 `lun resize` link:https://docs.netapp.com/us-en/ontap-cli//lun-resize.html#description["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 .단계
 [role="tabbed-block"]
 ====
@@ -77,6 +75,9 @@ ONTAP CLI를 사용하여 LUN의 크기를 늘립니다.
 ----
 lun resize -vserver <SVM_name> -volume <volume_name> -lun <lun_name> -size <lun_size>
 ----
++
+에 대한 자세한 내용은 `lun resize` link:https://docs.netapp.com/us-en/ontap-cli//lun-resize.html#description["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 늘어난 LUN 크기 확인:
 +
 [source, cli]
@@ -93,6 +94,9 @@ ONTAP 작업은 LUN의 실제 최대 크기를 반올림하여 예상 값보다 
 `lun show -fields max-resize-size -volume _volume_name_ -lun _lun_name_`
 
 ====
++
+에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 호스트에서 LUN을 다시 검색합니다.
 . 호스트 문서에 따라 새로 생성된 LUN 크기를 호스트 파일 시스템에 표시합니다.
 

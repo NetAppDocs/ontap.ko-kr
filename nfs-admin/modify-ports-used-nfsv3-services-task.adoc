@@ -83,6 +83,9 @@ NFS 할당량 데몬입니다
 'vserver nfs modify -vserver vserver_name -access TRUE'
 
 . 'network connections listening show' 명령어를 이용하여 포트 번호 변화를 확인한다.
++
+에 대한 자세한 내용은 `network connections listening show` link:https://docs.netapp.com/us-en/ontap-cli/network-connections-listening-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 관리자 권한 레벨로 돌아갑니다.
 +
 'Set-Privilege admin'입니다

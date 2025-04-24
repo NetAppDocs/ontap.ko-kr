@@ -58,6 +58,9 @@ FC를 사용하는 경우 프로토콜 매개변수를 FCP로 지정합니다. i
 +
 'lun igroup bind -vserver_vserver_name_-igroup_igroup_name_-포트셋_포트셋_이름_
 
++
+에 대한 자세한 내용은 `lun igroup bind` link:https://docs.netapp.com/us-en/ontap-cli/lun-igroup-bind.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 포트 세트와 LIF가 올바른지 확인합니다.
 +
 ' show-vserver_vserver_name_'

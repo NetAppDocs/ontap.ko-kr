@@ -768,3 +768,6 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
+

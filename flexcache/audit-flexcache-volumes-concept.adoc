@@ -32,6 +32,7 @@ ONTAP 9.14.1부터 NFS 또는 SMB가 있는 FlexCache 볼륨에 대해 FPolicy�
 +
 ** FlexCache 볼륨에 대한 쓰기가 원본 볼륨에서 커밋되더라도 FPolicy 구성은 캐시 볼륨의 쓰기를 모니터링합니다. 이는 원본 볼륨에서 쓰기를 감사하는 네이티브 감사와는 다릅니다.
 ** ONTAP는 캐시 및 원본 SVM에 동일한 FPolicy 구성을 요구하지 않지만, 유사한 구성을 두 개 구축하는 것이 좋습니다. 원래 SVM과 같이 구성된 캐시에 대한 새로운 FPolicy 정책을 생성하지만, 새 정책 범위는 캐시 SVM으로 제한됩니다.
+** FPolicy 구성의 확장 크기는 20KB(20480바이트)로 제한됩니다. FlexCache 볼륨에서 FPolicy 구성에 사용되는 확장의 크기가 20KB를 초과하면 EMS 메시지가 `nblade.fpolicy.extn.failed` 트리거됩니다.
 
 
 

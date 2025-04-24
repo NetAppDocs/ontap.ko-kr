@@ -184,9 +184,6 @@ summary: 작업이 작업 대기열에 배치되어 자원을 사용할 수 있�
 명령을 사용하여 완료된 작업의 결과를 확인할 수 `event log show` 있습니다. 에 대한 자세한 내용은 `event log show` link:https://docs.netapp.com/us-en/ontap-cli/event-log-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
-.관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
-
 
 
 == 작업 스케줄 관리를 위한 명령입니다
@@ -282,4 +279,5 @@ cron 일정을 삭제합니다
 
 |===
 .관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=job["있습니다"^]
+

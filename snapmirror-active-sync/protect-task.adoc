@@ -84,6 +84,9 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 
 . 각 클러스터에서 igroup을 생성하여 애플리케이션 호스트의 이니시에이터에 LUN을 매핑할 수 있습니다.
 `lun igroup create -igroup _name_ -protocol _fcp|iscsi_ -ostype _os_ -initiator _initiator_name_`
++
+에 대한 자세한 내용은 `lun igroup create` link:https://docs.netapp.com/us-en/ontap-cli/lun-igroup-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 각 클러스터에서 LUN을 igroup에 매핑합니다.
 +
 `lun map -path _path_name_ -igroup _igroup_name_`

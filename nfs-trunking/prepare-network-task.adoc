@@ -102,3 +102,7 @@ network interface show
 | IPv6 주소입니다 | 네트워크 핑6 
 |===
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
+
