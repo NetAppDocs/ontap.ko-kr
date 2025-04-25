@@ -13,7 +13,7 @@ summary: Active IQ Unified Manager에서 알림을 트리거할 이벤트, 해�
 [role="lead"]
 Active IQ Unified Manager에서 알림을 트리거할 이벤트, 해당 알림의 e-메일 받는 사람 및 알림 빈도를 지정할 수 있습니다.
 
-.필요한 것
+.시작하기 전에
 애플리케이션 관리자 역할이 있어야 합니다.
 
 .이 작업에 대해

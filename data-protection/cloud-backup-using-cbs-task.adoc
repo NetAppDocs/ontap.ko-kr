@@ -39,7 +39,7 @@ NOTE: ONTAP 9.10.1부터 클라우드 백업 공급자로 StorageGRID을 선택�
 
 
 . link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["BlueXP 에서 BlueXP  백업 및 복구를 구독하십시오"^] (적절한 라이센스 필요).
-. link:https://docs.netapp.com/us-en/occm/task_managing_cloud_central_accounts.html#creating-and-managing-service-accounts["BlueXP를 사용하여 액세스 키와 비밀 키를 생성합니다"^].
+. link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-netapp-accounts.html["BlueXP를 사용하여 액세스 키와 비밀 키를 생성합니다"^]..
 
 
 
@@ -230,4 +230,4 @@ Azure 또는 AWS에 대해 아카이브를 설정하는 경우 다음을 지정�
 
 == 백업 파일에서 데이터를 복원합니다
 
-BlueXP 인터페이스를 사용하는 경우에만 데이터 복원, 관계 업데이트, 관계 삭제 등의 백업 관리 작업을 수행할 수 있습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/occm/task_restore_backups.html["백업 파일에서 데이터를 복원합니다"^] 참조하십시오.
+BlueXP 인터페이스를 사용하는 경우에만 데이터 복원, 관계 업데이트, 관계 삭제 등의 백업 관리 작업을 수행할 수 있습니다. 자세한 내용은 을 link:https://docs.netapp.com/us-en/bluexp-backup-recovery/task-restore-backups-ontap.html["백업 파일에서 데이터를 복원합니다"^] 참조하십시오.
