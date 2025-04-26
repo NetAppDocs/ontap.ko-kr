@@ -112,14 +112,17 @@ FabricPool 용량 계층입니다:: S3 NAS 버킷을 FabricPool의 용량 계층
 --
 * ByPassGovernanceRetention 을 참조하십시오
 * CopyObject 를 선택합니다
+* DeleteBucketLifecycleConfiguration을 참조하십시오
+* GetBuckLifecycleConfiguration 을 참조하십시오
 * GetBucketObjectLockConfiguration 을 참조하십시오
 * GetBuckketVersioning 을 참조하십시오
 * GetObjectRetention을 참조하십시오
+* ListBuckketVersioning을 참조하십시오
+* ListObjectVersions 를 선택합니다
+* PutBucketLifecycleConfiguration을 참조하십시오
 * PutBucketVersioning을 참조하십시오
 * PutObjectLockConfiguration 을 참조하십시오
 * PutObjectRetention
-* ListBuckketVersioning을 참조하십시오
-* ListObjectVersions 를 선택합니다
 
 
 --
