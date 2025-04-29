@@ -66,6 +66,9 @@ NVMe/FC는 이니시에이터 모드를 지원합니다.
 +
 '네트워크 인터페이스 삭제 - vserver_SVM_name_-lif_LIF_name, LIF_name_'
 
++
+에 대한 자세한 내용은 `network interface delete` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 어댑터를 오프라인 상태로 전환:
 +
 'network fcp adapter modify -node_node_name_-adapter_adapter_port_-status-admin down'

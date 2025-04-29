@@ -48,6 +48,9 @@ network interface modify -vserver vserver_name -lif lif_name -status-admin down
 
 |===
 +
+에 대한 자세한 내용은 `network interface delete` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 다음 명령을 실행하면 LIF mgmtd LIF가 삭제됩니다. 2:
 
 +
@@ -55,4 +58,7 @@ network interface modify -vserver vserver_name -lif lif_name -status-admin down
 network interface delete -vserver vs1 -lif mgmtlif2
 ....
 . LIF가 삭제되었는지 확인하려면 'network interface show' 명령을 사용하십시오.
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

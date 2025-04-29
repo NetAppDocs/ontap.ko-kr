@@ -57,6 +57,9 @@ RSH를 사용하여 클러스터에 액세스하려면 다음 조건을 충족�
 `network interface show -services management-rsh-server`
 
 +
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 .. 서비스가 있는 경우 `management-rsh-server` 다음 단계를 계속 진행하십시오.
 .. 서비스가 없는 경우 `management-rsh-server` 다음 명령을 사용하여 서비스를 추가합니다.
 +

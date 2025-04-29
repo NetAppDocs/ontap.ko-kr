@@ -129,6 +129,8 @@ LIF를 생성할 때 이러한 값을 명령과 함께 `network interface create
 홈 노드
  a| 
 LIF에서 '네트워크 인터페이스 되돌리기' 명령을 실행할 때 LIF가 반환되는 노드입니다.
+
+에 대한 자세한 내용은 `network interface revert` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-revert.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
  a| 
 
 

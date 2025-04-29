@@ -64,7 +64,13 @@ vs1
 +
 장애 조치 타겟 * 필드에는 각 LIF에 대한 장애 조치 타겟의 우선 순위가 지정된 목록이 표시됩니다. 예를 들어, 'lif0'이 홈 포트(Node0의 e0b)에서 페일오버되는 경우 먼저 Node0의 포트 e0c로 페일오버를 시도합니다. lif0이 e0c로 페일오버할 수 없는 경우 Node0의 포트 e0d 등으로 페일오버를 시도합니다.
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . SAN LIF 이외의 LIF에 대해 페일오버 정책을 * disabled * 로 설정한 경우, 를 사용하십시오 `network interface modify` 명령을 사용하여 페일오버를 설정합니다.
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 각 LIF에 대해 * 페일오버 타겟 * 필드에 LIF의 홈 노드가 업그레이드 중인 동안 유지될 다른 노드의 데이터 포트가 포함되어 있는지 확인합니다.
 +
 'network interface failover-groups modify' 명령을 사용하여 페일오버 그룹에 장애 조치 대상을 추가할 수 있습니다.

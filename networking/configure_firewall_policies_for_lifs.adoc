@@ -48,7 +48,7 @@ ONTAP 9.10.1 시작:
 
 LIF 방화벽 정책을 사용하여 각 LIF에서 클러스터에 대한 액세스를 제한합니다. 기본 방화벽 정책이 각 LIF 유형에 대한 시스템 액세스에 미치는 영향과 LIF에 대한 보안을 늘리거나 줄일 수 있도록 방화벽 정책을 사용자 지정하는 방법을 이해해야 합니다.
 
-network interface create 또는 network interface modify 명령을 사용하여 LIF를 구성하는 경우, '-firewall-policy' 매개 변수에 지정된 값에 따라 LIF에 대한 액세스가 허용된 서비스 프로토콜과 IP 주소가 결정됩니다.
+또는 `network interface modify` 명령을 사용하여 LIF를 구성할 때 `network interface create` 매개 변수에 지정된 `-firewall-policy` 값에 따라 LIF에 대한 액세스가 허용된 서비스 프로토콜과 IP 주소가 결정됩니다. 에 대한 자세한 내용은 `network interface` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 대부분의 경우 기본 방화벽 정책 값을 적용할 수 있습니다. 다른 경우에는 특정 IP 주소 및 특정 관리 서비스 프로토콜에 대한 액세스를 제한해야 할 수도 있습니다. 사용 가능한 관리 서비스 프로토콜에는 SSH, HTTP, HTTPS, Telnet, NTP, NDMP, NDMPS, RSH, DNS 및 SNMP를 지원합니다.
 
@@ -191,6 +191,9 @@ ONTAP 9.6에서는 HTTPS 및 SSH 관리 액세스를 위해 관리 https와 관�
 'network interface modify -vserver_vserver_name_-lif_lif_name_-firewall-policy_policy_name_'
 
 . 'network interface show-fields firewall -policy' 명령을 사용하여 LIF에 정책이 올바르게 추가되었는지 확인합니다.
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .방화벽 정책을 생성하여 LIF에 할당하는 예입니다

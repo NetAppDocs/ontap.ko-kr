@@ -67,3 +67,4 @@ vs1
                                          node2:e0e,
                                          node2:e0f
 ....
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

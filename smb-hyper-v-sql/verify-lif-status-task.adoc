@@ -38,6 +38,9 @@ vs1
             lif1         up/up    10.0.0.128/24    node2      e0d     false
             lif2         up/up    10.0.0.129/24    node2      e0d     true
 ----
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 일부 LIF가 홈 포트에 없는 경우 다음 단계를 수행하십시오.
 +
 .. 각 LIF에서 LIF의 홈 포트가 무엇인지 확인합니다.

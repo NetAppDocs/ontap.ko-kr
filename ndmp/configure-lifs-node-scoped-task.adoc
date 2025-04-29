@@ -23,6 +23,9 @@ NOTE: ONTAP 9.10.1.1부터 방화벽 정책이 사용되지 않으며 LIF 서비
 +
 네트워크 인터페이스 show-service-policy default-인터클러스터
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 인터클러스터 LIF에 서비스가 포함되는지 확인합니다. `backup-ndmp-control`
 +
 네트워크 인터페이스 서비스 정책 쇼
@@ -53,6 +56,9 @@ cluster1-1  cluster1-1_mgmt1 cluster1-1:e0m    local-only    Default
 ----
 cluster1::> network interface modify -vserver cluster1 -lif IC1 -failover-policy local-only
 ----
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 
@@ -73,6 +79,9 @@ Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
 cluster1    IC1        up/up      192.0.2.65/24      cluster1-1    e0a     true
 cluster1    IC2        up/up      192.0.2.68/24      cluster1-2    e0b     true
 ----
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 인터클러스터 LIF에서 NDMP에 대해 방화벽 정책이 활성화되어 있는지 확인합니다.
 +
 .. 'system services firewall policy show' 명령을 사용하여 NDMP에 대해 방화벽 정책이 설정되어 있는지 확인합니다.

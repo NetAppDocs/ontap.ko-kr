@@ -55,4 +55,5 @@ displaced-vlans restore
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/cluster-controller-replacement-network-displaced-interface-delete.html["클러스터 컨트롤러 교체 네트워크 - 인터페이스 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["네트워크 인터페이스 수정"^]
 

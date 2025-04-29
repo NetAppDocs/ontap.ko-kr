@@ -69,6 +69,9 @@ ONTAP CLI를 사용하여 iSCSI용 스토리지 VM을 구성합니다.
 +
 'network interface show -vserver_vserver_name_'
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . iSCSI가 작동 중이고 해당 SVM의 타겟 IQN이 실행 중인지 확인합니다.
 +
 'vserver iscsi show –vserver_vserver_name_'
@@ -79,4 +82,5 @@ ONTAP CLI를 사용하여 iSCSI용 스토리지 VM을 구성합니다.
 --
 ====
 .관련 정보
-https://www.netapp.com/media/10680-tr4080.pdf["NetApp 기술 보고서 4080: 최신 SAN에 대한 모범 사례"]
+* https://www.netapp.com/media/10680-tr4080.pdf["NetApp 기술 보고서 4080: 최신 SAN에 대한 모범 사례"]
+

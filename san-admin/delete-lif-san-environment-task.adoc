@@ -45,6 +45,9 @@ ONTAP CLI에서 LIF를 삭제합니다.
 +
 'network interface delete-vserver vs1-lif lif liff li1'
 
++
+에 대한 자세한 내용은 `network interface delete` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LIF를 삭제했는지 확인합니다.
 +
 네트워크 인터페이스 쇼
@@ -63,6 +66,9 @@ vs1
         lif2       up/up      192.168.2.72/24  node-01   e0b     true
         lif3       up/up      192.168.2.73/24  node-01   e0b     true
 ----
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

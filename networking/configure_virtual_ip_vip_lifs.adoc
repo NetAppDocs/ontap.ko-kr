@@ -348,4 +348,5 @@ NOTE: 기존 BGP 피어 그룹에서 MD5를 활성화 또는 비활성화하면 
 .관련 정보
 * https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+bgp["네트워크 BGP"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
 

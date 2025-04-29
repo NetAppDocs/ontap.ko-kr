@@ -27,6 +27,9 @@ summary: 새 SVM을 생성한 경우 S3 액세스를 위해 생성하는 전용 
 .이 작업에 대해
 * 동일한 네트워크 포트에서 IPv4 및 IPv6 LIF를 모두 생성할 수 있습니다.
 * 클러스터에 LIF가 많은 경우 'network interface capacity show' 명령을 사용하여 클러스터에서 지원되는 LIF 용량과 각 노드에서 지원되는 LIF 용량을 확인할 수 있습니다 (고급 권한 수준에서).
++
+및 `network interface capacity details show` 에 대한 자세한 `network interface capacity show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface+capacity+show["ONTAP 명령 참조입니다"^]참조하십시오.
+
 * 원격 FabricPool 용량(클라우드) 계층화를 사용하는 경우 인터클러스터 LIF도 구성해야 합니다.
 
 
@@ -37,6 +40,9 @@ summary: 새 SVM을 생성한 경우 S3 액세스를 위해 생성하는 전용 
 
 +
 ** 홈 노드는 LIF에서 네트워크 인터페이스 되돌리기 명령을 실행할 때 LIF가 반환하는 노드입니다.
++
+에 대한 자세한 내용은 `network interface revert` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-revert.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 또한 LIF가 '-auto-revert' 옵션을 사용하여 홈 노드 및 홈 포트로 자동으로 되돌아가는지 여부를 지정할 수도 있습니다.
 
@@ -129,4 +135,5 @@ vs3.example.com
 ----
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
 

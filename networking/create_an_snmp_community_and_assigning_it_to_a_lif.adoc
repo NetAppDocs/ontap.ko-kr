@@ -109,7 +109,7 @@ vs1
          data1
                       snmp       0.0.0.0/0
 ....
-. firewall-policy 매개 변수와 함께 network interface modify 명령을 사용하여 데이터 LIF에 방화벽 정책을 적용합니다.
+. 명령을 -firewall-policy 매개 변수와 함께 사용하여 데이터 LIF에 방화벽 정책을 `network interface modify` 적용합니다.
 +
 다음 명령을 실행하면 새 "data1" 방화벽 정책이 LIF "datalif1"에 할당됩니다.
 
@@ -117,4 +117,7 @@ vs1
 ....
 network interface modify -vserver vs1 -lif datalif1 -firewall-policy data1
 ....
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

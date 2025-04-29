@@ -23,6 +23,9 @@ NOTE: ONTAP 9.10.1.1부터 방화벽 정책이 사용되지 않으며 LIF 서비
 +
 네트워크 인터페이스 show-service-policy default-인터클러스터
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 매개 변수와 함께 명령을 `-service-policy` 사용하여 노드에 호스팅된 관리 LIF를 `network interface show` 식별합니다.
 +
 `network interface show -service-policy default-management`
@@ -70,6 +73,9 @@ cluster1-2 c1-2_mgmt1       cluster1-2:e0m  local-only  Default
 ----
 cluster1::> network interface modify -vserver cluster1 -lif IC1 -failover-policy local-only
 ----
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 . 데이터 연결에 필요한 LIF를 'preferred-interface-role' 매개 변수와 함께 'vserver services ndmp modify' 명령을 사용하여 지정합니다.

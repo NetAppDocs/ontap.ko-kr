@@ -24,9 +24,15 @@ LIF가 포트 세트의 구성원인 경우 LIF를 다른 노드로 이동하기
 +
 'network interface show -vserver_vserver_name_'
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LIF의 상태를 '자체'(오프라인)로 변경합니다.
 +
 'network interface modify -vserver_vserver_name_-lif_LIF_name_-status-admin down'
+
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . LIF를 새 노드 및 포트에 할당합니다.
 +

@@ -23,6 +23,9 @@ summary: 새 스토리지 개체에 대한 NFS 액세스를 검증한 후 NFS �
 +
 'network interface show –vserver_svm_name_'
 
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 관리 호스트 클라이언트 시스템에 루트 사용자로 로그인합니다.
 . 디렉토리를 마운트 폴더로 변경합니다.
 +

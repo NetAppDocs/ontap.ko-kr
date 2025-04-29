@@ -37,6 +37,9 @@ vs1
                               cluster1-01:e0e, cluster1-02:e0c,
                               cluster1-02:e0d, cluster1-02:e0e
 ....
++
+에 대한 자세한 내용은 `network interface failover-groups show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-failover-groups-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . network interface failover-groups show 명령을 사용하여 특정 페일오버 그룹의 대상 포트와 브로드캐스트 도메인을 표시합니다.
 +
 다음 명령을 실행하면 SVM VS4 용 페일오버 그룹 data12에 대한 자세한 정보가 표시됩니다.
@@ -70,4 +73,7 @@ cluster1  cluster1-02_mgmt1   local-only             Default
 vs1       data1               disabled               Default
 vs3       data2               system-defined         group2
 ....
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

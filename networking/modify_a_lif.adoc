@@ -79,6 +79,9 @@ network interface modify -vserver vs1 -lif datalif2 -subnet-name client1_sub
 ....
 network interface modify -vserver siteA -lif node1_inter1 -service-policy example
 ....
++
+에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . IP 주소에 연결할 수 있는지 확인합니다.
 +
 |===
@@ -100,10 +103,10 @@ IPv6 주소
 네트워크 핑6
 
 |===
++
+에 대한 자세한 내용은 `network ping` link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
 ====
-.관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
-

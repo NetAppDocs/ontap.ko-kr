@@ -86,4 +86,7 @@ LIF에서 사용되지 않는 방화벽 정책을 삭제합니다
 '시스템 서비스 방화벽 정책 삭제
 
 |===
-에 대한 자세한 `system services firewall` `system services firewall policy` 내용은, 및 `network interface modify`link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^] 을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+services+firewall["시스템 서비스 방화벽"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["네트워크 인터페이스 수정"^]
+

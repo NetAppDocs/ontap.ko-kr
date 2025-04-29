@@ -114,4 +114,5 @@ HTTPS를 사용하여 웹 서비스에 연결하면 웹 브라우저에서 연�
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["네트워크 인터페이스 수정"]
 

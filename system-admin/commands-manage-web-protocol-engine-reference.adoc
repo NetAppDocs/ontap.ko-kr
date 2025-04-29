@@ -60,3 +60,6 @@ service 매개 변수를 http 또는 https로 설정하면 웹 액세스 요청�
 '-firewall-policy' 매개 변수를 사용하여 LIF의 방화벽 정책을 수정할 수 있습니다.
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["네트워크 인터페이스 수정"^]
+

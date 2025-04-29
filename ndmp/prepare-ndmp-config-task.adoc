@@ -75,6 +75,9 @@ Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
 ----------- ---------- ---------- ------------------ ------------- ------- ----
 cluster1    IC1        up/up      192.0.2.65/24      cluster1-1    e0a     true
 ----
++
+에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 .. 인터클러스터 LIF가 노드에 없으면 '네트워크 인터페이스 만들기' 명령을 사용하여 인터클러스터 LIF를 만듭니다.
 +
 [listing]
@@ -91,6 +94,9 @@ Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
 cluster1    IC1        up/up      192.0.2.65/24      cluster1-1    e0a     true
 cluster1    IC2        up/up      192.0.2.68/24      cluster1-2    e0b     true
 ----
++
+에 대한 자세한 내용은 `network interface create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 link:../networking/networking_reference.html["네트워크 관리"]
 
