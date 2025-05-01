@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap 9.2, restore, luns, in a volume, snapvault, backup 
 summary: SnapVault 백업에서 볼륨에 있는 하나 이상의 LUN을 복원해야 하는 경우 전체 볼륨을 복원할 수 있습니다. 볼륨을 복원하면 볼륨의 모든 LUN에 영향을 줍니다. 
 ---
-= SnapVault 백업에서 볼륨의 모든 LUN을 복구합니다
+= ONTAP SnapVault 백업에서 볼륨의 모든 LUN을 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,7 +23,12 @@ SnapVault 관계를 초기화해야 하며 SnapVault 보조 볼륨에 복구할 
 
 .단계
 . 볼륨에 있는 모든 LUN에 대한 입출력을 중지합니다.
-. 'napmirror show' 명령을 실행하여 SnapVault 보조 볼륨이 포함된 보조 볼륨을 확인합니다.
+. SnapVault 2차 볼륨이 포함된 2차 볼륨을 확인합니다.
++
+[source, cli]
+----
+snapmirror show
+----
 +
 [listing]
 ----
@@ -37,7 +42,12 @@ vserverA:srcvolA
                         Snapmirrored
                                 Idle       -         true    -
 ----
-.  `volume snapshot show`명령을 실행하여 복원할 스냅샷을 식별합니다.
+. 복원할 스냅샷을 식별합니다.
++
+[source, cli]
+----
+volume snapshot show
+----
 +
 [listing]
 ----
@@ -51,7 +61,12 @@ vserverB
                  snap1.2013-02-10_0015 valid  112KB     0%    0%
                  snap2.2013-02-11_0010  valid  164KB     0%    0%
 ----
-.  `snapmirror restore`명령을 실행하고 옵션을 지정하여 `-source-snapshot` 사용할 스냅샷을 지정합니다.
+. 사용할 스냅샷을 지정합니다.
++
+[source, cli]
+----
+snapmirror restore -destination-path <destination_path> -source-path <source_path> -source-snapshot <snapshot_name>
+----
 +
 복원을 위해 지정하는 대상은 복원 중인 원본 볼륨입니다.
 
@@ -116,5 +131,3 @@ vserverB  /vol/dstvolB/lun_C  online  unmapped windows  300.0GB
 6 entries were displayed.
 ----
 SnapVault 보조 볼륨에서 볼륨을 복구한 후에는 소스 볼륨에 LUN_D가 더 이상 포함되지 않습니다 복구 후 소스 볼륨의 LUN은 여전히 매핑되므로 LUN을 다시 매핑할 필요가 없습니다.
-
-에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

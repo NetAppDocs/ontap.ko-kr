@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, all, luns in a volume, from, snapshot copy 
 summary: volume snapshot restore 명령을 사용하여 스냅샷에서 지정된 볼륨의 모든 LUN을 복원할 수 있습니다. 
 ---
-= 스냅샷에서 볼륨의 모든 LUN을 복구합니다
+= ONTAP 스냅샷에서 볼륨의 모든 LUN을 복구합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,49 +21,54 @@ summary: volume snapshot restore 명령을 사용하여 스냅샷에서 지정�
 . 호스트에서 LUN을 액세스할 수 없도록 해당 호스트에서 LUN을 마운트 해제합니다.
 . LUN 매핑 해제:
 +
-'LUN 매핑 삭제 - vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
-
-+
-에 대한 자세한 내용은 `lun mapping delete` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun mapping delete -vserver <SVM_name> -volume <volume_name> -lun <lun_name> -igroup <igroup_name>
+----
 . 볼륨을 복원할 스냅샷을 결정합니다.
 +
-'volume snapshot show -vserver_vserver_name_-volume_volume_name_'
+[source, cli]
+----
+volume snapshot show -vserver <SVM_name> -volume <volume_name>
 
+----
 . 권한 설정을 고급으로 변경합니다.
 +
-세트 프리빌리지 고급
-
+[source, cli]
+----
+set -privilege advanced
+----
 . 데이터 복원:
 +
-'볼륨 스냅샷 복원 - vserver_vserver_name_-volume_volume_name_-snapshot_snapshot_name_'
-
+[source, cli]
+----
+volume snapshot restore -vserver <SVM_name> -volume <volume_name> -snapshot <snapshot_name>
+----
 . 화면의 지침을 따릅니다.
 . LUN을 다시 매핑합니다.
 +
-'LUN 매핑 create-vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
-
-+
-에 대한 자세한 내용은 `lun mapping create` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun mapping create -vserver <SVM_name> -volume <volume_name> -lun <lun_name> -igroup <igroup_name>
+----
 . LUN이 온라인 상태인지 확인합니다.
 +
-'lun show -vserver_vserver_name_-path_lun_path_-fields state
-
-+
-에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun show -vserver <SVM_name> -path <lun_path> -fields state
+----
 . LUN이 온라인 상태가 아닌 경우 온라인 상태로 전환합니다.
 +
-'lun modify -vserver_vserver_name_-path_lun_path_-state online
-
-+
-에 대한 자세한 내용은 `lun modify` link:https://docs.netapp.com/us-en/ontap-cli/lun-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun modify -vserver <SVM_name> -path <lun_path> -state online
+----
 . 권한 설정을 admin으로 변경합니다.
 +
-'Set-Privilege admin'입니다
-
+[source, cli]
+----
+set -privilege admin
+----
 . 호스트에서 LUN을 다시 마운트합니다.
 . 호스트에서 LUN에 대한 액세스를 다시 시작합니다.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: data, protection, methods, san, environments, snapmirror business continuity, smbc, snapshot copy, mirror, update, flexclone luns, license required, snapvault, backups, snapdrive, windows, unix 
 summary: 실수로 인한 삭제, 애플리케이션 충돌, 데이터 손상 또는 재해가 발생할 경우 복원에 사용할 수 있도록 데이터의 복사본을 만들어 데이터를 보호할 수 있습니다. ONTAP는 데이터 보호 및 백업 요구에 따라 데이터를 보호할 수 있는 다양한 방법을 제공합니다. 
 ---
-= SAN 환경의 데이터 보호 방법 개요
+= SAN 환경을 위한 ONTAP 데이터 보호 방법에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -66,8 +66,4 @@ Windows 또는 UNIX 호스트에서 직접 LUN에 대한 액세스를 구성하�
 대부분의 기존 테이프 드라이브 지원은 ONTAP에 포함되어 있으며 테이프 공급업체가 새 디바이스에 대한 지원을 동적으로 추가하는 방법도 포함되어 있습니다. 또한 ONTAP는 RMT(Remote Magnetic Tape) 프로토콜을 지원하여 모든 가능 시스템에 백업 및 복구를 수행할 수 있습니다.
 
 .관련 정보
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050["NetApp 설명서: UNIX용 SnapDrive"^]
-
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp 설명서:SnapDrive for Windows(최신 릴리스)"^]
-
-link:../tape-backup/index.html["테이프 백업을 사용한 데이터 보호"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050["NetApp 설명서: UNIX용 SnapDrive"^] http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30049["NetApp 설명서:SnapDrive for Windows(최신 릴리스)"^] link:../tape-backup/index.html["테이프 백업을 사용한 데이터 보호"]

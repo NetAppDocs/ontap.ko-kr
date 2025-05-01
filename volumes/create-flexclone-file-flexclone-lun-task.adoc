@@ -31,8 +31,14 @@ summary: FlexVol 또는 FlexClone 볼륨에서 파일 및 LUN의 공간 효율�
 
 노드가 최대 분할 로드에 도달하면 FlexClone 파일 및 FlexClone LUN 생성 요청을 일시적으로 중단하고 "EBUSY" 오류 메시지를 표시합니다. 노드의 분할 부하가 최대 아래로 떨어지면 노드에서 FlexClone 파일 및 FlexClone LUN 생성 요청을 다시 수락합니다. 생성 요청을 다시 시도하기 전에 노드에 클론을 생성할 수 있는 용량이 있을 때까지 기다려야 합니다.
 
+FlexClone LUN은 상위 LUN의 공간 예약 속성을 상속합니다. 공간 예약 FlexClone LUN에는 공간 예약 상위 LUN과 동일한 공간이 필요합니다. FlexClone LUN이 공간 예약되지 않은 경우 볼륨에 클론의 변경 사항을 수용할 수 있는 충분한 공간이 있어야 합니다.
+
 .단계
-. 'volume file clone create' 명령을 사용하여 FlexClone 파일 또는 FlexClone LUN을 생성합니다.
+. LUN을 클론 복제하는 경우 LUN이 매핑되어 있지 않거나 쓰이지 않는지 확인합니다.
+. FlexClone LUN 또는 파일을 생성합니다.
++
+`volume file clone create -vserver _vserver_name_ -volume _volume_name_ -source-path _source_path_ -destination-path _destination_path_`
+
 +
 다음 예에서는 볼륨 vol1에서 상위 파일 file1_source의 FlexClone 파일 file1_clone을 생성하는 방법을 보여 줍니다.
 
@@ -46,5 +52,45 @@ cluster1::> volume file clone create -vserver vs0 -volume vol1 -source-path /fil
 
 
 
-.관련 정보
-link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+
+
+== 볼륨의 스냅샷에서 FlexClone LUN을 생성합니다
+
+볼륨의 스냅샷을 사용하여 LUN의 FlexClone 복사본을 생성할 수 있습니다. LUN의 FlexClone 복사본은 읽기 및 쓰기가 모두 가능합니다.
+
+.필요한 것
+FlexClone 라이센스를 설치해야 합니다. 이 라이센스는 에 link:../system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP 1 을 참조하십시오"]포함되어 있습니다.
+
+.이 작업에 대해
+FlexClone LUN은 상위 LUN의 공간 예약 속성을 상속합니다. 공간 예약 FlexClone LUN에는 공간 예약 상위 LUN과 동일한 공간이 필요합니다. FlexClone LUN이 공간 예약되지 않은 경우 볼륨에 클론의 변경 사항을 수용할 수 있는 충분한 공간이 있어야 합니다.
+
+.단계
+. LUN이 매핑되지 않았거나 쓰기 중인지 확인합니다.
+. LUN이 포함된 볼륨의 스냅샷을 생성합니다.
++
+'볼륨 스냅샷 생성 - vserver_vserver_name_-volume_volume_name_-snapshot_snapshot_name_'
+
++
+클론을 생성할 LUN의 스냅샷(백업 스냅샷)을 생성해야 합니다.
+
+. 스냅샷에서 FlexClone LUN을 생성합니다.
++
+`volume file clone create -vserver _vserver_name_ -volume _volume_name_ -source-path _source_path_ -snapshot-name _snapshot_name_ -destination-path _destination_path_`
+
++
+자동 삭제를 위해 FlexClone LUN을 사용할 수 있어야 하는 경우 '-autom자동 삭제 true'를 포함합니다. 반씩 프로비저닝을 사용하여 볼륨에 FlexClone LUN을 생성하는 경우 모든 FlexClone LUN에 대해 자동 삭제를 활성화해야 합니다.
+
+. FlexClone LUN이 올바른지 확인합니다.
++
+'lun show -vserver_vserver_name _'
+
++
+[listing]
+----
+
+Vserver Path                      State    Mapped    Type     Size
+------- ----------------------    -------- --------- -------- -------
+vs1     /vol/vol1/lun1_clone      online   unmapped windows   47.07MB
+vs1     /vol/vol1/lun1_snap_clone online   unmapped windows   47.07MB
+----
+

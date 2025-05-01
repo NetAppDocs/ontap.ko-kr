@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap 9.2, restore, single, lun, snapvault backup 
 summary: 단일 LUN을 새 위치 또는 원래 위치로 복구할 수 있습니다. SnapVault 2차 볼륨의 모든 스냅샷에서 복원할 수 있습니다. LUN을 원래 위치로 복구하려면 먼저 LUN을 새 위치로 복원한 다음 복사합니다. 
 ---
-= SnapVault 백업에서 단일 LUN을 복원합니다
+= ONTAP SnapVault 백업에서 단일 LUN을 복원합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,12 @@ summary: 단일 LUN을 새 위치 또는 원래 위치로 복구할 수 있습�
 클론의 LUN의 경로와 일련 번호가 원래 LUN과 다릅니다. 영구 예약은 유지되지 않습니다.
 
 .단계
-. 'napmirror show' 명령을 실행하여 SnapVault 백업이 포함된 보조 볼륨을 확인합니다.
+. SnapVault 백업이 포함된 보조 볼륨을 확인합니다.
++
+[source, cli]
+----
+snapmirror show
+----
 +
 [listing]
 ----
@@ -39,7 +44,12 @@ vserverA:srcvolA
                         Snapmirrored
                                 Idle       -         true    -
 ----
-.  `volume snapshot show`명령을 실행하여 LUN을 복구할 스냅샷을 식별합니다.
+. LUN을 복구할 스냅샷을 식별합니다.
++
+[source, cli]
+----
+volume snapshot show
+----
 +
 [listing]
 ----
@@ -53,7 +63,12 @@ vserverB
                  snap1.2013-02-10_0015 valid  112KB     0%    0%
                  snap2.2013-02-11_0010  valid  164KB     0%    0%
 ----
-.  `volume clone create`명령을 실행하여 원하는 스냅샷에서 읽기-쓰기 클론을 생성합니다.
+. 원하는 스냅샷에서 읽기-쓰기 클론을 생성합니다
++
+[source, cli]
+----
+volume clone create -vserver <SVM_name> -flexclone <flexclone_name> -type <type> -parent-volume <parent_volume_name> -parent-snapshot <snapshot_name>
+----
 +
 볼륨 클론은 SnapVault 백업과 동일한 애그리게이트에 생성됩니다. 클론을 저장할 공간이 Aggregate에 있어야 합니다.
 
@@ -65,7 +80,12 @@ cluster::> volume clone create -vserver vserverB
   -parent-snapshot daily.2013-02-10_0010
 [Job 108] Job succeeded: Successful
 ----
-. 'lun show' 명령을 실행하여 볼륨 클론의 LUN을 나열합니다.
+. 볼륨 클론의 LUN을 나열합니다.
++
+[source, cli]
+----
+lun show -vserver <SVM_name> -volume <flexclone_volume_name>
+----
 +
 [listing]
 ----
@@ -82,7 +102,12 @@ vserverB  /vol/dstvolB_clone/lun_C  online  unmapped windows
 +
 에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. 원하는 호스트에 대한 igroup이 SnapVault 백업을 포함하는 SVM에 이미 없으면 'igroup create' 명령을 실행하여 igroup을 생성합니다.
+. 원하는 호스트의 igroup이 SnapVault 백업이 포함된 SVM에 이미 없으면 igroup을 생성합니다.
++
+[source, cli]
+----
+igroup create -vserver <SVM_name> -igroup <igroup_name> -protocol <protocol> -ostype <os_type> -initiator <initiator_name>
+----
 +
 이 예는 iSCSI 프로토콜을 사용하는 Windows 호스트에 대한 igroup을 생성합니다.
 
@@ -93,7 +118,12 @@ cluster::> igroup create -vserver vserverB -igroup temp_igroup
   -protocol iscsi -ostype windows
   -initiator iqn.1991-05.com.microsoft:hostA
 ----
-. 'lun mapping create' 명령을 실행하여 원하는 LUN 복사본을 igroup에 매핑합니다.
+. 원하는 LUN 복사본을 igroup에 매핑합니다.
++
+[source, cli]
+----
+lun mapping create -vserver <SVM_name> -path <lun_path> -igroup <igroup_name>
+----
 +
 [listing]
 ----

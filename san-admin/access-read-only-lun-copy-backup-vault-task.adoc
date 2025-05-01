@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access, read-only, lun, copy, snapvault, backup 
 summary: SnapVault 백업의 최신 스냅샷에서 LUN의 읽기 전용 복제본에 액세스할 수 있습니다. LUN ID, 경로 및 일련 번호는 소스 LUN과 다르며 먼저 매핑해야 합니다. 영구 예약, LUN 매핑 및 igroup은 SnapVault 2차 볼륨에 복제되지 않습니다. 
 ---
-= SnapVault 백업에서 읽기 전용 LUN 복사본을 액세스합니다
+= ONTAP SnapVault 백업에서 읽기 전용 LUN 복사본에 액세스합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,7 +26,12 @@ SnapVault 백업의 최신 스냅샷에서 LUN의 읽기 전용 복제본에 액
 이전 스냅샷에서 매핑된 LUN이 있는 동안 새 스냅샷이 SnapVault 보조 볼륨에 추가되면 매핑된 LUN의 컨텐츠가 변경됩니다. LUN은 여전히 동일한 식별자로 매핑되지만 데이터는 새 스냅샷에서 가져옵니다. LUN 크기가 변경되면 일부 호스트는 자동으로 크기 변경을 감지합니다. 크기 변경을 확인하려면 Windows 호스트에서 디스크를 재검색해야 합니다.
 
 .단계
-. 'lun show' 명령을 실행하여 SnapVault 보조 볼륨에서 사용 가능한 LUN을 나열합니다.
+. SnapVault 2차 볼륨에서 사용 가능한 LUN을 나열합니다.
++
+[source, cli]
+----
+lun show
+----
 +
 이 예에서는 운영 볼륨의 원래 LUN과 SnapVault 보조 볼륨 dstvolB의 복제본을 모두 볼 수 있습니다.
 
@@ -49,7 +54,12 @@ vserverB  /vol/dstvolB/lun_C  online  unmapped windows  300.0GB
 +
 에 대한 자세한 내용은 `lun show` link:https://docs.netapp.com/us-en/ontap-cli/lun-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. 원하는 호스트에 대한 igroup이 SnapVault 2차 볼륨을 포함하는 SVM에 이미 없으면 "igroup create" 명령을 실행하여 igroup을 생성합니다.
+. 원하는 호스트의 igroup이 SnapVault 2차 볼륨이 포함된 SVM에 이미 없으면 igroup을 생성합니다.
++
+[source, cli]
+----
+igroup create -vserver <SVM_name> -igroup <igroup_name> -protocol <protocol> -ostype <ostype> -initiator <initiator_name>
+----
 +
 이 명령은 iSCSI 프로토콜을 사용하는 Windows 호스트에 대한 igroup을 생성합니다.
 
@@ -60,7 +70,12 @@ cluster::> igroup create -vserver vserverB -igroup temp_igroup
   -protocol iscsi -ostype windows
   -initiator iqn.1991-05.com.microsoft:hostA
 ----
-. 'lun mapping create' 명령을 실행하여 원하는 LUN 복사본을 igroup에 매핑합니다.
+. 원하는 LUN 복사본을 igroup에 매핑합니다.
++
+[source, cli]
+----
+lun mapping create -vserver <SVM_name> -path <LUN_path> -igroup <igroup_name>
+----
 +
 [listing]
 ----

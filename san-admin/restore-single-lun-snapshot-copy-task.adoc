@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, single lun, snapshot copy 
 summary: 단일 LUN이 포함된 전체 볼륨을 복원하지 않고 스냅샷에서 단일 LUN을 복구할 수 있습니다. LUN을 제자리에서 또는 볼륨의 새 경로로 복원할 수 있습니다. 이 작업은 볼륨의 다른 파일 또는 LUN에 영향을 주지 않고 단일 LUN만 복구합니다. 스트림을 사용하여 파일을 복원할 수도 있습니다. 
 ---
-= 스냅샷에서 단일 LUN을 복구합니다
+= ONTAP 스냅샷에서 단일 LUN을 복구합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,38 +40,41 @@ summary: 단일 LUN이 포함된 전체 볼륨을 복원하지 않고 스냅샷�
 . 호스트에서 LUN을 액세스할 수 없도록 해당 호스트에서 LUN을 마운트 해제합니다.
 . LUN 매핑을 해제합니다.
 +
-'LUN 매핑 삭제 - vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
-
-+
-에 대한 자세한 내용은 `lun mapping delete` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun mapping delete -vserver <SVM_name> -volume <volume_name> -lun <lun_name> -igroup <igroup_name>
+----
 . LUN을 복구할 스냅샷을 결정합니다.
 +
-'volume snapshot show -vserver_vserver_name_-volume_volume_name_'
-
+[source, cli]
+----
+volume snapshot show -vserver <SVM_name> -volume <volume_name>
+----
 . LUN을 복구하기 전에 LUN의 스냅샷을 생성합니다.
 +
-'볼륨 스냅샷 생성 - vserver_vserver_name_-volume_volume_name_-snapshot_snapshot_name_'
-
+[source, cli]
+----
+volume snapshot create -vserver <SVM_name> -volume <volume_name> -snapshot <snapshot_name>
+----
 . 볼륨에 지정된 LUN을 복구합니다.
 +
-'볼륨 스냅샷 복원 - 파일 - vserver_vserver_name_-volume_volume_name_-snapshot_snapshot_name_-path_lun_path_'
-
+[source, cli]
+----
+volume snapshot restore-file -vserver <SVM_name> -volume <volume_name> -snapshot <snapshot_name> -path <lun_path>
+----
 . 화면의 단계를 따릅니다.
 . 필요한 경우 LUN을 온라인 상태로 전환합니다.
 +
-'lun modify -vserver_vserver_name_-path_lun_path_-state online
-
-+
-에 대한 자세한 내용은 `lun modify` link:https://docs.netapp.com/us-en/ontap-cli/lun-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+lun modify -vserver <SVM_name> -path <lun_path> -state online
+----
 . 필요한 경우 LUN을 다시 매핑합니다.
 +
-'LUN 매핑 create-vserver_vserver_name_-volume_volume_name_-lun_lun_name_-igroup_igroup_name_'
-
-+
-에 대한 자세한 내용은 `lun mapping create` link:https://docs.netapp.com/us-en/ontap-cli/lun-mapping-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[souce]
+----
+lun mapping create -vserver <SVM_name> -volume <volume_name> -lun <lun_name> -igroup <igroup_name>
+----
 . 호스트에서 LUN을 다시 마운트합니다.
 . 호스트에서 LUN에 대한 액세스를 다시 시작합니다.
 
