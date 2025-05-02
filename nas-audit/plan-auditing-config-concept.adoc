@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: plan, audit, configuration, svm, rotate, logs, size, schedule, rotation, dr, disaster recovery 
 summary: 'SVM(스토리지 가상 시스템)에 대한 감사를 구성하기 전에 사용 가능한 구성 옵션을 파악하고 각 옵션에 설정할 값을 계획해야 합니다. 이 정보는 비즈니스 요구 사항에 맞는 감사 구성을 구성하는 데 도움이 됩니다.' 
 ---
-= 감사 구성을 계획합니다
+= ONTAP SVM에 대한 감사 구성 계획
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

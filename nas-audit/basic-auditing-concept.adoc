@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: basic audit concepts 
 summary: ONTAP의 감사를 이해하려면 몇 가지 기본적인 감사 개념을 알고 있어야 합니다. 
 ---
-= 기본 감사 개념
+= 기본적인 ONTAP 감사 개념에 대해 알아봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

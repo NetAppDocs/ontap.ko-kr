@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, audit, svm 
 summary: 감사 구성 설정을 마친 후에는 스토리지 가상 머신에 대해 감사를 설정해야 합니다. 
 ---
-= SVM에 대한 감사를 설정합니다
+= 감사 구성을 설정한 후 ONTAP SVM에 대한 감사 기능이 활성화됩니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
