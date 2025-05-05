@@ -2,7 +2,7 @@
 permalink: fabricpool/install-license-aws-azure-ibm-task.html 
 sidebar: sidebar 
 keywords: installing, fabricpool, license, cloud, tiering, bluexp 
-summary: 이전에 사용했던 FabricPool 라이센스가 변경되었으며 BlueXP  내에서 지원되지 않는 구성에 대해서만 유지됩니다. 2021년 8월 21일부터 Cloud Tiering 서비스를 사용하여 BlueXP에서 지원되는 계층화 구성에 새로운 Cloud Tiering BYOL 라이센스가 도입되었습니다. 
+summary: FabricPool 라이센스는 BlueXP 에서 지원되지 않는 구성으로 제한됩니다. 지원되는 계층화 구성에 대해 BYOL 라이센스를 사용합니다. 
 ---
 = ONTAP 클러스터에 FabricPool 라이센스를 설치합니다
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 이전에 사용했던 FabricPool 라이센스가 변경되었으며 Bl
 
 
 [role="lead"]
-이전에 사용했던 FabricPool 라이센스가 변경되었으며 BlueXP  내에서 지원되지 않는 구성에 대해서만 유지됩니다. 2021년 8월 21일부터 Cloud Tiering 서비스를 통해 BlueXP 내에서 지원되는 계층화 구성에 Cloud Tiering BYOL 라이센스가 도입되었습니다. Cloud Tiering BYOL 라이센스는 이제 BlueXP  Tiering 라이센스로 알려져 있습니다.
+이전에 사용했던 FabricPool 라이센스가 변경되었으며 BlueXP  내에서 지원되지 않는 구성에 대해서만 유지됩니다. 2021년 8월 21일부터 BlueXP  계층화 서비스를 통해 BlueXP  내에서 지원되는 계층화 구성에 BlueXP  계층화 BYOL 라이센스가 도입되었습니다.
 
-link:https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#new-cloud-tiering-byol-licensing-starting-august-21-2021["BlueXP  Cloud Tiering BYOL 라이센스에 대해 자세히 알아보십시오"^]..
+link:https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#new-cloud-tiering-byol-licensing-starting-august-21-2021["BlueXP  계층화 BYOL 라이센스에 대해 자세히 알아보십시오"^]..
 
 BlueXP에서 지원하는 구성은 ONTAP 클러스터에 대한 계층화 라이선스를 부여하려면 BlueXP의 디지털 지갑 페이지를 사용해야 합니다. 이를 위해서는 BlueXP 계정을 설정하고 사용하려는 특정 오브젝트 스토리지 공급자에 대한 계층화를 설정해야 합니다. 현재 BlueXP는 Amazon S3, Azure Blob 스토리지, Google 클라우드 스토리지, S3 호환 오브젝트 스토리지 및 StorageGRID와 같은 오브젝트 스토리지에 대한 계층화를 지원합니다.
 
-link:https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html#features["클라우드 계층화 서비스에 대해 자세히 알아보십시오"^]..
+link:https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html#features["BlueXP  계층화 서비스에 대해 자세히 알아보십시오"^]..
 
 BlueXP에서 지원되지 않는 구성 중 하나가 있는 경우 시스템 관리자를 사용하여 FabricPool 라이센스를 다운로드하고 활성화할 수 있습니다.
 

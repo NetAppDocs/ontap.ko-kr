@@ -196,9 +196,6 @@ FlexGroup를 지원하는 SVM DR에는 8개 사이트에 대한 SnapMirror 팬�
 
 
 | xref:../svm-migrate/index.html[SVM 데이터 이동성] | 최대 200개의 볼륨이 포함된 SVM 마이그레이션 지원 증가 
-
-
-| SVM 디렉토리 재생성 지원 | 새로운 CLI 명령 `debug vserver refresh-vserver-dir -node _node_name_` 누락된 디렉토리 및 파일을 다시 생성합니다. 자세한 내용 및 명령 구문에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-cli-9131/["ONTAP 명령 참조"^]. 
 |===
 
 

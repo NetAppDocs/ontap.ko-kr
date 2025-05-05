@@ -58,7 +58,7 @@ cluster1::> volume file clone create -vserver vs0 -volume vol1 -source-path /fil
 
 볼륨의 스냅샷을 사용하여 LUN의 FlexClone 복사본을 생성할 수 있습니다. LUN의 FlexClone 복사본은 읽기 및 쓰기가 모두 가능합니다.
 
-.필요한 것
+.시작하기 전에
 FlexClone 라이센스를 설치해야 합니다. 이 라이센스는 에 link:../system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP 1 을 참조하십시오"]포함되어 있습니다.
 
 .이 작업에 대해

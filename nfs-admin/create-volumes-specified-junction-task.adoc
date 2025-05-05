@@ -2,7 +2,7 @@
 permalink: nfs-admin/create-volumes-specified-junction-task.html 
 sidebar: sidebar 
 keywords: create, data, volume, specify, junction, point 
-summary: 데이터 볼륨을 생성할 때 교차점을 지정할 수 있습니다. 결과 볼륨은 교차점에 자동으로 마운트되며 NAS 액세스를 위해 즉시 구성할 수 있습니다. 
+summary: 접합 지점에 볼륨이 자동으로 마운트되고, NAS 액세스를 위해 즉시 구성할 수 있도록 데이터 볼륨을 생성합니다. 
 ---
 = ONTAP에서 지정된 접합 지점으로 데이터 볼륨을 생성합니다
 :allow-uri-read: 
@@ -22,15 +22,17 @@ summary: 데이터 볼륨을 생성할 때 교차점을 지정할 수 있습니�
 
 
 
-NOTE: 다음 문자는 접합 경로에 사용할 수 없습니다. *#"><|? \
+NOTE: 다음 문자는 접합 경로에서 사용할 수 없습니다. `*` `#` `"` `>` `<` `|` `?` `\`
 
-또한, 접합 경로 길이는 255자를 초과할 수 없습니다.
+또한 접합 경로 길이는 255자를 초과할 수 없습니다.
 
 .단계
 . 교차점으로 볼륨을 생성합니다.
 +
-'volume create-vserver_vserver_name_-volume_volume_name_-aggregate_aggregate_name_-size{integer[KB|MB|GB|TB|PB]}-security-style{NTFS|UNIX|MIXED}-junction-path_junction_path_'입니다
-
+[source, cli]
+----
+volume create -vserver <vserver_name> -volume <volume_name> -aggregate <aggregate_name> -size {integer[KB|MB|GB|TB|PB]} -security-style {ntfs|unix|mixed} -junction-path <junction_path>
+----
 +
 접합 경로는 루트(/)로 시작해야 하며 디렉터리와 접합된 볼륨을 모두 포함할 수 있습니다. 접합 경로에는 볼륨의 이름을 포함할 필요가 없습니다. 접합 경로는 볼륨 이름과 무관합니다.
 
@@ -45,12 +47,14 @@ NOTE: 다음 문자는 접합 경로에 사용할 수 없습니다. *#"><|? \
 
 . 볼륨이 원하는 접합 지점으로 생성되었는지 확인합니다.
 +
-'volume show -vserver_vserver_name_-volume_volume_name_-junction'
-
+[source, cli]
+----
+volume show -vserver <vserver_name> -volume <volume_name> -junction
+----
 
 
 .예
-다음 예에서는 junction path "/eng/home"이 있는 SVM VS1 상에 ""home4""라는 이름의 볼륨을 생성합니다.
+다음 예에서는 접합 경로가 있는 SVM VS1에 `/eng/home` 이라는 이름의 볼륨을 `home4` 생성합니다.
 
 [listing]
 ----
