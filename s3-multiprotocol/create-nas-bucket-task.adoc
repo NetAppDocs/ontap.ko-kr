@@ -36,6 +36,7 @@ S3 NAS “버킷”은 맵핑이며 S3 버킷이 아니기 때문에 표준 S3 �
 * * 역할 \ is-protected\ is-protected-on-ONTAP\ is-protected-on-cloud * + S3 NAS 버킷은 SnapMirror S3를 사용하여 보호 또는 미러링되지 않지만 볼륨 단위로 제공되는 정기적인 SnapMirror 보호를 사용합니다.
 * *versioning-state*+ NAS 볼륨에는 일반적으로 다른 버전을 저장할 수 있는 스냅샷 기술이 있습니다. 그러나 버전 관리는 현재 S3 NAS 버킷에서 사용할 수 없습니다.
 * 볼륨 명령을 통해 NAS 볼륨에 대해 * logical-used\object-count * + 등가 통계를 사용할 수 있습니다.
+* * 멀티 파트 오브젝트 * + ONTAP 9.16.1부터 멀티 파트 오브젝트는 기본 FlexGroup 볼륨에서 이 활성화된 경우 S3 NAS 버킷에서 link:../flexgroup/enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"]지원됩니다. 고급 용량 균형 조정은 FlexGroup 볼륨에서만 활성화할 수 있습니다. FlexVol에서는 이 기능을 활성화할 수 없습니다.
 
 
 [role="tabbed-block"]
