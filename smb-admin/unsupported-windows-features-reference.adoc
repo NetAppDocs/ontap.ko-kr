@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cifs, network, aware, windows, feature, ontap, support, unsupported windows features 
 summary: 네트워크에서 CIFS를 사용하기 전에 ONTAP에서 지원하지 않는 특정 Windows 기능을 알고 있어야 합니다. 
 ---
-= 지원되지 않는 Windows 기능입니다
+= ONTAP SMB에서 지원되지 않는 Windows 기능
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

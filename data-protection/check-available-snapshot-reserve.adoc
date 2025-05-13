@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify, snapshot, copy, reserve 
 summary: '매개 변수를 명령과 함께 `volume show` 사용하여 볼륨에서 사용 가능한 스냅숏 예비 공간의 양을 확인할 수 `snapshot-reserve-available` 있습니다.' 
 ---
-= ONTAP를 사용하여 볼륨에서 사용 가능한 스냅숏 예비 공간을 확인합니다
+= 볼륨에서 사용 가능한 ONTAP 스냅숏 예비 공간을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

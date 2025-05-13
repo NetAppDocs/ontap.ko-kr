@@ -6,11 +6,11 @@ entries:
 - section: peering
 - title: 로컬 스냅샷을 관리합니다
   entries:
-  - title: 개요
+  - title: 로컬 스냅샷에 대해 알아봅니다
     url: "/data-protection/manage-local-snapshot-copies-concept.html"
   - title: 사용자 지정 스냅샷 정책을 구성합니다
     entries:
-    - title: 개요
+    - title: 사용자 지정 스냅샷 정책 구성에 대해 자세히 알아봅니다
       url: "/data-protection/configure-custom-snapshot-policies-concept.html"
     - title: 사용자 지정 스냅샷 정책을 구성하는 경우
       url: "/data-protection/custom-vs-default-snapshot-policy-concept.html"
@@ -18,39 +18,35 @@ entries:
       url: "/data-protection/create-snapshot-job-schedule-task.html"
     - title: 스냅샷 정책을 생성합니다
       url: "/data-protection/create-snapshot-policy-task.html"
-  - title: 수동으로 스냅샷 복사본을 관리합니다
+  - title: 스냅샷을 수동으로 관리합니다
     entries:
     - title: 스냅샷을 수동으로 생성하고 삭제합니다
       url: "/data-protection/create-delete-snapshot-manually-task.html"
     - title: 재확보 가능한 공간을 계산합니다
       url: "/data-protection/calculate-reclaimable-space-task.html"
-  - title: 스냅샷 복사본 예약 공간을 관리합니다
+  - title: 스냅숏 예비 공간을 관리합니다
     entries:
-    - title: 개요
+    - title: 스냅숏 예비 공간 관리에 대해 자세히 알아봅니다
       url: "/data-protection/manage-snapshot-copy-reserve-concept.html"
-    - title: 언제 스냅샷 복사본 예약 공간을 늘려야 합니다
-      url: "/data-protection/increase-snapshot-copy-reserve-concept.html"
-    - title: 보호된 파일을 삭제하면 예상보다 파일 공간이 줄어들 수 있습니다
-      url: "/data-protection/example-snapshot-copies-exceed-reserve-concept.html"
-    - title: 스냅샷 복사본 디스크 사용량을 모니터링합니다
+    - title: 스냅샷 디스크 사용량을 모니터링합니다
       url: "/data-protection/monitor-snapshot-copy-disk-consumption-task.html"
-    - title: 볼륨에서 사용 가능한 스냅샷 복사본 예약 공간을 확인합니다
+    - title: 볼륨에서 사용 가능한 스냅숏 예비 공간을 확인합니다
       url: "/data-protection/check-available-snapshot-reserve.html"
-    - title: 스냅샷 복사본 예약 공간을 수정합니다
+    - title: 스냅숏 예비 공간을 수정합니다
       url: "/data-protection/modify-snapshot-copy-reserve-task.html"
-    - title: 자동 삭제 스냅샷 복사본
+    - title: 스냅샷 자동 삭제
       url: "/data-protection/autodelete-snapshot-copies-task.html"
-  - title: 스냅샷 복사본에서 파일을 복원합니다
+  - title: 스냅샷에서 파일을 복원합니다
     entries:
-    - title: NFS 또는 SMB 클라이언트의 스냅샷 복사본에서 파일을 복원합니다
+    - title: NFS 또는 SMB 클라이언트의 스냅샷에서 파일을 복구합니다
       url: "/data-protection/snapshot-copies-work-concept.html"
-    - title: 스냅샷 복사본 디렉토리에 대한 NFS 및 SMB 클라이언트 액세스를 설정 및 해제합니다
+    - title: 스냅샷 디렉토리에 대한 NFS 및 SMB 클라이언트 액세스를 설정 및 해제합니다
       url: "/data-protection/enable-disable-snapshot-dir-access-task.html"
-    - title: 스냅샷 복사본에서 단일 파일을 복원합니다
+    - title: 스냅샷에서 단일 파일을 복구합니다
       url: "/data-protection/restore-single-file-snapshot-task.html"
-    - title: 스냅샷 복사본에서 파일 일부를 복원합니다
+    - title: 스냅샷에서 파일의 일부를 복구합니다
       url: "/data-protection/restore-part-file-snapshot-task.html"
-    - title: 스냅샷 복사본에서 볼륨 콘텐츠를 복원합니다
+    - title: 스냅숏에서 볼륨의 내용을 복원합니다
       url: "/data-protection/restore-contents-volume-snapshot-task.html"
 - title: SnapMirror 볼륨 복제
   entries:

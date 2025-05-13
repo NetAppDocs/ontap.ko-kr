@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, creating, svm, configure, disaster, recovery, destination, identity, preserve, snapmirror, configuration, smb, guideline, guidelines for smb server security settings in an svm disaster recovery configuration 
 summary: 'ID가 유지되지 않는 재해 복구 대상으로 구성된 SVM(SnapMirror 구성에서 -identity-preserve 옵션이 false로 설정)을 생성하기 전에 대상 SVM에서 SMB 서버 보안 설정이 관리되는 방식을 알아야 합니다.' 
 ---
-= SVM 재해 복구 구성의 SMB 서버 보안 설정 지침
+= ONTAP SVM 재해 복구 구성을 위한 SMB 서버 보안 설정에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

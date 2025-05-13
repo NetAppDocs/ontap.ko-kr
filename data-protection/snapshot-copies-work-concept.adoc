@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, file, snapshot copy, nfs, cifs, smb, client 
 summary: NFS 또는 SMB 클라이언트의 사용자는 스토리지 시스템 관리자의 개입 없이 스냅샷에서 직접 파일을 복구할 수 있습니다. 
 ---
-= NFS 또는 SMB 클라이언트의 스냅샷에서 파일을 복구합니다
+= NFS 또는 SMB 클라이언트의 ONTAP 스냅샷에서 파일을 복구합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

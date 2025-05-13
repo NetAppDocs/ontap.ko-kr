@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, custom, snapshot, policy 
 summary: '스냅샷 정책은 시스템에서 스냅샷을 생성하는 방법을 정의합니다. 정책은 스냅샷을 생성할 시기, 보존할 복제본 수 및 스냅샷 이름을 지정하는 방법을 지정합니다. 예를 들어 시스템은 매일 오전 12시 10분에 스냅샷 하나를 생성하고 가장 최근의 복제본 두 개를 보존하며 복제본 이름을 "daily.timestamp"로 지정할 수 있습니다.' 
 ---
-= 사용자 지정 스냅샷 정책 구성 개요
+= 사용자 지정 ONTAP 스냅샷 정책을 구성하는 방법에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: smb, cifs, protocol, file, access, overview 
 summary: CIFS 서버 지원, 공유 생성, Microsoft 서비스 활성화와 같은 SMB 프로토콜을 위해 사용할 수 있는 ONTAP 파일 액세스 기능 
 ---
-= SMB 개요
+= ONTAP SMB에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, release, smb, version, enable, default, connection, client, domain, controller, controller, verify, support, functionality, environment, verify enabled smb versions, can smb1 be enabled in ontap 9 
 summary: ONTAP 9.0 이상에서는 SMB 2.0이 기본적으로 사용됩니다.  SMB 1.0은 사용 중인 ONTAP 버전에 따라 기본적으로 활성화되어 있습니다 
 ---
-= 활성화된 SMB 버전을 확인합니다
+= 활성화된 ONTAP SMB 버전을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
