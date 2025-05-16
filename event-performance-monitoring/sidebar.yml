@@ -120,10 +120,6 @@ entries:
     url: "/system-admin/respond-degraded-system-health-task.html"
   - title: 저하된 시스템 상태에 응답하는 예
     url: "/system-admin/example-responding-degraded-system-health-concept.html"
-  - title: 클러스터 및 관리 네트워크 스위치 검색을 구성합니다
-    url: "/system-admin/configure-discovery-cluster-management-switches-task.html"
-  - title: 클러스터 및 관리 네트워크 스위치의 모니터링을 확인합니다
-    url: "/system-admin/verify-monitor-cluster-management-network-switches-task.html"
   - title: 시스템 상태를 모니터링하는 명령입니다
     url: "/system-admin/commands-monitor-health-system-reference.html"
   - title: 환경 정보를 표시합니다

@@ -25,4 +25,6 @@ SnapMirror를 사용하여 스냅샷을 복제하려면 소스 및 대상 클러
 
 네트워크 인터페이스 서비스 정책 표시 정책 기본값 - 인터클러스터
 
+에 대한 자세한 내용은 `network interface service-policy show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 ====

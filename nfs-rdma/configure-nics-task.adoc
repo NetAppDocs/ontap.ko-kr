@@ -27,6 +27,9 @@ RDMA를 통한 NFS를 사용하려면 클라이언트 시스템과 스토리지 
 ----
 network port show -rdma-protocols roce
 ----
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * ONTAP 9.16.1부터 우선 순위 흐름 제어(PFC)를 사용하는 것이 좋습니다. 다음 명령을 사용하여 PFC를 구성합니다 `network port modify`.
 +
 [source, cli]
@@ -39,6 +42,9 @@ network port modify -node <nodename> -port <portname> -flowcontrol-admin pfc -pf
 ----
 network port modify -node <nodename> -port <portname> -flowcontrol-admin full
 ----
++
+에 대한 자세한 내용은 `network port modify` link:https://docs.netapp.com/us-en/ontap-cli/network-port-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

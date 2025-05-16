@@ -154,4 +154,5 @@ network interface create -vserver vs1 -lif lif2 -home-node node2 -homeport e0d -
 ----
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-revert.html["네트워크 인터페이스 복원"^]
 

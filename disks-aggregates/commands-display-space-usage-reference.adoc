@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, display, space usage, information 
 summary: 스토리지 Aggregate 및 볼륨 명령을 사용하여 로컬 계층과 볼륨 및 해당 스냅샷에서 공간이 어떻게 사용되고 있는지 확인할 수 있습니다. 
 ---
-= ONTAP에서 공간 사용 정보를 표시하기 위한 명령입니다
+= 공간 사용 정보를 표시하기 위한 ONTAP 명령입니다
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

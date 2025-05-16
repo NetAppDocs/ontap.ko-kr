@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sanitize, disk, maintenance mode, nodeshell, node shell, sanitization 
 summary: ONTAP 9.6부터는 유지보수 모드에서 디스크 완전 삭제를 수행할 수 있습니다. 이를 통해 사용 중단되거나 작동 불가능한 시스템의 디스크 또는 디스크 세트에서 데이터를 제거하여 데이터를 복구할 수 없습니다. 
 ---
-= ONTAP에서 디스크를 삭제합니다
+= ONTAP 디스크 완전 삭제
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -217,4 +217,4 @@ NOTE: 삭제 중에 노드 전원을 끄거나 스토리지 연결을 중단하�
 .결과
 지정된 디스크가 삭제되어 핫 스페어로 지정됩니다. 삭제된 디스크의 일련 번호는 '/etc/log/살균된_disks'에 기록됩니다.
 
-각 디스크에서 완료된 작업을 보여주는 지정된 디스크의 삭제 로그가 에 기록됩니다 `/mroot/etc/log/sanitization.log`.
+각 디스크에서 완료된 작업을 보여 주는 지정된 디스크의 삭제 로그가 에 `/mroot/etc/log/sanitization.log`기록됩니다.

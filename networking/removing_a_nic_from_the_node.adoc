@@ -30,7 +30,7 @@ network port show
 ....
 +
 
-NOTE: ONTAP는 모든 인터페이스 그룹에서 포트를 자동으로 제거합니다. 포트가 인터페이스 그룹의 유일한 구성원인 경우 인터페이스 그룹이 삭제됩니다.
+NOTE: ONTAP는 모든 인터페이스 그룹에서 포트를 자동으로 제거합니다. 포트가 인터페이스 그룹의 유일한 구성원인 경우 인터페이스 그룹이 삭제됩니다. 에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 포트에 구성된 VLAN이 있으면 포트가 교체된 것입니다. 다음 명령을 사용하여 교체된 VLAN을 볼 수 있습니다.
 +

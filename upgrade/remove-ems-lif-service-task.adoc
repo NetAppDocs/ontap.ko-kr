@@ -70,6 +70,9 @@ set advanced
 ----
 network interface service-policy remove-service -vserver <svm_name> -policy <service_policy_name> -service management-ems
 ----
++
+에 대한 자세한 내용은 `network interface service-policy remove-service` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-remove-service.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 관리 - EMS LIF가 이제 EMS 타겟에 대한 연결 기능을 제공하는 LIF에만 연결되어 있는지 확인합니다.
 +
 [source, cli]

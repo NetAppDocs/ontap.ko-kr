@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disk, disk sanitization, local tier, aggregate, sensitive data, sanitize 
 summary: 삭제가 필요한 데이터를 포함하도록 로컬 계층을 만들거나 백업하는 경우 간단한 지침을 따르면 데이터를 삭제하는 데 걸리는 시간을 줄일 수 있습니다. 
 ---
-= ONTAP에서 삭제할 데이터가 포함된 로컬 계층을 만들고 백업하기 위한 팁입니다
+= 삭제할 데이터가 포함된 ONTAP 로컬 계층을 만들고 백업하기 위한 팁입니다
 :allow-uri-read: 
 
 

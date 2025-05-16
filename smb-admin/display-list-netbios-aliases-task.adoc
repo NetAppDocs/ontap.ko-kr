@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, list, netbios, alias, useful, determine, name, smb, client, connection, cifs, server, display the list of netbios aliases on cifs servers 
 summary: NetBIOS 별칭 목록을 표시할 수 있습니다. 이 기능은 SMB 클라이언트가 CIFS 서버에 접속할 수 있는 이름 목록을 확인하려는 경우에 유용할 수 있습니다. 
 ---
-= ONTAP에서 CIFS 서버의 NetBIOS 별칭 목록을 표시합니다
+= ONTAP SMB 서버에 대한 NetBIOS 별칭 목록을 표시합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

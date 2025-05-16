@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, aggregate, relocation 
 summary: HA 쌍 내에서 로컬 계층 소유권을 재배치하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 로컬 계층 재배치를 위한 명령입니다
+= 로컬 계층 재배치를 위한 ONTAP 명령입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

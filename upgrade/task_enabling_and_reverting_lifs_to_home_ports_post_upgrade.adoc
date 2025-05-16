@@ -63,3 +63,7 @@ vs0
 8 entries were displayed.
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
+

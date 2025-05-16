@@ -28,8 +28,11 @@ summary: 로드 밸런싱을 위해 다중 경로 라우팅을 활성화하고 �
 +
 클러스터의 모든 노드에 대해 다중 경로 라우팅이 활성화됩니다.
 
-
-
++
 ....
 network options multipath-routing modify -is-enabled true
 ....
++
+에 대한 자세한 내용은 `network options multipath-routing modify` link:https://docs.netapp.com/us-en/ontap-cli/network-options-multipath-routing-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+

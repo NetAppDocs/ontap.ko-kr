@@ -32,7 +32,7 @@ ONTAP 9.15.1부터 FlexGroup 볼륨을 자동으로 프로비저닝할 때 ONTAP
 `volume create -vserver svm_name -volume fg_vol_name –auto-provision-as flexgroup -size fg_size [–encrypt true] [-qos-policy-group qos_policy_group_name] [-support-tiering true] [-granular-data advanced]`
 
 +
-ONTAP 9.16.1부터  (`-granular-data advanced`CLI에서 를 활성화하여 파일이 10GB보다 클 때 여러 FlexGroup 멤버 볼륨에 걸쳐 데이터를 쓸 수 link:../enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"]있습니다.
+ONTAP 9.16.1부터  (`-granular-data advanced`CLI에서 를 활성화하여 파일이 10GB보다 클 때 여러 FlexGroup 멤버 볼륨에 걸쳐 데이터를 쓸 수 link:enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"]있습니다.
 
 +
 ONTAP 9.5부터 FabricPool를 사용하는 로컬 계층에 FlexGroup 볼륨을 생성할 수 있습니다. FabricPool가 활성화된 상태에서 로컬 계층에서 FlexGroup 볼륨을 자동으로 프로비저닝하려면 매개 변수 를 로 `true` 설정해야 `-support-tiering` 합니다. FabricPool에 대해서는 볼륨 보증이 항상 으로 설정되어야 `none` 합니다. FlexGroup 볼륨에 대한 계층화 정책 및 계층화 최소 냉각 기간을 지정할 수도 있습니다.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: local tier, aggregate, prepare, add, create, disks, RAID, delete, manage local tier, manage aggregate 
 summary: 'System Manager 또는 CLI를 사용하여 로컬 계층을 추가하고, 사용을 관리하고, 용량(디스크)을 추가할 수 있습니다.' 
 ---
-= ONTAP에서 로컬 계층을 관리합니다
+= ONTAP 로컬 계층 관리에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

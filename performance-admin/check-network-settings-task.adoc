@@ -26,6 +26,9 @@ NIC 및 데이터 스위치와 같은 중간 네트워크 장치는 네트워크
 +
 네트워크 포트 show-instance
 
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 포트에서 사용하는 브로드캐스트 도메인의 MTU를 변경합니다.
 +
 'network port broadcast-domain modify -IPSpace_IPSpace_-broadcast-domain_broadcast_domain_-MTU_new_MTU_'

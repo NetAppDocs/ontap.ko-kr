@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: media cost, local tier, aggregate, expense 
 summary: ONTAP 9.11.1부터 System Manager를 사용하여 로컬 계층의 미디어 비용을 설정할 수 있습니다 
 ---
-= 로컬 계층의 미디어 비용을 설정합니다
+= ONTAP 로컬 계층의 미디어 비용을 설정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

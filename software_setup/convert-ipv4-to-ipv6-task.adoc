@@ -75,3 +75,9 @@ network interface delete -vserver <svm_name> -lif <lif_name>
 network interface show
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-ndp-prefix-show.html["네트워크 NDP 접두사가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-options-ipv6-modify.html["네트워크 옵션 IPv6 수정"^]
+

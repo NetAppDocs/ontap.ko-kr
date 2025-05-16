@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, disk sanitization, unsupported disk sanitization, disk sanitization process 
 summary: 특정 상황에서는 디스크 삭제를 수행할 수 없습니다. 
 ---
-= 디스크 삭제를 수행할 수 없는 경우
+= ONTAP 디스크 삭제를 수행할 수 없는 경우에 대해 알아보십시오
 :allow-uri-read: 
 
 

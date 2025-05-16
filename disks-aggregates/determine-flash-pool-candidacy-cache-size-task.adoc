@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: flash pool, candidacy, optimal cache size, local tier, aggregate 
 summary: 기존 로컬 계층을 Flash Pool 로컬 계층으로 변환하기 전에 먼저 로컬 계층이 I/O 바인딩인지, 워크로드와 예산에 맞는 최상의 Flash Pool 캐시 크기인지 확인할 수 있습니다. 또한 기존 Flash Pool 로컬 계층의 캐시가 올바르게 사이징되었는지 확인할 수 있습니다. 
 ---
-= ONTAP에서 Flash Pool의 적합성과 최적의 캐시 크기를 확인합니다
+= ONTAP Flash Pool의 적합성과 최적의 캐시 크기를 결정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

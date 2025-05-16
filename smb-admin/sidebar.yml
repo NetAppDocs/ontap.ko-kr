@@ -6,197 +6,197 @@ entries:
   url: "/smb-admin/index.html"
 - title: SMB 서버 지원
   entries:
-  - title: 개요
+  - title: ONTAP SMB 서버 지원에 대해 알아보십시오
     url: "/smb-admin/server-support-concept.html"
   - title: 지원되는 SMB 버전 및 기능
     url: "/smb-admin/supported-versions-functionality-concept.html"
-  - title: 지원되지 않는 Windows 기능입니다
+  - title: ONTAP SMB에서 지원되지 않는 Windows 기능
     url: "/smb-admin/unsupported-windows-features-reference.html"
-  - title: SVM에서 NIS 또는 LDAP 네임 서비스를 구성합니다
+  - title: ONTAP SMB SVM에서 NIS 또는 LDAP 이름 서비스를 구성합니다
     url: "/smb-admin/configure-nis-ldap-name-services-svm-task.html"
-  - title: ONTAP 네임 서비스 스위치 구성의 작동 방식
+  - title: ONTAP SMB 이름 서비스 스위치 구성에 대해 자세히 알아보십시오
     url: "/smb-admin/name-service-switch-config-concept.html"
 - title: SMB 서버를 관리합니다
   entries:
-  - title: SMB 서버를 수정합니다
+  - title: ONTAP SMB 서버를 수정합니다
     url: "/smb-admin/modify-servers-task.html"
   - title: 옵션을 사용하여 SMB 서버를 사용자 지정합니다
     entries:
-    - title: 사용 가능한 SMB 서버 옵션
+    - title: 사용 가능한 ONTAP SMB 서버 옵션
       url: "/smb-admin/server-options-reference.html"
-    - title: SMB 서버 옵션을 구성합니다
+    - title: ONTAP SMB 서버 옵션을 구성합니다
       url: "/smb-admin/configure-server-options-task.html"
-    - title: SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다
+    - title: ONTAP SMB 사용자에게 UNIX 그룹 권한 부여 를 구성합니다
       url: "/smb-admin/configure-grant-unix-group-permission-users-task.html"
-    - title: 익명 사용자의 액세스 제한을 구성합니다
+    - title: 익명 사용자에 대한 ONTAP SMB 액세스 제한을 구성합니다
       url: "/smb-admin/configure-access-restrictions-anonymous-users-task.html"
     - title: UNIX 보안 스타일 데이터를 위해 SMB 클라이언트에 파일 보안을 제공하는 방법을 관리합니다
       entries:
       - title: 개요
         url: "/smb-admin/manage-file-security-clients-unix-style-concept.html"
-      - title: UNIX 보안 스타일 데이터에 대한 NTFS ACL 표시를 활성화 또는 비활성화합니다
+      - title: UNIX 보안 스타일 데이터의 경우 ONTAP SMB 클라이언트에 NTFS ACL 표시를 구성합니다
         url: "/smb-admin/enable-disable-ntfs-acls-unix-security-task.html"
-      - title: ONTAP에서 UNIX 사용 권한을 유지하는 방법
+      - title: ONTAP SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
         url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: Windows 보안 탭을 사용하여 UNIX 사용 권한을 관리합니다
+      - title: ONTAP SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
         url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
   - title: SMB 서버 보안 설정을 관리합니다
     entries:
-    - title: ONTAP가 SMB 클라이언트 인증을 처리하는 방법
+    - title: ONTAP SMB 클라이언트 인증 처리에 대해 알아봅니다
       url: "/smb-admin/authentication-access-security-concept.html"
-    - title: SVM 재해 복구 구성의 SMB 서버 보안 설정 지침
+    - title: ONTAP SVM 재해 복구 구성을 위한 SMB 서버 보안 설정에 대해 알아보십시오
       url: "/smb-admin/server-security-settings-svm-disaster-recovery-concept.html"
-    - title: CIFS 서버 보안 설정에 대한 정보를 표시합니다
+    - title: ONTAP SMB 서버 보안 설정에 대한 정보를 표시합니다
       url: "/smb-admin/display-server-security-settings-task.html"
-    - title: 로컬 SMB 사용자에 대해 필요한 암호 복잡성을 설정하거나 해제합니다
+    - title: 로컬 SMB 사용자에 대한 ONTAP 암호 복잡성을 구성합니다
       url: "/smb-admin/enable-disable-password-complexity-local-users-task.html"
-    - title: CIFS 서버 Kerberos 보안 설정을 수정합니다
+    - title: ONTAP SMB 서버 Kerberos 보안 설정을 수정합니다
       url: "/smb-admin/modify-server-kerberos-security-settings-task.html"
-    - title: CIFS 서버 최소 인증 보안 수준을 설정합니다
+    - title: ONTAP SMB 서버 최소 인증 보안 수준을 설정합니다
       url: "/smb-admin/set-server-minimum-authentication-security-level-task.html"
-    - title: AES 암호화를 사용하여 Kerberos 기반 통신을 위한 강력한 보안을 구성합니다
+    - title: AES 암호화를 사용하여 Kerberos 기반 통신을 위한 강력한 ONTAP SMB 보안을 구성합니다
       url: "/smb-admin/configure-kerberos-aes-encryption-concept.html"
-    - title: Kerberos 기반 통신을 위해 AES 암호화를 사용하거나 사용하지 않도록 설정합니다
+    - title: ONTAP SMB Kerberos 기반 통신에 대해 AES 암호화를 구성합니다
       url: "/smb-admin/enable-disable-aes-encryption-kerberos-task.html"
     - title: SMB 서명을 사용하여 네트워크 보안을 강화합니다
       entries:
-      - title: 개요
+      - title: ONTAP SMB 서명을 사용하여 네트워크 보안을 향상시키는 방법에 대해 알아보십시오
         url: "/smb-admin/signing-enhance-network-security-concept.html"
-      - title: SMB 서명 정책이 CIFS 서버와의 통신에 미치는 영향
+      - title: 서명 정책이 ONTAP SMB 서버와의 통신에 어떤 영향을 미치는지 알아봅니다
         url: "/smb-admin/client-signing-policies-communication-concept.html"
-      - title: SMB 서명의 성능 영향
+      - title: ONTAP SMB 서명의 성능 영향에 대해 알아보십시오
         url: "/smb-admin/performance-impact-signing-concept.html"
-      - title: SMB 서명 구성을 위한 권장 사항입니다
+      - title: ONTAP SMB 서명 구성 권장 사항
         url: "/smb-admin/recommendations-configure-signing-concept.html"
-      - title: 여러 데이터 LIF가 구성된 경우 SMB 서명을 위한 지침입니다
+      - title: 여러 데이터 LIFS에 대한 ONTAP SMB 서명 구성에 대해 자세히 알아보십시오
         url: "/smb-admin/signing-multiple-data-lifs-concept.html"
-      - title: 수신 SMB 트래픽에 필요한 SMB 서명을 설정하거나 해제합니다
+      - title: 수신 SMB 트래픽에 대한 ONTAP 서명을 구성합니다
         url: "/smb-admin/enable-disable-required-signing-incoming-traffic-task.html"
-      - title: SMB 세션이 서명되었는지 확인
+      - title: ONTAP SMB 세션이 서명되어 있는지 확인합니다
         url: "/smb-admin/determine-sessions-signed-task.html"
-      - title: SMB 서명 세션 통계를 모니터링합니다
+      - title: ONTAP SMB 서명 세션 통계를 모니터링합니다
         url: "/smb-admin/monitor-signed-session-statistics-task.html"
     - title: SMB를 통한 데이터 전송을 위해 SMB 서버에서 필요한 SMB 암호화를 구성합니다
       entries:
-      - title: 개요
+      - title: ONTAP SMB 암호화에 대해 알아보십시오
         url: "/smb-admin/configure-required-encryption-concept.html"
-      - title: SMB 암호화가 성능에 미치는 영향
+      - title: ONTAP SMB 암호화가 성능에 미치는 영향에 대해 알아보십시오
         url: "/smb-admin/performance-impact-encryption-concept.html"
-      - title: 수신 SMB 트래픽에 필요한 SMB 암호화를 설정하거나 해제합니다
+      - title: 들어오는 트래픽에 대해 ONTAP SMB 암호화를 구성합니다
         url: "/smb-admin/enable-disable-encryption-incoming-traffic-task.html"
-      - title: 클라이언트가 암호화된 SMB 세션을 사용하여 연결되어 있는지 확인합니다
+      - title: 클라이언트가 암호화된 ONTAP SMB 세션을 사용하여 연결되어 있는지 확인합니다
         url: "/smb-admin/determine-clients-connected-encrypted-task.html"
-      - title: SMB 암호화 통계를 모니터링합니다
+      - title: ONTAP SMB 암호화 통계를 모니터링합니다
         url: "/smb-admin/monitor-encryption-statistics-task.html"
     - title: 보안 LDAP 세션 통신
       entries:
-      - title: LDAP 서명 및 봉인 개념
+      - title: ONTAP SMB LDAP 서명 및 봉인에 대해 자세히 알아보십시오
         url: "/smb-admin/ldap-signing-sealing-concepts-concept.html"
-      - title: CIFS 서버에서 LDAP 서명 및 봉인을 설정합니다
+      - title: ONTAP SMB 서버에서 LDAP 서명 및 봉인을 활성화합니다
         url: "/smb-admin/enable-ldap-signing-sealing-task.html"
       - title: TLS를 통해 LDAP를 구성합니다
         entries:
-        - title: 자체 서명된 루트 CA 인증서의 복사본을 내보냅니다
+        - title: ONTAP SMB SVM에 대한 자체 서명 루트 CA 인증서를 내보냅니다
           url: "/smb-admin/export-copy-self-signed-root-ca-certificate-task.html"
-        - title: SVM에 자체 서명된 루트 CA 인증서를 설치합니다
+        - title: ONTAP SMB SVM에 자체 서명된 루트 CA 인증서를 설치합니다
           url: "/smb-admin/install-self-signed-root-ca-certificate-svm-task.html"
-        - title: CIFS 서버에서 TLS를 통해 LDAP를 사용하도록 설정합니다
+        - title: ONTAP SMB 서버에서 TLS를 통한 LDAP를 활성화합니다
           url: "/smb-admin/enable-ldap-over-ssl-tls-task.html"
-  - title: 성능 및 이중화를 위해 SMB 멀티 채널을 구성합니다
+  - title: 성능 및 이중화를 위해 ONTAP SMB 다중 채널을 구성합니다
     url: "/smb-admin/configure-multichannel-performance-task.html"
   - title: SMB 서버에서 기본 Windows 사용자를 UNIX 사용자 매핑으로 구성합니다
     entries:
-    - title: 기본 UNIX 사용자를 구성합니다
+    - title: 기본 ONTAP SMB UNIX 사용자를 구성합니다
       url: "/smb-admin/configure-default-unix-user-task.html"
-    - title: 게스트 UNIX 사용자를 구성합니다
+    - title: 게스트 ONTAP SMB UNIX 사용자를 구성합니다
       url: "/smb-admin/configure-guest-unix-user-task.html"
-    - title: 관리자 그룹을 루트에 매핑합니다
+    - title: 관리자 그룹을 ONTAP SMB 루트에 매핑합니다
       url: "/smb-admin/map-administrators-group-root-task.html"
-  - title: SMB 세션을 통해 연결된 사용자 유형에 대한 정보를 표시합니다
+  - title: ONTAP SMB 세션을 통해 연결된 사용자 유형에 대한 정보를 표시합니다
     url: "/smb-admin/display-types-users-connected-task.html"
-  - title: 과도한 Windows 클라이언트 리소스 사용을 제한하는 명령 옵션입니다
+  - title: 과도한 Windows 클라이언트 리소스 사용을 제한하는 ONTAP 명령 옵션입니다
     url: "/smb-admin/command-options-limit-client-resource-concept.html"
   - title: 기존 oplocks 및 리스 oplocks로 클라이언트 성능 향상
     entries:
-    - title: 개요
+    - title: 기존 및 임대 확대를 통해 ONTAP SMB 클라이언트 성능을 개선하는 방법에 대해 알아보십시오
       url: "/smb-admin/client-performance-traditional-lease-oplocks-concept.html"
-    - title: oplocks 사용 시 캐시 데이터 손실 고려 사항 쓰기
+    - title: oplocks를 사용할 때 ONTAP SMB 캐시 데이터 손실 고려 사항을 작성하는 방법에 대해 알아봅니다
       url: "/smb-admin/write-cache-data-loss-oplocks-concept.html"
-    - title: SMB 공유를 생성할 때 oplocks를 설정하거나 해제합니다
+    - title: ONTAP SMB 공유를 생성할 때 oplocks를 구성합니다
       url: "/smb-admin/enable-disable-oplocks-when-creating-shares-task.html"
-    - title: 볼륨 및 qtree에서 oplocks를 설정하거나 해제하는 명령입니다
+    - title: SMB 볼륨 및 qtree에서 oplocks를 사용하거나 사용하지 않도록 설정하는 ONTAP 명령입니다
       url: "/smb-admin/commands-oplocks-volumes-qtrees-reference.html"
-    - title: 기존 SMB 공유에서 oplocks를 설정하거나 해제합니다
+    - title: 기존 ONTAP SMB 공유에서 oplocks를 구성합니다
       url: "/smb-admin/enable-disable-oplocks-existing-shares-task.html"
-    - title: oplock 상태를 모니터링합니다
+    - title: ONTAP SMB oplock 상태를 모니터링합니다
       url: "/smb-admin/monitor-oplock-status-task.html"
   - title: SMB 서버에 그룹 정책 개체를 적용합니다
     entries:
-    - title: 개요
+    - title: 그룹 정책 개체를 ONTAP SMB 서버에 적용하는 방법에 대해 알아봅니다
       url: "/smb-admin/applying-group-policy-objects-concept.html"
-    - title: 지원되는 GPO
+    - title: 지원되는 ONTAP SMB GPO에 대해 알아봅니다
       url: "/smb-admin/supported-gpos-concept.html"
-    - title: GPO를 CIFS 서버와 함께 사용하기 위한 요구 사항
+    - title: GPO에 대한 ONTAP SMB 서버 요구 사항
       url: "/smb-admin/requirements-gpos-concept.html"
-    - title: SMB 서버에서 GPO 지원을 설정하거나 해제합니다
+    - title: ONTAP SMB 서버에서 GPO 지원을 설정하거나 해제합니다
       url: "/smb-admin/enable-disable-gpo-support-task.html"
     - title: SMB 서버에서 GPO를 업데이트하는 방법
       entries:
-      - title: 개요
+      - title: ONTAP SMB 서버에서 GPO를 업데이트하는 방법에 대해 알아봅니다
         url: "/smb-admin/gpos-updated-server-concept.html"
       - title: GPO 업데이트가 실패하는 경우 수행할 작업
         url: "/smb-admin/gpo-updates-failing-reference.html"
-    - title: CIFS 서버에서 GPO 설정을 수동으로 업데이트합니다
+    - title: ONTAP SMB 서버에서 GPO 설정을 수동으로 업데이트합니다
       url: "/smb-admin/manual-update-gpo-settings-task.html"
-    - title: GPO 구성에 대한 정보를 표시합니다
+    - title: ONTAP SMB GPO 구성에 대한 정보를 표시합니다
       url: "/smb-admin/display-gpo-config-task.html"
-    - title: 제한된 그룹 GPO에 대한 자세한 정보를 표시합니다
+    - title: ONTAP SMB의 제한된 그룹 GPO에 대한 정보를 표시합니다
       url: "/smb-admin/display-restricted-group-gpos-task.html"
-    - title: 중앙 액세스 정책에 대한 정보를 표시합니다
+    - title: ONTAP SMB 중앙 액세스 정책에 대한 정보를 표시합니다
       url: "/smb-admin/display-central-access-policies-task.html"
-    - title: 중앙 액세스 정책 규칙에 대한 정보를 표시합니다
+    - title: ONTAP SMB 중앙 액세스 정책 규칙에 대한 정보를 표시합니다
       url: "/smb-admin/display-central-access-policy-rules-task.html"
-  - title: CIFS 서버 컴퓨터 계정 암호를 관리하는 명령입니다
+  - title: SMB 서버 컴퓨터 계정 암호를 관리하기 위한 ONTAP 명령에 대해 알아봅니다
     url: "/smb-admin/commands-manage-computer-account-passwords-concept.html"
   - title: 도메인 컨트롤러 연결을 관리합니다
     entries:
-    - title: 검색된 서버에 대한 정보를 표시합니다
+    - title: ONTAP SMB에서 검색된 서버에 대한 정보를 표시합니다
       url: "/smb-admin/display-discovered-servers-task.html"
-    - title: 서버를 재설정하고 재검색합니다
+    - title: ONTAP SMB 서버를 재설정하고 재검색합니다
       url: "/smb-admin/reset-rediscovering-servers-task.html"
-    - title: 도메인 컨트롤러 검색을 관리합니다
+    - title: ONTAP SMB 도메인 컨트롤러 검색을 관리합니다
       url: "/smb-admin/control-domain-controller-discovery-task.html"
-    - title: 기본 도메인 컨트롤러를 추가합니다
+    - title: 기본 ONTAP SMB 도메인 컨트롤러를 추가합니다
       url: "/smb-admin/add-preferred-domain-controllers-task.html"
-    - title: 기본 도메인 컨트롤러를 관리하는 명령입니다
+    - title: 기본 SMB 도메인 컨트롤러를 관리하기 위한 ONTAP 명령입니다
       url: "/smb-admin/commands-manage-preferred-domain-controllers-reference.html"
-    - title: 도메인 컨트롤러에 대한 암호화된 연결을 활성화합니다
+    - title: ONTAP SMB 도메인 컨트롤러에 대한 암호화된 연결을 활성화합니다
       url: "/smb-admin/enable-encrypted-connections-domain-controllers-task.html"
   - title: null 세션을 사용하여 Kerberos가 아닌 환경의 스토리지에 액세스합니다
     entries:
-    - title: 개요
+    - title: ONTAP SMB null 세션을 사용하여 Kerberos가 아닌 환경의 스토리지에 액세스합니다
       url: "/smb-admin/null-session-access-non-kerberos-environments-task.html"
-    - title: 스토리지 시스템에서 null 세션 액세스를 제공하는 방법
+    - title: ONTAP SMB 스토리지 시스템이 null 세션 액세스를 제공하는 방법에 대해 알아보십시오
       url: "/smb-admin/storage-system-provides-null-session-access-concept.html"
-    - title: Null 사용자에게 파일 시스템 공유에 대한 액세스 권한을 부여합니다
+    - title: ONTAP SMB 파일 시스템 공유에 null 사용자에게 액세스 권한을 부여합니다
       url: "/smb-admin/grant-null-users-access-file-system-shares-task.html"
   - title: SMB 서버의 NetBIOS 별칭을 관리합니다
     entries:
-    - title: 개요
+    - title: ONTAP SMB 서버의 NetBIOS 별칭 관리에 대해 자세히 알아보십시오
       url: "/smb-admin/manage-netbios-aliases-concept.html"
-    - title: CIFS 서버에 NetBIOS 별칭 목록을 추가합니다
+    - title: ONTAP SMB 서버에 NetBIOS 별칭 목록을 추가합니다
       url: "/smb-admin/add-list-netbios-aliases-server-task.html"
-    - title: NetBIOS 별칭 목록에서 NetBIOS 별칭을 제거합니다
+    - title: ONTAP SMB 서버 목록에서 NetBIOS 별칭을 제거합니다
       url: "/smb-admin/remove-netbios-aliases-from-list-task.html"
-    - title: CIFS 서버의 NetBIOS 별칭 목록을 표시합니다
+    - title: ONTAP SMB 서버에 대한 NetBIOS 별칭 목록을 표시합니다
       url: "/smb-admin/display-list-netbios-aliases-task.html"
-    - title: SMB 클라이언트가 NetBIOS 별칭을 사용하여 연결되어 있는지 확인합니다
+    - title: ONTAP SMB 클라이언트가 NetBIOS 별칭을 사용하여 연결되어 있는지 확인합니다
       url: "/smb-admin/determine-clients-connected-netbios-aliases-task.html"
   - title: 기타 SMB 서버 작업을 관리합니다
     entries:
-    - title: CIFS 서버를 중지하거나 시작합니다
+    - title: ONTAP SMB 서버를 중지 또는 시작합니다
       url: "/smb-admin/stop-start-server-task.html"
-    - title: CIFS 서버를 다른 OU로 이동합니다
+    - title: ONTAP SMB 서버를 다른 OU로 이동합니다
       url: "/smb-admin/move-servers-different-ous-task.html"
     - title: SMB 서버를 이동하기 전에 SVM에서 동적 DNS 도메인을 수정합니다
       url: "/smb-admin/modify-dynamic-dns-domain-before-moving-server-task.html"
@@ -236,9 +236,9 @@ entries:
         url: "/smb-admin/decide-security-style-svm-flexvol-concept.html"
       - title: 보안 스타일 상속의 작동 방식
         url: "/smb-admin/security-style-inheritance-concept.html"
-      - title: ONTAP에서 UNIX 사용 권한을 유지하는 방법
+      - title: ONTAP SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
         url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: Windows 보안 탭을 사용하여 UNIX 사용 권한을 관리합니다
+      - title: ONTAP SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
         url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
     - title: SVM 루트 볼륨에 보안 스타일을 구성합니다
       url: "/smb-admin/configure-security-styles-svm-root-volumes-task.html"

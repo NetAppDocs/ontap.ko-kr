@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: raid-dp, raid-tec, default raid policies, raid policy, aggregate, local tier 
 summary: RAID-DP 또는 RAID-TEC는 모든 새로운 로컬 계층에 대한 기본 RAID 정책입니다. RAID 정책은 디스크 장애 시 발생하는 패리티 보호를 결정합니다. 
 ---
-= ONTAP의 로컬 계층에 대한 기본 RAID 정책
+= ONTAP 로컬 계층에 대한 기본 RAID 정책
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

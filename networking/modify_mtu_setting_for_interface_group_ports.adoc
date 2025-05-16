@@ -53,3 +53,4 @@ e0c  Default Default           up   1500 auto/1000   healthy  false
 e0d  Default Default           up   1500 auto/1000   healthy  false
 5 entries were displayed.
 ....
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

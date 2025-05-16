@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, smb, multichannel, configure, multiple, connection, client, session, throughput, fault, tolerance, configure smb multichannel for performance and redundancy, performance, redundancy 
 summary: 처리량 및 내결함성을 향상시키기 위해 단일 SMB 세션에서 ONTAP와 클라이언트 간에 여러 연결을 제공하도록 SMB 다중 채널을 구성합니다. 
 ---
-= 성능 및 이중화를 위해 SMB 멀티 채널을 구성합니다
+= 성능 및 이중화를 위해 ONTAP SMB 다중 채널을 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

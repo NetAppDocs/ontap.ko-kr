@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: determine, drive, raid group, information, aggregate, local tier 
 summary: 일부 로컬 계층 관리 작업에는 로컬 계층을 구성하는 드라이브 유형, 크기, 체크섬 및 상태, 다른 로컬 계층과 공유되는지 여부, RAID 그룹의 크기 및 구성을 알아야 합니다. 
 ---
-= ONTAP의 로컬 계층에 대한 드라이브 및 RAID 그룹 정보를 확인합니다
+= ONTAP 로컬 계층의 드라이브 및 RAID 그룹 정보를 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

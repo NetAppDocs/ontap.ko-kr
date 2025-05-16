@@ -13,6 +13,9 @@ summary: NetApp은 System Manager를 사용하여 새 클러스터를 설정할 
 [role="lead"]
 클러스터를 설정하려면 필요한 정보를 수집하고, 클러스터를 생성하고, 노드를 추가하고, 관리 LIF를 IPv4에서 IPv6로 변환하고, Active IQ Config Advisor로 클러스터를 확인하고, 클러스터 전체에서 시스템 시간을 동기화해야 합니다.
 
+
+NOTE: 이 절차는 FAS, AFF 및 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)을 사용하는 경우 에 따라 link:https://docs.netapp.com/us-en/asa-r2/install-setup/initialize-ontap-cluster.html["수행할 수 있습니다"^]ONTAP 클러스터 설정을 수행합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
+
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"]link:gather_cluster_setup_information.html["정보를 수집합니다"]
 [role="quick-margin-para"]
 클러스터 설정을 시작하기 전에 설정 프로세스를 완료하는 데 필요한 정보를 수집합니다.

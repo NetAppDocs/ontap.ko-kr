@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aggregate, creation, workflow, local tier, add, create 
 summary: 로컬 계층을 생성하면 시스템의 볼륨에 스토리지가 제공됩니다. 
 ---
-= ONTAP에서 로컬 계층을 추가하는 워크플로입니다
+= ONTAP 로컬 계층을 추가하는 워크플로입니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

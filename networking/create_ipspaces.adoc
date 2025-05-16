@@ -40,6 +40,9 @@ IPSpace_name은 만들려는 IPspace의 이름입니다. 다음 명령을 실행
 ....
 network ipspace create -ipspace ipspace1
 ....
++
+에 대한 자세한 내용은 `network ipspace create` link:https://docs.netapp.com/us-en/ontap-cli/network-ipspace-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . IPspace 표시:
 +
 네트워크 IPspace 쇼

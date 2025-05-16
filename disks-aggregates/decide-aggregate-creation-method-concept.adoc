@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: decide, aggregate, create, add, method, local tier 
 summary: ONTAP는 로컬 계층을 자동으로 생성하기 위한 모범 사례 권장 사항을 제공하지만 권장 구성이 사용자 환경에서 지원되는지 여부를 결정해야 합니다. 그렇지 않은 경우 RAID 정책 및 디스크 구성에 대한 결정을 내린 다음 로컬 계층을 수동으로 생성해야 합니다. 
 ---
-= ONTAP에서 로컬 계층을 생성하는 데 사용할 방법을 결정합니다
+= ONTAP 로컬 계층을 생성하는 데 사용할 방법을 결정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

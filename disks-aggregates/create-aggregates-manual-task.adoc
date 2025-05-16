@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap 9, create, aggregates, manually, manual, add, local tier 
 summary: ONTAP의 Best Practice 권장 사항을 사용하여 로컬 계층을 추가하지 않으려면 프로세스를 수동으로 수행할 수 있습니다. 
 ---
-= ONTAP에서 수동으로 로컬 계층을 추가합니다
+= ONTAP 로컬 계층을 수동으로 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

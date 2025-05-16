@@ -10,7 +10,7 @@ indexpage:
     links:
     - title: NFS 개요
       url: "/../nfs-admin/index.html"
-    - title: SMB 개요
+    - title: ONTAP SMB에 대해 알아보십시오
       url: "/../smb-admin/index.html"
     - title: SMB를 통한 Microsoft Hyper-V 및 SQL Server를 위한 ONTAP 개요
       url: "/../smb-hyper-v-sql/index.html"

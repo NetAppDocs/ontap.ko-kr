@@ -69,7 +69,13 @@ ONTAP에서는 기본적으로 다음 상태 모니터를 사용할 수 있으�
 
 
 
++
+에 대한 자세한 내용은 `network options port-health-monitor show` link:https://docs.netapp.com/us-en/ontap-cli/network-options-port-health-monitor-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'network options port-health-monitor modify' 명령을 사용하여 원하는 대로 IPspace에 대한 상태 모니터를 사용하거나 사용하지 않도록 설정합니다.
++
+에 대한 자세한 내용은 `network options port-health-monitor modify` link:https://docs.netapp.com/us-en/ontap-cli/network-options-port-health-monitor-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 포트의 세부 상태를 봅니다.
 +
 ....
@@ -84,3 +90,5 @@ network port show -health
 상태 무시 설정이 참이면 항만 상태가 평가됨에서 건강으로 변경되었음을 나타냅니다.
 
 상태 무시 설정이 false이면 포트 상태는 시스템에 의해 자동으로 결정됩니다.
+
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

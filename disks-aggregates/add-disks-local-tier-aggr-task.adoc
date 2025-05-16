@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, expand, aggregate, add drives, add disks, add capacity, local tier, add disks to local tier, add disks to aggregate, increase storage, increase aggregate size, local tier, capacity, disk, expand storage, add drives, add disks, add capacity 
 summary: 연결된 볼륨에 더 많은 스토리지를 제공할 수 있도록 디스크를 로컬 계층에 추가할 수 있습니다. 
 ---
-= ONTAP의 로컬 계층에 용량 추가
+= ONTAP 로컬 계층에 용량을 추가합니다
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

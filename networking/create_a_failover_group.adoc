@@ -19,8 +19,6 @@ summary: 네트워크 포트의 페일오버 그룹을 생성하면 링크 장�
 .이 작업에 대해
 'network interface failover-groups create' 명령을 사용하여 그룹을 생성하고 그룹에 포트를 추가합니다.
 
-에 대한 자세한 내용은 `network interface failover-groups create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-failover-groups-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 * 페일오버 그룹에 추가된 포트는 네트워크 포트, VLAN 또는 인터페이스 그룹(ifgrp)일 수 있습니다.
 * 페일오버 그룹에 추가된 모든 포트는 동일한 브로드캐스트 도메인에 속해야 합니다.
 * 단일 포트는 여러 페일오버 그룹에 상주할 수 있습니다.
@@ -49,4 +47,5 @@ network interface failover-groups create -vserver vs3 -failover-group fg3 -targe
 +
 유효한 페일오버 목표가 없는 LIF가 페일오버를 시도하면 운영 중단이 발생할 수 있습니다.
 
+* 에 대한 자세한 내용은 `network interface failover-groups create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-failover-groups-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 

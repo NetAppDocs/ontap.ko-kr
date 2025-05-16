@@ -32,4 +32,7 @@ SVM 및 LIF에 여러 프로토콜을 구성할 수 있지만 오브젝트 데�
 +
 ONTAP S3을 활성화하는 데 필요한 서비스는 데이터 코어(Data-Core) 및 데이터-S3-서버(Data-S3-Server) 서비스뿐입니다. 단, 다른 서비스는 필요에 따라 포함할 수 있습니다.
 
++
+에 대한 자세한 내용은 `network interface service-policy create` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

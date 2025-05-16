@@ -6,7 +6,7 @@ entries:
   url: "/disks-aggregates/index.html"
 - title: 로컬 계층 관리
   entries:
-  - title: 개요
+  - title: ONTAP 로컬 계층 관리에 대해 자세히 알아보십시오
     url: "/disks-aggregates/manage-local-tiers-overview-concept.html"
   - title: 로컬 계층을 추가(생성)합니다
     entries:
@@ -68,13 +68,13 @@ entries:
     url: "/disks-aggregates/low-spare-warnings-manage-spare-disks-concept.html"
   - title: 추가 루트 데이터 파티셔닝 관리 옵션
     url: "/disks-aggregates/root-data-partitioning-management-concept.html"
-  - title: 디스크 검증 패키지를 업데이트해야 하는 경우
+  - title: 디스크 검증 패키지를 업데이트해야 하는 시기를 학습합니다
     url: "/disks-aggregates/update-disk-qualification-package-concept.html"
   - title: 디스크 및 파티션 소유권
     entries:
-    - title: 개요
+    - title: 디스크 및 파티션의 소유권을 관리합니다
       url: "/disks-aggregates/disk-partition-ownership-overview-concept.html"
-    - title: 디스크 소유권 자동 할당 정보
+    - title: 디스크 소유권 자동 할당에 대해 알아봅니다
       url: "/disks-aggregates/disk-autoassignment-policy-concept.html"
     - title: 디스크 및 파티션 소유권을 표시합니다
       url: "/disks-aggregates/display-partition-ownership-task.html"
@@ -94,7 +94,7 @@ entries:
     url: "/disks-aggregates/remove-failed-disk-task.html"
   - title: 디스크 삭제
     entries:
-    - title: 개요
+    - title: 디스크 삭제에 대해 자세히 알아보십시오
       url: "/disks-aggregates/sanitization-overview-concept.html"
     - title: 완전 삭제를 수행할 수 없는 경우
       url: "/disks-aggregates/sanitization-not-performed-concept.html"
@@ -132,8 +132,6 @@ entries:
     url: "/disks-aggregates/flash-pool-aggregate-caching-policies-concept.html"
   - title: Flash Pool 캐싱 정책 관리
     entries:
-    - title: 개요
-      url: "/disks-aggregates/manage-flash-pool-caching-policies-overview-concept.html"
     - title: Flash Pool 로컬 계층의 캐싱 정책을 수정할지 여부를 결정합니다
       url: "/disks-aggregates/determine-modify-caching-policy-flash-pool-task.html"
     - title: Flash Pool 로컬 계층의 캐싱 정책 수정
@@ -148,15 +146,13 @@ entries:
     url: "/disks-aggregates/create-flash-pool-aggregate-physical-ssds-task.html"
   - title: SSD 스토리지 풀을 사용하여 Flash Pool 로컬 계층을 생성합니다
     entries:
-    - title: 개요
-      url: "/disks-aggregates/create-flash-pool-ssds-storage-pools-overview-concept.html"
     - title: Flash Pool 로컬 계층에서 SSD 스토리지 풀을 사용하고 있는지 확인합니다
       url: "/disks-aggregates/determine-flash-pool-aggregate-ssd-storage-task.html"
     - title: SSD 스토리지 풀을 추가하여 캐시를 추가합니다
       url: "/disks-aggregates/create-ssd-storage-pool-task.html"
     - title: SSD 스토리지 풀 할당 유닛을 사용하여 Flash Pool을 생성합니다
       url: "/disks-aggregates/create-flash-pool-aggregate-ssd-storage-task.html"
-    - title: SSD 스토리지 풀에 SSD를 추가하는 캐시 크기에 미치는 영향을 확인합니다
+    - title: SSD를 SSD 스토리지 풀에 추가할 때 캐시 크기에 미치는 영향을 확인합니다
       url: "/disks-aggregates/determine-impact-cache-size-adding-ssds-task.html"
     - title: SSD 스토리지 풀에 SSD를 추가합니다
       url: "/disks-aggregates/add-storage-ssd-pool-task.html"

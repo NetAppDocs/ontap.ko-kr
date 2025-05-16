@@ -131,7 +131,7 @@ summary: '로그인 계정을 생성하고 역할 기반 액세스 제어(RBAC)�
  a| 
 '-is-ldap-fastbind'
  a| 
-ONTAP 9.11.1부터 true로 설정하면 nsswitch 인증에 대한 LDAP 고속 바인딩이 설정됩니다. 기본값은 false 입니다. LDAP fast bind를 사용하려면 '-authentication-method' 값을 nsswitch로 설정해야 한다. link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["nsswitch 인증을 위한 LDAP fastbind에 대해 알아봅니다."]
+ONTAP 9.11.1부터 true로 설정하면 nsswitch 인증에 대한 LDAP 고속 바인딩이 설정됩니다. 기본값은 false 입니다. LDAP 빠른 바인딩을 사용하려면 `-authentication-method` 값을 로 설정해야 `nsswitch` 합니다. link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["nsswitch 인증을 위한 LDAP fastbind에 대해 자세히 알아보십시오"]..
  a| 
 
 |===

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, flash, pool, aggregate, local tier, physical, ssds 
 summary: 'Flash Pool 로컬 계층은 HDD RAID 그룹으로 구성된 기존 로컬 계층에 대해 기능을 활성화한 다음 해당 로컬 계층에 하나 이상의 SSD RAID 그룹을 추가하여 Flash Pool 로컬 계층을 생성합니다. 따라서 로컬 계층에 대해 SSD RAID 그룹(SSD 캐시)과 HDD RAID 그룹의 두 RAID 그룹 세트가 생성됩니다.' 
 ---
-= ONTAP에서 물리적 SSD를 사용하여 Flash Pool 로컬 계층을 생성합니다
+= 물리적 SSD를 사용하여 ONTAP Flash Pool 로컬 계층을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

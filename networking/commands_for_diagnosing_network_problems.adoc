@@ -56,4 +56,5 @@ ping, traceroute, NDP, tcpdump 등의 명령어를 이용하여 네트워크 문
 * link:https://docs.netapp.com/us-en/ontap-cli/network-ping.html["네트워크 Ping"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/network-traceroute.html["네트워크 경로 추적"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/network-device-discovery-show.html["네트워크 장치 검색 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+ndp["네트워크 NDP"^]
 

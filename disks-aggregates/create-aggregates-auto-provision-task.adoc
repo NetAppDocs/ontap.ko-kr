@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, aggregates, auto-provision, add, local tier, automatic, automatically, create, aggregate, auto-provisioning, System Manager, CLI, storage, disk, ownership, assign 
 summary: 로컬 계층을 자동으로 추가하는 ONTAP 권장 사항을 수락하고 ONTAP가 로컬 계층을 추가하도록 할 수 있습니다. 
 ---
-= ONTAP에서 로컬 계층을 자동으로 추가합니다
+= ONTAP 로컬 계층을 자동으로 추가합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

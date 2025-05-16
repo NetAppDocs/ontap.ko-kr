@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, local tier, aggregate, remove 
 summary: 로컬 계층에 볼륨이 없는 경우 로컬 계층을 삭제할 수 있습니다. 
 ---
-= ONTAP에서 로컬 계층을 삭제합니다
+= ONTAP 로컬 계층을 삭제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

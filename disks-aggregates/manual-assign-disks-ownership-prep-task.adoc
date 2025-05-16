@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manual, assign, disk, ownership 
 summary: 디스크를 로컬 계층에서 사용하려면 먼저 노드에서 소유해야 합니다. 클러스터가 자동 디스크 소유권 할당을 사용하도록 구성되지 않은 경우 소유권을 수동으로 할당해야 합니다. 로컬 계층에서 사용 중인 디스크의 소유권을 재할당할 수 없습니다. 
 ---
-= ONTAP에서 디스크 소유권을 수동으로 할당합니다
+= ONTAP 디스크 소유권을 수동으로 할당합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,7 +59,7 @@ summary: 디스크를 로컬 계층에서 사용하려면 먼저 노드에서 �
 HA Pair 초기화(부팅) 후 디스크 소유권 자동 할당이 자동으로 활성화되고 하프 드로어 정책을 사용하여 나머지 드라이브(루트 드라이브 제외) 및 나중에 추가된 드라이브(예: 장애가 발생한 디스크 교체, "스페어 부족" 메시지에 대한 응답 또는 용량 추가)에 소유권을 할당합니다.
 
 +
-이 항목에서 반서랍 정책에 대해 알아봅니다 link:disk-autoassignment-policy-concept.html["디스크 소유권 자동 할당 정보"].
+link:disk-autoassignment-policy-concept.html["하프 드로어 정책에 대해 알아봅니다"]..
 
 * RAID에는 DS460C 쉘프에 있는 8TB NL-SAS 드라이브 이상의 각 HA 쌍에 대해 최소 10개의 드라이브(노드당 5개)가 필요합니다.
 

@@ -66,6 +66,9 @@ Telnet과 RSH는 보안 프로토콜이 아니므로 SSH를 사용하여 클러�
 +
 `network interface service-policy add-service -vserver cluster1 -policy default-management -service management-telnet-server`
 
++
+에 대한 자세한 내용은 `network interface service-policy add-service` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-add-service.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

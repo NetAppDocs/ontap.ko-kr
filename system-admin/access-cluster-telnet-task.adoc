@@ -66,6 +66,9 @@ Telnet과 RSH는 보안 프로토콜이 아니므로 SSH를 사용하여 클러�
 +
 `network interface service-policy add-service -vserver cluster1 -policy default-management -service management-telnet-server`
 
++
+에 대한 자세한 내용은 `network interface service-policy add-service` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-add-service.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 
@@ -82,7 +85,7 @@ Telnet과 RSH는 보안 프로토콜이 아니므로 SSH를 사용하여 클러�
 
 * IPv6 연결을 사용하는 경우 IPv6가 이미 클러스터에서 구성 및 활성화되어 있어야 하며, 방화벽 정책이 이미 IPv6 주소로 구성되어 있어야 합니다.
 +
-이 `network options ipv6 show` 명령을 실행하면 IPv6 사용 여부가 표시됩니다.  `system services firewall policy show`명령은 방화벽 정책을 표시합니다.
+이 `network options ipv6 show` 명령을 실행하면 IPv6 사용 여부가 표시됩니다. 에 대한 자세한 내용은 `network options ipv6 show` link:https://docs.netapp.com/us-en/ontap-cli/network-options-ipv6-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.  `system services firewall policy show`명령은 방화벽 정책을 표시합니다.
 
 
 

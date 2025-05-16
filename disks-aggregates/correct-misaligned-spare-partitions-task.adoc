@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: correct, misaligned, partition, disk 
 summary: 파티션된 디스크를 로컬 계층에 추가하는 경우 루트 파티션과 데이터 파티션이 모두 있는 디스크를 모든 노드에 대해 스페어로 사용할 수 있도록 해야 합니다. 노드가 중단되지 않고 노드가 중단되면 ONTAP은 코어를 스페어 데이터 파티션으로 덤프할 수 없습니다. 
 ---
-= ONTAP에서 잘못 정렬된 스페어 파티션을 수정합니다
+= 잘못 정렬된 ONTAP 스페어 파티션을 수정합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

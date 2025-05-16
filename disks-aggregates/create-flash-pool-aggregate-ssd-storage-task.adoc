@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, flash pool, aggregate, local tier, ssd, storage pool, allocation units 
 summary: SSD 스토리지 풀의 하나 이상의 할당 유닛을 기존 HDD 로컬 계층에 추가하여 Flash Pool 로컬 계층을 구성할 수 있습니다. 
 ---
-= SSD 스토리지 풀 할당 유닛을 사용하여 ONTAP에서 Flash Pool 로컬 계층을 생성합니다
+= SSD 스토리지 풀 할당 유닛을 사용하여 ONTAP Flash Pool 로컬 계층을 생성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

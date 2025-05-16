@@ -106,6 +106,9 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 +
 네트워크 포트 쇼
 
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .포트 추가 및 제거의 예

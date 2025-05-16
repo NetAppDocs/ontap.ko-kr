@@ -82,6 +82,8 @@ ONTAP 9.12.0부터는 자동으로 브로드캐스트 도메인을 선택하거�
 
 하드웨어 문제나 소프트웨어 구성 오류를 해결하지 않고 성능 저하 포트에 VLAN 포트를 생성하려면 네트워크 포트 수정 명령의 '-ignore-health-status' 매개변수를 TRUE로 설정해야 합니다.
 
+에 대한 자세한 내용은 `network port modify` link:https://docs.netapp.com/us-en/ontap-cli/network-port-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 .단계
 . 'network port vlan create' 명령어를 사용하여 VLAN을 생성한다.
 . VLAN을 생성할 때는 VLAN-name이나 port, vlan-id 옵션을 지정해야 합니다. VLAN 이름은 포트 이름(또는 인터페이스 그룹)과 네트워크 스위치 VLAN 식별자의 조합으로, 사이에 하이픈을 사용합니다. 예를 들어, "e0c-24"와 "e1c-80"은 유효한 VLAN 이름입니다.
@@ -94,7 +96,7 @@ network port vlan create -node cluster-1-01 -vlan-name e1c-80
 ....
 ONTAP 9.8부터 VLAN은 생성 후 1분 정도 적절한 브로드캐스트 도메인에 자동으로 배치됩니다. ONTAP가 이 작업을 수행하지 않고 수동으로 VLAN을 브로드캐스트 도메인에 배치하려는 경우 "VLAN create" 명령의 일부로 '-skip-broadcast-domain-placement' 매개 변수를 지정합니다.
 
-에 대한 자세한 내용은 `vlan create` link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `network port vlan create` link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 ====

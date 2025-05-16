@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cache, flash pool, policy, local tier, aggregate 
 summary: 캐싱 정책은 Flash Pool 로컬 계층에 상주하는 볼륨에 적용됩니다. 캐시 정책을 변경하기 전에 캐싱 정책이 어떻게 작동하는지를 이해해야 합니다. 
 ---
-= ONTAP에서의 Flash Pool 로컬 계층 캐싱 정책
+= Flash Pool ONTAP 로컬 계층 캐싱 정책
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+ONTAP 9.16.1부터  (`-granular-data advanced`CLI에서 를 활성화하여 파일이 10GB보다 클 때 여러 FlexGroup 멤버 볼륨에 걸쳐 데이터를 쓸 수 link:enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"]있습니다.

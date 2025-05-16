@@ -70,6 +70,9 @@ S3 오브젝트 서버를 생성할 때 S3 서버 이름을 클라이언트가 S
 +
 .. SVM+에 대한 서비스 데이터 정책을 표시합니다
 `network interface service-policy show -vserver _svm_name_`
++
+에 대한 자세한 내용은 `network interface service-policy show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 .. 및 가 없는 경우 를 `data-core` `data-s3-server services` 추가합니다. +
 `network interface service-policy add-service -vserver _svm_name_ -policy _policy_name_ -service data-core,data-s3-server`
 
@@ -112,3 +115,6 @@ Vserver: vs1
 ----
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-add-service.html["네트워크 인터페이스 서비스 정책 추가 서비스"^]
+

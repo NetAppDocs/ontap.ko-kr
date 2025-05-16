@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disk, auto-assign, spare, policy, automatic, assignment, disk ownership 
 summary: 소유되지 않은 디스크의 자동 할당은 기본적으로 활성화되어 있습니다. 자동 디스크 소유권 할당은 HA 쌍 초기화 후 10분, 정상적인 시스템 작동 중에는 5분마다 이루어집니다. 
 ---
-= 디스크 소유권 자동 할당 정보
+= ONTAP 디스크 소유권 자동 할당에 대해 알아봅니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
