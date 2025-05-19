@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: customize, properties, property, smb, share, how to use smb share properties 
 summary: SMB 공유의 속성을 사용자 지정할 수 있습니다. 
 ---
-= SMB 공유 속성 개요 사용
+= ONTAP SMB 공유 속성 사용에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

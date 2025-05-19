@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ipv6, cifs, server, ontap, smb, network, communication, service, support for ipv6 with smb access and cifs services 
 summary: CIFS 서버에서 IPv6를 사용하려면 ONTAP가 CIFS 서비스에 대한 SMB 액세스 및 네트워크 통신을 위해 IPv6를 지원하는 방법을 알고 있어야 합니다. 
 ---
-= SMB 액세스 및 CIFS 서비스를 통해 IPv6를 지원합니다
+= ONTAP SMB 액세스 및 CIFS 서비스를 통한 IPv6 지원에 대해 자세히 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

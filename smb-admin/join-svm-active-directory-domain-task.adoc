@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: join, storage, virtual, machine, svm, active, directory, domain, delete, deleting, exist, smb, cifs, server, modify, domain, vserver, cifs, rejoin, join a svm to an active directory domain 
 summary: 'vserver cifs modify 명령을 사용하여 도메인을 수정하여 기존 SMB 서버를 삭제하지 않고 SVM(스토리지 가상 시스템)을 Active Directory 도메인에 연결할 수 있습니다. 현재 도메인에 다시 참가하거나 새 도메인에 가입할 수 있습니다.' 
 ---
-= SVM을 ONTAP의 Active Directory 도메인에 가입합니다
+= ONTAP SMB SVM을 Active Directory 도메인에 가입합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

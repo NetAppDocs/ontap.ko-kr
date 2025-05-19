@@ -44,7 +44,7 @@ entries:
     entries:
     - title: 작업 그룹의 SMB 서버 구성에 대해 알아보십시오
       url: "/smb-config/set-up-server-workgroup-task.html"
-    - title: 워크그룹에 SMB 서버를 생성합니다
+    - title: 지정된 작업 그룹을 사용하여 SVM에 SMB 서버를 생성합니다
       url: "/smb-config/create-server-workgroup-task.html"
     - title: 로컬 SMB 사용자 계정을 생성합니다
       url: "/smb-config/create-local-user-accounts-task.html"

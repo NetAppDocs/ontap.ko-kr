@@ -36,9 +36,9 @@ entries:
         url: "/smb-admin/manage-file-security-clients-unix-style-concept.html"
       - title: UNIX 보안 스타일 데이터의 경우 ONTAP SMB 클라이언트에 NTFS ACL 표시를 구성합니다
         url: "/smb-admin/enable-disable-ntfs-acls-unix-security-task.html"
-      - title: ONTAP SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
+      - title: SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
         url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: ONTAP SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
+      - title: SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
         url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
   - title: SMB 서버 보안 설정을 관리합니다
     entries:
@@ -198,27 +198,27 @@ entries:
       url: "/smb-admin/stop-start-server-task.html"
     - title: ONTAP SMB 서버를 다른 OU로 이동합니다
       url: "/smb-admin/move-servers-different-ous-task.html"
-    - title: SMB 서버를 이동하기 전에 SVM에서 동적 DNS 도메인을 수정합니다
+    - title: SMB 서버를 이동하기 전에 동적 DNS 도메인을 수정하십시오
       url: "/smb-admin/modify-dynamic-dns-domain-before-moving-server-task.html"
-    - title: anSVM을 Active Directory 도메인에 연결합니다
+    - title: SMB SVM을 Active Directory 도메인에 가입합니다
       url: "/smb-admin/join-svm-active-directory-domain-task.html"
-    - title: NetBIOS over TCP 연결에 대한 정보를 표시합니다
+    - title: TCP 연결을 통한 SMB NetBIOS에 대한 정보를 표시합니다
       url: "/smb-admin/display-netbios-over-tcp-connections-task.html"
-    - title: CIFS 서버를 관리하는 명령입니다
+    - title: SMB 서버 관리를 위한 명령입니다
       url: "/smb-admin/commands-manage-servers-reference.html"
-    - title: NetBIOS 이름 서비스를 활성화합니다
+    - title: SMB NetBIOS 이름 서비스를 활성화합니다
       url: "/smb-admin/enable-netbios-name-service-task.html"
   - title: SMB 액세스 및 SMB 서비스에 IPv6를 사용합니다
     entries:
-    - title: IPv6을 사용하기 위한 요구 사항
+    - title: IPv6에 대한 SMB 요구 사항에 대해 알아보십시오
       url: "/smb-admin/requirements-ipv6-concept.html"
-    - title: SMB 액세스 및 CIFS 서비스를 통해 IPv6를 지원합니다
+    - title: SMB 액세스 및 CIFS 서비스를 통한 IPv6 지원에 대해 알아봅니다
       url: "/smb-admin/support-ipv6-concept.html"
-    - title: CIFS 서버가 IPv6를 사용하여 외부 서버에 연결하는 방법
+    - title: SMB 서버가 IPv6를 사용하여 외부 서버에 연결하는 방법에 대해 알아봅니다
       url: "/smb-admin/ipv6-connect-external-servers-concept.html"
-    - title: SMB용 IPv6 사용(클러스터 관리자만 해당)
+    - title: SMB 서버에 대해 IPv6를 사용하도록 설정합니다
       url: "/smb-admin/enable-ipv6-task.html"
-    - title: SMB에 대해 IPv6을 사용하지 않도록 설정합니다
+    - title: SMB 서버에 대해 IPv6를 사용하지 않도록 설정하는 방법에 대해 자세히 알아보십시오
       url: "/smb-admin/disable-ipv6-smb-concept.html"
     - title: IPv6 SMB 세션에 대한 정보를 모니터링하고 표시합니다
       url: "/smb-admin/monitor-display-ipv6-sessions-task.html"
@@ -228,83 +228,83 @@ entries:
     entries:
     - title: 보안 스타일이 데이터 액세스에 미치는 영향
       entries:
-      - title: 보안 스타일과 그 효과는 무엇입니까
+      - title: SMB 보안 스타일과 그 영향에 대해 알아보십시오
         url: "/smb-admin/security-styles-their-effects-concept.html"
-      - title: 보안 스타일을 설정하는 위치 및 시기
+      - title: SMB 보안 스타일을 설정할 위치 및 시기에 대해 알아보십시오
         url: "/smb-admin/set-security-styles-concept.html"
-      - title: SVM에 사용할 보안 유형을 결정합니다
+      - title: SVM에서 사용할 SMB 보안 유형을 결정합니다
         url: "/smb-admin/decide-security-style-svm-flexvol-concept.html"
-      - title: 보안 스타일 상속의 작동 방식
+      - title: SMB 보안 스타일 상속에 대해 알아보십시오
         url: "/smb-admin/security-style-inheritance-concept.html"
-      - title: ONTAP SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
+      - title: SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
         url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: ONTAP SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
+      - title: SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
         url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
-    - title: SVM 루트 볼륨에 보안 스타일을 구성합니다
+    - title: SVM 루트 볼륨에 SMB 보안 형식을 구성합니다
       url: "/smb-admin/configure-security-styles-svm-root-volumes-task.html"
-    - title: FlexVol 볼륨에서 보안 스타일을 구성합니다
+    - title: FlexVol 볼륨에 SMB 보안 스타일을 구성합니다
       url: "/smb-admin/configure-security-styles-task.html"
-    - title: Qtree에서 보안 스타일 구성
+    - title: Qtree에서 SMB 보안 스타일을 구성합니다
       url: "/smb-admin/configure-security-styles-qtrees-task.html"
   - title: NAS 네임스페이스에서 데이터 볼륨을 생성하고 관리합니다
     entries:
-    - title: 개요
+    - title: NAS 네임스페이스에서 SMB 데이터 볼륨을 생성하고 관리하는 방법에 대해 알아보십시오
       url: "/smb-admin/create-manage-data-volumes-nas-namespaces-concept.html"
-    - title: 지정된 교차점으로 데이터 볼륨을 생성합니다
+    - title: 지정된 접합 지점으로 SMB 데이터 볼륨을 생성합니다
       url: "/smb-admin/create-volumes-specified-junction-task.html"
-    - title: 교차점을 지정하지 않고 데이터 볼륨을 생성합니다
+    - title: 접합 지점을 지정하지 않고 SMB 데이터 볼륨을 생성합니다
       url: "/smb-admin/create-volumes-without-specifying-junction-task.html"
-    - title: NAS 네임스페이스에서 기존 볼륨을 마운트 또는 마운트 해제합니다
+    - title: NAS 네임스페이스에서 기존 SMB 볼륨을 마운트하거나 마운트 해제합니다
       url: "/smb-admin/mount-unmount-existing-volumes-nas-namespace-task.html"
-    - title: 볼륨 마운트 및 접합 지점 정보를 표시합니다
+    - title: SMB 볼륨 마운트 및 접합 지점 정보를 표시합니다
       url: "/smb-admin/display-volume-mount-junction-point-task.html"
   - title: 이름 매핑을 구성합니다
     entries:
-    - title: 개요
+    - title: SMB 이름 매핑 구성에 대해 자세히 알아보십시오
       url: "/smb-admin/how-name-mappings-are-used-concept.html"
-    - title: 이름 매핑 작동 방식
+    - title: SMB 이름 매핑에 대해 자세히 알아보십시오
       url: "/smb-admin/name-mapping-concept.html"
-    - title: 다중 도메인은 UNIX 사용자와 Windows 사용자 이름 매핑을 검색합니다
+    - title: UNIX 사용자와 Windows 사용자 이름 간 매핑에 대한 SMB 다중 도메인 검색에 대해 알아봅니다
       url: "/smb-admin/multidomain-searches-unix-windows-user-concept.html"
-    - title: 이름 매핑 변환 규칙
+    - title: SMB 이름 매핑 변환 규칙에 대해 알아보십시오
       url: "/smb-admin/name-mapping-conversion-rules-concept.html"
-    - title: 이름 매핑을 생성합니다
+    - title: SMB 이름 매핑을 생성합니다
       url: "/smb-admin/create-name-mapping-task.html"
-    - title: 기본 사용자를 구성합니다
+    - title: 기본 SMB 사용자를 구성합니다
       url: "/smb-admin/configure-default-user-task.html"
-    - title: 이름 매핑을 관리하는 명령입니다
+    - title: SMB 이름 매핑을 관리하는 명령입니다
       url: "/smb-admin/commands-manage-name-mappings-reference.html"
   - title: 다중 도메인 이름 매핑 검색을 구성합니다
     entries:
-    - title: 다중 도메인 이름 매핑 검색을 사용하거나 사용하지 않도록 설정합니다
+    - title: SMB 다중 도메인 이름 매핑 검색을 활성화 또는 비활성화합니다
       url: "/smb-admin/enable-disable-multidomain-name-mapping-searches-task.html"
-    - title: 신뢰할 수 있는 도메인을 다시 설정하고 다시 검색합니다
+    - title: 신뢰할 수 있는 SMB 도메인을 재설정하고 다시 검색합니다
       url: "/smb-admin/reset-rediscover-trusted-domains-task.html"
-    - title: 검색된 신뢰할 수 있는 도메인에 대한 정보를 표시합니다
+    - title: 검색된 신뢰할 수 있는 SMB 도메인에 대한 정보를 표시합니다
       url: "/smb-admin/display-discovered-trusted-domains-task.html"
-    - title: 기본 설정 신뢰할 수 있는 도메인 목록에서 신뢰할 수 있는 도메인을 추가, 제거 또는 교체합니다
+    - title: 기본 설정 목록에서 신뢰할 수 있는 SMB 도메인을 추가, 제거 또는 교체합니다
       url: "/smb-admin/add-remove-replace-trusted-domains-preferred-lists-task.html"
-    - title: 기본 설정 신뢰할 수 있는 도메인 목록에 대한 정보를 표시합니다
+    - title: 기본 설정 신뢰할 수 있는 SMB 도메인 목록에 대한 정보를 표시합니다
       url: "/smb-admin/display-preferred-trusted-domain-list-task.html"
   - title: SMB 공유를 생성하고 구성합니다
     entries:
-    - title: 개요
+    - title: SMB 공유 생성 및 구성에 대해 자세히 알아보십시오
       url: "/smb-admin/create-configure-shares-concept.html"
-    - title: 기본 관리 공유는 무엇입니까
+    - title: 기본 관리 SMB 공유에 대해 알아봅니다
       url: "/smb-admin/default-administrative-shares-concept.html"
-    - title: SMB 공유 이름 지정 요구 사항
+    - title: SMB 공유 명명 요구사항에 대해 알아보십시오
       url: "/smb-admin/share-naming-requirements-concept.html"
-    - title: 다중 프로토콜 환경에서 공유를 생성할 때 디렉토리 대/소문자 구분 요구 사항
+    - title: 멀티 프로토콜 환경에서 공유를 생성할 때 SMB 디렉토리 대/소문자 구분 요구 사항에 대해 알아보십시오
       url: "/smb-admin/directory-case-sensitivity-share-multiprotocol-concept.html"
     - title: SMB 공유 속성을 사용합니다
       entries:
-      - title: 개요
+      - title: SMB 공유 속성 사용에 대해 자세히 알아봅니다
         url: "/smb-admin/share-properties-concept.html"
       - title: 기존 SMB 공유에서 공유 속성을 추가하거나 제거합니다
         url: "/smb-admin/add-remove-share-properties-existing-share-task.html"
     - title: force-group 공유 설정을 사용하여 SMB 사용자 액세스를 최적화합니다
       url: "/smb-admin/optimize-user-access-force-group-share-concept.html"
-    - title: 그룹 강제 공유 설정을 사용하여 SMB 공유를 생성합니다
+    - title: 강제 그룹 공유 설정을 사용하여 SMB 공유를 생성합니다
       url: "/smb-admin/create-share-force-group-setting-task.html"
     - title: MMC를 사용하여 SMB 공유에 대한 정보를 봅니다
       url: "/smb-admin/view-shares-mmc-task.html"
@@ -312,7 +312,7 @@ entries:
       url: "/smb-admin/commands-manage-shares-reference.html"
   - title: SMB 공유 ACL을 사용하여 파일 액세스 보호
     entries:
-    - title: SMB 공유 수준 ACL 관리 지침
+    - title: SMB 공유 수준 ACL 관리에 대해 자세히 알아보십시오
       url: "/smb-admin/manage-smb-level-acls-concept.html"
     - title: SMB 공유 액세스 제어 목록을 생성합니다
       url: "/smb-admin/create-share-access-control-lists-task.html"
