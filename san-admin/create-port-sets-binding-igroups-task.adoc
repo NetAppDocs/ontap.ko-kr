@@ -32,6 +32,8 @@ ONTAP 9.10.1부터 System Manager를 사용하여 포트 세트를 생성하고 
 
 9.10.1 이전의 ONTAP 릴리즈에서 포트셋 및 igroup을 바인딩해야 하는 경우 ONTAP CLI 절차를 사용해야 합니다.
 
+ONTAP 9.12.1부터 기존 포트셋이 없으면 ONTAP CLI 프로시저를 사용하여 첫 번째 포트셋을 만들어야 합니다.
+
 . System Manager에서 * Network > Overview > Portsets * 를 클릭하고 * Add * 를 클릭합니다.
 . 새 포트셋 정보를 입력하고 * 추가 * 를 클릭합니다.
 . 호스트 > SAN 이니시에이터 그룹 * 을 클릭합니다.

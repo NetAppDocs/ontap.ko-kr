@@ -1,17 +1,17 @@
 ---
 permalink: mediator/manage-task.html 
 sidebar: sidebar 
-keywords: mediator, service, username, user name, password, change, uninstall, self-signed certificate, self signed certificate, regenerate, stop mediator service, uninstall scst 
-summary: 사용자 자격 증명 관리, 서비스 제어, 상태 확인, SCST 유지 관리, 인증서 관리 및 문제 해결을 비롯한 ONTAP 중재자 서비스를 관리합니다. 
+keywords: mediator, username, user name, password, change, uninstall, self-signed certificate, self signed certificate, regenerate, stop mediator, uninstall scst 
+summary: 사용자 자격 증명 관리, 서비스 제어, 상태 확인, SCST 유지 관리, 인증서 관리 및 문제 해결을 포함하여 ONTAP Mediator를 관리합니다. 
 ---
-= ONTAP 중재자 서비스를 관리합니다
+= ONTAP 중재자 관리
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-사용자 자격 증명 변경, 서비스 중지 및 다시 활성화, 상태 확인, 호스트 유지 보수를 위한 SCST 설치 또는 제거를 비롯한 ONTAP 중재자 서비스를 관리합니다. 또한 자체 서명된 인증서 다시 생성, 신뢰할 수 있는 타사 인증서로 대체, 인증서 관련 문제 해결 등의 인증서를 관리할 수 있습니다.
+사용자 자격 증명 변경, 서비스 중지 및 재활성화, 서비스 상태 확인, 호스트 유지 관리를 위한 SCST 설치 또는 제거를 포함하여 ONTAP Mediator를 관리합니다. 또한 자체 서명된 인증서 다시 생성, 신뢰할 수 있는 타사 인증서로 대체, 인증서 관련 문제 해결 등의 인증서를 관리할 수 있습니다.
 
 
 
@@ -20,7 +20,7 @@ summary: 사용자 자격 증명 관리, 서비스 제어, 상태 확인, SCST �
 다음 절차를 사용하여 사용자 이름을 변경할 수 있습니다.
 
 .이 작업에 대해
-ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수행합니다.
+ONTAP Mediator를 설치한 Linux 호스트에서 이 작업을 수행합니다.
 
 이 명령에 액세스할 수 없는 경우 다음 예에 표시된 대로 전체 경로를 사용하여 명령을 실행해야 할 수 있습니다.
 
@@ -60,7 +60,7 @@ MDIATOR_USERNAME=중재자_PASSWORD=mediator2 MEDIATOR_NEW_USERNAME=mediatoradmi
 다음 절차를 사용하여 암호를 변경할 수 있습니다.
 
 .이 작업에 대해
-ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수행합니다.
+ONTAP Mediator를 설치한 Linux 호스트에서 이 작업을 수행합니다.
 
 이 명령에 액세스할 수 없는 경우 다음 예에 표시된 대로 전체 경로를 사용하여 명령을 실행해야 할 수 있습니다.
 
@@ -98,12 +98,12 @@ ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수�
 
 
 
-== ONTAP 중재자 서비스를 중지합니다
+== ONTAP 중재자 중단
 
-ONTAP 중재자 서비스를 중지하려면 다음 단계를 수행하십시오.
+ONTAP Mediator를 중지하려면 다음 단계를 수행하세요.
 
 .단계
-. ONTAP 중재자 중지:
+. ONTAP 중재자 중단:
 +
 `systemctl stop ontap_mediator`
 
@@ -111,7 +111,7 @@ ONTAP 중재자 서비스를 중지하려면 다음 단계를 수행하십시오
 +
 `systemctl stop mediator-scst`
 
-. ONTAP 중재자 및 SCST 비활성화:
+. ONTAP Mediator 및 SCST 비활성화:
 +
 `systemctl diable ontap_mediator mediator-scst`
 
@@ -119,12 +119,12 @@ ONTAP 중재자 서비스를 중지하려면 다음 단계를 수행하십시오
 
 
 
-== ONTAP 중재자 서비스를 다시 활성화합니다
+== ONTAP Mediator 다시 활성화
 
-ONTAP 중재자 서비스를 다시 활성화하려면 다음 단계를 수행하십시오.
+ONTAP Mediator를 다시 활성화하려면 다음 단계를 수행하세요.
 
 .단계
-. ONTAP 중재자 및 SCST 활성화:
+. ONTAP Mediator 및 SCST 활성화:
 +
 `systemctl enable ontap_mediator mediator-scst`
 
@@ -140,12 +140,12 @@ ONTAP 중재자 서비스를 다시 활성화하려면 다음 단계를 수행�
 
 
 
-== ONTAP 중재자가 양호한 상태인지 확인합니다
+== ONTAP Mediator가 정상인지 확인하세요
 
-ONTAP 중재자를 설치한 후에는 ONTAP 중재자 서비스가 실행 중인지 확인해야 합니다.
+ONTAP Mediator를 설치한 후 성공적으로 실행되는지 확인하세요.
 
 .단계
-. ONTAP 중재자 서비스 상태 보기:
+. ONTAP Mediator의 상태를 확인하세요:
 +
 .. `systemctl status ontap_mediator`
 +
@@ -186,7 +186,7 @@ CGroup: /system.slice/ontap_mediator.service
 ----
 
 
-. ONTAP 중재자 서비스에서 사용하는 포트를 확인합니다.
+. ONTAP Mediator에서 사용하는 포트를 확인하세요.
 +
 `netstat`
 
@@ -356,22 +356,22 @@ UEFI 키 설치 지침은 다음 웹 사이트에서 확인할 수 있습니다.
 
 
 
-== ONTAP 중재자 서비스를 제거합니다
+== ONTAP Mediator 제거
 
-필요한 경우 ONTAP 중재자 서비스를 제거할 수 있습니다.
+필요한 경우 ONTAP Mediator를 제거할 수 있습니다.
 
 .시작하기 전에
-ONTAP 중재자 서비스를 제거하기 전에 ONTAP 중재자를 ONTAP에서 분리해야 합니다.
+ONTAP을 제거하기 전에 ONTAP Mediator와 ONTAP의 연결을 해제해야 합니다.
 
 .이 작업에 대해
-ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수행해야 합니다.
+ONTAP Mediator를 설치한 Linux 호스트에서 이 작업을 수행합니다.
 
 이 명령에 액세스할 수 없는 경우 다음 예에 표시된 대로 전체 경로를 사용하여 명령을 실행해야 할 수 있습니다.
 
 '/usr/local/bin/uninstall_ontap_중재자'
 
 .단계
-. ONTAP 중재자 서비스를 제거합니다.
+. ONTAP Mediator 제거:
 +
 uninstall_ontap_중재자
 
@@ -397,15 +397,15 @@ ONTAP mediator 1.7부터 다음 절차에 따라 자체 서명된 임시 인증�
 NOTE: 이 절차는 ONTAP mediator 1.7 이상을 실행하는 시스템에서만 지원됩니다.
 
 .이 작업에 대해
-* ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수행합니다.
-* ONTAP 중재자를 설치한 후 호스트의 호스트 이름 또는 IP 주소가 변경되어 생성된 자체 서명된 인증서가 사용되지 않는 경우에만 이 작업을 수행할 수 있습니다.
+* ONTAP Mediator를 설치한 Linux 호스트에서 이 작업을 수행합니다.
+* ONTAP Mediator를 설치한 후 호스트 이름이나 호스트의 IP 주소가 변경되어 생성된 자체 서명 인증서가 더 이상 사용되지 않는 경우에만 이 작업을 수행할 수 있습니다.
 * 임시 자체 서명된 인증서가 신뢰할 수 있는 타사 인증서로 대체되면 이 작업을 사용하여 인증서를 다시 생성합니다. 자체 서명된 인증서가 없으면 이 절차가 실패합니다.
 
 
 .단계
 현재 호스트에 대해 자체 서명된 새 임시 인증서를 다시 생성하려면 다음 단계를 수행하십시오.
 
-. ONTAP 중재자 서비스를 다시 시작합니다.
+. ONTAP Mediator를 다시 시작하세요:
 +
 `./make_self_signed_certs.sh overwrite`
 
@@ -448,15 +448,15 @@ Getting CA Private Key
 
 ====
 .이 작업에 대해
-* ONTAP 중재자 서비스가 설치된 Linux 호스트에서 이 작업을 수행합니다.
+* ONTAP Mediator를 설치한 Linux 호스트에서 이 작업을 수행합니다.
 * 생성된 자체 서명된 인증서를 신뢰할 수 있는 하위 CA(인증 기관)에서 가져온 인증서로 교체해야 하는 경우 이 작업을 수행할 수 있습니다. 이렇게 하려면 신뢰할 수 있는 PKI(공개 키 인프라) 권한에 액세스할 수 있어야 합니다.
 * 다음 이미지는 각 ONTAP 중재자 인증서의 용도를 보여 줍니다.
 +
 image:mediator-cert-purposes.png["ONTAP 중재자 인증서 용도"]
 
-* 다음 이미지는 웹 서버 설정 및 ONTAP 중재자 서버 설정을 위한 구성을 보여줍니다.
+* 다음 이미지는 웹 서버 설정과 ONTAP Mediator 설정에 대한 구성을 보여줍니다.
 +
-image:mediator-certs-index.png["웹 서버 설정 및 ONTAP 중재자 서버 설정 구성"]
+image:mediator-certs-index.png["웹 서버 설정 및 ONTAP Mediator 설정 구성"]
 
 
 
@@ -470,8 +470,7 @@ image:mediator-certs-index.png["웹 서버 설정 및 ONTAP 중재자 서버 설
 
 [NOTE]
 ====
-* 이 예제에서는 ONTAP 중재자 서비스에 필요한 인증서에 필요한 기준을 보여 줍니다. 이 절차와 다른 방법으로 PKI 기관으로부터 인증서를 얻을 수 있습니다. 비즈니스 요구에 따라 절차를 조정합니다.
-
+이 예는 ONTAP Mediator에 필요한 인증서에 대한 필수 기준을 보여줍니다. 이 절차와 다른 방법으로 PKI 기관으로부터 인증서를 얻을 수 있습니다. 비즈니스 요구에 따라 절차를 조정합니다.
 
 ====
 [role="tabbed-block"]
@@ -513,7 +512,7 @@ PKI 권한은 요청을 확인하고 에 서명하여 `.csr`인증서를 `interm
 
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
 
 
 
@@ -555,7 +554,7 @@ PKI 권한은 요청을 확인하고 에 서명하여 `.csr`인증서를 `ca.crt
 
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `ca.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `ca.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
 
 
 
@@ -628,7 +627,7 @@ NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 
 ====
 .ONTAP 중재자 1.9 이상
 --
-인증서 구성은 에 있는 구성 파일의 ONTAP 중재자 서비스에 제공됩니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml`. 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
+인증서 구성은 다음 위치에 있는 구성 파일에서 ONTAP Mediator에 제공됩니다.  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` . 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
 
 [listing]
 ----
@@ -673,7 +672,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/int
 ** Linux 권한: `600`
 
 
-. ONTAP 중재자 다시 시작:
+. ONTAP Mediator를 다시 시작하세요:
 +
 `systemctl restart ontap_mediator`
 
@@ -682,7 +681,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/int
 --
 .ONTAP 중재자 1.8 이하
 --
-인증서 구성은 에 있는 구성 파일의 ONTAP 중재자 서비스에 제공됩니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml`. 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
+인증서 구성은 다음 위치에 있는 구성 파일에서 ONTAP Mediator에 제공됩니다.  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` . 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
 
 [listing]
 ----
@@ -727,7 +726,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.
 ** Linux 권한: `600`
 
 
-. ONTAP 중재자 다시 시작:
+. ONTAP Mediator를 다시 시작하세요:
 +
 `systemctl restart ontap_mediator`
 
@@ -805,7 +804,7 @@ NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받�
 ***  `ca_certificate`값은 파일의 경로입니다. `root_intermediate.crt`
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
 
 
 
@@ -817,7 +816,7 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 
 
 
-. 구성 파일에서 인증서가 업데이트되면 ONTAP 중재자를 다시 시작합니다.
+. 구성 파일에서 인증서가 업데이트되면 ONTAP Mediator를 다시 시작합니다.
 +
 `systemctl restart ontap_mediator`
 
@@ -888,7 +887,7 @@ NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받�
 ***  `ca_certificate`값은 파일의 경로입니다. `root_ca.crt`
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `ca.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"]참조하십시오.
+NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `ca.crt` `root_ca.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
 
 
 
@@ -900,7 +899,7 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 
 
 
-. 구성 파일에서 인증서가 업데이트되면 ONTAP 중재자를 다시 시작합니다.
+. 구성 파일에서 인증서가 업데이트되면 ONTAP Mediator를 다시 시작합니다.
 +
 `systemctl restart ontap_mediator`
 
@@ -1030,7 +1029,7 @@ Certificate:
 
 를 클릭합니다 `v3_req` 에 정의된 속성 `openssl_server.cnf` 구성 파일은 로 표시됩니다 `X509v3 extensions` 인증서에 입력합니다.
 
-다음 예제에서는 에서 변수를 가져올 수 있습니다 `alt_names` 섹션을 참조하십시오 `hostname -A` 및 `hostname -I` ONTAP 중재자가 설치된 Linux VM에서
+다음 예에서는 변수를 얻을 수 있습니다.  `alt_names` 명령을 실행하여 섹션을 만듭니다.  `hostname -A` 그리고  `hostname -I` ONTAP Mediator가 설치된 Linux VM에서.
 
 변수의 올바른 값은 네트워크 관리자에게 문의하십시오.
 

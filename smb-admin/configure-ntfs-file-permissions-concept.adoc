@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, ntfs, file, permission, directories, directory, ontap, cli, enable, windows, client, how to configure ntfs file permissions using the ontap cli 
 summary: ONTAP CLI를 사용하여 파일 및 디렉토리에 대한 NTFS 파일 권한을 구성할 수 있습니다. 따라서 Windows 클라이언트에서 SMB 공유를 사용하여 데이터에 연결할 필요 없이 NTFS 파일 권한을 구성할 수 있습니다. 
 ---
-= ONTAP CLI를 사용하여 NTFS 파일 권한을 구성합니다
+= SMB NTFS 파일 권한에 대한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -39,3 +39,4 @@ Default
                     iSCSI                10  false
 11 entries were displayed.
 ....
+에 대한 자세한 내용은 `network qos-marking show` link:https://docs.netapp.com/us-en/ontap-cli/network-qos-marking-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

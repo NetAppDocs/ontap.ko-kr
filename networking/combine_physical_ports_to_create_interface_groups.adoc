@@ -191,8 +191,6 @@ image:AddLag01.png["지연 그래픽을 추가합니다"]
 --
 * CLI를 사용하여 인터페이스 그룹을 생성합니다 *
 
-에서 포트 인터페이스 그룹에 적용되는 및 구성 제한에 대해 자세히 `network port ifgrp add-port`link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^] 알아보십시오.
-
 다중 모드 인터페이스 그룹을 생성할 때 다음 로드 밸런싱 방법 중 하나를 지정할 수 있습니다.
 
 * 포트 : 네트워크 트래픽은 전송 계층(TCP/UDP) 포트를 기반으로 분산됩니다. 이것은 권장되는 로드 밸런싱 방법입니다.
@@ -247,13 +245,13 @@ interface group을 생성하기 위해 'network port ifgrp create' 명령어를 
 
 'network port ifgrp add-port'를 참조하십시오
 
-에 대한 자세한 내용은 `network port ifgrp add-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 다음 예에서는 a0a라는 인터페이스 그룹에 e0c 포트를 추가하는 방법을 보여줍니다.
 
 'network port ifgrp add-port-node_cluster-1-01_-ifgrp_a0a_-port_e0c_'
 
 ONTAP 9.8부터 인터페이스 그룹은 인터페이스 그룹에 첫 번째 물리적 포트가 추가된 후 약 1분 후에 적절한 브로드캐스트 도메인에 자동으로 배치됩니다. ONTAP가 이 작업을 수행하지 않도록 하고 ifgrp를 브로드캐스트 도메인에 수동으로 배치하려는 경우에는 '-skip-broadcast-domain-placement' 매개 변수를 'ifgrp add-port' 명령의 일부로 지정합니다.
+
+에서 포트 인터페이스 그룹에 적용되는 및 구성 제한에 대해 자세히 `network port ifgrp add-port`link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-add-port.html["ONTAP 명령 참조입니다"^] 알아보십시오.
 
 --
 ====

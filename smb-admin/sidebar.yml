@@ -2,7 +2,7 @@
 section: smb-admin
 title: CLI를 사용하여 SMB를 관리합니다
 entries:
-- title: 개요
+- title: SMB에 대해 알아보십시오
   url: "/smb-admin/index.html"
 - title: SMB 서버 지원
   entries:
@@ -442,101 +442,101 @@ entries:
         url: "/smb-admin/update-domain-user-group-names-local-databases-task.html"
     - title: 로컬 권한을 관리합니다
       entries:
-      - title: 로컬 또는 도메인 사용자 또는 그룹에 권한을 추가합니다
+      - title: SMB 로컬 또는 도메인 사용자나 그룹에 권한 추가
         url: "/smb-admin/add-privileges-local-domain-users-groups-task.html"
-      - title: 로컬 또는 도메인 사용자 또는 그룹에서 권한을 제거합니다
+      - title: SMB 로컬 또는 도메인 사용자나 그룹의 권한 제거
         url: "/smb-admin/remove-privileges-local-domain-users-groups-task.html"
-      - title: 로컬 또는 도메인 사용자 및 그룹에 대한 권한을 재설정합니다
+      - title: SMB 로컬 또는 도메인 사용자 및 그룹에 대한 권한 재설정
         url: "/smb-admin/reset-privileges-local-domain-users-groups-task.html"
-      - title: 권한 재정의에 대한 정보를 표시합니다
+      - title: SMB 권한 재정의에 대한 정보 표시
         url: "/smb-admin/display-privilege-overrides-task.html"
   - title: 우회 통과 검사를 구성합니다
     entries:
-    - title: 개요
+    - title: SMB 바이패스 트래버스 검사 구성에 대해 알아보세요
       url: "/smb-admin/configure-bypass-traverse-checking-concept.html"
-    - title: 사용자 또는 그룹이 디렉토리 통과 확인을 건너뛰도록 허용합니다
+    - title: 사용자 또는 그룹이 SMB 디렉터리 트래버스 검사를 우회하도록 허용
       url: "/smb-admin/allow-users-groups-bypass-directory-traverse-task.html"
-    - title: 디렉토리 통과 확인을 거치지 않고 사용자 또는 그룹을 허용하지 않습니다
+    - title: 사용자 또는 그룹이 SMB 디렉터리 트래버스 검사를 우회하는 것을 허용하지 않음
       url: "/smb-admin/disallow-users-groups-bypass-directory-traverse-task.html"
   - title: 파일 보안 및 감사 정책에 대한 정보를 표시합니다
     entries:
-    - title: 개요
+    - title: SMB 파일 보안 및 감사 정책 보기에 대해 알아보세요
       url: "/smb-admin/display-file-security-audit-policies-concept.html"
-    - title: NTFS 보안 스타일 볼륨의 파일 보안에 대한 정보를 표시합니다
+    - title: NTFS 보안 스타일 볼륨의 SMB 파일 보안에 대한 정보 표시
       url: "/smb-admin/display-file-security-ntfs-style-volumes-task.html"
-    - title: 혼합 보안 형식 볼륨의 파일 보안에 대한 정보를 표시합니다
+    - title: 혼합 보안 스타일 볼륨의 SMB 파일 보안에 대한 정보 표시
       url: "/smb-admin/display-file-security-mixed-style-volumes-task.html"
-    - title: UNIX 보안 스타일 볼륨의 파일 보안에 대한 정보를 표시합니다
+    - title: UNIX 보안 스타일 볼륨에서 SMB 파일 보안에 대한 정보 표시
       url: "/smb-admin/display-file-security-unix-style-volumes-task.html"
-    - title: CLI를 사용하여 FlexVol 볼륨의 NTFS 감사 정책에 대한 정보를 표시합니다
+    - title: SMB FlexVol 볼륨의 NTFS 감사 정책에 대한 정보를 표시하는 명령
       url: "/smb-admin/display-ntfs-audit-policies-task.html"
-    - title: CLI를 사용하여 FlexVol 볼륨에서 NFSv4 감사 정책에 대한 정보를 표시합니다
+    - title: SMB FlexVol 볼륨의 NFSv4 감사 정책에 대한 정보를 표시하는 명령
       url: "/smb-admin/display-nfsv4-audit-policies-flexvol-volumes-task.html"
-    - title: 파일 보안 및 감사 정책에 대한 정보를 표시하는 방법
+    - title: SMB 파일 보안 및 감사 정책에 대한 정보를 표시하는 방법에 대해 알아보세요.
       url: "/smb-admin/wildcards-display-security-policies-concept.html"
   - title: CLI를 사용하여 SVM에서 NTFS 파일 보안, NTFS 감사 정책 및 Storage-Level Access Guard를 관리합니다
     entries:
-    - title: 개요
+    - title: SMB NTFS 파일 보안, NTFS 감사 정책 및 스토리지 수준 액세스 보호 관리를 위한 명령
       url: "/smb-admin/manage-ntfs-security-audit-policies-slag-concept.html"
-    - title: CLI를 사용하여 파일 및 폴더 보안을 설정하는 사용 사례
+    - title: SMB 파일 및 폴더 보안을 설정하는 명령
       url: "/smb-admin/use-cases-cli-set-file-folder-security-concept.html"
-    - title: CLI를 사용하여 파일 및 폴더 보안을 설정할 때의 제한 사항
+    - title: SMB 파일 및 폴더 보안을 설정하기 위해 명령을 사용할 때의 제한 사항에 대해 알아보세요.
       url: "/smb-admin/limits-when-cli-set-file-folder-security-concept.html"
-    - title: 보안 설명자를 사용하여 파일 및 폴더 보안을 적용하는 방법
+    - title: 보안 설명자를 사용하여 SMB 파일 및 폴더 보안을 적용합니다.
       url: "/smb-admin/security-descriptors-apply-file-folder-security-concept.html"
-    - title: SVM 재해 복구 대상에서 로컬 사용자 또는 그룹을 사용하는 파일 디렉토리 정책을 적용하기 위한 지침
+    - title: SVM 재해 복구 대상에서 로컬 SMB 사용자 또는 그룹을 사용하는 파일 디렉터리 정책을 적용하는 방법에 대해 알아보세요.
       url: "/smb-admin/file-directory-policies-local-users-groups-concept.html"
     - title: CLI를 사용하여 NTFS 파일 및 폴더에 파일 보안을 구성하고 적용합니다
       entries:
-      - title: NTFS 보안 설명자를 만듭니다
+      - title: SMB 서버에 NTFS 보안 설명자 만들기
         url: "/smb-admin/create-ntfs-security-descriptor-file-task.html"
-      - title: NTFS DACL 액세스 제어 항목을 NTFS 보안 설명자에 추가합니다
+      - title: SMB 서버의 NTFS 보안 설명자에 NTFS DACL 액세스 제어 항목 추가
         url: "/smb-admin/add-ntfs-dacl-entries-security-descriptor-task.html"
-      - title: 보안 정책을 생성합니다
+      - title: SMB 보안 정책 만들기
         url: "/smb-admin/create-security-policies-file-task.html"
       - title: 보안 정책에 작업을 추가합니다
         url: "/smb-admin/add-task-security-policy-file-task.html"
       - title: 보안 정책을 적용합니다
         url: "/smb-admin/apply-security-policies-file-task.html"
-      - title: 보안 정책 작업을 모니터링합니다
+      - title: SMB 보안 정책 작업 모니터링
         url: "/smb-admin/monitor-security-policy-job-task.html"
-      - title: 적용된 파일 보안을 확인합니다
+      - title: SMB 파일 보안 확인
         url: "/smb-admin/verify-applied-file-security-task.html"
     - title: CLI를 사용하여 NTFS 파일 및 폴더에 감사 정책을 구성하고 적용합니다
       entries:
-      - title: 개요
+      - title: NTFS 파일 및 폴더에 SMB 감사 정책을 구성하고 적용하는 명령
         url: "/smb-admin/configure-apply-audit-policies-ntfs-files-folders-task.html"
-      - title: NTFS 보안 설명자를 만듭니다
+      - title: SMB 서버에 NTFS 보안 설명자 만들기
         url: "/smb-admin/create-ntfs-security-descriptor-audit-task.html"
-      - title: NTFS SACL 액세스 제어 항목을 NTFS 보안 설명자에 추가합니다
+      - title: SMB 서버의 NTFS 보안 설명자에 NTFS SACL 액세스 제어 항목 추가
         url: "/smb-admin/add-ntfs-sacl-entries-security-descriptor-task.html"
-      - title: 보안 정책을 생성합니다
+      - title: SMB 보안 정책 만들기
         url: "/smb-admin/create-security-policies-audit-task.html"
-      - title: 보안 정책에 작업을 추가합니다
+      - title: SMB 보안 정책에 작업 추가
         url: "/smb-admin/add-task-security-policy-audit-task.html"
-      - title: 보안 정책을 적용합니다
+      - title: SMB 보안 정책 적용
         url: "/smb-admin/apply-security-policies-audit-task.html"
-      - title: 보안 정책 작업을 모니터링합니다
+      - title: SMB 보안 정책 작업 모니터링
         url: "/smb-admin/monitor-security-policy-job-task.html"
-      - title: 적용된 감사 정책을 확인합니다
+      - title: SMB 감사 정책 확인
         url: "/smb-admin/verify-applied-audit-policy-task.html"
-    - title: 보안 정책 작업을 관리할 때의 고려 사항
+    - title: SMB 보안 정책 작업 관리에 대해 알아보세요
       url: "/smb-admin/manage-security-policy-jobs-concept.html"
-    - title: NTFS 보안 설명자를 관리하는 명령입니다
+    - title: SMB 서버에서 NTFS 보안 설명자를 관리하기 위한 명령
       url: "/smb-admin/commands-manage-ntfs-security-descriptors-reference.html"
-    - title: NTFS DACL 액세스 제어 항목을 관리하는 명령입니다
+    - title: SMB 서버에서 NTFS DACL 액세스 제어 항목을 관리하기 위한 명령
       url: "/smb-admin/commands-manage-ntfs-dacl-reference.html"
-    - title: NTFS SACL 액세스 제어 항목을 관리하는 명령입니다
+    - title: SMB 서버에서 NTFS SACL 액세스 제어 항목을 관리하기 위한 명령
       url: "/smb-admin/commands-manage-ntfs-sacl-reference.html"
-    - title: 보안 정책 관리를 위한 명령입니다
+    - title: SMB 보안 정책을 관리하기 위한 명령
       url: "/smb-admin/commands-manage-security-policies-reference.html"
-    - title: 보안 정책 작업을 관리하기 위한 명령입니다
+    - title: SMB 보안 정책 작업 관리를 위한 명령
       url: "/smb-admin/commands-manage-security-policy-tasks-reference.html"
-    - title: 보안 정책 작업 관리를 위한 명령입니다
+    - title: SMB 보안 정책 작업 관리를 위한 명령
       url: "/smb-admin/commands-manage-security-policy-jobs-reference.html"
   - title: SMB 공유에 대한 메타데이터 캐시를 구성합니다
     entries:
-    - title: SMB 메타데이터 캐싱의 작동 방식
+    - title: SMB 메타데이터 캐싱에 대해 알아보세요
       url: "/smb-admin/metadata-caching-concept.html"
     - title: SMB 메타데이터 캐시를 설정합니다
       url: "/smb-admin/enable-metadata-cache-task.html"
@@ -544,15 +544,15 @@ entries:
       url: "/smb-admin/configure-lifetime-metadata-cache-entries-task.html"
   - title: 파일 잠금 관리
     entries:
-    - title: 프로토콜 간 파일 잠금 정보
+    - title: 프로토콜 간 SMB 파일 잠금에 대해 알아보세요
       url: "/smb-admin/file-locking-between-protocols-concept.html"
-    - title: ONTAP에서 읽기 전용 비트를 처리하는 방법
+    - title: SMB 읽기 전용 비트에 대해 알아보세요
       url: "/smb-admin/ontap-treats-read-only-bits-concept.html"
     - title: 공유 경로 구성 요소에 대한 잠금 처리에서 ONTAP가 Windows와 어떻게 다른지 설명합니다
       url: "/smb-admin/ontap-differs-windows-locks-share-path-concept.html"
-    - title: 잠금에 대한 정보를 표시합니다
+    - title: SMB 잠금에 대한 정보 표시
       url: "/smb-admin/display-locks-task.html"
-    - title: 잠금 해제
+    - title: SMB 잠금 해제
       url: "/smb-admin/break-locks-task.html"
   - title: SMB 작업을 모니터링합니다
     entries:

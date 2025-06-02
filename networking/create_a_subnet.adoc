@@ -95,6 +95,8 @@ network subnet create -subnet-name sub1 -broadcast-domain Default-1 -subnet 192.
 ....
 network subnet create -subnet-name sub2 -broadcast-domain Default -subnet 3FFE::/64 - gateway 3FFE::1 -ip-ranges "3FFE::10-3FFE::20"
 ....
+에 대한 자세한 내용은 `network subnet create` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 .작업을 마친 후
 서브넷의 주소를 사용하여 SVM 및 인터페이스를 IPspace에 할당할 수 있습니다.
 

@@ -63,3 +63,4 @@ Distribution Function: ip
              Up Ports: e7a, e7b
            Down Ports: -
 ....
+에 대한 자세한 내용은 `network port ifgrp show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/mediator-install-task.html 
 keywords: SM-BC, SMBC, cluster, peering, ONTAP Mediator, initialize, snapmirror active sync 
-summary: SnapMirror 활성 동기화를 사용하려면 ONTAP 중재자를 설치 및 초기화하고 적절한 클러스터 피어링을 확인해야 합니다. 
+summary: SnapMirror Active Sync를 사용하려면 ONTAP Mediator를 설치하고 초기화하고 적절한 클러스터 피어링을 보장해야 합니다. 
 ---
-= 활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다
+= SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: SnapMirror 활성 동기화를 사용하려면 ONTAP 중재자를 설�
 
 
 [role="lead"]
-SnapMirror 액티브 동기화는 장애 조치 시나리오 발생 시 피어링된 클러스터를 사용하여 데이터를 보호합니다. ONTAP 중재자는 각 클러스터의 상태를 모니터링하여 비즈니스 연속성을 가능하게 하는 핵심 리소스입니다. SnapMirror 활성 동기화를 구성하려면 먼저 ONTAP 중재자를 설치하고 운영 클러스터와 보조 클러스터가 올바르게 구성되었는지 확인해야 합니다.
+SnapMirror 액티브 동기화는 장애 조치 시나리오 발생 시 피어링된 클러스터를 사용하여 데이터를 보호합니다. ONTAP Mediator는 각 클러스터의 상태를 모니터링하여 비즈니스 연속성을 보장하는 핵심 리소스입니다. SnapMirror 액티브 동기화를 구성하려면 먼저 ONTAP Mediator를 설치하고 기본 및 보조 클러스터가 올바르게 구성되었는지 확인해야 합니다.
 
-ONTAP 중재자를 설치하고 클러스터를 구성했으면 을 <<initialize-the-ontap-mediator,자체 서명된 인증서를 사용하여 SnapMirror 활성 동기화에 대한 ONTAP 중재자를 초기화합니다>>클릭합니다. 그런 다음 해야 xref:protect-task.html[SnapMirror 활성 동기화에 대한 일관성 그룹을 생성, 초기화 및 매핑합니다]합니다.
+ONTAP Mediator를 설치하고 클러스터를 구성한 후, <<initialize-the-ontap-mediator,자체 서명 인증서를 사용하여 SnapMirror Active Sync용 ONTAP Mediator 초기화>> . 그런 다음 해야 xref:protect-task.html[SnapMirror 활성 동기화에 대한 일관성 그룹을 생성, 초기화 및 매핑합니다]합니다.
 
 
 
 == ONTAP 중재자
 
-ONTAP 중재자는 ONTAP 클러스터가 SnapMirror 활성 동기화 관계에서 사용하는 HA(고가용성) 메타데이터를 영구적이고 펜싱된 저장소를 제공합니다. 또한 ONTAP Mediator는 쿼럼 확인을 지원하는 동기식 노드 상태 쿼리 기능을 제공하고 컨트롤러 활성화 감지를 위한 Ping 프록시 역할을 합니다.
+ONTAP Mediator는 SnapMirror 활성 동기화 관계에서 ONTAP 클러스터가 사용하는 고가용성(HA) 메타데이터에 대한 지속적이고 펜싱된 저장소를 제공합니다. 또한 ONTAP Mediator는 쿼럼 확인을 지원하는 동기식 노드 상태 쿼리 기능을 제공하고 컨트롤러 활성화 감지를 위한 Ping 프록시 역할을 합니다.
 
 각 클러스터 피어 관계는 단일 ONTAP 중재자 인스턴스와만 연결할 수 있습니다. HA 중재자 인스턴스는 지원되지 않습니다. 클러스터가 다른 클러스터와 여러 피어 관계에 있는 경우 다음과 같은 ONTAP 중재자 옵션을 사용할 수 있습니다.
 
@@ -32,24 +32,24 @@ ONTAP 중재자는 ONTAP 클러스터가 SnapMirror 활성 동기화 관계에�
 
 예를 들어 클러스터 B가 클러스터 A, 클러스터 C 및 클러스터 D와 피어 관계에 있는 경우 각 관계에 SnapMirror Active Sync가 구성되어 있을 때 세 클러스터 피어 관계 모두 고유한 연결된 ONTAP 중재자 인스턴스를 가질 수 있습니다. 또는, 클러스터 B는 3개의 피어 관계 모두에 동일한 ONTAP 중재자 인스턴스를 사용할 수 있습니다. 이 시나리오에서는 클러스터에 대해 ONTAP mediator의 동일한 인스턴스가 세 번 나열되어 있습니다.
 
-.ONTAP 중재자를 위한 필수 조건
-* ONTAP 중재자에는 고유한 사전 요구 사항이 포함되어 있습니다. ONTAP 중재자를 설치하기 전에 이러한 필수 구성 요소를 충족해야 합니다.
+.ONTAP 중재자 전제 조건
+* ONTAP Mediator에는 자체적인 필수 구성 요소가 포함되어 있습니다. ONTAP Mediator를 설치하기 전에 이러한 필수 구성 요소를 충족해야 합니다.
 +
-자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["ONTAP 중재자 서비스 설치 준비"^].
+자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["ONTAP Mediator 설치 준비"^]참조하십시오.
 
-* 기본적으로 ONTAP 중재자가 TCP 포트 31784를 통해 서비스를 제공합니다. ONTAP 클러스터와 ONTAP 중재자 간에 포트 31784가 열려 있고 사용 가능한지 확인해야 합니다.
-
-
+* 기본적으로 ONTAP Mediator는 TCP 포트 31784를 통해 서비스를 제공합니다. ONTAP 클러스터와 ONTAP Mediator 사이에서 포트 31784가 열려 있고 사용 가능한지 확인해야 합니다.
 
 
-== ONTAP 중재자를 설치하고 클러스터 구성을 확인합니다
 
-다음 각 단계를 수행하여 ONTAP mediator를 설치하고 클러스터 구성을 확인합니다. 각 단계에 대해 특정 구성이 수행되었는지 확인해야 합니다. 각 단계에는 따라야 할 특정 절차에 대한 링크가 포함되어 있습니다.
+
+== ONTAP Mediator를 설치하고 클러스터 구성을 확인하세요.
+
+ONTAP Mediator를 설치하고 클러스터 구성을 확인하려면 다음 단계를 각각 수행하세요. 각 단계에 대해 특정 구성이 수행되었는지 확인해야 합니다. 각 단계에는 따라야 할 특정 절차에 대한 링크가 포함되어 있습니다.
 
 .단계
-. 소스 및 대상 클러스터가 올바르게 구성되었는지 확인하기 전에 ONTAP 중재자 서비스를 설치합니다.
+. 소스 및 대상 클러스터가 올바르게 구성되었는지 확인하기 전에 ONTAP Mediator를 설치하세요.
 +
-xref:../mediator/index.html[ONTAP 중재자 서비스를 설치하거나 업그레이드할 준비를 합니다]
+xref:../mediator/index.html[ONTAP Mediator 설치 또는 업그레이드 준비]
 
 . 클러스터 피어링 관계가 클러스터 간에 존재하는지 확인합니다.
 +
@@ -87,15 +87,15 @@ xref:../san-admin/provision-storage.html[LUN을 생성하고 igroup을 매핑합
 
 
 
-== 자체 서명 인증서를 사용하여 SnapMirror 액티브 동기화에 대한 ONTAP 중재자 초기화
+== 자체 서명 인증서를 사용하여 SnapMirror Active Sync용 ONTAP Mediator 초기화
 
-ONTAP 중재자를 설치하고 클러스터 구성을 확인한 후에는 클러스터 모니터링을 위한 ONTAP 중재자를 초기화해야 합니다. System Manager 또는 ONTAP CLI를 사용하여 ONTAP 중재자를 초기화할 수 있습니다.
+ONTAP Mediator를 설치하고 클러스터 구성을 확인한 후, 클러스터 모니터링을 위해 ONTAP Mediator를 초기화해야 합니다. System Manager 또는 ONTAP CLI를 사용하여 ONTAP Mediator를 초기화할 수 있습니다.
 
 
 
 === 시스템 관리자
 
-System Manager를 사용하면 자동화된 페일오버를 위해 ONTAP 중재자 서버를 구성할 수 있습니다. 자체 서명된 SSL 및 CA를 타사 인증 SSL 인증서 및 CA로 대체할 수도 있습니다(아직 수행하지 않은 경우).
+System Manager를 사용하면 ONTAP Mediator를 자동 장애 조치로 구성할 수 있습니다. 자체 서명된 SSL 및 CA를 타사 인증 SSL 인증서 및 CA로 대체할 수도 있습니다(아직 수행하지 않은 경우).
 
 
 IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.
@@ -105,7 +105,7 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 .ONTAP 중재자 1.9 이상
 --
 . 보호 > 개요 > 중재자 > 구성 * 으로 이동합니다.
-. 추가 * 를 선택하고 다음 ONTAP 중재자 서버 정보를 입력합니다.
+. *추가*를 선택하고 다음 ONTAP Mediator 정보를 입력합니다.
 +
 ** IPv4 주소입니다
 ** 사용자 이름
@@ -124,7 +124,7 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 image:configure-mediator-system-manager.png["시스템 관리자 중재자 추가"]
 
 +
-인증서 추가가 완료되면 ONTAP 중재자가 ONTAP 클러스터에 추가됩니다.
+인증서 추가가 완료되면 ONTAP Mediator가 ONTAP 클러스터에 추가됩니다.
 
 +
 다음 이미지는 성공적인 ONTAP 중재자 구성을 보여줍니다.
@@ -140,7 +140,7 @@ image:successful-mediator-installation.png["중재자 추가 성공"].
 .ONTAP 중재자 1.8 이하
 --
 . 보호 > 개요 > 중재자 > 구성 * 으로 이동합니다.
-. 추가 * 를 선택하고 다음 ONTAP 중재자 서버 정보를 입력합니다.
+. *추가*를 선택하고 다음 ONTAP Mediator 정보를 입력합니다.
 +
 ** IPv4 주소입니다
 ** 사용자 이름
@@ -159,7 +159,7 @@ image:successful-mediator-installation.png["중재자 추가 성공"].
 image:configure-mediator-system-manager.png["시스템 관리자 중재자 추가"]
 
 +
-인증서 추가가 완료되면 ONTAP 중재자가 ONTAP 클러스터에 추가됩니다.
+인증서 추가가 완료되면 ONTAP Mediator가 ONTAP 클러스터에 추가됩니다.
 
 +
 다음 이미지는 성공적인 ONTAP 중재자 구성을 보여줍니다.
@@ -177,9 +177,9 @@ image:successful-mediator-installation.png["중재자 추가 성공"].
 
 === CLI를 참조하십시오
 
-ONTAP CLI를 사용하여 운영 클러스터 또는 2차 클러스터에서 ONTAP 중재자를 초기화할 수 있습니다. 를 발행할 때 `mediator add` 한 클러스터에서 ONTAP 중재자가 다른 클러스터에 자동으로 추가됩니다.
+ONTAP CLI를 사용하여 기본 또는 보조 클러스터에서 ONTAP Mediator를 초기화할 수 있습니다 .  `mediator add` 한 클러스터에서 명령을 실행하면 다른 클러스터에 ONTAP Mediator가 자동으로 추가됩니다.
 
-ONTAP 중재자를 사용하여 SnapMirror 활성 동기화 관계를 모니터링하는 경우 유효한 자체 서명 또는 CA(인증 기관) 인증서 없이는 ONTAP에서 중재자를 초기화할 수 없습니다. 피어링된 클러스터에 대한 인증서 저장소에 유효한 인증서를 추가합니다. ONTAP mediator를 사용하여 MetroCluster IP 시스템을 모니터링하는 경우 초기 구성 후에는 HTTPS가 사용되지 않으므로 인증서가 필요하지 않습니다.
+ONTAP Mediator를 사용하여 SnapMirror 활성 동기화 관계를 모니터링하는 경우, 유효한 자체 서명 인증서 또는 인증 기관(CA) 인증서 없이는 ONTAP에서 ONTAP Mediator를 초기화할 수 없습니다. 피어링된 클러스터에 대한 인증서 저장소에 유효한 인증서를 추가합니다. ONTAP Mediator를 사용하여 MetroCluster IP 시스템을 모니터링하는 경우, 초기 구성 후 HTTPS가 사용되지 않으므로 인증서가 필요하지 않습니다.
 
 [role="tabbed-block"]
 ====
@@ -193,12 +193,12 @@ ONTAP 중재자를 사용하여 SnapMirror 활성 동기화 관계를 모니터�
 +
 [listing]
 ----
-[root@ontap-mediator server_config]# cat intermediate.crt
+[root@ontap-mediator_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
 ----
-. ONTAP 중재자 CA 인증서를 ONTAP 클러스터에 추가합니다. 메시지가 표시되면 ONTAP 중재자로부터 얻은 CA 인증서를 삽입합니다. 모든 피어 클러스터에서 단계를 반복합니다.
+. ONTAP 중재자 CA 인증서를 ONTAP 클러스터에 추가합니다. 메시지가 표시되면 ONTAP Mediator에서 받은 CA 인증서를 삽입하세요. 모든 피어 클러스터에서 단계를 반복합니다.
 +
 `security certificate install -type server-ca -vserver <vserver_name>`
 
@@ -210,7 +210,7 @@ ONTAP 중재자를 사용하여 SnapMirror 활성 동기화 관계를 모니터�
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
 
-[root@ontap-mediator server_config]# cat intermediate.crt
+[root@ontap-mediator_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
@@ -254,7 +254,7 @@ C1_test_cluster
     Certificate Authority: ONTAP Mediator CA
           Expiration Date: Thu Feb 15 14:35:25 2029
 ----
-. 클러스터 중 하나에서 ONTAP 중재자를 초기화합니다. 다른 클러스터에 대해 ONTAP 중재자가 자동으로 추가됩니다.
+. 클러스터 중 하나에서 ONTAP Mediator를 초기화합니다. 다른 클러스터에는 ONTAP Mediator가 자동으로 추가됩니다.
 +
 `snapmirror mediator add -mediator-address <ip_address> -peer-cluster <peer_cluster_name> -username user_name`
 
@@ -324,7 +324,7 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 1.2.3.4          C2_test_cluster   connected        true
 ....
 +
-`Quorum Status` SnapMirror 일관성 그룹 관계가 ONTAP 중재자와 동기화되는지 여부를 나타냅니다. 의 상태는 입니다 `true` 동기화가 성공했음을 나타냅니다.
+`Quorum Status` SnapMirror 일관성 그룹 관계가 ONTAP Mediator와 동기화되는지 여부를 나타냅니다.  `true` 동기화가 성공했음을 나타냅니다.
 
 
 
@@ -339,7 +339,7 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 +
 [listing]
 ----
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator_config]# cat ca.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
@@ -356,7 +356,7 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
 
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator_config]# cat ca.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
@@ -400,7 +400,7 @@ C1_test_cluster
     Certificate Authority: ONTAP Mediator CA
           Expiration Date: Thu Feb 15 14:35:25 2029
 ----
-. 클러스터 중 하나에서 ONTAP 중재자를 초기화합니다. 다른 클러스터에 대해 ONTAP 중재자가 자동으로 추가됩니다.
+. 클러스터 중 하나에서 ONTAP Mediator를 초기화합니다. 다른 클러스터에는 ONTAP Mediator가 자동으로 추가됩니다.
 +
 `snapmirror mediator add -mediator-address <ip_address> -peer-cluster <peer_cluster_name> -username user_name`
 
@@ -470,7 +470,7 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 1.2.3.4          C2_test_cluster   connected        true
 ....
 +
-`Quorum Status` SnapMirror 일관성 그룹 관계가 ONTAP 중재자와 동기화되는지 여부를 나타냅니다. 의 상태는 입니다 `true` 동기화가 성공했음을 나타냅니다.
+`Quorum Status` SnapMirror 일관성 그룹 관계가 ONTAP Mediator와 동기화되는지 여부를 나타냅니다.  `true` 동기화가 성공했음을 나타냅니다.
 
 
 
@@ -480,21 +480,21 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 
 == 타사 인증서로 ONTAP 중재자를 다시 초기화합니다
 
-ONTAP 중재자 서비스를 다시 초기화해야 할 수 있습니다. ONTAP 중재자 IP 주소 변경, 인증서 만료 등과 같이 ONTAP 중재자 서비스를 다시 초기화해야 하는 경우가 있습니다.
+ONTAP Mediator를 다시 초기화해야 할 수도 있습니다. ONTAP Mediator IP 주소 변경, 인증서 만료 등 ONTAP Mediator를 다시 초기화해야 하는 상황이 발생할 수 있습니다.
 
 다음 절차에서는 자체 서명된 인증서를 타사 인증서로 대체해야 하는 특정 경우에 대해 ONTAP 중재자를 다시 초기화하는 방법을 보여 줍니다.
 
 .이 작업에 대해
-SnapMirror 활성 동기화 클러스터의 자체 서명된 인증서를 타사 인증서로 교체하고 ONTAP에서 ONTAP 중재자 구성을 제거한 다음 ONTAP 중재자를 추가해야 합니다.
+SnapMirror Active Sync 클러스터의 자체 서명 인증서를 타사 인증서로 교체하고 ONTAP에서 ONTAP Mediator 구성을 제거한 다음 ONTAP Mediator를 추가해야 합니다.
 
 
 
 === 시스템 관리자
 
-System Manager를 사용하면 ONTAP 클러스터에서 이전의 자체 서명 인증서로 구성된 ONTAP 중재자를 제거하고 새로운 타사 인증서로 ONTAP 클러스터를 다시 구성해야 합니다.
+System Manager를 사용하여 ONTAP 클러스터에서 이전 자체 서명 인증서로 구성된 ONTAP Mediator 버전을 제거하고 새로운 타사 인증서로 ONTAP 클러스터를 다시 구성해야 합니다.
 
 .단계
-. 메뉴 옵션 아이콘을 선택하고 * 제거 * 를 선택하여 ONTAP 중재자를 제거합니다.
+. 메뉴 옵션 아이콘을 선택하고 *제거*를 선택하여 ONTAP Mediator를 제거하세요.
 +
 
 NOTE: 이 단계에서는 자체 서명된 server-ca를 ONTAP 클러스터에서 제거하지 않습니다. NetApp에서는 타사 인증서를 추가하기 위해 다음 단계를 수행하기 전에 * Certificate * 탭으로 이동하여 수동으로 제거할 것을 권장합니다.
@@ -502,10 +502,10 @@ NOTE: 이 단계에서는 자체 서명된 server-ca를 ONTAP 클러스터에서
 +
 image:remove-mediator.png["시스템 관리자 중재자 제거"]
 
-. 올바른 인증서로 ONTAP 중재자를 다시 추가합니다.
+. 올바른 인증서로 ONTAP Mediator를 다시 추가합니다.
 
 
-이제 ONTAP 중재자가 새로운 타사 자체 서명된 인증서로 구성되었습니다.
+ONTAP Mediator는 이제 새로운 타사 자체 서명 인증서로 구성되었습니다.
 
 image:configure-mediator-system-manager.png["시스템 관리자 중재자 추가"]
 
@@ -513,7 +513,7 @@ image:configure-mediator-system-manager.png["시스템 관리자 중재자 추�
 
 === CLI를 참조하십시오
 
-ONTAP CLI를 사용하여 자체 서명된 인증서를 타사 인증서로 교체하면 운영 또는 보조 클러스터에서 ONTAP 중재자를 다시 초기화할 수 있습니다.
+ONTAP CLI를 사용하여 자체 서명된 인증서를 타사 인증서로 대체하여 기본 또는 보조 클러스터에서 ONTAP Mediator를 다시 초기화할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -568,7 +568,7 @@ NOTE: 에는 `intermediate.crt` 파일에 정의된 PKI 권한으로 전송되�
 [listing]
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
-[root@ontap-mediator server_config]# cat intermediate.crt
+[root@ontap-mediator_config]# cat intermediate.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
@@ -615,7 +615,7 @@ Info: [Job 86] 'mediator remove' job queued
 C1_test_cluster::*> snapmirror mediator show
 This table is currently empty.
 ----
-. ONTAP 중재자 다시 추가:
+. ONTAP Mediator를 다시 추가합니다.
 +
 * 예 *
 
@@ -693,7 +693,7 @@ NOTE: 에는 `ca.crt` 파일에 정의된 PKI 권한으로 전송되어야 하�
 [listing]
 ----
 [root@ontap-mediator ~]# cd /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config
-[root@ontap-mediator server_config]# cat ca.crt
+[root@ontap-mediator_config]# cat ca.crt
 -----BEGIN CERTIFICATE-----
 <certificate_value>
 -----END CERTIFICATE-----
@@ -740,7 +740,7 @@ Info: [Job 86] 'mediator remove' job queued
 C1_test_cluster::*> snapmirror mediator show
 This table is currently empty.
 ----
-. ONTAP 중재자 다시 추가:
+. ONTAP Mediator를 다시 추가합니다.
 +
 * 예 *
 

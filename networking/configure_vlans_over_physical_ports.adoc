@@ -160,5 +160,7 @@ VLAN을 삭제하려면 network port vlan delete 명령을 사용한다.
 ....
 network port vlan delete -node cluster-1-01 -vlan-name e1c-80
 ....
+에 대한 자세한 내용은 `network port vlan delete` link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 --
 ====

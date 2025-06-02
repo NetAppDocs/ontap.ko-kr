@@ -42,6 +42,9 @@ NFS 스토리지를 클라이언트에 제공하기 전에 NFS 프로비저닝 �
 +
 서브넷에는 동일한 계층 3 서브넷에 속하는 IP 주소 풀이 포함되어 있습니다. 서브넷은 network subnet create 명령을 사용하여 생성된다.
 
++
+에 대한 자세한 내용은 `network subnet create` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 사용 가능한 IPspace 표시:
 +
 네트워크 IPspace 쇼

@@ -44,8 +44,6 @@ UTA2 포트를 CNA(Converged Network Adapter) 모드에서 FC(Fibre Channel) 모
 +
 VIF 관리자가 포트를 제거하지 않는 경우, 관리자는 재부팅 후 'network port delete' 명령을 사용하여 수동으로 제거해야 합니다.
 
-
-
 +
 [listing]
 ----
@@ -102,6 +100,11 @@ node-mgmt-home-node net-f8040-34-01 -home-port e0e -address 10.1.1.1
     Warning: Are you sure you want to reboot node "net-f8040-34-01"?
     {y|n}: y
 ----
+
+
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 올바른 SFP+가 설치되었는지 확인합니다.
 +
 네트워크 FCP 어댑터 show-instance-node-adapter입니다

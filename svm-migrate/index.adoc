@@ -181,6 +181,9 @@ SVM 마이그레이션에서 소스와 대상 간의 ONTAP 버전 상호 운용�
 | 외부 키 관리자 | ONTAP 9.11.1 |  
 
 
+| FabricPool | 지원되지 않습니다 |  
+
+
 | 팬아웃 관계(마이그레이션 소스에는 둘 이상의 대상이 있는 SnapMirror 소스 볼륨이 있음) | ONTAP 9.11.1 |  
 
 
@@ -224,9 +227,6 @@ ONTAP 9.16.1부터 다음 MetroCluster SVM 마이그레이션이 지원됩니다
 * 2개의 MetroCluster FC 구성 간에 SVM 마이그레이션
 * 비 MetroCluster 구성과 MetroCluster FC 구성 간에 SVM 마이그레이션
 
-
-
-NOTE: 소스 또는 대상이 MetroCluster 클러스터인 경우 FabricPool에서 SVM 마이그레이션이 지원되지 않습니다.
 
 
 

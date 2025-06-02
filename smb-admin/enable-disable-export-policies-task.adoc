@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, export, policies, policy, smb, access, storage, virtual, machine, svm, control, resource, enable or disable export policies for smb access 
 summary: 'SVM(스토리지 가상 머신)에서 SMB 액세스에 대한 엑스포트 정책을 설정하거나 해제할 수 있습니다. 내보내기 정책을 사용하여 리소스에 대한 SMB 액세스를 제어하는 것은 선택 사항입니다.' 
 ---
-= SMB 액세스에 대한 엑스포트 정책을 설정하거나 해제합니다
+= SMB 액세스를 위한 ONTAP 내보내기 정책 활성화 또는 비활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

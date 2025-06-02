@@ -108,7 +108,7 @@ ASA r2
 
 * ONTAP 9.9.1 이상
 * ONTAP 중재자 1.2 이상
-* 다음 중 하나를 실행하는 ONTAP 중재자를 위한 Linux 서버 또는 가상 시스템:
+* 다음 중 하나를 실행하는 ONTAP Mediator용 Linux 서버 또는 가상 머신:
 
 
 [cols="30,70"]
@@ -236,11 +236,11 @@ SnapMirror 액티브 동기화 볼륨에서는 NTFS 보안 스타일이 * 지원
 
 == ONTAP 중재자
 
-* 투명한 애플리케이션 페일오버를 위해 ONTAP mediator를 외부에서 프로비저닝하고 ONTAP에 연결해야 합니다.
-* 완벽하게 작동하고 예기치 않은 자동 페일오버를 활성화하려면 외부 ONTAP 중재자를 ONTAP 클러스터로 프로비저닝하고 구성해야 합니다.
-* ONTAP 중재자는 두 ONTAP 클러스터와는 별도로 세 번째 장애 도메인에 설치해야 합니다.
-* ONTAP 중재자를 설치할 때 신뢰할 수 있는 주요 CA가 서명한 유효한 인증서로 자체 서명된 인증서를 교체해야 합니다.
-* ONTAP 중재자에 대한 자세한 내용은 을 참조하십시오 link:../mediator/index.html["ONTAP 중재자 서비스 설치 준비"].
+* ONTAP Mediator는 외부에서 프로비저닝되어야 하며 투명한 애플리케이션 장애 조치를 위해 ONTAP에 연결되어야 합니다.
+* 완전한 기능을 갖추고 계획되지 않은 자동 장애 조치를 활성화하려면 외부 ONTAP Mediator를 ONTAP 클러스터로 프로비저닝하고 구성해야 합니다.
+* ONTAP Mediator는 두 개의 ONTAP 클러스터와 별도로 세 번째 장애 도메인에 설치해야 합니다.
+* ONTAP Mediator를 설치할 때 자체 서명된 인증서를 주요 신뢰할 수 있는 CA에서 서명한 유효한 인증서로 바꿔야 합니다.
+* ONTAP Mediator에 대한 자세한 내용은 다음을 참조하세요. link:../mediator/index.html["ONTAP Mediator 설치 준비"] .
 
 
 

@@ -79,6 +79,9 @@ TCP의 경우:
 ----
 network port show
 ----
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . ONTAP 9.7 이하를 실행 중인 경우 SVM에서 프로토콜을 모두 제거하십시오.
 +
 [source, cli]
@@ -124,13 +127,19 @@ vserver nvme show -vserver <SVM_name>
 +
 [source, cli]
 ----
-network interface create -vserver <SVM_name> -lif <lif_name> -address <ip address> -netmask <netmask_value> -role data -data-protocol fc-nvme -home-node <home_node> -home-port <home_port>
+network interface create -vserver <SVM_name> -lif <lif_name> -role data -data-protocol fc-nvme -home-node <home_node> -home-port <home_port>
 ----
-** ONTAP 9.10.1 이상, FC 또는 TCP:
+** ONTAP 9.10.1 이상의 경우 FC:
 +
 [source, cli]
 ----
-network interface create -vserver <SVM_name> -lif <lif_name> -address <ip address> -netmask <netmask_value> -service-policy <default-data-nvme-tcp | default-data-nvme-fc> -data-protocol <fcp | fc-nvme | nvme-tcp> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
+network interface create -vserver <SVM_name> -lif <lif_name> -service-policy <default-data-nvme-tcp | default-data-nvme-fc> -data-protocol <fc-nvme> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
+----
+** ONTAP 9.10.1 이상의 경우 TCP:
++
+[source, cli]
+----
+network interface create -vserver <SVM_name> -lif <lif_name> -address <ip address> -netmask <netmask_value> -service-policy <default-data-nvme-tcp> -data-protocol <nvme-tcp> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
 ----
 
 
@@ -142,11 +151,17 @@ network interface create -vserver <SVM_name> -lif <lif_name> -address <ip addres
 ----
 network interface create -vserver <SVM_name> -lif <lif_name> -role data -data-protocol fc-nvme -home-node <home_node> -home-port <home_port>
 ----
-** ONTAP 9.10.1 이상, FC 또는 TCP:
+** ONTAP 9.10.1 이상의 경우 FC:
 +
 [source, cli]
 ----
-network interface create -vserver <SVM_name> -lif <lif_name> -service-policy <default-data-nvme-tcp | default-data-nvme-fc> -data-protocol <fcp | fc-nvme | nvme-tcp> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
+network interface create -vserver <SVM_name> -lif <lif_name> -service-policy <default-data-nvme-fc> -data-protocol <fc-nvme> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
+----
+** ONTAP 9.10.1 이상의 경우 TCP:
++
+[source, cli]
+----
+network interface create -vserver <SVM_name> -lif <lif_name> -address <ip address> -netmask <netmask_value> -service-policy <default-data-nvme-tcp> -data-protocol <nvme-tcp> -home-node <home_node> -home-port <home_port> -status-admin up -failover-policy disabled -firewall-policy data -auto-revert false -failover-group <failover_group> -is-dns-update-enabled false
 ----
 
 

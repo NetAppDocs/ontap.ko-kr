@@ -76,7 +76,7 @@ link:repair_port_reachability.html["수리 포트 도달 가능성"]
 | 포트의 IPspace가 브로드캐스트 도메인의 IPspace 값으로 업데이트됩니다. | 포트는 브로드캐스트 도메인 속성이 없는 '기본' IPspace로 이동됩니다. 
 |===
 
-NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 마지막 member port를 제거하면 broadcast domain에서 빈 interface group port가 허용되지 않기 때문에 broadcast domain에서 interface group port를 제거한다.
+NOTE: 명령을 사용하여 인터페이스 그룹의 마지막 구성원 포트를 제거하면 `network port ifgrp remove-port` 브로드캐스트 도메인에서 빈 인터페이스 그룹 포트가 허용되지 않으므로 인터페이스 그룹 포트가 브로드캐스트 도메인에서 제거됩니다. 에 대한 자세한 내용은 `network port ifgrp remove-port` link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-remove-port.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .단계
 . network port show 명령을 사용하여 브로드캐스트 도메인에 현재 할당되거나 할당되지 않은 포트를 표시합니다.
@@ -123,6 +123,8 @@ NOTE: network port ifgrp remove-port 명령을 사용하여 interface group의 �
 다음 명령은 기본 IPspace의 브로드캐스트 도메인 bcast1에서 노드 cluster1-01의 포트 e0e를 제거합니다.
 
 'cluster-1::> network port broadcast-domain remove-ports-broadcast-domain bcast1-ports cluster-1-01:e0e'
+
+에 대한 자세한 내용은 `network port broadcast-domain remove-ports` link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-remove-ports.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]

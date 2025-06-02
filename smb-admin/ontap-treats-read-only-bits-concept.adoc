@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: read-only, bit, file-by-file, basis, reflext, file, writable, disable, enable, how ontap treats read-only bits 
 summary: '읽기 전용 비트는 파일을 쓰기 가능(사용 안 함)인지 읽기 전용(사용 가능)인지를 나타내기 위해 파일별로 설정됩니다.' 
 ---
-= ONTAP에서 읽기 전용 비트를 처리하는 방법
+= ONTAP SMB 읽기 전용 비트에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

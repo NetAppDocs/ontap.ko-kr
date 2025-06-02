@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, pausing, pause, resuming, resume, stop, display, information, security, policy, job, commands for managing security policy jobs 
 summary: 보안 정책 작업에 대한 정보를 일시 중지, 다시 시작, 중지 및 표시하는 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 보안 정책 작업을 관리하는 명령입니다
+= SMB 보안 정책 작업을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

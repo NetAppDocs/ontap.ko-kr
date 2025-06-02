@@ -2,44 +2,44 @@
 section: nfs-admin
 title: CLI에서 NFS를 관리합니다
 entries:
-- title: 개요
+- title: NFS 프로토콜에 대한 파일 액세스에 대해 알아보세요
   url: "/nfs-admin/index.html"
 - title: NAS 파일 액세스 이해
   entries:
   - title: 네임스페이스 및 교차점
     entries:
-    - title: 개요
+    - title: NAS 네임스페이스 및 연결 지점에 대해 알아보세요
       url: "/nfs-admin/namespaces-junction-points-concept.html"
-    - title: 일반적인 NAS 네임스페이스 아키텍처란 무엇입니까
+    - title: NAS 네임스페이스 아키텍처에 대해 알아보세요
       url: "/nfs-admin/typical-nas-namespace-architectures-concept.html"
   - title: ONTAP에서 파일 액세스를 제어하는 방법
     entries:
-    - title: 개요
+    - title: NAS 파일 액세스 제어에 대해 알아보세요
       url: "/nfs-admin/ontap-controls-access-files-concept.html"
-    - title: 인증 기반 제한
+    - title: NAS SVM에 대한 인증 기반 제한에 대해 알아보세요.
       url: "/nfs-admin/authentication-based-restrictions-concept.html"
-    - title: 파일 기반 제한 사항
+    - title: NAS SVM에 대한 파일 기반 제한 사항에 대해 알아보세요.
       url: "/nfs-admin/ontap-secures-file-directory-access-concept.html"
   - title: ONTAP가 NFS 클라이언트 인증을 처리하는 방식
     entries:
-    - title: 개요
+    - title: NAS 클라이언트 인증에 대해 알아보세요
       url: "/nfs-admin/nfs-client-authentication-concept.html"
-    - title: ONTAP에서 이름 서비스를 사용하는 방법
+    - title: ONTAP이 이름 서비스를 사용하는 방법을 알아보세요
       url: "/nfs-admin/ontap-name-services-concept.html"
-    - title: ONTAP가 NFS 클라이언트에서 SMB 파일 액세스를 허용하는 방법
+    - title: NFS 클라이언트에서 SMB 파일 액세스 권한 부여
       url: "/nfs-admin/smb-access-nfs-clients-concept.html"
     - title: NFS 자격 증명 캐시의 작동 방식
       url: "/nfs-admin/nfs-credential-cache-concept.html"
 - title: NAS 네임스페이스에서 데이터 볼륨을 생성하고 관리합니다
   pdf-filename: 데이터 볼륨 생성 및 관리
   entries:
-  - title: 지정된 교차점으로 데이터 볼륨을 생성합니다
+  - title: 지정된 연결 지점으로 NAS 볼륨 생성
     url: "/nfs-admin/create-volumes-specified-junction-task.html"
-  - title: 교차점을 지정하지 않고 데이터 볼륨을 생성합니다
+  - title: 특정 연결 지점 없이 NAS 볼륨 생성
     url: "/nfs-admin/create-volumes-without-specifying-junction-task.html"
-  - title: NAS 네임스페이스에서 기존 볼륨 마운트 또는 마운트 해제
+  - title: NAS 네임스페이스에서 NFS 볼륨을 마운트하거나 마운트 해제합니다.
     url: "/nfs-admin/mount-unmount-existing-volumes-nas-namespace-task.html"
-  - title: 볼륨 마운트 및 접합 지점 정보 표시
+  - title: NAS 볼륨 마운트 및 접합 지점 정보를 표시합니다
     url: "/nfs-admin/display-volume-mount-junction-point-task.html"
 - title: 보안 스타일을 구성합니다
   pdf-filename: FlexVol 볼륨 및 qtree에 보안 스타일 구성
@@ -47,58 +47,58 @@ entries:
   - title: 보안 스타일이 데이터 액세스에 미치는 영향
     pdf-filename: 데이터 액세스에 보안 스타일의 영향
     entries:
-    - title: 보안 스타일과 그 효과는 무엇입니까
+    - title: NAS 보안 스타일 알아보기
       url: "/nfs-admin/security-styles-their-effects-concept.html"
-    - title: 보안 스타일을 설정하는 위치 및 시기
+    - title: NFS FlexVol 볼륨의 보안 스타일 알아보기
       url: "/nfs-admin/set-security-styles-concept.html"
-    - title: SVM에 사용할 보안 유형을 결정합니다
+    - title: NAS SVM에서 사용할 보안 스타일을 결정하세요.
       url: "/nfs-admin/decide-security-style-svm-flexvol-concept.html"
-    - title: 보안 스타일 상속의 작동 방식
+    - title: NFS 보안 스타일 상속에 대해 알아보십시오
       url: "/nfs-admin/security-style-inheritance-concept.html"
-    - title: ONTAP에서 UNIX 사용 권한을 유지하는 방법
+    - title: NFS UNIX 권한 보존에 대해 알아보세요
       url: "/nfs-admin/ontap-preserves-unix-permissions-concept.html"
-    - title: Windows 보안 탭을 사용하여 UNIX 사용 권한을 관리합니다
+    - title: Windows 보안 탭을 사용하여 NFS SVM의 UNIX 권한 관리
       url: "/nfs-admin/manage-unix-permissions-windows-security-tab-concept.html"
-  - title: SVM 루트 볼륨에 보안 스타일을 구성합니다
+  - title: NFS SVM 루트 볼륨에서 보안 스타일 구성
     url: "/nfs-admin/configure-security-styles-svm-root-volumes-task.html"
-  - title: FlexVol 볼륨에서 보안 스타일을 구성합니다
+  - title: NFS FlexVol 볼륨에서 보안 스타일 구성
     url: "/nfs-admin/configure-security-styles-task.html"
-  - title: Qtree에서 보안 스타일 구성
+  - title: NFS qtrees에서 보안 스타일 구성
     url: "/nfs-admin/configure-security-styles-qtrees-task.html"
 - title: NFS를 사용하여 파일 액세스를 설정합니다
   entries:
-  - title: 개요
+  - title: SVM에서 NFS 파일 액세스 설정에 대해 알아보세요
     url: "/nfs-admin/setup-file-access-concept.html"
   - title: 내보내기 정책을 사용하여 NFS 액세스를 보호합니다
     pdf-filename: 보안 NFS 액세스
     entries:
-    - title: 엑스포트 정책이 볼륨 또는 qtree에 대한 클라이언트 액세스를 제어하는 방법
+    - title: 내보내기 정책이 NFS 볼륨 또는 Qtree에 대한 클라이언트 액세스를 제어하는 방법
       url: "/nfs-admin/export-policies-client-access-volumes-concept.html"
-    - title: SVM에 대한 기본 엑스포트 정책
+    - title: NFS SVM에 대한 기본 내보내기 정책
       url: "/nfs-admin/default-export-policy-svms-concept.html"
-    - title: 엑스포트 규칙의 작동 방식
+    - title: NFS 내보내기 규칙 작동 방식
       url: "/nfs-admin/export-rules-concept.html"
-    - title: 목록에 없는 보안 유형으로 클라이언트를 관리합니다
+    - title: 나열되지 않은 보안 유형을 사용하는 NFS 클라이언트에 대한 SVM 액세스 관리
       url: "/nfs-admin/handle-clients-unlisted-security-type-concept.html"
-    - title: 보안 유형이 클라이언트 액세스 수준을 결정하는 방법
+    - title: 보안 유형이 NFS 클라이언트 액세스 수준을 결정하는 방식
       url: "/nfs-admin/security-types-client-access-levels-concept.html"
-    - title: 고급 사용자 액세스 요청을 관리합니다
+    - title: NFS 슈퍼유저 액세스 요청 관리에 대해 알아보세요
       url: "/nfs-admin/handle-superuser-access-requests-concept.html"
-    - title: ONTAP에서 엑스포트 정책 캐시를 사용하는 방법
+    - title: NFS 내보내기 정책 캐시에 대해 알아보세요
       url: "/nfs-admin/ontap-export-policy-caches-concept.html"
-    - title: 액세스 캐시의 작동 방식
+    - title: NFS 액세스 캐시에 대해 알아보세요
       url: "/nfs-admin/access-cache-concept.html"
-    - title: 액세스 캐시 매개 변수의 작동 방식
+    - title: NFS 액세스 캐시 매개변수에 대해 알아보세요
       url: "/nfs-admin/access-cache-parameters-work-concept.html"
-    - title: qtree에서 엑스포트 정책을 제거합니다
+    - title: NFS qtree에서 내보내기 정책 제거
       url: "/nfs-admin/remove-export-policy-qtree-task.html"
-    - title: qtree 파일 작업에 대한 qtree ID의 유효성을 검사하는 중입니다
+    - title: qtree 파일 작업을 위한 NFS qtree ID 검증
       url: "/nfs-admin/validate-qtree-ids-qtree-file-operations-task.html"
-    - title: FlexVol 볼륨에 대한 정책 제한 및 중첩된 연결 지점을 내보냅니다
+    - title: NFS FlexVol 볼륨에 대한 정책 제한 및 중첩된 연결 내보내기
       url: "/nfs-admin/export-policy-restrictions-nested-junctions-concept.html"
   - title: 강력한 보안을 위해 NFS와 Kerberos 사용
     entries:
-    - title: Kerberos에 대한 ONTAP 지원
+    - title: Kerberos에 대한 NFS 지원
       url: "/nfs-admin/ontap-support-kerberos-concept.html"
     - title: NFS로 Kerberos 구성 요구 사항
       url: "/nfs-admin/requirements-configuring-kerberos-concept.html"
@@ -107,101 +107,101 @@ entries:
   - title: 이름 서비스 구성
     pdf-filename: 환경에 대한 이름 서비스를 구성합니다
     entries:
-    - title: ONTAP 네임 서비스 스위치 구성의 작동 방식
+    - title: NFS 이름 서비스 스위치 구성에 대해 알아보세요
       url: "/nfs-admin/ontap-name-service-switch-config-concept.html"
     - title: LDAP를 사용합니다
       pdf-filename: LDAP 서버를 사용합니다
       entries:
-      - title: 개요
+      - title: NFS SVM용 LDAP에 대해 알아보세요
         url: "/nfs-admin/using-ldap-concept.html"
-      - title: LDAP 서명 및 봉인 개념
+      - title: NFS SVM에 대한 LDAP 서명 및 봉인에 대해 알아보세요.
         url: "/nfs-admin/ldap-signing-sealing-concept.html"
-      - title: LDAPS 개념
+      - title: NFS SVM용 LDAPS에 대해 알아보세요
         url: "/nfs-admin/ldaps-concept.html"
-      - title: LDAP RFC2307bis 지원을 활성화합니다
+      - title: NFS SVM에 대한 LDAP RFC2307bis 지원 활성화
         url: "/nfs-admin/enable-ldap-rfc2307bis-support-task.html"
-      - title: LDAP 디렉토리 검색에 대한 구성 옵션입니다
+      - title: LDAP 디렉토리 검색을 위한 NFS 구성 옵션
         url: "/nfs-admin/config-options-ldap-directory-searches-concept.html"
-      - title: LDAP 디렉토리 Netgroup-by-host 검색 성능 향상
+      - title: NFS SVM에 대한 LDAP 디렉토리 netgroup-by-host 검색의 성능 향상
         url: "/nfs-admin/improve-performance-ldap-directory-searches-task.html"
-      - title: nsswitch 인증에 LDAP 고속 바인딩을 사용합니다
+      - title: NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다.
         url: "/nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html"
-      - title: LDAP 통계를 표시합니다
+      - title: NFS SVM에 대한 LDAP 통계 표시
         url: "/nfs-admin/display-ldap-statistics-task.html"
   - title: 이름 매핑을 구성합니다
     pdf-filename: ID 매핑을 위한 이름 매핑을 구성합니다
     entries:
-    - title: 개요
+    - title: NAS SVM에 대한 이름 매핑 구성에 대해 알아보세요
       url: "/nfs-admin/how-name-mappings-used-concept.html"
-    - title: 이름 매핑 작동 방식
+    - title: NAS SVM의 이름 매핑에 대해 알아보세요
       url: "/nfs-admin/name-mapping-concept.html"
-    - title: 다중 도메인은 UNIX 사용자와 Windows 사용자 이름 매핑을 검색합니다
+    - title: NAS SVM에서 UNIX-Windows 사용자 이름 매핑을 위한 다중 도메인 검색
       url: "/nfs-admin/multidomain-searches-unix-windows-user-concept.html"
-    - title: 이름 매핑 변환 규칙
+    - title: NAS SVM에 대한 이름 매핑 변환 규칙
       url: "/nfs-admin/name-mapping-conversion-rules-concept.html"
-    - title: 이름 매핑을 생성합니다
+    - title: NAS SVM에 대한 이름 매핑 만들기
       url: "/nfs-admin/create-name-mapping-task.html"
-    - title: 기본 사용자를 구성합니다
+    - title: NAS SVM의 기본 사용자 구성
       url: "/nfs-admin/configure-default-user-task.html"
-    - title: 이름 매핑을 관리하는 명령입니다
+    - title: NFS 이름 매핑을 관리하는 명령입니다
       url: "/nfs-admin/commands-manage-name-mappings-reference.html"
-  - title: Windows NFS 클라이언트에 대한 액세스를 설정합니다
+  - title: SVM에 대한 Windows NFS 클라이언트에 대한 액세스 활성화
     url: "/nfs-admin/enable-access-windows-nfs-clients-task.html"
-  - title: NFS 클라이언트에서 NFS 내보내기 표시를 설정합니다
+  - title: SVM에 대한 NFS 클라이언트에서 내보내기 표시를 활성화합니다.
     url: "/nfs-admin/view-nfs-exports-svms-concept.html"
 - title: NFS를 사용하여 파일 액세스를 관리합니다
   entries:
-  - title: NFSv3을 사용하거나 사용하지 않도록 설정합니다
+  - title: SVM에 대해 NFSv3 활성화 또는 비활성화
     url: "/nfs-admin/enable-disable-nfsv3-task.html"
-  - title: NFSv4.0을 설정 또는 해제합니다
+  - title: SVM에 대해 NFSv4.0을 활성화하거나 비활성화합니다.
     url: "/nfs-admin/enable-disable-nfsv40-task.html"
-  - title: NFSv4.1을 설정 또는 해제합니다
+  - title: SVM에 대해 NFSv4.1을 활성화하거나 비활성화합니다.
     url: "/nfs-admin/enable-disable-nfsv41-task.html"
   - title: NFSv4 저장소 풀 제한을 관리합니다
     url: "/nfs-admin/manage-nfsv4-storepool-controls-task.html"
-  - title: pNFS를 사용하거나 사용하지 않도록 설정합니다
+  - title: SVM에 대한 pNFS 활성화 또는 비활성화
     url: "/nfs-admin/enable-disable-pnfs-task.html"
-  - title: TCP 및 UDP를 통한 NFS 액세스 제어
+  - title: SVM에 대한 TCP 및 UDP를 통한 NFS 액세스 제어
     url: "/nfs-admin/control-nfs-access-over-tcp-udp-task.html"
-  - title: 예약되지 않은 포트에서 NFS 요청 제어
+  - title: SVM에 대한 예약되지 않은 포트에서 NFS 요청 제어
     url: "/nfs-admin/control-nfs-requests-nonreserved-ports-task.html"
-  - title: 알 수 없는 UNIX 사용자에 대해 NTFS 볼륨 또는 qtree에 대한 NFS 액세스를 처리합니다
+  - title: 알 수 없는 UNIX 사용자의 NTFS 볼륨 또는 qtree에 대한 NFS 액세스를 처리합니다
     url: "/nfs-admin/access-ntfs-volumes-qtrees-unknown-users-task.html"
-  - title: 예약되지 않은 포트를 사용하여 NFS 내보내기를 마운트하는 클라이언트에 대한 고려 사항
+  - title: 예약되지 않은 포트에서 NFS 내보내기를 마운트하는 클라이언트에 대한 고려 사항
     url: "/nfs-admin/clients-mount-exports-nonreserved-port-concept.html"
-  - title: 도메인을 확인하여 넷그룹에 대해 보다 엄격한 액세스 검사를 수행합니다
+  - title: NFS SVM에 대한 도메인을 확인하여 넷그룹에 대한 보다 엄격한 액세스 검사를 수행합니다.
     url: "/nfs-admin/perform-access-check-netgroups-verify-domains-task.html"
-  - title: NFSv3 서비스에 사용되는 포트 수정
+  - title: SVM의 NFSv3 서비스에 사용되는 포트 수정
     url: "/nfs-admin/modify-ports-used-nfsv3-services-task.html"
   - title: NFS 서버 관리를 위한 명령입니다
     url: "/nfs-admin/commands-manage-servers-reference.html"
-  - title: 이름 서비스 문제 해결
+  - title: NAS SVM의 이름 서비스 문제 해결
     url: "/nfs-admin/troubleshoot-name-service-issues-task.html"
-  - title: 이름 서비스 연결을 확인하는 중입니다
+  - title: NAS SVM에 대한 이름 서비스 연결 확인
     url: "/nfs-admin/verify-name-service-connections-task.html"
-  - title: 이름 서비스 스위치 항목을 관리하는 명령입니다
+  - title: NAS 이름 서비스 스위치 항목을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-name-service-switch-entries-reference.html"
-  - title: 이름 서비스 캐시를 관리하는 명령입니다
+  - title: NAS 이름 서비스 캐시를 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-name-service-cache-reference.html"
   - title: 이름 매핑을 관리하는 명령입니다
     url: "/nfs-admin/commands-manage-name-mappings-reference.html"
-  - title: 로컬 UNIX 사용자를 관리하는 명령입니다
+  - title: NAS 로컬 UNIX 사용자를 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-local-unix-users-reference.html"
-  - title: 로컬 UNIX 그룹을 관리하는 명령입니다
+  - title: NAS 로컬 UNIX 그룹을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-local-unix-groups-reference.html"
-  - title: 로컬 UNIX 사용자, 그룹 및 그룹 구성원에 대한 제한
+  - title: NFS SVM의 로컬 UNIX 사용자, 그룹 및 그룹 구성원에 대한 제한
     url: "/nfs-admin/limits-local-unix-users-groups--concept.html"
-  - title: 로컬 UNIX 사용자 및 그룹에 대한 제한을 관리합니다
+  - title: NFS SVM에 대한 로컬 UNIX 사용자 및 그룹에 대한 제한 관리
     url: "/nfs-admin/manage-limits-local-unix-users-groups-task.html"
-  - title: 로컬 넷그룹을 관리하기 위한 명령입니다
+  - title: NFS 로컬 넷그룹을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-local-netgroups-reference.html"
-  - title: NIS 도메인 구성을 관리하는 명령입니다
+  - title: NFS NIS 도메인 구성을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-nis-domain-config-reference.html"
-  - title: LDAP 클라이언트 구성을 관리하는 명령입니다
+  - title: NFS LDAP 클라이언트 구성을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-ldap-client-config-reference.html"
-  - title: LDAP 구성을 관리하는 명령입니다
+  - title: NFS LDAP 구성을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-ldap-config-reference.html"
-  - title: LDAP 클라이언트 스키마 템플릿을 관리하는 명령입니다
+  - title: NFS LDAP 클라이언트 스키마 템플릿을 관리하기 위한 명령
     url: "/nfs-admin/commands-manage-ldap-client-schema-templates-reference.html"
   - title: NFS Kerberos 인터페이스 구성을 관리하는 명령입니다
     url: "/nfs-admin/commands-manage-kerberos-interface-config-reference.html"
@@ -213,119 +213,119 @@ entries:
     url: "/nfs-admin/commands-manage-export-rules-reference.html"
   - title: NFS 자격 증명 캐시를 구성합니다
     entries:
-    - title: NFS 자격 증명 캐시 라이브 시간 수정 이유
+    - title: SVM에 대한 NFS 자격 증명 캐시 TTL(수명)을 수정하는 이유
       url: "/nfs-admin/modify-credential-cache-time-to-live-reference.html"
-    - title: 캐시된 NFS 사용자 자격 증명에 대한 라이브 시간 구성
+    - title: SVM에 대한 캐시된 NFS 사용자 자격 증명의 수명 구성
       url: "/nfs-admin/configure-time-to-live-cached-user-credentials-task.html"
   - title: 엑스포트 정책 캐시 관리
     entries:
-    - title: 엑스포트 정책 캐시 플러시
+    - title: NAS SVM에 대한 내보내기 정책 캐시 플러시
       url: "/nfs-admin/flush-export-policy-caches-task.html"
-    - title: 엑스포트 정책 넷그룹 큐 및 캐시를 표시합니다
+    - title: NFS SVM에 대한 내보내기 정책 netgroup 대기열 및 캐시 표시
       url: "/nfs-admin/display-export-policy-netgroup-queue-cache-task.html"
-    - title: 클라이언트 IP 주소가 넷그룹의 구성원인지 확인합니다
+    - title: 클라이언트 IP 주소가 NFS netgroup의 멤버인지 확인하세요.
       url: "/nfs-admin/check-whether-client-ip-address-is-member-netgroup-task.html"
-    - title: 액세스 캐시 성능을 최적화합니다
+    - title: NFS SVM에 대한 액세스 캐시 성능 최적화
       url: "/nfs-admin/optimize-access-cache-performance-task.html"
   - title: 파일 잠금 관리
     pdf-filename: 프로토콜 간 파일 잠금을 관리합니다
     entries:
-    - title: 프로토콜 간 파일 잠금 정보
+    - title: NFS SVM의 프로토콜 간 파일 잠금에 대해 알아보세요.
       url: "/nfs-admin/file-locking-between-protocols-concept.html"
-    - title: ONTAP에서 읽기 전용 비트를 처리하는 방법
+    - title: NFS SVM의 읽기 전용 비트에 대해 알아보세요
       url: "/nfs-admin/ontap-treats-read-only-bits-concept.html"
-    - title: 공유 경로 구성 요소에 대한 잠금 처리에서 ONTAP가 Windows와 어떻게 다른지 설명합니다
+    - title: NFS와 Windows가 공유 경로 구성 요소의 잠금을 처리하는 방식이 어떻게 다른지 알아보세요.
       url: "/nfs-admin/ontap-differs-windows-locks-share-path-concept.html"
-    - title: 잠금에 대한 정보를 표시합니다
+    - title: NFS SVM에 대한 잠금 정보 표시
       url: "/nfs-admin/display-locks-task.html"
-    - title: 잠금 해제
+    - title: NFS SVM에 대한 파일 잠금 해제
       url: "/nfs-admin/break-locks-task.html"
-  - title: FPolicy를 먼저 읽고 첫 번째 쓰기 필터가 NFS에서 작동하는 방식
+  - title: FPolicy의 첫 번째 읽기 및 첫 번째 쓰기 필터가 NFS에서 작동하는 방식을 알아보세요.
     url: "/nfs-admin/fpolicy-first-read-first-write-filters-concept.html"
-  - title: NFSv4.1 서버 구현 ID 수정
+  - title: SVM에 대한 NFSv4.1 서버 구현 ID 수정
     url: "/nfs-admin/modify-nfsv41-server-implementation-id-task.html"
   - title: NFSv4 ACL 관리
     entries:
-    - title: NFSv4 ACL 설정 이점
+    - title: SVM에 대한 NFSv4 ACL 활성화의 이점에 대해 알아보세요.
       url: "/nfs-admin/benefits-enable-nfsv4-acls-concept.html"
-    - title: NFSv4 ACL의 작동 방식
+    - title: SVM에 대한 NFSv4 ACL에 대해 알아보세요
       url: "/nfs-admin/nfsv4-acls-concept.html"
-    - title: NFSv4 ACL 수정 설정 또는 해제
+    - title: SVM에 대한 NFSv4 ACL 수정을 활성화하거나 비활성화합니다.
       url: "/nfs-admin/enable-disable-modification-nfsv4-acls-task.html"
-    - title: ONTAP에서 NFSv4 ACL을 사용하여 파일을 삭제할 수 있는지 여부를 확인하는 방법
+    - title: ONTAP이 NFSv4 ACL을 사용하여 파일을 삭제할 수 있는지 여부를 확인하는 방법을 알아보세요.
       url: "/nfs-admin/nfsv4-acls-determine-delete-file-concept.html"
-    - title: NFSv4 ACL을 설정하거나 해제합니다
+    - title: SVM에 대한 NFSv4 ACL 활성화 또는 비활성화
       url: "/nfs-admin/enable-disable-nfsv4-acls-task.html"
-    - title: NFSv4 ACL의 최대 ACE 제한 수정
+    - title: SVM에 대한 NFSv4 ACL의 최대 ACE 제한 수정
       url: "/nfs-admin/modify-maximum-ace-limit-nfsv4-acls-task.html"
   - title: NFSv4 파일 위임을 관리합니다
     entries:
-    - title: NFSv4 읽기 파일 위임을 설정하거나 해제합니다
+    - title: SVM에 대한 NFSv4 읽기 파일 위임을 활성화하거나 비활성화합니다.
       url: "/nfs-admin/enable-disable-nfsv4-read-file-delegations-task.html"
-    - title: NFSv4 쓰기 파일 위임을 설정 또는 해제합니다
+    - title: SVM에 대한 NFSv4 쓰기 파일 위임을 활성화하거나 비활성화합니다.
       url: "/nfs-admin/enable-disable-nfsv4-write-file-delegations-task.html"
   - title: NFSv4 파일을 구성하고 잠금을 기록합니다
     entries:
-    - title: NFSv4 파일 및 레코드 잠금에 대해 설명합니다
+    - title: SVM에 대한 NFSv4 파일 및 레코드 잠금에 대해 알아보세요
       url: "/nfs-admin/nfsv4-file-record-locking-concept.html"
-    - title: NFSv4 잠금 임대 기간 지정
+    - title: SVM에 대한 NFSv4 잠금 임대 기간 지정
       url: "/nfs-admin/specify-nfsv4-locking-lease-period-task.html"
-    - title: NFSv4 잠금 유예 기간 지정
+    - title: SVM에 대한 NFSv4 잠금 유예 기간 지정
       url: "/nfs-admin/specify-nfsv4-locking-grace-period-task.html"
-  - title: NFSv4 참조 작동 방식
+  - title: SVM에 대한 NFSv4 참조에 대해 알아보세요
     url: "/nfs-admin/nfsv4-referrals-concept.html"
-  - title: NFSv4 조회를 설정하거나 해제합니다
+  - title: SVM에 대한 NFSv4 참조 활성화 또는 비활성화
     url: "/nfs-admin/enable-disable-nfsv4-referrals-task.html"
-  - title: NFS 통계를 표시합니다
+  - title: NFS SVM에 대한 통계 표시
     url: "/nfs-admin/display-statistics-task.html"
-  - title: DNS 통계 표시
+  - title: NFS SVM에 대한 DNS 통계 표시
     url: "/nfs-admin/display-dns-statistics-task.html"
-  - title: NIS 통계를 표시합니다
+  - title: NFS SVM에 대한 NIS 통계 표시
     url: "/nfs-admin/display-nis-statistics-task.html"
-  - title: VMware vStorage over NFS 지원
+  - title: NFS를 통한 VMware vStorage 지원에 대해 알아보세요
     url: "/nfs-admin/support-vmware-vstorage-over-nfs-concept.html"
   - title: VMware vStorage over NFS를 사용하거나 사용하지 않도록 설정합니다
     url: "/nfs-admin/enable-disable-vmware-vstorage-over-nfs-task.html"
-  - title: rquota 지원을 설정하거나 해제합니다
+  - title: NFS SVM에서 rquota 지원을 설정하거나 해제합니다
     url: "/nfs-admin/enable-disable-rquota-support-task.html"
-  - title: TCP 전송 크기를 수정하여 NFSv3 및 NFSv4 성능 향상
+  - title: NFSv3 및 NFSv4 성능 개선 사항과 SVM의 TCP 전송 크기에 대해 알아보세요.
     url: "/nfs-admin/nfsv3-nfsv4-performance-tcp-transfer-size-concept.html"
-  - title: NFSv3 및 NFSv4 TCP 최대 전송 크기 수정
+  - title: SVM에 대한 NFSv3 및 NFSv4 TCP 최대 전송 크기 수정
     url: "/nfs-admin/modify-nfsv3-nfsv4-tcp-maximum-transfer-size-task.html"
-  - title: NFS 사용자에게 허용되는 그룹 ID 수를 구성합니다
+  - title: SVM의 NFS 사용자에게 허용되는 그룹 ID 수를 구성합니다.
     url: "/nfs-admin/configure-number-group-ids-allowed-nfs-users-task.html"
-  - title: NTFS 보안 스타일 데이터에 대한 루트 사용자 액세스를 제어합니다
+  - title: SVM의 NTFS 보안 스타일 데이터에 대한 루트 사용자 액세스를 제어합니다.
     url: "/nfs-admin/control-root-user-access-ntfs-security-data-task.html"
 - title: 지원되는 NFS 버전 및 클라이언트
   entries:
-  - title: 개요
+  - title: 지원되는 NFS 버전 및 클라이언트에 대해 알아보세요
     url: "/nfs-admin/supported-versions-clients-reference.html"
-  - title: ONTAP에서 지원하는 NFSv4.0 기능
+  - title: NFSv4.0 기능 지원에 대해 알아보세요
     url: "/nfs-admin/nfsv40-functionality-supported-concept.html"
-  - title: NFSv4에 대한 ONTAP 지원의 제한사항
+  - title: NFSv4에 대한 지원 제한 사항에 대해 알아보세요.
     url: "/nfs-admin/limitations-support-nfsv4-concept.html"
-  - title: NFSv4.1을 위한 ONTAP 지원
+  - title: NFSv4.1 지원에 대해 알아보세요
     url: "/nfs-admin/ontap-support-nfsv41-concept.html"
-  - title: NFSv4.2에 대한 ONTAP 지원
+  - title: NFSv4.2 지원에 대해 알아보세요
     url: "/nfs-admin/ontap-support-nfsv42-concept.html"
-  - title: ONTAP은 병렬 NFS를 지원합니다
+  - title: 병렬 NFS 지원에 대해 알아보세요
     url: "/nfs-admin/ontap-support-parallel-nfs-concept.html"
-  - title: 하드 마운트 사용
+  - title: NFS 하드 마운트에 대해 알아보세요
     url: "/nfs-admin/hard-mounts-concept.html"
 - title: NFS 및 SMB 파일 및 디렉토리 명명 종속성
   pdf-filename: 파일 및 디렉토리 이름 지정 종속성입니다
   entries:
-  - title: 개요
+  - title: NFS 및 SMB 파일과 디렉토리 명명 종속성에 대해 알아보세요
     url: "/nfs-admin/nfs-smb-file-directory-naming-concept.html"
-  - title: 문자 파일 또는 디렉터리 이름에 사용할 수 있습니다
+  - title: NFS SVM에 대한 다양한 운영 체제의 유효한 문자에 대해 알아보세요.
     url: "/nfs-admin/characters-file-directory-name-concept.html"
-  - title: 다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대/소문자를 구분하십시오
+  - title: NFS 다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대소문자 구분에 대해 알아보세요.
     url: "/nfs-admin/case-sensitivity-file-directory-multiprotocol-concept.html"
-  - title: ONTAP에서 파일 및 디렉터리 이름을 만드는 방법
+  - title: NFS 파일 및 디렉토리 이름 생성에 대해 알아보세요
     url: "/nfs-admin/how-ontap-creates-file-directory-names-concept.html"
-  - title: ONTAP에서 멀티바이트 파일, 디렉토리 및 qtree 이름을 처리하는 방식
+  - title: 다중 바이트 파일, 디렉토리 및 qtree 이름의 NFS 처리에 대해 알아보세요.
     url: "/nfs-admin/multi-byte-file-directory-qtree-names-concept.html"
-  - title: 볼륨에서 SMB 파일 이름 변환에 대한 문자 매핑을 구성합니다
+  - title: NFS 볼륨에서 SMB 파일 이름 변환을 위한 문자 매핑 구성
     url: "/nfs-admin/configure-character-mappings-smb-file-translation-task.html"
-  - title: SMB 파일 이름 변환에 대한 문자 매핑을 관리하는 명령입니다
+  - title: SMB 파일 이름 변환을 위한 문자 매핑을 관리하기 위한 NFS 명령
     url: "/nfs-admin/commands-manage-character-mappings-reference.html"

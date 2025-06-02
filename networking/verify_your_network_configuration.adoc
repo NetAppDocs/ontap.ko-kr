@@ -23,6 +23,9 @@ ONTAP 9.7x 이하에서 ONTAP 9.8 이상으로 업그레이드한 후에는 네�
 ----
 network port reachability show -detail
 ----
++
+에 대한 자세한 내용은 `network port reachability show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-reachability-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 명령 출력에 연결 가능 결과가 포함되어 있습니다. 다음 진단트리와 표를 사용하여 내 상태 결과(내 상태)를 이해하고 다음에 수행할 작업(있는 경우)을 결정합니다.
@@ -59,6 +62,8 @@ image:ontap_nm_image1.png["수리 가능성 의사결정 트리"]
 네트워크 포트 도달 가능성 복구 노드 포트
 
 자세한 내용은 을 참조하십시오 link:repair_port_reachability.html["수리 포트 도달 가능성"].
+
+에 대한 자세한 내용은 `network port reachability repair` link:https://docs.netapp.com/us-en/ontap-cli/network-port-reachability-repair.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 

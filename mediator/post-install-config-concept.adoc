@@ -2,7 +2,7 @@
 permalink: mediator/post-install-config-concept.html 
 sidebar: sidebar 
 keywords: mediator, new, release, update, install, configuration, post-installation, after installation, metrocluster ip, snapmirror business continuity, snapmirror active sync 
-summary: ONTAP 중재자 서비스를 설치하고 실행한 후 ONTAP 스토리지 시스템에서 중재자 기능을 사용하려면 추가 구성 작업을 수행해야 합니다. 
+summary: ONTAP Mediator를 설치하고 실행한 후에는 Mediator 기능을 사용하기 위해 ONTAP 스토리지 시스템에서 추가 구성 작업을 수행해야 합니다. 
 ---
 = 설치 후 ONTAP 중재자 구성
 :allow-uri-read: 
@@ -11,23 +11,23 @@ summary: ONTAP 중재자 서비스를 설치하고 실행한 후 ONTAP 스토리
 
 
 [role="lead"]
-ONTAP 중재자 서비스를 설치하고 실행한 후 ONTAP 스토리지 시스템에서 중재자 기능을 사용하려면 추가 구성 작업을 수행해야 합니다.
+ONTAP Mediator를 설치하고 실행한 후에는 ONTAP Mediator 기능을 사용하기 위해 ONTAP 스토리지 시스템에서 추가 구성 작업을 수행해야 합니다.
 
-* MetroCluster IP 구성에서 ONTAP 중재자 서비스를 사용하려면 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["MetroCluster IP 구성에서 ONTAP 중재자 서비스 구성"^].
-* SnapMirror 활성 동기화를 사용하려면 을 참조하십시오 link:../snapmirror-active-sync/mediator-install-task.html["ONTAP 중재자 서비스를 설치하고 ONTAP 클러스터 구성을 확인합니다"].
+* MetroCluster IP 구성에서 ONTAP Mediator를 사용하려면 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["MetroCluster IP 구성에서 ONTAP Mediator 구성"^] .
+* SnapMirror 활성 동기화를 사용하려면 을 참조하십시오link:../snapmirror-active-sync/mediator-install-task.html["ONTAP Mediator를 설치하고 ONTAP 클러스터 구성을 확인하세요."].
 
 
 
 
 == ONTAP 중재자 보안 정책을 구성합니다
 
-ONTAP 중재자 서버는 구성 가능한 여러 가지 보안 설정을 지원합니다. 모든 설정의 기본값은 `low_space_threshold_mib: 10` 읽기 전용 파일로 제공됩니다.
+ONTAP Mediator는 여러 가지 구성 가능한 보안 설정을 지원합니다. 모든 설정의 기본값은 `low_space_threshold_mib: 10` 읽기 전용 파일로 제공됩니다.
 
 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.user_config.yaml`
 
 에 배치된 모든 값 `ontap_mediator.user_config.yaml` 는 기본값을 무시하고 모든 ONTAP 중재자 업그레이드에 대해 유지됩니다.
 
-수정 후 `ontap_mediator.user_config.yaml`에서 ONTAP 중재자 서비스를 다시 시작합니다.
+수정 후  `ontap_mediator.user_config.yaml` , ONTAP Mediator를 다시 시작하세요:
 
 `systemctl restart ontap_mediator`
 
@@ -52,7 +52,7 @@ NOTE: ONTAP 중재자 업그레이드 중에 수정된 값이 유지되지 않�
 * `/opt/netapp/lib/ontap_mediator/uwsgi/ontap_mediator.ini`
 
 
-이러한 파일의 변수는 ONTAP 중재자 서비스에서 사용하는 인증서 파일을 제어하는 데 사용됩니다.
+이러한 파일의 변수는 ONTAP Mediator에서 사용되는 인증서 파일을 제어하는 데 사용됩니다.
 
 [role="tabbed-block"]
 ====
@@ -155,7 +155,7 @@ NOTE: ONTAP 중재자 업그레이드 중에 수정된 값이 유지되지 않�
 |===
 --
 ====
-이러한 속성을 수정하는 경우 ONTAP 중재자 서비스를 다시 시작하여 변경 사항을 적용합니다. 기본 인증서를 타사 인증서로 교체하는 방법에 대한 자세한 지침은 을 참조하십시오link:../mediator/manage-task.html#replace-self-signed-certificates-with-trusted-third-party-certificates["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"].
+이러한 속성을 수정한 경우 ONTAP Mediator를 다시 시작하여 변경 사항을 적용하세요. 기본 인증서를 타사 인증서로 교체하는 방법에 대한 자세한 지침은 을 참조하십시오link:../mediator/manage-task.html#replace-self-signed-certificates-with-trusted-third-party-certificates["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"].
 
 
 
@@ -223,7 +223,7 @@ low_space_threshold_mib: 10
 
 === 예약 로그 공간을 제어합니다
 
-reserve_log_space는 특정 설정에 의해 제어됩니다. 기본적으로 ONTAP 중재자 서버 설치는 로그를 위한 별도의 디스크 공간을 만듭니다. 설치 프로그램은 중재자 로깅에 명시적으로 사용할 총 700MB의 디스크 공간을 가진 새 고정 크기 파일을 만듭니다.
+reserve_log_space는 특정 설정에 의해 제어됩니다. 기본적으로 ONTAP Mediator 설치 시 로그를 위한 별도의 디스크 공간이 생성됩니다. 설치 프로그램은 ONTAP Mediator 로깅에 명시적으로 사용할 총 700MB의 디스크 공간을 가진 새로운 고정 크기 파일을 생성합니다.
 
 이 기능을 비활성화하고 기본 디스크 공간을 사용하려면 다음 단계를 수행하십시오.
 

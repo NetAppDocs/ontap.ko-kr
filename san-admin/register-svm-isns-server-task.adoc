@@ -41,6 +41,9 @@ summary: 'vserver iSCSI iSNS 명령을 사용하여 iSNS 서버에 등록할 SVM
 +
 'network route create-vserver_SVM_name_-destination_destination_-gateway_gateway_'
 
++
+에 대한 자세한 내용은 `network route create` link:https://docs.netapp.com/us-en/ontap-cli/network-route-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . iSNS 서비스에 등록할 SVM을 구성합니다.
 +
 'vserver iSCSI iSNS create -vserver_SVM_name_-address_ip_address_'

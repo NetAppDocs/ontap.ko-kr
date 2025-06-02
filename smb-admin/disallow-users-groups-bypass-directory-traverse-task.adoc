@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user, traverse, directories, directory, path, file, permission, sechangenotifyprivilege, privilege, local, smb, group, storage, virtual, machine, svm, disallow users or groups from bypassing directory traverse checking 
 summary: '사용자가 이동 중인 디렉토리에 대한 권한이 없기 때문에 경로 내의 모든 디렉토리를 사용자에게 이동하지 않도록 하려면 SVM(Storage Virtual Machine)의 로컬 SMB 사용자 또는 그룹에서 SeChangeNotifyPrivilege 권한을 제거할 수 있습니다.' 
 ---
-= 디렉토리 통과 확인을 거치지 않고 사용자 또는 그룹을 허용하지 않습니다
+= 사용자 또는 그룹이 ONTAP SMB 디렉터리 트래버스 검사를 우회하는 것을 허용하지 않음
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -37,6 +37,9 @@ ONTAP 9.8부터 계층 2 접근성을 기반으로 시스템이 만든 브로드
 +
 네트워크 포트 도달 가능성 세부 정보
 
++
+에 대한 자세한 내용은 `network port reachability show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-reachability-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 필요한 경우 브로드캐스트 도메인을 다른 IPspace로 이동:
 +
 네트워크 포트 브로드캐스트 도메인 이동

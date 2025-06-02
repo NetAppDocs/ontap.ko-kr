@@ -65,9 +65,7 @@ network subnet modify -subnet-name <subnet_name> [-ipspace <ipspace_name>] [-sub
 ....
 network subnet modify -subnet-name <sub3> -gateway <192.0.3.1>
 ....
-.관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-modify.html["네트워크 서브넷 수정"^]
-
+에 대한 자세한 내용은 `network subnet modify` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 ====

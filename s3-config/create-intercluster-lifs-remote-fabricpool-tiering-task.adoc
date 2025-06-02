@@ -48,6 +48,9 @@ cluster01-02
        e0c       Default      Default          up     1500   auto/1000
        e0d       Default      Default          up     1500   auto/1000
 ----
++
+에 대한 자세한 내용은 `network port show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 시스템 SVM에 대한 인터클러스터 LIF 생성:
 +
 'network interface create-vserver cluster-lif_LIF_name_-service-policy default-인터클러스터-home-node_node_-home-port_port_-address_port_ip_-netmask_mask_'

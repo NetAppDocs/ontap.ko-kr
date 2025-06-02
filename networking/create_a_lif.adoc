@@ -26,6 +26,9 @@ LIF 마이그레이션 중에 지연을 줄이려면 ONTAP에 연결된 스위�
 +
 서브넷에는 동일한 계층 3 서브넷에 속하는 IP 주소 풀이 포함되어 있습니다. System Manager나 network subnet create 명령을 사용하여 생성됩니다.
 
++
+에 대한 자세한 내용은 `network subnet create` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * LIF가 처리하는 트래픽 유형을 지정하는 메커니즘이 변경되었습니다. ONTAP 9.5 이전 버전의 경우 LIF는 역할을 사용하여 처리할 트래픽 유형을 지정합니다. ONTAP 9.6부터 LIF는 서비스 정책을 사용하여 처리할 트래픽 유형을 지정합니다.
 
 
@@ -145,6 +148,9 @@ ipspace1
                                 node2:e0d   complete
                                 node2:e0e   complete
 ....
++
+에 대한 자세한 내용은 `network port broadcast-domain show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . LIF에 사용할 서브넷에 사용되지 않는 IP 주소가 충분히 있는지 확인합니다.
 +
 'network subnet show - IPSpace_ipspace1_'

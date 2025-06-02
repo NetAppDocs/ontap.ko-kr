@@ -69,8 +69,6 @@ IP 주소를 서브넷에 추가합니다
 네트워크 서브넷 remove-range
 
 |===
-이 절차에서 설명하는 명령 또는 link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-remove-ranges.html["네트워크 서브넷 범위를 제거합니다"^]명령에 대해 자세히 link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-add-ranges.html["네트워크 서브넷 추가 범위"^]알아보십시오.
-
 다음 명령을 실행하면 서브넷 sub1에 IP 주소 192.0.2.82 ~ 192.0.2.85 가 추가됩니다.
 
 ....
@@ -86,5 +84,7 @@ network subnet remove-ranges -subnet-name <sub3> -ip-ranges <198.51.100.9>
 ....
 network subnet add-ranges -subnet-name <sub3> -ip-ranges <198.51.10.1-198.51.10.50>
 ....
+및 `network subnet remove-ranges` 에 대한 자세한 `network subnet add-ranges` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+subnet["ONTAP 명령 참조입니다"^]참조하십시오.
+
 --
 ====

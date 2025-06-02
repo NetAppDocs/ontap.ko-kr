@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aware, guideline, configure, snapmirror, volume, svm, contain, local, group, guidelines for using snapmirror on svms that contain local groups 
 summary: 로컬 그룹이 포함된 SVM이 소유한 볼륨에 SnapMirror를 구성할 때는 지침을 숙지해야 합니다. 
 ---
-= 로컬 그룹이 포함된 SVM에서 SnapMirror 사용 지침
+= 로컬 그룹이 포함된 ONTAP SMB SVM에서 SnapMirror를 사용하는 방법에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

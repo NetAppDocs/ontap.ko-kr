@@ -47,5 +47,7 @@ summary: 불필요한 서브넷을 제거하고 관련 IP 주소를 할당 취�
 
 네트워크 서브넷 delete-subnet-name sub1-IPSpace ipspace1
 
+에 대한 자세한 내용은 `network subnet delete` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 --
 ====

@@ -1,17 +1,17 @@
 ---
 permalink: mediator/index.html 
 sidebar: sidebar 
-keywords: ontap mediator service, install requirements, mediator requirements 
-summary: ONTAP 중재자 서비스를 설치하려면 모든 필수 구성 요소가 충족되었는지 확인하고 설치 패키지를 얻고 호스트에서 설치 관리자를 실행해야 합니다. 
+keywords: ontap mediator, install requirements, mediator requirements 
+summary: ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족되었는지 확인하고, 설치 패키지를 받은 다음 호스트에서 설치 프로그램을 실행해야 합니다. 
 ---
-= ONTAP 중재자 서비스를 설치하거나 업그레이드할 준비를 합니다
+= ONTAP Mediator 설치 또는 업그레이드 준비
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 중재자 서비스를 설치하려면 모든 필수 구성 요소가 충족되었는지 확인하고 설치 패키지를 가져와 호스트에서 설치 관리자를 실행해야 합니다. 이 절차는 기존 설치의 설치 또는 업그레이드에 사용됩니다.
+ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족되었는지 확인하고, 설치 패키지를 가져온 다음 호스트에서 설치 프로그램을 실행해야 합니다. 이 절차는 기존 설치의 설치 또는 업그레이드에 사용됩니다.
 
 * ONTAP 9.7부터 모든 버전의 ONTAP 중재자를 사용하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
 * ONTAP 9.8부터는 모든 버전의 ONTAP Mediator를 사용하여 SnapMirror 활성 동기화 관계를 모니터링할 수 있습니다.
@@ -21,13 +21,13 @@ ONTAP 중재자 서비스를 설치하려면 모든 필수 구성 요소가 충�
 
 == 설치 및 업그레이드 고려 사항
 
-ONTAP 중재자를 업그레이드 또는 설치하기 전에 다음 고려 사항을 검토하십시오.
+ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 고려 사항을 검토하세요.
 
 
 CAUTION: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모드와 호환되지 않으므로 설치가 실패합니다. 명령을 사용하여 FIPS 모드가 활성화되어 있는지 확인할 수 `fips-mode-setup --check` 있습니다. 명령을 사용하여 FIPS 모드를 사용하지 않도록 설정할 수 `fips-modesetup --disable` 있습니다. ONTAP mediator 1.8 이하를 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅합니다.
 
-* ONTAP mediator를 사용 가능한 최신 버전으로 업그레이드해야 합니다. 이전 버전의 ONTAP Mediator는 모든 ONTAP 버전과 역호환성을 유지하지만 최신 버전에는 모든 타사 요소에 대한 보안 패치가 포함되어 있습니다.
-* 새 ONTAP 중재자 버전으로 업그레이드할 때 더 높은 버전을 사용할 수 없는 경우 설치 관리자는 자동으로 권장 SCST 버전으로 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법은 을 참조하십시오link:manage-task.html["중재자 서비스를 관리합니다"]. 지원되는 버전은 를 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]참조하십시오.
+* ONTAP Mediator를 최신 버전으로 업그레이드해야 합니다. 이전 버전의 ONTAP Mediator는 모든 ONTAP 버전과 역호환성을 유지하지만 최신 버전에는 모든 타사 요소에 대한 보안 패치가 포함되어 있습니다.
+* 새 ONTAP 중재자 버전으로 업그레이드할 때 더 높은 버전을 사용할 수 없는 경우 설치 관리자는 자동으로 권장 SCST 버전으로 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법은 을 참조하십시오link:manage-task.html["ONTAP 중재자 관리"]. 지원되는 버전은 를 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]참조하십시오.
 +
 
 CAUTION: 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이드해야 할 수 있습니다.
@@ -48,7 +48,7 @@ RHEL(Red Hat Enterprise Linux) 또는 Rocky Linux를 설치하고 관련 리포�
 ====
 .Linux 배포 요구 사항
 * Red Hat의 모범 사례에 따라 RHEL 또는 Rocky Linux를 설치합니다. CentOS 8.x의 수명이 다했으므로 호환되는 버전의 CentOS 8.x는 권장되지 않습니다.
-* ONTAP 중재자 서비스를 설치할 때 설치 프로그램이 필요한 모든 소프트웨어 종속성을 검색하고 설치할 수 있도록 시스템이 필요한 리포지토리에 액세스할 수 있는지 확인합니다.
+* ONTAP Mediator를 설치할 때 설치 프로그램이 모든 필수 소프트웨어 종속성을 검색하여 설치할 수 있도록 시스템이 필수 저장소에 액세스할 수 있는지 확인하세요.
 * yum 설치 관리자가 RHEL 리포지토리에서 종속 소프트웨어를 찾을 수 있도록 하려면 설치 중 또는 이후에 유효한 Red Hat 서브스크립션을 사용하여 시스템을 등록합니다.
 +
 [NOTE]
@@ -214,7 +214,7 @@ OS는 다음 요구 사항을 충족해야 합니다.
 
 
 .OS 필수 패키지
-ONTAP 중재자 서비스에는 다음 패키지가 필요합니다.
+ONTAP Mediator에는 다음 패키지가 필요합니다.
 
 
 NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에 의해 자동으로 설치됩니다.
@@ -299,7 +299,7 @@ ONTAP mediator는 UEFI 보안 부팅이 활성화되어 있거나 활성화되�
 UEFI 보안 부팅을 비활성화하는 방법에 대한 자세한 지침은 호스트 OS 설명서를 참조하십시오.
 
 ====
-UEFI 보안 부팅이 활성화된 ONTAP 중재자를 설치하려면 서비스를 시작하기 전에 보안 키를 등록해야 합니다. 이 키는 SCST 설치의 컴파일 단계 중에 생성되며 컴퓨터에 개인 공개 키 쌍으로 저장됩니다. 유틸리티를 사용하여 `mokutil` 공개 키를 UEFI 펌웨어에 컴퓨터 소유자 키(Mok)로 추가하여 시스템이 서명된 모듈을 신뢰하고 로드할 수 있도록 합니다.  `mokutil`Mok를 활성화하기 위해 시스템을 재부팅할 때 필요하므로 암호를 안전한 위치에 저장합니다.
+UEFI 보안 부팅이 활성화된 ONTAP Mediator를 설치하려면 서비스를 시작하기 전에 보안 키를 등록해야 합니다. 이 키는 SCST 설치의 컴파일 단계 중에 생성되며 컴퓨터에 개인 공개 키 쌍으로 저장됩니다. 유틸리티를 사용하여 `mokutil` 공개 키를 UEFI 펌웨어에 컴퓨터 소유자 키(Mok)로 추가하여 시스템이 서명된 모듈을 신뢰하고 로드할 수 있도록 합니다.  `mokutil`Mok를 활성화하기 위해 시스템을 재부팅할 때 필요하므로 암호를 안전한 위치에 저장합니다.
 
 .단계
 . [[STEP_1_UEFI]] 시스템에서 UEFI 보안 부팅이 활성화되어 있는지 확인합니다.
@@ -327,7 +327,7 @@ UEFI 보안 부팅이 활성화되었습니다
  a| 
 UEFI 보안 부팅이 비활성화되었습니다
  a| 
-link:upgrade-host-os-mediator-task.html["호스트 운영 체제를 업그레이드한 다음 ONTAP 중재자를 업그레이드합니다"]
+link:upgrade-host-os-mediator-task.html["호스트 운영 체제를 업그레이드한 다음 ONTAP Mediator를 업그레이드합니다."]
 
 |===
 +

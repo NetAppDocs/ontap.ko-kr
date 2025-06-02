@@ -207,7 +207,7 @@ entries:
 - section: snaplock
 - section: consistency-groups
 - section: snapmirror-active-sync
-- title: MetroCluster 및 SnapMirror 액티브 동기화를 위한 중재자 서비스
+- title: MetroCluster 및 SnapMirror Active Sync를 위한 ONTAP Mediator
   entries:
   - title: 개요
     url: "/mediator/mediator-overview-concept.html"
@@ -231,7 +231,7 @@ entries:
       url: "/mediator/verify-install-task.html"
     - title: 설치 후 구성
       url: "/mediator/post-install-config-concept.html"
-  - title: 중재자 서비스를 관리합니다
+  - title: ONTAP 중재자 관리
     url: "/mediator/manage-task.html"
   - title: 호스트 유지 관리
     url: "/mediator/host-maintenance-task.html"

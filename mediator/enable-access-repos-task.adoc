@@ -11,7 +11,7 @@ summary: ONTAP 중재자가 설치 프로세스 중에 필요한 패키지에 �
 
 
 [role="lead"]
-ONTAP 중재자가 설치 프로세스 중에 필요한 패키지에 액세스할 수 있도록 저장소에 대한 액세스를 활성화해야 합니다
+설치 과정에서 ONTAP Mediator가 필요한 패키지에 액세스할 수 있도록 저장소에 대한 액세스를 활성화해야 합니다.
 
 .단계
 . 다음 표와 같이 액세스해야 하는 리포지토리를 결정합니다.
@@ -78,7 +78,7 @@ Rocky Linux 8
 
 
 
-NOTE: ONTAP mediator가 "추가" 및 "옵션" 리포지토리에 있는 Python 모듈에 종속성이 있는 경우 에 액세스해야 할 수 있습니다 `rhel-X-for-x86_64-extras-rpms` 및 `rhel-X-for-x86_64-optional-rpms` 파일.
+NOTE: ONTAP Mediator에 "추가" 및 "선택" 저장소에 있는 Python 모듈에 대한 종속성이 있는 경우 액세스해야 할 수 있습니다.  `rhel-X-for-x86_64-extras-rpms` 그리고  `rhel-X-for-x86_64-optional-rpms` 파일.
 
 .RHEL 7.x 운영 체제에 대한 절차
 [#rhel7x%collapsible]

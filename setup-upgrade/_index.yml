@@ -27,5 +27,5 @@ indexpage:
       url: "/../revert/task_reverting_an_ontap_cluster.html"
   - title: 더 많은 리소스
     links:
-    - title: Active IQ는 스토리지 업그레이드 - NeApp 블로그 에 도움을 줍니다
-      url: https://www.youtube.com/watch?v=6WjyADPXDZ0
+    - title: NetApp 블로그
+      url: https://www.netapp.com/blog

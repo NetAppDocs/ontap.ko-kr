@@ -40,3 +40,4 @@ cluster-1-02
        a0a-40    a0a     40       02:a0:98:06:10:ca
        a0a-50    a0a     50       02:a0:98:06:10:ca
 ....
+에 대한 자세한 내용은 `network port vlan show` link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

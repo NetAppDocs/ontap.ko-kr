@@ -2,7 +2,7 @@
 permalink: mediator/verify-install-task.html 
 sidebar: sidebar 
 keywords: mediator, new, release, update, install, verify, verification 
-summary: ONTAP 중재자를 설치한 후에는 ONTAP 중재자 서비스가 실행 중인지 확인해야 합니다. 
+summary: ONTAP Mediator를 설치한 후 ONTAP Mediator가 실행 중인지 확인해야 합니다. 
 ---
 = ONTAP 중재자 설치 상태를 확인합니다
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: ONTAP 중재자를 설치한 후에는 ONTAP 중재자 서비스가 실
 
 
 [role="lead"]
-ONTAP 중재자를 설치한 후에는 ONTAP 중재자 서비스가 실행 중인지 확인해야 합니다.
+ONTAP Mediator를 설치한 후 성공적으로 실행되는지 확인하세요.
 
 .단계
-. ONTAP 중재자 서비스 상태 보기:
+. ONTAP Mediator의 상태를 확인하세요:
 +
 .. `systemctl status ontap_mediator`
 +
@@ -55,7 +55,7 @@ CGroup: /system.slice/ontap_mediator.service
 ----
 
 
-. ONTAP 중재자 서비스에서 사용하는 포트를 확인합니다.
+. ONTAP Mediator에서 사용하는 포트를 확인하세요.
 +
 `netstat`
 

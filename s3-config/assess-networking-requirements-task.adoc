@@ -76,4 +76,5 @@ S3 스토리지를 클라이언트에 제공하기 전에 네트워킹이 S3 프
 * link:https://docs.netapp.com/us-en/ontap-cli/network-port-show.html["네트워크 포트가 표시됩니다"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+options+ipv6["네트워크 옵션 IPv6"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/network-ipspace-show.html["네트워크 IPspace가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-create.html["네트워크 서브넷 생성"^]
 
