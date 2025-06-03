@@ -36,6 +36,9 @@ SMB 스토리지를 클라이언트에 제공하기 전에 네트워킹이 SMB �
 
 . 서브넷 이름을 사용하여 LIF에 대한 IP 주소와 네트워크 마스크 값을 할당하려는 경우, 서브넷이 존재하는지, 사용 가능한 충분한 주소가 있는지 확인하십시오. 'network subnet show
 +
+에 대한 자세한 내용은 `network subnet show` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 서브넷에는 동일한 계층 3 서브넷에 속하는 IP 주소 풀이 포함되어 있습니다. 서브넷은 network subnet create 명령을 사용하여 생성된다.
 
 +

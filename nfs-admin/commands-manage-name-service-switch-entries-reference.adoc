@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, name, service, switch, entry 
 summary: 이름 서비스 스위치 항목은 생성, 표시, 수정 및 삭제하여 관리할 수 있습니다. 
 ---
-= ONTAP에서 이름 서비스 스위치 항목을 관리하는 명령입니다
+= NAS 이름 서비스 스위치 항목을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

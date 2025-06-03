@@ -35,4 +35,6 @@ ONTAP 9.4부터 CA(인증 기관) 인증서를 설치 및 사용하는 것이 �
 만료된 인증서를 업데이트하려면 신뢰할 수 있는 CA를 사용하여 새 서버 인증서를 생성하는 것이 가장 좋습니다. 또한 StorageGRID 서버와 ONTAP 클러스터에서 동시에 인증서를 업데이트하여 가동 중지 시간을 최소화해야 합니다.
 
 .관련 정보
-https://docs.netapp.com/us-en/storagegrid-family/["StorageGRID 리소스"^]
+* https://docs.netapp.com/us-en/storagegrid-family/["StorageGRID 리소스"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+

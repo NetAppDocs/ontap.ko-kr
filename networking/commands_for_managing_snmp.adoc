@@ -231,6 +231,7 @@ SNMP 트랩 기록 레코드를 삭제합니다
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system+snmp["시스템 SNMP"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-snmpusers.html["보안 snmpusers"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security["보안"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event["이벤트"^]
 

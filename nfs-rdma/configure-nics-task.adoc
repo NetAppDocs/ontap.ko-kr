@@ -102,6 +102,6 @@ ONTAP 9.12.1 이상을 사용하여 System Manager를 사용하여 RDMA를 통�
 --
 ====
 .추가 정보
-* xref:../nfs-config/create-server-task.html[NFS 서버를 생성합니다]
+* xref:../nfs-config/create-server-task.html[ONTAP NFS 서버 생성]
 * xref:../task_nas_enable_linux_nfs.html[NFS를 사용하여 Linux 서버용 NAS 스토리지를 설정합니다]
 

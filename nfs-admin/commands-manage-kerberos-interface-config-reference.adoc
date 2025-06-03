@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, nfs, kerberos, interface, configuration 
 summary: NFS Kerberos 인터페이스 구성을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 NFS Kerberos 인터페이스 구성을 관리하는 명령입니다
+= NFS Kerberos 인터페이스 구성을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

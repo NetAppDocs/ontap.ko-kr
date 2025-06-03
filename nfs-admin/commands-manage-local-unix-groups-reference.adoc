@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, local, unix, group 
 summary: 로컬 UNIX 그룹을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 로컬 UNIX 그룹을 관리하는 명령입니다
+= NAS 로컬 UNIX 그룹을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

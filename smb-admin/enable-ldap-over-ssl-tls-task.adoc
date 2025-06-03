@@ -17,7 +17,7 @@ ONTAP 9.10.1부터 LDAP 채널 바인딩은 AD(Active Directory) 및 이름 서�
 
 자세한 내용은 다음을 참조하십시오.
 
-* link:../nfs-admin/using-ldap-concept.html["LDAP 개요"]
+* link:../nfs-admin/using-ldap-concept.html["ONTAP NFS SVM용 LDAP에 대해 알아보세요"]
 * link:https://support.microsoft.com/en-us/topic/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows-ef185fb8-00f7-167d-744c-f299a66fc00a["Windows의 2020 LDAP 채널 바인딩 및 LDAP 서명 요구 사항"^].
 
 

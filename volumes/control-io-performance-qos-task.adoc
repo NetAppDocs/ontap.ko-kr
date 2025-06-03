@@ -37,9 +37,8 @@ SVM, LUN 및 파일을 정책 그룹에 할당할 수도 있습니다.
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["QoS 정책 - 그룹 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=qos+policy-group["qos 정책 그룹"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["볼륨 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["볼륨 수정"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=qos+statistics["QoS 통계"^]
-* link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["QoS 정책 - 그룹 수정"^]
 

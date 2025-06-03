@@ -482,4 +482,5 @@ MAV 규칙은 RBAC 권한 이후에 평가됩니다. 따라서 작업 실행에 
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+time-service+ntp["클러스터 시간 - 서비스 NTP"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/event-config-modify.html["이벤트 구성 수정"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=lun["LUN을 클릭합니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware["보안 랜섬웨어 방지"^]
 

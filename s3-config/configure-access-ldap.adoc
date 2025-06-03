@@ -14,7 +14,7 @@ summary: S3 사용자가 API를 사용하여 S3 클라이언트에 액세스하�
 [role="lead"]
 ONTAP 9.14.1부터 외부 디렉토리용 서비스가 ONTAP S3 오브젝트 스토리지와 통합되었습니다. 이러한 통합은 외부 디렉터리 서비스를 통한 사용자 및 액세스 관리를 단순화합니다.
 
-ONTAP 오브젝트 스토리지 환경에 대한 액세스 권한을 통해 외부 디렉토리 서비스에 속하는 사용자 그룹을 제공할 수 있습니다. LDAP(Lightweight Directory Access Protocol)는 ID 및 액세스 관리(IAM)를 위한 데이터베이스와 서비스를 제공하는 Active Directory와 같은 디렉터리 서비스와 통신하는 인터페이스입니다. 액세스를 제공하려면 ONTAP S3 환경에서 LDAP 그룹을 구성해야 합니다. 액세스를 구성하면 그룹 구성원에게 ONTAP S3 버킷에 대한 권한이 부여됩니다. LDAP에 대한 자세한 내용은 를 참조하십시오 link:../nfs-config/using-ldap-concept.html["LDAP 사용 개요"].
+ONTAP 오브젝트 스토리지 환경에 대한 액세스 권한을 통해 외부 디렉토리 서비스에 속하는 사용자 그룹을 제공할 수 있습니다. LDAP(Lightweight Directory Access Protocol)는 ID 및 액세스 관리(IAM)를 위한 데이터베이스와 서비스를 제공하는 Active Directory와 같은 디렉터리 서비스와 통신하는 인터페이스입니다. 액세스를 제공하려면 ONTAP S3 환경에서 LDAP 그룹을 구성해야 합니다. 액세스를 구성하면 그룹 구성원에게 ONTAP S3 버킷에 대한 권한이 부여됩니다. LDAP에 대한 자세한 내용은 를 link:../nfs-config/using-ldap-concept.html["ONTAP NFS SVM에서 LDAP 이름 서비스 사용에 대해 알아보세요"]참조하십시오.
 
 또한 빠른 바인딩 모드에 맞게 Active Directory 사용자 그룹을 구성하여 사용자 자격 증명을 검증하고 LDAP 연결을 통해 타사 및 오픈 소스 S3 응용 프로그램을 인증할 수 있습니다.
 
@@ -25,7 +25,7 @@ LDAP 그룹을 구성하고 그룹 액세스를 위해 빠른 바인딩 모드�
 . 해당 스토리지 VM에 버킷이 생성되었습니다. 을 참조하십시오 link:../s3-config/create-bucket-task.html["버킷을 만듭니다"].
 . 스토리지 VM에 DNS가 구성되어 있다. 을 link:../networking/configure_dns_services_auto.html["DNS 서비스를 구성합니다"]참조하십시오.
 . LDAP 서버의 자체 서명된 루트 CA(인증 기관) 인증서가 스토리지 VM에 설치되어 있습니다. 을 참조하십시오 link:../nfs-config/install-self-signed-root-ca-certificate-svm-task.html["SVM에 자체 서명된 루트 CA 인증서를 설치합니다"].
-. LDAP 클라이언트는 SVM에서 TLS를 사용하도록 구성했습니다. 을 참조하십시오 link:../nfs-config/create-ldap-client-config-task.html["LDAP 클라이언트 구성을 생성합니다"] 및 link:../nfs-config/enable-ldap-svms-task.html["정보를 위해 LDAP 클라이언트 구성을 SVM에 연결합니다"].
+. LDAP 클라이언트는 SVM에서 TLS를 사용하도록 구성했습니다. link:../nfs-config/create-ldap-client-config-task.html["ONTAP NFS 액세스를 위한 LDAP 클라이언트 구성 생성"]및 을 link:../nfs-config/enable-ldap-svms-task.html["정보를 위해 ONTAP NFS SVM과 LDAP 클라이언트 구성을 연결합니다."]참조하십시오.
 
 
 

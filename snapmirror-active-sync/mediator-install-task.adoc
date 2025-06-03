@@ -770,4 +770,6 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 ====
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-delete.html["보안 인증서 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
 

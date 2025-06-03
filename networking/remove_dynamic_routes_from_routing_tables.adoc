@@ -63,3 +63,5 @@ network tuning icmp6 show
 
 
 
+
+에 대한 자세한 내용은 `network tuning icmp` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+tuning+icmp["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -26,8 +26,8 @@ NOTE: LDAP가 비활성화되어 있으면 사용자가 액세스 키를 생성�
 . 해당 스토리지 VM에 버킷이 생성되었습니다. 을 참조하십시오 link:../s3-config/create-bucket-task.html["버킷을 만듭니다"].
 . 스토리지 VM에 DNS가 구성되어 있다. 을 link:../networking/configure_dns_services_auto.html["DNS 서비스를 구성합니다"]참조하십시오.
 . LDAP 서버의 자체 서명된 루트 CA(인증 기관) 인증서가 스토리지 VM에 설치되어 있습니다. 을 참조하십시오 link:../nfs-config/install-self-signed-root-ca-certificate-svm-task.html["SVM에 자체 서명된 루트 CA 인증서를 설치합니다"].
-. LDAP 클라이언트는 스토리지 VM에서 TLS를 사용하도록 구성했습니다. 을 link:../nfs-config/create-ldap-client-config-task.html["LDAP 클라이언트 구성을 생성합니다"]참조하십시오.
-. 클라이언트 구성을 SVM에 연결합니다. 을 link:../nfs-config/enable-ldap-svms-task.html["LDAP 클라이언트 구성을 SVM과 연결합니다"]참조하십시오. 에 대한 자세한 내용은 `vserver services name-service ldap create` link:https://docs.netapp.com/us-en/ontap-cli//vserver-services-name-service-ldap-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+. LDAP 클라이언트는 스토리지 VM에서 TLS를 사용하도록 구성했습니다. 을 link:../nfs-config/create-ldap-client-config-task.html["ONTAP NFS 액세스를 위한 LDAP 클라이언트 구성 생성"]참조하십시오.
+. 클라이언트 구성을 SVM에 연결합니다. 을 link:../nfs-config/enable-ldap-svms-task.html["ONTAP NFS SVM과 LDAP 클라이언트 구성 연결"]참조하십시오. 에 대한 자세한 내용은 `vserver services name-service ldap create` link:https://docs.netapp.com/us-en/ontap-cli//vserver-services-name-service-ldap-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 . 데이터 스토리지 VM을 사용하는 경우 관리 네트워크 인터페이스(LIF) 및 VM에 그리고 LIF에 대한 서비스 정책을 생성합니다. 및 `network interface service-policy create` 에 대한 자세한 `network interface create` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["ONTAP 명령 참조입니다"^]참조하십시오.
 
 
@@ -71,7 +71,7 @@ security login create -user-or-group-name <ldap-group-name> -application http -a
 security login create -user-or-group-name ldap-group-1 -application http -authentication-method nsswitch -role s3role -is-ns-switch-group yes -second-authentication-method none -vserver svm-1 -is-ldap-fastbind yes
 ----
 +
-자세한 내용은 을 참조하십시오 link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["nsswitch 인증에 LDAP 고속 바인딩을 사용합니다"].
+자세한 내용은 을 link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["ONTAP NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다."]참조하십시오.
 
 
 

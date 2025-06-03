@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NFS, configuration, overview 
 summary: ONTAP 9 CLI 명령을 사용하여 새 스토리지 가상 머신 또는 기존 스토리지 가상 머신에서 새 볼륨 또는 qtree에 포함된 파일에 대한 NFS 클라이언트 액세스를 구성할 수 있습니다. 
 ---
-= CLI를 사용한 NFS 구성 개요
+= ONTAP CLI를 사용한 NFS 구성에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,7 +28,7 @@ System Manager를 사용하여 NAS 멀티 프로토콜 액세스를 구성하려
 * SVM 관리자 권한이 아닌 클러스터 관리자 권한이 있습니다.
 
 
-ONTAP NFS 프로토콜 기능의 범위에 대한 자세한 내용은 를 참조하십시오 link:../nfs-admin/index.html["NFS 참조 개요"].
+다양한 ONTAP NFS 프로토콜 기능에 대한 자세한 내용은 를 참조하십시오link:../nfs-admin/index.html["NFS 프로토콜에 대한 ONTAP 파일 액세스에 대해 알아보세요"].
 
 
 

@@ -155,6 +155,9 @@ ipspace1
 +
 'network subnet show - IPSpace_ipspace1_'
 
++
+에 대한 자세한 내용은 `network subnet show` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 데이터에 액세스하는 데 사용할 포트에 하나 이상의 LIF를 생성합니다.
 +
 

@@ -36,3 +36,7 @@ SSL KMIP 공용 및 개인 인증서를 입력하라는 메시지가 표시됩�
 'cluster1::> security certificate install -vserver cluster1-type server-ca'를 입력합니다
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: benefits, enable, nfsv4, acls 
 summary: NFSv4 ACL을 설정하면 많은 이점이 있습니다. 
 ---
-= NFSv4 ACL 설정 이점
+= ONTAP SVM에 대한 NFSv4 ACL 활성화의 이점에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

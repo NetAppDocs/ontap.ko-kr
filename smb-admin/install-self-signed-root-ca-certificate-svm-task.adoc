@@ -30,3 +30,7 @@ TLS 통신을 사용하는 ONTAP 내의 모든 응용 프로그램은 OCSP(온�
 
 . 인증서가 설치되어 있는지 확인합니다. 'Security certificate show -vserver_vserver_name_'
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+

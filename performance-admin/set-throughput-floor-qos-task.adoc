@@ -39,26 +39,26 @@ summary: '정책 그룹의 최소 처리량 필드를 사용하여 스토리지 
 +
 에 대한 자세한 내용은 `qos policy-group create` link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
+. 명령을 사용하여 처리량 최저치를 조정할 수 `qos policy-group modify` 있습니다.
++
+다음 명령을 실행하면 처리량이 최소 1,000 IOPS인 공유 정책 그룹이 `pg-vs2` 생성됩니다.
 
-
-명령을 사용하여 처리량 최저치를 조정할 수 `qos policy-group modify` 있습니다.
-
-+ 다음 명령을 실행하면 최소 처리량이 1,000 IOPS인 공유 정책 그룹이 `pg-vs2` 생성됩니다.
-
-를 누릅니다
-
++
 [listing]
 ----
 cluster1::> qos policy-group create -policy group pg-vs2 -vserver vs2 -min-throughput 1000iops -is-shared true
 ----
-+ 다음 명령을 실행하면 처리량 제한 없이 비공유 정책 그룹이 `pg-vs4` 생성됩니다.
++
+다음 명령을 실행하면 처리량 제한 없이 비공유 정책 그룹 'pg-vs4'가 생성됩니다.
 
-를 누릅니다
-
++
 [listing]
 ----
 cluster1::> qos policy-group create -policy group pg-vs4 -vserver vs4 -is-shared false
 ----
++
+에 대한 자세한 내용은 `qos policy-group modify` link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 볼륨 또는 LUN에 정책 그룹 적용:
 +
 '_storage_object_create-vserver_SVM_-QoS-policy-group_policy_group_'

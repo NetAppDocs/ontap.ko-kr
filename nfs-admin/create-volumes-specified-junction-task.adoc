@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, data, volume, specify, junction, point 
 summary: 접합 지점에 볼륨이 자동으로 마운트되고, NAS 액세스를 위해 즉시 구성할 수 있도록 데이터 볼륨을 생성합니다. 
 ---
-= ONTAP에서 지정된 접합 지점으로 데이터 볼륨을 생성합니다
+= 지정된 연결 지점으로 ONTAP NAS 볼륨 생성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

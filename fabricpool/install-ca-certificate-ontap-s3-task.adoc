@@ -43,4 +43,6 @@ System Manager를 사용하여 ONTAP 클러스터에서 만료된 인증서를 �
 
 
 .관련 정보
-link:../s3-config/index.html["S3 구성"]
+* link:../s3-config/index.html["S3 구성"]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+

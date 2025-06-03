@@ -52,4 +52,7 @@ QoS 설정 처리량-층-v2-활성화 거짓
 ----
 cluster1::*> qos settings throughput-floors-v2 -enable false
 ----
++
+에 대한 자세한 내용은 `qos settings throughput-floors-v2` link:https://docs.netapp.com/us-en/ontap-cli/qos-settings-throughput-floors-v2.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

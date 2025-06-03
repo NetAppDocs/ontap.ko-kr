@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, ldap, client, schema, template 
 summary: LDAP 클라이언트 스키마 템플릿을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 LDAP 클라이언트 스키마 템플릿을 관리하는 명령입니다
+= NFS LDAP 클라이언트 스키마 템플릿을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

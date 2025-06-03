@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, export, rule 
 summary: 내보내기 규칙을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 내보내기 규칙을 관리하는 명령입니다
+= 내보내기 규칙 관리를 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

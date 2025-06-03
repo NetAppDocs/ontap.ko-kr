@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, authentication, nfs, group id, rpcsec_gss 
 summary: Kerberos 인증을 사용하여 NFS 사용자 자격 증명을 처리하기 위한 그룹 ID 수를 늘려 기본 그룹보다 많은 구성원인 사용자를 대상으로 합니다. 
 ---
-= NFS 사용자에게 허용되는 그룹 ID 수를 구성합니다
+= ONTAP SVM에 대해 NFS 사용자에게 허용되는 그룹 ID 수를 구성합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

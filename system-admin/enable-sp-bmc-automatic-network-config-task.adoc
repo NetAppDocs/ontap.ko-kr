@@ -23,6 +23,9 @@ SP 네트워크를 수동으로 구성하는 대신 자동 네트워크 구성�
 network subnet show 명령은 클러스터의 서브넷 정보를 표시합니다.
 
 +
+에 대한 자세한 내용은 `network subnet show` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 네트워크 서브넷 명령의 서브넷 연관(-force-update-lif-associations) 매개 변수를 강제하는 매개변수는 SP 네트워크 인터페이스가 아닌 네트워크 LIF에서만 지원됩니다.
 
 * SP에 대해 IPv6 연결을 사용하려면 ONTAP에 대해 IPv6가 이미 구성 및 설정되어 있어야 합니다.

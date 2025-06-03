@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: command, manage, export, policy 
 summary: 내보내기 정책을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 엑스포트 정책을 관리하는 명령입니다
+= 수출 정책 관리를 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

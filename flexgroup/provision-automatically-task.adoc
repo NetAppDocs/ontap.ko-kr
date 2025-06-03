@@ -128,3 +128,6 @@ ONTAP 9.6 이하 버전을 실행 중이고 SVM(스토리지 가상 시스템)�
 # ls /mnt/fg2
 file1  file2
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["QoS 정책 - 그룹 생성"^]
+

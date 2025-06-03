@@ -24,7 +24,7 @@ FlexVol 볼륨을 생성할 수도 있고, 고성능 요구사항이 높은 대�
 
 또한 이 볼륨의 사양을 Ansible 플레이북에 저장할 수도 있습니다. 자세한 내용은 를 참조하십시오 link:task_admin_use_ansible_playbooks_add_edit_volumes_luns.html["Ansible 플레이북을 사용하여 볼륨 또는 LUN을 추가 또는 편집합니다"].
 
-ONTAP NFS 프로토콜 기능의 범위에 대한 자세한 내용은 를 참조하십시오 link:nfs-admin/index.html["NFS 참조 개요"].
+다양한 ONTAP NFS 프로토콜 기능에 대한 자세한 내용은 를 참조하십시오link:nfs-admin/index.html["NFS 프로토콜에 대한 ONTAP 파일 액세스에 대해 알아보세요"].
 
 .단계
 . NFS 지원 스토리지 VM에 새 볼륨을 추가합니다.
@@ -104,5 +104,5 @@ NOTE: 볼륨을 저장한 후 로 돌아갑니다 <<step2-complete-prov>> NFS를
 | System Manager Classic(ONTAP 9.7 이하) | link:https://docs.netapp.com/us-en/ontap-system-manager-classic/nfs-config/index.html["NFS 구성 개요"^] 
 
 
-| ONTAP CLI(Command Line Interface) | link:nfs-config/index.html["CLI를 사용한 NFS 구성 개요"] 
+| ONTAP CLI(Command Line Interface) | link:nfs-config/index.html["ONTAP CLI를 사용한 NFS 구성에 대해 알아보십시오"] 
 |===

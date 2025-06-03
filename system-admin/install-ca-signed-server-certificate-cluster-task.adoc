@@ -18,6 +18,9 @@ SSL 서버의 루트 인증서를 이미 클러스터 또는 SVM에 'server-ca' 
 
 .단계
 . 클라이언트 인증에 자체 서명된 디지털 인증서를 사용하려면 type client 매개 변수를 사용하여 Security certificate create 명령을 사용합니다.
++
+에 대한 자세한 내용은 `security certificate create` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 클라이언트 인증에 CA 서명 디지털 인증서를 사용하려면 다음 단계를 수행하십시오.
 +
 .. 보안 인증서 'generate-csr' 명령을 사용하여 디지털 인증서 서명 요청(CSR)을 생성합니다.
@@ -43,4 +46,8 @@ ONTAP는 인증서 요청과 개인 키가 포함된 CSR 출력을 표시하고 
 +
 인스턴스, 클라이언트-CA 형식의 매개 변수를 가진 보안 인증서 표시 명령은 클라이언트-CA 인증서 정보를 표시합니다.
 
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
 

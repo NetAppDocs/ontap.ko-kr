@@ -176,7 +176,11 @@ ONTAP 9.13.1 부터는 ARP를 통한 추가 보안을 위해 MAV(Multi-admin ver
 
 MAV 그룹에 대한 관리자를 정의하고, `security anti-ransomware volume pause`, 및 `security anti-ransomware volume attack clear-suspect` 보호할 ARP 명령에 대한 MAV 규칙을 `security anti-ransomware volume disable` 만들어야 합니다. MAV 그룹의 각 관리자는 MAV 설정 내에서 각각의 새 규칙 요청을 승인해야 link:../multi-admin-verify/enable-disable-task.html["MAV 규칙을 다시 추가합니다"]합니다.
 
+에 대한 자세한 `security anti-ransomware volume disable` `security anti-ransomware volume pause` 내용은, 및 `security anti-ransomware volume attack clear-suspect`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume["ONTAP 명령 참조입니다"^] 을 참조하십시오.
+
 ONTAP 9.14.1부터 ARP는 ARP 스냅샷 생성 및 새 파일 확장자 관찰에 대한 경고를 제공합니다. 이러한 이벤트에 대한 알림은 기본적으로 해제되어 있습니다. 경고는 볼륨 또는 SVM 레벨에서 설정할 수 있습니다. SVM 레벨에서 또는 을 사용하여 볼륨 레벨에서 `security anti-ransomware volume event-log modify` MAV 규칙을 생성할 수 있습니다 `security anti-ransomware vserver event-log modify`.
+
+및 `security anti-ransomware volume event-log modify` 에 대한 자세한 `security anti-ransomware vserver event-log modify` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware["ONTAP 명령 참조입니다"^]참조하십시오.
 
 .다음 단계
 * link:enable-task.html["자율주행 랜섬웨어 보호 활성화"]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: use, ldap 
 summary: 'LDAP(Lightweight Directory Access Protocol) 서버를 사용하면 사용자 정보를 중앙에서 관리할 수 있습니다. 사용자 환경의 LDAP 서버에 사용자 데이터베이스를 저장하는 경우 기존 LDAP 데이터베이스에서 사용자 정보를 조회하도록 스토리지 시스템을 구성할 수 있습니다.' 
 ---
-= LDAP 개요
+= ONTAP NFS SVM용 LDAP에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -75,7 +75,7 @@ LDAP 조회 추적에는 다음 구성이 지원되지 않습니다.
 
 
 ====
-* ONTAP 9.11.1부터 를 사용할 수 있습니다 link:ldap-fast-bind-nsswitch-authentication-task.html["nsswitch 인증을 위한 LDAP 빠른 바인딩."]
+* ONTAP 9.11.1부터 를 사용할 수 있습니다 link:ldap-fast-bind-nsswitch-authentication-task.html["ONTAP NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다."]
 * SVM에서 LDAP 클라이언트를 구성할 때 LDAP 스키마를 입력해야 합니다.
 +
 대부분의 경우 기본 ONTAP 스키마 중 하나가 적합합니다. 그러나 사용자 환경의 LDAP 스키마가 이러한 스키마와 다른 경우 LDAP 클라이언트를 생성하기 전에 ONTAP에 대한 새 LDAP 클라이언트 스키마를 만들어야 합니다. 사용자 환경의 요구 사항에 대해서는 LDAP 관리자에게 문의하십시오.

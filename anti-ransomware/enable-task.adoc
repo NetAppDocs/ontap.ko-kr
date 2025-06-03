@@ -85,6 +85,9 @@ security anti-ransomware volume dry-run -volume <vol_name> -vserver <svm_name>
 +
 ONTAP 9.15.1 이하 및 FlexGroup 볼륨의 경우 새 볼륨이 학습 모드에서 시작됩니다. FlexVol 볼륨이 있는 ONTAP 9.16.1 이상의 경우 ARP/AI가 즉시 활성화됩니다. 두 경우 모두 값으로 를 `dry-run` 사용합니다.
 
++
+에 대한 자세한 내용은 `security anti-ransomware volume dry-run` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-dry-run.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . ONTAP 9.15.1을 통해 ONTAP 9.13.1로 업그레이드한 경우 기본 상태가 인 경우 `dry-run` Adaptive Learning이 활성화되어 상태 변경이 `active` 자동으로 수행됩니다. 이 동작이 자동으로 활성화되지 않도록 하려면 모든 관련 볼륨에서 SVM 레벨에서 설정을 변경합니다.
 +
 [source, cli]
@@ -121,6 +124,9 @@ vserver modify <svm_name> -anti-ransomware-auto-switch-from-learning-to-enabled 
 ----
 security anti-ransomware volume show
 ----
++
+에 대한 자세한 내용은 `security anti-ransomware volume show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

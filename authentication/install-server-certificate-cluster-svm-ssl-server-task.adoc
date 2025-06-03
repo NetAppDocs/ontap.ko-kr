@@ -125,3 +125,7 @@ You should keep a copy of the private key and the CA-signed digital certificate 
 ----
 ====
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["보안 인증서 생성 - CSR"^]
+
