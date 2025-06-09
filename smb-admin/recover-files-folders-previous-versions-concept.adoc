@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ability, microsoft, previous, version, applicable, file, system, support, snapshot, copies, copy, form, enable, technolofy, integral, ontap, recover, file, recover files and folders using previous versions 
 summary: Microsoft 이전 버전을 사용하는 기능은 특정 형태의 스냅샷을 지원하고 이를 사용하도록 설정한 파일 시스템에 적용할 수 있습니다. 스냅샷 기술은 ONTAP의 핵심 요소입니다. 사용자는 Microsoft 이전 버전 기능을 사용하여 Windows 클라이언트에서 스냅샷의 파일과 폴더를 복구할 수 있습니다. 
 ---
-= 이전 버전 개요를 사용하여 파일 및 폴더를 복구합니다
+= 이전 버전을 사용하여 ONTAP SMB 파일 및 폴더 복구에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

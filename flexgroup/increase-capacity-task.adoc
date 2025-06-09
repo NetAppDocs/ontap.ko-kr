@@ -2,7 +2,7 @@
 permalink: flexgroup/increase-capacity-task.html 
 sidebar: sidebar 
 keywords: increase, size, flexgroup, volume, flex group 
-summary: FlexGroup 볼륨의 기존 구성요소에 용량을 추가하거나 새로운 구성원 볼륨으로 FlexGroup 볼륨을 확장하여 FlexGroup 볼륨의 크기를 늘릴 수 있습니다. 
+summary: 기존 볼륨 구성 요소에 용량을 추가하거나 새로운 멤버 볼륨으로 FlexGroup 볼륨을 확장하여 FlexGroup 볼륨 크기를 늘립니다. 
 ---
 = ONTAP FlexGroup 볼륨의 크기를 늘립니다
 :allow-uri-read: 
@@ -26,6 +26,13 @@ Aggregate에 충분한 공간이 있어야 합니다.
 * FlexGroup 볼륨의 기존 구성원 볼륨이 하드웨어의 최대 FlexVol 크기(100TB 또는 300TB(가 활성화된 경우)에 도달했으므로 link:../volumes/enable-large-vol-file-support-task.html["대용량 지원"]구성원 볼륨을 추가하지 않으면 FlexGroup 볼륨의 크기를 조정할 수 없습니다.
 
 
+[NOTE]
+====
+더 많은 멤버를 포함하도록 FlexGroup 볼륨을 수정하는 경우 이전에 생성된 스냅샷은 "부분"으로 간주되며 클라이언트에서만 액세스할 수 있습니다.  `.snapshot` 디렉토리 또는 *이전 버전* 탭.
+
+스냅샷이 "부분"으로 간주되면 SnapRestore 작업에 사용할 수 없습니다. 그러나 부분 스냅샷을 사용하여 개별 파일을 복원할 수 있습니다.  `.snapshot` 디렉토리 또는 *이전 버전* 탭.
+
+====
 ONTAP 9.3 이전 릴리즈에서는 SnapMirror 관계가 설정된 후 FlexGroup 볼륨을 확장하지 마십시오. ONTAP 9.3 이전의 릴리즈에서 SnapMirror 관계를 끊은 후 소스 FlexGroup 볼륨을 확장하는 경우 대상 FlexGroup 볼륨에 대한 기본 전송을 다시 수행해야 합니다. ONTAP 9.3부터 SnapMirror 관계에 있는 FlexGroup 볼륨을 확장할 수 있습니다.
 
 .단계

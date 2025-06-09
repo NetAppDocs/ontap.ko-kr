@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, folder, redirection, windows, properties, method, assistance, svm, administrator, configure folder redirection 
 summary: Windows 속성 창을 사용하여 폴더 리디렉션을 구성할 수 있습니다. 이 방법을 사용하면 Windows 사용자가 SVM 관리자의 도움 없이 폴더 리디렉션을 구성할 수 있다는 이점이 있습니다. 
 ---
-= 폴더 리디렉션을 구성합니다
+= Windows 속성을 사용하여 ONTAP SMB 폴더 리디렉션 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

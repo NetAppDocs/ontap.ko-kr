@@ -560,125 +560,125 @@ entries:
       url: "/smb-admin/display-session-task.html"
     - title: 열려 있는 SMB 파일에 대한 정보를 표시합니다
       url: "/smb-admin/display-open-files-task.html"
-    - title: 사용할 수 있는 통계 개체 및 카운터를 확인합니다
+    - title: SMB 서버에서 사용 가능한 통계 개체 및 카운터를 확인합니다.
       url: "/smb-admin/determine-statistics-objects-counters-available-task.html"
-    - title: 통계를 표시합니다
+    - title: SMB 통계를 표시합니다
       url: "/smb-admin/display-statistics-task.html"
 - title: SMB 클라이언트 기반 서비스 구축
   entries:
   - title: 오프라인 파일을 사용하여 오프라인 사용을 위해 파일 캐싱을 허용합니다
     entries:
-    - title: 개요
+    - title: 오프라인 사용을 위해 SMB 파일을 캐싱하는 데 오프라인 파일을 사용하는 방법에 대해 알아보세요.
       url: "/smb-admin/offline-files-allow-caching-concept.html"
-    - title: 오프라인 파일 사용에 대한 요구 사항
+    - title: 오프라인 SMB 파일 사용 요구 사항에 대해 알아보세요
       url: "/smb-admin/requirements-offline-files-concept.html"
-    - title: 오프라인 파일 배포 지침
+    - title: 오프라인 SMB 파일 배포 지침
       url: "/smb-admin/deploy-offline-files-concept.html"
-    - title: CLI를 사용하여 SMB 공유에서 오프라인 파일 지원을 구성합니다
+    - title: 오프라인 SMB 파일 지원을 구성하는 명령
       url: "/smb-admin/configure-offline-files-support-task.html"
     - title: 컴퓨터 관리 MMC를 사용하여 SMB 공유에서 오프라인 파일 지원을 구성합니다
       url: "/smb-admin/configure-offline-files-computer-management-mmc-task.html"
   - title: 로밍 프로필을 사용하여 SVM과 연결된 SMB 서버에 사용자 프로필을 중앙에서 저장합니다
     entries:
-    - title: 개요
+    - title: 로밍 프로필을 사용하여 SMB 사용자 프로필을 중앙에서 저장하는 방법에 대해 알아보세요.
       url: "/smb-admin/roaming-profiles-store-user-profiles-concept.html"
-    - title: 로밍 프로필 사용에 대한 요구 사항
+    - title: 로밍 SMB 프로필 사용에 대한 요구 사항에 대해 알아보세요
       url: "/smb-admin/requirements-roaming-profiles-concept.html"
-    - title: 로밍 프로필을 구성합니다
+    - title: Active Directory 사용자 및 컴퓨터 MMC를 통해 로밍 SMB 프로필 구성
       url: "/smb-admin/configure-roaming-profiles-task.html"
   - title: SMB 서버에 데이터를 저장하려면 폴더 리디렉션을 사용합니다
     entries:
-    - title: 개요
+    - title: SMB 서버에 데이터를 저장하기 위해 폴더 리디렉션을 사용하는 방법에 대해 알아보세요.
       url: "/smb-admin/folder-redirection-store-data-concept.html"
-    - title: 폴더 리디렉션 사용 요구 사항
+    - title: SMB 폴더 리디렉션 사용에 대한 요구 사항에 대해 알아보세요
       url: "/smb-admin/requirements-folder-redirection-concept.html"
-    - title: 폴더 리디렉션을 구성합니다
+    - title: Windows 속성을 사용하여 SMB 폴더 리디렉션 구성
       url: "/smb-admin/configure-folder-redirection-task.html"
-  - title: SMB 2.x를 사용하여 Windows 클라이언트에서 ~snapshot 디렉토리에 액세스합니다
+  - title: SMB 2.x를 사용하여 Windows 클라이언트에서 ~snapshot 디렉토리에 액세스하는 방법에 대해 알아보세요.
     url: "/smb-admin/access-snapshot-directories-clients-smb2-concept.html"
   - title: 이전 버전을 사용하여 파일 및 폴더를 복구합니다
     entries:
-    - title: 개요
+    - title: 이전 버전을 사용하여 SMB 파일 및 폴더 복구에 대해 알아보세요
       url: "/smb-admin/recover-files-folders-previous-versions-concept.html"
-    - title: Microsoft 이전 버전 사용에 대한 요구 사항
+    - title: Microsoft 이전 버전을 사용하기 위한 SMB 요구 사항
       url: "/smb-admin/requirements-microsoft-previous-versions-concept.html"
-    - title: 이전 버전 탭을 사용하여 스냅샷 복사본 데이터를 보고 관리할 수 있습니다
+    - title: Windows 이전 버전 탭을 사용하여 SMB 스냅샷 데이터를 보고 관리합니다.
       url: "/smb-admin/previous-versions-view-manage-snapshot-data-task.html"
-    - title: 이전 버전에서 사용할 수 있는 스냅샷 복사본이 있는지 확인합니다
+    - title: 이전 버전에서 SMB 스냅샷을 사용할 수 있는지 확인하세요.
       url: "/smb-admin/determine-snapshot-copies-available-task.html"
-    - title: 이전 버전 액세스를 사용하도록 스냅샷 구성을 생성합니다
+    - title: 이전 버전 액세스를 활성화하기 위해 SMB 스냅샷 구성을 만듭니다.
       url: "/smb-admin/create-snapshot-config-previous-versions-access-task.html"
-    - title: 교차점이 포함된 디렉토리 복원 지침
+    - title: SMB 연결을 포함하는 이전 버전 디렉터리 복원에 대해 알아보세요.
       url: "/smb-admin/restore-directories-that-contain-junctions-concept.html"
 - title: SMB 서버 기반 서비스 구축
   entries:
   - title: 홈 디렉터리를 관리합니다
     entries:
-    - title: ONTAP에서 동적 홈 디렉터리를 활성화하는 방법
+    - title: SMB 서버에서 동적 홈 디렉토리를 활성화하는 방법에 대해 알아보세요.
       url: "/smb-admin/dynamic-home-directories-concept.html"
     - title: 홈 디렉토리 공유
       entries:
-      - title: 홈 디렉토리 공유를 추가합니다
+      - title: SMB 홈 디렉토리 공유 추가
         url: "/smb-admin/add-home-directory-share-task.html"
-      - title: 홈 디렉토리 공유에는 고유한 사용자 이름이 필요합니다
+      - title: 홈 디렉토리 공유에 대한 고유한 SMB 사용자 이름 요구 사항에 대해 알아보세요.
         url: "/smb-admin/home-directory-shares-unique-user-names-concept.html"
-      - title: 업그레이드 후 정적 홈 디렉토리 공유 이름은 어떻게 됩니까
+      - title: 업그레이드 후 정적 SMB 홈 디렉토리 공유 이름에 어떤 일이 발생하는지 알아보세요.
         url: "/smb-admin/static-home-directory-share-names-upgrading-concept.html"
-    - title: 홈 디렉토리 검색 경로를 추가합니다
+    - title: SMB 홈 디렉토리 검색 경로 추가
       url: "/smb-admin/add-home-directory-search-path-task.html"
-    - title: "%w 및 %d 변수를 사용하여 홈 디렉토리 설정을 작성합니다"
+    - title: "%w 및 %d 변수를 사용하여 SMB 홈 디렉토리 구성을 만듭니다."
       url: "/smb-admin/create-home-directory-config-w-d-variables-task.html"
-    - title: "%u 변수를 사용하여 홈 디렉토리를 구성하십시오"
+    - title: "%u 변수를 사용하여 SMB 홈 디렉토리 구성"
       url: "/smb-admin/configure-home-directories-u-variable-task.html"
-    - title: 추가 홈 디렉토리 구성
+    - title: 추가 SMB 홈 디렉토리 구성에 대해 알아보세요
       url: "/smb-admin/home-directory-config-concept.html"
-    - title: 검색 경로 관리를 위한 명령입니다
+    - title: SMB 검색 경로를 관리하기 위한 명령
       url: "/smb-admin/commands-manage-search-paths-reference.html"
-    - title: SMB 사용자의 홈 디렉토리 경로에 대한 정보를 표시합니다
+    - title: SMB 사용자 홈 디렉토리 경로에 대한 정보 표시
       url: "/smb-admin/display-user-home-directory-path-task.html"
-    - title: 사용자의 홈 디렉터리에 대한 액세스 권한을 관리합니다
+    - title: SMB 사용자 홈 디렉토리에 대한 접근성 관리
       url: "/smb-admin/manage-accessibility-users-home-directories-task.html"
   - title: UNIX 심볼 링크에 대한 SMB 클라이언트 액세스를 구성합니다
     entries:
-    - title: ONTAP를 통해 UNIX 심볼 링크에 대한 SMB 클라이언트 액세스를 제공하는 방법
+    - title: UNIX 심볼릭 링크에 SMB 클라이언트 액세스를 제공하는 방법에 대해 알아보세요.
       url: "/smb-admin/enable-client-access-unix-symbolic-links-concept.html"
     - title: SMB 액세스에 대한 UNIX 심볼 링크를 구성할 때의 제한
       url: "/smb-admin/limits-configuring-unix-symbolic-links-concept.html"
-    - title: CIFS 서버 옵션을 사용하여 ONTAP에서 자동 DFS 광고를 제어합니다
+    - title: SMB 서버에서 자동 DFS 광고 제어
       url: "/smb-admin/control-automatic-dfs-advertisements-concept.html"
     - title: SMB 공유에 대한 UNIX 심볼 링크 지원을 구성합니다
       url: "/smb-admin/configure-unix-symbolic-link-support-shares-task.html"
     - title: SMB 공유에 대한 심볼 링크 매핑을 생성합니다
       url: "/smb-admin/create-symbolic-link-mappings-task.html"
-    - title: 심볼 링크 매핑을 관리하는 명령입니다
+    - title: SMB 심볼릭 링크 매핑을 관리하기 위한 명령
       url: "/smb-admin/commands-manage-symbolic-link-mappings-reference.html"
-    - title: Windows 백업 애플리케이션 및 Unix 스타일 symlink
+    - title: SMB 서버의 Windows 백업 애플리케이션 및 Unix 스타일 심볼릭 링크
       url: "/smb-admin/windows-backup-symlinks.html"
   - title: BranchCache를 사용하여 지사에 SMB 공유 콘텐츠를 캐싱합니다
     entries:
-    - title: 개요
+    - title: 지점 사무실에서 SMB 공유 콘텐츠를 캐시하기 위해 BranchCache를 사용하는 방법에 대해 알아보세요.
       url: "/smb-admin/branchcache-cache-share-content-branch-office-concept.html"
     - title: 요구사항 및 지침
       entries:
-      - title: BranchCache 버전 지원
+      - title: SMB BranchCache 버전 지원에 대해 알아보세요
         url: "/smb-admin/branchcache-version-support-concept.html"
-      - title: 네트워크 프로토콜 지원 요구 사항
+      - title: SMB 네트워크 프로토콜 지원 요구 사항에 대해 알아보세요
         url: "/smb-admin/network-protocol-support-requirements-concept.html"
-      - title: ONTAP 및 Windows 호스트 버전 요구 사항
+      - title: SMB 및 Windows 호스트 버전 요구 사항에 대해 알아보세요
         url: "/smb-admin/windows-hosts-version-requirements-concept.html"
-      - title: ONTAP가 BranchCache 해시를 무효화하는 이유
+      - title: SMB가 BranchCache 해시를 무효화하는 이유에 대해 알아보세요.
         url: "/smb-admin/reasons-invalidates-branchcache-hashes-concept.html"
-      - title: 해시 저장 위치 선택 지침
+      - title: SMB 해시 저장소 위치 선택에 대해 알아보세요
         url: "/smb-admin/choosing-hash-store-location-concept.html"
-      - title: BranchCache 권장 사항
+      - title: SMB BranchCache 권장 사항에 대해 알아보세요
         url: "/smb-admin/branchcache-recommendations-concept.html"
     - title: BranchCache를 구성합니다
       entries:
-      - title: 개요
+      - title: SMB BranchCache 구성에 대해 알아보세요
         url: "/smb-admin/configure-branchcache-concept.html"
-      - title: BranchCache 구성 요구 사항
+      - title: SMB BranchCache 구성을 위한 요구 사항
         url: "/smb-admin/requirements-configuring-branchcache-concept.html"
-      - title: SMB 서버에서 BranchCache를 구성합니다
+      - title: SMB 서버에서 BranchCache 구성
         url: "/smb-admin/configure-branchcache-task.html"
       - title: 원격 사무소에서 BranchCache 구성에 대한 정보를 찾을 수 있는 위치
         url: "/smb-admin/configure-branchcache-remote-office-concept.html"

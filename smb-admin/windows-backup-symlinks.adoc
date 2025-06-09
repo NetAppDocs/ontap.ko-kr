@@ -4,7 +4,7 @@ permalink: smb-admin/windows-backup-symlinks.html
 keywords: windows, windows server, backup, backup application, symbolic link, symlink, unix, unix-style 
 summary: 'Windows에서 실행 중인 백업 응용 프로그램이 Unix 스타일의 심볼 링크(symlink)를 발견하면 링크가 팔로우되고 데이터가 백업됩니다. ONTAP 9.15.1부터 데이터 대신 symlink를 백업할 수 있습니다. 이 기능은 ONTAP FlexGroup 볼륨과 FlexVols에서 완벽하게 지원됩니다.' 
 ---
-= Windows 백업 애플리케이션 및 Unix 스타일 symlink
+= ONTAP SMB 서버의 Windows 백업 애플리케이션 및 Unix 스타일 심볼릭 링크
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

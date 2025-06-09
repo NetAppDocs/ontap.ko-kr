@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view, snapshot, copies, copy, previous, version, enable, policy, applied, apply, contain, share, previous, version, access, determine whether snapshot copies are available for previous versions use 
 summary: 활성화된 스냅샷 정책이 공유를 포함하는 볼륨에 적용되고 볼륨 구성에서 스냅샷에 대한 액세스를 허용하는 경우에만 이전 버전 탭에서 스냅샷을 볼 수 있습니다. 스냅샷 가용성을 확인하는 것은 이전 버전 액세스 권한을 가진 사용자를 지원할 때 유용합니다. 
 ---
-= 스냅샷을 이전 버전에서 사용할 수 있는지 여부를 결정합니다
+= ONTAP SMB 스냅샷을 이전 버전에서 사용할 수 있는지 확인하세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

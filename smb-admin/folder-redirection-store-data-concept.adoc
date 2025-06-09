@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, support, microsoft, folder, redirection, enable, administrator, redirect, location, cifs, server, windows, client, store, smb, share, use folder redirection to store data on a cifs server 
 summary: ONTAP는 사용자 또는 관리자가 로컬 폴더의 경로를 CIFS 서버의 위치로 리디렉션할 수 있도록 Microsoft 폴더 리디렉션을 지원합니다. SMB 공유에 데이터가 저장되어 있더라도 리디렉션된 폴더가 로컬 Windows 클라이언트에 저장된 것처럼 나타납니다. 
 ---
-= 폴더 리디렉션을 사용하여 SMB 서버에 데이터 저장 개요
+= ONTAP SMB 서버에 데이터를 저장하기 위해 폴더 리디렉션을 사용하는 방법에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

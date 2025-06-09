@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, command, managing, manage, symbol, link, map, commands for managing symbolic link mappings 
 summary: 심볼 링크 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
 ---
-= ONTAP에서 심볼 링크 매핑을 관리하는 명령입니다
+= SMB 심볼릭 링크 매핑을 관리하기 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

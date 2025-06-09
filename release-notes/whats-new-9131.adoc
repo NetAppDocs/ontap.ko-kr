@@ -163,7 +163,7 @@ System Manager에 표시되는 운영 데이터 축소율에는 계산에 스냅
 | 업데이트 | 설명 
 
 
-| 최대 inode 수가 증가합니다 | 볼륨이 680GB보다 커지는 경우에도 ONTAP는 inode(32KB의 볼륨 공간당 1개의 inode 속도로) 계속해서 inode를 자동으로 추가합니다. ONTAP는 최대 2,147,483,632에 도달할 때까지 inode를 계속 추가합니다. 
+| 최대 inode 수가 증가합니다 | 볼륨이 680GB보다 커지는 경우에도 ONTAP는 inode(32KB의 볼륨 공간당 1개의 inode 속도로) 계속해서 inode를 자동으로 추가합니다. ONTAP는 최대 2,040,109,451에 도달할 때까지 inode를 계속 추가합니다. 
 
 
 | xref:../volumes/create-flexclone-task.html#create-a-flexclone-volume-of-a-flexvol-or-flexgroup[FlexClone 생성 중 SnapLock 유형을 지정할 수 있습니다] | 읽기/쓰기 볼륨의 FlexClone을 생성할 때 Compliance, Enterprise 또는 비 SnapLock의 세 가지 SnapLock 유형 중 하나를 지정할 수 있습니다. 
