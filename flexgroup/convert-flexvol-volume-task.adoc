@@ -25,7 +25,7 @@ ONTAP 9.7부터 데이터 복사본이나 추가 디스크 공간 없이 FlexVol
 +
 전환된 볼륨은 ONTAP 9.8부터 변환될 수 있습니다.
 
-** SAN LUN, Windows NFS, SMB1, 스냅샷 명명/자동 삭제, vmalign 세트, SnapLock, 공간 SLO, 논리적 공간 적용/보고 등 FlexGroup 볼륨에서 아직 지원되지 않는 볼륨에 대해 활성화되어 있습니다. 자세한 내용은 을 link:supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다"]참조하십시오.
+** 볼륨에서 아직 FlexGroup 볼륨에서 지원하지 않는 기능이 활성화되어 있습니다. 예를 들어 SAN LUN, Windows NFS, SMB1, 스냅샷 명명/자동 삭제, vmalign 설정, ONTAP 9.11.1 이전 릴리스의 SnapLock(SnapLock은 ONTAP 9.11.1부터 지원됨), 공간 SLO 또는 논리적 공간 적용/보고 등이 있습니다. 자세한 내용은 을 link:supported-unsupported-config-concept.html["FlexGroup 볼륨에 대해 지원 및 지원되지 않는 구성입니다"]참조하십시오.
 ** 변환하려는 FlexVol 볼륨이 위치한 SVM이 현재 SVM DR을 사용하고 있습니다.
 ** NetApp FlexClone 볼륨이 있고 FlexVol 볼륨이 상위 볼륨입니다. 변환 중인 볼륨은 상위 볼륨이거나 클론일 수 없습니다.
 ** 볼륨이 NetApp FlexCache 원본 볼륨입니다.

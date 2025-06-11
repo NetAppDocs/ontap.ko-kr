@@ -680,37 +680,37 @@ entries:
         url: "/smb-admin/requirements-configuring-branchcache-concept.html"
       - title: SMB 서버에서 BranchCache 구성
         url: "/smb-admin/configure-branchcache-task.html"
-      - title: 원격 사무소에서 BranchCache 구성에 대한 정보를 찾을 수 있는 위치
+      - title: SMB의 원격 사무실에서 BranchCache를 구성하는 방법에 대해 알아보세요.
         url: "/smb-admin/configure-branchcache-remote-office-concept.html"
     - title: BranchCache 지원 SMB 공유를 구성합니다
       entries:
-      - title: 개요
+      - title: BranchCache 지원 SMB 공유 구성에 대해 알아보세요
         url: "/smb-admin/configure-branchcache-enabled-shares-concept.html"
-      - title: BranchCache 지원 SMB 공유를 생성합니다
+      - title: BranchCache 지원 SMB 공유 만들기
         url: "/smb-admin/create-branchcache-enabled-share-task.html"
-      - title: 기존 SMB 공유에서 BranchCache를 사용하도록 설정합니다
+      - title: 기존 SMB 공유에서 BranchCache 활성화
         url: "/smb-admin/enable-branchcache-existing-share-task.html"
     - title: BranchCache 구성을 관리하고 모니터링합니다
       entries:
-      - title: BranchCache 구성을 수정합니다
+      - title: SMB 공유에서 BranchCache 구성 수정
         url: "/smb-admin/modify-branchcache-config-task.html"
-      - title: BranchCache 구성에 대한 정보를 표시합니다
+      - title: SMB 공유에서 BranchCache 구성에 대한 정보 표시
         url: "/smb-admin/display-branchcache-config-task.html"
-      - title: BranchCache 서버 키를 변경합니다
+      - title: SMB BranchCache 서버 키 변경
         url: "/smb-admin/change-branchcache-server-key-task.html"
-      - title: 지정된 경로에 대한 BranchCache 해시 사전 계산
+      - title: 지정된 SMB 경로에서 BranchCache 해시를 미리 계산합니다.
         url: "/smb-admin/precompute-branchcache-hashes-specified-paths-task.html"
-      - title: SVM BranchCache 해시 저장소에서 해시를 플러시합니다
+      - title: SMB SVM BranchCache 해시 저장소에서 해시 플러시
         url: "/smb-admin/flush-hashes-svm-branchcache-task.html"
-      - title: BranchCache 통계를 표시합니다
+      - title: SMB BranchCache 통계 표시
         url: "/smb-admin/display-branchcache-statistics-task.html"
-      - title: BranchCache 그룹 정책 개체 지원
+      - title: BranchCache 그룹 정책 개체에 대한 SMB 지원에 대해 알아보세요.
         url: "/smb-admin/support-branchcache-group-policy-objects-concept.html"
-      - title: BranchCache 그룹 정책 개체에 대한 정보를 표시합니다
+      - title: SMB BranchCache 그룹 정책 개체에 대한 정보 표시
         url: "/smb-admin/display-branchcache-group-policy-objects-task.html"
     - title: SMB 공유에서 BranchCache를 해제합니다
       entries:
-      - title: 개요
+      - title: SMB 공유에서 BranchCache 비활성화에 대해 알아보세요
         url: "/smb-admin/disable-branchcache-shares-concept.html"
       - title: 단일 SMB 공유에서 BranchCache를 비활성화합니다
         url: "/smb-admin/disable-branchcache-single-share-task.html"
@@ -718,65 +718,65 @@ entries:
         url: "/smb-admin/stop-automatic-caching-all-shares-task.html"
     - title: SVM에서 BranchCache를 비활성화하거나 활성화합니다
       entries:
-      - title: CIFS 서버에서 BranchCache를 해제하거나 다시 설정하면 어떻게 됩니까
+      - title: SMB 서버에서 BranchCache를 비활성화하거나 다시 활성화하면 어떤 일이 발생하는지 알아보세요.
         url: "/smb-admin/disable-reenable-branchcache-server-concept.html"
-      - title: BranchCache를 비활성화하거나 활성화합니다
+      - title: SMB 공유에서 BranchCache 비활성화 또는 활성화
         url: "/smb-admin/disable-enable-branchcache-task.html"
     - title: SVM에서 BranchCache 구성을 삭제합니다
       entries:
-      - title: BranchCache 구성을 삭제하면 어떻게 됩니까
+      - title: SMB 공유에서 BranchCache 구성을 삭제하면 어떤 일이 발생하는지 알아보세요.
         url: "/smb-admin/delete-branchcache-config-concept.html"
-      - title: BranchCache 구성을 삭제합니다
+      - title: SMB 공유에서 BranchCache 구성을 삭제합니다.
         url: "/smb-admin/delete-branchcache-config-task.html"
-    - title: 되돌릴 때 BranchCache가 어떻게 됩니까
+    - title: SMB BranchCache를 되돌릴 때 어떤 일이 발생하는지 알아보세요.
       url: "/smb-admin/branchcache-when-reverting-concept.html"
   - title: Microsoft 원격 복제 성능 향상
     entries:
-    - title: 개요
+    - title: SMB 서버에서 Microsoft 원격 복사 성능 개선에 대해 알아보세요.
       url: "/smb-admin/improve-microsoft-remote-copy-performance-concept.html"
-    - title: ODX의 작동 방식
+    - title: SMB 서버에서 ODX에 대해 알아보세요
       url: "/smb-admin/odx-concept.html"
-    - title: ODX 사용을 위한 요구사항
+    - title: SMB 서버에서 ODX를 사용하기 위한 요구 사항
       url: "/smb-admin/requirements-odx-concept.html"
-    - title: ODX 사용 지침
+    - title: SMB 서버에서 ODX 사용 지침
       url: "/smb-admin/using-odx-concept.html"
-    - title: ODX의 사용 사례
+    - title: SMB 서버에서 ODX 사용 사례
       url: "/smb-admin/use-cases-odx-concept.html"
-    - title: ODX를 설정 또는 해제합니다
+    - title: SMB 서버에서 ODX 활성화 또는 비활성화
       url: "/smb-admin/enable-disable-odx-task.html"
   - title: 자동 위치로 SMB 자동 노드 조회를 제공하여 클라이언트 응답 시간을 단축합니다
     entries:
-    - title: 개요
+    - title: 자동 위치 지정을 통해 SMB 자동 노드 참조를 제공하여 클라이언트 응답 시간을 개선하는 방법에 대해 알아보세요.
       url: "/smb-admin/improve-client-response-node-referrals-concept.html"
-    - title: 자동 노드 조회를 사용하기 위한 요구 사항 및 지침
+    - title: SMB 서버에서 자동 노드 추천을 사용하기 위한 요구 사항 및 지침
       url: "/smb-admin/requirements-automatic-node-referrals-concept.html"
     - title: SMB 자동 노드 조회를 지원합니다
       url: "/smb-admin/support-automatic-node-referrals-concept.html"
     - title: SMB 자동 노드 조회를 설정하거나 해제합니다
       url: "/smb-admin/enable-disable-automatic-node-referrals-task.html"
-    - title: 통계를 사용하여 자동 노드 조회 활동을 모니터링합니다
+    - title: 통계를 사용하여 SMB 자동 노드 참조 활동을 모니터링합니다.
       url: "/smb-admin/statistics-monitor-automatic-node-referral-task.html"
     - title: Windows 클라이언트를 사용하여 클라이언트 측 SMB 자동 노드 조회 정보를 모니터링합니다
       url: "/smb-admin/automatic-node-referrals-client-concept.html"
   - title: 액세스 기반 열거를 사용하여 공유에 대한 폴더 보안을 제공합니다
     entries:
-    - title: 개요
+    - title: 액세스 기반 열거를 통해 공유에 SMB 폴더 보안 제공
       url: "/smb-admin/provide-security-access-based-enumeration-task.html"
     - title: SMB 공유에서 액세스 기반 열거를 설정하거나 해제합니다
       url: "/smb-admin/enable-disable-access-based-enumeration-task.html"
-    - title: Windows 클라이언트에서 액세스 기반 열거를 사용하거나 사용하지 않도록 설정합니다
+    - title: SMB 공유에서 Windows 클라이언트의 액세스 기반 열거를 활성화하거나 비활성화합니다.
       url: "/smb-admin/enable-disable-access-based-enumeration-client-task.html"
 - title: NFS 및 SMB 파일 및 디렉토리 명명 종속성
   entries:
-  - title: 개요
+  - title: NFS 및 SMB 파일과 디렉토리 명명 종속성에 대해 알아보세요
     url: "/smb-admin/nfs-smb-file-directory-naming-concept.html"
-  - title: 문자 파일 또는 디렉터리 이름에 사용할 수 있습니다
+  - title: SMB 파일 또는 디렉토리 이름에 유효한 문자에 대해 알아보세요
     url: "/smb-admin/characters-file-directory-name-can-use-concept.html"
-  - title: 다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대/소문자를 구분하십시오
+  - title: 다중 프로토콜 환경에서 SMB 파일 및 디렉토리 이름의 대소문자 구분
     url: "/smb-admin/case-sensitivity-file-directory-multiprotocol-concept.html"
-  - title: ONTAP에서 파일 및 디렉터리 이름을 만드는 방법
+  - title: SMB 파일 및 디렉토리 이름 생성에 대해 알아보세요
     url: "/smb-admin/how-ontap-creates-file-directory-names-concept.html"
-  - title: ONTAP에서 멀티바이트 파일, 디렉토리 및 qtree 이름을 처리하는 방식
+  - title: SMB 다중 바이트 파일, 디렉토리 및 qtree 이름에 대해 알아보세요
     url: "/smb-admin/multi-byte-file-directory-qtree-names-concept.html"
   - title: 볼륨에서 SMB 파일 이름 변환에 대한 문자 매핑을 구성합니다
     url: "/smb-admin/configure-character-mappings-file-name-translation-task.html"

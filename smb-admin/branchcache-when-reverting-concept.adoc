@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revert, ontap, release, support, branchcache, what happens to branchcache when reverting 
 summary: ONTAP를 BranchCache를 지원하지 않는 릴리즈로 되돌릴 경우 어떤 일이 발생하는지 이해하는 것이 중요합니다. 
 ---
-= 되돌릴 때 BranchCache가 어떻게 됩니까
+= ONTAP SMB BranchCache를 되돌릴 때 발생하는 일을 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

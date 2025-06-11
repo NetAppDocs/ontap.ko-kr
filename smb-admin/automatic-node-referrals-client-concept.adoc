@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: referral, client, perspective, windows, dfstuil, exe, utility, monitor, client-side, smb, automatic, how to monitor client-side smb automatic node referral information using a windows client 
 summary: 클라이언트의 관점에서 어떤 조회를 수행하는지 확인하려면 Windows dfsutil.exe 유틸리티를 사용하면 됩니다. 
 ---
-= Windows 클라이언트를 사용하여 클라이언트 측 SMB 자동 노드 조회 정보를 모니터링합니다
+= Windows 클라이언트를 사용하여 클라이언트 측 ONTAP SMB 자동 노드 참조 정보 모니터링
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
