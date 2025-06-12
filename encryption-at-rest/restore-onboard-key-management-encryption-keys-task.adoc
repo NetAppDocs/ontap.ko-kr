@@ -29,10 +29,10 @@ NOTE: Flash Cache 모듈이 있는 시스템에서 NSE를 사용하는 경우, N
 IMPORTANT: ONTAP 9.8 이상을 실행 중이고 루트 볼륨이 암호화된 경우 에 대한 절차를 따릅니다 <<ontap-9-8>>.
 
 . 키를 복원해야 하는지 확인합니다. +'보안 키 관리자 키 쿼리 - node_node_'
-. 키 복원: + '보안 키 관리자 온보드 동기화
 +
-에 대한 자세한 내용은 `security key-manager onboard sync` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-sync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
+. 키 복원: + '보안 키 관리자 온보드 동기화
 +
 다음 ONTAP 9.6 명령은 온보드 키 계층의 키를 동기화합니다.
 
@@ -43,6 +43,9 @@ cluster1::> security key-manager onboard sync
 
 Enter the cluster-wide passphrase for onboard key management in Vserver "cluster1"::    <32..256 ASCII characters long text>
 ----
++
+에 대한 자세한 내용은 `security key-manager onboard sync` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-sync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 암호 프롬프트에서 클러스터의 온보드 키 관리 암호를 입력합니다.
 
 

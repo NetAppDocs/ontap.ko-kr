@@ -113,3 +113,9 @@ cluster::*> security config ocsp show
          8 entries were displayed.
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-config-ocsp-enable.html["보안 구성 OCSP를 사용할 수 있습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-config-ocsp-disable.html["보안 구성 OCSP 비활성화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-config-ocsp-show.html["보안 구성 OCSP 쇼"^]
+

@@ -201,7 +201,7 @@ NVMe 프로토콜은 다음을 지원합니다.
 무중단 FlexGroup 볼륨 재조정을 자동으로 수행하여 FlexGroup 구성요소 간에 파일을 재배포할 수 있습니다.
 
 
-NOTE: FlexVol에서 FlexGroup로 변환한 후에는 자동 FlexGroup 재조정을 사용하지 않는 것이 좋습니다. 대신 을 입력하여 ONTAP 9.10.1 이상에서 사용할 수 있는 중단 소급 파일 이동 기능을 사용할 수 있습니다 `volume rebalance file-move` 명령. 자세한 내용 및 명령 구문에 대한 자세한 내용은 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-cli-9121//volume-rebalance-file-move-start.html["ONTAP 명령 참조"^].
+NOTE: FlexVol에서 FlexGroup로 변환한 후에는 자동 FlexGroup 재조정을 사용하지 않는 것이 좋습니다. 대신 명령을 입력하여 ONTAP 9.10.1 이상에서 사용할 수 있는 중단 소급 파일 이동 기능을 사용할 수 있습니다 `volume rebalance file-move`. 자세한 내용과 명령 구문은 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap-cli-9121//volume-rebalance-file-move-start.html["ONTAP 명령 참조"^] .
 
 
 

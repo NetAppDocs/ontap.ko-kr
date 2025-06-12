@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: throttle, fabricpool, fabric pool, tiering, put, rate, limit 
 summary: PUT 제한을 사용하면 스토리지 관리자가 노드별 최대 PUT 속도에 대한 상한값을 설정할 수 있습니다. 
 ---
-= 스로틀 FabricPool 푸트
+= ONTAP FabricPool 노드당 입력 속도에 대한 임계값 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

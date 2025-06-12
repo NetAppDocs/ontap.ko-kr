@@ -42,7 +42,7 @@ entries:
   url: "/system-admin/configure-saml-authentication-task.html"
 - title: WebAuthn MFA를 사용한 인증 및 권한 부여
   entries:
-  - title: WebAuthn MFA 개요
+  - title: WebAuthn 다중 요소 인증에 대해 알아보세요
     url: "/authentication-access-control/webauthn-mfa-overview.html"
   - title: WebAuthn MFA를 활성화합니다
     url: "/authentication-access-control/enable-webauthn-mfa-task.html"

@@ -74,3 +74,8 @@ node2
 6 entries were displayed.
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external["보안 키 관리자 외부"^]
+

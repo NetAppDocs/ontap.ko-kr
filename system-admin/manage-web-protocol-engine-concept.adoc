@@ -18,6 +18,9 @@ summary: 웹 액세스가 허용되는지 여부와 사용할 수 있는 SSL 버
 
 * '-external' 파라미터를 가진 'system services web modify' 명령어를 이용하여 원격 클라이언트가 HTTP나 HTTPS를 이용하여 웹 서비스 컨텐츠에 액세스할 수 있는지 여부를 지정할 수 있다.
 * '-supported-protocol' 파라미터를 가진 '보안 설정 수정' 명령어를 이용하여 SSLv3을 안전한 웹 액세스에 사용할지 여부를 지정할 수 있다. 기본적으로 SSLv3은 비활성화되어 있습니다. 전송 계층 보안 1.0(TLSv1.0)이 활성화되어 있으며 필요한 경우 비활성화할 수 있습니다.
++
+에 대한 자세한 내용은 `security config modify` link:https://docs.netapp.com/us-en/ontap-cli/security-config-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 * FIPS(Federal Information Processing Standard) 140-2 규정 준수 모드를 사용하여 클러스터 전체의 컨트롤 플레인 웹 서비스 인터페이스를 구현할 수 있습니다.
 +
 [NOTE]
@@ -36,6 +39,9 @@ summary: 웹 액세스가 허용되는지 여부와 사용할 수 있는 SSL 버
 
 
 * 'system security config show' 명령을 사용하여 클러스터 차원의 보안 구성을 표시할 수 있습니다.
++
+에 대한 자세한 내용은 `security config show` link:https://docs.netapp.com/us-en/ontap-cli/security-config-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 방화벽이 설정된 경우 웹 서비스에 사용할 논리 인터페이스(LIF)의 방화벽 정책을 HTTP 또는 HTTPS 액세스를 허용하도록 설정해야 합니다.

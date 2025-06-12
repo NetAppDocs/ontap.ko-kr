@@ -25,6 +25,9 @@ ONTAP 9.6 이상에서는 클러스터에 노드를 추가할 때마다 보안 �
 MetroCluster 구성이 있는 경우 다음 지침을 검토하십시오.
 
 * ONTAP 9.6부터 로컬 클러스터에서 보안 키 관리자 온보드 활성화를 먼저 실행한 다음 원격 클러스터에서 동일한 암호를 사용하여 보안 키 관리자 온보드 동기화를 실행해야 합니다.
++
+및 `security key-manager onboard sync` 에 대한 자세한 `security key-manager onboard enable` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+onboard["ONTAP 명령 참조입니다"^]참조하십시오.
+
 * ONTAP 9.5에서는 로컬 클러스터에서 보안 키 관리자 설정, 원격 클러스터에서 보안 키 관리자 설정 -동기화 -MetroCluster -구성 예 를 각각 동일한 암호를 사용하여 실행해야 합니다.
 * ONTAP 9.5 이전에는 로컬 클러스터에서 보안 키 관리자 설정을 실행하고 약 20초 정도 기다린 다음 원격 클러스터에서 동일한 암호를 사용하여 보안 키 관리자 설정을 실행해야 합니다.
 
@@ -38,3 +41,6 @@ NVE의 경우 '-enable-cc-mode yes'를 설정하면 볼륨 생성 및 볼륨 이
 실패한 암호 구문을 시도한 후에는 노드를 다시 재부팅해야 합니다.
 
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+

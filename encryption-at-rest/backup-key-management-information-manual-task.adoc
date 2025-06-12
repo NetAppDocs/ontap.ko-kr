@@ -48,14 +48,10 @@ ONTAP 9.5 이하
 보안 키 관리자 백업 쇼
 
 |===
++
+다음 9.6 명령은 키 관리 백업 정보를 표시합니다.  `cluster1` :
 
-
-에 대한 자세한 내용은 `security key-manager onboard show-backup` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-show-backup.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+ 다음 9.6 명령은 'cluster1'에 대한 키 관리 백업 정보를 표시합니다.
-
-를 누릅니다
-
++
 [listing]
 ----
 cluster1::> security key-manager onboard show-backup
@@ -92,4 +88,9 @@ cluster1::> security key-manager onboard show-backup
      ---------------------------END BACKUP---------------------------
 ----
 . 재해 발생 시 사용할 수 있도록 백업 정보를 스토리지 시스템 외부의 안전한 위치에 복사합니다.
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-show-backup.html["보안 키 관리자 온보드 show-backup"^]
+* link:https://docs.netapp.com/us-en/ontap-cli-95/security-key-manager-backup-show.html["보안 키 관리자 백업이 표시됩니다"^]
 

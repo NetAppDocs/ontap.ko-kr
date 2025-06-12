@@ -11,7 +11,7 @@ summary: 보안 로그인 create 명령을 사용하여 관리자 계정이 SSL 
 
 
 [role="lead"]
-명령을 사용하여 관리자 계정이 SSL 인증서를 통해 관리자 또는 데이터 SVM에 액세스하도록 설정할 수 있습니다 `security login create`. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+명령을 사용하여 관리자 계정이 SSL 인증서를 통해 관리자 또는 데이터 SVM에 액세스하도록 설정할 수 있습니다 `security login create`.
 
 .이 작업에 대해
 * 계정이 SVM에 액세스하려면 CA 서명 서버 디지털 인증서를 설치해야 합니다.
@@ -43,6 +43,9 @@ NOTE: 클러스터 관리자 계정의 경우 에서 인증서 인증이 지원�
 ----
 cluster1::>security login create -vserver engData2 -user-or-group-name svmadmin2 -application ontapi -authmethod cert
 ----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .작업을 마친 후

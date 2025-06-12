@@ -42,6 +42,9 @@ Info: Starting modify on 14 disks.
       View the status of the operation by using the
       storage encryption disk show-status command.
 ----
++
+에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 인증 키가 할당되었는지 확인합니다.
 +
 스토리지 암호화 디스크 표시

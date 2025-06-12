@@ -60,7 +60,7 @@ NOTE: 로그 파일 손실을 방지하기 위해 ONTAP 중재자를 재설치�
 
 +
 ....
-[rootmediator-host ~]# ontap-mediator-1.9.0/ontap-mediator-1.9.0
+[rootmediator-host ~]# ontap-mediator-1.9.1/ontap-mediator-1.9.1
 
 ONTAP Mediator: Self Extracting Installer
 
@@ -223,4 +223,5 @@ peer1::>
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-delete.html["보안 인증서 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-show.html["보안 인증서가 표시됩니다"^]
 

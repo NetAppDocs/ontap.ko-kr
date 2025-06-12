@@ -235,7 +235,7 @@ entries:
     url: "/mediator/manage-task.html"
   - title: 호스트 유지 관리
     url: "/mediator/host-maintenance-task.html"
-- title: System Manager를 사용한 MetroCluster IP 사이트 관리
+- title: System Manager를 사용하여 MetroCluster IP 사이트 관리에 대해 알아보세요
   url: "/concept_metrocluster_manage_nodes.html"
 - section: tape-backup
 - section: ndmp

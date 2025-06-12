@@ -75,5 +75,5 @@ volume mount -vserver <svm_name> -volume <volume_name>
 
 .관련 정보
 * link:../volumes/create-volume-task.html["ONTAP NFS 볼륨 생성"]
-* link:https://docs.netapp.com/us-en/ontap-cli/["명령 참조"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 

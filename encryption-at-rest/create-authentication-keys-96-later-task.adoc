@@ -72,7 +72,9 @@ security key-manager key query -node node
 +
 [NOTE]
 ====
- `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오. 출력에 표시되는 키 ID는 인증 키를 참조하는 데 사용되는 식별자입니다. 실제 인증 키 또는 데이터 암호화 키가 아닙니다.
+ `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다.
+
+출력에 표시되는 키 ID는 인증 키를 참조하는 데 사용되는 식별자입니다. 실제 인증 키 또는 데이터 암호화 키가 아닙니다.
 
 ====
 +
@@ -104,4 +106,7 @@ node2                                 NSE-AK    yes
 node2                                 NSE-AK    yes
     Key ID: <id_value>
 ----
++
+에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

@@ -64,3 +64,7 @@ Reenter the password:
 ----
 . 추가 SVM에 대해 마지막 단계를 반복합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-modify-server.html["보안 키 관리자 외부 수정 서버"^]
+

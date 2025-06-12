@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, common, configuration, errors, check, config, advisor, before upgrade, before upgrading 
 summary: ONTAP를 업그레이드하기 전에 Active IQ Config Advisor 도구를 사용하여 일반적인 구성 오류를 확인합니다. 
 ---
-= Active IQ Config Advisor의 구성 오류를 식별합니다
+= Active IQ Config Advisor를 사용하여 ONTAP을 업그레이드하기 전에 일반적인 구성 오류를 식별합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

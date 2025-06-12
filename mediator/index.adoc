@@ -24,14 +24,19 @@ ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족되었는
 ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 고려 사항을 검토하세요.
 
 
-CAUTION: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모드와 호환되지 않으므로 설치가 실패합니다. 명령을 사용하여 FIPS 모드가 활성화되어 있는지 확인할 수 `fips-mode-setup --check` 있습니다. 명령을 사용하여 FIPS 모드를 사용하지 않도록 설정할 수 `fips-modesetup --disable` 있습니다. ONTAP mediator 1.8 이하를 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅합니다.
+NOTE: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모드와 호환되지 않으므로 설치가 실패합니다. 명령을 사용하여 FIPS 모드가 활성화되어 있는지 확인할 수 `fips-mode-setup --check` 있습니다. 명령을 사용하여 FIPS 모드를 사용하지 않도록 설정할 수 `fips-modesetup --disable` 있습니다. ONTAP mediator 1.8 이하를 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅합니다.
 
 * ONTAP Mediator를 최신 버전으로 업그레이드해야 합니다. 이전 버전의 ONTAP Mediator는 모든 ONTAP 버전과 역호환성을 유지하지만 최신 버전에는 모든 타사 요소에 대한 보안 패치가 포함되어 있습니다.
 * 새 ONTAP 중재자 버전으로 업그레이드할 때 더 높은 버전을 사용할 수 없는 경우 설치 관리자는 자동으로 권장 SCST 버전으로 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법은 을 참조하십시오link:manage-task.html["ONTAP 중재자 관리"]. 지원되는 버전은 를 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]참조하십시오.
-+
 
-CAUTION: 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이드해야 할 수 있습니다.
 
+[NOTE]
+====
+* 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이드해야 할 수 있습니다.
+* 2025년 6월 15일부터 ONTAP Mediator 1.8 및 1.9는 코드 서명 인증서가 만료되어 설치 또는 업그레이드할 수 없습니다. 설치 또는 업그레이드가 실패하면 ONTAP Mediator 1.9.1 패치 버전을 대신 사용하세요.
+
+
+====
 * 를 설치하는 경우 `yum-utils` 패키지를 사용하면 을 사용할 수 있습니다 `needs-restarting` 명령.
 
 

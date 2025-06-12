@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fabricpool, fabric pool, tiering, delete, defrag, unreclaimed, threshold 
 summary: FabricPool 개체의 특정 블록 비율이 ONTAP에서 더 이상 참조되지 않으면 개체가 삭제됩니다. 
 ---
-= FabricPool 개체 삭제 및 조각 모음
+= ONTAP FabricPool 객체 삭제 및 조각 모음 사용자 지정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

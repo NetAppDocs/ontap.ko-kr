@@ -18,6 +18,8 @@ Onboard Key Manager를 사용하여 클러스터가 암호화된 데이터에 �
 .이 작업에 대해
 클러스터에 노드를 추가할 때마다 보안 키 관리자 온보드 활성화 명령을 실행해야 합니다. MetroCluster 구성에서는 먼저 로컬 클러스터에서 보안 키 관리자 온보드 활성화를 실행한 다음 원격 클러스터에서 동일한 암호를 사용하여 보안 키 관리자 온보드 동기화를 실행해야 합니다.
 
+및 `security key-manager onboard sync` 에 대한 자세한 `security key-manager onboard enable` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+onboard["ONTAP 명령 참조입니다"^]참조하십시오.
+
 기본적으로 노드를 재부팅할 때는 키 관리자 암호를 입력할 필요가 없습니다. MetroCluster를 제외하고, 사용자가 재부팅 후 암호문을 입력하도록 'cc-mode-enabled=yes' 옵션을 사용할 수 있습니다.
 
 [NOTE]
@@ -54,7 +56,7 @@ link:delete-key-management-database-task.html["외부 키 관리에서 온보드
 
 +
 
-NOTE: 재부팅 후 키 관리자 암호를 입력하도록 하려면 'cc-mode-enabled=yes'를 설정합니다. MetroCluster 구성에서는 '-cc-mode-enabled' 옵션이 지원되지 않습니다. 보안 키매니저 온보드 활성화 명령은 보안 키매니저 설정 명령을 대체합니다.
+NOTE:  `cc-mode-enabled=yes`재부팅 후 사용자가 키 관리자 암호를 입력하도록 요구하도록 설정합니다.  `- cc-mode-enabled`MetroCluster 구성에서는 옵션이 지원되지 않습니다.  `security key-manager onboard enable`명령이 `security key-manager setup` 명령을 대체합니다.
 
 +
 다음 예제에서는 재부팅할 때마다 암호를 입력할 필요 없이 키 관리자 설치 명령을 cluster1에서 시작합니다.
@@ -79,7 +81,7 @@ NOTE: 지정된 ""cc-mode"" 암호가 64자 미만이면 키 관리자 설정 �
 
 +
 
-NOTE:  `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html?q=security+key-manager+key+query["ONTAP 명령 참조입니다"^]을 참조하십시오.
+NOTE:  `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다.
 
 +
 다음 예제에서는 "cluster1"에 대해 인증 키가 생성되었는지 확인합니다.
@@ -110,9 +112,16 @@ node1                                 NSE-AK    yes
 node2                                 NSE-AK    yes
     Key ID: <id_value>
 ----
++
+에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html?q=security+key-manager+key+query["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .작업을 마친 후
 나중에 사용할 수 있도록 암호를 스토리지 시스템 외부의 안전한 위치에 복사합니다.
 
 모든 키 관리 정보는 클러스터의 복제된 데이터베이스(RDB)에 자동으로 백업됩니다. 또한 재해 발생 시 사용할 수 있도록 정보를 수동으로 백업해야 합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+

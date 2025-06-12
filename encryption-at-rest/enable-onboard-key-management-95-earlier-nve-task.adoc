@@ -79,9 +79,6 @@ Reenter the cluster-wide passphrase:    <32..256 ASCII characters long text>
 보안 키 관리자 키 쇼
 
 +
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
-
-+
 [listing]
 ----
 cluster1::> security key-manager key show
@@ -100,6 +97,9 @@ Key ID                                                           Used By
 <id_value> NSE-AK
 <id_value> NSE-AK
 ----
++
+에 대한 자세한 내용은 `security key-manager key show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+key+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 필요한 경우 일반 텍스트 볼륨을 암호화된 볼륨으로 변환합니다.
 +
 `volume encryption conversion start`
@@ -113,3 +113,7 @@ Key ID                                                           Used By
 나중에 사용할 수 있도록 암호를 스토리지 시스템 외부의 안전한 위치에 복사합니다.
 
 Onboard Key Manager 암호를 구성할 때마다 재해 발생 시 사용할 수 있도록 정보를 스토리지 시스템 외부의 안전한 위치에 수동으로 백업해야 합니다. 을 참조하십시오 link:backup-key-management-information-manual-task.html["온보드 키 관리 정보를 수동으로 백업합니다"].
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+

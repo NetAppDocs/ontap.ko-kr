@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, update, considerations, session-oriented, protocols, impact, io, client, session, disruption, disrupted, smb, hyper-v, sql, server, ndo, nondisruptive, continuous availability, nfsv4.x, ndmp, backup, restores 
 summary: 클러스터 및 세션 지향 프로토콜은 업그레이드하는 동안 I/O 서비스와 같은 특정 영역에서 클라이언트 및 애플리케이션에 악영향을 미칠 수 있습니다. 
 ---
-= 세션 지향 프로토콜에 대한 고려 사항
+= ONTAP 업그레이드 중 세션 지향 프로토콜의 부정적인 영향에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

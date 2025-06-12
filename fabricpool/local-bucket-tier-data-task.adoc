@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: netapp, ontap, ONTAP 9.8, ONTAP S3, S3, data, cloud, tier, tiering, tiers, bucket, buckets, VM, storage VM, storage, object, object storage, volume 
 summary: ONTAP 9.8부터 ONTAP S3를 사용하여 데이터를 로컬 오브젝트 스토리지에 계층화할 수 있습니다. 
 ---
-= 데이터를 로컬 버킷에 계층화
+= 로컬 ONTAP S3 버킷에 계층 데이터 추가
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

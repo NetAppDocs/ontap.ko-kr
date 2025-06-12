@@ -35,6 +35,8 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 
 클러스터 범위에서 온보드 키 관리를 구성하고 SVM 범위에서 외부 키 관리를 구성할 수 있습니다. 'Security key-manager key migrate' 명령을 사용하여 클러스터 범위의 온보드 키 관리에서 SVM 범위의 외부 키 관리자로 키를 마이그레이션할 수 있습니다.
 
+에 대한 자세한 내용은 `security key-manager key migrate` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-migrate.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 .시작하기 전에
 * KMIP SSL 클라이언트 및 서버 인증서를 설치해야 합니다.
 * 이 작업을 수행하려면 클러스터 또는 SVM 관리자여야 합니다.
@@ -131,4 +133,8 @@ node2
 +
 볼륨을 변환하기 전에 외부 키 관리자를 완전히 구성해야 합니다. MetroCluster 환경에서는 외부 키 관리자를 두 사이트에 모두 구성해야 합니다.
 
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
 

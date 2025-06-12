@@ -67,6 +67,9 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 . 메시지가 표시되면 비밀 키를 입력합니다.
 . AWS KMS가 올바르게 구성되었는지 확인합니다.
 `security key-manager external aws show -vserver _svm_name_`
++
+에 대한 자세한 내용은 `security key-manager external aws` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external+aws["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -79,6 +82,9 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 . AKV가 올바르게 활성화되었는지 확인합니다.
 `security key-manager external azure show vserver _svm_name_`
 서비스 상태가 양호하지 않은 경우 데이터 SVM LIF를 통해 AKV 키 관리 서비스에 대한 연결을 설정합니다.
++
+에 대한 자세한 내용은 `security key-manager external azure` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external+azure["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -95,6 +101,9 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 `security key-manager external gcp show vserver _svm_name_`
 의 상태입니다 `kms_wrapped_key_status` 가 됩니다 `“UNKNOWN”` 암호화된 볼륨이 생성되지 않은 경우
 서비스 상태가 양호하지 않은 경우 데이터 SVM LIF를 통해 GCP 키 관리 서비스에 대한 연결을 설정합니다.
++
+에 대한 자세한 내용은 `security key-manager external gcp` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external+gcp["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -104,4 +113,5 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html["Cloud Volumes ONTAP용 NetApp 암호화 솔루션으로 볼륨 암호화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external+["보안 키 관리자 외부"^]
 

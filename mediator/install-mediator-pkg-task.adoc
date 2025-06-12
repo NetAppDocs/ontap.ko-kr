@@ -16,16 +16,16 @@ ONTAP Mediator를 설치하려면 설치 패키지를 받아서 호스트에서 
 .단계
 . 설치 프로그램을 실행하고 필요에 따라 프롬프트에 응답합니다.
 +
-`./ontap-mediator-1.9.0/ontap-mediator-1.9.0 -y`
+`./ontap-mediator-1.9.1/ontap-mediator-1.9.1 -y`
 
 +
 [listing]
 ----
-[root@scs000099753 ~]# ./ontap-mediator-1.9.0/ontap-mediator-1.9.0 -y
+[root@scs000099753 ~]# ./ontap-mediator-1.9.1/ontap-mediator-1.9.1 -y
 ----
 +
 
-NOTE: 설치하는 동안 자동 서명 확인을 건너뛰려면 다음 명령을 사용합니다. `./ontap-mediator-1.9.0/ontap-mediator-1.9.0 -y --skip-code-signature-check`
+NOTE: 설치하는 동안 자동 서명 확인을 건너뛰려면 다음 명령을 사용합니다. `./ontap-mediator-1.9.1/ontap-mediator-1.9.1 -y --skip-code-signature-check`
 
 +
 설치 프로세스가 진행되어 필요한 계정을 생성하고 필요한 패키지를 설치합니다. 호스트에 이전 버전의 중재자가 설치되어 있는 경우 업그레이드할지 확인하는 메시지가 표시됩니다.
@@ -74,18 +74,18 @@ REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
 REDHAT_SUPPORT_PRODUCT_VERSION="9.4"
 [root@mediator_host ~]#
 
-[root@mediator_host ~]# tar -zxvf ontap-mediator-1.9.0.tgz
-ontap-mediator-1.9.0/
-ontap-mediator-1.9.0/csc-prod-chain-ONTAP-Mediator.pem
-ontap-mediator-1.9.0/csc-prod-ONTAP-Mediator.pem
-ontap-mediator-1.9.0/tsa-prod-ONTAP-Mediator.pem
-ontap-mediator-1.9.0/tsa-prod-chain-ONTAP-Mediator.pem
-ontap-mediator-1.9.0/ONTAP-Mediator-production.pub
-ontap-mediator-1.9.0/ontap-mediator-1.9.0
-ontap-mediator-1.9.0/ontap-mediator-1.9.0.sig.tsr
-ontap-mediator-1.9.0/ontap-mediator-1.9.0.tsr
-ontap-mediator-1.9.0/ontap-mediator-1.9.0.sig
-[root@mediator_host ~]# ontap-mediator-1.9.0/ontap-mediator-1.9.0
+[root@mediator_host ~]# tar -zxvf ontap-mediator-1.9.1.tgz
+ontap-mediator-1.9.1/
+ontap-mediator-1.9.1/csc-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.9.1/csc-prod-ONTAP-Mediator.pem
+ontap-mediator-1.9.1/tsa-prod-ONTAP-Mediator.pem
+ontap-mediator-1.9.1/tsa-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.9.1/ONTAP-Mediator-production.pub
+ontap-mediator-1.9.1/ontap-mediator-1.9.1
+ontap-mediator-1.9.1/ontap-mediator-1.9.1.sig.tsr
+ontap-mediator-1.9.1/ontap-mediator-1.9.1.tsr
+ontap-mediator-1.9.1/ontap-mediator-1.9.1.sig
+[root@mediator_host ~]# ontap-mediator-1.9.1/ontap-mediator-1.9.1
 
 ONTAP Mediator: Self Extracting Installer
 
@@ -325,7 +325,7 @@ Installed:
 
 Complete!
 OS package installations finished
-+ Installing ONTAP Mediator. (Log: /root/ontap_mediator.T7uce6/ontap-mediator-1.9.0/ontap-mediator-1.9.0/install_20241017092214.log)
++ Installing ONTAP Mediator. (Log: /root/ontap_mediator.T7uce6/ontap-mediator-1.9.1/ontap-mediator-1.9.1/install_20241017092214.log)
     This step will take several minutes. Use the log file to view progress.
     Sudoer config verified
     ONTAP Mediator rsyslog and logging rotation enabled

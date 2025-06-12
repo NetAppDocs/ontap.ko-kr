@@ -46,4 +46,5 @@ NOTE: 새로 설치된 인증서를 사용하도록 키 관리자 구성을 업�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-modify.html["보안 키 관리자 외부 수정"^]
 

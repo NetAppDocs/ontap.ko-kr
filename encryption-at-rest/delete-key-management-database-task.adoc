@@ -51,5 +51,10 @@ NOTE: MetroCluster 환경에서는 admin SVM에 대해 두 클러스터 모두�
 --
 'Security key-manager delete-KMIP-config' 명령어를 사용한다
 
+에 대한 자세한 내용은 `security key-manager delete-kmip-config` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-delete-kmip-config.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external["보안 키 관리자 외부"^]
+
