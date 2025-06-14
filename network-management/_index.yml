@@ -30,7 +30,7 @@ indexpage:
       url: "/../networking/configure_lifs_cluster_administrators_only_overview.html"
     - title: LIF 마이그레이션
       url: "/../networking/migrate_a_lif.html"
-    - title: LIF 및 서비스 정책
+    - title: LIF 및 서비스 정책을 확인하십시오
       url: "/../networking/lifs_and_service_policies96.html"
     - title: LIF를 홈 포트로 되돌립니다
       url: "/../networking/revert_a_lif_to_its_home_port.html"
@@ -64,7 +64,7 @@ indexpage:
       url: "/../networking/configure_network_security_using_federal_information_processing_standards_fips.html"
     - title: IPsec을 구성합니다
       url: "/../networking/ipsec-prepare.html"
-    - title: 방화벽 및 서비스 정책을 구성합니다
+    - title: 방화벽 및 서비스 정책 구성
       url: "/../networking/configure_firewall_policies_for_lifs.html"
   - title: 더 많은 리소스
     links:
