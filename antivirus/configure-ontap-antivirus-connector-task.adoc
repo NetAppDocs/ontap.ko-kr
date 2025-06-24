@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'configure, antivirus connector, task, SVM"s, connections' 
 summary: 'ONTAP 관리 LIF, 폴링 정보 및 ONTAP 관리자 계정 자격 증명을 입력하거나 데이터 LIF만 입력하여 연결하려는 하나 이상의 SVM(스토리지 가상 머신)을 지정하도록 바이러스 백신 커넥터를 구성해야 합니다.' 
 ---
-= ONTAP 안티바이러스 커넥터를 구성합니다
+= ONTAP Vscan Antivirus 커넥터 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

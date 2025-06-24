@@ -1,0 +1,13 @@
+---
+permalink: nfs-admin/commands-manage-name-mappings-reference-copy.html 
+sidebar: sidebar 
+keywords: command, mapping, name 
+summary: 이름 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
+---
+= NFS 이름 매핑을 관리하기 위한 ONTAP 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+<stdin>에 해결되지 않은 지시어가 있습니다 - include::../_include/commands-manage-name-mappings-reference.adoc[]

@@ -4,7 +4,7 @@ permalink: task_nas_provision_home_directories.html
 keywords: netapp, ontap, provisioning, nas, provision, home, directories, SMB, CIFS, SMB, share name 
 summary: 볼륨을 생성하여 SMB 프로토콜을 사용하여 홈 디렉토리에 대한 스토리지를 제공합니다. 
 ---
-= 홈 디렉토리를 위한 NAS 스토리지 용량 할당
+= ONTAP 시스템 관리자를 사용하여 홈 디렉토리에 대한 NAS 스토리지 제공
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

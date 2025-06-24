@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, scanner pool, single cluster 
 summary: 스캐너 풀은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 
 ---
-= ONTAP를 사용하여 단일 클러스터에 스캐너 풀을 생성합니다
+= 단일 클러스터에 ONTAP Vscan 스캐너 풀을 만듭니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

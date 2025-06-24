@@ -61,7 +61,7 @@ SnapMirror 활성 동기화가 있는 일관성 그룹당 최대 볼륨 수는 �
 SnapMirror 활성 동기화의 볼륨 제한은 관계 수가 아닌 끝점 수를 기준으로 계산됩니다. 12개의 볼륨이 있는 일관성 그룹은 운영 클러스터와 보조 클러스터 모두에서 12개의 엔드포인트를 지원합니다. SnapMirror 활성 동기화와 SnapMirror 동기식 관계는 모두 총 엔드포인트 수에 기여합니다.
 
 
-IMPORTANT: 이러한 제한 사항은 FAS, AFF 및 최신 ASA 시스템에 적용됩니다. ASA R2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)을 사용하는 경우 을 참조하십시오.link:https://docs.netapp.com/us-en/asa-r2/data-protection/manage-consistency-groups.html["ASA r2 설명서"^]
+IMPORTANT: 이러한 제한 사항은 FAS, AFF 및 최신 ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 참조하세요. link:https://docs.netapp.com/us-en/asa-r2/data-protection/manage-consistency-groups.html["ASA r2 설명서"^] .
 
 플랫폼당 최대 엔드포인트는 다음 표에 나와 있습니다.
 

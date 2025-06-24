@@ -4,7 +4,7 @@ permalink: task_nas_provision_export_policies.html
 keywords: netapp, ontap, file, access, control, using, export, policies, manage access, linux client, NFS server 
 summary: 내보내기 정책을 사용하여 NFS 서버에 대한 Linux 클라이언트 액세스를 설정합니다 
 ---
-= 내보내기 정책을 사용하여 액세스를 관리합니다
+= ONTAP System Manager를 사용하여 내보내기 정책을 사용하여 액세스 관리
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

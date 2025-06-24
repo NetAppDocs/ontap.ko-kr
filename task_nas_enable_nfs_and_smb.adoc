@@ -4,7 +4,7 @@ permalink: task_nas_enable_nfs_and_smb.html
 keywords: ontap, netapp, provision nas storage, linux, windows, NFS, SMB, SMB, CIFS, enable NFS, enable SMB, configure DNS, modify storage VM, configure DNS, configure name server, configure Kerberos, map user names 
 summary: NFS 및 SMB 서버가 Linux 및 Windows 클라이언트에 데이터를 제공할 수 있도록 스토리지 VM을 수정합니다. 
 ---
-= NFS와 SMB를 모두 사용하여 Windows 및 Linux 모두에 대해 NAS 스토리지를 설정합니다
+= ONTAP 시스템 관리자를 사용하여 NFS와 SMB를 모두 사용하여 Windows와 Linux 모두에서 NAS 스토리지를 활성화합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

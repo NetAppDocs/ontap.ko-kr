@@ -7,7 +7,7 @@ entries:
   entries:
   - title: 관리 개요
     url: "/concept_administration_overview.html"
-  - title: System Manager를 사용하여 클러스터에 액세스합니다
+  - title: 시스템 관리자를 사용하여 ONTAP 클러스터에 액세스하세요.
     url: "/system-admin/access-cluster-system-manager-browser-task.html"
   - title: 프로토콜을 구성합니다
     url: "/software_setup/configure-protocols.html"

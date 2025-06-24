@@ -4,7 +4,7 @@ permalink: task_quotas_to_limit_resources.html
 keywords: netapp, ontap, quotas, quota, managing, resources, qtree, qtrees, work load, workload, disk space, hard limit, soft limit, limit resource use 
 summary: 할당량을 추가하여 할당량 대상이 사용할 수 있는 디스크 공간의 양을 제한합니다. 
 ---
-= 리소스 사용을 제한하도록 할당량을 설정합니다
+= ONTAP 시스템 관리자를 사용하여 리소스 사용을 제한하기 위한 할당량 설정
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

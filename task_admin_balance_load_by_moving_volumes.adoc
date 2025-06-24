@@ -4,7 +4,7 @@ permalink: task_admin_balance_load_by_moving_volumes.html
 keywords: netapp, ontap, administration, balance, load, moving, move, volumes, volumes, utilization, storage, file, system, analytics, File System Analytics 
 summary: ONTAP 9.8부터 System Manager를 사용하여 볼륨을 다른 계층으로 이동하여 스토리지 로드의 균형을 맞추거나 성능을 향상할 수 있습니다. 
 ---
-= 볼륨을 다른 계층으로 이동하여 로드 밸런싱
+= ONTAP 시스템 관리자를 사용하여 볼륨을 다른 계층으로 이동하여 부하를 균형 있게 조정합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -84,7 +84,7 @@ entries:
     url: "/concepts/compression-concept.html"
   - title: FlexClone 볼륨, 파일 및 LUN을 사용할 수 있습니다
     url: "/concepts/flexclone-volumes-files-luns-concept.html"
-  - title: System Manager의 용량 측정
+  - title: ONTAP 시스템 관리자의 용량 측정
     url: "/concepts/capacity-measurements-in-sm-concept.html"
   - title: 온도에 민감한 보관
     url: "/volumes/enable-temperature-sensitive-efficiency-concept.html"

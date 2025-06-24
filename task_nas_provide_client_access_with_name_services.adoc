@@ -4,7 +4,7 @@ permalink: task_nas_provide_client_access_with_name_services.html
 keywords: netapp, ontap, name services, client access, LDAP, NIS, authenticate NAS client, look up 
 summary: LDAP 또는 NIS를 사용하여 NAS 클라이언트를 인증합니다 
 ---
-= 이름 서비스를 사용하여 클라이언트 액세스 제공
+= ONTAP 시스템 관리자를 사용하여 이름 서비스를 통해 클라이언트 액세스를 제공합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

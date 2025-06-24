@@ -4,7 +4,7 @@ permalink: task_admin_troubleshoot_hardware_problems.html
 keywords: netapp, ontap, troubleshoot, hardware, controller, fan, switch, system, problems, errors, issues, card, high temperature, heat, port, SAS port, FRU, hardware visualization, visual, visualize, visualise, visualisation, video, hardware view, disk shelf, adapter card, console ports, view node, view disk shelf, view disk shelves, view switch, cable, cabling 
 summary: 네트워크에서 노드, 디스크 쉘프 및 스토리지 스위치의 구성을 확인하고 발생할 수 있는 문제를 해결할 수 있습니다. 
 ---
-= 하드웨어 구성을 확인하여 문제를 파악합니다
+= ONTAP 시스템 관리자의 문제를 파악하기 위해 하드웨어 구성을 확인하세요.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: antivirus, vscan, partner, solutions 
 summary: NetApp는 Trellix, Symantec, Trend Micro, Sentinel One, Deep 본능 및 OPSWAT와 협력하여 ONTAP Vscan 기술을 기반으로 하는 업계 최고의 맬웨어 방지 및 바이러스 방지 솔루션을 제공합니다. 
 ---
-= Vscan 파트너 솔루션
+= ONTAP Vscan 파트너 솔루션에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

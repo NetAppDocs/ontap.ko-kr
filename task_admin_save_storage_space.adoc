@@ -4,7 +4,7 @@ permalink: task_admin_save_storage_space.html
 keywords: netapp, ontap, administration, save, storage, space, compression, compaction, utilization, deduplication, storage VM, SVM, vserver, non-AFF cluster, space savings, duplicate data blocks, efficiency, storage efficiency, inline compression 
 summary: 중복제거, 데이터 압축, 데이터 컴팩션을 함께 실행하거나 독립적으로 실행하여 FlexVol 볼륨에서 최적의 공간 절약 효과를 달성할 수 있습니다. 
 ---
-= 압축, 컴팩션, 중복제거를 사용하여 스토리지 공간을 절약할 수 있습니다
+= ONTAP System Manager를 사용하여 압축, 압축 및 중복 제거를 사용하여 저장 공간을 절약하세요.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

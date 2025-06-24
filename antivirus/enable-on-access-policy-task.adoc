@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, on-access, policy 
 summary: 액세스 시 정책은 액세스 시 검사의 범위를 정의합니다. SVM의 파일을 스캔하려면 먼저 SVM에서 액세스 시 정책을 활성화해야 합니다. 
 ---
-= ONTAP를 통해 온-액세스 정책을 설정합니다
+= ONTAP Vscan 온액세스 정책 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

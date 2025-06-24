@@ -144,7 +144,7 @@ entries:
     - title: NAS SVM의 기본 사용자 구성
       url: "/nfs-admin/configure-default-user-task.html"
     - title: NFS 이름 매핑을 관리하는 명령입니다
-      url: "/nfs-admin/commands-manage-name-mappings-reference.html"
+      url: "/nfs-admin/commands-manage-name-mappings-reference-copy.html"
   - title: SVM에 대한 Windows NFS 클라이언트에 대한 액세스 활성화
     url: "/nfs-admin/enable-access-windows-nfs-clients-task.html"
   - title: SVM에 대한 NFS 클라이언트에서 내보내기 표시를 활성화합니다.

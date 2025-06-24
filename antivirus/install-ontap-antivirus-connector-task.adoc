@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, ontap, task, antivirus connector 
 summary: Vscan 서버에 ONTAP 안티바이러스 커넥터를 설치하여 ONTAP를 실행하는 시스템과 Vscan 서버 간의 통신을 제공합니다. 
 ---
-= ONTAP 안티바이러스 커넥터를 설치합니다
+= ONTAP Vscan Antivirus 커넥터 설치
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

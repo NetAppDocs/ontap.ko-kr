@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, nfsv3, identifier, svm 
 summary: 높은 파일 개수의 FlexGroup 볼륨을 지원하고 파일 ID 충돌을 방지하려면 FlexGroup 볼륨을 생성해야 하는 SVM에서 64비트 파일 식별자를 활성화해야 합니다. 
 ---
-= ONTAP SVM에서 64비트 NFSv3 식별자를 사용하도록 설정합니다
+= FlexGroups를 사용하여 ONTAP SVM에서 64비트 NFSv3 식별자 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

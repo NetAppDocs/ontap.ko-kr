@@ -4,7 +4,7 @@ permalink: high-availability/ha_manual_takeover.html
 keywords: ontap, high, availability, ha, pair, manual, takeover, moving, move, epislon, manually, initiated 
 summary: 파트너의 유지 관리가 필요한 상황이나 기타 유사한 상황에서 수동으로 테이크오버 수행 가능 
 ---
-= 수동 테이크오버 명령
+= ONTAP 수동 인수 명령
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

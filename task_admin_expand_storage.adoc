@@ -4,7 +4,7 @@ permalink: task_admin_expand_storage.html
 keywords: system manager, expand, expanding, add, adding, add LUN to existing volume, storage, increase storage, increase size of LUN, increase size of volume, more capacity, storage capacity 
 summary: 호스트에서 더 많은 공간을 사용할 수 있도록 볼륨 또는 LUN의 크기를 늘릴 수 있습니다. ONTAP 9.8부터 System Manager를 사용하여 기존 볼륨에 LUN을 추가할 수 있습니다. 
 ---
-= 스토리지를 확장합니다
+= ONTAP 시스템 관리자로 스토리지 확장
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

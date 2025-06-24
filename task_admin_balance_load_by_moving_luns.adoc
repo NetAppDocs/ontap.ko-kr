@@ -4,7 +4,7 @@ permalink: task_admin_balance_load_by_moving_luns.html
 keywords: netapp, ontap, administration, balance, load, moving, move, LUN, LUNs, utilization, performance service level, qtree, origin volume, source volume, destination volume 
 summary: LUN을 이동하여 스토리지 로드 밸런싱을 수행하거나 성능을 향상할 수 있습니다. 
 ---
-= LUN을 이동하여 로드 밸런싱
+= ONTAP 시스템 관리자를 사용하여 LUN을 이동하여 부하를 균형 있게 조정합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

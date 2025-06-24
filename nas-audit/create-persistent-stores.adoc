@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, persistent store, fpolicy, asynchronous, non, mandatory 
 summary: ONTAP 9.14.1부터 FPolicy를 사용하면 비동기적 정책에 대한 파일 액세스 이벤트를 캡처하는 영구 저장소를 설정할 수 있습니다. 
 ---
-= FPolicy 영구 저장소를 생성합니다
+= ONTAP FPolicy 영구 저장소 생성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

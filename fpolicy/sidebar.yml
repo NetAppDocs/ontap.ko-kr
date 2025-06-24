@@ -4,21 +4,21 @@ title: SVM에서 파일 모니터링 및 관리를 위해 FPolicy를 사용합�
 entries:
 - title: FPolicy 이해
   entries:
-  - title: FPolicy 솔루션의 두 부분은 무엇입니까
+  - title: 두 부분으로 구성된 ONTAP FPolicy 솔루션에 대해 알아보세요
     url: "/nas-audit/two-parts-fpolicy-solution-concept.html"
-  - title: 동기식 및 비동기식 알림입니다
+  - title: ONTAP FPolicy 동기 및 비동기 알림
     url: "/nas-audit/synchronous-asynchronous-notifications-concept.html"
-  - title: FPolicy 영구 저장소
+  - title: ONTAP FPolicy 영구 저장소
     url: "/nas-audit/persistent-stores.html"
-  - title: FPolicy 구성 유형
+  - title: ONTAP FPolicy 구성 유형
     url: "/nas-audit/fpolicy-config-types-concept.html"
-  - title: 클러스터 구성 요소가 FPolicy 구현을 수행하는 역할을 합니다
+  - title: ONTAP FPolicy 구현에서의 클러스터 구성 요소 역할
     url: "/nas-audit/roles-cluster-components-fpolicy-concept.html"
-  - title: FPolicy가 외부 FPolicy 서버에서 작동하는 방식
+  - title: ONTAP FPolicy가 외부 FPolicy 서버와 작동하는 방식
     url: "/nas-audit/fpolicy-external-fpolicy-servers-concept.html"
-  - title: 노드-외부 FPolicy 서버 통신 프로세스는 무엇입니까
+  - title: 노드-외부 ONTAP FPolicy 서버 통신 프로세스
     url: "/nas-audit/node-fpolicy-server-communication-process-concept.html"
-  - title: FPolicy 서비스가 SVM 네임스페이스 전체에서 작동하는 방식
+  - title: SVM 네임스페이스 전반의 ONTAP FPolicy 서비스에 대해 알아보세요.
     url: "/nas-audit/fpolicy-services-svm-namespaces-concept.html"
   - title: FPolicy 패스스루 읽기를 통해 어떻게 계층적 스토리지 관리의 사용성을 개선합니다
     url: "/nas-audit/fpolicy-passthrough-read-enhances-usability-concept.html"
@@ -26,11 +26,11 @@ entries:
   entries:
   - title: FPolicy를 구성하기 위한 요구사항, 고려 사항 및 모범 사례
     url: "/nas-audit/requirements-best-practices-fpolicy-concept.html"
-  - title: FPolicy 구성을 설정하는 단계는 무엇입니까
+  - title: ONTAP FPolicy 구성 설정
     url: "/nas-audit/steps-setup-fpolicy-config-concept.html"
   - title: FPolicy 외부 엔진 구성을 계획하십시오
     entries:
-    - title: 개요
+    - title: ONTAP FPolicy 외부 엔진 구성 계획
       url: "/nas-audit/plan-fpolicy-external-engine-config-concept.html"
     - title: SSL 인증된 연결을 사용하도록 FPolicy 외부 엔진을 구성하는 방법에 대한 추가 정보입니다
       url: "/nas-audit/configure-fpolicy-ssl-connections-concept.html"
@@ -38,7 +38,7 @@ entries:
       url: "/nas-audit/certificates-disaster-recovery-non-id-preserve-concept.html"
     - title: MetroCluster 및 SVM 재해 복구 구성의 클러스터 범위 FPolicy 외부 엔진에 대한 제한 사항
       url: "/nas-audit/restrictions-fpolicy-mcc-svm-disaster-recovery-concept.html"
-    - title: FPolicy 외부 엔진 구성 워크시트를 작성합니다
+    - title: ONTAP FPolicy 외부 엔진 구성 워크시트 완료
       url: "/nas-audit/fpolicy-external-engine-config-worksheet-reference.html"
   - title: FPolicy 이벤트 구성을 계획합니다
     entries:
@@ -50,35 +50,35 @@ entries:
       url: "/nas-audit/supported-file-operation-filter-fpolicy-nfsv3-concept.html"
     - title: FPolicy에서 NFSv4를 모니터링할 수 있는 파일 작업 및 필터 조합이 지원됩니다
       url: "/nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html"
-    - title: FPolicy 이벤트 구성 워크시트를 작성합니다
+    - title: ONTAP FPolicy 이벤트 구성 워크시트 완료
       url: "/nas-audit/fpolicy-event-config-worksheet-reference.html"
   - title: FPolicy 정책 구성을 계획합니다
     entries:
-    - title: 개요
+    - title: ONTAP FPolicy 정책 구성에 대해 알아보세요
       url: "/nas-audit/plan-fpolicy-policy-config-concept.html"
     - title: FPolicy 정책에서 기본 엔진을 사용하는 경우 FPolicy 범위 구성에 대한 요구사항
       url: "/nas-audit/fpolicy-scope-config-native-engine-concept.html"
-    - title: FPolicy 정책 워크시트를 작성합니다
+    - title: ONTAP FPolicy 정책 워크시트 완료
       url: "/nas-audit/fpolicy-policy-worksheet-reference.html"
   - title: FPolicy 범위 구성을 계획합니다
     entries:
-    - title: 개요
+    - title: ONTAP FPolicy 범위 구성에 대해 알아보세요
       url: "/nas-audit/plan-fpolicy-scope-config-concept.html"
-    - title: FPolicy 범위 워크시트를 작성합니다
+    - title: ONTAP FPolicy 범위 워크시트 완료
       url: "/nas-audit/fpolicy-scope-worksheet-reference.html"
 - title: FPolicy 구성을 생성합니다
   entries:
-  - title: FPolicy 외부 엔진을 생성합니다
+  - title: ONTAP FPolicy 외부 엔진 생성
     url: "/nas-audit/create-fpolicy-external-engine-task.html"
-  - title: FPolicy 이벤트를 생성합니다
+  - title: ONTAP FPolicy 이벤트 생성
     url: "/nas-audit/create-fpolicy-event-task.html"
-  - title: 영구 저장소를 만듭니다
+  - title: ONTAP FPolicy 영구 저장소 생성
     url: "/nas-audit/create-persistent-stores.html"
-  - title: FPolicy 정책을 생성합니다
+  - title: ONTAP FPolicy 정책 생성
     url: "/nas-audit/create-fpolicy-policy-task.html"
-  - title: FPolicy 범위를 생성합니다
+  - title: ONTAP FPolicy 범위 생성
     url: "/nas-audit/create-fpolicy-scope-task.html"
-  - title: FPolicy 정책을 사용합니다
+  - title: ONTAP FPolicy 정책 활성화
     url: "/nas-audit/enable-fpolicy-policy-task.html"
 - title: FPolicy 구성을 관리합니다
   entries:
@@ -86,17 +86,17 @@ entries:
     entries:
     - title: FPolicy 구성을 수정하는 명령입니다
       url: "/nas-audit/commands-modify-fpolicy-config-reference.html"
-    - title: FPolicy 정책을 사용하거나 사용하지 않도록 설정합니다
+    - title: ONTAP FPolicy 정책 활성화 또는 비활성화
       url: "/nas-audit/enable-disable-fpolicy-policies-task.html"
   - title: FPolicy 구성에 대한 정보를 표시합니다
     entries:
-    - title: show 명령이 작동하는 방식
+    - title: ONTAP FPolicy show 명령에 대해 알아보세요
       url: "/nas-audit/show-commands-work-concept.html"
     - title: FPolicy 구성에 대한 정보를 표시하는 명령입니다
       url: "/nas-audit/commands-display-fpolicy-config-reference.html"
     - title: FPolicy 정책 상태에 대한 정보를 표시합니다
       url: "/nas-audit/display-fpolicy-policy-status-task.html"
-    - title: 활성화된 FPolicy 정책에 대한 정보를 표시합니다
+    - title: 활성화된 ONTAP FPolicy 정책에 대한 정보 표시
       url: "/nas-audit/display-enabled-fpolicy-policies-task.html"
   - title: FPolicy 서버 연결을 관리합니다
     entries:
@@ -104,7 +104,7 @@ entries:
       url: "/nas-audit/connect-external-fpolicy-servers-task.html"
     - title: 외부 FPolicy 서버에서 분리하십시오
       url: "/nas-audit/disconnect-from-external-fpolicy-servers-task.html"
-    - title: 외부 FPolicy 서버 연결에 대한 정보를 표시합니다
+    - title: 외부 ONTAP FPolicy 서버에 대한 연결에 대한 정보 표시
       url: "/nas-audit/display-connections-external-fpolicy-servers-task.html"
-    - title: 패스스루 읽기 연결 상태에 대한 정보를 표시합니다
+    - title: ONTAP FPolicy 패스스루-읽기 연결 상태에 대한 정보 표시
       url: "/nas-audit/display-fpolicy-passthrough-read-connection-task.html"

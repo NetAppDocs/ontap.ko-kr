@@ -4,7 +4,7 @@ permalink: task_admin_view_submit_support_cases.html
 keywords: support, case, view, submit, digital advisor, active iq, telemetry, log, logging 
 summary: ONTAP 9.9.1부터 클러스터와 관련된 디지털 자문업체 에서 지원 케이스를 보고 새로운 지원 케이스를 제출하는 데 필요한 정보를 확인할 수 있습니다. ONTAP 9.10.1부터 원격 측정 로깅을 활성화할 수 있어 지원 담당자가 문제를 해결하는 데 도움이 됩니다. 
 ---
-= 지원 케이스를 보고 제출합니다
+= ONTAP System Manager를 사용하여 지원 사례 보기 및 제출
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

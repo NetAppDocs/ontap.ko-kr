@@ -4,7 +4,7 @@ permalink: concept_nas_provision_overview.html
 keywords: netapp, ontap, provisioning, nas, overview, provision NAS storage, manage NAS services, NAS file service, Linux client, Windows client, NAS multiprotocol, name service, name service switch, NFS, SMB, DNS, LDAP, NIS, Kerberos security, export, share, qtree, name mapping, NAS data service 
 summary: ONTAP를 사용하면 Linux 및 Windows 클라이언트에 데이터를 쉽고 안전하고 효율적으로 제공할 수 있습니다. 
 ---
-= System Manager를 사용한 NAS 관리 개요
+= ONTAP System Manager를 사용한 NAS 관리에 대해 알아보세요
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

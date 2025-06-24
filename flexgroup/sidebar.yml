@@ -12,7 +12,7 @@ entries:
   entries:
   - title: 워크플로우
     url: "/flexgroup/creation-workflow-task.html"
-  - title: SVM에서 64비트 NFSv3 식별자 사용
+  - title: FlexGroups를 사용하여 ONTAP SVM에서 64비트 NFSv3 식별자 활성화
     url: "/flexgroup/enable-64-bit-nfsv3-identifiers-svm-task.html"
   - title: FlexGroup 볼륨을 자동으로 프로비저닝합니다
     url: "/flexgroup/provision-automatically-task.html"
@@ -28,9 +28,9 @@ entries:
     url: "/flexgroup/shrink-flexgroup-volume-task.html"
   - title: 크기가 자동으로 확장 및 축소되도록 FlexGroup 볼륨을 구성합니다
     url: "/flexgroup/configure-automatic-grow-shrink-task.html"
-  - title: 클러스터에서 비동기적으로 디렉토리를 삭제합니다
+  - title: FlexGroups를 사용하여 ONTAP 클러스터에서 디렉토리를 비동기적으로 삭제
     url: "/flexgroup/fast-directory-delete-asynchronous-task.html"
-  - title: 디렉토리를 비동기적으로 삭제하는 클라이언트 권한을 관리합니다
+  - title: FlexGroups를 사용하여 ONTAP 디렉토리를 비동기적으로 삭제하기 위한 클라이언트 권한 관리
     url: "/flexgroup/manage-client-async-dir-delete-task.html"
   - title: FlexGroup 볼륨으로 qtree를 생성합니다
     url: "/flexgroup/create-qtrees-task.html"

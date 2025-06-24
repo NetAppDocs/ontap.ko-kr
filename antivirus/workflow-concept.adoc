@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virus, scanning, workflow 
 summary: 스캔을 활성화하기 전에 스캐너 풀을 생성하고 스캐너 정책을 적용해야 합니다. 일반적으로 SVM에서 액세스 시 스캐닝 모드와 온디맨드 스캐닝 모드를 모두 사용할 수 있습니다. 
 ---
-= 바이러스 검사 워크플로
+= ONTAP Vscan을 사용한 바이러스 검사 워크플로
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

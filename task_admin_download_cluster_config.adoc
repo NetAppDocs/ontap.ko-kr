@@ -4,7 +4,7 @@ permalink: task_admin_download_cluster_config.html
 keywords: netapp, ontap, administration, HA pairs, download, cluster, configuration, config, configure 
 summary: 'ONTAP 9.11.1부터 System Manager를 사용하여 클러스터 구성을 다운로드할 수 있습니다. 이 정보는 재고 관리, 하드웨어 교체 및 수명 주기 활동에 사용될 수 있습니다. 이 정보는 ASUP(AutoSupport) 데이터를 보내지 않는 사이트에 특히 유용합니다.' 
 ---
-= 클러스터 구성을 다운로드합니다
+= ONTAP 시스템 관리자를 사용하여 클러스터 구성 다운로드
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

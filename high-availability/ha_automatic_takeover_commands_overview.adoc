@@ -4,7 +4,7 @@ permalink: high-availability/ha_automatic_takeover_commands_overview.html
 keywords: ontap, high, availability, ha, pair, automatic, takeover, commands, system, events, result, enable, email, notification, capability, disabled 
 summary: 자동 테이크오버 기능은 지원되는 모든 NetApp FAS, AFF, ASA 플랫폼에서 기본적으로 활성화됩니다. 
 ---
-= 자동 테이크오버 명령
+= ONTAP 자동 인수 명령
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

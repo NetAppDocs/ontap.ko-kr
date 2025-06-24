@@ -4,7 +4,7 @@ permalink: high-availability/ha_commands_for_enabling_and_disabling_storage_fail
 keywords: ontap, high, availability, ha, pair, commands, enabling, disabling, storage, failover 
 summary: 스토리지 페일오버를 설정 및 해제하는 명령입니다 
 ---
-= 스토리지 페일오버를 설정 및 해제하는 명령입니다
+= 스토리지 장애 조치를 활성화 및 비활성화하기 위한 ONTAP 명령
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

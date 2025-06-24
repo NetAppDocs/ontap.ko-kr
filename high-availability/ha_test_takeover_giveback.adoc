@@ -4,7 +4,7 @@ permalink: high-availability/ha_test_takeover_giveback.html
 keywords: ontap, high, availability, ha, pair, test, testing, takeover, giveback 
 summary: HA 쌍의 모든 측면을 구성한 후에는 Takeover 및 Giveback 작업 시 두 노드의 스토리지에 중단 없이 액세스할 수 있도록 HA 쌍이 예상대로 작동하는지 확인해야 합니다 
 ---
-= ONTAP에서 Takeover 및 반환 테스트
+= ONTAP 클러스터에서 인수 및 반환 테스트
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

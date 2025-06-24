@@ -78,7 +78,7 @@ entries:
     url: "/nas-audit/enable-disable-auditing-svms-task.html"
   - title: 감사 구성에 대한 정보를 표시합니다
     url: "/nas-audit/display-audit-config-task.html"
-  - title: 감사 구성을 수정하는 명령입니다
+  - title: 감사 구성을 수정하는 명령
     url: "/nas-audit/commands-modify-auditing-config-reference.html"
   - title: 감사 구성을 삭제합니다
     url: "/nas-audit/delete-audit-config-task.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: plan, fpolicy, policy, configuration 
 summary: FPolicy 정책을 구성하기 전에 필요한 매개 변수와 특정 선택적 매개 변수를 구성할 수 있는 이유를 파악해야 합니다. 
 ---
-= FPolicy 정책 구성 개요를 계획하십시오
+= ONTAP FPolicy 정책 구성에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
