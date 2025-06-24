@@ -73,4 +73,4 @@ cluster1::> vserver cifs domain name-mapping-search remove -vserver vs1 -trusted
 cluster1::> vserver cifs domain name-mapping-search modify -vserver vs1 -trusted-domains cifs3.example.com
 ----
 .관련 정보
-xref:display-preferred-trusted-domain-list-task.adoc[신뢰할 수 있는 기본 도메인 목록에 대한 정보 표시]
+xref:display-preferred-trusted-domain-list-task.adoc[기본 설정 신뢰할 수 있는 도메인 목록에 대한 정보를 표시합니다]

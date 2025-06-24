@@ -40,4 +40,4 @@ oplock 모드 설정은 qtree ID 0의 속성으로, 모든 볼륨에 있는 기�
 
 |===
 .관련 정보
-xref:monitor-oplock-status-task.adoc[oplock 상태 모니터링]
+xref:monitor-oplock-status-task.adoc[oplock 상태를 모니터링합니다]

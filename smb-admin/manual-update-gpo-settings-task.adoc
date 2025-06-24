@@ -36,4 +36,4 @@ GPO 설정이 변경되었습니다
 
 
 .관련 정보
-xref:gpos-updated-server-concept.adoc[CIFS 서버에서 GPO를 업데이트하는 방법]
+xref:gpos-updated-server-concept.adoc[SMB 서버에서 GPO 업데이트에 대해 알아보세요]

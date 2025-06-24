@@ -49,4 +49,4 @@ SMB 자동 노드 조회 기능은 기본적으로 비활성화되어 있습니�
 
 
 .관련 정보
-xref:server-options-reference.adoc[사용 가능한 SMB 서버 옵션]
+xref:server-options-reference.adoc[사용 가능한 서버 옵션]

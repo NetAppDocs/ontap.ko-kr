@@ -45,4 +45,4 @@ Warning: The specified path "/home2" does not exist in the namespace
 Do you want to continue? {y|n}: n
 ----
 .관련 정보
-xref:add-home-directory-share-task.adoc[홈 디렉토리 공유를 추가하는 중입니다]
+xref:add-home-directory-share-task.adoc[홈 디렉토리 공유 추가]

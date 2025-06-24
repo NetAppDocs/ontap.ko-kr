@@ -21,8 +21,8 @@ summary: 로컬 사용자 또는 도메인 사용자에게 직접 권한을 할�
 
 
 .관련 정보
-* xref:add-privileges-local-domain-users-groups-task.adoc[로컬 또는 도메인 사용자 또는 그룹에 권한 추가]
+* xref:add-privileges-local-domain-users-groups-task.adoc[로컬 또는 도메인 사용자 또는 그룹에 권한을 추가합니다]
 * xref:remove-privileges-local-domain-users-groups-task.adoc[로컬 또는 도메인 사용자 또는 그룹에서 권한을 제거합니다]
 * xref:reset-privileges-local-domain-users-groups-task.adoc[로컬 또는 도메인 사용자 및 그룹에 대한 권한을 재설정합니다]
-* xref:configure-bypass-traverse-checking-concept.adoc[통과 확인 우회 구성]
+* xref:configure-bypass-traverse-checking-concept.adoc[바이패스 트래버스 검사 구성에 대해 알아보세요]
 

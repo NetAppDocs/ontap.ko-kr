@@ -119,8 +119,8 @@ ONTAP 명령줄 인터페이스입니다
  a| 
 * link:smb-config/index.html["CLI를 사용한 SMB 구성 개요"]
 * link:nfs-config/index.html["ONTAP CLI를 사용한 NFS 구성에 대해 알아보십시오"]
-* link:nfs-admin/security-styles-their-effects-concept.html["보안 스타일과 그 효과는 무엇입니까"]
-* link:nfs-admin/case-sensitivity-file-directory-multiprotocol-concept.html["ONTAP NFS 다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대소문자 구분에 대해 알아보세요."]
+* link:nfs-admin/security-styles-their-effects-concept.html["보안 스타일과 그 효과에 대해 알아보세요"]
+* link:nfs-admin/case-sensitivity-file-directory-multiprotocol-concept.html["다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대/소문자를 구분하십시오"]
 
 
 |===

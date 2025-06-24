@@ -61,16 +61,11 @@ CLI를 사용하여 SVM에서 로컬 SMB 사용자 및 그룹에 대한 통과 �
 
 
 .관련 정보
-xref:allow-users-groups-bypass-directory-traverse-task.adoc[사용자 또는 그룹이 디렉토리 통과 확인을 건너뛰도록 허용합니다]
+* xref:allow-users-groups-bypass-directory-traverse-task.adoc[사용자 또는 그룹이 디렉토리 통과 확인을 건너뛰도록 허용합니다]
+* xref:disallow-users-groups-bypass-directory-traverse-task.adoc[디렉토리 통과 확인을 거치지 않고 사용자 또는 그룹을 허용하지 않습니다]
+* xref:configure-character-mappings-file-name-translation-task.adoc[볼륨에서 파일 이름 번역을 위한 문자 매핑 구성]
+* xref:create-share-access-control-lists-task.html[공유 액세스 제어 목록 만들기]
+* xref:secure-file-access-storage-level-access-guard-concept.html[Storage-Level Access Guard를 사용하여 파일 액세스를 보호합니다]
+* xref:list-supported-privileges-reference.adoc[지원되는 권한 목록입니다]
+* xref:add-privileges-local-domain-users-groups-task.html[로컬 또는 도메인 사용자 또는 그룹에 권한을 추가합니다]
 
-xref:disallow-users-groups-bypass-directory-traverse-task.adoc[디렉토리 통과 확인을 거치지 않고 사용자 또는 그룹을 허용하지 않습니다]
-
-xref:configure-character-mappings-file-name-translation-task.adoc[볼륨에서 SMB 파일 이름 변환에 대한 문자 매핑을 구성합니다]
-
-xref:create-share-access-control-lists-task.html[SMB 공유 액세스 제어 목록을 생성합니다]
-
-xref:secure-file-access-storage-level-access-guard-concept.html[Storage-Level Access Guard를 사용하여 파일 액세스를 보호합니다]
-
-xref:list-supported-privileges-reference.adoc[지원되는 권한 목록입니다]
-
-xref:add-privileges-local-domain-users-groups-task.html[로컬 또는 도메인 사용자 또는 그룹에 권한을 추가합니다]

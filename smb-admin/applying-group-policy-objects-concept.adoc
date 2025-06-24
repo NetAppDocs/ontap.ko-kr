@@ -22,6 +22,6 @@ SMB 서버에서 GPO를 사용하도록 설정하면 ONTAP가 GPO 정보를 요�
 
 
 .관련 정보
-xref:secure-file-access-dynamic-access-control-concept.adoc[DAC(Dynamic Access Control)를 사용하여 파일 액세스 보안]
+* xref:secure-file-access-dynamic-access-control-concept.adoc[서버의 파일 액세스 보안에 대해 알아보세요]
+* link:../nas-audit/index.html["SMB 및 NFS 감사 및 보안 추적"]
 
-link:../nas-audit/index.html["SMB 및 NFS 감사 및 보안 추적"]

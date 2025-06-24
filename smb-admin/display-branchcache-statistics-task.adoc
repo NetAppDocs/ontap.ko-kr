@@ -137,6 +137,6 @@ cluster1::*> set -privilege admin
 
 
 .관련 정보
-xref:display-statistics-task.adoc[ONTAP NFS SVM에 대한 통계 표시]
+* xref:display-statistics-task.adoc[통계를 표시합니다]
+* link:../performance-config/index.html["성능 모니터링 설정"]
 
-link:../performance-config/index.html["성능 모니터링 설정"]

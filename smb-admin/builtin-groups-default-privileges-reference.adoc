@@ -76,8 +76,7 @@ ONTAP에서 제공하는 미리 정의된 BUILTIN 그룹 집합에 로컬 사용
 
 |===
 .관련 정보
-xref:builtin-groups-local-administrator-account-concept.adoc[BUILTIN 그룹 및 로컬 관리자 계정 사용에 대한 지침]
+* xref:builtin-groups-local-administrator-account-concept.adoc[서버의 BUILTIN 그룹 및 로컬 관리자 계정에 대해 알아보세요.]
+* xref:list-supported-privileges-reference.adoc[지원되는 권한 목록입니다]
+* xref:configure-bypass-traverse-checking-concept.adoc[바이패스 트래버스 검사 구성에 대해 알아보세요]
 
-xref:list-supported-privileges-reference.adoc[지원되는 권한 목록입니다]
-
-xref:configure-bypass-traverse-checking-concept.adoc[통과 확인 우회 구성]

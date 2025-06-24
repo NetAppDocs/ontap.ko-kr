@@ -60,4 +60,4 @@ SVM은 Kerberos 인증 보안만 수락합니다. SVM은 LM, NTLM 및 NTLMv2 인
 
 
 .관련 정보
-xref:enable-disable-aes-encryption-kerberos-task.adoc[Kerberos 기반 통신을 위한 AES 암호화 활성화 또는 비활성화]
+xref:enable-disable-aes-encryption-kerberos-task.adoc[Kerberos 기반 통신을 위한 AES 암호화 구성]

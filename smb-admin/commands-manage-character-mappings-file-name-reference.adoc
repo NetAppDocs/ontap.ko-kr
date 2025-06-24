@@ -47,4 +47,4 @@ FlexVol 볼륨에서 SMB 파일 이름 변환에 사용되는 파일 문자 매�
 에 대한 자세한 내용은 `vserver cifs character-mapping` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+character-mapping["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .관련 정보
-xref:configure-character-mappings-file-name-translation-task.adoc[볼륨에 대한 SMB 파일 이름 변환에 대한 문자 매핑 구성]
+xref:configure-character-mappings-file-name-translation-task.adoc[볼륨에서 파일 이름 번역을 위한 문자 매핑 구성]

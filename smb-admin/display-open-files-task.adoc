@@ -169,4 +169,4 @@ Continuously Available: Yes
            Reconnected: No
 ----
 .관련 정보
-xref:display-session-task.adoc[SMB 세션 정보를 표시합니다]
+xref:display-session-task.adoc[세션 정보 표시]

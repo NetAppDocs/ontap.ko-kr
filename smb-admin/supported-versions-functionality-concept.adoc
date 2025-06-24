@@ -369,9 +369,9 @@ X
 
 |===
 .관련 정보
-xref:signing-enhance-network-security-concept.adoc[SMB 서명을 사용하여 네트워크 보안을 강화합니다]
+xref:signing-enhance-network-security-concept.adoc[ONTAP 서명을 사용하여 네트워크 보안을 강화하는 방법에 대해 알아보세요.]
 
-xref:set-server-minimum-authentication-security-level-task.adoc[SMB 서버 최소 인증 보안 수준 설정]
+xref:set-server-minimum-authentication-security-level-task.adoc[서버 최소 인증 보안 수준 설정]
 
 xref:configure-required-encryption-concept.adoc[SMB를 통한 데이터 전송을 위해 SMB 서버에서 필요한 SMB 암호화 구성]
 

@@ -16,4 +16,4 @@ summary: '스토리지 레벨 액세스 가드(slag)를 구성하는 워크플�
 image:slag-workflow-2.gif["Storage-Level Access Guard를 구성하는 워크플로우"]
 
 .관련 정보
-xref:configure-storage-level-access-guard-task.adoc[Storage-Level Access Guard 구성]
+xref:configure-storage-level-access-guard-task.adoc[서버에서 스토리지 수준 액세스 보호 구성]

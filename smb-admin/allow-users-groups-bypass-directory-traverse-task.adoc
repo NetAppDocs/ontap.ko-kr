@@ -43,4 +43,4 @@ Vserver   User or Group Name    Privileges
 vs1       EXAMPLE\eng           SeChangeNotifyPrivilege
 ----
 .관련 정보
-xref:disallow-users-groups-bypass-directory-traverse-task.adoc[사용자 또는 그룹이 디렉터리 트래버스 검사를 건너뛰는 것을 허용하지 않습니다]
+xref:disallow-users-groups-bypass-directory-traverse-task.adoc[디렉토리 통과 확인을 거치지 않고 사용자 또는 그룹을 허용하지 않습니다]

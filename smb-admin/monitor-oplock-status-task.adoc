@@ -90,6 +90,6 @@ SMB Expiration Time (Secs): -
 .관련 정보
 xref:enable-disable-oplocks-when-creating-shares-task.adoc[SMB 공유를 생성할 때 oplocks를 설정하거나 해제합니다]
 
-xref:enable-disable-oplocks-existing-shares-task.adoc[기존 SMB 공유에서 oplocks 설정 또는 해제]
+xref:enable-disable-oplocks-existing-shares-task.adoc[기존 SMB 공유에서 oplocks를 설정하거나 해제합니다]
 
-xref:commands-oplocks-volumes-qtrees-reference.adoc[볼륨 및 qtree에서 oplocks를 설정하거나 해제하는 명령입니다]
+xref:commands-oplocks-volumes-qtrees-reference.adoc[SMB 볼륨 및 Qtree에서 Oplock을 활성화하거나 비활성화하기 위한 명령]

@@ -139,4 +139,4 @@ Maximum Tree Connections on Share: 4294967295
        UNIX Group for File Create: -
 ----
 .관련 정보
-xref:create-symbolic-link-mappings-task.adoc[SMB 공유에 대한 심볼 링크 매핑 생성]
+xref:create-symbolic-link-mappings-task.adoc[공유에 대한 심볼릭 링크 매핑 만들기]

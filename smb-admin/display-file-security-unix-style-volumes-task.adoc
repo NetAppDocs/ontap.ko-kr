@@ -100,6 +100,6 @@ cluster1::> vserver security file-directory show -vserver vs1 -path /home -expan
                                     ACLs: -
 ----
 .관련 정보
-xref:display-file-security-ntfs-style-volumes-task.adoc[NTFS 보안 스타일 볼륨의 파일 보안에 대한 정보 표시]
+* xref:display-file-security-ntfs-style-volumes-task.adoc[보안 스타일 볼륨의 파일 보안에 대한 정보 표시]
+* xref:display-file-security-mixed-style-volumes-task.adoc[혼합 보안 형식 볼륨의 파일 보안에 대한 정보를 표시합니다]
 
-xref:display-file-security-mixed-style-volumes-task.adoc[혼합 보안 형식 볼륨의 파일 보안에 대한 정보 표시]

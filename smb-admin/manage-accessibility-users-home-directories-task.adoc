@@ -62,4 +62,4 @@ SVM(스토리지 가상 머신)의 홈 디렉토리 공유는 앞에 물결표({
 다음 예에서는 사용자의 홈 디렉토리에 대한 공용 액세스를 활성화합니다. + 'Set-Privilege advanced' + 'vserver cifs home-directory modify -vserver vs1-is-home-dirs-access-for-public-enabled true' + 'Set-Privilege admin'
 
 .관련 정보
-xref:display-user-home-directory-path-task.adoc[SMB 사용자의 홈 디렉토리 경로에 대한 정보 표시]
+xref:display-user-home-directory-path-task.adoc[사용자 홈 디렉토리 경로에 대한 정보 표시]

@@ -108,4 +108,4 @@ Vserver: vs1
               MemberOf: EXAMPLE\group9
 ----
 .관련 정보
-xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보 표시]
+xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보를 표시합니다]

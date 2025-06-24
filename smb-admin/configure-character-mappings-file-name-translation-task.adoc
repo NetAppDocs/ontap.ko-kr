@@ -167,4 +167,4 @@ Vserver         Volume Name  Character Mapping
 vs1             data         3c:e17c, 3e:f17d, 2a:f745
 ----
 .관련 정보
-xref:create-manage-data-volumes-nas-namespaces-concept.adoc[NAS 네임스페이스에서 데이터 볼륨 생성 및 관리]
+xref:create-manage-data-volumes-nas-namespaces-concept.adoc[네임스페이스에서 데이터 볼륨을 만들고 관리하는 방법에 대해 알아보세요.]

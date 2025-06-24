@@ -50,6 +50,6 @@ NIS 이름 서비스는 UNIX 사용자, 그룹, 넷그룹 및 호스트 이름 �
 
 
 .관련 정보
-xref:enable-ipv6-task.adoc[SMB를 위한 IPv6 사용(클러스터 관리자만 해당)]
+* xref:enable-ipv6-task.adoc[서버에 IPv6 활성화]
+* xref:monitor-display-ipv6-sessions-task.adoc[IPv6 세션에 대한 정보를 모니터링하고 표시합니다.]
 
-xref:monitor-display-ipv6-sessions-task.adoc[IPv6 SMB 세션에 대한 정보 모니터링 및 표시]

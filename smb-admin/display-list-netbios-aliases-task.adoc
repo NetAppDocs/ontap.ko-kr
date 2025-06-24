@@ -73,6 +73,6 @@ Default Site Used by LIFs Without Site Membership:
 
 
 .관련 정보
-xref:add-list-netbios-aliases-server-task.adoc[CIFS 서버에 NetBIOS 별칭 목록을 추가합니다]
+* xref:add-list-netbios-aliases-server-task.adoc[서버에 NetBIOS 별칭 목록 추가]
+* xref:commands-manage-servers-reference.adoc[서버 관리를 위한 명령어]
 
-xref:commands-manage-servers-reference.adoc[NFS 서버를 관리하기 위한 ONTAP 명령입니다]

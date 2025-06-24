@@ -81,8 +81,7 @@ vs1              Engineering      browsable
                                   showsnapshot
 ----
 .관련 정보
-xref:enable-disable-oplocks-when-creating-shares-task.adoc[SMB 공유를 생성할 때 oplocks를 설정하거나 해제합니다]
+* xref:enable-disable-oplocks-when-creating-shares-task.adoc[SMB 공유를 생성할 때 oplocks를 설정하거나 해제합니다]
+* xref:monitor-oplock-status-task.adoc[oplock 상태를 모니터링합니다]
+* xref:add-remove-share-properties-existing-share-task.adoc[기존 주식에 주식 속성 추가 또는 제거]
 
-xref:monitor-oplock-status-task.adoc[oplock 상태 모니터링]
-
-xref:add-remove-share-properties-existing-share-task.adoc[기존 SMB 공유에서 공유 속성 추가 또는 제거]

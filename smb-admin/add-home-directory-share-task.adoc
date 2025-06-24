@@ -69,8 +69,7 @@ vs1        %w       %w           oplocks        -        Everyone / Full Control
                                  homedirectory
 ----
 .관련 정보
-xref:add-home-directory-search-path-task.adoc[홈 디렉토리 검색 경로 추가]
+* xref:add-home-directory-search-path-task.adoc[홈 디렉토리 검색 경로 추가]
+* xref:requirements-automatic-node-referrals-concept.adoc[서버에서 자동 노드 참조를 사용하기 위한 요구 사항 및 지침]
+* xref:manage-accessibility-users-home-directories-task.adoc[사용자 홈 디렉토리에 대한 접근성 관리]
 
-xref:requirements-automatic-node-referrals-concept.adoc[자동 노드 조회를 사용하기 위한 요구 사항 및 지침]
-
-xref:manage-accessibility-users-home-directories-task.adoc[사용자의 홈 디렉터리에 대한 액세스 가능성 관리]

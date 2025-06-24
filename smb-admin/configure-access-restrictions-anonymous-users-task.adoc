@@ -50,4 +50,4 @@ summary: '기본적으로 인증되지 않은 익명 사용자(null 사용자라
 
 
 .관련 정보
-xref:server-options-reference.adoc[사용 가능한 SMB 서버 옵션]
+xref:server-options-reference.adoc[사용 가능한 서버 옵션]

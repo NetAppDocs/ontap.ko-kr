@@ -139,12 +139,9 @@ Vserver: vs1
 
 
 .관련 정보
-xref:applying-group-policy-objects-concept.adoc[SMB 서버에 그룹 정책 개체 적용]
+* xref:applying-group-policy-objects-concept.adoc[SMB 서버에 그룹 정책 개체를 적용하는 방법에 대해 알아보세요.]
+* xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보를 표시합니다]
+* xref:display-central-access-policies-task.adoc[중앙 액세스 정책에 대한 정보를 표시합니다]
+* xref:display-central-access-policy-rules-task.adoc[중앙 액세스 정책 규칙에 대한 정보를 표시합니다]
+* xref:enable-disable-dynamic-access-control-task.adoc[서버에 대한 DAC 활성화 또는 비활성화]
 
-xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보 표시]
-
-xref:display-central-access-policies-task.adoc[중앙 액세스 정책에 대한 정보 표시]
-
-xref:display-central-access-policy-rules-task.adoc[중앙 액세스 정책 규칙에 대한 정보 표시]
-
-xref:enable-disable-dynamic-access-control-task.adoc[동적 액세스 제어 활성화 또는 비활성화]

@@ -49,4 +49,4 @@ http://technet.microsoft.com/library/hh831717.aspx["Microsoft TechNet: 동적 �
 
 
 .관련 정보
-xref:configure-central-access-policies-secure-data-task.adoc[CIFS 서버의 데이터를 보호하기 위해 중앙 액세스 정책 구성]
+xref:configure-central-access-policies-secure-data-task.adoc[서버의 데이터를 보호하기 위해 중앙 액세스 정책을 구성합니다.]

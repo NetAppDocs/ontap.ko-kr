@@ -89,7 +89,7 @@ Vserver: vs1
              Is SMB Encryption Required:               false
 ----
 .관련 정보
-link:display-server-security-settings-task.html["CIFS 서버 보안 설정에 대한 정보를 표시합니다"]
+link:display-server-security-settings-task.html["서버 보안 설정에 대한 정보 표시"]
 
 link:supported-gpos-concept.html["지원되는 GPO"]
 

@@ -40,4 +40,4 @@ summary: 기본 도메인 컨트롤러를 추가, 표시 및 제거하는 명령
 에 대한 자세한 내용은 `vserver cifs domain preferred-dc` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+cifs+domain+preferred-dc["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .관련 정보
-xref:add-preferred-domain-controllers-task.adoc[기본 도메인 컨트롤러 추가 중]
+xref:add-preferred-domain-controllers-task.adoc[기본 도메인 컨트롤러를 추가합니다]

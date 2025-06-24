@@ -58,6 +58,6 @@ cluster1::*> vserver cifs options modify -vserver vs1 -is-local-auth-enabled tru
 cluster1::*> set -privilege admin
 ----
 .관련 정보
-xref:local-user-authentication-concept.adoc[로컬 사용자 인증의 작동 방식]
+* xref:local-user-authentication-concept.adoc[로컬 사용자 인증에 대해 알아보세요]
+* xref:enable-disable-local-users-groups-task.adoc[서버에서 로컬 사용자 및 그룹 활성화 또는 비활성화]
 
-xref:enable-disable-local-users-groups-task.adoc[로컬 사용자 및 그룹 활성화 또는 비활성화]

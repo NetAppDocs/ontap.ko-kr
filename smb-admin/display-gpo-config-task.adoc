@@ -222,4 +222,4 @@ Vserver: vs1
                 cap2
 ----
 .관련 정보
-xref:enable-disable-gpo-support-task.adoc[CIFS 서버에서 GPO 지원을 설정하거나 해제합니다]
+xref:enable-disable-gpo-support-task.adoc[서버에서 GPO 지원 활성화 또는 비활성화]

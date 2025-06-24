@@ -45,4 +45,4 @@ Vserver   User or Group Name    Privileges
 vs1       EXAMPLE\eng           -
 ----
 .관련 정보
-xref:allow-users-groups-bypass-directory-traverse-task.adoc[사용자 또는 그룹이 디렉토리 통과 확인을 생략하도록 허용합니다]
+xref:allow-users-groups-bypass-directory-traverse-task.adoc[사용자 또는 그룹이 디렉토리 통과 확인을 건너뛰도록 허용합니다]

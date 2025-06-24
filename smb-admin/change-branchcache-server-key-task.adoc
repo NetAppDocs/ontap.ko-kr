@@ -43,4 +43,4 @@ Encryption Key Used to Secure the Hashes: -
         CIFS BranchCache Operating Modes: per_share
 ----
 .관련 정보
-xref:reasons-invalidates-branchcache-hashes-concept.adoc[ONTAP가 BranchCache 해시를 무효화하는 이유]
+xref:reasons-invalidates-branchcache-hashes-concept.adoc[ONTAP가 BranchCache 해시를 무효화하는 이유에 대해 알아보세요.]

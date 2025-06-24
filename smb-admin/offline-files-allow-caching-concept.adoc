@@ -42,10 +42,8 @@ Windows 사용자 문서 및 프로그램이 자동으로 공유에서 캐시되
 Windows 서버 및 클라이언트에서 오프라인 파일을 구성하는 방법에 대한 자세한 내용은 Microsoft TechNet 라이브러리를 참조하십시오.
 
 .관련 정보
-xref:roaming-profiles-store-user-profiles-concept.adoc[로밍 프로필을 사용하여 SVM과 연결된 CIFS 서버에 사용자 프로필을 중앙에서 저장합니다]
+* xref:roaming-profiles-store-user-profiles-concept.adoc[로밍 프로필을 사용하여 SVM과 연결된 CIFS 서버에 사용자 프로필을 중앙에서 저장합니다]
+* xref:folder-redirection-store-data-concept.adoc[폴더 리디렉션을 사용하여 서버에 데이터를 저장하는 방법에 대해 알아보세요.]
+* xref:branchcache-cache-share-content-branch-office-concept.adoc[지점 사무실에서 공유 콘텐츠를 캐시하기 위해 BranchCache를 사용하는 방법에 대해 알아보세요.]
+* http://technet.microsoft.com/en-us/library/["Microsoft TechNet 라이브러리: technet.microsoft.com/en-us/library/"]
 
-xref:folder-redirection-store-data-concept.adoc[폴더 리디렉션을 사용하여 CIFS 서버에 데이터를 저장합니다]
-
-xref:branchcache-cache-share-content-branch-office-concept.adoc[BranchCache를 사용하여 지사에 SMB 공유 콘텐츠를 캐싱합니다]
-
-http://technet.microsoft.com/en-us/library/["Microsoft TechNet 라이브러리: technet.microsoft.com/en-us/library/"]

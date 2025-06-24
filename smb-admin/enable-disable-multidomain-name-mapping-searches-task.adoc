@@ -45,4 +45,4 @@ summary: '다중 도메인 이름 매핑 검색을 사용하면 UNIX 사용자�
 
 
 .관련 정보
-xref:server-options-reference.adoc[사용 가능한 SMB 서버 옵션]
+xref:server-options-reference.adoc[사용 가능한 서버 옵션]

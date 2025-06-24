@@ -24,7 +24,7 @@ IPv6이 활성화되었습니다. SMB 액세스를 위한 IPv6 데이터 LIF를 
 
 
 .관련 정보
-* xref:monitor-display-ipv6-sessions-task.adoc[IPv6 SMB 세션에 대한 정보 모니터링 및 표시]
+* xref:monitor-display-ipv6-sessions-task.adoc[IPv6 세션에 대한 정보를 모니터링하고 표시합니다.]
 * link:../networking/networking_reference.html["System Manager를 사용하여 네트워크를 시각화합니다"]
 * link:https://docs.netapp.com/us-en/ontap-cli/network-options-ipv6-modify.html["네트워크 옵션 IPv6 수정"^]
 

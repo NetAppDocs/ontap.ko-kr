@@ -23,6 +23,6 @@ ONTAP는 사용자 또는 관리자가 로컬 폴더의 경로를 CIFS 서버의
 
 
 .관련 정보
-xref:offline-files-allow-caching-concept.adoc[오프라인 파일을 사용하여 오프라인 사용을 위해 파일 캐싱을 허용합니다]
+* xref:offline-files-allow-caching-concept.adoc[오프라인 사용을 위해 파일을 캐싱하는 오프라인 파일 사용에 대해 알아보세요.]
+* xref:roaming-profiles-store-user-profiles-concept.adoc[로밍 프로필을 사용하여 SVM과 연결된 CIFS 서버에 사용자 프로필을 중앙에서 저장합니다]
 
-xref:roaming-profiles-store-user-profiles-concept.adoc[로밍 프로필을 사용하여 SVM과 연결된 CIFS 서버에 사용자 프로필을 중앙에서 저장합니다]

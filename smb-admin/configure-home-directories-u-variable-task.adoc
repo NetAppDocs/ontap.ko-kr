@@ -132,8 +132,7 @@ vs1            win-unix  5        Pattern: user1
                               Replacement: unixuser1
 ----
 .관련 정보
-xref:create-home-directory-config-w-d-variables-task.adoc[%w 및 %d 변수를 사용하여 홈 디렉토리 설정을 작성합니다]
+* xref:create-home-directory-config-w-d-variables-task.adoc[%w 및 %d 변수를 사용하여 홈 디렉토리 구성을 만듭니다.]
+* xref:home-directory-config-concept.adoc[추가 홈 디렉토리 구성에 대해 알아보세요]
+* xref:display-user-home-directory-path-task.adoc[사용자 홈 디렉토리 경로에 대한 정보 표시]
 
-xref:home-directory-config-concept.adoc[추가 홈 디렉토리 구성]
-
-xref:display-user-home-directory-path-task.adoc[SMB 사용자의 홈 디렉토리 경로에 대한 정보 표시]

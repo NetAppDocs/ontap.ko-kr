@@ -58,4 +58,4 @@ cluster1::*> vserver cifs options modify -vserver vs1 -copy-offload-enabled true
 cluster1::*> set -privilege admin
 ----
 .관련 정보
-xref:server-options-reference.adoc[사용 가능한 SMB 서버 옵션]
+xref:server-options-reference.adoc[사용 가능한 서버 옵션]

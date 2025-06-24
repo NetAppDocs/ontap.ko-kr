@@ -74,7 +74,7 @@ SnapMirror Synchronous 구성에서 지원되는 최대 FlexVol 볼륨 크기가
 | 업데이트 | 설명 
 
 
-| xref:../smb-admin/configure-kerberos-aes-encryption-concept.html[Kerberos 통신에 약한 암호화 유형을 사용하지 않도록 설정합니다] | 새로운 SMB 보안 옵션을 사용하면 AD(Active Directory) KDC와의 Kerberos 기반 통신을 위해 AES(Advanced Encryption Standard) 암호화 유형에 따라 RC4 및 DES를 사용하지 않도록 설정할 수 있습니다. 
+| xref:../smb-admin/configure-kerberos-aes-encryption-concept.html[AES 암호화를 사용하여 Kerberos 기반 통신에 대한 보안 구성] | 새로운 SMB 보안 옵션을 사용하면 AD(Active Directory) KDC와의 Kerberos 기반 통신을 위해 AES(Advanced Encryption Standard) 암호화 유형에 따라 RC4 및 DES를 사용하지 않도록 설정할 수 있습니다. 
 
 
 | xref:../s3-multiprotocol/index.html[S3 클라이언트에서 NAS 데이터에 액세스] | S3 클라이언트는 다시 포맷하지 않고도 NFS 및 SMB 클라이언트와 동일한 NAS 데이터에 액세스할 수 있으므로 오브젝트 데이터가 필요한 S3 애플리케이션을 더욱 쉽게 제공할 수 있습니다. 

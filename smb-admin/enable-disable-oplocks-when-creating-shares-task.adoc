@@ -51,6 +51,6 @@ oplocks를 해제할 때는 공유를 생성할 때 공유 속성 목록을 지�
 
 
 .관련 정보
-xref:enable-disable-oplocks-existing-shares-task.adoc[기존 SMB 공유에서 oplocks 설정 또는 해제]
+xref:enable-disable-oplocks-existing-shares-task.adoc[기존 SMB 공유에서 oplocks를 설정하거나 해제합니다]
 
-xref:monitor-oplock-status-task.adoc[oplock 상태 모니터링]
+xref:monitor-oplock-status-task.adoc[oplock 상태를 모니터링합니다]

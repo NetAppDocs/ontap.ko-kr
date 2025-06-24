@@ -230,6 +230,6 @@ Scope: vsim2
 ----
 ====
 .관련 정보
-xref:determine-statistics-objects-counters-available-task.adoc[사용할 수 있는 통계 개체 및 카운터 결정]
+* xref:determine-statistics-objects-counters-available-task.adoc[서버에서 사용 가능한 통계, 개체 및 카운터를 확인합니다.]
+* link:../performance-admin/index.html["성능 모니터링 및 관리 개요"]
 
-link:../performance-admin/index.html["성능 모니터링 및 관리 개요"]

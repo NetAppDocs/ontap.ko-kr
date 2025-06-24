@@ -47,4 +47,4 @@ EXAMPLE.COM            CIFS1.EXAMPLE.COM,
 
 
 .관련 정보
-xref:reset-rediscover-trusted-domains-task.adoc[신뢰할 수 있는 도메인 재설정 및 재검색]
+xref:reset-rediscover-trusted-domains-task.adoc[신뢰할 수 있는 도메인을 다시 설정하고 다시 검색합니다]

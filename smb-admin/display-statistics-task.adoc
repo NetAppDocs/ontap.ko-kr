@@ -79,14 +79,10 @@ BranchCache 해시 서비스입니다
 
 
 .관련 정보
-xref:determine-statistics-objects-counters-available-task.adoc[사용할 수 있는 통계 개체 및 카운터 결정]
+* xref:determine-statistics-objects-counters-available-task.adoc[서버에서 사용 가능한 통계, 개체 및 카운터를 확인합니다.]
+* xref:monitor-signed-session-statistics-task.adoc[SMB 서명 세션 통계 모니터링]
+* xref:display-branchcache-statistics-task.adoc[BranchCache 통계를 표시합니다]
+* xref:statistics-monitor-automatic-node-referral-task.adoc[통계를 사용하여 자동 노드 조회 활동을 모니터링합니다]
+* link:../smb-hyper-v-sql/index.html["Microsoft Hyper-V 및 SQL Server를 위한 SMB 구성"]
+* link:../performance-config/index.html["성능 모니터링 설정"]
 
-xref:monitor-signed-session-statistics-task.adoc[SMB 서명 세션 통계 모니터링]
-
-xref:display-branchcache-statistics-task.adoc[BranchCache 통계 표시]
-
-xref:statistics-monitor-automatic-node-referral-task.adoc[통계를 사용하여 자동 노드 조회 활동을 모니터링합니다]
-
-link:../smb-hyper-v-sql/index.html["Microsoft Hyper-V 및 SQL Server를 위한 SMB 구성"]
-
-link:../performance-config/index.html["성능 모니터링 설정"]

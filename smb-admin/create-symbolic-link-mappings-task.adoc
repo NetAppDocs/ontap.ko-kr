@@ -49,4 +49,4 @@ SMB 2.x를 사용하는 경우 Mac OS X 클라이언트에서 Widelink에 액세
 cluster1::> vserver cifs symlink create -vserver vs1 -unix-path /src/ -share-name SOURCE -cifs-path "/mycompany/source/" -cifs-server 123.123.123.123 -locality widelink
 ----
 .관련 정보
-xref:configure-unix-symbolic-link-support-shares-task.adoc[SMB 공유에서 UNIX 심볼 링크 지원 구성]
+xref:configure-unix-symbolic-link-support-shares-task.adoc[공유에서 UNIX 심볼릭 링크 지원 구성]

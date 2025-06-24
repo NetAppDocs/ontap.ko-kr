@@ -96,8 +96,7 @@ vs1      p2                   S-1-17-1885229282-1100162114-134354072-822349040
                     r2
 ----
 .관련 정보
-xref:secure-file-access-dynamic-access-control-concept.adoc[DAC(Dynamic Access Control)를 사용하여 파일 액세스 보안]
+* xref:secure-file-access-dynamic-access-control-concept.adoc[서버의 파일 액세스 보안에 대해 알아보세요]
+* xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보를 표시합니다]
+* xref:display-central-access-policy-rules-task.adoc[중앙 액세스 정책 규칙에 대한 정보를 표시합니다]
 
-xref:display-gpo-config-task.adoc[GPO 구성에 대한 정보 표시]
-
-xref:display-central-access-policy-rules-task.adoc[중앙 액세스 정책 규칙에 대한 정보 표시]

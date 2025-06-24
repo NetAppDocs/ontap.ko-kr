@@ -88,4 +88,4 @@ vs1        share2  /share2   oplocks      -          Everyone / Full Control
                              changenotify
 ----
 .관련 정보
-xref:commands-manage-shares-reference.adoc[SMB 공유를 관리하는 명령입니다]
+xref:commands-manage-shares-reference.adoc[공유 관리를 위한 명령]

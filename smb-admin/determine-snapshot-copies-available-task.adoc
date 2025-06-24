@@ -64,6 +64,6 @@ vs1      data1
                  hourly.2012-12-23_1905    valid       184KB     0%    0%
 ----
 .관련 정보
-xref:create-snapshot-config-previous-versions-access-task.adoc[스냅샷 구성을 생성하여 이전 버전 액세스를 설정합니다]
+* xref:create-snapshot-config-previous-versions-access-task.adoc[이전 버전 액세스를 활성화하기 위한 스냅샷 구성 생성]
+* link:../data-protection/index.html["데이터 보호"]
 
-link:../data-protection/index.html["데이터 보호"]

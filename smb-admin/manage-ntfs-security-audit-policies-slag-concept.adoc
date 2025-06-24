@@ -53,10 +53,8 @@ UNIX 보안 스타일 볼륨 및 qtree에는 UNIX 유효 보안(모드 비트 �
 
 
 .관련 정보
-xref:display-file-security-audit-policies-concept.adoc[파일 보안 및 감사 정책에 대한 정보를 표시합니다]
+* xref:display-file-security-audit-policies-concept.adoc[파일 보안 및 감사 정책 보기에 대해 알아보세요]
+* xref:create-ntfs-security-descriptor-file-task.adoc[서버에 NTFS 보안 설명자 만들기]
+* xref:configure-apply-audit-policies-ntfs-files-folders-task.adoc[파일 및 폴더에 감사 정책을 구성하고 적용하는 명령]
+* xref:secure-file-access-storage-level-access-guard-concept.adoc[Storage-Level Access Guard를 사용하여 안전한 파일 액세스에 대해 알아보세요]
 
-xref:create-ntfs-security-descriptor-file-task.adoc[CLI를 사용하여 NTFS 파일 및 폴더에 파일 보안을 구성하고 적용합니다]
-
-xref:configure-apply-audit-policies-ntfs-files-folders-task.adoc[CLI를 사용하여 NTFS 파일 및 폴더에 감사 정책을 구성하고 적용합니다]
-
-xref:secure-file-access-storage-level-access-guard-concept.adoc[Storage-Level Access Guard를 사용하여 파일 액세스를 보호합니다]

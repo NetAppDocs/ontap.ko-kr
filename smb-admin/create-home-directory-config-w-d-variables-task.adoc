@@ -95,8 +95,7 @@ Vserver     Position Path
 vs1         1        /home1
 ----
 .관련 정보
-xref:configure-home-directories-u-variable-task.adoc[%u 변수를 사용하여 홈 디렉토리를 구성하는 중입니다]
+* xref:configure-home-directories-u-variable-task.adoc[%u 변수를 사용하여 홈 디렉토리를 구성하십시오]
+* xref:home-directory-config-concept.adoc[추가 홈 디렉토리 구성에 대해 알아보세요]
+* xref:display-user-home-directory-path-task.adoc[사용자 홈 디렉토리 경로에 대한 정보 표시]
 
-xref:home-directory-config-concept.adoc[추가 홈 디렉토리 구성]
-
-xref:display-user-home-directory-path-task.adoc[SMB 사용자의 홈 디렉토리 경로에 대한 정보 표시]

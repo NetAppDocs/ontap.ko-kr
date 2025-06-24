@@ -59,4 +59,4 @@ File Attribute Cache Lifetime: -
 Vscan File-Operations Profile: standard
 ----
 .관련 정보
-xref:disable-branchcache-single-share-task.adoc[단일 SMB 공유에서 BranchCache를 사용하지 않도록 설정합니다]
+xref:disable-branchcache-single-share-task.adoc[단일 공유에서 BranchCache 비활성화]

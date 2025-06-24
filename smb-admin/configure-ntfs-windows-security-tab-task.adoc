@@ -148,10 +148,8 @@ NOTE: 이 설정을 선택할 때는 주의하십시오. 이 설정은 모든 �
 
 
 .관련 정보
-xref:create-ntfs-security-descriptor-file-task.adoc[CLI를 사용하여 NTFS 파일 및 폴더에 파일 보안을 구성하고 적용합니다]
+* xref:create-ntfs-security-descriptor-file-task.adoc[서버에 NTFS 보안 설명자 만들기]
+* xref:display-file-security-ntfs-style-volumes-task.adoc[NTFS 보안 스타일 볼륨의 파일 보안에 대한 정보를 표시합니다]
+* xref:display-file-security-mixed-style-volumes-task.adoc[혼합 보안 형식 볼륨의 파일 보안에 대한 정보를 표시합니다]
+* xref:display-file-security-unix-style-volumes-task.adoc[UNIX 보안 스타일 볼륨의 파일 보안에 대한 정보를 표시합니다]
 
-xref:display-file-security-ntfs-style-volumes-task.adoc[NTFS 보안 스타일 볼륨의 파일 보안에 대한 정보 표시]
-
-xref:display-file-security-mixed-style-volumes-task.adoc[혼합 보안 형식 볼륨의 파일 보안에 대한 정보 표시]
-
-xref:display-file-security-unix-style-volumes-task.adoc[UNIX 보안 스타일 볼륨의 파일 보안에 대한 정보 표시]

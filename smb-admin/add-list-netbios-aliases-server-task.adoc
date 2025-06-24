@@ -48,6 +48,6 @@ Vserver: vs1
 
 
 .관련 정보
-xref:remove-netbios-aliases-from-list-task.adoc[NetBIOS 별칭 목록에서 NetBIOS 별칭을 제거합니다]
+* xref:remove-netbios-aliases-from-list-task.adoc[SMB 서버 목록에서 NetBIOS 별칭 제거]
+* xref:display-list-netbios-aliases-task.adoc[SMB 서버에 대한 NetBIOS 별칭 목록 표시]
 
-xref:display-list-netbios-aliases-task.adoc[CIFS 서버에서 NetBIOS 별칭 목록을 표시합니다]
