@@ -4,7 +4,7 @@ permalink: task_cp_dashboard_tour.html
 keywords: netapp, ontap, cluster, performance, dashboard, cluster dashboard, headroom, cpu, cpus, usage, latency, guided setup, guided set up, performance values, workload, work load, peak usage 
 summary: System Manager 대시보드를 이용하면 단일 중앙 위치에서 클러스터를 빠르고 포괄적으로 확인할 수 있습니다. 
 ---
-= System Manager 대시보드에서 클러스터 개요를 확인합니다
+= ONTAP System Manager 대시보드의 뷰 클러스터에 대해 알아보세요
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

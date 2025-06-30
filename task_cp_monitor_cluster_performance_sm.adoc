@@ -4,7 +4,7 @@ permalink: task_cp_monitor_cluster_performance_sm.html
 keywords: netapp, ontap, cluster, performance, monitor, monitoring, system manager, cluster performance, dashboard, health, capacity, IOPS, throughput, network configuration, alert, notification, HA pair, metrics, node, cpu, cpus 
 summary: System Manager의 대시보드를 사용하여 클러스터의 성능을 모니터링합니다. 
 ---
-= System Manager를 사용하여 클러스터 성능을 모니터링합니다
+= ONTAP 시스템 관리자를 사용하여 클러스터 성능 모니터링
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

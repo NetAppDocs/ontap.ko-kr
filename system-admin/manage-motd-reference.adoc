@@ -27,7 +27,7 @@ MOTD의 컨텐츠를 동적으로 생성하는 데 사용할 수 있는 에 대�
  a| 
 클러스터 레벨 MOTD 설정:
 
-"* 보안 로그인 motd modify -vserver_cluster_name_{[-message"_text_"]|[-Uri_ftp_or_http_addr_]} *
+`security login motd modify -vserver <cluster_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 
 
 
@@ -36,7 +36,7 @@ SVM 레벨의 MOD가 구성되지 않은 경우 모든 로그인에 대해 MOTD�
  a| 
 클러스터 레벨 MOTD 수정:
 
-"* 보안 로그인 motd modify -vserver_cluster_name_{[-message"_text_"]}|[-Uri ftp_or_http_addr]} *
+`security login motd modify -vserver <cluster_name> { [-message "<text>"] } | [-uri <ftp_or_http_addr>] }`
 
 
 
@@ -45,7 +45,7 @@ SVM 레벨의 MOD가 구성되지 않은 경우 모든 로그인에 대해 MOTD�
  a| 
 클러스터 수준 MOTD를 빈 문자열("")로 설정합니다.
 
-"* 보안 로그인 motd modify -vserver_cluster_name_- 메시지""*"
+`security login motd modify -vserver <cluster_name> -message ""`
 
 
 
@@ -54,8 +54,8 @@ SVM 레벨의 MOTD를 사용하는 대신 모든 SVM에 클러스터 레벨 MOTD
  a| 
 클러스터 레벨 MOTD를 설정한 다음 클러스터 레벨 MOTD를 사용하도록 설정한 상태에서 모든 SVM 레벨 MOD를 빈 문자열로 설정합니다.
 
-.. "* 보안 로그인 motd modify -vserver_cluster_name_{[-message"_text_"]|[-Uri_ftp_or_http_addr_]} *
-.. "* 보안 로그인 motd 수정 {-vserver!"_cluster_name_"} - 메시지 ""-is-cluster-message-enabled true *"
+.. `security login motd modify -vserver <cluster_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
+.. `security login motd modify { -vserver !"<cluster_name>" } -message "" -is-cluster-message-enabled true`
 
 
 
@@ -65,8 +65,8 @@ SVM 레벨의 MOTD를 사용하는 대신 모든 SVM에 클러스터 레벨 MOTD
  a| 
 클러스터 레벨 MOTD를 빈 문자열로 설정한 다음 선택한 SVM에 대해 SVM 레벨 MOD를 설정합니다.
 
-.. "* 보안 로그인 motd modify -vserver_cluster_name_- 메시지""*"
-.. "* 보안 로그인 motd modify -vserver_svm_name_{[-message"_text_"]|[-Uri_ftp_or_http_addr_]} *
+.. `security login motd modify -vserver <cluster_name> -message ""`
+.. `security login motd modify -vserver <svm_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 +
 필요에 따라 각 SVM에 대해 이 단계를 반복할 수 있습니다.
 
@@ -79,7 +79,7 @@ SVM 레벨의 MOTD를 사용하는 대신 모든 SVM에 클러스터 레벨 MOTD
  a| 
 클러스터 및 모든 SVM에서 동일한 MOTD를 사용하도록 설정:
 
-"* 보안 로그인 motd modify_-vserver_ * {[-message"_text_"]|[-Uri_ftp_or_http_addr_]} *
+`security login motd modify -vserver * { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 
 [NOTE]
 ====
@@ -93,7 +93,7 @@ SVM 레벨의 MOTD를 사용하는 대신 모든 SVM에 클러스터 레벨 MOTD
  a| 
 클러스터 레벨 MOTD를 설정하되, 클러스터에 대해 해당 표시를 해제합니다.
 
-"* 보안 로그인 motd modify -vserver_cluster_name_{[-message"_text_"]|[-Uri_ftp_or_http_addr_]} -is-cluster-message-enabled false *
+`security login motd modify -vserver <cluster_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] } -is-cluster-message-enabled false`
 
 
 
@@ -102,7 +102,7 @@ SVM 레벨의 MOTD를 사용하는 대신 모든 SVM에 클러스터 레벨 MOTD
  a| 
 MOTD에 대해 빈 문자열을 사용하도록 클러스터와 모든 SVM 설정:
 
-"* 보안 로그인 motd modify -vserver* -메시지""*"
+`security login motd modify -vserver * -message ""`
 
 
 
@@ -111,17 +111,19 @@ MOTD에 대해 빈 문자열을 사용하도록 클러스터와 모든 SVM 설�
  a| 
 확장 쿼리를 사용하여 MOTD를 선택적으로 수정합니다.
 
-"* 보안 로그인 motd 수정 {-vserver!"_cluster_name_"-message!""} {[-message "_text_"]|[-Uri_ftp_or_http_addr_]} * '
+`security login motd modify { -vserver !"<cluster_name>" -message !"" } { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 
 
 
  a| 
-텍스트가 여러 줄로 분할되어 있는 경우에도 특정 텍스트(예: ""January"" 다음에 ""2015"")를 포함하는 모든 MOD를 단일 또는 여러 줄 메시지로 표시합니다
+단일 또는 다중 줄 메시지의 어느 곳에나 특정 텍스트(예: "1월" 뒤에 "2015")가 포함된 모든 MOTD를 표시합니다. 텍스트가 여러 줄로 나뉘어 있는 경우에도 마찬가지입니다.
  a| 
 쿼리를 사용하여 MOD 표시:
 
-"* 보안 로그인 motd show-message*"JANUARY"\*** "2015"**
-
+[listing]
+----
+security login motd show -message *"January"*"2015"*
+----
 
 
  a| 
@@ -132,7 +134,7 @@ MOTD에 대해 빈 문자열을 사용하도록 클러스터와 모든 SVM 설�
 |===
 * SVM 레벨에서 MOTD 관리:
 +
-SVM 컨텍스트에서 '-vserver_svm_name_'을 지정할 필요가 없습니다.
+SVM 컨텍스트에서 지정할 `-vserver <svm_name>` 필요가 없습니다.
 
 +
 |===
@@ -144,7 +146,7 @@ SVM에 기존 SVM 레벨 MOTD가 있는 경우 다른 SVM 레벨 MOTD를 사용�
  a| 
 SVM 레벨 MOTD 수정:
 
-"* 보안 로그인 motd modify -vserver_svm_name_{[-message"_text_"]|[-Uri_ftp_or_http_addr_]} *
+`security login motd modify -vserver <svm_name> { [-message "<text>"] | [-uri <ftp_or_http_addr>] }`
 
 
 
@@ -153,8 +155,8 @@ SVM에 SVM 레벨 MOTD가 이미 있는 경우 SVM에 클러스터 레벨 MOTD�
  a| 
 SVM 레벨 MOTD를 빈 문자열로 설정한 다음, 클러스터 관리자에게 SVM을 위한 클러스터 레벨 MOTD를 사용하도록 요청하십시오.
 
-.. "* 보안 로그인 motd modify -vserver_svm_name_- 메시지 ""*"
-.. (클러스터 관리자의 경우) `* security login motd modify -vserver_svm_name_-is-cluster-message -enabled true *
+.. `security login motd modify -vserver <svm_name> -message ""`
+.. (클러스터 관리자의 경우) `security login motd modify -vserver <svm_name> -is-cluster-message-enabled true`
 
 
 
@@ -164,8 +166,8 @@ SVM 레벨 MOTD를 빈 문자열로 설정한 다음, 클러스터 관리자에�
  a| 
 SVM 레벨 MOTD를 빈 문자열로 설정한 다음, 클러스터 관리자가 SVM에 대해 클러스터 레벨 MOTD를 사용하지 않도록 설정하게 합니다.
 
-.. "* 보안 로그인 motd modify -vserver_svm_name_- 메시지 ""*"
-.. (클러스터 관리자의 경우) `* security login mott modify -vserver_svm_name_-is-cluster-message -enabled false * '
+.. `security login motd modify -vserver <svm_name> -message ""`
+.. (클러스터 관리자의 경우) `security login motd modify -vserver <svm_name> -is-cluster-message-enabled false`
 
 
 |===

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: system manager, fpolicy, file extensions, native, best practice, best practise, configure, disallow 
 summary: ONTAP 9.11.1부터 기본 FPolicy 구현을 제안하는 System Manager Insight를 수신하면 스토리지 VM 및 볼륨에서 구성할 수 있습니다.  
 ---
-= 기본 FPolicy를 구성합니다
+= ONTAP 시스템 관리자에서 기본 FPolicies 구성
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

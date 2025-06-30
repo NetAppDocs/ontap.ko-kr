@@ -91,7 +91,6 @@ system node autosupport history show -node * -fields node,seq-num,destination,la
 
 . ONTAP 9.10.1부터 자동 업데이트를 사용하도록 설정한 경우 다음 추가 URL에 HTTPS 연결이 있는지 확인합니다.
 +
-** https://support-sg-emea.netapp.com 으로 문의하십시오
 ** https://support-sg-naeast.netapp.com 으로 문의하십시오
 ** https://support-sg-nawest.netapp.com 으로 문의하십시오
 

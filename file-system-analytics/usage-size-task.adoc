@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: large directories, system manager, file system analytics, usage, top directories 
 summary: 작업 추적 을 사용하여 실시간 성능 문제 해결을 위해 지정된 볼륨에서 핫 파일, 디렉토리, 클라이언트 및 사용자를 봅니다 
 ---
-= ONTAP 사용 분석을 활성화합니다
+= FSA를 사용하여 ONTAP 사용 분석 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,4 +26,4 @@ NOTE: 최상위 디렉토리 목록이 수집되는 동안 ONTAP는 부분 데�
 
 
 
-특정 디렉토리에 대한 더 많은 통찰력을 얻을 수 있습니다 xref:../task_nas_file_system_analytics_view.html[파일 시스템에 대한 작업을 봅니다].
+특정 디렉토리에 대한 더 많은 통찰력을 얻을 수 xref:../task_nas_file_system_analytics_view.html[ONTAP 파일 시스템 활동 보기]있습니다.

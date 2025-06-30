@@ -577,7 +577,7 @@ NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서
 +
 `openssl req -config openssl_server.cnf -extensions v3_req -nodes -newkey rsa:4096 -sha512 -keyout ontap_mediator_server.key -out ontap_mediator_server.csr`
 
-. [[step_2_intermediate_info]] CSR에서 서버 인증서를 생성하려면 폴더에서 다음 명령을 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` 실행합니다.
+. [[step_2_intermediate_info_v9]] CSR에서 서버 인증서를 생성하려면 폴더에서 다음 명령을 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` 실행합니다.
 +
 
 NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 이름을 사용하는 경우 `intermediate.crt` 및 를 `intermediate.key` 관련 파일 이름으로 바꿉니다.
@@ -603,7 +603,7 @@ NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 
 +
 `openssl req -config openssl_server.cnf -extensions v3_req -nodes -newkey rsa:4096 -sha512 -keyout ontap_mediator_server.key -out ontap_mediator_server.csr`
 
-. [[step_2_intermediate_info]] CSR에서 서버 인증서를 생성하려면 폴더에서 다음 명령을 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` 실행합니다.
+. [[step_2_intermediate_info_v8]] CSR에서 서버 인증서를 생성하려면 폴더에서 다음 명령을 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` 실행합니다.
 +
 
 NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 이름을 사용하는 경우 `ca.crt` 및 를 `ca.key` 관련 파일 이름으로 바꿉니다.
@@ -751,7 +751,7 @@ PKI 권한으로부터 얻은 `intermediate.crt` 개인 키를 해당 위치에 
 
 +
 
-NOTE: 인증서에 서명하는 데 사용한 경우 `intermediate.crt` `ontap_mediator_server.crt`  `intermediate.srl` 파일이 생성됩니다. 자세한 내용은 을 <<step_2_intermediate_info,2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다>> 참조하십시오.
+NOTE: 인증서에 서명하는 데 사용한 경우 `intermediate.crt` `ontap_mediator_server.crt`  `intermediate.srl` 파일이 생성됩니다. 자세한 내용은 을 <<step_2_intermediate_info_v9,2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다>> 참조하십시오.
 
 +
 [listing]
@@ -834,7 +834,7 @@ PKI 권한으로부터 얻은 `ca.crt` 개인 키를 해당 위치에 저장하�
 
 +
 
-NOTE: 인증서에 서명하는 데 사용한 경우 `ca.crt` `ontap_mediator_server.crt`  `ca.srl` 파일이 생성됩니다. 자세한 내용은 을 <<step_2_intermediate_info,2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다>> 참조하십시오.
+NOTE: 인증서에 서명하는 데 사용한 경우 `ca.crt` `ontap_mediator_server.crt`  `ca.srl` 파일이 생성됩니다. 자세한 내용은 을 <<step_2_intermediate_info_v8,2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다>> 참조하십시오.
 
 +
 [listing]

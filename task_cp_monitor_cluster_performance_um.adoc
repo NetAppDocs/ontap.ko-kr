@@ -4,7 +4,7 @@ permalink: task_cp_monitor_cluster_performance_um.html
 keywords: netapp, ontap, cluster, performance, monitor, monitoring, unified manager, active IQ, headroom, cpu, cpus, latency, maximize availability, AFF storage, FAS storage, scalability, supportability, support, security, data management 
 summary: NetApp Active IQ Unified Manager를 사용하면 시스템 관리를 단순화하고 스토리지 상태를 모니터링할 수 있습니다. 
 ---
-= Unified Manager로 클러스터 성능 모니터링
+= ONTAP Unified Manager를 사용하여 클러스터 성능 모니터링
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

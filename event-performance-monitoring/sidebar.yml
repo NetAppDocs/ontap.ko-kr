@@ -5,7 +5,7 @@ url: "/event-performance-monitoring/index.html"
 entries:
 - title: System Manager로 클러스터 성능을 모니터링합니다
   entries:
-  - title: 개요
+  - title: ONTAP 시스템 관리자를 사용하여 클러스터 성능 모니터링
     url: "/task_cp_monitor_cluster_performance_sm.html"
   - title: 대시보드 투어
     url: "/task_cp_dashboard_tour.html"
@@ -15,7 +15,7 @@ entries:
     url: "/task_admin_modify_qos.html"
   - title: Digital Advisor로 위험 모니터링
     url: "/task_admin_monitor_risks.html"
-  - title: 시스템 최적화를 위한 통찰력 확보
+  - title: 통찰력을 바탕으로 시스템 최적화
     url: "/insights-system-optimization-task.html"
   - title: 기본 FPolicy를 구성합니다
     url: "/insights-configure-native-fpolicy-task.html"
@@ -130,7 +130,7 @@ entries:
     url: "/concept_nas_file_system_analytics_overview.html"
   - title: 파일 시스템 분석 설정
     url: "/task_nas_file_system_analytics_enable.html"
-  - title: 파일 시스템의 작업을 봅니다
+  - title: ONTAP 파일 시스템 작업을 봅니다
     url: "/task_nas_file_system_analytics_view.html"
   - title: 활동 추적을 활성화합니다
     url: "/file-system-analytics/activity-tracking-task.html"

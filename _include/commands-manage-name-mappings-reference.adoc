@@ -1,17 +1,6 @@
----
-permalink: smb-admin/commands-manage-name-mappings-reference.html 
-sidebar: sidebar 
-keywords: ontap, command, managing, manage, name, mapping 
-summary: 이름 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다. 
----
-= SMB 이름 매핑을 관리하기 위한 ONTAP 명령
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-이름 매핑을 관리하기 위한 특정 ONTAP 명령이 있습니다.
 
 [cols="35,65"]
 |===
