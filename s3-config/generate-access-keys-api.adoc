@@ -73,6 +73,9 @@ security login create -user-or-group-name ldap-group-1 -application http -authen
 +
 자세한 내용은 을 link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["ONTAP NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다."]참조하십시오.
 
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 도메인 또는 LDAP 그룹에 사용자 지정 역할을 추가하면 해당 그룹의 사용자가 ONTAP에 대한 제한된 액세스를 허용할 수 있습니다 `/api/protocols/s3/services/{svm.uuid}/users` 엔드포인트. 도메인 또는 LDAP 그룹 사용자는 API를 호출하여 자신의 액세스 및 비밀 키를 생성하여 S3 클라이언트에 액세스할 수 있습니다. 사용자는 자신의 키를 생성할 수 있고 다른 사용자는 생성할 수 없습니다.

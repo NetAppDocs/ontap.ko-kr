@@ -118,4 +118,5 @@ HTTPS를 사용하여 웹 서비스에 연결하면 웹 브라우저에서 연�
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["보안 인증서 생성 - CSR"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-show.html["보안 인증서가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+ssl["보안 SSL"^]
 

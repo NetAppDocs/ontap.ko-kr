@@ -44,6 +44,9 @@ Telnet과 RSH는 보안 프로토콜이 아니므로 SSH를 사용하여 클러�
 
 
 
++
+및 `security protocol modify` 에 대한 자세한 `security protocol show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+protocol["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 관리 LIF에 또는 서비스가 있는지 확인 `management-rsh-server` `management-telnet-server` :
 +
 `network interface show -services management-rsh-server`

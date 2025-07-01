@@ -59,3 +59,7 @@ C1_cluster 			  1-80-000011           Unavailable    ok
 . 소스 클러스터에서 정합성 보장 그룹을 다시 동기화합니다. 정합성 보장 그룹 상태가 동기화되어 있는지 확인합니다.
 . 호스트 LUN 입출력 경로를 다시 검색하여 LUN에 대한 모든 경로를 복구합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["SnapMirror가 깨졌습니다"^]
+

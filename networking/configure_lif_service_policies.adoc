@@ -303,4 +303,5 @@ cluster1::> network interface modify -vserver cluster1 -lif lif1 -service-policy
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-show.html["네트워크 인터페이스 서비스가 표시됩니다"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface+service-policy["네트워크 인터페이스 서비스 - 정책"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-abort.html["SnapMirror가 중단되었습니다"^]
 

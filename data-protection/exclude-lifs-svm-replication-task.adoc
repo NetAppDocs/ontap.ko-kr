@@ -156,3 +156,7 @@ cluster_dst::> snapmirror initialize -source-path svm1: -destination-path svm_ba
 
 .작업을 마친 후
 재해가 발생할 경우 데이터 액세스를 위해 대상 SVM에서 네트워크 및 프로토콜을 구성해야 합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

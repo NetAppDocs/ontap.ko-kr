@@ -173,4 +173,7 @@ SVM 레벨 MOTD를 빈 문자열로 설정한 다음, 클러스터 관리자가 
 |===
 
 
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-modify.html["보안 로그인 motd 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-show.html["보안 로그인 mott show"^]
+

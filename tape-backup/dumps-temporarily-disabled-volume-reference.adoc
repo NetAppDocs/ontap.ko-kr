@@ -30,3 +30,7 @@ SnapMirror 대상 볼륨의 상태가 읽기/쓰기에서 읽기 전용으로 �
 
 ====
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["SnapMirror가 깨졌습니다"^]
+

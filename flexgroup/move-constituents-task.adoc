@@ -89,7 +89,7 @@ cluster1::> volume move start -vserver vs2 -volume fg1_002 -destination-aggregat
 +
 [NOTE]
 ====
-활성 SnapMirror 작업으로 인해 볼륨 이동 작업이 실패하면 'napmirror abort -h' 명령을 사용하여 SnapMirror 작업을 중단해야 합니다. 경우에 따라 SnapMirror 중단 작업도 실패할 수 있습니다. 이러한 경우 볼륨 이동 작업을 중단하고 나중에 다시 시도하십시오.
+활성 SnapMirror 작업으로 인해 볼륨 이동 작업이 실패할 경우 명령을 사용하여 SnapMirror 작업을 중단해야 `snapmirror abort -h` 합니다. 경우에 따라 SnapMirror 중단 작업도 실패할 수 있습니다. 이러한 경우 볼륨 이동 작업을 중단하고 나중에 다시 시도하십시오. 에 대한 자세한 내용은 `snapmirror abort` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-abort.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 . 볼륨 이동 작업의 상태를 확인합니다.

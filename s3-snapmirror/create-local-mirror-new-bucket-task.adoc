@@ -166,3 +166,6 @@ src_cluster::> snapmirror create -source-path vs0-src:/bucket/test-bucket -desti
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

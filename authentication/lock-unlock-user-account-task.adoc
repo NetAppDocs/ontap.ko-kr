@@ -49,4 +49,6 @@ cluster1::>security login unlock -vserver engData -username admin1
 
 
 
-에 대한 자세한 내용은 `security login` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+

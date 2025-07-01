@@ -30,3 +30,4 @@ SVM(Cluster ora Storage Virtual Machine)의 SSL 프로토콜을 관리하려면 
 보안 SSL 쇼
 
 |===
+및 `security ssl show` 에 대한 자세한 `security ssl modify` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+ssl["ONTAP 명령 참조입니다"^]참조하십시오.

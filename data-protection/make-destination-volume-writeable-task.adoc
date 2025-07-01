@@ -62,9 +62,6 @@ cluster_dst::> snapmirror quiesce -source-path svm1:volA -destination-path svm_b
 snapmirror abort -source-path <SVM:volume|cluster://SVM/volume> -destination-path <SVM:volume|cluster://SVM/volume>
 ----
 +
-에 대한 자세한 내용은 `snapmirror abort` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-abort.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 
 NOTE: SnapMirror 동기식 관계에는 이 단계가 필요하지 않습니다(ONTAP 9.5부터 지원됨).
 
@@ -76,15 +73,15 @@ NOTE: SnapMirror 동기식 관계에는 이 단계가 필요하지 않습니다(
 ----
 cluster_dst::> snapmirror abort -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror abort` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-abort.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . SnapMirror DR 관계 끊기:
 +
 [source, cli]
 ----
 snapmirror break -source-path <SVM:volume|cluster://SVM/volume> -destination-path <SVM:volume|cluster://SVM/volume>
 ----
-+
-에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 +
 다음 예에서는 svm1의 소스 볼륨 VolA와 sm_backup의 대상 볼륨 VolA_dst의 관계를 나눕니다.
 
@@ -93,6 +90,9 @@ snapmirror break -source-path <SVM:volume|cluster://SVM/volume> -destination-pat
 ----
 cluster_dst::> snapmirror break -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .다음 단계

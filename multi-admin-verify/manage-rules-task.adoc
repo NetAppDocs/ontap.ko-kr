@@ -29,7 +29,8 @@ MAV 시스템 기본 명령에 대한 규칙인 입니다 `security multi-admin-
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-password.html["보안 로그인 암호"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-unlock.html["보안 로그인 잠금 해제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
 
 
@@ -127,4 +128,7 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 '보안 멀티-관리-검증 규칙 표시'
 
 |===
-에 대한 자세한 내용은 `security multi-admin-verify rule` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+rule["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+rule["보안 다중 관리자 확인 규칙"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["보안 로그인 수정"^]
+

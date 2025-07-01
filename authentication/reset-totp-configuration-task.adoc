@@ -64,3 +64,9 @@ security login totp create -vserver <svm_name> -username <account_username >
 security login totp show -vserver <svm_name> -username <account_username>
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-totp-create.html["보안 로그인 totp create"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-totp-delete.html["보안 로그인 totp 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-totp-show.html["보안 로그인 totp show"^]
+

@@ -44,7 +44,7 @@ MOTD에 사용할 위치에서 콘텐츠를 업로드합니다
 MOTD의 최대 크기는 새 행을 포함하여 2,048바이트입니다.
 
 +
-`Security login motd modify` MOTD에서 동적으로 생성된 콘텐츠를 표시할 수 있도록 하는 데 사용할 수 있는 이스케이프 시퀀스에 대해 설명합니다. 에 대한 자세한 내용은 `security login motd modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+`Security login motd modify` MOTD에서 동적으로 생성된 콘텐츠를 표시할 수 있도록 하는 데 사용할 수 있는 이스케이프 시퀀스에 대해 설명합니다.
 
 +
 '-Uri' 파라미터를 사용하여 만든 MOTD는 정적입니다. 소스 콘텐츠의 후속 변경 사항을 반영하기 위해 자동으로 새로 고쳐지지 않습니다.
@@ -54,7 +54,7 @@ MOTD의 최대 크기는 새 행을 포함하여 2,048바이트입니다.
 
 . MOTD를 'security login mott show' 명령으로 출력하여 생성했는지 확인한다.
 +
-빈 문자열(""")로 '-message' 매개 변수를 지정하면 구성되지 않았거나 내용이 없는 MOD가 표시됩니다.
+지정  `-message` 빈 문자열(``)이 있는 매개변수는 구성되지 않았거나 내용이 없는 MOTD를 표시합니다.
 
 +
 MOTD가 동적으로 생성된 콘텐츠를 에서 표시할 수 있도록 하는 및 매개 변수에 대해 자세히 `security login motd modify`link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-modify.html["ONTAP 명령 참조입니다"^] 알아보십시오.
@@ -62,13 +62,13 @@ MOTD가 동적으로 생성된 콘텐츠를 에서 표시할 수 있도록 하�
 
 
 .MOD 작성의 예
-다음 예제에서는 비대화형 모드를 사용하여 ""cluster1" 클러스터에 대한 MOTD를 만듭니다.
+다음 예제에서는 비대화형 모드를 사용하여 MOTD를 생성합니다.  `cluster1` 무리:
 
 [listing]
 ----
 cluster1::> security login motd modify -message "Greetings!"
 ----
-다음 예에서는 대화형 모드를 사용하여 탈출 시퀀스를 사용하여 동적으로 생성된 컨텐츠를 표시하는 "스vm1" SVM에 MOTD를 생성합니다.
+다음 예제에서는 대화형 모드를 사용하여 MOTD를 생성합니다.  `svm1` 동적으로 생성된 콘텐츠를 표시하기 위해 이스케이프 시퀀스를 사용하는 SVM:
 
 [listing]
 ----
@@ -99,3 +99,4 @@ Welcome to the \n SVM.  Your user ID is '\N'. Your last successful login was \L.
 
 2 entries were displayed.
 ----
+에 대한 자세한 내용은 `security login motd show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-motd-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -57,6 +57,9 @@ security login create -user-or-group-name <user_or_group_name> \
                      -application http \
                      -role admin
 ----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -97,8 +100,10 @@ security login modify -user-or-group-name <user_or_group_name> \
                      -application http \
                      -role admin
 ----
++
+에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
 ====
-및 `security login modify` 에 대한 자세한 `security login create` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["ONTAP 명령 참조입니다"^]참조하십시오.

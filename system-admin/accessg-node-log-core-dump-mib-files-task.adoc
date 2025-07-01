@@ -25,13 +25,16 @@ network interface show 명령은 클러스터에 있는 모든 LIF의 상태를 
 에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 * 에 액세스하려면 로컬 사용자 계정을 사용해야 합니다 `spi` 웹 서비스, 도메인 사용자 계정은 지원되지 않습니다.
-* 사용자 계정에 'admin' 역할(기본적으로 'pi' 웹 서비스에 액세스할 수 있는 역할)이 없으면 액세스 제어 역할에 'pi' 웹 서비스에 대한 액세스 권한이 부여되어야 합니다.
+* 사용자 계정에 다음이 없는 경우  `admin` 역할(액세스 권한이 있음)  `spi` 기본적으로 웹 서비스)의 경우 액세스 제어 역할에 액세스 권한이 부여되어야 합니다.  `spi` 웹 서비스.
 +
 'vserver services web access show' 명령은 어떤 역할이 어떤 웹 서비스에 대한 액세스 권한이 부여되어 있는지 보여줍니다.
 
-* "admin" 사용자 계정(기본적으로 "http" 액세스 방법을 포함하는 계정)을 사용하지 않는 경우 사용자 계정은 "http" 액세스 방법으로 설정해야 합니다.
+* 사용하지 않는 경우  `admin` 사용자 계정(다음을 포함함)  `http` 기본적으로 액세스 방법)을 사용하려면 사용자 계정을 다음과 같이 설정해야 합니다.  `http` 접근 방법.
 +
 '보안 로그인 표시' 명령은 사용자 계정의 액세스 및 로그인 방법과 액세스 제어 역할을 표시합니다.
+
++
+에 대한 자세한 내용은 `security login show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 * 보안 웹 액세스를 위해 HTTPS를 사용하려면 SSL을 활성화하고 디지털 인증서를 설치해야 합니다.
 +
@@ -42,7 +45,7 @@ network interface show 명령은 클러스터에 있는 모든 LIF의 상태를 
 .이 작업에 대해
 기본적으로 'spi' 웹 서비스가 활성화되어 있으며 서비스를 수동으로 비활성화할 수 있습니다('vserver services web modify -vserver * -name spi -enabled false').
 
-"admin" 역할은 기본적으로 'spi' 웹 서비스에 대한 액세스 권한이 부여되며, 액세스를 수동으로 비활성화할 수 있습니다('services web access delete -vserver_cluster_name_-name spi-role admin').
+그만큼  `admin` 역할에 대한 액세스 권한이 부여됩니다.  `spi` 기본적으로 웹 서비스이며 액세스를 수동으로 비활성화할 수 있습니다. (`services web access delete -vserver _cluster_name_ -name spi -role admin` ).
 
 .단계
 . 다음 형식 중 하나로 웹 브라우저를 'pi' 웹 서비스 URL로 지정합니다.

@@ -40,6 +40,9 @@ SnapLock 역할은 데이터 SVM과 연결된 vsadmin-SnapLock 역할과는 달�
 ----
 cluster1::> security login create -vserver cluster1 -user-or-group-name SnapLockAdmin -application ssh -authmethod password -role snaplock
 ----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

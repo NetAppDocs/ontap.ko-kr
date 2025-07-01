@@ -52,3 +52,8 @@ cluster1::>snaplock legal-hold begin -litigation-name litigation1 -volume vol1 -
 cluster1::>snaplock legal-hold end -litigation-name litigation1 -volume vol1 -path /
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snaplock-legal-hold-begin.html["SnapLock 법적 증거 자료 보관 이 시작됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snaplock-legal-hold-end.html["SnapLock 법적 증거 자료 보관 종료"^]
+

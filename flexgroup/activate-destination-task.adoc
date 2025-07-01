@@ -75,3 +75,7 @@ vsd       root_vs0     aggr1        online     RW        100MB    94.02MB    5%
 ----
 . 대상 FlexGroup 볼륨으로 클라이언트를 리디렉션합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["SnapMirror가 깨졌습니다"^]
+

@@ -170,3 +170,6 @@ MAV 기능 비활성화(MAV 승인 필요)
 '보안 멀티-관리-검증 수정-사용 안 함
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify["보안 다중 관리자 확인"^]
+

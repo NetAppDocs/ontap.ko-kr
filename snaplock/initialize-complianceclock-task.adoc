@@ -66,6 +66,9 @@ ONTAP CLI를 사용하여 규정 준수 클록을 초기화하거나 ONTAP 9.12.
 ----
 cluster1::> snaplock compliance-clock initialize -node node1
 ----
++
+에 대한 자세한 내용은 `snaplock compliance-clock initialize` link:https://docs.netapp.com/us-en/ontap-cli/snaplock-compliance-clock-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 메시지가 표시되면 시스템 클록이 올바른지, 규정 준수 클록을 초기화할지 확인합니다.
 +
 [listing]
@@ -115,6 +118,9 @@ SnapLock 보안 클록 데몬은 편중을 감지하고 규정 준수 클럭을 
 ----
 cluster1::*> snaplock compliance-clock ntp modify -is-sync-enabled true
 ----
++
+에 대한 자세한 내용은 `snaplock compliance-clock ntp modify` link:https://docs.netapp.com/us-en/ontap-cli/snaplock-compliance-clock-ntp-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 메시지가 표시되면 구성된 NTP 서버가 신뢰할 수 있고 통신 채널이 보안 상태인지 확인합니다.
 . 기능이 활성화되어 있는지 확인합니다.
 +
@@ -130,4 +136,7 @@ cluster1::*> snaplock compliance-clock ntp show
 
 Enable clock sync to NTP system time: true
 ----
++
+에 대한 자세한 내용은 `snaplock compliance-clock ntp show` link:https://docs.netapp.com/us-en/ontap-cli/snaplock-compliance-clock-ntp-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

@@ -143,9 +143,6 @@ cluster_dst::> snapmirror quiesce -destination-path svm_backup:volA_dst
 snapmirror break -destination-path <SVM:volume>
 ----
 +
-에 대한 자세한 내용은 `snapmirror-break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다.
@@ -159,6 +156,9 @@ snapmirror break -destination-path <SVM:volume>
 ----
 cluster_dst::> snapmirror break -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 볼륨에 스냅샷 자동 삭제가 설정되어 있는 경우 비활성화합니다.
 +
 [source, cli]
@@ -385,4 +385,8 @@ options replication.create_data_protection_rels.enable on
 +
 DP를 명시적으로 호출하지 않으면 이 옵션은 무시됩니다.
 
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 

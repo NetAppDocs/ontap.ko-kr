@@ -26,7 +26,10 @@ xref:enable-ad-users-groups-access-cluster-svm-task.adoc[Active Directory 도메
 SSH 공개 키를 기본 인증으로 사용하도록 선택하면 AD 인증이 수행되지 않습니다.
 
 * ONTAP 9.11.1부터 AD LDAP 서버에서 지원되는 경우 를 사용할 수 link:../nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html["ONTAP NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다."]있습니다.
-* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다.
++
+에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 xref:modify-role-assigned-administrator-task.adoc[관리자에게 할당된 역할 수정]
 

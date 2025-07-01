@@ -133,6 +133,9 @@ security oauth2 client create \
 -application http \
 -issuer https://superzap.dev.netapp.com:8443/realms/my-realm
 ----
++
+에 대한 자세한 내용은 `security oauth2 client create` link:https://docs.netapp.com/us-en/ontap-cli/security-oauth2-client-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --
@@ -180,4 +183,6 @@ Is OAuth 2.0 Enabled: true
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-show.html["보안 인증서가 표시됩니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-oauth2-modify.html["보안 oauth2 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-oauth2-show.html["보안 oauth2 표시"^]
 

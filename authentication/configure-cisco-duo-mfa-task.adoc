@@ -230,6 +230,9 @@ security login duo group modify -group-name <GROUP_NAME> -excluded-users <USER1,
 +
 Duo 그룹의 이름은 Active Directory, LDAP 또는 로컬 그룹과 일치해야 합니다. 매개 변수로 지정한 사용자는 `-excluded-users` Duo 인증 프로세스에 포함되지 않습니다.
 
++
+에 대한 자세한 내용은 `security login duo group modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-duo-group-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

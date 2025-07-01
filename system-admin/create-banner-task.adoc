@@ -102,4 +102,7 @@ The svm1 SVM is reserved for authorized users only!
 cluster1::>
 ----
 .관련 정보
-xref:manage-banner-reference.adoc[배너 관리]
+* xref:manage-banner-reference.adoc[배너 관리]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-banner-modify.html["보안 로그인 배너 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-banner-show.html["보안 로그인 배너가 표시됩니다"^]
+

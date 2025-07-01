@@ -32,7 +32,7 @@ SnapLock Audit 로그는 감사 로그 볼륨의 루트 아래의 '/sSnapLock_lo
 * 'SnapLock log file archive' 명령을 사용하여 현재 로그 파일을 보관하고 새 로그 파일을 만들 수 있습니다. 이 명령은 별도의 파일에 감사 로그 정보를 기록해야 하는 경우에 유용합니다.
 
 
-에 대한 자세한 내용은 `snaplock log file` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snaplock+log+file["ONTAP 명령 참조입니다"^]을 참조하십시오.
+및 `snaplock log file archive` 에 대한 자세한 `snaplock log file show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snaplock+log+file["ONTAP 명령 참조입니다"^]참조하십시오.
 
 [NOTE]
 ====
@@ -66,6 +66,9 @@ xref:create-snaplock-volume-task.adoc[SnapLock 볼륨을 생성합니다]
 ----
 SVM1::> snaplock log create -vserver SVM1 -volume logVol -max-log-size 20GB -retention-period 8months
 ----
++
+에 대한 자세한 내용은 `snaplock log create` link:https://docs.netapp.com/us-en/ontap-cli/snaplock-log-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 감사 로깅을 위해 구성한 SVM에서 SnapLock 볼륨을 연결 경로 '/sSnapLock_audit_log'에 마운트합니다.
 +
 xref:mount-snaplock-volume-task.adoc[SnapLock 볼륨을 마운트합니다]

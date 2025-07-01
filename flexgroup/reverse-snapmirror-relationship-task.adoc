@@ -79,3 +79,7 @@ vsd:dst__0008 XDP  vss:src__0008  Snapmirrored
 각 구성요소의 SnapMirror 관계 상태는 재동기화가 성공했음을 나타내는 '스냅샷 미러링'으로 표시됩니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

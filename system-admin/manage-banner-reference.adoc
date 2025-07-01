@@ -32,9 +32,9 @@ summary: 클러스터 또는 SVM 레벨에서 배너를 관리하고 배너가 �
  a| 
 모든(클러스터 및 SVM) 로그인의 배너를 제거합니다
  a| 
-배너를 빈 문자열(""")로 설정합니다.
+배너를 빈 문자열(``)로 설정합니다.
 
-`security login banner modify -vserver * -message ""`
+`security login banner modify -vserver * -message`
 
 
 
@@ -69,16 +69,20 @@ SVM에 대한 배너가 표시되지 않도록 클러스터 관리자가 제공�
  a| 
 SVM 배너를 SVM용 빈 문자열로 설정합니다.
 
-`security login banner modify -vserver <svm_name> -message ""`
+`security login banner modify -vserver <svm_name> -message`
 
 
 
  a| 
 SVM에서 현재 SVM 레벨 배너를 사용하는 경우 클러스터 레벨 배너를 사용합니다
  a| 
-SVM 배너를 "-" 로 설정한다.
+SVM 배너 설정 `-`:
 
-`security login banner modify -vserver <svm_name> -message "-"`
+`security login banner modify -vserver <svm_name> -message -`
 
 |===
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-banner-modify.html["보안 로그인 배너 수정"^]
 

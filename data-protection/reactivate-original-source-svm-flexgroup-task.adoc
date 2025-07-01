@@ -171,6 +171,9 @@ cluster_src::> snapmirror quiesce -source-path svm_backup: -destination-path svm
 ----
 cluster_src::> snapmirror break -source-path svm_backup: -destination-path svm1:
 ----
++
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 원래 소스 SVM이 이전에 중지된 경우 원래 소스 클러스터에서 원본 소스 SVM을 시작합니다.
 +
 'vserver start-vserver_SVM_'
@@ -255,4 +258,8 @@ cluster_dst::> snapmirror create -source-path svm1: -destination-path svm_backup
 ----
 cluster_dst::> snapmirror resync -source-path svm1: -destination-path svm_backup:
 ----
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 

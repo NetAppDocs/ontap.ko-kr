@@ -40,6 +40,9 @@ summary: '웹 서비스에 대한 액세스를 구성하면 권한 있는 사용
 
 . 클러스터 수준 웹 프로토콜 엔진을 구성하고 웹 서비스 콘텐츠를 액세스할 수 있도록 하려면 'system services web modify' 명령을 사용합니다.
 . 보안 웹 서비스(HTTPS)를 사용하려는 경우 '보안 SSL 수정' 명령을 사용하여 SSL을 활성화하고 클러스터 또는 SVM에 대한 디지털 인증서 정보를 제공합니다.
++
+에 대한 자세한 내용은 `security ssl modify` link:https://docs.netapp.com/us-en/ontap-cli/security-ssl-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 클러스터 또는 SVM에 대한 웹 서비스를 활성화하려면 'vserver services web modify' 명령을 사용하십시오.
 +
 클러스터 또는 SVM에 대해 활성화할 각 서비스에 대해 이 단계를 반복해야 합니다.
@@ -48,14 +51,20 @@ summary: '웹 서비스에 대한 액세스를 구성하면 권한 있는 사용
 +
 액세스 권한을 부여하는 역할이 이미 있어야 합니다. 'Security login role show' 명령어를 사용해 기존 역할을 표시하거나, 'ecurity login role create' 명령어를 사용해 새로운 역할을 생성할 수 있다.
 
++
+및 `security login role create` 에 대한 자세한 `security login role show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login+role["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 웹 서비스에 액세스할 수 있는 권한을 가진 역할의 경우, '보안 로그인 표시' 명령의 출력을 확인하여 사용자가 올바른 액세스 방법을 사용하도록 구성해야 합니다.
 +
 ONTAP API 웹 서비스('ontapi')에 액세스하려면 사용자가 "ontapi" 액세스 방법으로 구성해야 합니다. 다른 모든 웹 서비스에 액세스하려면 사용자가 http 액세스 방법으로 구성되어야 합니다.
 
 +
+에 대한 자세한 내용은 `security login show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
++
 [NOTE]
 ====
-'보안 로그인 생성' 명령을 사용하여 사용자의 액세스 방법을 추가합니다.
+명령을 사용하여 `security login create` 사용자에 대한 액세스 방법을 추가합니다. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 

@@ -11,7 +11,7 @@ summary: SSH 공개 키 인증의 경우 관리자 계정의 공개 키와 X.509
 
 
 [role="lead"]
-관리자 계정으로 SSH 인증 보안을 강화하기 위해 명령 집합을 사용하여 SSH 공개 키 및 X.509 인증서와의 연결을 관리할 수 `security login publickey` 있습니다. 에 대한 자세한 내용은 `security login publickey` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login+publickey["ONTAP 명령 참조입니다"^]을 참조하십시오.
+관리자 계정으로 SSH 인증 보안을 강화하기 위해 명령 집합을 사용하여 SSH 공개 키 및 X.509 인증서와의 연결을 관리할 수 `security login publickey` 있습니다.
 
 
 
@@ -122,3 +122,6 @@ cluster1::> security login publickey modify -vserver engData2 -username svmadmin
 ----
 cluster1::> security login publickey delete -vserver engData3 -username svmadmin3 -index 7
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login+publickey["보안 로그인 공개키"^]
+

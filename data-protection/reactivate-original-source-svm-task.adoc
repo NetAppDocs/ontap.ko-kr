@@ -184,6 +184,9 @@ NOTE: '-source-path' 및 '-destination-path' 옵션에서 SVM 이름 뒤에 콜�
 ----
 cluster_src::> snapmirror break -source-path svm_backup: -destination-path svm1:
 ----
++
+에 대한 자세한 내용은 `snapmirror break` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 원래 소스 SVM이 이전에 중지된 경우 원래 소스 클러스터에서 원본 소스 SVM을 시작합니다.
 +
 [source, cli]
@@ -259,3 +262,6 @@ cluster_dst::> snapmirror release -source-path svm_backup: -destination-path svm
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

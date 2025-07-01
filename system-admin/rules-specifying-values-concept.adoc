@@ -44,3 +44,4 @@ cluster1::> vserver modify -vserver vs0 -comment ""
 cluster1::> security login create -vserver vs0 -user-or-group-name new-admin
 -application ssh -authmethod password #This command creates a new user account
 ----
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

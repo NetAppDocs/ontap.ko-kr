@@ -124,3 +124,7 @@ summary: '한 번에 한 단계씩 복제 관계를 구성하는 방법을 구�
 'cluster_tertiary::> snapmirror initialize-source-path svm_secondary: VolA-destination-path svm_tertertiary: VolA'
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

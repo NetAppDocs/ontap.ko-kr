@@ -11,7 +11,7 @@ summary: SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 �
 
 
 [role="lead"]
-SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 있으려면 먼저 공개 키를 관리자 계정과 연결해야 합니다. 명령을 사용하여 키를 관리자 계정에 연결할 수 `security login publickey create` 있습니다. 에 대한 자세한 내용은 `security login publickey create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 있으려면 먼저 공개 키를 관리자 계정과 연결해야 합니다. 명령을 사용하여 키를 관리자 계정에 연결할 수 `security login publickey create` 있습니다.
 
 .이 작업에 대해
 암호 및 SSH 공개 키로 SSH를 통해 계정을 인증하면 먼저 공개 키로 계정이 인증됩니다.
@@ -26,9 +26,15 @@ SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 있으려�
 +
 '보안 로그인 공개 키 생성 - vserver_SVM_name_-username_user_name_-index_index_-publickey_certificate_-comment_comment_'
 
++
+에 대한 자세한 내용은 `security login publickey create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 공개 키를 확인하여 변경 사항을 확인합니다.
 +
 `security login publickey show -vserver _SVM_name_ -username _user_name_ -index _index_`
+
++
+에 대한 자세한 내용은 `security login publickey show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -40,4 +46,3 @@ SSH 공개 키 인증의 경우 계정에서 SVM에 액세스할 수 있으려�
 cluster1::> security login publickey create -vserver engData1 -username svmadmin1 -index 5 -publickey
 "<key text>"
 ----
-에 대한 자세한 내용은 `security login publickey show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

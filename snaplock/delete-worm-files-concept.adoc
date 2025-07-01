@@ -37,6 +37,9 @@ summary: 권한 있는 삭제 기능을 사용하여 보존 기간 동안 엔터
 ----
 cluster1::> security login create -vserver SVM1 -user-or-group-name SnapLockAdmin -application ssh -authmethod password -role vsadmin-snaplock
 ----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 

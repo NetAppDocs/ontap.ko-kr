@@ -79,6 +79,12 @@ NOTE: ARP 스냅샷의 최대 보존 간격은 보통 위협이 감지된 경우
 
 
 
+| `arw.snap.retain.hours.after.clear.suspect.false.alert` | 관리자가 공격 사고를 오탐지로 표시한 후 예방 조치로 ARP 스냅샷을 보관하는 시간을 지정합니다. 이 예방 보관 기간이 만료되면 옵션에 정의된 표준 보관 기간에 따라 스냅샷이 삭제될 수 있습니다.  `arw.snap.normal.retain.interval.hours` 그리고  `arw.snap.max.retain.interval.days` . 
+
+
+| `arw.snap.retain.hours.after.clear.suspect.real.attack` | 관리자가 공격 사고를 실제 공격으로 표시한 후 예방 조치로 ARP 스냅샷을 보관하는 시간을 지정합니다. 이 예방 보관 기간이 만료되면 옵션에 정의된 표준 보관 기간에 따라 스냅샷이 삭제될 수 있습니다.  `arw.snap.normal.retain.interval.hours` 그리고  `arw.snap.max.retain.interval.days` . 
+
+
 | `arw.surge.snap.interval.days`  a| 
 IO 서지에 대한 응답으로 생성된 ARP 스냅샷 사이의 간격 _(일)을 지정합니다. ONTAP는 IO 트래픽에 과부하가 있고 마지막으로 생성된 ARP 스냅샷이 지정된 간격보다 오래된 경우 ARP 스냅샷 서지 복제본을 생성합니다. 또한 이 옵션은 ARP 서지 스냅숏에 대한 보존 기간을 day_로 지정합니다.
 

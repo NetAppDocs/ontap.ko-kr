@@ -52,6 +52,9 @@ RSH를 사용하여 클러스터에 액세스하려면 다음 조건을 충족�
 
 
 
++
+및 `security protocol modify` 에 대한 자세한 `security protocol show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+protocol["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 관리 LIF에 서비스가 있는지 `management-rsh-server` 확인합니다.
 +
 `network interface show -services management-rsh-server`

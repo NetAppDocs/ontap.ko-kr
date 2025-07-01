@@ -130,3 +130,5 @@ ONTAP는 자체 포함된 범위를 보다 쉽게 관리할 수 있도록 CLI �
 security oauth2 scope cli-to-scope -role joes-role -access readonly -api /api/cluster
 ----
 `ontap:*:joes-role:readonly:*:/api/cluster`
+
+에 대한 자세한 내용은 `security oauth2 scope` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+oauth2+scope["ONTAP 명령 참조입니다"^]을 참조하십시오.

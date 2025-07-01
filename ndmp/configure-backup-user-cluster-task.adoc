@@ -27,6 +27,9 @@ NIS 또는 LDAP 사용자를 사용하는 경우 사용자는 해당 서버에 �
 +
 '보안 로그인 쇼'
 
++
+에 대한 자세한 내용은 `security login show` link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 필요한 경우 를 사용하여 새 NDMP 백업 사용자를 생성합니다 `security login create` 클러스터 전체 또는 개별 SVM 권한에 따라 명령을 수행하고 적절한 역할을 수행합니다.
 +
 '-user-or-group-name' 매개 변수에 로컬 백업 사용자 이름 또는 NIS 또는 LDAP 사용자 이름을 지정할 수 있습니다.
@@ -45,6 +48,9 @@ NIS 또는 LDAP 사용자를 사용하는 경우 사용자는 해당 서버에 �
 
 +
 새 사용자의 암호를 입력하고 확인합니다.
+
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 'vserver services ndmp generate password' 명령을 사용하여 admin SVM에 대한 암호를 생성합니다.
 +

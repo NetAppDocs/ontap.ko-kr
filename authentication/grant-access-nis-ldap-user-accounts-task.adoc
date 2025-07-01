@@ -22,7 +22,10 @@ xref:enable-nis-ldap-users-access-cluster-task.adoc[LDAP 또는 NIS 서버 액�
 +
 계정 액세스를 활성화하기 전이나 후에 이 작업을 수행할 수 있습니다.
 
-* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다. 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+* 로그인 계정에 할당하려는 액세스 제어 역할이 확실하지 않은 경우 명령을 사용하여 나중에 역할을 추가할 수 `security login modify` 있습니다.
++
+에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 xref:modify-role-assigned-administrator-task.adoc[관리자에게 할당된 역할 수정]
 
@@ -55,7 +58,7 @@ cluster1::>security login create -vserver engCluster -user-or-group-name guest2 
 
 . LDAP 또는 NIS 사용자에 대해 MFA 로그인 활성화:
 +
-''Security login modify -user -or -group -name rem_usr1 -application ssh-authentication -method nsswitch -role admin -is -ns -switch-group no-second-authentication-method publickey'
+`security login modify -user-or-group-name rem_usr1 -application ssh -authentication-method nsswitch -role admin -is-ns-switch-group no -second-authentication-method publickey`
 
 +
 인증 방법은 홍보 키로, 두 번째 인증 방식은 nsswitch로 지정할 수 있습니다.

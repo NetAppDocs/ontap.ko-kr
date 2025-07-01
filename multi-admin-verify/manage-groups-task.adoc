@@ -107,6 +107,9 @@ cluster01::> event config show
 'Security login create-user-or-group-name_admin_name_-application ssh-authentication-method password
 
 |===
++
+에 대한 자세한 `security login show` `security login modify` 내용은, 및 `security login create`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["ONTAP 명령 참조입니다"^] 을 참조하십시오.
+
 . MAV 승인 그룹 생성:
 +
 `security multi-admin-verify approval-group create [ -vserver _svm_name_] -name _group_name_ -approvers _approver1_[,_approver2_…] [[-email _address1_], _address1_...]`
@@ -166,3 +169,6 @@ svm-1    mav-grp1   pavan,julia      email pavan@myfirm.com,julia@myfirm.com
 '보안 multi-admin-verify approval-group delete[-vserver_svm_name_]-name_group_name_'
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify["보안 다중 관리자 확인"^]
+

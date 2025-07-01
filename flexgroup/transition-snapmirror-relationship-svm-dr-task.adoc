@@ -58,3 +58,7 @@ Warning: This Vserver has volumes which are the destination of FlexVol or FlexGr
 . SVM DR 레벨 SnapMirror 관계가 '스냅샷 표시-확장'이라는 양호한 유휴 상태에 도달하는지 확인합니다
 . FlexGroup SnapMirror 관계가 '스냅샷 표시'라는 양호한 상태인지 확인합니다
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+

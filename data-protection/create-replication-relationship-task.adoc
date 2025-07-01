@@ -11,7 +11,7 @@ summary: 운영 스토리지의 소스 볼륨과 2차 스토리지의 타겟 볼
 
 
 [role="lead"]
-운영 스토리지의 소스 볼륨과 보조 스토리지의 대상 볼륨 간의 관계를 _ 데이터 보호 관계라고 합니다. _ 명령을 사용하여 SnapMirror DR, SnapVault 또는 통합 복제 데이터 보호 관계를 생성할 수 있습니다. `snapmirror create` 에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+운영 스토리지의 소스 볼륨과 보조 스토리지의 대상 볼륨 간의 관계를 _ 데이터 보호 관계라고 합니다. _ 명령을 사용하여 SnapMirror DR, SnapVault 또는 통합 복제 데이터 보호 관계를 생성할 수 있습니다. `snapmirror create`
 
 
 NOTE: 이 절차는 FAS, AFF 및 현재 ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 따르세요. link:https://docs.netapp.com/us-en/asa-r2/data-protection/snapshot-replication.html["수행할 수 있습니다"^] 복제 관계를 생성합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
@@ -250,5 +250,5 @@ NOTE: 미리 정의된 정책의 `SnapCenterSync` 유형이 `Sync`입니다. 이
 | System Manager Classic(ONTAP 9.7 이하에서 사용 가능) | link:https://docs.netapp.com/us-en/ontap-system-manager-classic/volume-backup-snapvault/index.html["SnapVault를 사용한 볼륨 백업 개요"^] 
 |===
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["SnapMirror를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 

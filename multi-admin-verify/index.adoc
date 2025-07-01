@@ -86,7 +86,8 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-password.html["보안 로그인 암호"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-login-unlock.html["보안 로그인 잠금 해제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
 
 
@@ -485,4 +486,9 @@ MAV 규칙은 RBAC 권한 이후에 평가됩니다. 따라서 작업 실행에 
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware["보안 랜섬웨어 방지"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+ipsec["보안 ipsec"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+onboard["보안 키 관리자 온보드"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+login["보안 로그인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify["보안 다중 관리자 확인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+saml-sp["보안 SAML - SP"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-webauthn-credentials-delete.html["보안 webauthn 자격 증명을 삭제합니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snaplock-legal-hold-end.html["SnapLock 법적 증거 자료 보관 종료"^]
 

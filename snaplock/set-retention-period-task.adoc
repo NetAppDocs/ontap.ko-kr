@@ -314,3 +314,8 @@ cluster1::>snaplock event-retention policy create -vserver vs1 -name employee_ex
 cluster1::>snaplock event-retention apply -vserver vs1 -name employee_exit -volume vol1 -path /d1
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snaplock-event-retention-policy-create.html["SnapLock 이벤트 보존 정책 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snaplock-event-retention-apply.html["SnapLock 이벤트 보존 적용"^]
+
