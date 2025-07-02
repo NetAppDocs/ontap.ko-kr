@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, backup, user, cluster 
 summary: 백업 애플리케이션에서 SVM 범위의 NDMP를 인증하려면 충분한 권한과 NDMP 암호를 가진 관리 사용자가 있어야 합니다. 
 ---
-= NDMP 인증에 대한 백업 사용자를 설정합니다
+= ONTAP NDMP 인증을 위한 백업 사용자 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2,29 +2,29 @@
 section: ndmp
 title: NDMP 구성
 entries:
-- title: 개요
+- title: NDMP 구성에 대해 자세히 알아보십시오
   url: "/ndmp/index.html"
-- title: 워크플로우
+- title: NDMP 구성 워크플로에 대해 알아보세요
   url: "/ndmp/config-workflow-concept.html"
-- title: NDMP 구성을 준비합니다
+- title: NDMP 구성 준비
   url: "/ndmp/prepare-ndmp-config-task.html"
-- title: 테이프 디바이스 연결을 확인합니다
+- title: NDMP 테이프 장치 연결 확인
   url: "/ndmp/verify-tape-device-connections-task.html"
-- title: 테이프 예약을 활성화합니다
+- title: NDMP 백업 작업에 대한 테이프 예약 활성화
   url: "/ndmp/enable-tape-reservations-task.html"
 - title: SVM 범위 NDMP를 구성합니다
   entries:
   - title: 클러스터에서 SVM 범위의 NDMP를 사용하도록 설정합니다
     url: "/ndmp/enable-svm-scoped-ndmp-cluster-task.html"
-  - title: NDMP 인증에 대한 백업 사용자를 설정합니다
+  - title: NDMP 인증을 위한 백업 사용자 활성화
     url: "/ndmp/configure-backup-user-cluster-task.html"
-  - title: LIF를 구성합니다
+  - title: SVM 범위 NDMP에 대한 LIF 구성
     url: "/ndmp/configure-lifs-svm-scoped-task.html"
 - title: 노드 범위 NDMP를 구성합니다
   entries:
   - title: 클러스터에서 노드 범위의 NDMP를 사용하도록 설정합니다
     url: "/ndmp/enable-node-scoped-ndmp-cluster-task.html"
-  - title: LIF를 구성합니다
+  - title: 노드 범위 NDMP에 대한 LIF 구성
     url: "/ndmp/configure-lifs-node-scoped-task.html"
-- title: 백업 애플리케이션을 구성합니다
+- title: NDMP 구성을 위한 백업 애플리케이션 구성
   url: "/ndmp/configure-backup-application-task.html"
