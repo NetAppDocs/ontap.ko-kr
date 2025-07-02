@@ -24,7 +24,7 @@ RPO 및 스로틀 값을 조정하려는 경우 S3 SnapMirror 정책을 수정�
 --
 .CLI를 참조하십시오
 --
-SnapMirror S3 정책 수정:
+SnapMirror S3 정책 수정: 
 `snapmirror policy modify -vserver <svm_name> -policy <policy_name> [-rpo <integer>] [-throttle <throttle_type>] [-comment <text>]`
 
 매개 변수:

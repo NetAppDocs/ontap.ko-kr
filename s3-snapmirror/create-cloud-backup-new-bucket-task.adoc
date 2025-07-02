@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: s3-snapmirror/create-cloud-backup-new-bucket-task.html 
 keywords: create, backup, relationship, new, bucket 
-summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 구축과 같은 오브젝트 저장소 공급자의 SnapMirror S3 타겟 버킷에 즉시 백업할 수 있습니다. 
+summary: '새로운 S3 버킷을 생성하면 객체 저장소 공급자(StorageGRID 시스템 또는 Amazon S3 배포)의 SnapMirror S3 대상 버킷에 즉시 백업할 수 있습니다.' 
 ---
 = 새 ONTAP S3 버킷에 대한 클라우드 백업 관계를 생성한다
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 �
 
 
 [role="lead"]
-새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 구축과 같은 오브젝트 저장소 공급자의 SnapMirror S3 타겟 버킷에 즉시 백업할 수 있습니다.
+새로운 S3 버킷을 생성하면 객체 저장소 공급자(StorageGRID 시스템 또는 Amazon S3 배포)의 SnapMirror S3 대상 버킷에 즉시 백업할 수 있습니다.
 
 .시작하기 전에
 * 객체 저장소 공급자에 대한 유효한 계정 자격 증명 및 구성 정보가 있습니다.
@@ -54,7 +54,7 @@ summary: 새 S3 버킷을 생성하면 StorageGRID 시스템 또는 Amazon S3 �
 
 
 
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책을 생성합니다.
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요.
 +
 .. 보호 > 개요 * 를 클릭한 다음 * 로컬 정책 설정 * 을 클릭합니다.
 .. image:../media/icon_arrow.gif["화살표 아이콘"]보호 정책 * 옆에 있는 * 추가 * 를 클릭합니다.
@@ -107,7 +107,7 @@ Save * 를 클릭하면 소스 스토리지 VM에 새 버킷이 생성되고 클
 ----
 clusterA::> vserver object-store-server bucket policy add-statement -bucket test-bucket -effect allow -action GetObject,PutObject,DeleteObject,ListBucket,GetBucketAcl,GetObjectAcl,ListBucketMultipartUploads,ListMultipartUploadParts -principal - -resource test-bucket, test-bucket /*
 ----
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요. 
 `snapmirror policy create -vserver svm_name -policy policy_name -type continuous [-rpo _integer_] [-throttle _throttle_type_] [-comment _text_] [_additional_options_]`
 +
 매개 변수: * `type continuous` – SnapMirror S3 관계에 대한 유일한 정책 유형(필수). * `-rpo` – 복구 시점 목표의 시간을 초 단위로 지정합니다(선택 사항).  `-throttle`* – 처리량/대역폭에 대한 상한을 킬로바이트/초 단위로 지정합니다(선택 사항).
@@ -133,7 +133,7 @@ clusterA::> snapmirror policy create -vserver vs0 -type continuous -rpo 0 -polic
 ----
 src_cluster::> snapmirror object-store config create -vserver vs0 -object-store-name sgws-store -usage data -provider-type SGWS -server sgws.example.com -container-name target-test-bucket -is-ssl-enabled true -port 443 -access-key abc123 -secret-password xyz890
 ----
-. SnapMirror S3 관계 생성:
+. SnapMirror S3 관계 생성: 
 `snapmirror create -source-path _svm_name_:/bucket/_bucket_name_ -destination-path _object_store_name_:/objstore -policy _policy_name_`
 +
 매개 변수:

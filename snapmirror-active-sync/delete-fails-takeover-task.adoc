@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/delete-fails-takeover-task.html 
 keywords: troubleshooting, SM-BC, SMBC, SnapMirror, delete, takeover, consistency group, snapmirror active sync 
-summary: 'ONTAP 9.1.1이 클러스터에 설치된 경우 를 실행합니다 `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 테이크오버 상태일 때 명령이 실패합니다.' 
+summary: 'ONTAP 9.9.1이 클러스터에 설치되면 다음을 실행합니다.  `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 인수 상태인 경우 명령이 실패합니다.' 
 ---
 = takover 상태에서 SnapMirror 삭제 작업이 실패합니다
 :hardbreaks:
@@ -15,7 +15,7 @@ summary: 'ONTAP 9.1.1이 클러스터에 설치된 경우 를 실행합니다 `s
 
 .문제:
 [role="lead"]
-ONTAP 9.1.1이 클러스터에 설치된 경우 를 실행합니다 `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 테이크오버 상태일 때 명령이 실패합니다.
+ONTAP 9.9.1이 클러스터에 설치되면 다음을 실행합니다.  `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 인수 상태인 경우 명령이 실패합니다.
 
 ....
 C2_cluster::> snapmirror delete  vs1:/cg/dd
@@ -23,7 +23,7 @@ C2_cluster::> snapmirror delete  vs1:/cg/dd
 Error: command failed: RPC: Couldn't make connection
 ....
 .해결 방법
-SnapMirror 액티브 동기화 관계의 노드가 테이크오버 상태인 경우 "-force" 옵션을 true로 설정하여 SnapMirror 삭제 및 릴리즈 작업을 수행합니다.
+SnapMirror 활성 동기화 관계에 있는 노드가 인수 상태인 경우 "-force" 옵션을 true로 설정하여 SnapMirror 삭제 및 해제 작업을 수행합니다.
 
 ....
 C2_cluster::> snapmirror delete  vs1:/cg/dd -force true

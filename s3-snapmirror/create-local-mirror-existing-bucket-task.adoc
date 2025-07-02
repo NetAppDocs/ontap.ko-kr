@@ -40,7 +40,7 @@ ONTAP 9.10.1 이전 릴리즈에서 S3 구성을 업그레이드한 경우와 �
 +
 을 참조하십시오 link:../task_object_provision_add_s3_users_groups.html["S3 사용자 및 그룹 추가"] 를 참조하십시오.
 
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요.
 +
 .. 보호 > 개요 * 를 클릭한 다음 * 로컬 정책 설정 * 을 클릭합니다.
 .. image:../media/icon_arrow.gif["화살표 아이콘"]보호 정책 * 옆에 있는 * 추가 * 를 클릭합니다.
@@ -132,7 +132,7 @@ ONTAP 9.14.1부터는 잠긴 S3 버킷을 백업하고 필요에 따라 복원�
 ----
 clusterA::> vserver object-store-server bucket policy add-statement -bucket test-bucket -effect allow -action GetObject,PutObject,DeleteObject,ListBucket,GetBucketAcl,GetObjectAcl,ListBucketMultipartUploads,ListMultipartUploadParts -principal - -resource test-bucket, test-bucket /*
 ----
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요.
 +
 '스냅샷 정책 생성 - vserver_svm_name_-policy_policy_name - type continuous [-RPO_integer_] [-throttle_throttle_type_] [-comment text] [_additional_options_]'
 
@@ -160,7 +160,7 @@ clusterA::> snapmirror policy create -vserver vs0 -type continuous -rpo 0 -polic
 
 
 
-. SnapMirror S3 관계 생성:
+. SnapMirror S3 관계 생성: 
 `snapmirror create -source-path _src_svm_name_:/bucket/_bucket_name_ -destination-path _dest_peer_svm_name_:/bucket/_bucket_name_, ...} [-policy policy_name]`
 +
 생성한 정책을 사용하거나 기본값을 사용할 수 있습니다.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: s3-snapmirror/create-local-mirror-new-bucket-task.html 
 keywords: snapmirror, create local, new bucket, create a mirror relationship for an existing bucket 
-summary: 새 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 타겟에 즉시 보호할 수 있습니다. 다른 스토리지 VM의 버킷이나 소스와 동일한 스토리지 VM의 버킷에 데이터를 미러링할 수 있습니다. 
+summary: 새로운 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 대상으로 즉시 보호할 수 있습니다. 다른 스토리지 VM의 버킷이나 소스와 동일한 스토리지 VM의 버킷에 데이터를 미러링할 수 있습니다. 
 ---
 = 로컬 클러스터에서 새로운 ONTAP S3 버킷에 대한 미러 관계를 생성합니다
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: 새 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 �
 
 
 [role="lead"]
-새 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 타겟에 즉시 보호할 수 있습니다. 다른 스토리지 VM의 버킷이나 소스와 동일한 스토리지 VM의 버킷에 데이터를 미러링할 수 있습니다.
+새로운 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 대상으로 즉시 보호할 수 있습니다. 다른 스토리지 VM의 버킷이나 소스와 동일한 스토리지 VM의 버킷에 데이터를 미러링할 수 있습니다.
 
 .시작하기 전에
 * ONTAP 버전, 라이센스 및 S3 서버 구성에 대한 요구사항이 완료되었습니다.
@@ -40,7 +40,7 @@ summary: 새 S3 버킷을 생성하면 동일한 클러스터의 SnapMirror S3 �
 +
 을 참조하십시오 link:../task_object_provision_add_s3_users_groups.html["S3 사용자 및 그룹 추가"] 를 참조하십시오.
 
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요.
 +
 .. 보호 > 개요 * 를 클릭한 다음 * 로컬 정책 설정 * 을 클릭합니다.
 .. image:../media/icon_arrow.gif["화살표 아이콘"]보호 정책 * 옆에 있는 * 추가 * 를 클릭합니다.
@@ -126,7 +126,7 @@ ONTAP 9.14.1부터는 잠긴 S3 버킷을 백업하고 필요에 따라 복원�
 ....
 src_cluster::> vserver object-store-server bucket policy add-statement -bucket test-bucket -effect allow -action GetObject,PutObject,DeleteObject,ListBucket,GetBucketAcl,GetObjectAcl,ListBucketMultipartUploads,ListMultipartUploadParts -principal - -resource test-bucket, test-bucket /*
 ....
-. 기존 정책이 없고 기본 정책을 사용하지 않으려는 경우 SnapMirror S3 정책 생성:
+. 기존 정책이 없고 기본 정책을 사용하지 않으려면 SnapMirror S3 정책을 만드세요. 
 `snapmirror policy create -vserver svm_name -policy policy_name -type continuous [-rpo _integer_] [-throttle _throttle_type_] [-comment _text_] [_additional_options_]`
 +
 매개 변수:
@@ -152,7 +152,7 @@ src_cluster::> snapmirror policy create -vserver vs0 -type continuous -rpo 0 -po
 
 
 
-. SnapMirror S3 관계 생성:
+. SnapMirror S3 관계 생성: 
 `snapmirror create -source-path _src_svm_name_:/bucket/_bucket_name_ -destination-path _dest_peer_svm_name_:/bucket/_bucket_name_, ...} [-policy policy_name]``
 +
 생성한 정책을 사용하거나 기본값을 사용할 수 있습니다.
