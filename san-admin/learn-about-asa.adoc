@@ -18,6 +18,18 @@ summary: 'NetApp ASA(All-Flash SAN 어레이)는 ONTAP 9.7부터 사용할 수 �
 [role="lead"]
 NetApp ASA(All-Flash SAN 어레이)는 ONTAP 9.7부터 사용할 수 있습니다.  ASA는 검증된 AFF NetApp 플랫폼을 기반으로 하는 All-Flash SAN 전용 솔루션입니다.
 
+ASA 플랫폼에는 다음이 포함됩니다.
+
+* ASA A150
+* ASA A250
+* ASA A400
+* ASA A800
+* ASA A900
+* ASA C250 을 참조하십시오
+* ASA C400 을 참조하십시오
+* ASA C800을 참조하십시오
+
+
 
 NOTE: ONTAP 9.16.0부터 ASA R2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)에서 SAN 전용 고객을 위한 단순화된 ONTAP 환경을 이용할 수 있습니다. ASA R2 시스템을 사용하는 경우 를 link:https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2 시스템 설명서"^]참조하십시오.
 

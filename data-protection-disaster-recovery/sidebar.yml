@@ -215,6 +215,8 @@ entries:
     url: "/mediator/whats-new-concept.html"
   - title: 설치 또는 업그레이드
     entries:
+    - title: 워크플로우
+      url: "/mediator/workflow-summary.html"
     - title: 설치 또는 업그레이드를 준비합니다
       url: "/mediator/index.html"
     - title: 호스트 OS 및 중재자 업그레이드

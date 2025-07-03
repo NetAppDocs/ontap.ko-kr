@@ -18,6 +18,7 @@ ONTAP 클러스터를 되돌리는 것은 중단이 발생합니다. 재버전�
 .시작하기 전에.
 * 를 완료했어야 link:task_things_to_verify_before_revert.html["복원 전 검증"]합니다.
 * 필수 항목을 완료해야 link:concept_pre_revert_checks.html["특정 ONTAP 버전을 미리 확인합니다"]합니다.
+* 당신은해야합니다 link:task_download_and_install_ontap_software_image.html["대상 ONTAP 소프트웨어 이미지를 다운로드하고 설치했습니다."] .
 
 
 

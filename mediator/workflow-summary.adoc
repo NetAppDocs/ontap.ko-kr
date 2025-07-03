@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: mediator/workflow-summary.html 
+keywords: cluster, setup, set up get started, workflow, summary 
+summary: NetApp은 System Manager를 사용하여 새 클러스터를 설정할 것을 권장합니다. System Manager에서 노드 관리 IP 주소의 할당 및 클러스터 초기화를 포함하여 클러스터 설정을 위한 간단하고 쉬운 작업 흐름을 제공합니다. 
+---
+= ONTAP Mediator 설치 워크플로 요약
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP Mediator를 설치하는 과정에는 설치 준비, 저장소 액세스 제공, 설치 패키지 다운로드, 코드 서명 확인, ONTAP Mediator 패키지 설치, 설치 후 구성 작업 수행이 포함됩니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"]link:index.html["ONTAP Mediator 설치 또는 업그레이드 준비"]
+[role="quick-margin-para"]
+ONTAP Mediator를 설치하거나 업그레이드하려면 모든 필수 구성 요소가 충족되었는지 확인해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"]link:upgrade-host-os-mediator-task.html["호스트 OS 및 중재자 업그레이드"]
+[role="quick-margin-para"]
+ONTAP Mediator의 기존 버전을 업그레이드하는 경우, 먼저 이전 버전을 제거한 후 새 버전을 설치해야 합니다. ONTAP Mediator를 처음 설치하는 경우 이 단계를 건너뛸 수 있습니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"]link:enable-access-repos-task.html["저장소 액세스 제공"]
+[role="quick-margin-para"]
+설치 과정에서 ONTAP Mediator가 필요한 패키지에 액세스할 수 있도록 저장소에 대한 액세스를 활성화해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"]link:download-install-pkg-task.html["ONTAP 중재자 설치 패키지를 다운로드합니다"]
+[role="quick-margin-para"]
+ONTAP Mediator 다운로드 페이지에서 ONTAP Mediator 설치 패키지를 다운로드하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"]link:verify-code-signature-task.html["ONTAP Mediator 설치 패키지의 코드 서명을 확인하세요."]
+[role="quick-margin-para"]
+NetApp에서는 ONTAP Mediator 설치 패키지를 설치하기 전에 ONTAP Mediator 코드 서명을 확인할 것을 권장합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["6개"]link:install-mediator-pkg-task.html["ONTAP Mediator 설치"]
+[role="quick-margin-para"]
+ONTAP Mediator를 설치하려면 설치 패키지를 받아서 호스트에서 설치 프로그램을 실행해야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["7번"]link:verify-install-task.html["ONTAP Mediator 설치 확인"]
+[role="quick-margin-para"]
+ONTAP Mediator를 설치한 후 성공적으로 실행되는지 확인하세요.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["8개"]link:post-install-config-concept.html["설치 후 구성 작업 수행"]
+[role="quick-margin-para"]
+ONTAP Mediator를 설치하고 실행한 후에는 ONTAP Mediator 기능을 사용하기 위해 추가 구성 작업을 수행해야 합니다.
