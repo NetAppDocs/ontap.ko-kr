@@ -110,7 +110,9 @@ ONTAP 9.3 이하 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 
 
 ONTAP 9.5부터 SnapMirror 동기식 관계가 지원됩니다.
 
-ONTAP 9.14.1부터, `-backoff-level` 및 명령에 옵션이 추가되어 `snapmirror create` `snapmirror modify` `snapmirror restore` 관계별 백오프 레벨을 지정할 수 있습니다. 이 옵션은 FlexVol SnapMirror 관계에서만 지원됩니다. 선택적 명령은 클라이언트 작업에 따른 SnapMirror 백 오프 레벨을 지정합니다. Backoff 값은 high, medium 또는 none일 수 있습니다. 기본값은 high 입니다. 에 대한 자세한 `snapmirror create` `snapmirror modify` 내용은, 및 `snapmirror restore`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["ONTAP 명령 참조입니다"^] 을 참조하십시오.
+ONTAP 9.14.1부터, `-backoff-level` 및 명령에 옵션이 추가되어 `snapmirror create` `snapmirror modify` `snapmirror restore` 관계별 백오프 레벨을 지정할 수 있습니다. 이 옵션은 FlexVol SnapMirror 관계에서만 지원됩니다. 선택적 명령은 클라이언트 작업에 따른 SnapMirror 백 오프 레벨을 지정합니다. Backoff 값은 high, medium 또는 none일 수 있습니다. 기본값은 high 입니다.
+
+에 대한 자세한 `snapmirror create` `snapmirror modify` 내용은, 및 `snapmirror restore`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["ONTAP 명령 참조입니다"^] 을 참조하십시오.
 
 .단계
 System Manager 또는 ONTAP CLI를 사용하여 복제 관계를 생성할 수 있습니다.

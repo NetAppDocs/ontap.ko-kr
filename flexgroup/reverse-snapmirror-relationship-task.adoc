@@ -40,6 +40,9 @@ cluster1::> snapmirror release -destination-path vsd:dst -relationship-info-only
 ----
 cluster1::> snapmirror create -source-path vsd:dst -destination-path vss:src -type XDP -policy MirrorAllSnapshots
 ----
++
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 새 대상 FlexGroup 볼륨에서 소스 FlexGroup 'sapmirror resync-source-path svm_name:volume_name'을 다시 동기화합니다
 +
 [listing]
@@ -82,4 +85,5 @@ vsd:dst__0008 XDP  vss:src__0008  Snapmirrored
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 

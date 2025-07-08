@@ -219,3 +219,7 @@ SiteB::> igroup create -vserver <svm_name> -igroup <igroup_name> -initiator <hos
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
+

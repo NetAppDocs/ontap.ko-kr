@@ -27,6 +27,9 @@ summary: 기존 FlexGroup 볼륨 SnapMirror 관계를 전환하여 FlexGroup SVM
 복제 관계를 생성할 때 'napmirror create' 명령의 '-identity-preserve true' 옵션을 사용해야 합니다.
 
 ====
++
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'sapmirror show-destination-path dest_svm:-source-path src_svm:'의 관계가 끊어졌는지 확인합니다
 +
 [listing]

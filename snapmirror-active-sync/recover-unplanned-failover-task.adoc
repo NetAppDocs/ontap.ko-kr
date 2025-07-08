@@ -79,3 +79,8 @@ ONTAP 9.14.1 이하를 사용 중이고 SnapMirror 활성 동기화 관계에서
 `snapmirror resync -destination-path _destination_path_`
 . 관계 상태 및 상태 확인: '스냅샷 표시
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
+

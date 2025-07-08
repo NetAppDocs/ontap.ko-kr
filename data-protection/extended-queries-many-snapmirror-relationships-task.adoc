@@ -36,4 +36,7 @@ _extended query_를 사용하여 여러 SnapMirror 관계에 대해 한 번에 S
 ----
 vs1::> snapmirror initialize {-state Uninitialized} *
 ----
++
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

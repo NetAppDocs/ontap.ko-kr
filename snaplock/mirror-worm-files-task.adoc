@@ -148,8 +148,9 @@ SVM2::> snapmirror initialize -destination-path SVM2:dstvolB
 --
 ====
 .관련 정보
-https://docs.netapp.com/us-en/ontap-system-manager-classic/peering/index.html["클러스터 및 SVM 피어링"^]
+* https://docs.netapp.com/us-en/ontap-system-manager-classic/peering/index.html["클러스터 및 SVM 피어링"^]
+* https://docs.netapp.com/us-en/ontap-system-manager-classic/volume-disaster-prep/index.html["볼륨 재해 복구 준비"]
+* link:../data-protection/index.html["데이터 보호"]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
 
-https://docs.netapp.com/us-en/ontap-system-manager-classic/volume-disaster-prep/index.html["볼륨 재해 복구 준비"]
-
-link:../data-protection/index.html["데이터 보호"]

@@ -29,7 +29,7 @@ summary: 대상에서 데이터를 더 이상 제공할 필요가 없을 때 소
 +
 [NOTE]
 ====
-이 명령은 원래 소스 SVM 또는 원래 소스 클러스터에서 실행해야 합니다. 재동기화에는 기본 전송이 필요하지 않지만 시간이 오래 걸릴 수 있습니다. 사용량이 적은 시간에 재동기화를 실행할 수 있습니다. 소스와 대상에 공통 스냅샷이 없는 경우 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다.
+이 명령은 원래 소스 SVM 또는 원래 소스 클러스터에서 실행해야 합니다. 재동기화에는 기본 전송이 필요하지 않지만 시간이 오래 걸릴 수 있습니다. 사용량이 적은 시간에 재동기화를 실행할 수 있습니다. 소스와 대상에 공통 스냅샷이 없는 경우 명령이 실패합니다.  `snapmirror initialize`관계를 다시 초기화하는 데 사용합니다. 에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ====
 +
@@ -87,9 +87,6 @@ cluster_src::> snapmirror update -source-path svm_backup:volA_dst -destination-p
 `snapmirror quiesce -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 이 명령은 원래 소스 SVM 또는 원래 소스 클러스터에서 실행해야 합니다.
@@ -103,6 +100,9 @@ cluster_src::> snapmirror update -source-path svm_backup:volA_dst -destination-p
 ----
 cluster_src::> snapmirror quiesce -source-path svm_backup:volA_dst -destination-path svm1:volA
 ----
++
+에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 최종 업데이트가 완료되고 관계가 관계 상태에 "중지됨"으로 표시되면 원래 소스 SVM 또는 원래 소스 클러스터에서 다음 명령을 실행하여 역방향 관계를 분리합니다.
 +
 `snapmirror break -source-path _SVM:volume_ -destination-path _SVM:volume_`
@@ -129,9 +129,6 @@ cluster_scr::> snapmirror break -source-path svm_backup:volA_dst -destination-pa
 `snapmirror delete -source-path _SVM:volume_ -destination-path _SVM:volume_`
 
 +
-에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 이 명령은 원래 소스 SVM 또는 원래 소스 클러스터에서 실행해야 합니다.
@@ -145,6 +142,9 @@ cluster_scr::> snapmirror break -source-path svm_backup:volA_dst -destination-pa
 ----
 cluster_src::> snapmirror delete -source-path svm_backup:volA_dst -destination-path svm1:volA
 ----
++
+에 대한 자세한 내용은 `snapmirror delete` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 원래 대상 SVM 또는 원래 대상 클러스터에서 역방향 관계를 해제합니다.
 +
 `snapmirror release -source-path _SVM:volume_ -destination-path _SVM:volume_`
@@ -196,4 +196,6 @@ cluster_dst::> vserver start svm_backup
 
 
 .작업을 마친 후
-명령을 사용하여 `snapmirror show` SnapMirror 관계가 생성되었는지 확인하십시오. 에 대한 자세한 내용은 `snapmirror show` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+를 사용합니다 `snapmirror show` 명령을 사용하여 SnapMirror 관계가 생성되었는지 확인합니다.
+
+에 대한 자세한 내용은 `snapmirror show` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

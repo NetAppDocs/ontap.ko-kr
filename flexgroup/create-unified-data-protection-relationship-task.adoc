@@ -97,6 +97,9 @@ ONTAP 9.4 이하 버전에서는, 정책이 '스냅샷 생성' 명령으로 지�
 ----
 cluster2::> snapmirror create -source-path vss:srcFG -destination-path vsd:dstFG -type XDP -schedule Daily -policy MirrorAndVault
 ----
++
+에 대한 자세한 내용은 `snapmirror create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 클러스터에서 기본 전송인 'napmirror initialize-destination-path dest_svm:dest_flexgroup'을 수행하여 통합 데이터 보호 관계를 초기화합니다
 +
 [listing]
@@ -108,4 +111,5 @@ Operation is queued: snapmirror initialize of destination "vsd:dstFG".
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
 

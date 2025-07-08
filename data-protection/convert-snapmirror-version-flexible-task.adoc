@@ -120,9 +120,6 @@ snapmirror.10af643c-32d1-11e3-954b-123478563412_2147484682.2014-06-27_100026
 snapmirror quiesce -source-path <SVM:volume> -destination-path <SVM:volume>
 ----
 +
-에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다.
@@ -136,6 +133,9 @@ snapmirror quiesce -source-path <SVM:volume> -destination-path <SVM:volume>
 ----
 cluster_dst::> snapmirror quiesce -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 기존 DP 유형 관계 끊기:
 +
 [source, cli]
@@ -389,4 +389,6 @@ DP를 명시적으로 호출하지 않으면 이 옵션은 무시됩니다.
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
 

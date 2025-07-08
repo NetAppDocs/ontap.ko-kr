@@ -153,3 +153,9 @@ SiteA::> igroup initiator add-proximal-vserver -vserver vsA -initiator host2 -pr
 
 . 호스트 LUN 입출력 경로를 재검색하여 LUN에 대한 모든 경로를 복구합니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+

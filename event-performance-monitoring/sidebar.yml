@@ -22,7 +22,7 @@ entries:
 - section: performance-admin
 - title: Unified Manager로 클러스터 성능 모니터링
   url: "/task_cp_monitor_cluster_performance_um.html"
-- title: Cloud Insights로 클러스터 성능 모니터링
+- title: Data Infrastructure Insights를 사용하여 클러스터 성능 모니터링
   url: "/task_cp_monitor_cluster_performance_ci.html"
 - title: 로깅 감사
   entries:

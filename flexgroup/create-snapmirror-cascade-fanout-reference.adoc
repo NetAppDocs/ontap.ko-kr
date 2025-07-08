@@ -50,3 +50,7 @@ FlexGroup 볼륨에 대한 계단식 배열 및 팬아웃 관계를 만들 때 �
 * B에서 C FlexGroup 볼륨으로 복원 작업을 수행할 수 있습니다.
 * REST에서 지원하는 정책 유형의 모든 팬아웃 구성은 FlexGroup 팬아웃 구성의 REST API에도 지원됩니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-protect.html["SnapMirror 보호"^]
+

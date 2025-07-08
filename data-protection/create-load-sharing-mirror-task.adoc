@@ -76,9 +76,6 @@ cluster_src::> snapmirror create -source-path svm1:svm1_root -destination-path s
 snapmirror initialize-ls-set -source-path <SVM:volume>
 ----
 +
-에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예에서는 루트 볼륨 'svm1_root'에 대한 로드 공유 미러를 초기화합니다.
 
 +
@@ -86,4 +83,7 @@ snapmirror initialize-ls-set -source-path <SVM:volume>
 ----
 cluster_src::> snapmirror initialize-ls-set -source-path svm1:svm1_root
 ----
++
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

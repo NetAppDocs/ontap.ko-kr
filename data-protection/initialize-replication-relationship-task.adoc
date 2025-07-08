@@ -29,9 +29,6 @@ ONTAP 9.5부터 SnapMirror 동기식 관계가 지원됩니다.
 `snapmirror initialize -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ...`
 
 +
-에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다.
@@ -45,4 +42,7 @@ ONTAP 9.5부터 SnapMirror 동기식 관계가 지원됩니다.
 ----
 cluster_dst::> snapmirror initialize -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

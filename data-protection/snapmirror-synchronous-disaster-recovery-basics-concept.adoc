@@ -227,4 +227,5 @@ SnapMirror 동기식 관계의 경우 시스템이  `InSync` `OutofSync`고정�
 .관련 정보
 * https://www.netapp.com/pdf.html?item=/media/17174-tr4733pdf.pdf["NetApp 기술 보고서 4733: SnapMirror 동기식 구성 및 모범 사례"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["SnapMirror가 깨졌습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
 

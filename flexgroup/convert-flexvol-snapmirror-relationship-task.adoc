@@ -170,3 +170,7 @@ cluster2::> snapmirror resync -destination-path vs2:dst_xdp
 
 .작업을 마친 후
 소스 FlexGroup 볼륨을 확장하여 더 많은 구성 요소까지 포함할 때는 대상 볼륨도 확장되어야 합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+

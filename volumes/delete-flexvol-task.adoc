@@ -44,8 +44,8 @@ summary: ONTAP CLI를 사용하여 더 이상 필요하지 않은 FlexVol volume
 연관된 할당량 정책 및 qtree와 함께 볼륨이 삭제됩니다.
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/volume-unmount.html["볼륨 마운트 해제"]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-unmount.html["볼륨 마운트 해제"]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-offline.html["볼륨이 오프라인 상태입니다"]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-delete.html["볼륨 삭제"]
 

@@ -45,9 +45,6 @@ System Manager 또는 ONTAP CLI를 사용하여 대상 볼륨을 쓰기 가능�
 snapmirror quiesce -source-path <SVM:volume|cluster://SVM/volume> -destination-path <SVM:volume|cluster://SVM/volume>
 ----
 +
-에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예에서는 svm1의 소스 볼륨 VolA와 sm_backup의 대상 볼륨 VolA_dst 간의 예약된 전송을 중지합니다.
 
 +
@@ -55,6 +52,9 @@ snapmirror quiesce -source-path <SVM:volume|cluster://SVM/volume> -destination-p
 ----
 cluster_dst::> snapmirror quiesce -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror quiesce` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 목적지로의 진행 중인 전송을 중지합니다.
 +
 [source, cli]
