@@ -2,7 +2,7 @@
 permalink: fabricpool/object-tagging-user-created-custom-tags-task.html 
 sidebar: sidebar 
 keywords: object, tagging, user-created, custom tags, fabricpool, fabric pool, sort, fabricpool sorting, fabricpool data 
-summary: ONTAP 9.8부터 FabricPool는 사용자가 만든 사용자 지정 태그를 사용하여 개체 태그 지정을 지원하므로, 개체를 쉽게 분류하고 정렬할 수 있습니다. admin 권한 수준을 가진 사용자는 새 개체 태그를 만들고 기존 태그를 수정, 삭제 및 볼 수 있습니다. 
+summary: ONTAP 9.8부터 FabricPool는 사용자가 만든 사용자 지정 태그를 사용하여 개체 태그 지정을 지원하므로, 개체를 쉽게 분류하고 정렬할 수 있습니다. 
 ---
 = 사용자가 생성한 맞춤형 태그로 ONTAP FabricPool 볼륨 관리
 :allow-uri-read: 
@@ -98,12 +98,12 @@ volume modify [ -vserver <vserver name> ] -volume <volume_name> -tiering-object-
 <key3=value3>,<key4=value4> ]
 ----
 +
-다음 예제에서는 기존 태그 형식 =abc 의 이름을 type=xyz 로 변경합니다.
+다음 예제에서는 기존 태그의 이름을 변경합니다.  `type=abc` 에게  `type=xyz` .
 
 +
 [listing]
 ----
-vol create -volume fp_volume1 -vserver vs0 -tiering-object-tags project=fabricpool,type=xyz,content=data
+vol modify -volume fp_volume1 -vserver vs0 -tiering-object-tags project=fabricpool,type=xyz,content=data
 ----
 
 

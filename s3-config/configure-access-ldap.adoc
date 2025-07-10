@@ -105,14 +105,14 @@ Base64로 인코딩된 자격 증명은 쉽게 디코딩됩니다. HTTPS를 사�
 
 [listing]
 ----
-$curl -siku <user>:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user>,"<key_time_to_live>":"PT6H3M"}'
+$curl -siku <user>:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user>,"key_time_to_live":"PT6H3M"}
 ----
 
 NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정합니다. 사용자가 자신의 키를 생성하도록 허용하려면 해당 역할에 HTTP 권한을 추가하여 curl을 사용해야 합니다. 이 권한은 S3 API 권한에 추가됩니다.
 
 
 
-== Active Directory 또는 CIFS 서버에 대한 S3 액세스를 구성합니다
+== Active Directory 또는 SMB 서버에 대한 S3 액세스 구성
 
 버킷 정책 문에 지정된 nasgroup 또는 nasgroup에 속한 사용자에게 UID 및 GID가 설정되지 않은 경우 이러한 특성을 찾을 수 없으면 조회가 실패합니다. Active Directory는 UID가 아닌 SID를 사용합니다. SID 항목을 UID에 매핑할 수 없는 경우 필요한 데이터를 ONTAP로 가져와야 합니다.
 
@@ -120,7 +120,7 @@ NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정
 
 또는 를 사용하여 link:../authentication/enable-ad-users-groups-access-cluster-svm-task.html["SVM CIFS 생성"]Active Directory 도메인에 SMB 서버를 생성합니다.
 
-조회 실패를 방지하려면 NetApp UPN 형식의 리소스 인증에 신뢰할 수 있는 도메인을 사용하는 것이 좋습니다. `nasgroup/group@trusted_domain.com`
+네임 서버와 개체 저장소에 서로 다른 도메인 이름을 사용하는 경우 조회 실패가 발생할 수 있습니다. 조회 실패를 방지하기 위해 NetApp UPN 형식의 리소스 권한 부여에 신뢰할 수 있는 도메인을 사용할 것을 권장합니다.  `nasgroup/group@trusted_domain.com` 신뢰할 수 있는 도메인은 SMB 서버의 신뢰할 수 있는 도메인 목록에 추가된 도메인입니다. 방법을 알아보세요. link:../smb-admin/add-remove-replace-trusted-domains-preferred-lists-task.html["선호하는 신뢰할 수 있는 도메인을 추가, 제거 및 수정합니다."] SMB 서버 목록에서.
 
 
 
@@ -130,7 +130,7 @@ NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정
 
 [listing]
 ----
-$curl -siku FQDN\\user:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user@fqdn>,"<key_time_to_live>":"PT6H3M"}'
+$curl -siku FQDN\\user:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user@fqdn>,"key_time_to_live":"PT6H3M"}
 ----
 
 NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정합니다. 사용자가 자신의 키를 생성하도록 허용하려면 해당 역할에 HTTP 권한을 추가하여 curl을 사용해야 합니다. 이 권한은 S3 API 권한에 추가됩니다.
@@ -143,7 +143,7 @@ NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정
 
 [listing]
 ----
-$curl -siku FQDN\\user:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user[@fqdn]>,"<key_time_to_live>":"PT6H3M"}'
+$curl -siku FQDN\\user:<user_password> -X POST https://<LIF_IP_Address>/api/protocols/s3/services/<SVM_UUID>/users -d {"comment":"<S3_user_name>", "name":<user[@fqdn]>,"key_time_to_live":"PT6H3M"}
 ----
 
 NOTE: API를 SVM의 데이터 LIF가 아니라 클러스터 관리 LIF로 지정합니다. 사용자가 자신의 키를 생성하도록 허용하려면 해당 역할에 HTTP 권한을 추가하여 curl을 사용해야 합니다. 이 권한은 S3 API 권한에 추가됩니다. 신뢰할 수 있는 도메인이 없는 경우 사용자 이름에 선택적 도메인 값(@FQDN)만 추가하면 됩니다.

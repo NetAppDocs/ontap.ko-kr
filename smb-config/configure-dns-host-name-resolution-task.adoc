@@ -19,7 +19,7 @@ summary: vserver services name-service dns 명령을 사용하여 SVM에서 DNS�
 단일 장애 지점을 방지하려면 둘 이상의 DNS 서버를 구성해야 합니다.  `vserver services name-service dns create`DNS 서버 이름을 하나만 입력하면 명령이 경고를 표시합니다. 에 대한 자세한 내용은 `vserver services name-service dns create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-name-service-dns-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .이 작업에 대해
-네트워크 관리 가이드 _ 에는 SVM에서 동적 DNS를 구성하는 방법에 대한 정보가 포함되어 있습니다.
+에 대해 자세히 link:../networking/configure_dynamic_dns_services.html["SVM에서 동적 DNS 구성"]알아보십시오.
 
 .단계
 . SVM에서 DNS를 활성화합니다. 'vserver services name-service dns create-vserver vserver_name-domain domain_name-name-servers ip_address-state enabled'
@@ -37,7 +37,7 @@ vserver services name-service dns create -vserver vs1.example.com -domains examp
 ONTAP 9.2부터 'vserver services name-service dns create' 명령은 자동 구성 검증을 수행하고 ONTAP가 이름 서버에 연결할 수 없는 경우 오류 메시지를 보고합니다.
 
 ====
-. 'vserver services name-service dns show' 명령을 사용하여 DNS 도메인 구성을 표시합니다. ``이
+. 'vserver services name-service dns show' 명령을 사용하여 DNS 도메인 구성을 표시합니다.
 +
 다음 명령을 실행하면 클러스터의 모든 SVM에 대한 DNS 구성이 표시됩니다.
 

@@ -16,9 +16,6 @@ summary: 클러스터 설정 중에 IPv6 네트워크가 활성화되지 않습�
 .단계
 . IPv6 사용:'네트워크 옵션 IPv6 수정 사용 참'을 선택합니다
 +
-클러스터에서 IPv6 사용 및 IPv6 LIF 구성에 대한 자세한 내용은 _Network Management Guide_를 참조하십시오.
-
-+
 IPv6이 활성화되었습니다. SMB 액세스를 위한 IPv6 데이터 LIF를 구성할 수 있습니다.
 
 
@@ -26,5 +23,6 @@ IPv6이 활성화되었습니다. SMB 액세스를 위한 IPv6 데이터 LIF를 
 .관련 정보
 * xref:monitor-display-ipv6-sessions-task.adoc[IPv6 세션에 대한 정보를 모니터링하고 표시합니다.]
 * link:../networking/networking_reference.html["System Manager를 사용하여 네트워크를 시각화합니다"]
+* link:https://pubs.lenovo.com/network_management_guide/2EFD6EDE-1846-41F1-9C63-723BA6972BC4_["클러스터에서 IPv6 활성화"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/network-options-ipv6-modify.html["네트워크 옵션 IPv6 수정"^]
 
