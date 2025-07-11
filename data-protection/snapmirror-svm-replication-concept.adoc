@@ -33,7 +33,7 @@ ONTAP 9.9.1 이상을 사용하여 미러 소산 정책을 사용하여 SVM 재�
 ** 사용자 및 시스템 정의 스냅샷 정책과의 볼륨 연결은 대상에 복제되지 않습니다. SVM.
 
 
-* ONTAP 9.2,_SnapMirror 통합 복제(_에서 시작)부터 DR 및 장기 보존에 대해 대상이 구성됩니다.
+* _SnapMirror 통합 복제_는 대상이 DR과 장기 보존을 위해 구성됩니다.
 
 
 SnapMirror 통합 복제에 대한 자세한 내용은 을 참조하십시오 link:snapmirror-unified-replication-concept.html["SnapMirror 통합 복제 기본 사항"].
@@ -155,7 +155,7 @@ SVM 복제 관계의 내용은 다음 필드의 상호 작용에 의해 결정�
 관계 유형
  a| 
 * SnapMirror 재해 복구
-* ONTAP 9.2부터 SnapMirror 통합 복제
+* SnapMirror 통합 복제
 
 
 

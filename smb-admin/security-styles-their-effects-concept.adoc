@@ -52,7 +52,7 @@ FlexVol 볼륨은 UNIX, NTFS 및 혼합 보안 스타일을 지원합니다. 보
 
 통합 보안 스타일은 ONTAP 9.5 이상 릴리스에서 더 이상 지원되지 않는 무한 볼륨에서만 사용할 수 있습니다. 자세한 내용은 을 참조하십시오 xref:../flexgroup/index.html[FlexGroup 볼륨 관리 개요].
 
-ONTAP 9.2부터 `show-effective-permissions` 명령의 매개 변수를 `vserver security file-directory` 사용하면 지정된 파일 또는 폴더 경로에 있는 Windows 또는 UNIX 사용자에게 부여된 유효 사용 권한을 표시할 수 있습니다. 또한 선택적 매개 변수를 `-share-name` 사용하면 효과적인 공유 권한을 표시할 수 있습니다. 에 대한 자세한 내용은 `vserver security file-directory show-effective-permissions` link:https://docs.netapp.com/us-en/ontap-cli/vserver-security-file-directory-show-effective-permissions.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+그만큼  `show-effective-permissions` 매개변수를 사용하여  `vserver security file-directory` 명령을 사용하면 지정된 파일이나 폴더 경로에 대해 Windows 또는 UNIX 사용자에게 부여된 유효 권한을 표시할 수 있습니다. 또한 선택적 매개 변수를 `-share-name` 사용하면 효과적인 공유 권한을 표시할 수 있습니다. 에 대한 자세한 내용은 `vserver security file-directory show-effective-permissions` link:https://docs.netapp.com/us-en/ontap-cli/vserver-security-file-directory-show-effective-permissions.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 [NOTE]
 ====

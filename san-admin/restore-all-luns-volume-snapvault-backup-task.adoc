@@ -1,7 +1,7 @@
 ---
 permalink: san-admin/restore-all-luns-volume-snapvault-backup-task.html 
 sidebar: sidebar 
-keywords: ontap 9.2, restore, luns, in a volume, snapvault, backup 
+keywords: restore, luns, in a volume, snapvault, backup 
 summary: SnapVault 백업에서 볼륨에 있는 하나 이상의 LUN을 복원해야 하는 경우 전체 볼륨을 복원할 수 있습니다. 볼륨을 복원하면 볼륨의 모든 LUN에 영향을 줍니다. 
 ---
 = ONTAP SnapVault 백업에서 볼륨의 모든 LUN을 복원합니다
@@ -131,3 +131,7 @@ vserverB  /vol/dstvolB/lun_C  online  unmapped windows  300.0GB
 6 entries were displayed.
 ----
 SnapVault 보조 볼륨에서 볼륨을 복구한 후에는 소스 볼륨에 LUN_D가 더 이상 포함되지 않습니다 복구 후 소스 볼륨의 LUN은 여전히 매핑되므로 LUN을 다시 매핑할 필요가 없습니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["SnapMirror 복원"^]
+

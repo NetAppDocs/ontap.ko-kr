@@ -117,4 +117,5 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
 

@@ -72,7 +72,7 @@ https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["NetApp 기술 �
 
 == 단일 노드 클러스터에 대한 ONTAP 업그레이드
 
-ONTAP 9.2부터는 ONTAP CLI를 사용하여 단일 노드 클러스터에 대한 자동 업데이트를 수행할 수 있습니다. 단일 노드 클러스터에는 중복성이 없으므로 업데이트가 항상 중단될 수 있습니다. System Manager를 사용하여 운영 중단 업그레이드를 수행할 수 없습니다.
+ONTAP CLI를 사용하여 단일 노드 클러스터의 자동 업데이트를 수행할 수 있습니다. 단일 노드 클러스터는 중복성이 부족하여 업데이트가 항상 중단을 초래합니다. System Manager를 사용하여 중단을 초래하는 업그레이드를 수행할 수 없습니다.
 
 .시작하기 전에
 업그레이드를 완료해야 합니다 link:../upgrade/prepare.html["준비"] 단계.

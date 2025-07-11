@@ -2,7 +2,7 @@
 permalink: nfs-admin/verify-name-service-connections-task.html 
 sidebar: sidebar 
 keywords: verify, name, service, connection, dns, ldap, checker, check, configuration, configure 
-summary: ONTAP 9.2부터는 DNS 및 LDAP 네임 서버가 ONTAP에 연결되어 있는지 확인할 수 있습니다. 이러한 명령은 admin 권한 수준에서 사용할 수 있습니다. 
+summary: DNS 및 LDAP 이름 서버를 확인하여 ONTAP 에 연결되어 있는지 확인할 수 있습니다. 이러한 명령은 admin 권한 수준에서 사용할 수 있습니다. 
 ---
 = ONTAP NAS SVM에 대한 이름 서비스 연결 확인
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP 9.2부터는 DNS 및 LDAP 네임 서버가 ONTAP에 연결되어 
 
 
 [role="lead"]
-ONTAP 9.2부터는 DNS 및 LDAP 네임 서버가 ONTAP에 연결되어 있는지 확인할 수 있습니다. 이러한 명령은 admin 권한 수준에서 사용할 수 있습니다.
+DNS 및 LDAP(Lightweight Directory Access Protocol) 이름 서버를 확인하여 ONTAP 에 연결되어 있는지 확인할 수 있습니다. 이러한 명령은 admin 권한 수준에서 사용할 수 있습니다.
 
 .이 작업에 대해
 이름 서비스 구성 검사기를 사용하여 필요에 따라 유효한 DNS 또는 LDAP 네임 서비스 구성을 확인할 수 있습니다. 이러한 검증 검사는 명령줄 또는 System Manager에서 시작할 수 있습니다.

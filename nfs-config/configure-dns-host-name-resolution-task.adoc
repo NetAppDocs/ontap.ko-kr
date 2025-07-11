@@ -37,7 +37,7 @@ vserver services name-service dns create -vserver vs1.example.com -domains examp
 +
 [NOTE]
 ====
-ONTAP 9.2부터 'vserver services name-service dns create' 명령은 자동 구성 검증을 수행하고 ONTAP가 이름 서버에 연결할 수 없는 경우 오류 메시지를 보고합니다.
+를 클릭합니다 `vserver services name-service dns create` Command는 자동 구성 유효성 검사를 수행하고 ONTAP에서 이름 서버에 연결할 수 없는 경우 오류 메시지를 보고합니다.
 
 ====
 . 'vserver services name-service dns show' 명령을 사용하여 DNS 도메인 구성을 표시합니다.
@@ -71,9 +71,6 @@ vserver services name-service dns show -vserver vs1.example.com
       Maximum Attempts: 1
 ----
 . 'vserver services name-service dns check' 명령어를 이용하여 이름 서버의 상태를 확인한다.
-+
-ONTAP 9.2부터 vserver services name-service dns check 명령을 사용할 수 있다.
-
 +
 [listing]
 ----

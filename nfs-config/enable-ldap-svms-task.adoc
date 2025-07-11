@@ -26,7 +26,7 @@ SVM에서 LDAP를 활성화하려면 "vserver services name-service ldap create"
 +
 [NOTE]
 ====
-ONTAP 9.2부터 'vserver services name-service ldap create' 명령은 자동 구성 검증을 수행하고 ONTAP가 이름 서버에 연결할 수 없는 경우 오류 메시지를 보고합니다.
+그만큼  `vserver services name-service ldap create` 명령은 자동 구성 검증을 수행하고 ONTAP 이름 서버에 접속할 수 없는 경우 오류 메시지를 보고합니다.
 
 ====
 +
@@ -51,7 +51,4 @@ cluster1::> vserver services name-service ldap check -vserver vs1
 | LDAP Status: up                                             |
 | LDAP Status Details: Successfully connected to LDAP server "10.11.12.13".                                              |
 ----
-+
-이름 서비스 확인 명령은 ONTAP 9.2부터 사용할 수 있습니다.
-
 

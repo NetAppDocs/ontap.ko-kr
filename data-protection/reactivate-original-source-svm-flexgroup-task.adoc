@@ -268,4 +268,5 @@ cluster_dst::> snapmirror resync -source-path svm1: -destination-path svm_backup
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
 

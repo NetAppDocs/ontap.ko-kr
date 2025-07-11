@@ -196,4 +196,5 @@ NOTE: 관계를 다시 생성하기 전에 보조 사이트의 정합성 보장 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-modify.html["SnapMirror 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
 

@@ -19,12 +19,6 @@ FabricPool 구성을 최적화하려면 FabricPool 사용에 대한 몇 가지 �
 
 
 
-=== ONTAP 9.2
-
-ONTAP 9.2 이상의 FabricPool를 실행 중이어야 합니다.
-
-
-
 === ONTAP 9.4
 
 * 다음 FabricPool 기능을 사용하려면 ONTAP 9.4 이상 릴리스를 실행해야 합니다.

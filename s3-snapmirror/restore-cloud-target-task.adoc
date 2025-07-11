@@ -64,6 +64,9 @@ summary: 소스 버킷의 데이터가 손실되거나 손상된 경우 대상 �
 다음 예에서는 대상 버킷을 기존 버킷으로 복원합니다.
 `clusterA::> snapmirror restore -source-path sgws.store:/objstore -destination-path vs0:/bucket/test-bucket`
 
++
+에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

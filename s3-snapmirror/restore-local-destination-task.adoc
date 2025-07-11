@@ -74,12 +74,16 @@ ONTAP 9.14.1부터 잠긴 버킷을 백업하고 필요에 따라 복원할 수 
 --
 . 오브젝트를 새 버킷으로 복원하는 경우 새 버킷을 생성합니다. 자세한 내용은 을 link:create-cloud-backup-new-bucket-task.html["새 ONTAP S3 버킷에 대한 클라우드 백업 관계를 생성한다"]참조하십시오.
 . 대상 버킷에 대한 복원 작업을 시작합니다. '스냅미러 복구 - 소스 - path_svm_name_:/bucket/_bucket_name_ - destination-path_svm_name_:/bucket/_bucket_name_'
-
-
++
 .예
 [listing]
 ----
 clusterA::> snapmirror restore -source-path vs0:/bucket/test-bucket -destination-path vs1:/bucket/test-bucket-mirror
 ----
++
+에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
 --
 ====

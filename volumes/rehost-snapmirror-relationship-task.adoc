@@ -87,9 +87,9 @@ DP 볼륨을 호스팅하는 SVM에서 'napmirror create' 명령을 실행해야
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["SnapMirror를 참조하십시오"^]
-* link:https://docs.netapp.com/us-en/ontap-cli/volume-unmount.html["볼륨 마운트 해제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/set.html["설정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["SnapMirror를 참조하십시오"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-rehost.html["볼륨 재호스팅"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-unmount.html["볼륨 마운트 해제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-create.html["SVM 피어 생성"^]
 

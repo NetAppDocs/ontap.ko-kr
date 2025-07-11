@@ -14,20 +14,23 @@ summary: ONTAP 9.8부터 FlexGroup SnapMirror 볼트 또는 UDP 대상에서 단
 ONTAP 9.8부터 FlexGroup SnapMirror 볼트 또는 UDP 대상에서 단일 파일을 복원할 수 있습니다.
 
 .이 작업에 대해
-* 모든 지오메트리의 FlexGroup 볼륨에서 모든 지오메트리의 FlexGroup 볼륨으로 복원할 수 있습니다
-* 복구 작업당 하나의 파일만 지원됩니다
-* 원래 소스 FlexGroup 볼륨이나 새 FlexGroup 볼륨으로 복원할 수 있습니다
+* 모든 기하 구조의 FlexGroup 볼륨에서 모든 기하 구조의 FlexGroup 볼륨으로 복원할 수 있습니다.
+* 복원 작업당 하나의 파일만 지원됩니다.
+* 원래 소스 FlexGroup 볼륨이나 새로운 FlexGroup 볼륨으로 복원할 수 있습니다.
 * 원격 펜싱된 파일 조회는 지원되지 않습니다.
 +
 소스 파일이 펜싱된 경우 단일 파일 복구가 실패합니다.
 
-* 중단된 단일 파일 복원을 다시 시작하거나 정리할 수 있습니다
-* '스냅샷 복구' 명령의 '정리 실패' 옵션을 사용하여 실패한 단일 파일 복원 전송을 정리해야 합니다
-* FlexGroup 볼륨 확장은 FlexGroup 단일 파일 복원이 진행 중이거나 중단된 상태일 때 지원됩니다
+* 중단된 단일 파일 복원을 다시 시작하거나 정리할 수 있습니다.
+* 실패한 단일 파일 복원 전송은 다음을 사용하여 정리해야 합니다.  `clean-up-failure` 옵션  `snapmirror restore` 명령.
++
+에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+* FlexGroup 단일 파일 복원이 진행 중이거나 중단된 상태일 때 FlexGroup 볼륨 확장이 지원됩니다.
 
 
 .단계
-. FlexGroup 볼륨에서 파일 복원: ''스냅샷 미러 복원 - 대상 - 경로 destination_path - source-path source_path - file-list/F1-throttle throttle-source-snapshot'
+. FlexGroup 볼륨에서 파일 복원: `snapmirror restore -destination-path destination_path -source-path source_path -file-list /f1 -throttle throttle -source-snapshot snapshot`
 +
 다음은 FlexGroup 볼륨 단일 파일 복원 작업의 예입니다.
 

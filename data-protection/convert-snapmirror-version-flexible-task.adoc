@@ -203,9 +203,6 @@ cluster_dst::> snapmirror delete -destination-path svm_backup:volA_dst
 snapmirror release -destination-path <SVM:volume> -relationship-info-only true
 ----
 +
-에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예에서는 SVM 재해 복구 관계를 해제합니다.
 
 +
@@ -213,6 +210,9 @@ snapmirror release -destination-path <SVM:volume> -relationship-info-only true
 ----
 cluster_src::> snapmirror release -destination-path svm_backup:volA_dst -relationship-info-only true
 ----
++
+에 대한 자세한 내용은 `snapmirror release` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'napmirror show' 명령에서 보존한 출력을 사용하여 새로운 XDP 유형 관계를 생성할 수 있습니다.
 +
 [source, cli]
@@ -391,4 +391,5 @@ DP를 명시적으로 호출하지 않으면 이 옵션은 무시됩니다.
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
 

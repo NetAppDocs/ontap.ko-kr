@@ -2,7 +2,7 @@
 permalink: disks-aggregates/root-data-partitioning-management-concept.html 
 sidebar: sidebar 
 keywords: additional, root-data, partitioning, management, options 
-summary: ONTAP 9.2부터는 루트 데이터 파티셔닝에 구성된 디스크에 대한 추가 관리 기능을 제공하는 부팅 메뉴에서 새로운 루트 데이터 파티셔닝 옵션을 사용할 수 있습니다. 
+summary: 부트 메뉴에서 루트 데이터 분할 옵션을 사용할 수 있으며, 이 옵션은 루트 데이터 분할을 위해 구성된 디스크에 대한 추가 관리 기능을 제공합니다. 
 ---
 = 추가적인 ONTAP 루트 데이터 파티셔닝 관리 옵션
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP 9.2부터는 루트 데이터 파티셔닝에 구성된 디스크
 
 
 [role="lead"]
-ONTAP 9.2부터는 루트 데이터 파티셔닝에 구성된 디스크에 대한 추가 관리 기능을 제공하는 부팅 메뉴에서 새로운 루트 데이터 파티셔닝 옵션을 사용할 수 있습니다.
+부트 메뉴에서 루트 데이터 분할 옵션을 사용할 수 있으며, 이 옵션은 루트 데이터 분할을 위해 구성된 디스크에 대한 추가 관리 기능을 제공합니다.
 
 부팅 메뉴 옵션 9에서 다음 관리 기능을 사용할 수 있습니다.
 

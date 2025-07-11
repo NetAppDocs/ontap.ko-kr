@@ -22,3 +22,7 @@ summary: 스냅샷을 삭제할 수 없으면 SnapMirror 릴리즈 작업이 실
 `snapshot delete -volume <volume_name> -snapshot <snapshot_name> -ignore-owners true -force true`
 
 'napmirror release' 명령을 재시도합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
+

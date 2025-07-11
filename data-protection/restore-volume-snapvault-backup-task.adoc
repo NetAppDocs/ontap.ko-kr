@@ -62,9 +62,6 @@ System Manager 또는 ONTAP CLI를 사용하여 볼륨의 콘텐츠를 복원할
 volume snapshot show -vserver <SVM> -volume <volume>
 ----
 +
-에 대한 자세한 내용은 `volume snapshot show` link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예는 대상의 스냅샷을 보여 `vserverB:secondary1` 줍니다.
 
 +
@@ -88,9 +85,6 @@ vserverB    secondary1  hourly.2013-01-25_0005  valid   224KB     0%    0%
 . SnapMirror 대상 볼륨에 있는 스냅샷에서 볼륨의 내용 복원:
 +
 `snapmirror restore -source-path <SVM:volume>|<cluster://SVM/volume> -destination-path <SVM:volume>|<cluster://SVM/volume> -source-snapshot <snapshot>`
-
-+
-에 대한 자세한 내용은 `snapmirror restore` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 
@@ -126,3 +120,7 @@ Do you want to continue? {y|n}: y
 
 | System Manager Classic(ONTAP 9.7 이하에서 사용 가능) | link:https://docs.netapp.com/us-en/ontap-system-manager-classic/volume-restore-snapvault/index.html["SnapVault를 사용한 볼륨 복원 개요"^] 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["SnapMirror 복원"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-show.html["볼륨 스냅샷 표시"^]
+

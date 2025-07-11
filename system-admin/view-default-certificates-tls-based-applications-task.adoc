@@ -2,7 +2,7 @@
 permalink: system-admin/view-default-certificates-tls-based-applications-task.html 
 sidebar: sidebar 
 keywords: view, default, certificates, tls, applications, transport 
-summary: 'ONTAP 9.2부터 ONTAP는 TLS(전송 계층 보안)를 사용하는 ONTAP 응용 프로그램에 대해 신뢰할 수 있는 루트 인증서 기본 집합을 제공합니다.' 
+summary: 'ONTAP TLS(전송 계층 보안)를 사용하여 ONTAP 애플리케이션에 대한 기본 신뢰할 수 있는 루트 인증서 세트를 제공합니다.' 
 ---
 = TLS 기반 응용 프로그램에 대한 기본 인증서를 봅니다
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'ONTAP 9.2부터 ONTAP는 TLS(전송 계층 보안)를 사용하는 ONT
 
 
 [role="lead"]
-ONTAP 9.2부터 ONTAP는 TLS(전송 계층 보안)를 사용하는 ONTAP 응용 프로그램에 대해 신뢰할 수 있는 루트 인증서 기본 집합을 제공합니다.
+ONTAP TLS(전송 계층 보안)를 사용하여 ONTAP 애플리케이션에 대한 기본 신뢰할 수 있는 루트 인증서 세트를 제공합니다.
 
 .시작하기 전에
-기본 인증서는 생성 중 또는 ONTAP 9.2로 업그레이드 도중에만 관리 SVM에 설치됩니다.
+기본 인증서는 관리자 SVM을 생성하는 동안 또는 업그레이드하는 동안에만 설치됩니다.
 
 .이 작업에 대해
 현재 클라이언트 역할을 하고 인증서 검증이 필요한 애플리케이션은 AutoSupport, EMS, LDAP, 감사 로깅, FabricPool입니다. 및 KMIP

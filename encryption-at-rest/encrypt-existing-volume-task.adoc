@@ -14,15 +14,13 @@ summary: volume move start 명령을 사용하거나 volume encryption conversio
 둘 중 하나를 사용할 수 있습니다 `volume move start` 또는 을 누릅니다 `volume encryption conversion start` 기존 볼륨에서 암호화를 활성화하는 명령입니다.
 
 .이 작업에 대해
-* ONTAP 9.3부터 을 사용할 수 있습니다 `volume encryption conversion start` 볼륨을 다른 위치로 이동할 필요 없이 기존 볼륨을 "현재 위치"로 암호화할 수 있는 명령입니다. 또는 를 사용할 수 있습니다 `volume move start` 명령.
-* ONTAP 9.2 이하의 경우 만 사용할 수 있습니다 `volume move start` 기존 볼륨을 이동하여 암호화를 활성화하는 명령입니다.
-
+당신은 사용할 수 있습니다  `volume encryption conversion start` 볼륨을 다른 위치로 이동하지 않고도 기존 볼륨의 암호화를 "현재 위치"에서 활성화하는 명령입니다. 또는 다음을 사용할 수 있습니다.  `volume move start` 명령.
 
 
 
 == 볼륨 암호화 변환 시작 명령을 사용하여 기존 볼륨에서 암호화를 활성화합니다
 
-ONTAP 9.3부터 볼륨을 다른 위치로 이동하지 않고도 "볼륨 암호화 변환 시작" 명령을 사용하여 기존 볼륨을 "제자리에" 암호화할 수 있습니다.
+당신은 사용할 수 있습니다  `volume encryption conversion start` 볼륨을 다른 위치로 옮기지 않고도 기존 볼륨의 암호화를 "그대로" 활성화하는 명령입니다.
 
 변환 작업을 시작한 후에는 작업을 완료해야 합니다. 작업 중에 성능 문제가 발생하면 를 실행할 수 있습니다 `volume encryption conversion pause` 명령을 사용하여 작업을 일시 중지하고, 를 클릭합니다 `volume encryption conversion resume` 명령을 사용하여 작업을 재개합니다.
 
@@ -95,7 +93,7 @@ KMIP 서버를 사용하여 노드의 암호화 키를 저장하는 경우, ONTA
 
 == 볼륨 이동 시작 명령을 사용하여 기존 볼륨에서 암호화를 활성화합니다
 
-'volume move start' 명령을 사용하여 기존 볼륨을 이동하여 암호화를 활성화할 수 있습니다. ONTAP 9.2 이하에서는 볼륨 이동 시작을 사용해야 합니다. 동일한 애그리게이트 또는 다른 애그리게이트를 사용할 수 있습니다.
+명령을 사용하여 기존 볼륨을 이동하여 암호화를 활성화할 수 `volume move start` 있습니다. 동일한 애그리게이트 또는 다른 애그리게이트를 사용할 수 있습니다.
 
 .이 작업에 대해
 * ONTAP 9.8부터 볼륨 이동 시작을 사용하여 SnapLock 또는 FlexGroup 볼륨에서 암호화를 활성화할 수 있습니다.
