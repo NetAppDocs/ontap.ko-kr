@@ -30,6 +30,10 @@ FabricPool PUT 작업은 리소스를 다른 애플리케이션과 경쟁하지 
 +
 [source, cli]
 ----
-storage aggregate object-store put-rate-limit modify -node <name> -default <true|false> -putrate-bytes-limit <integer>[KB|MB|GB|TB|PB]
+storage aggregate object-store put-rate-limit modify -node <name> -default <true|false> -put-rate-bytes-limit <integer>[KB|MB|GB|TB|PB]
 ----
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-put-rate-limit-modify.html["스토리지 애그리게이트 오브젝트 저장소 금률 제한 수정"^]
 

@@ -1,8 +1,8 @@
 ---
 permalink: revert/task_download_and_install_ontap_software_image.html 
 sidebar: sidebar 
-keywords: ontap, software, image, download, downloading, install, installing 
-summary: 먼저 ONTAP 소프트웨어를 다운로드한 다음 설치할 수 있습니다. 
+keywords: ontap, software, revert, image, download, downloading, install, installing 
+summary: 현재 ONTAP 소프트웨어를 되돌리기 전에 먼저 소프트웨어를 다운로드한 다음 설치해야 합니다. 
 ---
 = ONTAP 소프트웨어 이미지를 다운로드하고 설치합니다
 :allow-uri-read: 
@@ -24,7 +24,7 @@ NOTE: ONTAP 9.5 이상에서 NetApp 볼륨 암호화를 사용하여 시스템�
 
 .단계
 . link:http://mysupport.netapp.com/NOW/cgi-bin/software["소프트웨어 다운로드"^]NetApp Support 사이트 영역에서 대상 ONTAP 소프트웨어를 찾습니다.
-. NetApp 지원 사이트에서 소프트웨어 이미지(예: 97_q_image.tgz)를 복사합니다
+. 소프트웨어 이미지를 복사합니다(예:  `97_q_image.tgz` ) NetApp 지원 사이트에서
 +
 이미지를 제공할 HTTP 서버 또는 FTP 서버의 디렉토리 또는 로컬 폴더로 복사할 수 있습니다.
 
@@ -53,7 +53,7 @@ set -privilege advanced
 +
 [source, cli]
 ----
-system node image update -node * -package location -replace-package true -setdefault true -background true
+system node image update -node * -package <http://example.com/downloads/image.tgz> -replace-package true -replace {image1|image2} -background true -setdefault true
 ----
 +
 이 명령은 모든 노드에 소프트웨어 이미지를 동시에 다운로드하고 설치합니다. 이미지를 한 번에 하나씩 다운로드하여 설치하려면 매개 변수를 지정하지 마십시오 `-background`. 또한 이 명령은 확장 쿼리를 사용하여 대체 이미지로 설치된 대상 소프트웨어 이미지를 노드의 기본 이미지로 변경합니다.
@@ -62,7 +62,7 @@ system node image update -node * -package location -replace-package true -setdef
 +
 [source, cli]
 ----
-system node image update -node * -package location -replace-package true true -background true -setdefault false
+system node image update -node * -package <http://example.com/downloads/image.tgz> -replace-package true -replace {image1|image2} -background true -setdefault false
 ----
 +
 이 명령은 모든 노드에 소프트웨어 이미지를 동시에 다운로드하고 설치합니다. 이미지를 한 번에 하나씩 다운로드하여 설치하려면 매개 변수를 지정하지 마십시오 `-background`. 또한 이 명령은 확장 쿼리를 사용하여 각 노드에 대체 이미지로 설치되는 대상 소프트웨어 이미지를 변경합니다.
@@ -77,7 +77,7 @@ system node image update -node * -package location -replace-package true true -b
 system node image show-update-progress -node *
 ----
 +
-이 명령은 소프트웨어 이미지 다운로드 및 설치의 현재 상태를 표시합니다. 모든 노드에서 * 실행 상태 * 가 "종료됨", * 종료 상태 * 가 "성공"으로 보고될 때까지 이 명령을 계속 실행해야 합니다.
+이 명령은 소프트웨어 이미지 다운로드 및 설치의 현재 상태를 표시합니다. 모든 노드가 *실행 상태*가 "종료"이고, *종료 상태*가 "성공"이라고 보고할 때까지 이 명령을 계속 실행해야 합니다.
 
 +
 시스템 노드 이미지 업데이트 명령이 실패하고 오류 또는 경고 메시지가 표시될 수 있습니다. 오류 또는 경고를 해결한 후에는 명령을 다시 실행할 수 있습니다.
@@ -103,4 +103,8 @@ Status of most recent operation:
         Exit Message:   After a clean shutdown, image2 will be set as the default boot image on node1.
 2 entries were acted on.
 ----
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/system-node-image-update.html["시스템 노드 이미지 업데이트"^]
 
