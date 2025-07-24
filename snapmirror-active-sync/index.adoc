@@ -109,7 +109,8 @@ SnapMirror Active Sync는 일관성 그룹과 ONTAP Mediator 또는 ONTAP 9.17.1
 .비대칭 및 대칭
 대칭형 액티브/액티브 구성에서는 두 사이트 모두 액티브 I/O를 위해 로컬 스토리지에 액세스할 수 있습니다. 대칭형 액티브/액티브 구성은 VMware vMSC, SQL 기반 Windows 장애 조치 클러스터, Oracle RAC를 포함한 클러스터형 애플리케이션에 최적화되어 있습니다.
 
- In asymmetric active/active configurations data on the secondary site is proxied to a LUN, namespace or storage unit.
+비대칭 액티브/액티브 구성에서는 보조 사이트의 데이터가 LUN, 네임스페이스 또는 스토리지 장치에 프록시됩니다.
+
 자세한 내용은 을 참조하십시오 xref:architecture-concept.html[SnapMirror 액티브 동기화 아키텍처].
 
 .일관성 그룹
