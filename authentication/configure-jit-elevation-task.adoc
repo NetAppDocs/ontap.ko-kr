@@ -1,0 +1,220 @@
+---
+permalink: authentication/configure-jit-elevation-task.html 
+sidebar: sidebar 
+keywords: just in time, just-in-time, privilege elevation, password, security, authentication, JIT, elevation 
+summary: ONTAP 사용자가 특정 작업을 수행하기 위해 일시적으로 권한을 높일 수 있도록 Just-In-Time 권한 상승을 구성합니다. 
+---
+= ONTAP 에서 JIT 권한 상승 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1부터 클러스터 관리자는 JIT(Just-In-Time) 권한 상승을 구성하여 ONTAP 사용자가 특정 작업을 수행할 수 있도록 일시적으로 권한을 상승시킬 수 있습니다. JIT가 사용자에 대해 구성된 경우, link:elevate-jit-access-task.html["그들의 특권을 높이다"] 작업을 수행하는 데 필요한 권한이 있는 역할로 전환됩니다. 세션 기간이 만료되면 사용자는 원래 액세스 수준으로 돌아갑니다.
+
+클러스터 관리자는 사용자가 JIT 권한 상승에 액세스할 수 있는 기간을 구성할 수 있습니다. 예를 들어, 사용자 JIT 권한 상승 액세스를 세션당 30분(세션 유효 기간)으로 설정하고 30일(JIT 유효 기간) 동안 사용할 수 있도록 구성할 수 있습니다. 30일 동안 사용자는 필요한 만큼 권한을 상승시킬 수 있지만, 각 세션은 30분으로 제한됩니다.
+
+JIT 권한 승격은 최소 권한 원칙을 지원하여 사용자가 승격된 권한이 필요한 작업을 수행할 때 해당 권한을 영구적으로 부여하지 않아도 되도록 합니다. 이를 통해 무단 접근이나 실수로 인한 시스템 변경 위험을 줄일 수 있습니다. 다음 예시에서는 JIT 권한 승격의 일반적인 사용 사례를 설명합니다.
+
+* 임시 액세스를 허용합니다.  `security login create` 그리고  `security login delete` 사용자의 온보딩 및 오프보딩을 가능하게 하는 명령입니다.
+* 임시 액세스 허용  `system node image update` 그리고  `system node upgrade-revert` 업데이트 기간 동안. 업데이트가 완료되면 명령 액세스가 취소됩니다.
+* 임시 액세스 허용  `cluster add-node` ,  `cluster remove-node` , 그리고  `cluster modify` 클러스터 확장 또는 재구성을 활성화합니다. 클러스터 변경이 완료되면 명령 액세스가 취소됩니다.
+* 임시 액세스 허용  `volume snapshot restore` 복원 작업 및 백업 대상 관리를 활성화합니다. 복원 또는 구성이 완료되면 명령 액세스 권한이 취소됩니다.
+* 임시 액세스 허용  `security audit log show` 규정 준수 검사 중에 감사 로그 검토 및 내보내기를 활성화합니다.
+
+
+를 참조하세요  https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^] 이 예제의 명령에 대한 자세한 내용은 다음을 참조하세요. 일반적인 JIT 사용 사례에 대한 더 자세한 목록은 다음을 참조하세요. <<일반적인 JIT 사용 사례>> .
+
+클러스터 관리자는 ONTAP 사용자에 대한 JIT 액세스를 설정하고, 클러스터 전체 또는 특정 SVM에 대해 기본 JIT 유효 기간을 구성할 수 있습니다.
+
+.이 작업에 대해
+* JIT 권한 승격은 SSH를 통해 ONTAP 에 액세스하는 사용자에게만 제공됩니다. 승격된 권한은 사용자의 현재 SSH 세션 내에서만 사용할 수 있지만, 필요한 만큼의 동시 SSH 세션 내에서 권한을 승격할 수 있습니다.
+* JIT 권한 승격은 비밀번호, nsswitch 또는 도메인 인증을 사용하여 로그인하는 사용자에게만 지원됩니다. 다중 요소 인증(MFA)은 JIT 권한 승격에 지원되지 않습니다.
+
+
+.시작하기 전에
+* ONTAP 클러스터 관리자여야 합니다.  `admin` 다음 작업을 수행하기 위한 권한 수준입니다.
+
+
+
+
+== 글로벌 JIT 설정 수정
+
+ONTAP 클러스터 전체 또는 특정 SVM에 대해 기본 JIT 설정을 수정할 수 있습니다. 이러한 설정은 JIT 액세스 권한이 구성된 사용자의 기본 세션 유효 기간과 최대 JIT 유효 기간을 결정합니다.
+
+.이 작업에 대해
+* 기본값  `default-session-validity-period` 값은 1시간입니다. 이 설정은 사용자가 JIT 세션에서 상승된 권한에 액세스할 수 있는 시간을 결정합니다. 이 시간이 지나면 다시 상승해야 합니다.
+* 기본값  `max-jit-validity-period` 값은 90일입니다. 이 설정은 구성된 시작일 이후 사용자가 JIT 권한 상승에 액세스할 수 있는 최대 기간을 결정합니다. 개별 사용자별로 JIT 유효 기간을 설정할 수 있지만, 최대 JIT 유효 기간을 초과할 수 없습니다.
+
+
+.단계
+. 현재 JIT 설정을 확인하세요.
++
+[source, cli]
+----
+security jit-privilege show -vserver <svm_name>
+----
++
+`-vserver` 는 선택 사항입니다. SVM을 지정하지 않으면 명령은 전역 JIT 설정을 표시합니다.
+
+. JIT 설정을 전역적으로 또는 SVM에 대해 수정합니다.
++
+[source, cli]
+----
+security jit-privilege modify -vserver <svm_name> -default-session-validity-period <period> -max-jit-validity-period <period>
+----
++
+SVM을 지정하지 않으면 명령이 전역 JIT 설정을 수정합니다. 다음 예제는 SVM의 기본 JIT 세션 기간을 45분으로, 최대 JIT 기간을 30일로 설정합니다.  `svm1` : + 
+`security jit-privilege modify -vserver svm1 -default-session-validity-period 45m -max-jit-validity-period 30d`
+
++
+이 예에서 사용자는 한 번에 45분 동안 JIT 권한 상승에 액세스할 수 있으며 구성된 시작 날짜로부터 최대 30일 동안 JIT 세션을 시작할 수 있습니다.
+
+
+
+
+
+== 사용자에 대한 JIT 권한 승격 액세스 구성
+
+ONTAP 사용자에게 JIT 권한 상승 액세스를 할당할 수 있습니다.
+
+.단계
+. 사용자의 현재 JIT 액세스를 확인하세요.
++
+[source, cli]
+----
+security jit-privilege user show -username <username>
+----
++
+`-username` 는 선택 사항입니다. 사용자 이름을 지정하지 않으면 모든 사용자의 JIT 액세스 권한이 표시됩니다.
+
+. 사용자에게 새로운 JIT 액세스 권한 할당:
++
+[source, cli]
+----
+security jit-privilege create -username <username> -vserver <svm_name> -role <rbac_role> -session-validity-period <period> -jit-validity-period <period> -start-time <date>
+----
++
+** 만약에  `-vserver` 지정되지 않으면 JIT 액세스는 클러스터 수준에서 할당됩니다.
+**  `-role` 사용자가 승격될 RBAC 역할입니다. 지정하지 않으면  `-role` 기본값으로 설정됨  `admin` .
+** `-session-validity-period` 사용자가 새 JIT 세션을 시작하기 전에 승격된 역할에 액세스할 수 있는 기간입니다. 지정하지 않으면 전역 또는 SVM  `default-session-validity-period` 사용됩니다.
+** `-jit-validity-period` 구성된 시작 날짜 이후 사용자가 JIT 세션을 시작할 수 있는 최대 기간입니다. 지정하지 않으면  `session-validity-period` 사용됩니다. 이 매개변수는 전역 또는 SVM을 초과할 수 없습니다.  `max-jit-validity-period` .
+** `-start-time` 사용자가 JIT 세션을 시작할 수 있는 날짜와 시간입니다. 지정하지 않으면 현재 날짜와 시간이 사용됩니다.
++
+다음 예제에서는 다음을 허용합니다.  `ontap_user` 에 접근하려면  `admin` 새로운 JIT 세션을 시작하기 전에 1시간 동안 역할을 수행해야 합니다.  `ontap_user` 2025년 7월 1일 오후 1시부터 60일 동안 JIT 세션을 시작할 수 있습니다. 
+`security jit-privilege user create -username ontap_user -role admin -session-validity-period 1h -jit-validity-period 60d -start-time "7/1/25 13:00:00"`
+
+
+
+. 필요한 경우 사용자의 JIT 액세스를 취소합니다.
++
+[source, cli]
+----
+security jit-privilege user delete -username <username> -vserver <svm_name>
+----
++
+사용자의 JIT 액세스를 취소합니다.  `-vserver` 지정되지 않으면 JIT 액세스가 클러스터 수준에서 취소됩니다. 사용자가 활성 JIT 세션에 있는 경우 세션이 종료됩니다.
+
+
+
+
+
+== 일반적인 JIT 사용 사례
+
+다음 표에는 JIT 권한 승격의 일반적인 사용 사례가 나와 있습니다. 각 사용 사례에 대해 관련 명령에 대한 액세스를 제공하도록 RBAC 역할을 구성해야 합니다. 각 명령은 ONTAP 명령 참조에 연결되어 있으며, 해당 명령 및 매개변수에 대한 자세한 정보를 제공합니다.
+
+[cols="1,1a,1"]
+|===
+| 사용 사례 | 명령 | 세부 
+
+
+| 사용자 및 역할 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["보안 로그인 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-delete.html["7a414cbc26ad99f3f688affc1ecabe6f"]
+| 온보딩 또는 오프보딩 중에 사용자를 추가/제거하거나 역할을 변경하기 위해 일시적으로 권한을 상승시킵니다. 
+
+
+| 인증서 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-create.html["9ea06376db2d229da0b3a4c13ce61404"] , link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"]
+| 인증서 설치 또는 갱신을 위해 단기 액세스 권한을 부여합니다. 
+
+
+| SSH/CLI 액세스 제어  a| 
+`link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html[security login create] -application ssh`
+| 문제 해결이나 공급업체 지원을 위해 일시적으로 SSH 액세스를 허용합니다. 
+
+
+| 라이센스 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/system-license-add.html["6c25ae7b27db9a62b5c245ad70b9d7cc"] , link:https://docs.netapp.com/us-en/ontap-cli/system-license-delete.html["5f3eb0e0b3c2143bc24467a3ed94289e"]
+| 기능 활성화 또는 비활성화 중에 라이선스를 추가하거나 제거할 수 있는 권한을 부여합니다. 
+
+
+| 시스템 업그레이드 및 패치  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/system-node-image-update.html["시스템 노드 이미지 업데이트"] , link:https://docs.netapp.com/us-en/ontap-cli/system-node-upgrade-revert-upgrade.html["3375ab72573f54f214f0e7b4b9759e15"]
+| 업그레이드 창에 대한 권한을 높인 다음 취소합니다. 
+
+
+| 네트워크 보안 설정  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-create.html["보안 로그인 역할이 생성됩니다"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-modify.html["c44e895fab96f3c7a61edd2ebae0fd59"]
+| 네트워크 관련 보안 역할에 대한 임시 변경을 허용합니다. 
+
+
+| 클러스터 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/cluster-add-node.html["클러스터 추가 노드"] , link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove-node.html["클러스터 제거 노드"] , link:https://docs.netapp.com/us-en/ontap-cli/cluster-modify.html["클러스터 수정"]
+| 클러스터 확장이나 재구성을 위해 Elevate를 사용합니다. 
+
+
+| SVM 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["SVM 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/vserver-delete.html["a75eb9196380a98a2a2a693496267088"] , link:https://docs.netapp.com/us-en/ontap-cli/vserver-modify.html["SVM 수정"]
+| SVM에 프로비저닝 또는 서비스 해제를 위한 관리자 권한을 일시적으로 부여합니다. 
+
+
+| 볼륨 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["볼륨 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-delete.html["볼륨 삭제"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["볼륨 수정"]
+| 볼륨 프로비저닝, 크기 조정 또는 제거를 위해 높이십시오. 
+
+
+| 스냅샷 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-create.html["ceb6830d4a1748af1adc615d6239b127"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-delete.html["1cf71c15916b07b46dc8360baf4bd9d5"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["8f381ba1024744332b561ba609495012"]
+| 복구 중에 스냅샷을 삭제하거나 복원하려면 Elevate를 사용합니다. 
+
+
+| 네트워크 구성  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["8e4b4cb9c44fdee9551da126fb754f8a"] , link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-create.html["733be7dba8f13ff258d7f73e2740324c"]
+| 유지 관리 기간 동안 네트워크 변경에 대한 권한을 부여합니다. 
+
+
+| 디스크/집계 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["3c698d76925a2f101122edd72990fc94"] , link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["1b40ef6e34df7d2fb54b5d639e14412d"] , link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-add-disks.html["be260f7e87b5ae56c1d81f359067a35f"]
+| 디스크를 추가, 제거하거나 집계를 관리하기 위해 Elevate를 사용합니다. 
+
+
+| 데이터 보호  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-modify.html["SnapMirror 수정"] , link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["SnapMirror 복원"]
+| SnapMirror 관계를 구성하거나 복원하기 위해 일시적으로 상승합니다. 
+
+
+| 성능 튜닝  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["QoS 정책 - 그룹 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["92e30cc5fff2e2aead2254497baabf90"]
+| 성능 문제 해결이나 튜닝을 위해 Elevate를 활용하세요. 
+
+
+| 감사 로그 액세스  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/security-audit-log-show.html["8886c6249c30eca960ab30fed3c6746b"]
+| 규정 준수 검사 중에 감사 로그 검토 또는 내보내기를 위해 일시적으로 상승합니다. 
+
+
+| 이벤트 및 알림 관리  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/event-notification-create.html["64b1a654c15b96443ae00ee82d8ea7ad"] , link:https://docs.netapp.com/us-en/ontap-cli/event-notification-modify.html["3289b87193da03bd8309fc4b2ea2e02e"]
+| 이벤트 알림이나 SNMP 트랩을 구성하거나 테스트하기 위해 Elevate를 사용합니다. 
+
+
+| 규정 준수 기반 데이터 액세스  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["볼륨 표시"] , link:https://docs.netapp.com/us-en/ontap-cli/security-audit-log-show.html["8886c6249c30eca960ab30fed3c6746b"]
+| 감사자가 민감한 데이터나 로그를 검토할 수 있도록 일시적으로 읽기 전용 액세스 권한을 부여합니다. 
+
+
+| 특권 액세스 검토  a| 
+link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html["025c83c1a746b39471a98aa72befe950"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-show.html["c964d7ae2ca92e255e3199e128824eb9"]
+| 일시적으로 권한을 승격하여 권한 있는 접근 권한을 검토하고 보고합니다. 제한된 시간 동안 읽기 전용의 권한 승격된 접근 권한을 부여합니다. 
+|===

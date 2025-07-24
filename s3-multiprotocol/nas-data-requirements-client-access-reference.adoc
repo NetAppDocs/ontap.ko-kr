@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: s3, mapping, directory, access, configuration, object, nas, bucket 
 summary: S3 액세스를 위해 NAS 파일 및 디렉토리를 매핑하면 일부 표준 NAS 동작이 변경된다는 것을 이해하는 것이 중요합니다. 
 ---
-= S3 클라이언트 액세스를 위한 NAS 데이터 요구사항
+= ONTAP S3 클라이언트 액세스를 위한 NAS 데이터 요구 사항에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

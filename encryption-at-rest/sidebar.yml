@@ -4,7 +4,7 @@ title: CLI를 사용하여 암호화를 관리합니다
 entries:
 - title: 개요
   url: "/encryption-at-rest/index.html"
-- title: NetApp 볼륨 암호화를 구성합니다
+- title: NetApp 볼륨 및 집계 암호화 구성
   entries:
   - title: 개요
     url: "/encryption-at-rest/configure-netapp-volume-encryption-concept.html"
@@ -31,13 +31,15 @@ entries:
         url: "/encryption-at-rest/enable-external-key-management-95-earlier-task.html"
       - title: 클라우드 공급자를 통해 키를 관리합니다
         url: "/encryption-at-rest/manage-keys-azure-google-task.html"
+      - title: Barbican KMS로 ONTAP 키 관리
+        url: "/encryption-at-rest/manage-keys-barbican-task.html"
     - title: ONTAP 9.6 이상(NVE)에서 온보드 키 관리 지원
       url: "/encryption-at-rest/enable-onboard-key-management-96-later-nve-task.html"
     - title: ONTAP 9.5 이하(NVE)에서 온보드 키 관리 활성화
       url: "/encryption-at-rest/enable-onboard-key-management-95-earlier-nve-task.html"
     - title: 새로 추가된 노드에서 온보드 키 관리를 활성화합니다
       url: "/encryption-at-rest/enable-onboard-key-management-new-nodes-concept.html"
-  - title: NVE를 사용하여 볼륨 데이터 암호화
+  - title: NVE 또는 NAE를 사용하여 볼륨 데이터 암호화
     entries:
     - title: 개요
       url: "/encryption-at-rest/encrypt-volumes-concept.html"
@@ -45,8 +47,6 @@ entries:
       url: "/encryption-at-rest/enable-aggregate-level-encryption-nve-license-task.html"
     - title: 새 볼륨에서 암호화를 활성화합니다
       url: "/encryption-at-rest/enable-encryption-new-volume-task.html"
-    - title: 볼륨 암호화 변환 시작 명령을 사용하여 기존 볼륨에서 암호화를 활성화합니다
-      url: "/encryption-at-rest/enable-encryption-existing-volume-93-later-task.html"
     - title: 볼륨 이동 시작 명령을 사용하여 기존 볼륨에서 암호화를 활성화합니다
       url: "/encryption-at-rest/encrypt-existing-volume-task.html"
     - title: SVM 루트 볼륨에 대한 암호화를 설정합니다

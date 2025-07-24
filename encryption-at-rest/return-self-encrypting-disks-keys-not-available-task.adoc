@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: returning, fips, drive, sed, service, authentication, keys, lost 
 summary: FIPS 드라이브 또는 SED가 영구적으로 인증 키를 분실하여 KMIP 서버에서 검색할 수 없는 경우, 시스템은 FIPS 드라이브 또는 SED를 파손된 것으로 처리합니다. 디스크의 데이터에 액세스하거나 복구할 수 없지만 SED의 미사용 공간을 데이터에 다시 사용할 수 있도록 하는 단계를 수행할 수 있습니다. 
 ---
-= 인증 키가 손실되었을 때 ONTAP를 사용하여 FIPS 드라이브 또는 SED를 서비스 상태로 되돌립니다
+= ONTAP 에서 인증 키가 손실된 경우 FIPS 드라이브 또는 SED를 서비스에 반환
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

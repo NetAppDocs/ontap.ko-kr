@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: snapmirror-active-sync/remove-mediator-task.html 
-keywords: SM-BC, SMBC, removing, Mediator, snapmirror active sync 
-summary: ONTAP 클러스터에서 기존 ONTAP 중재자 구성을 제거하려면 SnapMirror 중재자 제거 명령을 사용할 수 있습니다. 
+keywords: SM-BC, SMBC, removing, uninstalling, Mediator, Cloud Mediator, snapmirror active sync 
+summary: ONTAP 클러스터에서 기존 ONTAP Mediator 또는 ONTAP Cloud Mediator 구성을 제거하려면 snapmirror mediator remove 명령을 사용하면 됩니다. 
 ---
-= ONTAP 중재자를 제거합니다
+= ONTAP Mediator 또는 ONTAP Cloud Mediator 제거
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,45 @@ summary: ONTAP 클러스터에서 기존 ONTAP 중재자 구성을 제거하려�
 
 
 [role="lead"]
-ONTAP 클러스터에서 기존 ONTAP 중재자 구성을 제거하려면 '스냅샷 중재자 제거' 명령을 사용합니다.
+ONTAP 클러스터에서 기존 ONTAP Mediator 또는 ONTAP Cloud Mediator 구성을 제거하려면 다음을 사용할 수 있습니다.  `snapmirror mediator remove` 예 를 들어, 한 번에 한 가지 유형의 Mediator만 사용할 수 있으므로 다른 인스턴스를 설치하기 전에 기존 인스턴스를 제거해야 합니다.
 
 .단계
+다음 단계 중 하나를 완료하여 ONTAP Mediator 또는 ONTAP Cloud Mediator를 제거할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.ONTAP 중재자
+--
 . ONTAP 중재자 제거:
 +
-'스냅미러 중재자 제거 - 주소 12.345.678.90 - peer-cluster cluster_xyz'
+`snapmirror mediator remove -mediator-address <address> -peer-cluster <peerClusterName>`
+
++
+예:
+
++
+[listing]
+----
+snapmirror mediator remove -mediator-address 12.345.678.90 -peer-cluster cluster_xyz
+----
 
 
+--
+.ONTAP 클라우드 중재자
+--
+. ONTAP Cloud Mediator 제거:
++
+`snapmirror mediator remove -peer-cluster <peerClusterName> -type cloud`
+
++
+예:
+
++
+[listing]
+----
+snapmirror mediator remove -peer-cluster cluster_xyz -type cloud
+----
+
+
+--
+====

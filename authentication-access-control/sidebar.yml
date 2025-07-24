@@ -20,8 +20,6 @@ entries:
         url: "/authentication/oauth2-authorization.html"
       - title: 독립형 범위
         url: "/authentication/oauth2-sc-scopes.html"
-      - title: 그룹 작업
-        url: "/authentication/oauth2-groups.html"
       - title: 외부 역할 매핑
         url: "/authentication/oauth2-external-roles.html"
       - title: ONTAP에서 액세스를 결정하는 방법
@@ -40,6 +38,8 @@ entries:
       url: "/authentication/oauth2-rest-api.html"
 - title: SAML을 사용한 인증 및 권한 부여
   url: "/system-admin/configure-saml-authentication-task.html"
+- title: OAuth 2.0 또는 SAML IdP 그룹 작업
+  url: "/authentication/authentication-groups.html"
 - title: WebAuthn MFA를 사용한 인증 및 권한 부여
   entries:
   - title: WebAuthn 다중 요소 인증에 대해 알아보세요
@@ -68,6 +68,8 @@ entries:
     url: "/system-admin/commands-manage-mount-points-nodes-reference.html"
   - title: SSL 관리
     url: "/system-admin/manage-ssl-concept.html"
+  - title: 웹 서비스에 HSTS 사용
+    url: "/system-admin/use-hsts-task.html"
   - title: 웹 서비스 액세스 문제를 해결합니다
     url: "/system-admin/troubleshoot-web-access-problems-concept.html"
 - title: 인증서를 사용하여 원격 서버의 ID를 확인합니다

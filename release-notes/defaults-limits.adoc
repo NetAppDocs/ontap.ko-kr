@@ -24,6 +24,12 @@ ONTAP 9 릴리스에서 구현된 제한 및 기본값에 대한 몇 가지 변�
 | 피처 | 기본 변경 | 릴리스 위치가 변경되었습니다. 
 
 
+| 볼륨 기본값 | NAS 프로토콜에 할당된 ONTAP 클러스터에서 새로 생성된 SVM에 생성된 볼륨에는 기본적으로 FSA(파일 시스템 분석)가 활성화되어 있습니다. | ONTAP 9.17.1 
+
+
+| HTTP 엄격한 전송 보안(HSTS) | HSTS는 9.17.1에서 기본적으로 활성화되어 있습니다. | ONTAP 9.17.1 
+
+
 | NAS 감사 | 및 `file-session-io-grouping-duration` 매개 변수의 최대 제한이 `file-session-io-grouping-count` 증가하므로 필요에 따라 더 적은 수의 통합 NAS 감사 이벤트 알림을 선택할 수 있습니다. 이 경우 SVM이 높은 IO 속도를 지원하므로 타겟 볼륨에 대한 스토리지의 영향을 줄일 수 있습니다. NFS_FILE_SESSION_IO_GROUP_COUNT_MAX: 20000 ~ 120000 NFS_FILE_SESSION_IO_GROUP_DURATION_MAX: 600 ~ 3600 | ONTAP 9.16.1 
 
 

@@ -4,10 +4,8 @@ sidebar: sidebar
 keywords: secure, purge, scrub, data, encrypted, volume, nve, netapp, volume encryption, snapmirror, synchronous 
 summary: 'ONTAP 9.8부터는 SnapMirror 동기식 관계를 통해 NVE 지원 볼륨에서 보안 퍼지를 사용하여 중단 없이 데이터를 "스크럽"할 수 있습니다.' 
 ---
-= SnapMirror 동기식 관계를 통해 암호화된 볼륨의 데이터를 스크럽합니다
+= SnapMirror 동기 관계를 사용하여 암호화된 ONTAP 볼륨에서 데이터 스크럽
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

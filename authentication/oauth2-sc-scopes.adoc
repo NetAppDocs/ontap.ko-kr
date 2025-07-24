@@ -4,7 +4,7 @@ permalink: authentication/oauth2-sc-scopes.html
 keywords: self-contained scopes, scopes 
 summary: 자체 포함 범위는 액세스 토큰으로 전달되는 문자열입니다. 각각은 완전한 사용자 지정 역할 정의이며 ONTAP에서 액세스 결정을 내리는 데 필요한 모든 것을 포함합니다. 범위는 ONTAP 자체 내에 정의된 모든 REST 역할과 별개입니다. 
 ---
-= 자체 포함된 OAuth 2.0 범위
+= ONTAP 의 독립형 OAuth 2.0 범위
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

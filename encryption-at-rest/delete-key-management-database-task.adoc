@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: transitioning, onboard key management, external key management 
 summary: 외부 키 관리에서 온보드 키 관리로 전환하려면 외부 키 관리 구성을 삭제해야 온보드 키 관리를 활성화할 수 있습니다. 
 ---
-= 외부 키 관리에서 온보드 키 관리로 전환합니다
+= 외부 키 관리에서 ONTAP 온보드 키 관리로 전환
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

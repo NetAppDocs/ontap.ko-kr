@@ -4,11 +4,8 @@ sidebar: sidebar
 keywords: Azure, AKV, key vault, NVE keys, third-party, GCP, google cloud, Cloud KMS, AWS, amazon 
 summary: Azure, Google Cloud 또는 AWS 키 관리자를 사용하여 ONTAP 암호화 키 보호를 간소화합니다. 
 ---
-= ONTAP에서 클라우드 공급자를 통해 키를 관리합니다
-:hardbreaks:
+= 클라우드 공급자와 함께 ONTAP 데이터 SVM에 대한 NVE 키 관리
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]

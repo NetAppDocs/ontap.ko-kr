@@ -1,0 +1,63 @@
+---
+permalink: system-admin/audit-manage-cross-cluster-requests.html 
+sidebar: sidebar 
+keywords: audit, peered, cross cluster, log, cluster, get request 
+summary: 피어링된 클러스터에서 시작된 작업을 기록하고 클러스터 간 작업 추적을 개선하기 위해 클러스터 간 감사를 활성화합니다. 
+---
+= ONTAP 클러스터 간 감사 활성화
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1부터, 그리고 ONTAP 9.16.1 P4 및 이후 9.16.1 패치 릴리스부터 ONTAP 에서 클러스터 간 감사를 활성화하여 피어링된 클러스터에서 시작된 작업을 기록할 수 있습니다. 이 원격 감사는 여러 ONTAP 클러스터가 상호 작용하는 환경에서 특히 유용하며, 원격 작업에 대한 추적성과 책임 소재를 제공합니다.
+
+클러스터 간 감사는 사용자가 시작한 GET(읽기) 또는 SET(생성/수정/제거) 작업을 구분할 수 있습니다. 기본적으로 대상 클러스터에서는 사용자가 시작한 SET 작업만 감사됩니다. GET 또는  `show` CLI에서 명령을 실행하면 요청이 클러스터 간인지 여부에 관계없이 기본적으로 감사되지 않습니다.
+
+.시작하기 전에
+* 당신은 있어야합니다  `advanced` 레벨 권한
+* 클러스터는 다른 클러스터와 피어링되어야 하며, 두 클러스터 모두 ONTAP 9.16.1 P4 이상을 실행해야 합니다.
++
+
+NOTE: 일부 노드만 ONTAP 9.16.1 P4 이상으로 업그레이드된 환경에서는 업그레이드된 버전을 실행하는 노드에서만 감사 로깅이 실행됩니다. 일관된 감사 동작을 보장하려면 모든 노드를 지원되는 버전으로 업그레이드하는 것이 좋습니다.
+
+
+
+
+
+== 클러스터 간 감사 활성화 또는 비활성화
+
+.단계
+. 클러스터에서 크로스 클러스터 감사를 활성화(또는 비활성화)하려면 다음을 설정합니다.  `cluster-peer` 매개변수  `on` 또는  `off` :
++
+[source, cli]
+----
+security audit modify -cluster-peer {on|off}
+----
+. 현재 감사 상태를 확인하여 클러스터 피어 설정이 활성화 또는 비활성화되었는지 확인하세요.
++
+[listing]
+----
+security audit show
+----
++
+응답:
+
++
+[listing]
+----
+    Audit Setting State
+    ------------- -----
+         CLI GET: off
+        HTTP GET: off
+      ONTAPI GET: off
+    Cluster Peer: on
+----
+
+
+
+
+== GET 감사 활성화의 효과
+
+ONTAP 9.17.1부터  https://docs.netapp.com/us-en/ontap-cli/security-audit-modify.html["CLI, HTTP, ONTAPI GET 감사 활성화"^] 피어링된 클러스터에서는 클러스터 간 사용자 시작 GET 요청에 대한 감사도 활성화할 수 있습니다. 이전 ONTAP 버전에서는 GET 감사가 로컬 클러스터의 요청에만 적용되었습니다. ONTAP 9.17.1에서는  `cluster-peer` 옵션 설정  `on` 로컬 클러스터와 클러스터 간 요청이 모두 감사합니다.

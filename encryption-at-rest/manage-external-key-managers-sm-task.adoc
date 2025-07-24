@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: system manager, external key manager, configure external key manager, migrate keys, store keys, authentication keys, encryption keys 
 summary: ONTAP 9.13.1 부터는 System Manager를 사용하여 외부 키 관리자를 관리하고 인증 및 암호화 키를 저장 및 관리할 수 있습니다. 
 ---
-= System Manager로 외부 키 관리자를 관리합니다
+= ONTAP System Manager를 사용하여 외부 키 관리자를 관리하세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

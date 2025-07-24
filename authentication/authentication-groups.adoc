@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: authentication/authentication-groups.html 
+keywords: oauth 2.0, oauth2, identity mapping, group uuid, group name, group mapping, external roles, role mapping, saml, entra, active directory, adfs, idp 
+summary: ONTAP 권한 부여 서버 또는 SAML IdP를 기반으로 그룹을 구성하는 여러 옵션을 제공합니다. 이렇게 구성된 그룹은 ONTAP 에서 액세스 권한을 결정하는 데 사용되는 역할에 매핑될 수 있습니다. 
+---
+= ONTAP 에서 OAuth 2.0 또는 SAML IdP 그룹 작업
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP OAuth 2.0 권한 부여 서버 또는 SAML ID 공급자(IdP)를 기반으로 그룹을 구성하는 여러 옵션을 제공합니다. 이렇게 구성된 그룹은 ONTAP 에서 액세스 권한을 결정하는 데 사용되는 역할에 매핑될 수 있습니다.
+
+ONTAP 9.17.1부터 SAML IdP에서 제공하는 그룹 정보를 ONTAP 역할에 매핑할 수 있습니다. 이를 통해 IdP에 정의된 그룹을 기반으로 사용자에게 역할을 할당할 수 있습니다. 자세한 내용은 link:../system-admin/configure-saml-authentication-task.html["SAML 인증을 구성합니다"]. ONTAP 9.14.1부터 ONTAP OAuth 2.0에 대한 그룹 이름 인증을 지원합니다. ONTAP 9.16.1부터 ONTAP OAuth 2.0 그룹 UUID 인증 및 역할 매핑을 지원합니다. link:../authentication/overview-oauth2.html["ONTAP OAuth 2.0 구축 개요"] .
+
+
+
+== 그룹을 식별하는 방법
+
+권한 부여 서버 또는 SAML IdP에서 그룹을 구성하면 해당 그룹은 이름이나 UUID를 사용하여 OAuth 2.0 액세스 토큰 또는 SAML 어설션을 통해 식별되고 전달됩니다. ONTAP 구성하기 전에 권한 부여 서버 또는 SAML IdP가 그룹을 처리하는 방식을 알고 있어야 합니다.
+
+
+NOTE: 액세스 토큰에 여러 그룹이 포함된 경우 ONTAP는 일치하는 항목이 있을 때까지 각 그룹을 사용하려고 시도합니다.
+
+
+
+=== 그룹 이름
+
+많은 권한 부여 서버와 SAML IdP(Active Directory Federation Service(ADFS) 등)는 이름을 사용하여 그룹을 식별하고 나타냅니다. 은 ADFS에서 생성된 여러 그룹을 포함하는 JSON OAuth 2.0 액세스 토큰의 일부입니다. <<이름으로 그룹을 관리합니다>> 자세한 내용은.
+
+[listing]
+----
+  ...
+  "sub": "User1_TestDev@NICAD5.COM",
+  "group": [
+    "NICAD5\\Domain Users",
+    "NICAD5\\Development Group",
+    "NICAD5\\Production Group"
+  ],
+  "apptype": "Confidential",
+  "appid": "3bff3b2b-8e40-44ba-7c11-d73c3b76e3e8",
+  ...
+----
+
+
+=== UUID를 그룹화합니다
+
+일부 권한 부여 서버와 Microsoft Entra ID와 같은 SAML IdP는 UUID를 사용하여 그룹을 식별하고 나타냅니다. 다음은 Entra ID에서 생성된 여러 그룹을 포함하는 OAuth 2.0 액세스 토큰의 일부입니다. <<UUID를 사용하여 그룹을 관리합니다>> 자세한 내용은.
+
+[listing]
+----
+  ...
+  "appid": "4aff4b4b-8e40-44ba-7c11-d73c3b76e3d7",
+  "appidacr": "1",
+  "groups": [
+    "8ea4c5b0-bcad-4e66-8f1e-cd395474a448",
+    "a8558fc2-a1b2-4cb7-cc41-59bd831840cc"],
+  "name": "admin007 with group membership",
+  ...
+----
+
+
+== 이름으로 그룹을 관리합니다
+
+권한 부여 서버 또는 SAML IdP가 그룹을 식별하기 위해 이름을 사용하는 경우, ONTAP 클러스터에 각 그룹이 정의되어 있는지 확인해야 합니다. 보안 환경에 따라 그룹이 이미 정의되어 있을 수도 있습니다.
+
+다음은 ONTAP 그룹을 정의하는 CLI 명령의 예입니다. 샘플 액세스 토큰의 명명된 그룹을 사용합니다. 명령을 실행하려면 ONTAP *admin* 권한 수준이 필요합니다.
+
+.예
+[listing]
+----
+security login create -user-or-group-name "NICAD5\\Domain Users" -application http -authentication-method domain -role admin
+----
+사용  `-authentication-method` `domain` 또는  `nsswitch` SAML IdP 및 OAuth 2.0 권한 부여 서버 그룹의 경우.
+
+
+NOTE: ONTAP REST API를 사용하여 이 기능을 구성할 수도 있습니다. 자세한 내용은  https://docs.netapp.com/us-en/ontap-automation/["ONTAP 자동화 설명서"^] .
+
+
+
+== UUID를 사용하여 그룹을 관리합니다
+
+권한 부여 서버 또는 SAML IdP가 UUID 값을 사용하여 그룹을 나타내는 경우, 그룹을 사용하기 전에 두 단계 구성을 수행해야 합니다. ONTAP 9.16.1부터 두 가지 매핑 기능을 사용할 수 있으며 Entra ID를 통해 테스트되었습니다. OAuth 2.0용 Entra ID는 ONTAP 9.16.1부터 지원되고, SAML용 Entra ID는 ONTAP 9.17.1부터 지원됩니다. CLI 명령을 실행하려면 ONTAP *admin* 권한 수준이 필요합니다.
+
+
+NOTE: ONTAP REST API를 사용하여 이러한 기능을 구성할 수도 있습니다. 자세한 내용은 을 https://docs.netapp.com/us-en/ontap-automation/["ONTAP 자동화 설명서"^]참조하십시오.
+
+
+
+=== 그룹 UUID를 그룹 이름에 매핑합니다
+
+UUID 값을 사용하여 그룹을 나타내는 권한 부여 서버 또는 SAML IdP를 사용하는 경우, 그룹 UUID를 그룹 이름에 매핑해야 합니다. 주요 ONTAP CLI 작업은 다음과 같습니다.
+
+
+
+==== 생성
+
+다음을 사용하여 새 그룹 매핑 구성을 정의할 수 있습니다.  `security login group create` 명령. 그룹 UUID와 이름은 권한 부여 서버 또는 SAML IdP의 구성과 일치해야 합니다. 자세히 알아보기  `security login group create` 에서 link:https://docs.netapp.com/us-en/ontap-cli/security-login-group-create.html["ONTAP 명령 참조입니다"^] .
+
+.매개 변수
+그룹 매핑을 생성하는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
+
+[cols="30,70"]
+|===
+| 매개 변수 | 설명 
+
+
+| `vserver` | 선택적으로 그룹이 연결된 SVM(SVM)의 이름을 지정합니다. 생략하면 그룹이 ONTAP 클러스터와 연결됩니다. 
+
+
+| `name` | ONTAP에서 사용할 그룹의 고유 이름입니다. 
+
+
+| `type` | 이 값은 그룹의 출처가 되는 ID 공급자를 나타냅니다. 
+
+
+| `uuid` | 권한 부여 서버나 SAML IdP에서 제공하는 그룹의 범용 고유 식별자를 지정합니다. 
+|===
+다음은 ONTAP 그룹을 정의하는 CLI 명령의 예입니다. 샘플 액세스 토큰의 UUID 그룹을 사용합니다.
+
+.예
+[listing]
+----
+security login group create -vserver ontap-cls-1 -name IAM_Dev -type entra -uuid 8ea4c5b0-bcad-4e66-8f1e-cd395474a448
+----
+그룹을 생성한 후 그룹에 대해 고유한 읽기 전용 정수 식별자가 생성됩니다.
+
+
+
+==== 추가 CLI 작업
+
+이 명령을 실행하면 다음과 같은 몇 가지 추가 작업이 지원됩니다.
+
+* 표시
+* 수정
+* 삭제
+
+
+옵션을 사용하여 그룹에 대해 생성된 고유한 그룹 ID를 검색할 수 `show` 있습니다. 에 대한 자세한 내용은 `show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+=== 그룹 UUID를 역할에 매핑합니다
+
+UUID 값을 사용하여 그룹을 나타내는 권한 부여 서버 또는 SAML IdP를 사용하는 경우, 그룹을 역할에 매핑할 수 있습니다. ONTAP 의 역할 기반 액세스 제어에 대한 자세한 내용은 다음을 참조하십시오. link:../authentication/manage-access-control-roles-concept.html["ONTAP 액세스 제어 역할 관리에 대해 알아봅니다"] . 주요 ONTAP CLI 작업은 아래와 같습니다. 명령을 실행하려면 ONTAP *admin* 권한 수준이 필요합니다.
+
+
+NOTE: 먼저 해야 할 일은 <<그룹 UUID를 그룹 이름에 매핑합니다,그룹 UUID를 그룹 이름에 매핑>> 그룹에 대해 생성된 고유 정수 ID를 검색합니다. 그룹을 역할에 매핑하려면 이 ID가 필요합니다.
+
+
+
+==== 생성
+
+다음을 사용하여 새 역할 매핑을 정의할 수 있습니다.  `security login group role-mapping create` 명령. 자세히 알아보기  `security login group role-mapping create` 에서 link:https://docs.netapp.com/us-en/ontap-cli/security-login-group-role-mapping-create.html["ONTAP 명령 참조입니다"^] .
+
+.매개 변수
+그룹을 역할에 매핑하는 데 사용되는 매개 변수는 아래에 설명되어 있습니다.
+
+[cols="30,70"]
+|===
+| 매개 변수 | 설명 
+
+
+| `group-id` | 명령을 사용하여 그룹에 대해 생성된 고유 ID를 `security login group create` 지정합니다. 
+
+
+| `role` | 그룹이 매핑되는 ONTAP 역할의 이름입니다. 
+|===
+.예
+[listing]
+----
+security login group role-mapping create -group-id 1 -role admin
+----
+
+
+==== 추가 CLI 작업
+
+이 명령을 실행하면 다음과 같은 몇 가지 추가 작업이 지원됩니다.
+
+* 표시
+* 수정
+* 삭제
+
+
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
+.관련 정보
+* link:../authentication/oauth2-external-roles.html["외부 역할 매핑"]
+

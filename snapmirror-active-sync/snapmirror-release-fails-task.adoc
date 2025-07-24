@@ -13,8 +13,10 @@ summary: 스냅샷을 삭제할 수 없으면 SnapMirror 릴리즈 작업이 실
 :imagesdir: ../media/
 
 
-.문제:
 [role="lead"]
+스냅샷을 삭제할 수 없어 SnapMirror 릴리스 작업이 실패하는 경우 다음 정보를 사용하세요.
+
+.문제:
 스냅샷을 삭제할 수 없으면 SnapMirror 릴리즈 작업이 실패합니다.
 
 .솔루션:

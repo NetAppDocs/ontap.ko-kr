@@ -4,7 +4,7 @@ permalink: authentication/oauth2-mutual-tls.html
 keywords: tls, mutual tls, mtls, sender-constrained access tokens, confirmation claim 
 summary: '보안 요구에 따라 강력한 클라이언트 인증을 구현하도록 MTL(Mutual TLS)을 선택적으로 구성할 수 있습니다. OAuth 2.0 배포의 일부로 ONTAP와 함께 사용할 경우 MTL은 액세스 토큰이 원래 발급된 클라이언트에서만 사용되도록 보장합니다.' 
 ---
-= 상호 TLS를 사용한 클라이언트 인증
+= OAuth 2.0 Mutual TLS를 사용한 ONTAP 클라이언트 인증
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -13,8 +13,10 @@ summary: 'ONTAP 9.9.1이 클러스터에 설치되면 다음을 실행합니다.
 :imagesdir: ../media/
 
 
-.문제:
 [role="lead"]
+다음 정보를 사용하십시오.  `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 인수 상태인 경우 명령이 실패합니다.
+
+.문제:
 ONTAP 9.9.1이 클러스터에 설치되면 다음을 실행합니다.  `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 인수 상태인 경우 명령이 실패합니다.
 
 ....

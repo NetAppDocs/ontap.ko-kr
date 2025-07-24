@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: snapmirror-active-sync/mediator-troubleshoot-task.html 
-keywords: troubleshooting, SM-BC, SMBC, Mediator, quorum, quorum status, failover, network, snapmirror active sync 
+keywords: troubleshooting, SM-BC, SMBC, Mediator, Cloud Mediator, quorum, quorum status, failover, network, snapmirror active sync 
 summary: SnapMirror 페일오버 시작 명령을 실행한 후 SnapMirror 페일오버 표시 명령의 출력에 중재자가 구성되지 않았다는 메시지가 표시됩니다. 
 ---
-= ONTAP 중재자가 연락할 수 없거나 중재 쿼럼 상태가 거짓입니다
+= ONTAP Mediator 또는 ONTAP Cloud Mediator에 연결할 수 없거나 Mediator 쿼럼 상태가 거짓입니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,11 +13,13 @@ summary: SnapMirror 페일오버 시작 명령을 실행한 후 SnapMirror 페�
 :imagesdir: ../media/
 
 
-.문제:
 [role="lead"]
-를 실행한 후 `snapmirror failover start` 명령을 사용하여 에 대한 출력입니다 `snapmirror failover show` Command는 ONTAP 중재자가 구성되지 않았음을 나타내는 메시지를 표시합니다.
+ONTAP Mediator 또는 ONTAP Cloud Mediator에 접근할 수 없거나 Mediator 쿼럼 상태가 거짓인 경우 다음 정보를 사용하세요.
 
-을 참조하십시오 link:mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"].
+.문제:
+실행 후  `snapmirror failover start` 명령, 출력  `snapmirror failover show` 명령은 ONTAP Mediator 또는 ONTAP Cloud Mediator가 구성되지 않았음을 나타내는 메시지를 표시합니다.
+
+보다 link:mediator-install-task.html["활성 동기화에 대해 ONTAP 중재자 및 클러스터를 구성합니다"] 또는 link:cloud-mediator-config-task.html["SnapMirror Active Sync를 위한 ONTAP Cloud Mediator 구성"] .
 
 ....
 Cluster1::> snapmirror failover show

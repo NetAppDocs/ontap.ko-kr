@@ -32,6 +32,10 @@ entries:
         url: "/revert/task_setting_autocommit_periods_for_snaplock_volumes_before_reverting.html"
       - title: MetroCluster 구성을 위한 계획되지 않은 자동 전환
         url: "/revert/task_disable_asuo.html"
+    - title: ONTAP 9.17.1
+      entries:
+      - title: SAN 볼륨의 랜섬웨어 방지
+        url: "/revert/anti-ransomware-disable-san.html"
     - title: ONTAP 9.16.1
       entries:
       - title: NVMe TLS 구성

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: snapmirror-active-sync/cloud-mediator-slow-troubleshoot-task.html 
+keywords: troubleshooting, SM-BC, SMBC, Cloud Mediator, network, latency, snapmirror active sync 
+summary: ONTAP Cloud Meditor를 추가하려고 하면 ping 지연 시간이 권장 지연 시간보다 높다는 오류가 발생합니다. 
+---
+= ONTAP Cloud Mediator에 접속 가능하지만 응답이 느립니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP Cloud Meditor가 ping 지연 시간이 권장 지연 시간보다 높다는 오류로 인해 실패하는 경우 다음 정보를 사용하세요.
+
+.문제:
+시스템 관리자: Cloud Mediator 서비스에 접속할 수는 있지만 응답 속도가 느립니다.
+
+CLI:  `mediator add` 명령이 다음 오류로 인해 실패합니다. 
+`Error: command failed: The ping latency of the BlueXP cloud server is <x> ms which is higher than twice the recommended latency of 200 ms.`
+
+.원인:
+클러스터가 BlueXP 클라우드와 가까운 곳에 위치하지 않거나 네트워크 경로 병목 현상이 발생할 수 있습니다.
+
+.솔루션:
+* BlueXP 클라우드(미국 동부)의 지리적 위치와 근접성을 확인하세요.
+* 네트워크 경로를 최적화하거나 병목 현상을 해결합니다.
+* 네트워크 도구를 사용하여 왕복 시간(RTT)을 측정하고 지연 시간을 권장 한도 내로 줄입니다.
+* HTTP 프록시를 사용하여 성능을 향상시키세요.
+
+
+보다 link:cloud-mediator-config-task.html["SnapMirror Active Sync를 위한 ONTAP Cloud Mediator 및 클러스터 구성"] .

@@ -23,7 +23,7 @@ ONTAP 9.13.1부터 ARP를 일시 중지하기 위해 2명 이상의 인증된 �
 link:../multi-admin-verify/enable-disable-task.html["MAV에 대해 자세히 알아보십시오"]..
 
 .이 작업에 대해
-ARP 일시 중지 중에는 이벤트가 기록되지 않으며 새 쓰기에 대한 작업도 기록되지 않습니다. 그러나 백그라운드에서 이전 로그에 대한 분석 작업은 계속됩니다.
+ARP 일시 중지 중에는 새로운 쓰기에 대한 이벤트나 작업이 기록되지 않습니다. 그러나 이전 로그에 대한 분석 작업은 백그라운드에서 계속 진행됩니다.
 
 
 NOTE: ARP 비활성화 기능을 사용하여 분석을 일시 중지하지 마십시오. 이렇게 하면 볼륨에서 ARP가 비활성화되고 학습된 워크로드 동작에 대한 기존 정보가 모두 손실됩니다. 이 경우 학습 기간을 다시 시작해야 합니다.
@@ -36,11 +36,12 @@ NOTE: ARP 비활성화 기능을 사용하여 분석을 일시 중지하지 마�
 .시스템 관리자
 --
 . 스토리지 > 볼륨 * 을 선택한 다음 ARP를 일시 중지할 볼륨을 선택합니다.
-. 볼륨 개요의 ** 보안** 탭에서 * 안티 랜섬웨어 * 상자에서 * 안티 랜섬웨어 * 일시 중지 * 를 선택합니다.
+. 볼륨 개요의 *보안* 탭에서 *랜섬웨어 방지* 상자에서 *랜섬웨어 방지 일시 중지*를 선택합니다.
 +
 
 NOTE: ONTAP 9.13.1 부터, ARP 설정을 보호하기 위해 MAV를 사용하는 경우, 일시 중지 작업은 하나 이상의 추가 관리자의 승인을 얻으라는 메시지를 표시합니다. link:../multi-admin-verify/request-operation-task.html["모든 관리자로부터 승인을 받아야 합니다"] MAV 승인 그룹과 연관되거나 작업이 실패합니다.
 
+. 모니터링을 재개하려면 *랜섬웨어 방지 재개*를 선택하세요.
 
 
 --
@@ -48,12 +49,16 @@ NOTE: ONTAP 9.13.1 부터, ARP 설정을 보호하기 위해 MAV를 사용하는
 --
 . 볼륨에서 ARP 일시 중지:
 +
-'Security Anti-랜섬웨어 volume pause-vserver_svm_name_-volume_vol_name_'
-
+[source, cli]
+----
+security anti-ransomware volume pause -vserver <svm_name> -volume <vol_name>
+----
 . 처리를 재개하려면 를 사용합니다 `resume` 명령:
 +
-'Security Anti-랜섬웨어 volume resume - vserver_svm_name_-volume_vol_name_'
-
+[source, cli]
+----
+security anti-ransomware volume resume -vserver <svm_name> -volume <vol_name>
+----
 +
 에 대한 자세한 내용은 `security anti-ransomware volume` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume+["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
@@ -64,12 +69,16 @@ MAV를 사용 중이고 예상 일시 중지 작업에 추가 승인이 필요�
 +
 .. 요청 표시:
 +
-`security multi-admin-verify request show`
-
+[source, cli]
+----
+security multi-admin-verify request show
+----
 .. 요청 승인:
 +
-`security multi-admin-verify request approve -index[_number returned from show request_]`
-
+[source, cli]
+----
+security multi-admin-verify request approve -index[<number returned from show request>]
+----
 +
 마지막 그룹 승인자에 대한 응답은 볼륨이 수정되었고 ARP 상태가 일시 중지되었음을 나타냅니다.
 
@@ -77,8 +86,10 @@ MAV를 사용 중이고 예상 일시 중지 작업에 추가 승인이 필요�
 MAV를 사용하고 있고 MAV 그룹 승인자인 경우 일시 중지 작업 요청을 거부할 수 있습니다.
 
 +
-`security multi-admin-verify request veto -index[_number returned from show request_]`
-
+[source, cli]
+----
+security multi-admin-verify request veto -index[<number returned from show request>]
+----
 +
 에 대한 자세한 내용은 `security multi-admin-verify request` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+request["ONTAP 명령 참조입니다"^]을 참조하십시오.
 

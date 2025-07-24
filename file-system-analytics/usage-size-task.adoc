@@ -2,7 +2,7 @@
 permalink: file-system-analytics/usage-size-task.html 
 sidebar: sidebar 
 keywords: large directories, system manager, file system analytics, usage, top directories 
-summary: 작업 추적 을 사용하여 실시간 성능 문제 해결을 위해 지정된 볼륨에서 핫 파일, 디렉토리, 클라이언트 및 사용자를 봅니다 
+summary: 실시간 성능 문제 해결을 위해 지정된 볼륨에서 자주 사용되는 파일, 디렉토리, 클라이언트 및 사용자를 확인하는 활동 추적 기능입니다. 
 ---
 = FSA를 사용하여 ONTAP 사용 분석 활성화
 :allow-uri-read: 

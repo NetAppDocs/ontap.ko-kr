@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/index.html
 keywords: SM-BC, SMBC, failover, terms, benefits, snapmirror active sync, TR-4878 
 summary: SnapMirror 액티브 동기화를 사용하여 LUN이 있는 애플리케이션을 보호함으로써 애플리케이션이 투명하게 페일오버될 수 있도록 하여 재해 발생 시 비즈니스 연속성을 보장합니다. 
 ---
-= ONTAP의 SnapMirror 활성 동기화 개요
+= ONTAP SnapMirror Active Sync에 대해 알아보세요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,9 +16,68 @@ summary: SnapMirror 액티브 동기화를 사용하여 LUN이 있는 애플리�
 [role="lead"]
 SnapMirror 액티브 동기화(SnapMirror Business Continuity_[SM-BC]_ 라고도 함)를 사용하면 전체 사이트 장애 시에도 비즈니스 서비스의 지속적인 운영을 유지할 수 있으며, 보조 복사본을 사용하여 애플리케이션을 투명하게 페일오버할 수 있습니다. SnapMirror 활성 동기화로 페일오버를 트리거하는 데 수동 개입이나 사용자 지정 스크립팅이 필요하지 않습니다.
 
-ONTAP 9.9.1부터 사용 가능, SnapMirror 액티브 동기화는 AFF 클러스터, ASA(All Flash SAN Array) 클러스터 및 C-Series(AFF 또는 ASA)에서 지원됩니다. 운영 클러스터와 2차 클러스터의 유형은 ASA 또는 AFF 중 하나여야 합니다. SnapMirror 액티브 동기화는 iSCSI 또는 FCP LUN으로 애플리케이션을 보호합니다.
+SnapMirror Active Sync에 대한 지원은 ONTAP 버전에 따라 다릅니다.
 
-ONTAP 9.15.1부터 SnapMirror 액티브 동기화는 을 xref:architecture-concept.html[대칭적인 액티브/액티브 기능]지원합니다. 대칭적인 액티브/액티브는 양방향 동기식 복제를 통해 보호된 LUN의 두 복사본에서 읽기 및 쓰기 I/O 작업을 지원하므로 두 LUN 복사본이 모두 로컬에서 I/O 작업을 제공할 수 있습니다. ONTAP 9.15.1 이전의 SnapMirror 활성 동기화는 보조 사이트의 데이터를 LUN에 프록시하는 비대칭 활성/활성 구성만 지원합니다. ONTAP 9.16.1 GA부터 대칭 액티브/액티브가 4노드 ONTAP 클러스터에서도 지원됩니다.
+[cols="4*"]
+|===
+
+
+| ONTAP 버전입니다 | 지원되는 클러스터 | 지원되는 프로토콜 | 지원되는 구성 
+
+
+| 9.17.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+* ASA r2
+
+ a| 
+* iSCSI
+* FC
+* NVMe를 참조하십시오
+
+ a| 
+* 비대칭 활성/활성
+
+
+
+NOTE: 비대칭 활성/활성은 ASA r2 및 NVMe를 지원하지 않습니다. NVMe 지원에 대한 자세한 내용은 다음을 참조하세요. link:../nvme/support-limitations.html["NVMe 구성, 지원 및 제한 사항"] .
+
+* 대칭적인 액티브/액티브
+
+
+
+
+| 9.15.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+
+ a| 
+* iSCSI
+* FC
+
+ a| 
+* 비대칭 활성/활성
+* 대칭적 활성/활성 대칭적 활성/활성 구성은 ONTAP 9.15.1에서 2노드 클러스터를 지원합니다. 4노드 클러스터는 ONTAP 9.16.1 이상에서 지원됩니다.
+
+
+
+
+| 9.9.1 이상  a| 
+* AFF
+* ASA
+* C-시리즈 *
+
+ a| 
+* iSCSI
+* FC
+
+ a| 
+비대칭 활성/활성
+
+|===
+1차 및 2차 클러스터는 동일한 유형이어야 합니다. link:../san-admin/learn-about-asa.html["ASA"] , link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA r2"^] , 또는 AFF.
 
 
 NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐츠가 ONTAP 제품 문서와 통합되었습니다. 이제 ONTAP SnapMirror 액티브 동기화 문서에 _TR-4878: SnapMirror active sync_의 콘텐츠가 포함되어 있습니다.
@@ -35,35 +94,34 @@ SnapMirror 액티브 동기화는 다음과 같은 이점을 제공합니다.
 * 각 애플리케이션의 장애 조치를 테스트하는 기능
 * 애플리케이션 가용성에 영향을 주지 않고 미러 클론을 즉시 생성
 * 동일한 ONTAP 클러스터에 보호된 워크로드와 보호되지 않은 워크로드를 구축할 수 있습니다.
-* LUN ID는 동일하게 유지되므로 애플리케이션은 이를 공유 가상 디바이스로 인식합니다.
+* LUN, NVMe 네임스페이스, NVMe 하위 시스템 또는 스토리지 장치 ID는 동일하게 유지되므로 애플리케이션은 이를 공유 가상 장치로 인식합니다.
 * 2차 클러스터를 유연하게 재사용하여 애플리케이션 성능 또는 가용성에 영향을 주지 않고 개발 테스트, UAT 또는 보고용으로 애플리케이션 사용을 위한 즉각적인 클론을 생성할 수 있습니다.
 
 
-SnapMirror 액티브 동기화를 사용하면 데이터 LUN을 보호할 수 있으므로 재해 시 비즈니스 연속성을 위해 애플리케이션을 투명하게 페일오버할 수 있습니다. 자세한 내용은 을 참조하십시오 link:use-cases-concept.html["사용 사례"].
+SnapMirror 액티브 싱크를 사용하면 데이터 LUN 또는 NVMe 네임스페이스를 보호하여 재해 발생 시 비즈니스 연속성을 위해 애플리케이션을 투명하게 페일오버할 수 있습니다. 자세한 내용은 다음을 참조하세요. link:use-cases-concept.html["사용 사례"] .
 
 
 
 == 주요 개념
 
-SnapMirror Active Sync는 정합성 보장 그룹 및 ONTAP 중재자를 사용하여 재해 발생 시에도 데이터가 복제되고 제공되도록 합니다. SnapMirror 활성 동기화 배포를 계획할 때는 SnapMirror Active sync와 해당 아키텍처의 필수 개념을 이해하는 것이 중요합니다.
+SnapMirror Active Sync는 일관성 그룹과 ONTAP Mediator 또는 ONTAP 9.17.1부터 ONTAP Cloud Mediator를 사용하여 재해 발생 시에도 데이터가 복제되고 서비스되도록 보장합니다. SnapMirror Active Sync 배포를 계획할 때는 SnapMirror Active Sync의 핵심 개념과 아키텍처를 이해하는 것이 중요합니다.
 
 .비대칭 및 대칭
-SnapMirror 액티브 동기화는 ONTAP 9.15.1부터 대칭 액티브/액티브 솔루션까지 비대칭 및 를 지원합니다. 이러한 옵션은 호스트가 스토리지 경로를 액세스하고 데이터를 쓰는 방식을 나타냅니다. 비대칭 구성에서는 보조 사이트의 데이터가 LUN에 프록시로 처리됩니다. 대칭 액티브/액티브 구성에서는 두 사이트가 액티브 I/O의 로컬 스토리지에 액세스할 수 있습니다
+대칭형 액티브/액티브 구성에서는 두 사이트 모두 액티브 I/O를 위해 로컬 스토리지에 액세스할 수 있습니다. 대칭형 액티브/액티브 구성은 VMware vMSC, SQL 기반 Windows 장애 조치 클러스터, Oracle RAC를 포함한 클러스터형 애플리케이션에 최적화되어 있습니다.
 
-대칭 액티브/액티브는 VMware vMSC, SQL을 통한 Windows 페일오버 클러스터 및 Oracle RAC를 포함한 클러스터형 애플리케이션에 최적화되어 있습니다.
-
+ In asymmetric active/active configurations data on the secondary site is proxied to a LUN, namespace or storage unit.
 자세한 내용은 을 참조하십시오 xref:architecture-concept.html[SnapMirror 액티브 동기화 아키텍처].
 
 .일관성 그룹
-A link:../consistency-groups/index.html["일관성 그룹"] 는 비즈니스 연속성을 위해 보호해야 하는 애플리케이션 워크로드에 대한 일관성 보장을 제공하는 FlexVol 볼륨 모음입니다.
+AFF 및 ASA 시스템의 경우 link:../consistency-groups/index.html["일관성 그룹"] 비즈니스 연속성을 위해 보호해야 하는 애플리케이션 워크로드에 대한 일관성을 보장하는 FlexVol 볼륨의 집합입니다. ASA r2 시스템에서 일관성 그룹은 스토리지 유닛의 집합입니다.
 
-정합성 보장 그룹의 목적은 여러 볼륨의 스냅샷 이미지를 동시에 생성하여 특정 시점에 볼륨 컬렉션의 장애 발생 시 정합성이 보장되는 복제본을 보장하는 것입니다. 정합성 보장 그룹을 사용하면 데이터 세트의 모든 볼륨이 정지된 후 정확히 동일한 시점에 스냅됩니다. 데이터 세트를 지원하는 전체 볼륨에서 데이터 정합성이 보장되는 복원 지점을 제공합니다. 따라서 정합성 보장 그룹은 종속 쓰기 순서 일관성을 유지합니다. 비즈니스 연속성을 위해 애플리케이션을 보호하려는 경우 소스와 대상 일관성 그룹 간에 데이터 보호 관계가 설정되도록 이 애플리케이션에 해당하는 볼륨 그룹을 일관성 그룹에 추가해야 합니다. 소스 및 대상 정합성 보장에는 동일한 수의 볼륨 및 유형이 포함되어야 합니다.
+일관성 그룹의 목적은 볼륨 또는 스토리지 유닛 컬렉션의 스냅샷 이미지를 동시에 생성하여 특정 시점에 해당 컬렉션의 충돌 발생 시에도 일관된 복사본을 유지하는 것입니다. 일관성 그룹은 데이터세트의 모든 볼륨이 정지되었다가 정확히 동일한 시점에 스냅샷되도록 보장합니다. 이를 통해 데이터세트를 지원하는 볼륨 또는 스토리지 유닛 전반에 걸쳐 데이터 일관성이 유지되는 복원 지점을 제공합니다. 따라서 일관성 그룹은 종속 쓰기 순서 일관성을 유지합니다. 비즈니스 연속성을 위해 애플리케이션을 보호하려는 경우, 해당 애플리케이션에 해당하는 볼륨 또는 스토리지 유닛 그룹을 일관성 그룹에 추가하여 소스 일관성 그룹과 대상 일관성 그룹 간에 데이터 보호 관계를 설정해야 합니다. 소스 일관성 그룹과 대상 일관성 그룹에는 동일한 개수와 유형의 볼륨이 포함되어야 합니다.
 
 .구성 요소
-SnapMirror 활성 동기화 관계에서 보호되는 일관성 그룹의 일부인 개별 볼륨 또는 LUN
+SnapMirror 활성 동기화 관계에서 보호되는 일관성 그룹의 일부인 개별 볼륨, LUN 또는 NVMe 네임스페이스( ONTAP 9.17.1부터 시작).
 
 .ONTAP 중재자
-를 클릭합니다 link:../mediator/index.html["ONTAP 중재자"] 피어링된 ONTAP 클러스터 및 노드에 대한 상태 정보를 수신하여 이 두 가지를 오케스트레이션하고 각 노드/클러스터가 정상 상태이고 실행 중인지 확인합니다. ONTAP mediator는 다음과 같은 상태 정보를 제공합니다.
+그만큼 link:../mediator/index.html["ONTAP 중재자"] 피어링된 ONTAP 클러스터 및 노드에 대한 상태 정보를 수신하여 두 클러스터 간 오케스트레이션을 수행하고 각 노드/클러스터가 정상 작동 중인지 확인합니다. ONTAP Mediator는 다음에 대한 상태 정보를 제공합니다.
 
 * 피어 ONTAP 클러스터
 * 피어 ONTAP 클러스터 노드입니다
@@ -80,6 +138,9 @@ SnapMirror 활성 동기화 관계에서 보호되는 일관성 그룹의 일부
 
 
 NOTE: ONTAP 9.15.1부터 System Manager는 두 클러스터의 SnapMirror 활성 동기화 관계 상태를 표시합니다. System Manager의 두 클러스터 중 하나에서 ONTAP 중재자의 상태를 모니터링할 수도 있습니다. 이전 ONTAP 릴리즈에서는 소스 클러스터의 SnapMirror 활성 동기화 관계 상태가 System Manager에 표시됩니다.
+
+.ONTAP 클라우드 중재자
+ONTAP Cloud Mediator는 ONTAP 9.17.1부터 사용할 수 있습니다. ONTAP Cloud Mediator는 BlueXP 사용하여 클라우드에서 호스팅된다는 점을 제외하면 ONTAP Mediator와 동일한 서비스를 제공합니다.
 
 .계획된 페일오버
 SnapMirror 활성 동기화 관계에서 복사본의 역할을 변경하기 위한 수동 작업입니다. 운영 사이트는 2차 사이트가 되고 2차 사이트는 1차 사이트가 됩니다.

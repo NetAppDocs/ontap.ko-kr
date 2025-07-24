@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: s3, svm, bucket, object, server, versioning, protocol, filesystems, nas, directories 
 summary: S3 NAS 버킷은 S3 버킷 이름과 NAS 경로 사이의 매핑입니다. 
 ---
-= S3 NAS 버킷을 생성합니다
+= ONTAP S3 NAS 버킷 생성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-S3 NAS 버킷은 S3 버킷 이름과 NAS 경로 사이의 매핑입니다. S3 NAS 버킷을 사용하면 기존 볼륨 및 디렉토리 구조가 있는 SVM 네임스페이스의 모든 부분에 S3 액세스를 제공할 수 있습니다.
+S3 NAS 버킷은 S3 버킷 이름과 NAS 경로를 매핑한 것입니다. S3 NAS 버킷을 사용하면 기존 볼륨과 디렉터리 구조를 가진 SVM 네임스페이스의 모든 부분에 대한 S3 액세스를 제공할 수 있습니다.
 
 .시작하기 전에
 * S3 오브젝트 서버는 NAS 데이터를 포함하는 SVM으로 구성됩니다.
@@ -30,14 +30,19 @@ SVM의 루트 디렉토리 내에 모든 파일 및 디렉토리 세트를 지�
 
 예를 들어, 대규모 사용자 그룹에 읽기 전용 데이터 액세스 권한을 부여하는 별도의 버킷 정책과 제한된 그룹이 해당 데이터의 하위 집합에 대한 작업을 수행할 수 있도록 하는 다른 버킷 정책이 필요할 수 있습니다.
 
-S3 NAS “버킷”은 맵핑이며 S3 버킷이 아니기 때문에 표준 S3 버킷의 다음 속성은 S3 NAS 버킷에 적용되지 않습니다.
+ONTAP 9.17.1부터 S3 NAS 버킷을 연결 경로가 아닌 볼륨에 직접 연결할 수 있습니다. 기본적으로 NAS 볼륨의 S3 버킷은 연결 경로와 연결되며, ONTAP 관리자는 언제든지 이 경로를 변경할 수 있습니다. 이러한 변경으로 인해 S3 버킷 작업이 중단될 수 있습니다. ONTAP 9.17.1부터는  `-is-nas-path-mutable false` 옵션과 함께  `vserver object-store-server bucket create` ONTAP CLI에서 명령을 사용하여 S3 NAS 버킷을 볼륨에 연결할 수 있습니다. 기본적으로  `-is-nas-path-mutable` 로 설정됩니다  `true` .
+
+S3 NAS "버킷"은 매핑이지 S3 버킷이 아니므로 표준 S3 버킷의 다음 속성은 S3 NAS 버킷에 적용되지 않습니다.
 
 * * aggr-list\aggr-list-multiplier\storage-service-level\volume\size\exclude-aggr-list\QoS-policy-group * + S3 NAS 버킷을 구성할 때 볼륨 또는 qtree가 생성되지 않습니다.
-* * 역할 \ is-protected\ is-protected-on-ONTAP\ is-protected-on-cloud * + S3 NAS 버킷은 SnapMirror S3를 사용하여 보호 또는 미러링되지 않지만 볼륨 단위로 제공되는 정기적인 SnapMirror 보호를 사용합니다.
+* *역할 \은 -protected입니다 \은 -protected-on-ontap입니다 \은 -protected-on-cloud입니다* + S3 NAS 버킷은 SnapMirror S3를 사용하여 보호되거나 미러링되지 않고 대신 볼륨 세분성에서 사용 가능한 일반 SnapMirror 보호 기능을 사용합니다.
 * *versioning-state*+ NAS 볼륨에는 일반적으로 다른 버전을 저장할 수 있는 스냅샷 기술이 있습니다. 그러나 버전 관리는 현재 S3 NAS 버킷에서 사용할 수 없습니다.
 * 볼륨 명령을 통해 NAS 볼륨에 대해 * logical-used\object-count * + 등가 통계를 사용할 수 있습니다.
-* * 멀티 파트 오브젝트 * + ONTAP 9.16.1부터 멀티 파트 오브젝트는 기본 FlexGroup 볼륨에서 이 활성화된 경우 S3 NAS 버킷에서 link:../flexgroup/enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"]지원됩니다. 고급 용량 균형 조정은 FlexGroup 볼륨에서만 활성화할 수 있습니다. FlexVol에서는 이 기능을 활성화할 수 없습니다.
+* *multipart 객체* + ONTAP 9.16.1부터 S3 NAS 버킷에서 multipart 객체가 지원됩니다. link:../flexgroup/enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"] 기본 FlexGroup 볼륨에서 활성화되어 있습니다. 고급 용량 분산은 FlexGroup 볼륨에서만 활성화할 수 있습니다. FlexVol 볼륨에서는 활성화할 수 없습니다.
 
+
+.단계
+시스템 관리자나 ONTAP CLI를 사용하여 NAS 버킷을 생성할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -56,11 +61,21 @@ NAS 지원 스토리지 VM에 새 S3 NAS 버킷을 추가합니다.
 --
 .CLI를 참조하십시오
 --
-NAS 파일 시스템이 포함된 SVM에서 S3 NAS 버킷 생성 를 누릅니다
-`vserver object-store-server bucket create -vserver _svm_name_ -bucket _bucket_name_ -type nas -nas-path _junction_path_ [-comment _text_]`
+. NAS 파일 시스템이 포함된 SVM에 S3 NAS 버킷을 만듭니다. + 
+`vserver object-store-server bucket create -vserver <svm_name> -bucket <bucket_name> -type nas -nas-path <junction_path> -is-nas-path-mutable true|false [-comment <text>]`
++
+예제 1: S3 NAS 버킷 만들기
 
-예: +
++
 `cluster1::> vserver object-store-server bucket create -bucket testbucket -type nas -path /vol1`
+
++
+예제 2: S3 NAS 버킷을 생성하고 버킷을 볼륨에 연결
+
++
+`vserver object-store-server bucket create -vserver vs1 -bucket nasbucket1 -type nas -nas-path /pathA/dir1 -is-nas-path-mutable false`
+
+
 
 --
 ====

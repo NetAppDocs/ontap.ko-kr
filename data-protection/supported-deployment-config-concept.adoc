@@ -61,6 +61,6 @@ Vault-mirror 및 Vault-Vault Cascade 배포도 지원됩니다.
 * 볼트-볼트 캐스케이드 배포는 소스 볼륨이 보조 볼륨으로 볼트되고 보조 볼륨이 3차 볼륨으로 볼트되는 관계 체인으로 구성됩니다.
 
 
-.추가 참고 자료
+.관련 정보
 * xref:../snapmirror-active-sync/recover-unplanned-failover-task.html[SnapMirror 활성 동기화를 사용하여 팬아웃 구성에서 보호를 다시 시작합니다]
 

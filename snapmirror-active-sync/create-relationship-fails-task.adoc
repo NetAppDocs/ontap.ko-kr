@@ -13,8 +13,10 @@ summary: SnapMirror 관계 및 일관성 그룹 초기화가 실패합니다.
 :imagesdir: ../media/
 
 
-.문제:
 [role="lead"]
+SnapMirror 관계 생성 및 일관성 그룹 초기화에 실패하는 경우 다음 정보를 사용합니다.
+
+.문제:
 SnapMirror 관계 및 일관성 그룹 초기화가 실패합니다.
 
 .솔루션:

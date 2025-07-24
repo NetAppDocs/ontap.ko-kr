@@ -47,6 +47,16 @@ NOTE: 클러스터당 최대 노드는 * 지원되는 플랫폼 혼합 * 에서 
 | ONTAP로 시작하는 중... | NVMe를 지원합니다 
 
 
+| 9.17.1  a| 
+* VMware 워크로드를 위한 SnapMirror 액티브 싱크 NVMe/FC 및 NVMe/TCP 호스트 액세스.
++
+
+NOTE: VMware에서 NVMe/TCP를 사용하려면 VMware 버그 ID: TR1049746이 해결되어야 합니다.
+
+
+
+
+
 | 9.15.1  a| 
 * NVMe/TCP에서 4노드 MetroCluster IP 구성
 
@@ -149,7 +159,6 @@ NVMe 네임스페이스를 사용하여 작업할 때 다음을 숙지해야 합
 == 추가 제한 사항
 
 .다음 ONTAP 기능은 NVMe 구성에서 지원되지 않습니다.
-* SnapMirror 활성 동기화
 * 가상 스토리지 콘솔
 * 영구 예약
 

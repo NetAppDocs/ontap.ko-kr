@@ -11,6 +11,8 @@ summary: ONTAP 중재자가 ONTAP 기능을 위한 몇 가지 기능을 제공�
 
 
 [role="lead"]
+이 문서는 ONTAP Mediator의 온프레미스 버전을 참조합니다. ONTAP 9.17.1부터 제공되는 ONTAP Cloud Mediator에 대한 자세한 내용은 다음을 참조하십시오. link:../snapmirror-active-sync/index.html["SnapMirror Active Sync 설명서"] .
+
 ONTAP Mediator는 ONTAP 기능에 대한 다양한 기능을 제공합니다.
 
 * HA 메타데이터에 대한 영구적이고 울타리 저장소를 제공합니다.

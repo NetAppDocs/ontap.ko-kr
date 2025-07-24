@@ -37,10 +37,10 @@ ONTAP를 통해 IPsec은 ONTAP와 NFS, SMB 및 iSCSI 프로토콜을 포함한 �
 
 == ONTAP IPsec 구현의 진화
 
-IPsec은 ONTAP 9.8에 처음 도입되었습니다. 구현은 아래에 설명된 대로 계속 발전되고 개선되어 왔습니다.
+IPsec은 ONTAP 9.8에서 처음 도입되었습니다. 이후 ONTAP 릴리스에서는 아래에 설명된 대로 구현 방식이 지속적으로 발전해 왔습니다.
 
-
-NOTE: 특정 ONTAP 릴리스부터 기능이 도입되면 별도로 언급하지 않는 한 후속 릴리스에서도 지원됩니다.
+.ONTAP 9.17.1
+IPsec 하드웨어 오프로드에 대한 지원이 확장되었습니다. link:../networking/combine_physical_ports_to_create_interface_groups.html["링크 집계 그룹"] . link:../networking/ipsec-configure.html#define-the-security-policy-database-spd["포스트퀀텀 사전 공유 키(PPK)"] IPsec 사전 공유 키(PSK) 인증이 지원됩니다.
 
 .ONTAP 9.16.1
 암호화 및 무결성 검사와 같은 여러 암호화 작업을 지원되는 NIC 카드로 오프로드할 수 있습니다. 자세한 내용은 을 <<IPsec 하드웨어 오프로드 기능>> 참조하십시오.
@@ -49,7 +49,7 @@ NOTE: 특정 ONTAP 릴리스부터 기능이 도입되면 별도로 언급하지
 MetroCluster IP 및 MetroCluster 패브릭 연결 구성에서 IPsec 프런트엔드 호스트 프로토콜 지원을 사용할 수 있습니다. MetroCluster 클러스터와 함께 제공되는 IPsec 지원은 프런트 엔드 호스트 트래픽으로 제한되며 MetroCluster 인터클러스터 LIF에서는 지원되지 않습니다.
 
 .ONTAP 9.10.1
-인증서는 미리 공유된 키(PSK)와 함께 IPsec 인증에 사용할 수 있습니다. ONTAP 9.10.1 이전에는 PSK만 인증에 지원됩니다.
+PSK 외에도 인증서를 사용하여 IPsec 인증을 수행할 수 있습니다. ONTAP 9.10.1 이전에는 PSK만 인증에 지원되었습니다.
 
 .ONTAP 9.9.1
 IPsec에 사용되는 암호화 알고리즘은 FIPS 140-2 검증을 거쳤습니다. 이러한 알고리즘은 FIPS 140-2 검증을 수행하는 ONTAP의 NetApp 암호화 모듈에 의해 처리됩니다.
@@ -70,35 +70,39 @@ ONTAP 9.16.1 이상을 사용하는 경우 암호화 및 무결성 검사와 같
 IPsec 하드웨어 오프로드 기능을 사용하기 전에 고려해야 할 몇 가지 요구 사항이 있습니다.
 
 .지원되는 이더넷 카드
-지원되는 이더넷 카드만 설치하고 사용해야 합니다. 다음 플랫폼에서 ONTAP 9.16.1에서 지원되는 이더넷 카드는 다음과 같습니다. 지원되는 플랫폼 및 카드에 대한 자세한 내용은 를 link:https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"^]참조하십시오.
+지원되는 이더넷 카드만 설치하고 사용해야 합니다. ONTAP 9.16.1부터 지원되는 이더넷 카드는 다음과 같습니다.
 
 * X50131A(2p, 40G/100G/200g/400G 이더넷 컨트롤러)
-+
-X50131A 카드는 다음 플랫폼에서 지원됩니다.
-
-+
-** ASA A1K
-** ASA A90
-** ASA A70
-** AFF A1K 를 참조하십시오
-** AFF A90 를 참조하십시오
-** AFF A70 를 참조하십시오
-
-
 * X60132A(4P, 10G/25G 이더넷 컨트롤러)
-+
-X60132A 카드는 다음 플랫폼에서 지원됩니다.
-
-+
-** ASA A50
-** ASA A30
-** ASA A20
-** AFF A50 를 참조하십시오
-** AFF A30 를 참조하십시오
-** AFF A20 를 참조하십시오
 
 
+ONTAP 9.17.1에서는 다음 이더넷 카드에 대한 지원이 추가되었습니다.
 
+* X50135A(2p, 40G/100G 이더넷 컨트롤러)
+* X60135A(2p, 40G/100G 이더넷 컨트롤러)
+
+
+X50131A 및 X50135A 카드는 다음 플랫폼에서 지원됩니다.
+
+* ASA A1K
+* ASA A90
+* ASA A70
+* AFF A1K 를 참조하십시오
+* AFF A90 를 참조하십시오
+* AFF A70 를 참조하십시오
+
+
+X60132A 및 X60135A 카드는 다음 플랫폼에서 지원됩니다.
+
+* ASA A50
+* ASA A30
+* ASA A20
+* AFF A50 를 참조하십시오
+* AFF A30 를 참조하십시오
+* AFF A20 를 참조하십시오
+
+
+를 참조하십시오 link:https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"^] 지원되는 플랫폼과 카드에 대한 자세한 내용은 여기를 참조하세요.
 
 .클러스터 범위
 IPsec 하드웨어 오프로드 기능은 클러스터에 대해 전역적으로 구성됩니다. 예를 들어, 명령은 `security ipsec config` 클러스터의 모든 노드에 적용됩니다.
@@ -124,13 +128,15 @@ security ipsec config modify -replay-window 0
 IPsec 하드웨어 오프로드 기능을 사용하기 전에 고려해야 할 몇 가지 제한 사항이 있습니다.
 
 .IPv6를 참조하십시오
-IP 버전 6은 IPsec 하드웨어 오프로드 기능에 대해 지원되지 않습니다. IPv6는 IPsec 소프트웨어 구현에서만 지원됩니다.
+IPv6는 IPsec 하드웨어 오프로드 기능을 지원하지 않습니다. IPv6는 IPsec 소프트웨어 구현에서만 지원됩니다.
 
 .확장 순서 번호
 IPsec 확장 시퀀스 번호는 하드웨어 오프로드 기능에서 지원되지 않습니다. 일반적인 32비트 시퀀스 번호만 사용됩니다.
 
 .Link Aggregation
-IPsec 하드웨어 오프로드 기능은 링크 집계를 지원하지 않습니다. 따라서 ONTAP CLI에서 명령을 통해 관리되는 인터페이스 또는 Link Aggregation 그룹과 함께 사용할 수 없습니다 `network port ifgrp`.
+ONTAP 9.17.1부터 IPsec 하드웨어 오프로드 기능을 사용할 수 있습니다. link:../networking/combine_physical_ports_to_create_interface_groups.html["링크 집계 그룹"] .
+
+9.17.1 이전 버전에서는 IPsec 하드웨어 오프로드 기능이 링크 집계를 지원하지 않습니다. 다음에서 관리하는 인터페이스 또는 링크 집계 그룹과 함께 사용할 수 없습니다.  `network port ifgrp` ONTAP CLI에서 명령을 실행합니다.
 
 
 

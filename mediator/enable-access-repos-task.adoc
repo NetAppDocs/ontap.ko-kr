@@ -50,6 +50,15 @@ RHEL 9.x를 참조하십시오
 
 
  a| 
+RHEL 10.x
+ a| 
+** rhel-10-for-x86_64-baseos-rpms
+** rhel-10-for-x86_64-appstream-rpms
+
+
+
+
+ a| 
 CentOS 7.x
  a| 
 ** C7.6.1810 - 기본 리포지토리입니다
@@ -73,6 +82,15 @@ Rocky Linux 8
 ** 베이스코스
 
 
+
+
+ a| 
+로키 리눅스 10
+ a| 
+** 애플리케이션 스트림
+** 베이스코스
+
+
 |===
 . 다음 절차 중 하나를 사용하여 위에 나열된 리포지토리에 액세스할 수 있으므로 ONTAP 중재자가 설치 프로세스 중에 필요한 패키지에 액세스할 수 있습니다.
 
@@ -88,8 +106,10 @@ NOTE: ONTAP Mediator에 "추가" 및 "선택" 저장소에 있는 Python 모듈�
 .단계
 . 필요한 리포지토리 구독:
 +
-'Subscription-manager Repos - -enable rhel-7-server-optional-rpms'
-
+[source, cli]
+----
+subscription-manager repos --enable rhel-7-server-optional-rpms
+----
 +
 다음 예제에서는 이 명령의 실행을 보여 줍니다.
 
@@ -130,11 +150,15 @@ repolist: 46,205
 .단계
 . 필요한 리포지토리 구독:
 +
-'Subscription-manager Repos -- rhel-8-for-x86_64-baseos-rpms'를 활성화합니다
-
+[source, cli]
+----
+subscription-manager repos --enable rhel-8-for-x86_64-baseos-rpms
+----
 +
-'Subscription-manager Repos - -enable rhel-8-for-x86_64-appstream-rpms'
-
+[source, cli]
+----
+subscription-manager repos --enable rhel-8-for-x86_64-appstream-rpms
+----
 +
 다음 예제에서는 이 명령의 실행을 보여 줍니다.
 
@@ -161,11 +185,15 @@ Repository 'rhel-8-for-x86_64-appstream-rpms' is enabled for this system.
 .단계
 . 필요한 리포지토리 구독:
 +
-`subscription-manager repos --enable rhel-9-for-x86_64-baseos-rpms`
-
+[source, cli]
+----
+subscription-manager repos --enable rhel-9-for-x86_64-baseos-rpms
+----
 +
-`subscription-manager repos --enable rhel-9-for-x86_64-appstream-rpms`
-
+[source, cli]
+----
+subscription-manager repos --enable rhel-9-for-x86_64-appstream-rpms
+----
 +
 다음 예제에서는 이 명령의 실행을 보여 줍니다.
 
@@ -176,6 +204,41 @@ Repository 'rhel-8-for-x86_64-appstream-rpms' is enabled for this system.
 Repository 'rhel-9-for-x86_64-baseos-rpms' is enabled for this system.
 [root@localhost ~]# subscription-manager repos --enable rhel-9-for-x86_64-appstream-rpms
 Repository 'rhel-9-for-x86_64-appstream-rpms' is enabled for this system.
+----
+. yum repolist 명령을 실행합니다.
++
+새로 가입된 리포지토리가 목록에 나타납니다.
+
+
+
+====
+.RHEL 10.x 운영 체제에 대한 절차
+[#rhel10x%collapsible]
+====
+운영 체제가 *RHEL 10.x*인 경우 다음 절차를 사용하여 저장소에 대한 액세스를 활성화하세요.
+
+.단계
+. 필요한 리포지토리 구독:
++
+[source, cli]
+----
+subscription-manager repos --enable rhel-10-for-x86_64-baseos-rpms
+----
++
+[source, cli]
+----
+subscription-manager repos --enable rhel-10-for-x86_64-appstream-rpms
+----
++
+다음 예제에서는 이 명령의 실행을 보여 줍니다.
+
++
+[listing]
+----
+[root@localhost ~]# subscription-manager repos --enable rhel-10-for-x86_64-baseos-rpms
+Repository 'rhel-10-for-x86_64-baseos-rpms' is enabled for this system.
+[root@localhost ~]# subscription-manager repos --enable rhel-10-for-x86_64-appstream-rpms
+Repository 'rhel-10-for-x86_64-appstream-rpms' is enabled for this system.
 ----
 . yum repolist 명령을 실행합니다.
 +
@@ -196,7 +259,7 @@ NOTE: 다음 예는 CentOS 7.6의 리포지토리를 보여 주고 있으며 다
 . C7.6.1810-Base 리포지토리를 추가합니다. C7.6.1810 - 기본 볼트 리포지토리에는 ONTAP 중재자를 위해 필요한 "kernel-devel" 패키지가 포함되어 있습니다.
 . /etc/yum.repos.d/CentOS-Vault.repo에 다음 줄을 추가합니다.
 +
-[listing]
+[source, cli]
 ----
 [C7.6.1810-base]
 name=CentOS-7.6.1810 - Base
@@ -231,27 +294,35 @@ repolist: 21,433
 
 
 ====
-.Rocky Linux 8 또는 9 운영 체제에 대한 절차
-[#rocky-linux-8-9%collapsible]
+.Rocky Linux 8, 9 또는 10 운영 체제에 대한 절차
+[#rocky-linux-8-9-10%collapsible]
 ====
-운영 체제가 * Rocky Linux 8 * 또는 * Rocky Linux 9 * 인 경우 다음 절차를 사용하여 리포지토리에 액세스할 수 있습니다.
+운영 체제가 *Rocky Linux 8*, *Rocky Linux 9* 또는 *Rocky Linux 10*인 경우 다음 절차를 사용하여 저장소에 대한 액세스를 활성화하세요.
 
 .단계
 . 필요한 리포지토리 구독:
 +
-`dnf config-manager --set-enabled baseos`
-
+[source, cli]
+----
+dnf config-manager --set-enabled baseos
+----
 +
-`dnf config-manager --set-enabled appstream`
-
+[source, cli]
+----
+dnf config-manager --set-enabled appstream
+----
 . 을 수행합니다 `clean` 작동:
 +
-`dnf clean all`
-
+[source, cli]
+----
+dnf clean all
+----
 . 리포지토리 목록을 확인합니다.
 +
-`dnf repolist`
-
+[source, cli]
+----
+dnf repolist
+----
 
 
 ....
@@ -272,6 +343,16 @@ baseos                         Rocky Linux 8 - BaseOS
 repo id                        repo name
 appstream                      Rocky Linux 9 - AppStream
 baseos                         Rocky Linux 9 - BaseOS
+[root@localhost ~]#
+....
+....
+[root@localhost ~]# dnf config-manager --set-enabled baseos
+[root@localhost ~]# dnf config-manager --set-enabled appstream
+[root@localhost ~]# dnf clean all
+[root@localhost ~]# dnf repolist
+repo id                        repo name
+appstream                      Rocky Linux 10 - AppStream
+baseos                         Rocky Linux 10 - BaseOS
 [root@localhost ~]#
 ....
 ====

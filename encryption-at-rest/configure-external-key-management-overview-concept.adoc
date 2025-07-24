@@ -4,13 +4,13 @@ sidebar: sidebar
 keywords: external key management, kmip, configure 
 summary: '하나 이상의 외부 키 관리 서버를 사용하여 클러스터가 암호화된 데이터에 액세스하는 데 사용하는 키를 보호할 수 있습니다. 외부 키 관리 서버는 KMIP(Key Management Interoperability Protocol)를 사용하여 노드에 키를 제공하는 스토리지 환경의 타사 시스템입니다.' 
 ---
-= ONTAP를 사용하여 외부 키 관리를 구성하는 방법에 대해 자세히 알아보십시오
+= ONTAP NetApp Volume Encryption을 사용하여 외부 키 관리 구성에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-하나 이상의 외부 키 관리 서버를 사용하여 클러스터가 암호화된 데이터에 액세스하는 데 사용하는 키를 보호할 수 있습니다. 외부 키 관리 서버는 KMIP(Key Management Interoperability Protocol)를 사용하여 노드에 키를 제공하는 스토리지 환경의 타사 시스템입니다.
+하나 이상의 외부 키 관리 서버를 사용하여 클러스터가 암호화된 데이터에 액세스하는 데 사용하는 키를 보호할 수 있습니다. 외부 키 관리 서버는 키 관리 상호 운용성 프로토콜(KMIP)을 사용하여 노드에 키를 제공하는 스토리지 환경의 타사 시스템입니다. ONTAP Onboard Key Manager 외에도 여러 외부 키 관리 서버를 지원합니다.
 
-NVE(NetApp 볼륨 암호화)는 온보드 키 관리자를 지원합니다. ONTAP 9.3부터 NVE는 외부 키 관리(KMIP)와 온보드 키 관리자를 지원합니다. ONTAP 9.10.1부터 를 사용하여 NVE 키를 보호할 수 xref:manage-keys-azure-google-task.html[Azure Key Vault 또는 Google Cloud Key Manager Service]있습니다. ONTAP 9.11.1부터 클러스터에 여러 외부 키 관리자를 구성할 수 있습니다. 을 xref:configure-cluster-key-server-task.html[클러스터된 키 서버를 구성합니다]참조하십시오.
+ Beginning with ONTAP 9.10.1, you can use xref:manage-keys-azure-google-task.html[Azure Key Vault or Google Cloud Key Manager Service] to protect your NVE keys for data SVMs. Beginning with ONTAP 9.11.1, you can configure multiple external key managers in a cluster. See xref:configure-cluster-key-server-task.html[Configure clustered key servers]. Beginning with ONTAP 9.12.0, you can use link:https://docs.aws.amazon.com/kms/latest/developerguide/overview.html[AWS' KMS^] to protect your NVE keys for data SVMs. Beginning with ONTAP 9.17.1, you can use OpenStack's xref:manage-keys-barbican-task.html[Barbican KMS] to protect your NVE keys for data SVMs.

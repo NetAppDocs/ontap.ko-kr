@@ -1,17 +1,17 @@
 ---
 permalink: system-admin/configure-saml-authentication-task.html 
 sidebar: sidebar 
-keywords: tdp, ldap, identity, provider, saml, security, assertion, markup, lanaguage, active, directory, disable, authentication, idp, active directory, troubleshoot, repair 
+keywords: tdp, ldap, identity, provider, saml, security, assertion, markup, language, active, directory, disable, authentication, idp, active directory, troubleshoot, repair 
 summary: 'ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다.' 
 ---
-= SAML 인증을 구성합니다
+= 원격 ONTAP 사용자에 대한 SAML 인증 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다. SAML 인증이 구성 및 설정되면 사용자는 Active Directory 및 LDAP와 같은 디렉터리 서비스 공급자 대신 외부 ID 공급자(IDP)에 의해 인증됩니다. SAML 인증이 해제되면 Active Directory 및 LDAP와 같이 구성된 디렉터리 서비스 공급자가 인증에 사용됩니다
+ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language) 인증을 구성할 수 있습니다. SAML 인증을 구성하고 활성화하면 사용자는 Active Directory 및 LDAP와 같은 디렉터리 서비스 공급자 대신 외부 ID 공급자(IdP)를 통해 인증됩니다. SAML 인증을 비활성화하면 Active Directory 및 LDAP와 같이 구성된 디렉터리 서비스 공급자가 인증에 사용됩니다.
 
 
 
@@ -20,48 +20,65 @@ ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language)
 System Manager 또는 CLI를 사용하여 SAML 인증을 활성화하려면 다음 단계를 수행하십시오. 클러스터에서 ONTAP 9.7 이하를 실행 중인 경우에는 System Manager에서 따라야 하는 단계가 다릅니다. 시스템에서 사용할 수 있는 System Manager 온라인 도움말을 참조하십시오.
 
 
-NOTE: SAML 인증을 활성화한 후에는 원격 사용자만 System Manager GUI에 액세스할 수 있습니다. SAML 인증이 활성화된 후에는 로컬 사용자가 System Manager GUI에 액세스할 수 없습니다.
+NOTE: SAML 인증을 활성화하면 SAML 인증이 구성된 원격 사용자만 System Manager GUI에 액세스할 수 있습니다. SAML 인증이 활성화된 후에는 로컬 사용자가 System Manager GUI에 액세스할 수 없습니다.
 
-image:workflow_security_mfa_setup.gif["SAML을 사용한 다중 요소 인증을 설정하는 작업의 워크플로우입니다"]
-
-.시작하기 전에
-* 원격 인증에 사용하려는 IDP를 구성해야 합니다.
-+
-[NOTE]
-====
-구성한 IDP에서 제공하는 설명서를 참조하십시오.
-
-====
-* IDP의 URI가 있어야 합니다.
-
+image:workflow_security_mfa_setup.gif["SAML을 사용하여 다중 요소 인증을 설정하는 작업의 워크플로"]
 
 .이 작업에 대해
-* SAML 인증은 'http' 및 'ontapi' 애플리케이션에만 적용됩니다.
+* SAML 인증은 ONTAP 에만 적용됩니다.  `http` 그리고  `ontapi` 응용 프로그램.
 +
-http와 ontapi 애플리케이션은 서비스 프로세서 인프라, ONTAP API, System Manager 등의 웹 서비스에서 사용됩니다.
+그만큼  `http` 그리고  `ontapi` 애플리케이션은 다음 웹 서비스에서 사용됩니다: 서비스 프로세서 인프라, ONTAP API, 시스템 관리자.
 
 * SAML 인증은 관리 SVM에 액세스하는 경우에만 적용됩니다.
+* ONTAP 9.17.1부터 IdP에서 제공하는 그룹 정보를 ONTAP 역할에 매핑할 수 있습니다. 이를 통해 IdP에 정의된 그룹을 기반으로 사용자에게 역할을 할당할 수 있습니다. 자세한 내용은 다음을 참조하세요. link:../authentication/authentication-groups.html["ONTAP 에서 OAuth 2.0 또는 SAML IdP 그룹 작업"] .
 
 
 다음 IdP는 System Manager에서 검증되었습니다.
 
+* Microsoft Entra ID( ONTAP 9.17.1 이상에서 검증됨)
 * Active Directory 페더레이션 서비스
-* Cisco Duo(다음 ONTAP 버전에서 검증:)
+* Cisco Duo(다음 ONTAP 버전으로 검증됨)
 +
 ** 9.7P21 이상 9.7 릴리스(참조 https://docs.netapp.com/us-en/ontap-system-manager-classic/online-help-96-97/task_setting_up_saml_authentication.html["System Manager Classic 설명서"^])
-** 9.8P17 이상 9.8 릴리스
-** 9.9.1P13 이상 9.9 릴리스
-** 9.10.1P9 이상 9.10 릴리스
-** 9.11.1P4 이상 9.11 릴리즈
+** 9.8P17 및 이후 9.8 패치 릴리스
+** 9.9.1P13 및 이후 9.9.1 패치 릴리스
+** 9.10.1P9 및 이후 9.10.1 패치 릴리스
+** 9.11.1P4 및 이후 9.11.1 패치 릴리스
 ** 9.12.1 이상 릴리즈
 
 
 * 시바볼레스
 
 
-환경에 따라 다음 단계를 수행하십시오.
+.시작하기 전에
+* 원격 인증에 사용할 IdP는 다음과 같아야 합니다<<타사 IdP 구성,구성됨>>. IdP의 URI가 있어야 합니다. URI는 ONTAP 인증 요청을 보내고 응답을 받는 웹 주소입니다.
+* ONTAP 클러스터와 IdP 사이에서 포트 443이 열려 있어야 합니다.
+* ONTAP 클러스터와 IdP는 각각 상대방의 정규화된 도메인 이름에 ping을 보낼 수 있어야 합니다. DNS가 올바르게 구성되었고 클러스터 인증서가 만료되지 않았는지 확인하십시오.
+* 필요한 경우 IdP의 신뢰할 수 있는 인증 기관(CA)을 ONTAP 에 추가하세요 당신은 할 수 있어요 link:../authentication/manage-certificates-sm-task.html["System Manager를 사용하여 ONTAP 인증서 관리"]. IdP에서 ONTAP 클러스터 인증서를 구성해야 할 수도 있습니다
+* ONTAP 클러스터에 액세스할 수 있어야 합니다. link:../system-admin/sp-concept.html["서비스 프로세서(SP)"] 콘솔. SAML이 잘못 구성된 경우 SP 콘솔에서 비활성화해야 합니다.
+* Entra ID( ONTAP 9.17.1부터 검증됨)를 사용하는 경우, ONTAP SAML 구성을 생성하기 전에 ONTAP 메타데이터로 Entra ID를 구성해야 합니다. Entra ID는 ONTAP 메타데이터로 구성될 때까지 IdP URI를 제공하지 않습니다. IdP URI는 ONTAP SAML 구성을 생성하는 데 필수적입니다.
++
+** System Manager를 사용하여 SAML을 구성하는 경우, System Manager에서 ONTAP 메타데이터를 제공할 때까지 IdP URI 필드를 비워 두십시오. ONTAP 메타 ONTAP 로 Entra ID를 구성한 후, SAML 구성을 활성화하기 전에 IdP URI를 System Manager에 복사하십시오.
+** ONTAP CLI를 사용하여 SAML을 구성하는 경우, ONTAP SAML 구성을 활성화하기 전에 ONTAP 메타데이터를 생성해야 합니다. 다음 명령을 사용하여 ONTAP 메타데이터 파일을 생성할 수 있습니다.
++
+[source, cli]
+----
+security saml-sp default-metadata create -sp-host <ontap_host_name>
+----
++
+`ontap_host_name` SAML 서비스 공급자 호스트의 호스트 이름 또는 IP 주소이며, 이 경우 ONTAP 시스템입니다. 기본적으로 클러스터 관리 IP 주소가 사용됩니다. 선택적으로 ONTAP 서버 인증서 정보를 제공할 수 있습니다. 기본적으로 ONTAP 웹 서버 인증서 정보가 사용됩니다.
+
++
+제공된 메타데이터를 사용하여 Entra ID를 구성하세요. ONTAP SAML 구성을 생성하기 전에 Entra ID를 구성해야 합니다. Entra가 구성된 후 아래 CLI 절차를 진행하세요.
+
+** 클러스터의 모든 노드가 버전 9.17.1이 될 때까지 Entra ID에 대한 ONTAP 메타데이터를 생성할 수 없습니다.
+
+
+
 
 .단계
+환경에 따라 다음 단계를 수행하십시오.
+
 [role="tabbed-block"]
 ====
 .시스템 관리자
@@ -69,8 +86,8 @@ http와 ontapi 애플리케이션은 서비스 프로세서 인프라, ONTAP API
 . 클러스터 > 설정 * 을 클릭합니다.
 . SAML 인증 * 옆에 있는 을 image:icon_gear.gif["작업 아이콘"]클릭합니다.
 . SAML 인증 활성화 * 확인란이 선택되어 있는지 확인합니다.
-. IDP URI의 URL(포함)을 입력합니다 .
-. 필요한 경우 호스트 시스템 주소를 수정합니다.
+. IdP URI의 URL을 입력하세요(다음 포함) "https://"[] ). Entra ID를 사용하는 경우 이 단계를 건너뛰세요.
+. 필요한 경우 호스트 시스템 주소를 수정하세요. 이 주소는 인증 후 IdP가 연결할 주소입니다. 기본값은 클러스터 관리 IP 주소입니다.
 . 올바른 인증서가 사용되고 있는지 확인합니다.
 +
 ** 시스템이 "서버" 유형의 인증서를 하나만 사용하여 매핑된 경우 해당 인증서는 기본값으로 간주되어 표시되지 않습니다.
@@ -78,10 +95,10 @@ http와 ontapi 애플리케이션은 서비스 프로세서 인프라, ONTAP API
 
 
 . 저장 * 을 클릭합니다. 확인 창에 메타데이터 정보가 표시되며, 이 정보는 클립보드에 자동으로 복사됩니다.
-. 지정한 IDP 시스템으로 이동하고 클립보드에서 메타데이터를 복사하여 시스템 메타데이터를 업데이트합니다.
+. 지정한 IdP 시스템으로 이동하여 클립보드에서 메타데이터를 복사하여 시스템 메타데이터를 업데이트하세요. Entra ID를 사용하는 경우, 시스템 메타데이터로 Entra ID를 구성한 후 IdP URI를 ONTAP 에 복사하세요.
 . System Manager의 확인 창으로 돌아가서 * 호스트 URI 또는 메타데이터 * 를 사용하여 IDP를 구성했는지 * 확인란을 선택합니다.
 . SAML 기반 인증을 활성화하려면 * 로그아웃 * 을 클릭합니다. IDP 시스템에 인증 화면이 표시됩니다.
-. IdP 시스템에서 SAML 기반 자격 증명을 입력합니다. 자격 증명이 확인되면 System Manager 홈 페이지로 이동합니다.
+. IdP 로그인 페이지에서 SAML 기반 자격 증명을 입력하세요. 자격 증명이 확인되면 시스템 관리자 홈페이지로 이동합니다.
 
 
 --
@@ -96,7 +113,7 @@ IDP_Uri는 IDP 메타데이터를 다운로드할 수 있는 IDP 호스트의 FT
 
 +
 
-NOTE: 물음표(`?`)는 명령줄 활성 도움말을 활성화합니다. URI의 일부로 물음표를 입력하려면 명령으로 활성 도움말을 사용하지 않도록 설정해야 `set -active-help false` 합니다. 나중에 명령을 사용하여 활성 도움말을 다시 활성화할 수 `set -active-help true` 있습니다. 에 대한 자세한 내용은 `set` link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+NOTE: 일부 URL에는 물음표(?) 문자가 포함되어 있습니다. 물음표는 ONTAP 명령줄의 활성 도움말을 활성화합니다. 물음표가 있는 URL을 입력하려면 먼저 다음 명령을 사용하여 활성 도움말을 비활성화해야 합니다.  `set -active-help false` . 활성 도움말은 나중에 다음 명령을 사용하여 다시 활성화할 수 있습니다.  `set -active-help true` . 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"] .
 
 +
 'ontap_host_name'은 SAML 서비스 공급자 호스트의 호스트 이름 또는 IP 주소이며, 이 경우 ONTAP 시스템입니다. 기본적으로 클러스터 관리 LIF의 IP 주소가 사용됩니다.
@@ -115,25 +132,22 @@ Do you want to continue? {y|n}: y
 [Job 179] Job succeeded: Access the SAML SP metadata using the URL:
 https://10.0.0.1/saml-sp/Metadata
 
-Configure the IdP and Data ONTAP users for the same directory server domain to ensure that users are the same for different authentication methods. See the "security login show" command for the Data ONTAP user configuration.
+Configure the IdP and ONTAP users for the same directory server domain to ensure that users are the same for different authentication methods. See the "security login show" command for the ONTAP user configuration.
 ----
 +
 ONTAP 호스트 메타데이터에 액세스할 수 있는 URL이 표시됩니다.
 
-. IDP 호스트에서 ONTAP 호스트 메타데이터를 사용하여 IDP를 구성합니다.
-+
-IDP 구성에 대한 자세한 내용은 IDP 설명서를 참조하십시오.
-
-. SAML 구성 활성화:
+. IdP 호스트에서 <<타사 IdP 구성,IdP 구성>> ONTAP 호스트 메타데이터를 사용합니다. Entra ID를 사용하는 경우 이 단계는 이미 완료되었습니다.
+. IdP가 구성되면 SAML 구성을 활성화합니다.
 +
 `security saml-sp modify -is-enabled true`
 
 +
 'http' 또는 'ontapi' 애플리케이션에 액세스하는 기존 사용자는 자동으로 SAML 인증을 위해 구성됩니다.
 
-. SAML이 구성된 후 'http' 또는 'ontapi' 애플리케이션에 대한 사용자를 생성하려면 SAML을 새 사용자의 인증 방법으로 지정합니다.
+. 사용자를 생성하려면  `http` 또는  `ontapi` SAML이 구성된 후 애플리케이션에서 새 사용자에 대한 인증 방법으로 SAML을 지정하십시오. ONTAP 9.17.1 이전에는 기존 사용자에 대해 SAML 로그인이 자동으로 생성됩니다.  `http` 또는  `ontapi` SAML이 활성화된 경우 사용자. 새 사용자는 SAML에 맞게 구성해야 합니다. ONTAP 9.17.1부터 SAML을 사용하여 생성된 모든 사용자는  `password` ,  `domain` , 또는  `nsswitch` SAML이 활성화되면 인증 방법은 IdP에 대해 자동으로 인증됩니다.
 +
-.. SAML 인증을 사용하여 새 사용자에 대한 로그인 방법을 생성합니다.
+.. 인증을 사용하여 새 사용자를 위한 로그인 방법을 만듭니다.  `user_name` IdP에 구성된 사용자 이름과 일치해야 합니다.
 +
 
 NOTE:  `user_name`값은 대/소문자를 구분합니다. 사용자 이름만 포함시키고 도메인의 일부를 포함하지 마십시오.
@@ -147,7 +161,7 @@ NOTE:  `user_name`값은 대/소문자를 구분합니다. 사용자 이름만 �
 +
 [listing]
 ----
-cluster_12::> security login create -user-or-group-name admin1 -application http -authentication-method saml -vserver  cluster_12
+cluster_12::> security login create -user-or-group-name admin1 -application http -authentication-method saml -vserver cluster_12
 ----
 .. 사용자 항목이 생성되었는지 확인합니다.
 +
@@ -190,7 +204,7 @@ admin1         http        password      backup           no     none
 
 == SAML 인증을 비활성화합니다
 
-외부 ID 공급자(IDP)를 사용하여 웹 사용자 인증을 중지하려면 SAML 인증을 사용하지 않도록 설정할 수 있습니다. SAML 인증이 비활성화되면 Active Directory 및 LDAP와 같이 구성된 디렉터리 서비스 공급자가 인증에 사용됩니다.
+외부 ID 공급자(IdP)를 통한 원격 System Manager 사용자 인증을 중지하려면 SAML 인증을 비활성화할 수 있습니다. SAML 인증을 비활성화하면 로컬 사용자 인증 또는 Active Directory 및 LDAP와 같은 구성된 디렉터리 서비스 공급자가 사용자를 인증하는 데 사용됩니다.
 
 환경에 따라 다음 단계를 수행하십시오.
 
@@ -216,6 +230,105 @@ admin1         http        password      backup           no     none
 `security saml-sp delete`
 
 
+
+--
+====
+
+
+== 타사 IdP 구성
+
+.이 작업에 대해
+ONTAP 으로 인증하려면 IdP 설정을 변경해야 할 수 있습니다. 다음 섹션에서는 지원되는 IdP에 대한 구성 정보를 제공합니다.
+
+[role="tabbed-block"]
+====
+.내부 ID
+--
+Entra ID를 구성할 때 새 애플리케이션을 생성하고 ONTAP 에서 제공하는 메타데이터를 사용하여 SAML 로그인을 구성하세요. 애플리케이션 생성 후 애플리케이션 SAML 설정의 "속성 및 클레임" 섹션을 다음과 같이 편집하세요.
+
+[cols="2,2"]
+|===
+| 설정 | 값 
+
+
+| 이름 | 항아리:oid:0.9.2342.19200300.100.1.1 
+
+
+| 네임스페이스 | _비워두세요_ 
+
+
+| 이름 형식 | URI 
+
+
+| 출처 | 기인하다 
+
+
+| 소스 속성 | 사용자.사용자 주체 이름 
+|===
+Entra ID로 그룹을 사용하려면 다음 설정으로 그룹 클레임을 추가하세요.
+
+[cols="2,2"]
+|===
+| 설정 | 값 
+
+
+| 이름 | 항아리:oid:1.3.6.1.4.1.5923.1.5.1.1 
+
+
+| 네임스페이스 | _비워두세요_ 
+
+
+| 소스 속성 | 그룹 ID입니다 
+|===
+Entra ID는 UUID 형식으로 그룹 정보를 제공합니다. Entra ID를 사용하여 그룹을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요. link:../authentication/authentication-groups.html#manage-groups-with-uuids["UUID를 사용하여 그룹을 관리합니다"] .
+
+애플리케이션 SAML 설정의 "SAML 인증서" 섹션에 제공된 _앱 페더레이션 메타데이터 URL_은 ONTAP 에 입력할 IdP URI입니다.
+
+Entra ID 다중 인증 구성에 대한 정보는 다음을 참조하세요. link:https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-getstarted["Microsoft Entra 다중 인증 배포 계획"^] .
+
+자세한 내용은 다음을 참조하세요. link:https://learn.microsoft.com/en-us/entra/identity/["Entra ID 문서"^] .
+
+--
+.Active Directory 페더레이션 서비스
+--
+AD FS(Active Directory Federation Services)를 구성할 때는 ONTAP 에서 제공하는 서비스 공급자 메타데이터를 사용하여 새로운 클레임 인식 신뢰 당사자 트러스트를 추가해야 합니다. 신뢰 당사자 트러스트가 생성되면 "LDAP 특성을 클레임으로 보내기" 템플릿을 사용하여 신뢰 당사자 트러스트의 클레임 발급 정책에 다음 클레임 규칙을 추가합니다.
+
+[cols="1,2,2"]
+|===
+| 속성 저장소 | LDAP 속성 | 발신 청구 유형 
+
+
+| Active Directory를 클릭합니다 | SAM 계정 이름 | 이름 ID 
+
+
+| Active Directory를 클릭합니다 | SAM 계정 이름 | 항아리:oid:0.9.2342.19200300.100.1.1 
+
+
+| Active Directory를 클릭합니다 | 이름 형식 | urn:oasis:names:tc:SAML:2.0:attrname-format:uri 
+
+
+| Active Directory를 클릭합니다 | 토큰 그룹 - 도메인 이름으로 적격화됨 | 항아리:oid:1.3.6.1.4.1.5923.1.5.1.1 
+
+
+| Active Directory를 클릭합니다 | sAMAccountName | 항아리:oid:1.2.840.113556.1.4.221 
+|===
+AD FS는 이름 형식으로 그룹 정보를 제공합니다. AD FS에서 그룹을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요. link:../authentication/authentication-groups.html#manage-groups-with-names["이름으로 그룹을 관리합니다"] .
+
+자세한 내용은 다음을 참조하세요. link:https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/ad-fs-overview["AD FS 설명서"^] .
+
+--
+.Cisco 듀오
+--
+를 참조하세요 link:https://duo.com/docs/sso-netapp-ontap["Cisco Duo 설명서"^] 구성 정보.
+
+--
+.시바볼레스
+--
+Shibboleth IdP를 구성하기 전에 LDAP 서버를 구성해야 합니다.
+
+ONTAP 에서 SAML을 활성화할 때 제공된 호스트 메타데이터 XML을 저장하세요. Shibboleth가 설치된 호스트에서 다음 내용을  `metadata/sp-metadata.xml` Shibboleth IdP 홈 디렉토리 내의 호스트 메타데이터 XML을 사용합니다.
+
+자세한 내용은 다음을 참조하세요. link:https://www.shibboleth.net["시바볼레스"^] .
 
 --
 ====

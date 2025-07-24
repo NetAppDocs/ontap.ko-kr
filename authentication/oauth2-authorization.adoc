@@ -43,4 +43,4 @@ builtin 또는 custom 중 하나의 명명된 REST 역할을 사용할 수 있�
 
 
 
-자세한 내용은 을 link:../authentication/oauth2-groups.html["그룹 작업"] 참조하십시오.
+보다 link:../authentication/authentication-groups.html["ONTAP 에서 OAuth 2.0 또는 SAML IdP 그룹 작업"] 자세한 내용은.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view, default, certificates, tls, applications, transport 
 summary: 'ONTAP TLS(전송 계층 보안)를 사용하여 ONTAP 애플리케이션에 대한 기본 신뢰할 수 있는 루트 인증서 세트를 제공합니다.' 
 ---
-= TLS 기반 응용 프로그램에 대한 기본 인증서를 봅니다
+= ONTAP 에서 TLS 기반 애플리케이션의 기본 인증서 보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

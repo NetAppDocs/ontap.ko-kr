@@ -34,6 +34,8 @@ entries:
     url: "/system-admin/audit-display-log-contents-task.html"
   - title: 감사 가져오기 요청 설정을 관리합니다
     url: "/system-admin/audit-manage-get-requests-task.html"
+  - title: 클러스터 간 감사 활성화
+    url: "/system-admin/audit-manage-cross-cluster-requests.html"
   - title: 감사 로그 대상을 관리합니다
     url: "/system-admin/forward-command-history-log-file-destination-task.html"
 - title: AutoSupport

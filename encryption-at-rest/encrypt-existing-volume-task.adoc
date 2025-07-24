@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enabling, encryption, existing, volume, volume move start, command, volume encryption conversion start 
 summary: volume move start 명령을 사용하거나 volume encryption conversion start 명령을 사용하여 두 가지 방법 중 하나를 사용하여 기존 볼륨에서 암호화를 활성화할 수 있습니다. 
 ---
-= 기존 볼륨에 암호화를 설정합니다
+= 기존 ONTAP 볼륨에서 NAE 또는 NVE 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

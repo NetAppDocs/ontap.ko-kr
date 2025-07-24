@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/prerequisites-reference.html
 keywords: SM-BC, SMBC, prerequisites, planning, software, hardware, licensing, protocols, network, snapmirror active sync 
 summary: SnapMirror 액티브 동기화 솔루션 배포를 계획할 때 고려해야 할 몇 가지 사전 요구 사항이 있습니다. 
 ---
-= ONTAP에서 SnapMirror 활성 동기화를 위한 사전 요구 사항
+= ONTAP SnapMirror Active Sync를 위한 필수 구성 요소
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ SnapMirror 활성 동기화 배포를 계획할 때 다양한 하드웨어, 소�
 |===
 
 
-| 클러스터 유형입니다 | 지원 모델 | 지원되는 기능 | 노드가 지원됩니다 
+| 클러스터 유형입니다 | 지원 모델 | 지원되는 기능 | 지원되는 최대 클러스터 노드 
 
 
  a| 
@@ -36,34 +36,35 @@ A-시리즈, C-시리즈
  a| 
 자동 페일오버 이중(대칭형 Active/Active), 자동 페일오버(비대칭형 Active/Active)
  a| 
-2노드 클러스터 또는 4노드 클러스터
+* 2 (ONTAP 9.9.1 이상)
+* 4 (대칭 AA 구성을 갖춘 ONTAP 9.16.1)
+
 
 
 
  a| 
-All SAN 어레이(ASA)
+ASA
  a| 
 A-시리즈, C-시리즈
  a| 
 자동 페일오버 이중(대칭형 AA), 자동 페일오버(비대칭형 AA)
  a| 
-2노드 클러스터 또는 4노드 클러스터
+* 2 (ONTAP 9.9.1 이상
+* 4 (대칭 AA 구성을 갖춘 ONTAP 9.16.1)
+
 
 
 
  a| 
 ASA r2
  a| 
--
+모두
  a| 
 자동 페일오버 이중(대칭형 AA)
  a| 
-2노드 고가용성(HA) 클러스터
+2
 
 |===
-. 4노드 클러스터는 ONTAP 9.16.1부터 지원되며 대칭형 AA가 필요합니다.
-
-
 아래 표에는 클러스터 유형 간 복제 기능이 간략하게 정리되어 있습니다.
 
 [cols="33,33,33"]
@@ -92,16 +93,22 @@ ASA
 
 
  a| 
-ASA 1
+ASA
  a| 
 ASA r2
  a| 
 아니요
 
+
+
+ a| 
+ASA r2
+ a| 
+ASA r2
+ a| 
+예
+
 |===
-. ASA가 지원하는 클러스터 유형에 대한 자세한 내용은 을 참조하십시오link:../asa/support-limitations.html["All-Flash SAN 어레이 구성 제한 및 지원"].
-
-
 
 
 == 소프트웨어
@@ -116,6 +123,20 @@ ASA r2
 
 
 | ONTAP 중재자 버전 | 지원되는 Linux 버전 
+
+
+ a| 
+1.10
+ a| 
+* Red Hat Enterprise Linux
++
+** 호환 가능: 9.5 ^1^
+** 권장: 8.10, 9.4, 9.6 및 10
+
+
+* Rocky Linux 8.10, 9.6 및 10
+
+
 
 
  a| 
@@ -235,10 +256,33 @@ NOTE: 2019년 6월 이전에 ONTAP 스토리지 시스템을 구입한 경우 �
 
 == 지원되는 프로토콜
 
-* SAN 프로토콜만 지원됩니다(NFS/SMB 제외).
-* Fibre Channel 및 iSCSI 프로토콜만 지원됩니다.
-* 클러스터 피어 관계를 위한 SnapMirror 액티브 동기화에 기본 IPspace가 필요합니다. 사용자 지정 IPspace는 지원되지 않습니다.
+SnapMirror Active Sync는 SAN 프로토콜을 지원합니다.
 
+* FC 및 iSCSI 프로토콜은 ONTAP 9.9.1부터 지원됩니다.
+* NVMe 프로토콜은 ONTAP 9.17.1부터 VMware 워크로드에서 지원됩니다.
++
+
+NOTE: VMware에서 NVMe/TCP를 사용하려면 VMware 버그 ID: TR1049746이 해결되어야 합니다.
+
++
+SnapMirror Active Sync는 NVMe 프로토콜을 사용하여 다음을 지원하지 않습니다.
+
++
+** 4노드 대칭 액티브/액티브 구성
+** 일관성 그룹 크기의 변화
++
+SnapMirror Active Sync와 함께 NVMe 프로토콜을 사용하는 경우 일관성 그룹을 확장하거나 축소할 수 없습니다.
+
+** 동일한 일관성 그룹에서 LUN과 네임스페이스의 공존은 지원되지 않습니다.
+
+
+
+
+
+
+== IPspace
+
+클러스터 피어 관계를 위한 SnapMirror 액티브 동기화에 기본 IPspace가 필요합니다. 사용자 지정 IPspace는 지원되지 않습니다.
 
 
 

@@ -1,0 +1,93 @@
+---
+permalink: system-admin/use-hsts-task.html 
+sidebar: sidebar 
+keywords: manage, http, https, hsts, strict transport security, security, web, access, certificate, encrypted, connection, server, browser, web services 
+summary: HSTS를 사용하여 ONTAP 웹 서비스에 대한 HTTPS 연결을 적용합니다. 
+---
+= ONTAP 웹 서비스에 HSTS 사용
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HTTP Strict Transport Security(HSTS)는 프로토콜 다운그레이드 공격 및 쿠키 하이재킹과 같은 중간자 공격으로부터 웹사이트를 보호하는 웹 보안 정책 메커니즘입니다. HSTS는 HTTPS 사용을 강제함으로써 사용자 브라우저와 서버 간의 모든 통신이 암호화되도록 보장합니다. ONTAP 9.17.1부터 ONTAP ONTAP 웹 서비스에 HTTPS 연결을 강제할 수 있습니다.
+
+
+NOTE: HSTS는 ONTAP 과 초기 보안 HTTPS 연결이 설정된 후에만 웹 브라우저에 의해 적용됩니다. 브라우저가 초기 보안 연결을 설정하지 않으면 HSTS가 적용되지 않습니다. HSTS 관리에 대한 자세한 내용은 브라우저 설명서를 참조하십시오.
+
+.이 작업에 대해
+* 9.17.1 이상에서는 새로 설치된 ONTAP 클러스터에 대해 HSTS가 기본적으로 활성화되어 있습니다. 9.17.1로 업그레이드하면 HSTS가 기본적으로 활성화되지 않습니다. 업그레이드 후 HSTS를 활성화해야 합니다.
+* HSTS는 모든 지원됩니다 link:../system-admin/manage-web-services-concept.html["ONTAP 웹 서비스"] .
+
+
+.시작하기 전에
+* 다음 작업에는 고급 권한이 필요합니다.
+
+
+
+
+== HSTS 구성 표시
+
+현재 HSTS 구성을 표시하여 활성화되어 있는지 확인하고 최대 연령 설정을 볼 수 있습니다.
+
+.단계
+. 사용하세요  `system services web show` HSTS 설정을 포함한 현재 웹 서비스 구성을 표시하는 명령:
++
+[listing]
+----
+cluster-1::system services web*> show
+
+                   External Web Services: true
+                               HTTP Port: 80
+                              HTTPS Port: 443
+                         Protocol Status: online
+                       Per Address Limit: 80
+                     Wait Queue Capacity: 192
+                            HTTP Enabled: true
+                 CSRF Protection Enabled: true
+Maximum Number of Concurrent CSRF Tokens: 500
+       CSRF Token Idle Timeout (Seconds): 900
+   CSRF Token Absolute Timeout (Seconds): 0
+          Allow Web Management via Cloud: true
+Enforce Network Interface Service-Policy: -
+                            HSTS Enabled: true
+                  HSTS max age (Seconds): 63072000
+----
+
+
+
+
+== HSTS를 활성화하고 최대 연령을 설정하세요
+
+ONTAP 9.17.1부터 새 ONTAP 클러스터에서 HSTS가 기본적으로 활성화됩니다. 기존 클러스터를 9.17.1 이상으로 업그레이드하는 경우, HTTPS 사용을 강제하려면 클러스터에서 HSTS를 수동으로 활성화해야 합니다. HSTS를 활성화하고 최대 사용 기간을 설정할 수 있습니다. HSTS가 활성화된 경우 언제든지 최대 사용 기간을 변경할 수 있습니다. HSTS가 활성화되면 브라우저는 초기 보안 연결이 설정된 후에만 보안 연결을 적용하기 시작합니다.
+
+.단계
+. 사용하세요  `system services web modify` HSTS를 활성화하거나 최대 연령을 수정하는 명령:
++
+[source, cli]
+----
+system services web modify -hsts-enabled true -hsts-max-age <seconds>
+----
++
+`-hsts-max-age` 브라우저가 HTTPS를 강제 적용하는 기간을 초 단위로 지정합니다. 기본값은 63072000초(2년)입니다.
+
+
+
+
+
+== HSTS 비활성화
+
+브라우저는 각 연결마다 HSTS 최대 사용 기간 설정을 저장하며, ONTAP 에서 HSTS가 비활성화된 경우에도 전체 기간 동안 HSTS를 계속 적용합니다. HSTS가 비활성화된 후 브라우저가 HSTS 적용을 중단하는 데는 설정된 최대 사용 기간까지 걸립니다. 이 기간 동안 보안 연결이 불가능해지면 HSTS를 적용하는 브라우저는 문제가 해결되거나 브라우저의 최대 사용 기간이 만료될 때까지 ONTAP 웹 서비스에 대한 액세스를 허용하지 않습니다.
+
+.단계
+. HSTS를 비활성화하려면 다음을 사용하세요.  `system services web modify` 명령:
++
+[source, cli]
+----
+system services web modify -hsts-enabled false
+----
+
+
+.관련 정보
+link:https://datatracker.ietf.org/doc/html/rfc6797["RFC 6797 - HTTP 엄격한 전송 보안(HSTS)"^]

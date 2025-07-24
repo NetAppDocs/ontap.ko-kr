@@ -50,52 +50,52 @@ image:flexgroup1.png["System Manager의 파일 시스템 분석 스크린샷"]
 
 각 ONTAP 릴리즈는 파일 시스템 분석 범위를 확장합니다.
 
-[cols="3,1,1,1,1,1,1,1,1"]
+[cols="3,1,1,1,1,1,1,1"]
 |===
-|  | ONTAP 9.15.1 | ONTAP 9.14.1 | ONTAP 9.13.1 | ONTAP 9.12.1 | ONTAP 9.11.1 | ONTAP 9.10.1 | ONTAP 9.9.1 | ONTAP 9.8 
+|  | ONTAP 9.14.1 이상 | ONTAP 9.13.1 | ONTAP 9.12.1 | ONTAP 9.11.1 | ONTAP 9.10.1 | ONTAP 9.9.1 | ONTAP 9.8 
 
 
-| System Manager의 시각화 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
+| System Manager의 시각화 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
 
 
-| 용량 분석 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
+| 용량 분석 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
 
 
-| 비활성 데이터 정보 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
+| 비활성 데이터 정보 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
 
 
-| Data ONTAP 7-Mode에서 전환된 볼륨 지원 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
+| Data ONTAP 7-Mode에서 전환된 볼륨 지원 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
 
 
-| System Manager에서 비활성 기간을 사용자 지정할 수 있습니다 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
+| System Manager에서 비활성 기간을 사용자 지정할 수 있습니다 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  
 
 
-| 볼륨 레벨 활동 추적 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+| 볼륨 레벨 활동 추적 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
-| 활동 추적 데이터를 CSV로 다운로드합니다 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+| 활동 추적 데이터를 CSV로 다운로드합니다 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
-| SVM 레벨의 활동 추적 을 참조하십시오 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  
+| SVM 레벨의 활동 추적 을 참조하십시오 | ✓ | ✓ | ✓ | ✓ |  |  |  
 
 
-| 타임라인 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  
+| 타임라인 | ✓ | ✓ | ✓ | ✓ |  |  |  
 
 
-| 사용 분석 | ✓ | ✓ | ✓ | ✓ |  |  |  |  
+| 사용 분석 | ✓ | ✓ | ✓ |  |  |  |  
 
 
-| File System Analytics를 기본적으로 설정하는 옵션입니다 | ✓ | ✓ | ✓ |  |  |  |  |  
+| File System Analytics를 기본적으로 설정하는 옵션입니다 | ✓ | ✓ |  |  |  |  |  
 
 
-| 초기화 스캔 진행 모니터 | ✓ | ✓ |  |  |  |  |  |  
+| 초기화 스캔 진행 모니터 | ✓ |  |  |  |  |  |  
 |===
 
 
 == 파일 시스템 분석에 대해 자세히 알아보십시오
 
 video::0oRHfZIYurk[youtube,width=848,height=480]
-.추가 참고 자료
+.관련 정보
 * link:https://www.netapp.com/media/20707-tr-4867.pdf["TR 4687: ONTAP 파일 시스템 분석에 대한 모범 사례 지침"^]
 * link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/High_or_fluctuating_latency_after_turning_on_NetApp_ONTAP_File_System_Analytics["기술 자료: NetApp ONTAP 파일 시스템 분석을 켠 후 지연 시간이 길거나 변동이 심한 경우"^]
 

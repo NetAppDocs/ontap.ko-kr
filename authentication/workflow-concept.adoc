@@ -29,10 +29,11 @@ summary: 로컬 관리자 계정 또는 원격 관리자 계정에 대해 인증
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["네"]관리자 계정을 관리합니다
 [role="quick-margin-para"]
-계정 액세스를 설정한 방법에 따라 를 연결link:manage-public-key-authentication-concept.html["로컬 계정이 있는 공개 키입니다"], 관리link:manage-ssh-public-keys-and-certificates.html["공개 키 및 X.509 인증서"], 구성link:configure-cisco-duo-mfa-task.html["SSH 로그인용 Cisco Duo 2FA"], 설치 link:install-server-certificate-cluster-svm-ssl-server-task.html["CA 서명 서버 디지털 인증서"]또는 구성해야 할 수 있습니다link:enable-ad-users-groups-access-cluster-svm-task.html["Active Directory를 클릭합니다"]. link:enable-nis-ldap-users-access-cluster-task.html["LDAP, 즉 NIS입니다"] 액세스: 계정 액세스를 활성화하기 전이나 후에 이러한 모든 작업을 수행할 수 있습니다.
+계정 액세스를 활성화한 방법에 따라 다음을 연결해야 할 수 있습니다. link:manage-public-key-authentication-concept.html["로컬 계정이 있는 공개 키입니다"] , 관리하다 link:manage-ssh-public-keys-and-certificates.html["공개 키 및 X.509 인증서"] , 구성 link:configure-cisco-duo-mfa-task.html["SSH 로그인용 Cisco Duo 2FA"] , 설치하다 link:install-server-certificate-cluster-svm-ssl-server-task.html["CA 서명 서버 디지털 인증서"] 또는 구성 link:enable-ad-users-groups-access-cluster-svm-task.html["Active Directory를 클릭합니다"] , link:enable-nis-ldap-users-access-cluster-task.html["LDAP, 즉 NIS입니다"] 액세스. 계정 액세스를 활성화하기 전이나 후에 다음 작업을 수행할 수 있습니다.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["다섯"]추가 보안 기능을 구성합니다
 [role="quick-margin-list"]
 * link:../multi-admin-verify/index.html["여러 관리자 검증 관리"] 지정된 관리자의 승인이 필요한 특정 작업을 확인하려면
 * link:dynamic-authorization-overview.html["동적 권한 부여 관리"] 사용자의 신뢰 수준에 따라 추가 권한 부여 검사를 동적으로 적용하려는 경우
+* link:configure-jit-elevation-task.html["JIT(Just-In-Time) 권한 상승 구성"] 특정 작업을 수행하기 위해 사용자에게 일시적으로 상승된 권한을 허용하려는 경우.
 

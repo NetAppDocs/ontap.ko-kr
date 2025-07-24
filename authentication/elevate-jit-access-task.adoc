@@ -1,0 +1,56 @@
+---
+permalink: authentication/elevate-jit-access-task.html 
+sidebar: sidebar 
+keywords: just in time, just-in-time, privilege elevation, password, security, authentication, JIT, elevation 
+summary: ONTAP 사용자가 특정 작업을 수행하기 위해 일시적으로 권한을 높일 수 있도록 Just-In-Time 권한 상승을 구성합니다. 
+---
+= ONTAP 에서 JIT 권한 상승에 액세스
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1부터 클러스터 관리자는 다음을 수행할 수 있습니다. link:configure-jit-elevation-task.html["JIT(Just-In-Time) 권한 상승 구성"] ONTAP 사용자가 특정 작업을 수행할 수 있도록 일시적으로 권한을 상승시킬 수 있도록 합니다. JIT가 사용자에 대해 구성된 경우, 사용자는 작업을 수행하는 데 필요한 권한이 있는 역할로 일시적으로 권한을 상승시킬 수 있습니다. 세션이 만료되면 사용자는 원래 액세스 수준으로 돌아갑니다.
+
+클러스터 관리자는 사용자가 JIT 권한 상승에 액세스할 수 있는 기간을 구성할 수 있습니다. 예를 들어, 클러스터 관리자는 사용자 권한 상승에 대한 액세스를 세션당 30분(세션 유효 기간)으로 설정하고 30일(JIT 유효 기간) 동안 사용할 수 있도록 구성할 수 있습니다. 30일 동안 사용자는 필요한 만큼 권한을 상승시킬 수 있지만, 각 세션은 30분으로 제한됩니다.
+
+.이 작업에 대해
+* JIT 권한 승격은 SSH를 통해 ONTAP 에 액세스하는 사용자에게만 제공됩니다. 승격된 권한은 현재 SSH 세션 내에서만 사용할 수 있지만, 필요한 만큼의 동시 SSH 세션 내에서 권한을 승격할 수 있습니다.
+* JIT 권한 승격은 비밀번호, nsswitch 또는 도메인 인증을 사용하여 로그인하는 사용자에게만 지원됩니다. 다중 요소 인증(MFA)은 JIT 권한 승격에 지원되지 않습니다.
+* 구성된 세션 또는 JIT 유효 기간이 만료되거나 클러스터 관리자가 사용자의 JIT 액세스 권한을 취소하면 사용자의 JIT 세션이 종료됩니다.
+
+
+.시작하기 전에
+* JIT 권한 승격에 액세스하려면 클러스터 관리자가 사용자 계정에 대한 JIT 액세스를 구성해야 합니다. 클러스터 관리자는 권한을 승격할 수 있는 역할과 승격된 권한에 액세스할 수 있는 기간을 결정합니다.
+
+
+.단계
+. 구성된 역할에 대한 권한을 일시적으로 상승시킵니다.
++
+[source, cli]
+----
+security jit-privilege elevate
+----
++
+이 명령을 입력하면 로그인 비밀번호를 입력하라는 메시지가 표시됩니다. 계정에 JIT 액세스가 구성된 경우, 설정된 세션 기간 동안 권한이 상승됩니다. 세션 기간이 만료되면 원래 액세스 수준으로 돌아갑니다. 설정된 JIT 유효 기간 내에 필요한 만큼 권한을 상승시킬 수 있습니다.
+
+. JIT 세션의 남은 시간을 확인하세요.
++
+[source, cli]
+----
+security jit-privilege show-remaining-time
+----
++
+현재 JIT 세션에 있는 경우 이 명령은 남은 시간을 표시합니다.
+
+. 필요한 경우 JIT 세션을 일찍 종료하세요.
++
+[source, cli]
+----
+security jit-privilege reset
+----
++
+현재 JIT 세션에 있는 경우 이 명령을 실행하면 JIT 세션이 종료되고 원래 액세스 수준이 복원됩니다.
+
+

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: snapmirror-active-sync/protect-task.html 
-keywords: SM-BC, snapmirror business continuity, consistency group, remote protection, destination 
+keywords: SM-BC, snapmirror business continuity, consistency group, remote protection, destination, scsi, nvme 
 summary: 비즈니스 연속성을 위해 보호를 구성하려면 ONTAP 소스 클러스터에서 LUN을 선택하고 일관성 그룹에 추가해야 합니다. 
 ---
-= ONTAP에서 SnapMirror 활성 동기화를 사용하여 보호합니다
+= ONTAP SnapMirror Active Sync로 보호하세요
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -43,7 +43,7 @@ SnapMirror 활성 동기화를 사용하여 비대칭 보호를 구성하려면 
 .단계
 ONTAP CLI 또는 System Manager를 사용하여 일관성 그룹을 구성할 수 있습니다.
 
-ONTAP 9.10.1부터 ONTAP는 System Manager에서 일관성 그룹 엔드포인트 및 메뉴를 제공하여 추가 관리 유틸리티를 제공합니다. ONTAP 9.10.1 이상을 사용 중인 경우  link:../consistency-groups/protect-task.html["보호 구성"]SnapMirror 활성 동기화 관계를 만들려면 다음을 참조하십시오.link:../consistency-groups/configure-task.html["일관성 그룹을 구성합니다"]
+ONTAP 9.10.1부터 ONTAP System Manager에서 일관성 그룹 엔드포인트와 메뉴를 제공하여 추가 관리 유틸리티를 제공합니다. ONTAP 9.10.1 이상을 사용하는 경우 다음을 참조하십시오. link:../consistency-groups/configure-task.html["일관성 그룹을 구성합니다"] 그 다음에 link:../consistency-groups/protect-task.html["보호 구성"] SnapMirror 활성 동기화 관계를 생성합니다.
 
 
 IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.
@@ -115,9 +115,16 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 ** 4노드 구성을 사용하여 스토리지와 컨트롤러를 업그레이드할 수 있습니다. 이 프로세스는 무중단 작업으로, 볼륨을 새 노드로 이동하는 동안 클러스터를 확장합니다. 자세한 내용은 을 link:upgrade-revert-task.html#refresh-a-cluster["클러스터를 새로 고칩니다"]참조하십시오.
 
 
+* ONTAP 9.17.1부터 두 클러스터 모두 ONTAP 9.17.1 이상을 실행하는 경우에만 NVMe 네임스페이스에서 대칭적 액티브/액티브 보호를 구성할 수 있습니다.
 
+
+
+
+== SCSI SnapMirror 활성 동기화 구성을 사용하여 대칭 활성/활성 보호 구성
 
 .단계
+시스템 관리자나 ONTAP CLI를 사용하여 SCSI 프로토콜 호스트 매핑을 사용하여 대칭적 활성/활성 보호를 구성할 수 있습니다.
+
 [role="tabbed-block"]
 ====
 .시스템 관리자
@@ -193,7 +200,7 @@ NOTE: ONTAP 9.16.1부터 `-proximal-vserver peer` 이 명령의 매개 변수를
 
 
 .비균일 설정에 대한 단계
-. 애플리케이션의 모든 볼륨을 그룹화하는 새로운 SnapMirror 관계를 생성합니다. 양방향 동기화 복제를 설정하려면 "AutomatedFailOverDuplex" 정책을 지정해야 합니다.
+. 애플리케이션의 모든 볼륨을 그룹화하는 새로운 SnapMirror 관계를 생성합니다. 를 지정했는지 확인합니다 `AutomatedFailOverDuplex` 양방향 동기화 복제를 설정하는 정책입니다.
 +
 `snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
 
@@ -214,6 +221,89 @@ SiteA::> igroup create -vserver <svm_name> -igroup <igroup_name> -initiator <hos
 SiteB::> igroup create -vserver <svm_name> -igroup <igroup_name> -initiator <host_2_name>`
 
 . 호스트에서 경로를 검색하고 호스트에 기본 클러스터에서 스토리지 LUN으로 연결되는 활성/최적화된 경로가 있는지 확인합니다.
+. 애플리케이션을 배포하고 VM 워크로드를 클러스터 전체에 분산하여 필요한 로드 밸런싱을 수행합니다.
+
+
+--
+====
+
+
+== NVMe SnapMirror 활성 동기화 구성을 사용하여 대칭 활성/활성 보호 구성
+
+.시작하기 전에
+대칭적 액티브/액티브 보호를 구성하는 데 필요한 요구 사항 외에도 NVMe 프로토콜을 사용할 때 지원되는 구성과 지원되지 않는 구성을 알고 있어야 합니다.
+
+* 일관성 그룹에는 하나 이상의 하위 시스템이 있을 수 있습니다.
+* 일관성 그룹 내의 볼륨은 여러 하위 시스템의 네임스페이스 맵을 가질 수 있습니다.
+* 하위 시스템은 두 개 이상의 일관성 그룹에 속하는 네임스페이스 맵을 가질 수 없습니다.
+* 하위 시스템은 일관성 그룹에 속하는 일부 네임스페이스 맵과 일관성 그룹에 속하지 않는 일부 네임스페이스 맵을 가질 수 없습니다.
+* 하위 시스템에는 동일한 일관성 그룹에 속하는 네임스페이스 맵이 있어야 합니다.
+
+
+.단계
+ONTAP 9.17.1부터 System Manager나 ONTAP CLI를 사용하여 일관성 그룹을 만들고 NVMe 프로토콜 호스트 매핑을 사용하여 대칭적 활성/활성 보호를 구성할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 기본 사이트에서 link:../consistency-groups/configure-task.html#create-a-consistency-group-with-new-luns-or-volumes["새로운 볼륨이나 NVMe 네임스페이스를 사용하여 일관성 그룹을 만듭니다."^]
+. *+추가*를 선택하고 *새 NVMe 네임스페이스 사용*을 선택합니다.
+. 일관성 그룹 이름을 입력하세요.
+. *더보기*를 선택하세요.
+. *보호* 섹션에서 * SnapMirror 활성화*를 선택한 다음 다음을 선택합니다.  `AutomatedFailoverDuplex` 정책.
+. *호스트 매핑* 섹션에서 *기존 NVMe 하위 시스템* 또는 *새 NVMe 하위 시스템*을 선택합니다.
+. 근위 SVM을 변경하려면 *근접*을 선택하세요. 기본적으로 소스 SVM이 선택됩니다.
+. 필요한 경우 다른 NVMe 하위 시스템을 추가합니다.
+
+
+--
+.CLI를 참조하십시오
+--
+. 애플리케이션에서 사용하는 모든 NVMe 네임스페이스를 포함하는 모든 볼륨을 그룹화하는 새 SnapMirror 관계를 생성합니다 .  `AutomatedFailOverDuplex` 양방향 동기화 복제를 설정하는 정책입니다.
++
+`snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
+
++
+예:
+
++
+[listing]
+----
+DST::> snapmirror create -source-path vs_src:/cg/cg_src_1 -destination-path vs_dst:/cg/cg_dst_1 -cg-item-mappings vs_src_vol1:@vs_dst_vol1,vs_src_vol2:@vs_dst_vol2 -policy AutomatedFailOverDuplex
+----
+. SnapMirror 관계 초기화:
+`snapmirror initialize -destination-path <destination-consistency-group>`
++
+예:
+
++
+[listing]
+----
+DST::> snapmirror initialize -destination-path vs1:/cg/cg_dst_1
+----
+. 을(를) 기다리면 작업이 성공적으로 수행되었는지 확인합니다 `Mirrored State` 를 눌러 로 표시합니다 `SnapMirrored` 및 `Relationship Status` 현재 `Insync`.
++
+`snapmirror show -destination-path <destination_path>`
+
++
+기본 볼륨의 NVMe 네임스페이스와 연결된 NVMe 하위 시스템은 자동으로 보조 클러스터에 복제됩니다.
+
+. 호스트에서 필요에 따라 각 클러스터에 대한 액세스를 통해 호스트 연결을 구성합니다.
+. 각 호스트에 인접한 SVM을 지정하세요. 이렇게 하면 호스트가 기본 클러스터의 경로를 사용하여 NVMe 네임스페이스에 액세스할 수 있습니다. 이는 기본 클러스터의 SVM 또는 DR 클러스터의 SVM일 수 있습니다.
++
+다음 명령은 SVM VS_A가 호스트 H1에 근접해 있고 VS_A를 근접 SVM으로 설정함을 나타냅니다.
+
++
+`SiteA::> vserver nvme subsystem host add -subsystem ss1 -host-nqn <H1_NQN> -proximal-vservers <VS_A>`
+
++
+다음 명령은 SVM VS_B가 호스트 H2에 근접해 있음을 나타내며 VS_B를 근접 SVM으로 설정합니다.
+
++
+`SiteB::> vserver nvme subsystem host add -subsystem ss1 -host-nqn <H2_NQN> -proximal-vservers <VS_B>`
+
+. 호스트에서 경로를 검색하고 호스트에 기본 클러스터의 스토리지로 가는 활성/최적화된 경로가 있는지 확인합니다.
 . 애플리케이션을 배포하고 VM 워크로드를 클러스터 전체에 분산하여 필요한 로드 밸런싱을 수행합니다.
 
 

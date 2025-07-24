@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: snapmirror-active-sync/site-b-mediator-troubleshoot-task.html 
-keywords: SM-BC, SMBC, troubleshooting, link down, Mediator, snapmirror active sync 
+keywords: SM-BC, SMBC, troubleshooting, link down, Mediator, Cloud Mediator, snapmirror active sync 
 summary: 사이트 B의 중재자 연결이 연결할 수 없는 것으로 표시됩니다. 
 ---
 = 사이트 B와 중재 Down 및 사이트 A Down 사이의 연결
@@ -14,16 +14,27 @@ summary: 사이트 B의 중재자 연결이 연결할 수 없는 것으로 표�
 
 
 [role="lead"]
-ONTAP 중재자의 연결을 확인하려면 를 사용합니다 `snapmirror mediator show` 명령. 연결 상태가 연결 불가 이고 사이트 B가 사이트 A에 연결할 수 없는 경우 아래와 유사한 출력이 표시됩니다. 솔루션의 단계를 따라 연결을 복원합니다
+ONTAP Mediator 또는 ONTAP Cloud Mediator의 연결을 확인하려면 다음을 사용하세요.  `snapmirror mediator show` 명령입니다. 연결 상태가 "접근 불가"이고 사이트 B가 사이트 A에 접속할 수 없는 경우, 아래와 비슷한 출력이 표시됩니다. 해결 방법에 따라 연결을 복원하세요.
+
+.예:
+ONTAP Cloud Mediator 출력 `snapmirror mediator show` 명령을 사용합니다.
 
 ....
-cluster::*> snapmirror mediator show
+cluster::> snapmirror mediator show
+Mediator Address Peer Cluster    Connection Status Quorum Status Type
+---------------- ---------------- ----------------- ------------- -------
+0.0.0.0          C1_cluster       unreachable       true          cloud
+....
+ONTAP Mediator 출력 `snapmirror mediator show` 명령을 사용합니다.
+
+....
+cluster::> snapmirror mediator show
 Mediator Address Peer Cluster     Connection Status Quorum Status
 ---------------- ---------------- ----------------- -------------
 10.237.86.17     C1_cluster       unreachable       true
 SnapMirror consistency group relationship status is out of sync.
 
-C2_cluster::*> snapmirror show -expand
+C2_cluster::> snapmirror show -expand
 Source            Destination Mirror  Relationship   Total             Last
 Path        Type  Path        State   Status         Progress  Healthy Updated
 ----------- ---- ------------ ------- -------------- --------- ------- --------
@@ -35,7 +46,7 @@ vs0:zrto_cg_655748_188b_RW2 XDP vs1:zrto_cg_655776_188d_DP2 Snapmirrored OutOfSy
 5 entries were displayed.
 
 Site B cluster is unable to reach Site A.
-C2_cluster::*> cluster peer show
+C2_cluster::> cluster peer show
 Peer Cluster Name         Cluster Serial Number Availability   Authentication
 ------------------------- --------------------- -------------- --------------
 C1_cluster 			  1-80-000011           Unavailable    ok

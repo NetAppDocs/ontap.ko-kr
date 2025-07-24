@@ -24,7 +24,7 @@ summary: 볼륨을 추가하거나 제거하여 일관성 그룹의 구성을 �
 +
 볼륨을 추가하거나 제거하여 일관성 그룹의 구성을 변경하려면 먼저 원래 관계를 삭제한 다음 새 구성도를 사용하여 일관성 그룹을 다시 생성해야 합니다.
 
-* ONTAP 9.13.1부터 소스 또는 대상의 활성 SnapMirror 관계가 있는 일관성 그룹에 볼륨을 중단 없이 추가할 수 있습니다.
+* ONTAP 9.13.1부터 소스 또는 대상에서 활성 SnapMirror 관계가 있는 일관성 그룹에 중단 없이 볼륨을 추가할 수 있습니다. 이 작업은 NVMe 프로토콜에서는 지원되지 않습니다.
 +
 볼륨 제거는 중단을 야기하는 작업입니다. 볼륨을 제거하기 전에 SnapMirror 관계를 삭제해야 합니다.
 
@@ -76,7 +76,7 @@ NOTE: 대상 LUN은 매핑 해제되지만 운영 복제본의 LUN은 계속해�
 +
 '소스::> SnapMirror release-destination-path vs1_dst:/cg/cg_dst-relationship-info-only true'
 
-. ** ONTAP 9.10.1 ~ 9.13.0을 사용하는 경우** 정확한 구성의 소스에서 정합성 보장 그룹을 삭제하고 다시 생성합니다. 의 단계를 따릅니다 xref:../consistency-groups/delete-task.html[일관성 그룹을 삭제합니다] 그리고 나서 xref:../consistency-groups/configure-task.html[단일 일관성 그룹을 구성합니다]. ONTAP 9.10.1 이상에서는 ONTAP REST API를 사용하거나 System Manager에서 삭제 및 생성 작업을 수행해야 합니다. CLI 절차가 없습니다.
+. ** ONTAP 9.10.1~9.13.0을 사용하는 경우** 소스에서 정합성 보장 그룹을 삭제하고 올바른 구성으로 다시 만드십시오. 의 단계를 따르link:../consistency-groups/delete-task.html["일관성 그룹을 삭제합니다"] 십시오link:../consistency-groups/configure-task.html["단일 일관성 그룹을 구성합니다"]. ONTAP ONTAP 는 없습니다.
 +
 **ONTAP 9.9.1을 사용하는 경우 다음 단계로 건너뜁니다.**
 

@@ -52,6 +52,10 @@ entries:
     url: "/authentication/predefined-roles-svm-administrators-concept.html"
   - title: System Manager를 사용하여 관리자 액세스를 관리합니다
     url: "/task_security_administrator_access.html"
+  - title: ONTAP 에서 JIT 권한 상승에 액세스
+    url: "/authentication/elevate-jit-access-task.html"
+  - title: ONTAP 에서 JIT 권한 상승 구성
+    url: "/authentication/configure-jit-elevation-task.html"
 - title: 관리자 계정을 관리합니다
   entries:
   - title: 관리자 계정 관리에 대해 자세히 알아봅니다

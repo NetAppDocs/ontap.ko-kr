@@ -140,6 +140,20 @@ OS는 다음 요구 사항을 충족해야 합니다.
 
 
  a| 
+1.10
+ a| 
+* Red Hat Enterprise Linux
++
+** 호환 가능: 9.5 ^1^
+** 권장: 8.10, 9.4, 9.6 및 10
+
+
+* Rocky Linux 8.10, 9.6 및 10
+
+
+
+
+ a| 
 1.9.1
  a| 
 * Red Hat Enterprise Linux
@@ -238,11 +252,11 @@ ONTAP Mediator에는 다음 패키지가 필요합니다.
 
 NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에 의해 자동으로 설치됩니다.
 
-[cols="34,33,33"]
+[cols="25,25,25,25"]
 |===
 
 
-| 모든 RHEL/CentOS 버전 | RHEL 8.x/Rocky Linux 8용 추가 패키지 | RHEL 9.x/Rocky Linux 9용 추가 패키지 
+| 모든 RHEL/CentOS 버전 | RHEL 8.x/Rocky Linux 8용 추가 패키지 | RHEL 9.x/Rocky Linux 9용 추가 패키지 | RHEL 10.x / Rocky Linux 10용 추가 패키지 
 
 
  a| 
@@ -260,7 +274,6 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 * mokutil
 
  a| 
-* python3-PIP
 * elfutils -libelf -devel
 * 정책 코어 유틸리티 - 비톤 - 유틸리티
 * redhat-LSB-core를 참조하십시오
@@ -268,11 +281,14 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 * 피톤39-데블
 
  a| 
-* python3-PIP
 * elfutils -libelf -devel
 * 정책 코어 유틸리티 - 비톤 - 유틸리티
 * 3단계
 * python3-devel
+
+ a| 
+* 파이썬3.12
+* 파이썬3.12-개발
 
 
 |===

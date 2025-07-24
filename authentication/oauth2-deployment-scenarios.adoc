@@ -4,7 +4,7 @@ permalink: authentication/oauth2-deployment-scenarios.html
 keywords: oauth 2.0, deployment, configuration, parameters, local validation, remote introspection 
 summary: ONTAP에 대한 인증 서버를 정의할 때 사용할 수 있는 몇 가지 구성 옵션이 있습니다. 이러한 옵션에 따라 몇 가지 배포 시나리오 중 하나를 사용하여 사용자 환경에 적합한 인증 서버를 정의할 수 있습니다. 
 ---
-= OAuth 2.0 배포 시나리오
+= ONTAP 사용한 OAuth 2.0 배포 시나리오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
