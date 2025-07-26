@@ -138,4 +138,6 @@ LIF 및 엑스포트 정책과 같은 필수 구성을 설정하여 데이터 �
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["스냅미러 정책 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["스냅미러 업데이트"^]
 

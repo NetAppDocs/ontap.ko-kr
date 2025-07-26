@@ -56,3 +56,6 @@ snapmirror mediator remove -peer-cluster cluster_xyz -type cloud
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-remove.html["스냅미러 중재자 제거"^]
+

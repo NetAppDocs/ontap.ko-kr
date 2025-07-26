@@ -134,4 +134,5 @@ SnapVault 보조 볼륨에서 볼륨을 복구한 후에는 소스 볼륨에 LUN
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["SnapMirror 복원"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
 

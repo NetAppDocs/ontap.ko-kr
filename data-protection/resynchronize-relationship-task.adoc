@@ -62,9 +62,6 @@ link:make-destination-volume-writeable-task.html["관계를 끊습니다"]대상
 snapmirror resync -source-path <SVM:volume|cluster://SVM/volume> -destination-path <SVM:volume|cluster://SVM/volume> -type DP|XDP -policy <policy>
 ----
 +
-에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 
 NOTE: 이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합니다.
 
@@ -76,6 +73,9 @@ NOTE: 이 명령은 타겟 SVM 또는 타겟 클러스터에서 실행해야 합
 ----
 cluster_dst::> snapmirror resync -source-path svm1:volA -destination-path svm_backup:volA_dst
 ----
++
+에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 --

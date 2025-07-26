@@ -69,4 +69,5 @@ cluster2::> snapmirror resync -destination-path vs1_dr:vol1
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["스냅미러 재동기화"^]
 

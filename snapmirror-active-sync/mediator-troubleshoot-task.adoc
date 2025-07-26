@@ -41,3 +41,8 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 ---------------- ---------------- ----------------- -------------
 10.234.10.143    cluster2         connected         true
 ....
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-show.html["스냅미러 페일오버 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-start.html["스냅미러 페일오버 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-show.html["스냅미러 중재자 쇼"^]
+

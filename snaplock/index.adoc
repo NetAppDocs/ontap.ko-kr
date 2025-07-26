@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: decide, about, archive, compliance, snaplock, unmodified, file, worm, storage, snap lock, mirror, unmirror. license, compliance clock, regulatory, governance, rules, govern, MAV, multi-admin verification, supported, unsupported 
 summary: NetApp SnapLock 기술을 사용하면 규정 및 거버넌스 목적으로 수정되지 않은 형식으로 파일을 보존할 수 있습니다. 
 ---
-= SnapLock란
+= ONTAP SnapLock 에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

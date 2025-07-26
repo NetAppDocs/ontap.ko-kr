@@ -118,3 +118,7 @@ Destination Endpoint UUID: -
 Is Catalog Enabled: false
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+

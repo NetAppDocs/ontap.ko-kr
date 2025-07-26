@@ -86,3 +86,7 @@ cluster_dst::> snapmirror policy show -policy MirrorAndVault -instance
 전체 미러 유지 관리의 이점을 통합 복제가 2차 스토리지의 양을 줄이고 기본 전송 수를 제한하며 네트워크 트래픽을 감소시켜 주는 이점과 비교하여 평가해야 합니다.
 
 통합 복제의 적절성을 결정하는 주요 요인은 활성 파일 시스템의 변경률입니다. 예를 들어, 기존 미러는 데이터베이스 트랜잭션 로그의 시간별 스냅샷을 저장하는 볼륨에 더 적합합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-show.html["스냅미러 정책 보기"^]
+

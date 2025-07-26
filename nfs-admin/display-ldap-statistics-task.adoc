@@ -47,3 +47,6 @@ Cluster: cluster1
    avg_processor_busy                                             6%
    cpu_busy
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
+

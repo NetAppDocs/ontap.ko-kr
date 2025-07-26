@@ -49,6 +49,7 @@ SVM의 용량은 FlexVol, FlexGroup 볼륨, FlexClone, FlexCache 볼륨의 합�
 ** MetroCluster
 
 
+* ONTAP 9.16.1부터 로드 공유 미러 관계를 생성할 때 대상 SVM에서 저장소 제한을 활성화할 수 없습니다.
 * SVM을 마이그레이션할 때 소스 SVM에서 스토리지 제한을 설정할 수 없습니다. 마이그레이션 작업을 완료하려면 소스에서 스토리지 제한을 해제한 다음 마이그레이션을 완료합니다.
 * SVM 용량은 와 다릅니다 xref:../volumes/quotas-concept.html[할당량]. 할당량은 최대 크기를 초과할 수 없습니다.
 * SVM에서 다른 작업이 진행 중인 경우에는 스토리지 제한을 설정할 수 없습니다.  `job show vserver <svm_name>`기존 작업을 보려면 명령을 사용하십시오. 작업이 완료되면 명령을 다시 실행해 보십시오. 에 대한 자세한 내용은 `job show` link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -32,3 +32,8 @@ cluster2::>
 . SnapMirror 관계가 정상인지 '스냅샷 표시'로 확인합니다
 . FlexGroup SnapMirror 관계가 '스냅샷 표시-확장'으로 제거되었는지 확인합니다
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["스냅미러 업데이트"^]
+

@@ -62,14 +62,16 @@ Vscan 서버의 연결 상태 정보
 
 == Vscan 서버 통계를 봅니다
 
-Vscan 서버별 통계를 확인하여 성능을 모니터링하고 바이러스 스캔과 관련된 문제를 진단할 수 있습니다. 명령을 사용하여 Vscan 서버 통계를 표시하려면 먼저 데이터 샘플을 수집해야 `statistics show` 합니다. 에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+Vscan 서버별 통계를 확인하여 성능을 모니터링하고 바이러스 검사 관련 문제를 진단할 수 있습니다. Vscan을 사용하려면 먼저 데이터 샘플을 수집해야 합니다.  `statistics show` Vscan 서버 통계를 표시하는 명령입니다.
+
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 데이터 샘플을 완료하려면 다음 단계를 완료하십시오.
 
 .단계
 .  `statistics start`명령 및 선택적 `statistics stop` 명령을 실행합니다.
 +
-에 대한 자세한 내용은 `statistics` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^]을 참조하십시오.
+자세히 알아보세요  `statistics start` 그리고  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^] .
 
 
 
@@ -118,8 +120,6 @@ ONTAP에서 Vscan 서버로의 왕복 지연 시간(스캔 실행 시간 포함)
 
 |===
 
-
-에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html#description["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -174,8 +174,6 @@ ONTAP에서 Vscan 서버로의 왕복 지연 시간(스캔 실행 시간 포함)
 
 |===
 
-
-에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -259,8 +257,6 @@ Vscan 서버에서 사용되는 메모리입니다
 Vscan 서버에서 사용되는 네트워크
 
 |===
-에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 
 
 ==== Vscan 서버에 대한 사용률 통계의 예

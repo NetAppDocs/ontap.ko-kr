@@ -138,5 +138,8 @@ Disable snapshot policies.
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface["네트워크 인터페이스"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-break.html["SnapMirror가 깨졌습니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-delete.html["스냅미러 정책 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-show.html["스냅미러 정책 보기"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
 

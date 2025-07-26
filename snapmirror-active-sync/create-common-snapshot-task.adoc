@@ -33,3 +33,7 @@ summary: 정기적으로 예약된 스냅샷 작업 외에도 운영 SnapMirror 
 `destination::>snapmirror show -fields newest-snapshot`
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+

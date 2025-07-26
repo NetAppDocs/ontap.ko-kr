@@ -61,3 +61,8 @@ IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-show.html["스냅미러 페일오버 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-start.html["스냅미러 페일오버 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+

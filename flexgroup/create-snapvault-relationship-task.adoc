@@ -110,4 +110,6 @@ Operation is queued: snapmirror initialize of destination "vsd:dst".
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["스냅미러 정책 추가 규칙"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["스냅미러 정책 생성"^]
 

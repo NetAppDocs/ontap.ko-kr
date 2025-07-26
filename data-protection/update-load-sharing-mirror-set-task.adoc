@@ -17,7 +17,10 @@ SVM에 볼륨이 마운트 또는 마운트 해제된 이후, 그리고 옵션�
 
 * 예약된 업데이트를 할 시간입니다
 * SVM 루트 볼륨의 볼륨에 대해 마운트 또는 마운트 해제 작업이 수행됩니다
-* "juntion-path" 옵션을 포함하는 "volume create" 명령이 실행됩니다
+* 에이  `volume create` 다음을 포함하는 명령이 발행됩니다.  `junction-path` 옵션
++
+에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .단계
@@ -38,6 +41,7 @@ snapmirror update-ls-set -source-path <SVM:volume>
 ----
 cluster_src::> snapmirror update-ls-set -source-path svm1:svm1_root
 ----
++
+에 대한 자세한 내용은 `snapmirror update` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
-에 대한 자세한 내용은 `volume create` link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

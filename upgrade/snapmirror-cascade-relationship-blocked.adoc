@@ -30,6 +30,9 @@ NOTE: 일정 및 SnapMirror 정책에 대한 자세한 내용은 기술 자료 �
 ----
 Secondary::> snapmirror policy remove-rule -vserver <> -policy <> -snapmirror-label <>
 ----
++
+자세히 알아보세요  `snapmirror policy remove-rule` 에서 link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-remove-rule.html["ONTAP 명령 참조입니다"^] .
+
 . LTR 일정을 사용하지 않고 SnapMirror 레이블에 대한 규칙을 다시 추가합니다.
 +
 [listing]
@@ -39,6 +42,9 @@ Secondary::> snapmirror policy add-rule -vserver <> -policy <> -snapmirror-label
 +
 
 NOTE: SnapMirror 정책 규칙에서 LTR 스냅샷을 제거하면 SnapMirror가 소스 볼륨에서 지정된 레이블을 가진 스냅샷을 가져옵니다. 소스 볼륨의 스냅샷 정책에 대한 스케줄을 추가하거나 수정하여 적절하게 레이블이 지정된 스냅샷을 생성해야 할 수도 있습니다.
+
++
+에 대한 자세한 내용은 `snapmirror policy add-rule` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 필요한 경우 소스 볼륨 스냅샷 정책에 대한 일정을 수정하거나 생성하여 SnapMirror 레이블을 사용하여 스냅샷을 생성할 수 있습니다.
 +

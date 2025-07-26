@@ -71,3 +71,7 @@ Awa는 지정된 로컬 계층과 연결된 볼륨에 대한 워크로드 데이
 '관리자 설정'을 선택합니다
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show-periodic.html["통계 표시-주기적"^]
+

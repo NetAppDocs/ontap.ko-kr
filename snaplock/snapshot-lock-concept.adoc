@@ -318,4 +318,7 @@ ONTAP 9.14.1부터 스냅샷의 장기 보존을 설정하는 규칙을 추가�
 ----
 snapmirror policy add-rule -vserver vs1 -policy lockvault -snapmirror-label test1 -keep 10 -retention-period "6 months"
 ----
++
+에 대한 자세한 내용은 `snapmirror policy add-rule` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

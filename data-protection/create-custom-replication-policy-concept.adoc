@@ -92,9 +92,6 @@ System Manager 또는 ONTAP CLI를 사용하여 맞춤형 데이터 보호 정�
 snapmirror policy create -vserver <SVM> -policy _policy_ -type <async-mirror|vault|mirror-vault|strict-sync-mirror|sync-mirror> -comment <comment> -tries <transfer_tries> -transfer-priority <low|normal> -is-network-compression-enabled <true|false>
 ----
 +
-에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 ONTAP 9.5부터 매개 변수를 사용하여 SnapMirror 동기식 관계에 대한 일반 스냅샷 스케줄을 생성하기 위한 스케줄을 지정할 수 `-common-snapshot-schedule` 있습니다. 기본적으로 SnapMirror 동기식 관계에 대한 일반적인 스냅샷 일정은 1시간입니다. SnapMirror 동기식 관계의 스냅샷 스케줄에 대해 30분에서 2시간 사이의 값을 지정할 수 있습니다.
 
 +
@@ -129,12 +126,17 @@ cluster_dst::> snapmirror policy create -vserver svm1 -policy my_unified -type m
 ----
 cluster_dst::> snapmirror policy create -vserver svm1 -policy my_strictsync -type strict-sync-mirror -common-snapshot-schedule my_sync_schedule
 ----
++
+에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .작업을 마친 후
 "'볼트' 및 ''미러 볼트'' 정책 유형의 경우 초기화 및 업데이트 중에 전송되는 스냅샷을 결정하는 규칙을 정의해야 합니다.
 
-명령을 사용하여 `snapmirror policy show` SnapMirror 정책이 생성되었는지 확인하십시오. 에 대한 자세한 내용은 `snapmirror policy show` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+사용하세요  `snapmirror policy show` SnapMirror 정책이 생성되었는지 확인하는 명령입니다.
+
+자세히 알아보세요  `snapmirror policy show` 에서 link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-show.html["ONTAP 명령 참조입니다"^] .
 
 --
 ====

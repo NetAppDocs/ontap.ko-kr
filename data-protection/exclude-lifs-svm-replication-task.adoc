@@ -70,9 +70,6 @@ cluster_dst::> job schedule cron create -name my_weekly -dayofweek "Saturday" -h
 '스냅샷 정책 생성 - vserver_SVM_-policy_policy_-type async-mirror|vault|mirror-vault-comment_comment_- transfer_rs-priority low|normal-is-network-compression-enabled true|false-discard-configs network'
 
 +
-에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예제에서는 LIF를 제외한 SnapMirror DR에 대한 사용자 지정 복제 정책을 생성합니다.
 
 +
@@ -94,6 +91,9 @@ cluster_dst::> snapmirror policy create -vserver svm1 -policy unified_exclude_LI
 향후 페일오버 및 페일백 시나리오를 지원하기 위해 소스 클러스터에 동일한 맞춤형 SnapMirror 정책을 생성하는 것을 고려해 보십시오.
 
 ====
++
+에 대한 자세한 내용은 `snapmirror policy create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 대상 SVM 또는 대상 클러스터에서 다음 명령을 실행하여 복제 관계를 생성합니다.
 +
 `snapmirror create -source-path _SVM_: -destination-path _SVM_: -type DP|XDP -schedule _schedule_ -policy _policy_ -identity-preserve true|false -discard-configs true|false`
@@ -161,4 +161,5 @@ cluster_dst::> snapmirror initialize -source-path svm1: -destination-path svm_ba
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["스냅미러 정책 생성"^]
 

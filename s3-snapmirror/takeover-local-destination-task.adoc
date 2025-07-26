@@ -47,3 +47,7 @@ summary: 소스 버킷의 데이터를 사용할 수 없는 경우 SnapMirror �
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-start.html["스냅미러 페일오버 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+

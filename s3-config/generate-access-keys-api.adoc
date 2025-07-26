@@ -17,7 +17,7 @@ ONTAP 9.14.1부터 ONTAP 관리자는 사용자 지정 역할을 만들고 로�
 액세스 키 생성을 위해 API를 호출하는 사용자에게 사용자 지정 역할을 생성하고 할당할 수 있도록 스토리지 VM에서 몇 가지 구성 단계를 수행해야 합니다.
 
 
-NOTE: LDAP가 비활성화되어 있으면 사용자가 액세스 키를 생성하도록 를 구성할 수 link:configure-access-ldap.html["도메인 기반 인증을 사용하는 Active Directory 및 SMB"]있습니다.
+NOTE: LDAP가 비활성화된 경우 다음을 수행할 수 있습니다. link:configure-access-ldap.html["ONTAP S3 액세스를 위한 외부 디렉토리 서비스 구성"] 사용자가 액세스 키를 생성할 수 있도록 합니다.
 
 .시작하기 전에
 다음을 확인합니다.
@@ -35,9 +35,14 @@ NOTE: LDAP가 비활성화되어 있으면 사용자가 액세스 키를 생성�
 
 == 액세스 키 생성을 위한 사용자를 구성합니다
 
+.단계
+[role="tabbed-block"]
+====
+.LDAP 사용자
+--
 . LDAP를 스토리지 VM의 _NAME 서비스 데이터베이스_로 지정하고 LDAP에 대한 암호를 지정합니다.
 +
-[listing]
+[source, cli]
 ----
 ns-switch modify -vserver <vserver-name> -database group -sources files,ldap
 ns-switch modify -vserver <vserver-name> -database passwd -sources files,ldap
@@ -56,9 +61,9 @@ security login rest-role create -vserver svm-1 -role s3role -api "/api/protocols
 +
 에 대한 자세한 내용은 `security login rest-role create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-rest-role-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. security login 명령으로 LDAP 사용자 그룹을 생성하고 S3 사용자 REST API 끝점에 액세스하기 위한 새 사용자 지정 역할을 추가합니다. 에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli//security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+. LDAP 사용자 그룹을 만듭니다.  `security login` 명령을 실행하고 S3 사용자 REST API 엔드포인트에 액세스하기 위한 새로운 사용자 지정 역할을 추가합니다. 자세히 알아보세요  `security login create` 에서 link:https://docs.netapp.com/us-en/ontap-cli//security-login-create.html["ONTAP 명령 참조입니다"^] .
 +
-[listing]
+[source, cli]
 ----
 security login create -user-or-group-name <ldap-group-name> -application http -authentication-method nsswitch -role <custom-role-name> -is-ns-switch-group yes
 ----
@@ -78,16 +83,57 @@ security login create -user-or-group-name ldap-group-1 -application http -authen
 
 
 
-도메인 또는 LDAP 그룹에 사용자 지정 역할을 추가하면 해당 그룹의 사용자가 ONTAP에 대한 제한된 액세스를 허용할 수 있습니다 `/api/protocols/s3/services/{svm.uuid}/users` 엔드포인트. 도메인 또는 LDAP 그룹 사용자는 API를 호출하여 자신의 액세스 및 비밀 키를 생성하여 S3 클라이언트에 액세스할 수 있습니다. 사용자는 자신의 키를 생성할 수 있고 다른 사용자는 생성할 수 없습니다.
+LDAP 그룹에 사용자 정의 역할을 추가하면 해당 그룹의 사용자는 ONTAP 에 제한된 액세스 권한을 가질 수 있습니다.  `/api/protocols/s3/services/{svm.uuid}/users` 엔드포인트. API를 호출하면 LDAP 그룹 사용자는 S3 클라이언트에 액세스하기 위한 액세스 키와 비밀 키를 직접 생성할 수 있습니다. 키는 본인만 생성할 수 있으며 다른 사용자는 생성할 수 없습니다.
 
+--
+.도메인 사용자
+--
+. S3 사용자 REST API 엔드포인트에 액세스할 수 있는 사용자 지정 역할을 만듭니다.
+
+
+[source, cli]
+----
+security login rest-role create -vserver <vserver-name> -role <custom-role-name> -api "/api/protocols/s3/services/*/users" -access <access-type>
+----
+이 예에서는  `s3-role` 스토리지 VM의 사용자에 대한 역할이 생성됩니다.  `svm-1` 모든 접근 권한(읽기, 만들기, 업데이트)이 부여됩니다.
+
+[listing]
+----
+security login rest-role create -vserver svm-1 -role s3role -api "/api/protocols/s3/services/*/users" -access all
+----
+에 대한 자세한 내용은 `security login rest-role create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-rest-role-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+. 도메인 사용자 그룹을 만듭니다.  `security login` 명령을 실행하고 S3 사용자 REST API 엔드포인트에 액세스하기 위한 새로운 사용자 지정 역할을 추가합니다. 자세히 알아보세요  `security login create` 에서 link:https://docs.netapp.com/us-en/ontap-cli//security-login-create.html["ONTAP 명령 참조입니다"^] .
++
+[source, cli]
+----
+security login create -vserver <vserver-name> -user-or-group-name domain\<group-name> -application http -authentication-method domain -role <custom-role-name>
+----
++
+이 예에서 도메인 그룹은  `domain\group1` 에서 생성됩니다  `svm-1` , 그리고 사용자 정의 역할  `s3role` API 엔드포인트에 액세스하기 위해 추가되었습니다.
+
++
+[listing]
+----
+security login create -user-or-group-name domain\group1 -application http -authentication-method domain -role s3role -vserver svm-1
+----
++
+에 대한 자세한 내용은 `security login create` link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+도메인 그룹에 사용자 정의 역할을 추가하면 해당 그룹의 사용자가 ONTAP 에 제한적으로 액세스할 수 있습니다.  `/api/protocols/s3/services/{svm.uuid}/users` 엔드포인트. API를 호출하면 도메인 그룹 사용자는 S3 클라이언트에 액세스하기 위한 액세스 키와 비밀 키를 직접 생성할 수 있습니다. 해당 키는 본인만 생성할 수 있으며 다른 사용자는 생성할 수 없습니다.
+
+--
+====
 
 
 == S3 또는 LDAP 사용자로 자체 액세스 키를 생성합니다
 
 ONTAP 9.14.1부터 관리자가 사용자 고유의 키를 생성하는 역할을 부여한 경우, S3 클라이언트에 액세스하기 위한 고유한 액세스 및 비밀 키를 생성할 수 있습니다. 다음 ONTAP REST API 끝점을 사용하여 자신에 대해서만 키를 생성할 수 있습니다.
 
-.HTTP 메서드 및 끝점입니다
-이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다. 이 끝점의 다른 메서드에 대한 자세한 내용은 참조를 참조하십시오 https://docs.netapp.com/us-en/ontap-automation/reference/api_reference.html#access-a-copy-of-the-ontap-rest-api-reference-documentation["API 설명서"].
+.S3 사용자를 생성하고 키를 생성합니다.
+이 REST API 호출은 다음 메서드와 엔드포인트를 사용합니다. 이 엔드포인트에 대한 자세한 내용은 참조를 참조하세요.  https://docs.netapp.com/us-en/ontap-automation/reference/api_reference.html#access-a-copy-of-the-ontap-rest-api-reference-documentation["API 설명서"] .
 
 [cols="25,75"]
 |===
@@ -96,6 +142,8 @@ ONTAP 9.14.1부터 관리자가 사용자 고유의 키를 생성하는 역할�
 
 | 게시 | /api/protocols/s3/services/{svm.uuid}/사용자 
 |===
+도메인 사용자의 경우 S3 사용자 이름에 다음 형식을 사용하세요.  `user@fqdn` , 어디  `fqdn` 도메인의 정규화된 도메인 이름입니다.
+
 .컬의 예
 [source, curl]
 ----
@@ -105,7 +153,7 @@ curl
 --include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
---data '{"name":"_name_"}'
+--data '{"name":"user1@example.com"}'
 ----
 .JSON 출력 예
 [listing]
@@ -113,7 +161,7 @@ curl
 {
   "records": [
     {
-      "access_key": "Pz3SB54G2B_6dsXQPrA5HrTPcf478qoAW6_Xx6qyqZ948AgZ_7YfCf_9nO87YoZmskxx3cq41U2JAH2M3_fs321B4rkzS3a_oC5_8u7D8j_45N8OsBCBPWGD_1d_ccfq",
+      "access_key": "4KX07KF7ML8YNWY01JWG",
       "_links": {
         "next": {
           "href": "/api/resourcelink"
@@ -122,8 +170,48 @@ curl
           "href": "/api/resourcelink"
         }
       },
-      "name": "user-1",
-      "secret_key": "A20_tDhC_cux2C2BmtL45bXB_a_Q65c_96FsAcOdo14Az8V31jBKDTc0uCL62Bh559gPB8s9rrn0868QrF38_1dsV2u1_9H2tSf3qQ5xp9NT259C6z_GiZQ883Qn63X1"
+      "name": "user1@example.com",
+      "secret_key": "<secret_key_value>"
+    }
+  ],
+  "num_records": "1"
+}
+
+----
+.S3 사용자에 대한 키 재생성
+S3 사용자가 이미 있는 경우 해당 사용자의 액세스 키와 비밀 키를 다시 생성할 수 있습니다. 이 REST API 호출은 다음 메서드와 엔드포인트를 사용합니다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 반점 | /api/프로토콜/s3/서비스/{svm.uuid}/사용자/{이름} 
+|===
+.컬의 예
+[source, curl]
+----
+curl
+--request PATCH \
+--location "https://$FQDN_IP /api/protocols/s3/services/{svm.uuid}/users/{name} " \
+--include \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data '{"regenerate_keys":"True"}'
+----
+.JSON 출력 예
+[listing]
+----
+{
+  "records": [
+    {
+      "access_key": "DX12U609DMRVD8U30Z1M",
+      "_links": {
+        "self": {
+          "href": "/api/resourcelink"
+        }
+      },
+      "name": "user1@example.com",
+      "secret_key": "<secret_key_value>"
     }
   ],
   "num_records": "1"

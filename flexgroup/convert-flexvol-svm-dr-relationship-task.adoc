@@ -132,5 +132,8 @@ vs0_dst  my_volume  online  flexgroup
 
 
 .관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resume.html["스냅미러 이력서"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["스냅미러 업데이트"^]
 

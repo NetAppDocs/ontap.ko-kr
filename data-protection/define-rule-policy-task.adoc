@@ -90,9 +90,6 @@ app_consistent
 '스냅샷 정책 추가 규칙 -vserver_SVM_-policy_policy_for_rule_-snapmirror-label_snapmirror-label_-keep_retention_count_'
 
 +
-에 대한 자세한 내용은 `snapmirror policy add-rule` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 예제에서는 기본 MirorAndVault 정책에 SnapMirror 레이블 '격월'이 있는 규칙을 추가합니다.
 
 +
@@ -116,6 +113,9 @@ cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy my_snapvault -sn
 ----
 cluster_dst::> snapmirror policy add-rule -vserver svm1 -policy Sync -snapmirror-label app_consistent -keep 1
 ----
++
+에 대한 자세한 내용은 `snapmirror policy add-rule` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-add-rule.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 그런 다음 이 SnapMirror 레이블과 일치하는 소스 클러스터에서 스냅샷을 복제할 수 있습니다.
 

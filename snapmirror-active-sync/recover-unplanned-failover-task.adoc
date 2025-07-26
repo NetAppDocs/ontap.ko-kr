@@ -83,4 +83,7 @@ ONTAP 9.14.1 이하를 사용 중이고 SnapMirror 활성 동기화 관계에서
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-delete.html["SnapMirror 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-show.html["스냅미러 페일오버 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["스냅미러 재동기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
 

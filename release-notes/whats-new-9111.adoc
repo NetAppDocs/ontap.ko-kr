@@ -220,3 +220,6 @@ NOTE: ONTAP 9.8P12 이상 ONTAP 9.8 패치 릴리즈를 사용 중이고 System 
 
 | xref:../system-admin/ontap-implements-audit-logging-concept.html[감사 로그 관리] | System Manager를 사용하여 ONTAP 감사 로그를 보고 관리할 수 있습니다. 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
+

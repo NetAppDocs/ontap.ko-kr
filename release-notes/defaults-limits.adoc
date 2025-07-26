@@ -36,6 +36,9 @@ ONTAP 9 릴리스에서 구현된 제한 및 기본값에 대한 몇 가지 변�
 | FAS 시스템의 노드당 최대 볼륨 | 컨트롤러당 200GB RAM이 넘는 FAS 시스템의 경우 노드당 지원되는 최대 볼륨 수가 1000개에서 2500개로 증가합니다. 이전 버전의 ONTAP에서는 link:../data-protection/dpo-systems-feature-enhancements-reference.html["데이터 보호 최적화(DPO)"]ONTAP FAS 시스템 지원을 노드당 1000개에서 2500개로 늘리려면 라이센스가 필요했습니다. | ONTAP 9.16.1 
 
 
+| 로드 공유 미러 | 부하 공유 미러 관계를 생성할 때 대상 SVM에는 저장소 제한을 활성화할 수 없습니다. | ONTAP 9.16.1 
+
+
 | `vserver object-store-server user show` 명령 | ONTAP 9.15.1 이전 릴리스에서는 이(가) `vserver object-store-server user show` 명령은 S3 사용자의 비밀 키를 반환합니다. 이 명령은 S3 사용자에 대한 비밀 키 데이터를 더 이상 반환하지 않습니다. | ONTAP 9.15.1 
 
 

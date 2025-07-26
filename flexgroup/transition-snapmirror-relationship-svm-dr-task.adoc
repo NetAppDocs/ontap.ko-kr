@@ -64,4 +64,6 @@ Warning: This Vserver has volumes which are the destination of FlexVol or FlexGr
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["스냅미러 재동기화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
 

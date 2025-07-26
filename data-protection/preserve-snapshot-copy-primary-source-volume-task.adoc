@@ -11,7 +11,7 @@ summary: SnapMirror snapshot-owner create 명령을 사용하여 미러 볼트 �
 
 
 [role="lead"]
-명령을 사용하여 미러 볼트 배포의 보조 서버에서 레이블 지정된 스냅샷을 보존할 수 `snapmirror snapshot-owner create` 있습니다. 이렇게 하면 볼트 관계 업데이트를 위한 공통 스냅샷이 존재하게 됩니다. 에 대한 자세한 내용은 `snapmirror snapshot-owner create` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-snapshot-owner-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+당신은 사용할 수 있습니다  `snapmirror snapshot-owner create` 미러-볼트 배포 환경에서 보조 노드에 레이블이 지정된 스냅샷을 보존하는 명령입니다. 이렇게 하면 볼트 관계 업데이트를 위한 공통 스냅샷이 생성됩니다.
 
 .이 작업에 대해
 미러 볼트 팬 아웃 또는 캐스케이드 배포를 함께 사용하는 경우 소스 및 대상 볼륨에 공통 스냅샷이 없으면 업데이트가 실패한다는 점에 유의해야 합니다.
@@ -34,6 +34,9 @@ SnapMirror는 업데이트를 수행하기 전에 항상 소스 볼륨의 스냅
 clust1::> snapmirror snapshot-owner create -vserver vs1 -volume vol1
 -snapshot snap1 -owner ApplicationA
 ----
++
+자세히 알아보세요  `snapmirror snapshot-owner create` 에서 link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-snapshot-owner-create.html["ONTAP 명령 참조입니다"^] .
+
 . 에 설명된 대로 미러 관계를 업데이트합니다 link:update-replication-relationship-manual-task.html["복제 관계를 수동으로 업데이트합니다"].
 +
 또는 미러 관계의 예약된 업데이트를 기다릴 수 있습니다.
@@ -41,9 +44,6 @@ clust1::> snapmirror snapshot-owner create -vserver vs1 -volume vol1
 . 레이블이 지정된 스냅샷을 볼트 대상으로 전송:
 +
 `snapmirror update -source-path <SVM:volume>|<cluster://SVM/volume>, ... -destination-path <SVM:volume>|<cluster://SVM/volume>, ... -source-snapshot snapshot`
-
-+
-에 대한 자세한 내용은 `snapmirror update` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 예에서는 `snap1` 스냅샷을 전송합니다::
@@ -55,6 +55,8 @@ clust1::> snapmirror update -vserver vs1 -volume vol1
 -source-snapshot snap1
 ----
 볼트 관계가 업데이트될 때 레이블이 지정된 스냅샷이 보존됩니다.
+
+에 대한 자세한 내용은 `snapmirror update` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 --
 

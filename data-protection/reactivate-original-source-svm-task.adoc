@@ -151,6 +151,9 @@ NOTE: '-source-path' 및 '-destination-path' 옵션에서 SVM 이름 뒤에 콜�
 ----
 cluster_src::> snapmirror update -source-path svm_backup: -destination-path svm1:
 ----
++
+에 대한 자세한 내용은 `snapmirror update` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-update.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 원래 소스 SVM 또는 원래 소스 클러스터에서 다음 명령을 실행하여 역방향 관계에 대한 예약된 전송을 중지합니다.
 +
 [source, cli]
@@ -273,4 +276,5 @@ cluster_dst::> snapmirror release -source-path svm_backup: -destination-path svm
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-quiesce.html["SnapMirror 중지"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-release.html["SnapMirror 릴리즈"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["스냅미러 재동기화"^]
 

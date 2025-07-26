@@ -107,5 +107,7 @@ vserver volume  is-smbc-master is-smbc-failover-capable smbc-consensus
 vs1     vol1_dp false          true                     No-consensus
 ....
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror+["SnapMirror를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-show.html["스냅미러 페일오버 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-start.html["스냅미러 페일오버 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-show.html["스냅미러 중재자 쇼"^]
 

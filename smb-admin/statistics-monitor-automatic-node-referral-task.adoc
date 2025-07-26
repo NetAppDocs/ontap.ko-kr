@@ -98,4 +98,5 @@ SVM VS1에 참여하는 모든 노드의 카운터를 출력합니다. 이 예�
 .관련 정보
 * xref:display-statistics-task.adoc[통계를 표시합니다]
 * link:../performance-config/index.html["성능 모니터링 설정"]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
 

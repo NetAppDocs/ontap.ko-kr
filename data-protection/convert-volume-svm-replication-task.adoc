@@ -65,9 +65,6 @@ cluster_dst::> vserver stop svm_backup
 `snapmirror resync -source-path <SVM>: -destination-path <SVM>: -type DP|XDP -policy <policy>`
 
 +
-에 대한 자세한 내용은 `snapmirror resync` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [NOTE]
 ====
 '-source-path' 및 '-destination-path' 옵션에서 SVM 이름 뒤에 콜론(:)을 입력해야 합니다. 아래 예를 참조하십시오.
@@ -87,4 +84,5 @@ cluster_dst::> snapmirror resync -source-path svm1: -destination-path svm_backup
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-resync.html["스냅미러 재동기화"^]
 

@@ -64,4 +64,6 @@ dest_cluster::> snapmirror failover start -destination-path dest_svm1:/bucket/te
 * link:../task_object_provision_add_s3_users_groups.html["S3 사용자 및 그룹 추가(System Manager)"]
 * link:../s3-config/create-s3-user-task.html["S3 사용자 생성(CLI)"]
 * link:../s3-config/create-modify-groups-task.html["S3 그룹 생성 또는 수정(CLI)"]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-failover-start.html["스냅미러 페일오버 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-show.html["스냅미러 쇼"^]
 
