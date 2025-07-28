@@ -35,7 +35,7 @@ ONTAP CLI 또는 System Manager를 사용하여 계획된 페일오버를 수행
 .시스템 관리자
 --
 
-IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.
+IMPORTANT: ONTAP 9.14.1부터 9.8까지 SnapMirror 액티브 동기화는 SnapMirror 비즈니스 연속성(SM-BC)이라고 합니다.
 
 . System Manager에서** 보호 > 개요 > 관계** 를 선택합니다.
 . 페일오버할 SnapMirror 활성 동기화 관계를 확인합니다. 이름 옆에 있는 을 선택합니다 `...` 관계의 이름 옆에 있는 ** 장애 조치** 를 선택합니다.

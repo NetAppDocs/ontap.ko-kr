@@ -71,7 +71,7 @@ ONTAP Mediator를 설치하고 클러스터 구성을 확인한 후, 클러스�
 System Manager를 사용하면 ONTAP Mediator를 자동 장애 조치로 구성할 수 있습니다. 자체 서명된 SSL 및 CA를 타사 인증 SSL 인증서 및 CA로 대체할 수도 있습니다(아직 수행하지 않은 경우).
 
 
-IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.
+IMPORTANT: ONTAP 9.14.1부터 9.8까지 SnapMirror 액티브 동기화는 SnapMirror 비즈니스 연속성(SM-BC)이라고 합니다.
 
 [role="tabbed-block"]
 ====

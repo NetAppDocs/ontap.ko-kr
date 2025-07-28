@@ -101,7 +101,7 @@ NOTE: 대상 LUN은 매핑 해제되지만 운영 복제본의 LUN은 계속해�
 ONTAP 9.13.1부터 활성 SnapMirror 활성 동기화 관계가 있는 일관성 그룹에 볼륨을 중단 없이 추가할 수 있습니다. SnapMirror 액티브 동기화에서는 소스 또는 대상 모두에서 볼륨을 추가할 수 있습니다.
 
 
-IMPORTANT: ONTAP 9.8에서 9.14.1까지 SnapMirror 액티브 동기화를 SM-BC(SnapMirror Business Continuity)라고 합니다.
+IMPORTANT: ONTAP 9.14.1부터 9.8까지 SnapMirror 액티브 동기화는 SnapMirror 비즈니스 연속성(SM-BC)이라고 합니다.
 
 소스 정합성 보장 그룹에서 볼륨을 추가하는 방법에 대한 자세한 내용은 를 참조하십시오 xref:../consistency-groups/modify-task.html[일관성 그룹 수정].
 
