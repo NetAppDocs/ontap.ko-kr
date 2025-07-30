@@ -618,6 +618,8 @@ NOTE: 요청자는 승인 그룹에 있는 경우에도 자신의 요청을 승�
 
 MAV 규칙은 RBAC 권한 이후에 평가됩니다. 따라서 작업 실행에 대한 충분한 RBAC 권한이 없는 사용자는 MAV 요청 프로세스를 시작할 수 없습니다.
 
+MAV 규칙은 보호된 작업이 실행되기 전에 평가됩니다. 즉, 규칙은 시스템의 현재 상태를 기반으로 적용됩니다. 예를 들어, MAV 규칙이 다음과 같이 생성되는 경우  `volume modify` 의 질문으로  `-size 5GB` , 사용하여  `volume modify` 5GB 볼륨의 크기를 2GB로 조정하려면 MAV 승인이 필요하지만, 2GB 볼륨의 크기를 5GB로 조정하는 경우에는 승인이 필요하지 않습니다.
+
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/cluster-date-modify.html["클러스터 날짜 수정"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+log-forwarding["클러스터 로그 전달"^]
