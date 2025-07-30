@@ -47,10 +47,10 @@ Cloud Volumes ONTAP
 * 삭제 코딩
 * NDMP
 * SMTape
-* SnapMirror를 참조하십시오
+* SnapMirror (동기 및 비동기)
 * SnapMirror 클라우드
 * SVM 재해 복구
-* SyncMirror
+* SyncMirror (SyncMirror 미러링된 집계는 ONTAP 9.14.1부터 MetroCluster 구성에서 지원됩니다. SyncMirror MetroCluster 구성 외부에서는 지원되지 않습니다.)
 
 
 
@@ -86,7 +86,7 @@ SnapMirror S3
 * 컴팩션
 
  a| 
-* 애그리게이트 레벨의 효율성
+* 집계 수준 효율성(동일한 집계에 있는 멤버는 교차 볼륨 중복 제거를 활용할 수 있지만 다른 집계에 있는 멤버는 활용할 수 없음)
 * ONTAP S3 버킷을 포함하는 FlexGroup 볼륨의 볼륨 클론
 
 
@@ -117,12 +117,16 @@ NetApp FlexArray 가상화
  a| 
 * link:../s3-audit/index.html["S3 이벤트를 감사합니다"] (ONTAP 9.10.1부터)
 * link:../s3-config/create-bucket-lifecycle-rule-task.html["버킷 수명 주기 관리"] (ONTAP 9.13.1부터)
+* FabricPool 클라우드 계층(네이티브 S3만 해당)
+* FabricPool 로컬 계층(NAS 볼륨만 해당)
 
  a| 
 * FlexCache 볼륨
 * FPolicy를 참조하십시오
 * Qtree
 * 할당량
+* FabricPool 클라우드 계층(NAS 볼륨만 해당)
+* FabricPool 로컬 계층(네이티브 S3 전용)
 
 
 |===

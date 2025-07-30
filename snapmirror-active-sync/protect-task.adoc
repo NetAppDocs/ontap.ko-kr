@@ -173,6 +173,14 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 +
 `snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
 
++
+예: 다음 예에서는 두 개의 일관성 그룹을 만듭니다. 소스에 vol1 및 vol2가 있는 cg_src와 대상에 미러링된 일관성 그룹인 cg_dst입니다.
+
++
+[listing]
+----
+destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOver
+----
 . SnapMirror 관계 초기화:
 `snapmirror initialize -destination-path <destination-consistency-group>`
 . 을(를) 기다리면 작업이 성공적으로 수행되었는지 확인합니다 `Mirrored State` 를 눌러 로 표시합니다 `SnapMirrored` 및 `Relationship Status` 현재 `Insync`.
@@ -204,6 +212,14 @@ NOTE: ONTAP 9.16.1부터 `-proximal-vserver peer` 이 명령의 매개 변수를
 +
 `snapmirror create -source-path <source_path> -destination-path <destination_path> -cg-item-mappings <source_volume:@destination_volume> -policy AutomatedFailOverDuplex`
 
++
+예: 다음 예에서는 두 개의 일관성 그룹을 만듭니다. 소스에 vol1 및 vol2가 있는 cg_src와 대상에 미러링된 일관성 그룹인 cg_dst입니다.
+
++
+[listing]
+----
+destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOver
+----
 . SnapMirror 관계 초기화:
 `snapmirror initialize -destination-path <destination-consistency-group>`
 . 을(를) 기다리면 작업이 성공적으로 수행되었는지 확인합니다 `Mirrored State` 를 눌러 로 표시합니다 `SnapMirrored` 및 `Relationship Status` 현재 `Insync`.

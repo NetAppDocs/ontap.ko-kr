@@ -20,7 +20,7 @@ ONTAP 9.7 이상에서 사용할 수 있는 System Manager를 사용하여 SMB �
 
 이 절차를 수행하면 에 새 볼륨이 생성됩니다 link:task_nas_enable_windows_smb.html["기존 SMB 지원 스토리지 VM"] 볼륨 루트(/) 디렉토리에 대한 공유를 생성합니다. 볼륨을 구성하거나 사용자 지정 구성을 지정할 때 시스템 기본값을 사용할 수 있습니다. 초기 SMB 구성 후 추가 공유를 생성하고 해당 속성을 수정할 수도 있습니다.
 
-FlexVol 볼륨을 생성할 수도 있고, 고성능 요구사항이 높은 대규모 파일 시스템의 경우 FlexGroup 볼륨을 생성할 수도 있습니다. 도 참조하십시오 link:task_nas_provision_flexgroup.html["FlexGroup 볼륨을 사용하여 대용량 파일 시스템용 NAS 스토리지를 프로비저닝합니다"].
+FlexVol 볼륨을 만들거나, 고성능 요구 사항이 있는 대용량 파일 시스템의 경우 FlexGroup 볼륨을 만들 수 있습니다. 참조 link:../flexgroup/provision-nas-flexgroup-task.html["FlexGroup 볼륨을 사용하여 대용량 파일 시스템용 NAS 스토리지를 프로비저닝합니다"] .
 
 또한 이 볼륨의 사양을 Ansible 플레이북에 저장할 수도 있습니다. 자세한 내용은 를 참조하십시오 link:task_admin_use_ansible_playbooks_add_edit_volumes_luns.html["Ansible 플레이북을 사용하여 볼륨 또는 LUN을 추가 또는 편집합니다"].
 

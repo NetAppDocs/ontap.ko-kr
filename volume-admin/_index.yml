@@ -33,7 +33,7 @@ indexpage:
   - title: FlexGroup 볼륨
     links:
     - title: System Manager로 구성합니다
-      url: "/../task_nas_provision_flexgroup.html"
+      url: "/../flexgroup/provision-nas-flexgroup-task.html"
     - title: CLI를 사용하여 구성합니다
       url: "/../flexgroup/creation-workflow-task.html"
     - title: 지원되는 구성

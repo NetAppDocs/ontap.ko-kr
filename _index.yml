@@ -48,7 +48,7 @@ indexpage:
     - title: 모든 항목
       url: "/volume-admin/index.html"
     - title: System Manager를 사용하여 FlexGroup 볼륨 관리
-      url: "/task_nas_provision_flexgroup.html"
+      url: "/flexgroup/provision-nas-flexgroup-task.html"
     - title: CLI를 사용한 FlexGroup 볼륨 관리
       url: "/flexgroup/index.html"
     - title: System Manager를 사용하여 FlexCache 볼륨 관리

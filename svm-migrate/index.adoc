@@ -123,13 +123,18 @@ SVM 마이그레이션을 시작하기 전에 다음 사전 요구사항을 충�
 * 대상 클러스터의 ONTAP 버전은 소스 클러스터와 같은 최신 주요 버전이 2개 이하여야 합니다.
 * 소스 및 타겟 클러스터가 데이터 LIF 액세스에 대해 동일한 IP 서브넷을 지원해야 합니다.
 * 소스 SVM은 보다 적게 포함해야 합니다 xref:Maximum supported volumes per SVM[릴리스에 대해 지원되는 최대 데이터 볼륨 수입니다].
-* 대상에서 볼륨 배치를 위한 충분한 공간을 사용할 수 있어야 합니다
-* 소스 SVM에서 볼륨을 암호화한 경우 온보드 Key Manager를 타겟에 구성해야 합니다
+* 목적지에는 볼륨을 배치할 수 있는 충분한 공간이 있어야 합니다.
+* 소스 SVM에 암호화된 볼륨이 있는 경우 대상의 클러스터 수준에서 온보드 키 관리자 또는 외부 키 관리를 구성해야 합니다.
++
+** 이 경우, 소스의 SVM 수준에서 구성된 키 관리자는 대상으로 마이그레이션되지 않습니다. 대상에서는 클러스터 수준 키 관리자를 사용합니다.
+
+
+* 소스에 암호화된 볼륨이 있고 NetApp Aggregate Encryption(NAE)에 대해 구성된 경우 대상도 NAE에 대해 구성해야 합니다.
 * 비 MetroCluster 구성과 MetroCluster 구성 간 또는 두 MetroCluster 구성 간에 SVM을 마이그레이션할 경우, 구성이 다음 요구사항을 충족하는지 확인하십시오.
 +
 ** 소스 및 대상 MetroCluster 클러스터가 "정상" 상태입니다. 즉, 전환 모드나 "전환 대기 중" 상태에 있을 수 없습니다.
 ** 소스 및 대상 MetroCluster 클러스터는 FC-to-IP 전환 또는 하드웨어 교체 프로세스를 진행 중이 아닙니다.
-** 대상 클러스터에서 소스 클러스터에서 실행 중인 버전과 같거나 그 이상의 ONTAP 버전이 실행되고 있습니다.
+** 소스 클러스터와 대상 클러스터는 모두 ONTAP 9.16.1 이상을 실행해야 합니다.
 ** 소스가 MetroCluster 클러스터인 경우 SVM 하위 유형은 "sync-source"("sync-destination" 아님)입니다.
 +
 
@@ -222,11 +227,15 @@ ONTAP 9.16.1부터 다음 MetroCluster SVM 마이그레이션이 지원됩니다
 * MetroCluster FC 구성과 MetroCluster IP 구성 간에 SVM 마이그레이션
 
 
+참고: SVM 마이그레이션을 지원하려면 소스 및 대상 클러스터가 모두 ONTAP 9.16.1 이상을 실행해야 합니다.
+
 다음 MetroCluster SVM 마이그레이션은 일부 ONTAP 버전에 대해 지원되지 않습니다.
 
 * 2개의 MetroCluster FC 구성 간에 SVM 마이그레이션
 * 비 MetroCluster 구성과 MetroCluster FC 구성 간에 SVM 마이그레이션
 
+
+를 참조하십시오 <<필수 구성 요소,전제 조건>> MetroCluster 구성에서 SVM을 마이그레이션하는 방법.
 
 
 
