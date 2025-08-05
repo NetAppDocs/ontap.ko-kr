@@ -54,4 +54,5 @@ Flash Pool 로컬 계층의 볼륨에 캐시 보존 정책을 할당하여 볼�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["통계 시작"^]
 

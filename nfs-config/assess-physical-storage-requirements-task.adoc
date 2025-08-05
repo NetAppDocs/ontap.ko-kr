@@ -46,4 +46,6 @@ aggr_5     239.0GB   239.0GB   95% online       4 node4  raid_dp,
 
 .관련 정보
 * link:../disks-aggregates/add-disks-local-tier-aggr-task.html["로컬 계층에 디스크 추가(애그리게이트)"]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-add-disks.html["스토리지 집계 추가 디스크"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["저장소 집계 생성"^]
 

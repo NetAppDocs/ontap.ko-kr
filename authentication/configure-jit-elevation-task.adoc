@@ -24,7 +24,7 @@ JIT 권한 승격은 최소 권한 원칙을 지원하여 사용자가 승격된
 * 임시 액세스 허용  `security audit log show` 규정 준수 검사 중에 감사 로그 검토 및 내보내기를 활성화합니다.
 
 
-이 예제에서 설명된 명령에 대해 자세히 알아보세요.  https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^] . 일반적인 JIT 사용 사례에 대한 더 자세한 목록은 다음을 참조하세요. <<일반적인 JIT 사용 사례>> .
+일반적인 JIT 사용 사례에 대한 더 자세한 목록은 다음을 참조하세요. <<일반적인 JIT 사용 사례>> .
 
 클러스터 관리자는 ONTAP 사용자에 대한 JIT 액세스를 설정하고, 클러스터 전체 또는 특정 SVM에 대해 기본 JIT 유효 기간을 구성할 수 있습니다.
 
@@ -130,91 +130,143 @@ security jit-privilege user delete -username <username> -vserver <svm_name>
 
 
 | 사용자 및 역할 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html["보안 로그인 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-delete.html["7a414cbc26ad99f3f688affc1ecabe6f"]
+* '보안 로그인 생성'
+* '보안 로그인 삭제
+
 | 온보딩 또는 오프보딩 중에 사용자를 추가/제거하거나 역할을 변경하기 위해 일시적으로 권한을 상승시킵니다. 
 
 
 | 인증서 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-create.html["9ea06376db2d229da0b3a4c13ce61404"] , link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"]
+* `security certificate create`
+* `security certificate install`
+
 | 인증서 설치 또는 갱신을 위해 단기 액세스 권한을 부여합니다. 
 
 
 | SSH/CLI 액세스 제어  a| 
-`link:https://docs.netapp.com/us-en/ontap-cli/security-login-create.html[security login create] -application ssh`
+* `security login create -application ssh`
+
 | 문제 해결이나 공급업체 지원을 위해 일시적으로 SSH 액세스를 허용합니다. 
 
 
 | 라이센스 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/system-license-add.html["6c25ae7b27db9a62b5c245ad70b9d7cc"] , link:https://docs.netapp.com/us-en/ontap-cli/system-license-delete.html["5f3eb0e0b3c2143bc24467a3ed94289e"]
+* `system license add`
+* `system license delete`
+
 | 기능 활성화 또는 비활성화 중에 라이선스를 추가하거나 제거할 수 있는 권한을 부여합니다. 
 
 
 | 시스템 업그레이드 및 패치  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/system-node-image-update.html["시스템 노드 이미지 업데이트"] , link:https://docs.netapp.com/us-en/ontap-cli/system-node-upgrade-revert-upgrade.html["3375ab72573f54f214f0e7b4b9759e15"]
+* `system node image update`
+* `system node upgrade-revert`
+
 | 업그레이드 창에 대한 권한을 높인 다음 취소합니다. 
 
 
 | 네트워크 보안 설정  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-create.html["보안 로그인 역할이 생성됩니다"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-modify.html["c44e895fab96f3c7a61edd2ebae0fd59"]
+* `security login role create`
+* `security login role modify`
+
 | 네트워크 관련 보안 역할에 대한 임시 변경을 허용합니다. 
 
 
 | 클러스터 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/cluster-add-node.html["클러스터 추가 노드"] , link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove-node.html["클러스터 제거 노드"] , link:https://docs.netapp.com/us-en/ontap-cli/cluster-modify.html["클러스터 수정"]
+* `cluster add-node`
+* `cluster remove-node`
+* `cluster modify`
+
 | 클러스터 확장이나 재구성을 위해 Elevate를 사용합니다. 
 
 
 | SVM 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["SVM 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/vserver-delete.html["a75eb9196380a98a2a2a693496267088"] , link:https://docs.netapp.com/us-en/ontap-cli/vserver-modify.html["SVM 수정"]
+* `vserver create`
+* `vserver delete`
+* `vserver modify`
+
 | SVM에 프로비저닝 또는 서비스 해제를 위한 관리자 권한을 일시적으로 부여합니다. 
 
 
 | 볼륨 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["볼륨 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-delete.html["볼륨 삭제"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["볼륨 수정"]
+* '볼륨 생성'
+* '볼륨 삭제'
+* 볼륨 수정
+
 | 볼륨 프로비저닝, 크기 조정 또는 제거를 위해 높이십시오. 
 
 
 | 스냅샷 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-create.html["ceb6830d4a1748af1adc615d6239b127"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-delete.html["1cf71c15916b07b46dc8360baf4bd9d5"] , link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["8f381ba1024744332b561ba609495012"]
+* '볼륨 스냅샷 생성'
+* '볼륨 스냅샷 삭제'
+* '볼륨 스냅샷 복원'
+
 | 복구 중에 스냅샷을 삭제하거나 복원하려면 Elevate를 사용합니다. 
 
 
 | 네트워크 구성  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/network-interface-create.html["8e4b4cb9c44fdee9551da126fb754f8a"] , link:https://docs.netapp.com/us-en/ontap-cli/network-port-vlan-create.html["733be7dba8f13ff258d7f73e2740324c"]
+* `network interface create`
+* `network port vlan create`
+
 | 유지 관리 기간 동안 네트워크 변경에 대한 권한을 부여합니다. 
 
 
 | 디스크/집계 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["3c698d76925a2f101122edd72990fc94"] , link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["1b40ef6e34df7d2fb54b5d639e14412d"] , link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-add-disks.html["be260f7e87b5ae56c1d81f359067a35f"]
+* `storage disk assign`
+* `storage aggregate create`
+* '스토리지 집계 추가 디스크'
+
 | 디스크를 추가, 제거하거나 집계를 관리하기 위해 Elevate를 사용합니다. 
 
 
 | 데이터 보호  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-modify.html["SnapMirror 수정"] , link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-restore.html["SnapMirror 복원"]
+* 스냅미러 생성
+* `snapmirror modify`
+* `snapmirror restore`
+
 | SnapMirror 관계를 구성하거나 복원하기 위해 일시적으로 상승합니다. 
 
 
 | 성능 튜닝  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["QoS 정책 - 그룹 생성"] , link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["92e30cc5fff2e2aead2254497baabf90"]
+* `qos policy-group create`
+* `qos policy-group modify`
+
 | 성능 문제 해결이나 튜닝을 위해 Elevate를 활용하세요. 
 
 
 | 감사 로그 액세스  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/security-audit-log-show.html["8886c6249c30eca960ab30fed3c6746b"]
+* 보안 감사 로그 쇼
+
 | 규정 준수 검사 중에 감사 로그 검토 또는 내보내기를 위해 일시적으로 상승합니다. 
 
 
 | 이벤트 및 알림 관리  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/event-notification-create.html["64b1a654c15b96443ae00ee82d8ea7ad"] , link:https://docs.netapp.com/us-en/ontap-cli/event-notification-modify.html["3289b87193da03bd8309fc4b2ea2e02e"]
+* `event notification create`
+* `event notification modify`
+
 | 이벤트 알림이나 SNMP 트랩을 구성하거나 테스트하기 위해 Elevate를 사용합니다. 
 
 
 | 규정 준수 기반 데이터 액세스  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["볼륨 표시"] , link:https://docs.netapp.com/us-en/ontap-cli/security-audit-log-show.html["8886c6249c30eca960ab30fed3c6746b"]
+* '볼륨 쇼'
+* 보안 감사 로그 쇼
+
 | 감사자가 민감한 데이터나 로그를 검토할 수 있도록 일시적으로 읽기 전용 액세스 권한을 부여합니다. 
 
 
 | 특권 액세스 검토  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html["025c83c1a746b39471a98aa72befe950"] , link:https://docs.netapp.com/us-en/ontap-cli/security-login-role-show.html["c964d7ae2ca92e255e3199e128824eb9"]
+* '보안 로그인 쇼'
+* `security login role show`
+
 | 일시적으로 권한을 승격하여 권한 있는 접근 권한을 검토하고 보고합니다. 제한된 시간 동안 읽기 전용의 권한 승격된 접근 권한을 부여합니다. 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster["클러스터"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=event+notification["이벤트 알림"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network["회로망"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=qos+policy-group["qos 정책 그룹"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security["보안"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=snapmirror["SnapMirror를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage["내부"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system["시스템"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume["볼륨"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver["SVM"^]
+

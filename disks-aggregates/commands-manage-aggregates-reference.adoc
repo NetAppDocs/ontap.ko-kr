@@ -104,5 +104,10 @@ All Flash Pool 로컬 계층의 캐시 크기를 표시합니다
 
 |===
 .관련 정보
-* https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["저장소 집계 삭제"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-offline.html["저장소 집계 오프라인"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-online.html["온라인 스토리지 집계"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-rename.html["저장소 집계 이름 바꾸기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-restrict.html["저장 집계 제한"^]
 

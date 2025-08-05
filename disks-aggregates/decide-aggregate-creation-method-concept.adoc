@@ -31,8 +31,6 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 * 유지 관리 테스트를 진행 중인 디스크
 
 
-에 대한 자세한 내용은 `storage aggregate auto-provision` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-auto-provision.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 
 
 == 수동 방법을 사용해야 하는 경우
@@ -63,4 +61,5 @@ NOTE: ONTAP 9.11.1부터 System Manager를 사용하여 로컬 계층을 수동�
 
 .관련 정보
 * https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-auto-provision.html["스토리지 집계 자동 프로비저닝"^]
 

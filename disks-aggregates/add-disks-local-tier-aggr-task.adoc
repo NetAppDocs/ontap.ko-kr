@@ -46,20 +46,20 @@ NOTE: 추가할 수 있는 스페어 디스크가 없는 경우 * Add Capacity *
 
 
  a| 
-ONTAP 9.8, 9.9 또는 9.10.1
- a| 
-.. 노드에 여러 스토리지 계층이 포함된 경우 로컬 계층에 추가할 디스크 수를 선택합니다. 그렇지 않으면 노드에 단일 스토리지 계층만 포함된 경우 추가된 용량이 자동으로 추정됩니다.
-.. 추가 * 를 선택합니다.
-
-
-
-
- a| 
 ONTAP 9.11.1부터 시작합니다
  a| 
 .. 디스크 유형과 디스크 수를 선택합니다.
 .. 새 RAID 그룹에 디스크를 추가하려면 확인란을 선택합니다. RAID 할당이 표시됩니다.
 .. 저장 * 을 선택합니다.
+
+
+
+
+ a| 
+ONTAP 9.10.1, 9.9 또는 9.8
+ a| 
+.. 노드에 여러 스토리지 계층이 포함된 경우 로컬 계층에 추가할 디스크 수를 선택합니다. 그렇지 않으면 노드에 단일 스토리지 계층만 포함된 경우 추가된 용량이 자동으로 추정됩니다.
+.. 추가 * 를 선택합니다.
 
 
 |===
@@ -256,3 +256,8 @@ Original Owner: cl1-s2
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-add-disks.html["스토리지 집계 추가 디스크"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-spare-disks.html["스토리지 집계 show-spare-disks"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-status.html["스토리지 집계 표시 상태"^]
+

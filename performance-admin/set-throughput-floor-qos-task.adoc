@@ -60,10 +60,7 @@ cluster1::> qos policy-group create -policy group pg-vs4 -vserver vs4 -is-shared
 
 . 볼륨 또는 LUN에 정책 그룹 적용:
 +
-'_storage_object_create-vserver_SVM_-QoS-policy-group_policy_group_'
-
-+
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오. 명령을 사용하여 스토리지 객체에 다른 정책 그룹을 적용할 수 `_storage_object_modify` 있습니다.
+`_storage_object_ create -vserver _SVM_ -qos-policy-group _policy_group_`당신은 사용할 수 있습니다 `_storage_object_modify` 저장소 개체에 다른 정책 그룹을 적용하는 명령입니다.
 
 +
 다음 명령은 정책 그룹 pg-app2를 볼륨 app2에 적용합니다.
@@ -73,12 +70,12 @@ cluster1::> qos policy-group create -policy group pg-vs4 -vserver vs4 -is-shared
 ----
 cluster1::> volume create -vserver vs2 -volume app2 -aggregate aggr1 -qos-policy-group pg-app2
 ----
++
+이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+
 . 정책 그룹 성능 모니터링:
 +
 QoS 통계 성능 표시
-
-+
-에 대한 자세한 내용은 `qos statistics performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -100,12 +97,12 @@ pg_app2                  7216       28.19MB/s   420.00us
 _System-Best-Effort        62       13.36KB/s     4.13ms
 _System-Background         30           0KB/s        0ms
 ----
++
+에 대한 자세한 내용은 `qos statistics performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 워크로드 성능 모니터링:
 +
 QoS 통계 워크로드 성능 표시
-
-+
-에 대한 자세한 내용은 `qos statistics workload performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 [NOTE]
@@ -128,6 +125,9 @@ vs1-wid12279     12279     5026        19.63MB/s     2.52ms
 _USERSPACE_APPS     14       55        10.92KB/s   236.00us
 _Scan_Backgro..   5688       20            0KB/s        0ms
 ----
++
+에 대한 자세한 내용은 `qos statistics workload performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 +
 [NOTE]
 ====

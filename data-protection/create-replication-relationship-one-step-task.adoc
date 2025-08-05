@@ -11,7 +11,7 @@ summary: ONTAP 9.3부터는 SnapMirror Protect 명령을 사용하여 단일 단
 
 
 [role="lead"]
-ONTAP 9.3부터는 명령을 사용하여 한 번에 데이터 보호 관계를 구성할 수 있습니다 `snapmirror protect`. 복제할 볼륨 목록, 타겟 클러스터의 SVM, 작업 일정 및 SnapMirror 정책을 지정합니다. `snapmirror protect` 나머지는 다. 에 대한 자세한 내용은 `snapmirror protect` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-protect.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+ONTAP 9.3부터 다음을 사용할 수 있습니다. `snapmirror protect` 단일 단계로 데이터 보호 관계를 구성하는 명령입니다.  복제할 볼륨 목록, 대상 클러스터의 SVM, 작업 일정 및 SnapMirror 정책을 지정합니다. `snapmirror protect` 나머지는 다 해줍니다.
 
 .시작하기 전에
 * 소스 및 타겟 클러스터와 SVM을 피어링해야 합니다.
@@ -33,7 +33,7 @@ https://docs.netapp.com/us-en/ontap-system-manager-classic/peering/index.html["�
 
 대상 볼륨의 이름은 '_source_volume_name_dst_' 형식입니다. 기존 이름과 충돌하는 경우 명령이 볼륨 이름에 번호를 추가합니다. 명령 옵션에서 접두사 및/또는 접미사를 지정할 수 있습니다. 접미사는 시스템 제공 st 접미사를 대체합니다.
 
-ONTAP 9.3 이하 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 포함할 수 있습니다. ONTAP 9.4 이상에서는 대상 볼륨에 최대 1019개의 스냅샷을 포함할 수 있습니다.
+ONTAP 9.4 이상에서는 대상 볼륨에 최대 1019개의 스냅샷을 포함할 수 있습니다.  ONTAP 9.3 및 이전 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 포함할 수 있습니다.
 
 [NOTE]
 ====
@@ -41,6 +41,8 @@ ONTAP 9.3 이하 버전에서는 대상 볼륨에 최대 251개의 스냅샷을 
 
 ====
 ONTAP 9.5부터 `snapmirror protect` 명령을 사용하여 SnapMirror 동기식 관계를 만들 수 있습니다.
+
+자세히 알아보세요  `snapmirror protect` 에서 link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-protect.html["ONTAP 명령 참조입니다"^] .
 
 .단계
 . 한 단계로 복제 관계를 생성하고 초기화합니다.
@@ -111,5 +113,4 @@ SnapVault 및 통합 복제 정책의 경우 대상에서 마지막으로 전송
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
-* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-protect.html["SnapMirror 보호"^]
 

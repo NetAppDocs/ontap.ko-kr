@@ -129,7 +129,7 @@ Aggregate 또는 볼륨의 이름을 바꿉니다
  a| 
 아니요
  a| 
-예(와 함께 link:https://docs.netapp.com/us-en/ontap-flexarray/index.html["FlexArray 가상화"^])
+아니요
 
 
 

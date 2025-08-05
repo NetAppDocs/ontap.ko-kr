@@ -16,7 +16,7 @@ CIFS, SMB, 감사 및 BranchCache 해시 통계에 대한 정보를 얻고 성�
 .단계
 . 권한 수준을 고급으로 설정합니다.
 +
-' * set-Privilege advanced * '
+세트 프리빌리지 고급
 
 . 다음 작업 중 하나를 수행합니다.
 +
@@ -27,29 +27,29 @@ CIFS, SMB, 감사 및 BranchCache 해시 통계에 대한 정보를 얻고 성�
  a| 
 사용할 수 있는 개체
  a| 
-'* 통계 카탈로그 객체 표시 *'
+'통계 카탈로그 개체 쇼'
 
 
 
  a| 
 사용할 수 있는 특정 개체입니다
  a| 
-'* 통계 카탈로그 개체는 object_object_name_*'을(를) 표시합니다
+`statistics catalog object show -object _object_name_`
 
 
 
  a| 
 사용할 수 있는 카운터
  a| 
-'* 통계 카탈로그 카운터는 object_object_name_*'을 표시합니다
+`statistics catalog counter show -object _object_name_`
 
 |===
 +
-에 대한 자세한 내용은 `statistics catalog` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics+catalog["ONTAP 명령 참조입니다"^]을 참조하십시오.
+자세히 알아보세요  `statistics catalog object show` 그리고  `statistics catalog counter show` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics+catalog["ONTAP 명령 참조입니다"^] .
 
 . 관리자 권한 레벨로 돌아갑니다.
 +
-' * set-privilege admin * '
+'Set-Privilege admin'입니다
 
 
 
@@ -138,3 +138,4 @@ Object: client
 
 [...]
 ----
+에 대한 자세한 내용은 `statistics start` link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -72,7 +72,13 @@ SMB 3.0 통계는 'CIFS' 객체의 출력에 포함됩니다. 암호화된 세�
 +
 선택적으로 통계를 수집할 노드를 지정할 수 있습니다. 노드를 지정하지 않으면 이 샘플에서 클러스터의 모든 노드에 대한 통계를 수집합니다.
 
++
+에 대한 자세한 내용은 `statistics start` link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 'tortistics stop' 명령어를 이용하여 시료에 대한 데이터 수집을 중단한다.
++
+자세히 알아보세요  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/statistics-stop.html["ONTAP 명령 참조입니다"^] .
+
 . SMB 암호화 통계 보기:
 +
 |===
@@ -122,6 +128,9 @@ shope-sample-id_sample_ID_-counter rejected_sencrypted_sessions|_node_name_[-nod
 |===
 +
 단일 노드에 대해서만 정보를 표시하려면 옵션 '-node' 매개 변수를 지정합니다.
+
++
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 관리자 권한 수준으로 돌아가기: + 'Set-Privilege admin
 
@@ -232,5 +241,4 @@ Scope: vsim2
 .관련 정보
 * xref:determine-statistics-objects-counters-available-task.adoc[서버에서 사용 가능한 통계, 개체 및 카운터를 확인합니다.]
 * link:../performance-admin/index.html["성능 모니터링 및 관리 개요"]
-* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
 

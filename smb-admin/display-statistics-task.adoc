@@ -16,6 +16,8 @@ CIFS 및 SMB, 감사 및 BranchCache 해시에 대한 통계를 비롯한 다양
 .시작하기 전에
 객체에 대한 정보를 표시하려면 먼저 '통계 시작' 및 '통계 중지' 명령을 사용하여 데이터 샘플을 수집해야 합니다.
 
+자세히 알아보세요  `statistics start` 그리고  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^] .
+
 .단계
 . 권한 수준을 Advanced:'Set-Privilege advanced'로 설정합니다
 . 다음 작업 중 하나를 수행합니다.

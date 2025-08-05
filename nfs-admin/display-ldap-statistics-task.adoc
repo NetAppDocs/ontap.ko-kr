@@ -49,4 +49,6 @@ Cluster: cluster1
 ----
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["통계 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-stop.html["통계 중지"^]
 

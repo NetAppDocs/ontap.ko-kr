@@ -53,5 +53,8 @@ Cluster: cluster1
 ----
 .관련 정보
 * link:../performance-config/index.html["성능 모니터링 설정"]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-catalog-object-show.html["통계 카탈로그 객체 표시"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["통계 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-stop.html["통계 중지"^]
 

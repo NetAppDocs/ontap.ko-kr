@@ -28,9 +28,6 @@ Do you want to continue? {y|n}: y
 ----
 . 'tistics catalog counter show' 명령을 사용하여 BranchCache 관련 카운터를 출력한다.
 +
-에 대한 자세한 내용은 `statistics catalog counter show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-catalog-counter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [listing]
 ----
 cluster1::*> statistics catalog counter show -object hashd
@@ -84,6 +81,9 @@ Object: cifs
                                 content was not available on the server.
    ....Output truncated....
 ----
++
+에 대한 자세한 내용은 `statistics catalog counter show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-catalog-counter-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . '스타티틱스 스타트', '스타티틱스 스톱' 명령어를 사용해 BranchCache 관련 통계를 수집한다.
 +
 [listing]
@@ -94,6 +94,9 @@ Statistics collection is being started for Sample-id: 11
 cluster1::*> statistics stop -sample-id 11
 Statistics collection is being stopped for Sample-id: 11
 ----
++
+자세히 알아보세요  `statistics start` 그리고  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^] .
+
 . 통계 표시 명령을 사용하여 수집된 BranchCache 통계를 표시합니다.
 +
 [listing]
@@ -128,6 +131,9 @@ Cluster: cluster1
     branchcache_missing_hash_bytes                                  0
     branchcache_missing_hash_bytes                                  0
 ----
++
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . admin 권한 수준으로 복귀:'et-Privilege admin'입니다
 +
 [listing]
@@ -139,5 +145,6 @@ cluster1::*> set -privilege admin
 .관련 정보
 * xref:display-statistics-task.adoc[통계를 표시합니다]
 * link:../performance-config/index.html["성능 모니터링 설정"]
-* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["통계 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-stop.html["통계 중지"^]
 

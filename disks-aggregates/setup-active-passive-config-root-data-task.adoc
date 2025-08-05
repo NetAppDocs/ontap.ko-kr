@@ -138,3 +138,7 @@ cluster1-02는 여전히 스페어 루트 파티션을 소유합니다.
 데이터 로컬 계층이 생성되고 활성 노드에서 소유됩니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["저장소 집계 생성"^]
+

@@ -61,7 +61,7 @@ NAE 집계를 NAE가 아닌 집집합으로 변환합니다
 
 |===
 +
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
+자세히 알아보세요  `storage aggregate modify` 에서 link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["ONTAP 명령 참조입니다"^] .
 
 +
 다음 명령을 실행하면 "aggr1"에서 집계 수준 암호화가 활성화됩니다.
@@ -79,14 +79,14 @@ cluster1::> storage aggregate create -aggregate aggr1
 ----
 cluster1::> storage aggregate create -aggregate aggr1 -encrypt-with-aggr-key true
 ----
++
+에 대한 자세한 내용은 `storage aggregate create` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 . Aggregate가 암호화를 사용하도록 설정되어 있는지 확인합니다.
 +
 '스토리지 집계 표시 필드 암호화 - 집계 키 사용'
-
-+
-에 대한 자세한 내용은 `storage aggregate show` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show.html?q=storage+aggregate+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 "aggr1"이 암호화에 대해 활성화되어 있는지 확인합니다.
@@ -101,6 +101,9 @@ aggr0_vsim4          false
 aggr1                true
 2 entries were displayed.
 ----
++
+에 대한 자세한 내용은 `storage aggregate show` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show.html?q=storage+aggregate+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 .작업을 마친 후

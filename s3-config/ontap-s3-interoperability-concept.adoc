@@ -93,15 +93,6 @@ SnapMirror S3
 
 
  a| 
-스토리지 가상화
- a| 
--
- a| 
-NetApp FlexArray 가상화
-
-
-
- a| 
 서비스 품질(QoS)
  a| 
 * QoS 최대(천장)

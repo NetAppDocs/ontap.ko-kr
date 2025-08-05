@@ -60,3 +60,7 @@ Flash Pool 로컬 계층의 SSD RAID 그룹에 대한 최대 RAID 그룹 크기�
 다음 명령을 실행하면 Flash Pool 로컬 계층 n1_cache_A2의 SSD 캐시 RAID 그룹의 최대 RAID 그룹 크기가 24로 변경됩니다.
 
 'Storage aggregate modify-aggregate n1_cache_a2-cache-raid-group-size 24'를 선택합니다
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+

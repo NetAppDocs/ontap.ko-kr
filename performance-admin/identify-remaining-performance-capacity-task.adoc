@@ -41,9 +41,6 @@ System Manager 및 Active IQ Unified Manager를 사용하여 이 작업을 완�
 +
 'tortistics show-object resource_fre여유_cpu|aggr'
 
-+
-에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 . 관리 권한으로 돌아가기:
 +
 'Set-Privilege admin'입니다
@@ -97,3 +94,4 @@ Scope: sti2520-214
      optimal_point_confidence_factor                                1
 2 entries were displayed.
 ----
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

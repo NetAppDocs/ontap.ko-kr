@@ -29,13 +29,13 @@ NOTE: Non-Returnable Disk Plus 서비스(NRD Plus)가 없는 경우 FIPS 드라�
 'Storage aggregate delete-aggregate aggregate_name'을 선택합니다
 
 +
-에 대한 자세한 내용은 `storage aggregate delete` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 [listing]
 ----
 cluster1::> storage aggregate delete -aggregate aggr1
 ----
++
+에 대한 자세한 내용은 `storage aggregate delete` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 제거할 FIPS 드라이브 또는 SED의 디스크 ID 식별:
 +
 스토리지 암호화 디스크 표시

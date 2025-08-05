@@ -21,7 +21,6 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 
 .이 작업에 대해
 * 하드 디스크 드라이브(HDD) 로컬 계층을 RAID-DP에서 RAID-TEC로 변환할 수 있습니다. 여기에는 Flash Pool 로컬 계층의 HDD 계층이 포함됩니다.
-* 에 대한 자세한 내용은 을 참조하십시오  `storage aggregate modify`link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html#parameter["ONTAP 명령 참조입니다"^]
 
 
 .단계
@@ -37,4 +36,8 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 +
 'STORAGE AGGATE SHOW_AGGATE_NAME_'
 
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
 

@@ -31,14 +31,14 @@ CIFS, SMB, 감사 및 BranchCache 해시 통계에 대한 정보를 얻고 성�
  a| 
 사용할 수 있는 특정 개체입니다
  a| 
-'통계 카탈로그 객체 객체 객체 객체 객체 객체_이름'을 표시합니다
+`statistics catalog object show -object object_name`
 
 
 
  a| 
 사용할 수 있는 카운터
  a| 
-'통계 카탈로그 카운터'는 object object_name을 보여준다
+`statistics catalog counter show -object object_name`
 
 |===
 +
@@ -133,4 +133,7 @@ Object: client
 [...]
 ----
 .관련 정보
-xref:display-statistics-task.adoc[통계를 표시합니다]
+* xref:display-statistics-task.adoc[통계를 표시합니다]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-catalog-counter-show.html["통계 카탈로그 카운터 개체 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/statistics-start.html["통계 시작"^]
+

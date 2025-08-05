@@ -22,9 +22,6 @@ ONTAP 활성 개체 기술을 사용하여 불균형적으로 많은 양의 클�
 'tortistics top client show -node_name_-sort-key_sort_column_-interval_seconds_between_updates_-iterations_-max_number_of_instances_'
 
 +
-에 대한 자세한 내용은 `statistics top client show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-top-client-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 명령을 실행하면 'cluster1'에 액세스하는 상위 클라이언트가 표시됩니다.
 
 +
@@ -48,12 +45,12 @@ cluster1 : 3/23/2016 17:59:10
 172.17.180.123     vs4 siderop1-vsim4      nfs     92
 172.17.180.153     vs3 siderop1-vsim3      nfs      0
 ----
++
+에 대한 자세한 내용은 `statistics top client show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-top-client-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 . 클러스터에서 액세스하는 상위 파일을 봅니다.
 +
 'tortistics top file show -node_node_name_-sort-key_sort_column_-interval_seconds_between_updates_-iterations_-max_number_of_instances_'
-
-+
-에 대한 자세한 내용은 `statistics top file show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-top-file-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
 다음 명령을 실행하면 'cluster1'에서 액세스되는 최상위 파일이 표시됩니다.
@@ -79,4 +76,7 @@ cluster1 : 3/23/2016 17:59:10
      /vol/vol1/vm169.dat   vol1     vs4 siderop1-vsim3      2
       /vol/vol1/p123.dat   vol1     vs4 siderop1-vsim4      2
 ----
++
+에 대한 자세한 내용은 `statistics top file show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-top-file-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

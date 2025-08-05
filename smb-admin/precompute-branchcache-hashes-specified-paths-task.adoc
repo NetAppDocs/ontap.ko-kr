@@ -19,6 +19,9 @@ BranchCache 서비스를 구성하여 단일 파일, 디렉토리 또는 디렉�
 * 사전 컴퓨팅 해시를 계산할 스토리지 가상 시스템(SVM)과 경로를 지정해야 합니다.
 * 또한 해시를 재귀적으로 계산할 것인지 여부를 지정해야 합니다.
 * 해시를 재귀적으로 계산하려는 경우 BranchCache 서비스는 지정된 경로 아래의 전체 디렉토리 트리를 탐색한 다음 각 대상 객체에 대한 해시를 계산합니다.
++
+자세히 알아보세요  `statistics start` 그리고  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^] .
+
 
 
 .단계
@@ -46,6 +49,9 @@ BranchCache 서비스를 구성하여 단일 파일, 디렉토리 또는 디렉�
 .. 원하는 SVM 인스턴스에 대한 'hashd' 객체 통계 표시: 'stattisics show-object hashd-instance vserver_name'
 .. 명령을 반복하여 생성된 해시 수가 증가하는지 확인합니다.
 
+
++
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
@@ -98,5 +104,4 @@ Cluster: cluster1
 ----
 .관련 정보
 * link:../performance-config/index.html["성능 모니터링 설정"]
-* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
 

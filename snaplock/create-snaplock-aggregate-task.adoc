@@ -27,7 +27,6 @@ ONTAP 9.10.1로 업그레이드할 때 기존 SnapLock 및 비 SnapLock 애그�
 9.10.1 이전의 ONTAP 버전으로 복구해야 하는 경우 모든 SnapLock 규정 준수, SnapLock 엔터프라이즈 및 SnapLock 볼륨을 고유한 SnapLock 애그리게이트로 이동해야 합니다.
 
 .이 작업에 대해
-* FlexArray LUN에 대한 규정 준수 애그리게이트는 생성할 수 없지만 FlexArray LUN에서는 SnapLock 규정 준수 애그리게이트가 지원됩니다.
 * SyncMirror 옵션을 사용하여 준수 애그리게이트를 생성할 수 없습니다.
 * MetroCluster 구성에서 미러링된 Compliance Aggregate는 SnapLock 감사 로그 볼륨을 호스팅하는 데 사용되는 경우에만 생성할 수 있습니다.
 +
@@ -46,9 +45,6 @@ MetroCluster 구성에서는 SnapLock Enterprise가 미러링된 Aggregate 및 �
 storage aggregate create -aggregate <aggregate_name> -node <node_name> -diskcount <number_of_disks> -snaplock-type <compliance|enterprise>
 ----
 +
-에 대한 자세한 내용은 `storage aggregate create` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-+
 다음 명령을 실행하면 node1에 3개의 디스크가 있는 "aggr1"이라는 SnapLock "Compliance" Aggregate가 생성됩니다.
 
 +
@@ -56,4 +52,7 @@ storage aggregate create -aggregate <aggregate_name> -node <node_name> -diskcoun
 ----
 cluster1::> storage aggregate create -aggregate aggr1 -node node1 -diskcount 3 -snaplock-type compliance
 ----
++
+에 대한 자세한 내용은 `storage aggregate create` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 

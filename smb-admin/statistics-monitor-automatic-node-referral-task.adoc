@@ -61,6 +61,9 @@ Statistics collection is being started for Sample-id: sample1
 ----
 Statistics collection is being stopped for Sample-id: sample1
 ----
++
+자세히 알아보세요  `statistics start` 그리고  `statistics stop` 에서 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=statistics["ONTAP 명령 참조입니다"^] .
+
 .. 자동 노드 참조 통계: 'stattics show -sample-id sample1-counter * node *'를 봅니다
 +
 [listing]
@@ -90,6 +93,9 @@ Cluster: cluster1
 +
 SVM VS1에 참여하는 모든 노드의 카운터를 출력합니다. 이 예에서는 자동 노드 조회 통계와 관련된 출력 필드만 제공합니다.
 
++
+에 대한 자세한 내용은 `statistics show` link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
 
 
 . admin 권한 수준으로 복귀:'et-Privilege admin'입니다
@@ -98,5 +104,4 @@ SVM VS1에 참여하는 모든 노드의 카운터를 출력합니다. 이 예�
 .관련 정보
 * xref:display-statistics-task.adoc[통계를 표시합니다]
 * link:../performance-config/index.html["성능 모니터링 설정"]
-* link:https://docs.netapp.com/us-en/ontap-cli/statistics-show.html["통계에 따르면"^]
 

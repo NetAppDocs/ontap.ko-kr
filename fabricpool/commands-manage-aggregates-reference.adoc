@@ -240,3 +240,6 @@ FabricPool은 로컬 계층이 98%에 도달할 때까지 콜드 데이터를 �
 고급 권한 수준에서 '-unrecla재확보된-공간-임계값' 매개 변수를 사용하는 '스토리지 집계 객체 저장소 표시' 또는 '저장소 집계 오브젝트 저장소 표시 공간' 명령
 
 |===
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+

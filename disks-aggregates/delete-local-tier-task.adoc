@@ -23,3 +23,6 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 ....
 > storage aggregate delete -aggregate aggr1
 ....
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-delete.html["저장소 집계 삭제"^]
+
