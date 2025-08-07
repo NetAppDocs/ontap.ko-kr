@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: performance, manage, management, monitor, monitoring, issues 
 summary: 기본적인 성능 모니터링 및 관리 작업을 설정하고 일반적인 성능 문제를 식별하고 해결할 수 있습니다. 
 ---
-= 성능 모니터링 및 관리 개요
+= ONTAP Active IQ Unified Manager 성능 모니터링 및 관리에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,7 +26,7 @@ summary: 기본적인 성능 모니터링 및 관리 작업을 설정하고 일�
 ** OnCommand Workflow Automation(WFA)
 
 
-* Linux 또는 Windows 기반 설치 대신 가상 어플라이언스를 사용하여 Unified Manager를 설치하려는 경우.
+* Linux 또는 Windows 기반 설치 대신 가상 어플라이언스를 사용하여 Active IQ Unified Manager 설치하려고 합니다.
 * 소프트웨어를 설치하는 데 DHCP가 아닌 정적 구성을 사용할 수 있습니다.
 * 고급 권한 수준에서 ONTAP 명령에 액세스할 수 있습니다.
 * "admin" 역할을 가진 클러스터 관리자입니다.

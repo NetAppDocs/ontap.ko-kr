@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, disk, throughput, latency 
 summary: 클러스터 노드의 디스크 처리량 및 지연 시간 메트릭을 확인하여 문제 해결을 지원할 수 있습니다. 
 ---
-= 디스크 처리량 및 지연 시간 확인
+= ONTAP 디스크 처리량 및 대기 시간 확인
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -46,6 +46,10 @@ cluster1 : 8/24/2015 12:44:15
 
 1.10.11      node2     4    4       2     2 122880  408576    17713
 ----
+[]
+====
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/statistics-disk-show.html["통계 디스크 표시"^]
 
+
+====
