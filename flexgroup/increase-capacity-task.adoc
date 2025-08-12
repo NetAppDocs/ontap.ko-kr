@@ -11,7 +11,9 @@ summary: 기존 볼륨 구성 요소에 용량을 추가하거나 새로운 멤�
 
 
 [role="lead"]
-FlexGroup 볼륨의 기존 구성원 볼륨(구성요소)에 용량을 추가하거나 새 구성원 볼륨으로 FlexGroup 볼륨을 확장하여 FlexGroup 볼륨의 크기를 늘릴 수 있습니다. FlexGroup 볼륨은 200개 이상의 구성원 볼륨을 포함할 수 없습니다.
+FlexGroup 볼륨의 크기를 늘리려면 FlexGroup 볼륨의 모든 기존 멤버 볼륨(구성 요소)에 용량을 추가하거나 새로운 멤버 볼륨으로 FlexGroup 볼륨을 확장하면 됩니다.  FlexGroup 볼륨은 200개를 초과하는 멤버 볼륨을 가질 수 없습니다.
+
+필요한 경우 FlexGroup 볼륨 내의 개별 볼륨 크기를 늘릴 수도 있습니다.
 
 .시작하기 전에
 Aggregate에 충분한 공간이 있어야 합니다.
@@ -47,9 +49,9 @@ ONTAP 9.3 이전 릴리즈에서는 SnapMirror 관계가 설정된 후 FlexGroup
  a| 
 FlexGroup 볼륨의 용량입니다
  a| 
-FlexGroup 볼륨의 구성원 볼륨 크기 조정:
+FlexGroup 볼륨의 모든 멤버 볼륨 크기를 조정합니다.
 
-'volume modify -vserver vserver_name -volume fg_name -size new_size'
+`volume modify -vserver <svm_name> -volume <fg_name> -size <new_size>`
 
 
 
@@ -95,3 +97,22 @@ FlexGroup 볼륨에 16개의 구성원 볼륨이 있는 경우 각 구성원 볼
 cluster1::> volume expand -vserver svm1 -volume fg1 -aggr-list aggr1,aggr2 -aggr-list-multiplier 2
 ----
 새 구성원 볼륨의 크기는 기존 구성원 볼륨의 크기와 동일합니다.
+
+.개별 볼륨의 크기를 늘리세요
+FlexGroup 볼륨에서 개별 멤버 볼륨의 크기를 늘리려면 다음을 사용할 수 있습니다. `volume resize` 명령.
+
+.단계
+. 단일 FlexGroup 멤버 볼륨의 크기를 늘리세요.
++
+`volume size -volume <volume_name> -vserver <svm1> -new-size <new_size>`
+
++
+다음 예제에서는 FlexGroup 멤버 볼륨 FG_0003의 크기를 3.7GB로 늘립니다.
+
++
+[listing]
+----
+volume size -volume FG__0003 -vserver svm1 -new-size 3.7GB
+vol size: Volume "svm1:FG__0003" size set to 3.70g.
+----
+
