@@ -20,6 +20,8 @@ MAV 기능은 기존의 역할 기반 액세스 제어(RBAC) 설정을 그대로
 
 승인 요청이 보류 중이라는 것을 MAV 관리자에게 알리도록 MAV를 구성할 수 있습니다. 이렇게 하려면 이메일 알림(특히, 'Mail From' 및 'Mail Server' 매개 변수)을 구성하거나 이러한 매개 변수를 지워 알림을 비활성화해야 합니다. 이메일 알림이 없으면 MAV 관리자는 승인 대기열을 수동으로 확인해야 합니다.
 
+ONTAP 9.15.1부터 Active Directory(AD) 사용자를 MAV 관리자로 구성할 수 있습니다.  AD 사용자는 다음과 같아야 합니다.link:../authentication/grant-access-active-directory-users-groups-task.html["ONTAP 관리자로 구성됨"] .
+
 
 
 == System Manager 절차
@@ -117,7 +119,7 @@ cluster01::> event config show
 +
 ** '-vserver' - 이번 릴리즈에서는 관리 SVM만 지원됩니다.
 ** '-name' - 최대 64자의 MAV 그룹 이름입니다.
-** '-승인자' - 하나 이상의 승인자 목록입니다.
+** `-approvers`- 한 명 이상의 승인자 목록.  AD 사용자의 경우 다음 형식을 사용하세요. `domain\user` . 예를 들어,  `mydomain\pavan` .
 ** '-email' - 요청을 작성, 승인, 거부하거나 실행할 때 통지되는 하나 이상의 이메일 주소입니다.
 +
 * 예: * 다음 명령을 실행하면 멤버 2개와 관련 이메일 주소가 있는 MAV 그룹이 생성됩니다.

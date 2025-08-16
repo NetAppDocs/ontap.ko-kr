@@ -34,5 +34,5 @@ ONTAP 9.13.1부터 새 볼륨을 생성하거나 기존 볼륨의 크기를 조�
 
 .추가 정보
 * xref:display-file-inode-usage-task.html[볼륨에 대한 파일 및 inode 사용을 확인합니다]
-* link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/FAQ_-_ONTAP_default_and_maximum_number_of_files_(inodes)["지식 기반 문서: FAQ - ONTAP 기본 및 최대 파일 수(inode)"]
+* link:++https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/FAQ_-_ONTAP_default_and_maximum_number_of_files_(inodes)++["지식 기반 문서: FAQ - ONTAP 기본 및 최대 파일 수(inode)"]
 
