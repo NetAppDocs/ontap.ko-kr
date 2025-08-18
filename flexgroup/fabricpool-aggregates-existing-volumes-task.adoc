@@ -43,13 +43,13 @@ vs1     fg1    aggr1,aggr3
 +
 모든 애그리게이트를 오브젝트 저장소에 연결해야 합니다.
 
-
-
 +
 [listing]
 ----
 cluster-2::> storage aggregate object-store attach -aggregate aggr1 -object-store-name Amazon01B1
 ----
+
+
 * FabricPool 볼륨 구성요소를 FlexGroup에서 애그리게이트로 마이그레이션하려면 다음 단계를 수행하십시오.
 +
 .. 기존 FlexGroup 볼륨에 대한 계층화 정책을 'volume modify -volume flexgroup_name -Tiering -policy [auto|snapshot|none|backup]'로 설정합니다
@@ -72,4 +72,6 @@ cluster-2::> volume move start -volume fg1_001 -destination-aggregate FP_aggr1 -
 
 
 .관련 정보
-link:../disks-aggregates/index.html["디스크 및 애그리게이트 관리"]
+* link:../disks-aggregates/index.html["디스크 및 애그리게이트 관리"]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-attach.html["저장소 집계 객체-저장소 연결"^]
+

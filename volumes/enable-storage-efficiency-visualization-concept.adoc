@@ -11,9 +11,11 @@ summary: 시스템에 있는 모든 애그리게이트의 스토리지 효율성
 
 
 [role="lead"]
- `storage aggregate show-efficiency`명령을 사용하여 시스템에 있는 모든 애그리게이트의 스토리지 효율성에 대한 정보를 표시할 수 있습니다. 에 대한 자세한 내용은 `storage aggregate show-efficiency` link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-efficiency.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+사용하세요 `storage aggregate show-efficiency` 시스템의 모든 집계에 대한 저장 효율성에 대한 정보를 표시하는 명령입니다.
 
 'Storage aggregate show-Efficiency' 명령에는 명령 옵션을 전달하여 호출할 수 있는 세 가지 보기가 있습니다.
+
+자세히 알아보세요  `storage aggregate show-efficiency` 에서 link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-efficiency.html["ONTAP 명령 참조입니다"^] .
 
 
 

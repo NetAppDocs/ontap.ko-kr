@@ -150,3 +150,9 @@ https://mysupport.netapp.com/site/global/dashboard["NetApp 지원"^]
 
 |===
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+object["저장 집계 객체"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show.html["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-space.html["저장 집합 쇼 공간"^]
+

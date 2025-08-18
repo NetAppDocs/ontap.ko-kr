@@ -94,3 +94,11 @@ aggregate      object-store-name mirror-type     is-mirror-degraded
 aggr1          my-AZURE-store      primary           -
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-mirror.html["저장소 집계 객체-저장소 미러"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-modify.html["저장소 집계 객체-저장소 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-show-resync-status.html["저장소 집계 객체 저장소 show-resync-status"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-show.html["저장소 집계 객체-저장소 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-unmirror.html["저장소 집계 객체-저장소 미러링 해제"^]
+

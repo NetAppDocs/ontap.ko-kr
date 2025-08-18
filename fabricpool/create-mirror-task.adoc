@@ -60,3 +60,9 @@ cluster1::> storage aggregate object-store attach -aggregate aggr1 -name my-stor
 cluster1::> storage aggregate object-store mirror -aggregate aggr1 -name my-store-2
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-attach.html["저장소 집계 객체-저장소 연결"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+object-store+config["저장소 집계 객체 저장소 구성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-mirror.html["저장소 집계 객체-저장소 미러"^]
+

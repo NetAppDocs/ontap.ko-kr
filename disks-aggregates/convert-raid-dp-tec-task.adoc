@@ -40,4 +40,5 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-status.html["스토리지 집계 표시 상태"^]
 

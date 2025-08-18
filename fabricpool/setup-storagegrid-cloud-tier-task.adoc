@@ -77,3 +77,8 @@ cluster1::> storage aggregate object-store config create
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-config-create.html["저장소 집계 객체-저장소 구성 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-object-store-config-modify.html["저장소 집계 객체 저장소 구성 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-config-show.html["저장소 집계 객체-저장소 구성 표시"^]
+

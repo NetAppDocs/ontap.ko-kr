@@ -43,3 +43,9 @@ storage aggregate object-store config create
 'storage aggregate object-store config modify' 명령을 사용하면 FabricPool에 대한 IBM 클라우드 오브젝트 스토리지 구성 정보를 수정할 수 있습니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-config-create.html["저장소 집계 객체-저장소 구성 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-object-store-config-modify.html["저장소 집계 객체 저장소 구성 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-config-show.html["저장소 집계 객체-저장소 구성 표시"^]
+

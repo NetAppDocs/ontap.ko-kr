@@ -64,11 +64,6 @@ ONTAP 9.12.1부터는 AFF 플랫폼 및 FAS500f 플랫폼에 대해 30TB 이상�
 
 테이프 백업 및 중복 제거와 같은 특정 기능은 메타데이터의 공간을 볼륨과 애그리게이트에서 직접 사용합니다. 이러한 기능은 볼륨 및 볼륨 풋프린트의 관점에서 다양한 공간 사용을 보여줍니다.
 
-.관련 정보
-* link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Space_Usage["Knowledge Base 문서: 공간 사용"^]
-* link:https://www.netapp.com/blog/free-up-storage-capacity-upgrade-ontap/["ONTAP 9.12.1로 업그레이드하여 스토리지 용량의 5%를 확보하십시오"^]
-
-
 
 
 == 볼륨 메타데이터 및 데이터 메트릭 보고
@@ -92,3 +87,8 @@ ONTAP 9.12.1부터는 AFF 플랫폼 및 FAS500f 플랫폼에 대해 30TB 이상�
 
 
 이러한 변경 사항을 통해 사용자가 소비한 데이터를 보다 정확하게 볼 수 있습니다. 이를 통해 보다 정확한 비용 청구 결정을 내릴 수 있는 기능 등 여러 가지 이점을 얻을 수 있습니다.
+
+.관련 정보
+* link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Space_Usage["Knowledge Base 문서: 공간 사용"^]
+* link:https://www.netapp.com/blog/free-up-storage-capacity-upgrade-ontap/["ONTAP 9.12.1로 업그레이드하여 스토리지 용량의 5%를 확보하십시오"^]
+

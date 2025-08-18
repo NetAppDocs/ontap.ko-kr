@@ -36,5 +36,6 @@ NOTE: ONTAP 9.7 이전에는 System Manager에서 _aggregate_를 사용하여 _ 
 
 |===
 .관련 정보
-* link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-relocation-show.html["저장소 집계 이전 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-relocation-start.html["저장소 집계 재배치 시작"^]
 

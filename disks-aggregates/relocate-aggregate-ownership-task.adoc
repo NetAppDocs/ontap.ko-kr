@@ -112,3 +112,9 @@ node1::storage aggregate>
 재배치가 완료되면 이 명령의 출력에는 재배치 상태가 ""완료""인 각 로컬 계층이 표시됩니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-relocation-show.html["저장소 집계 이전 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-relocation-start.html["저장소 집계 재배치 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show.html["스토리지 애그리게이트 보기"^]
+

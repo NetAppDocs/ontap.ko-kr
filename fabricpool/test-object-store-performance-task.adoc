@@ -35,3 +35,8 @@ summary: 개체 저장소를 로컬 계층에 연결하기 전에 개체 저장�
 `storage aggregate object-store profiler show`
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-profiler-show.html["저장소 집계 객체-저장소 프로파일러 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-profiler-start.html["저장소 집계 객체 저장소 프로파일러 시작"^]
+

@@ -21,7 +21,9 @@ summary: 스토리지 Aggregate 및 볼륨 명령을 사용하여 Aggregate, 볼
  a| 
 사용된 공간 및 사용 가능한 공간 비율, 스냅샷 예약 크기 및 기타 공간 사용 정보에 대한 세부 정보를 포함한 애그리게이트
  a| 
-Storage aggregate show'Storage aggregate show'Storage aggregate show-space-fields snap-size-total, used-including-snapshot-reserve'라는 내용이 있습니다
+'스토리지 집계 쇼'
+
+`storage aggregate show-space -fields snap-size-total,used-including-snapshot-reserve`
 
 
 
@@ -42,7 +44,9 @@ Storage aggregate show'Storage aggregate show'Storage aggregate show-space-field
  a| 
 볼륨에서 사용하는 공간입니다
  a| 
-볼륨 표시 필드 크기 사용 가능 비율 사용 공간 볼륨 표시 공간
+`volume show -fields size,used,available,percent-used`
+
+`volume show-space`
 
 
 
@@ -54,6 +58,8 @@ Storage aggregate show'Storage aggregate show'Storage aggregate show-space-field
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-space.html["저장 집합 쇼 공간"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-status.html["스토리지 집계 표시 상태"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-compute-reclaimable.html["볼륨 스냅샷 계산 - 재확보 가능"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-show.html["볼륨 표시"^]
 

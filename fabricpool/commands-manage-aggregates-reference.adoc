@@ -242,4 +242,6 @@ FabricPool은 로컬 계층이 98%에 도달할 때까지 콜드 데이터를 �
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+object["저장 집계 객체"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-space.html["저장 집합 쇼 공간"^]
 

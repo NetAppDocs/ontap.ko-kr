@@ -39,4 +39,5 @@ RAID 유형 간 변환의 의미를 이해하려면 명령의 를 참조하십�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-modify.html["저장소 집계 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-status.html["스토리지 집계 표시 상태"^]
 

@@ -137,3 +137,7 @@ NetApp은 재확보된 공간 임계값이 60%보다 높지 않도록 하는 것
 storage aggregate object-store modify -aggregate <name> -object-store-name <name> -unreclaimedspace-threshold <%> (0%-99%)
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-modify.html["저장소 집계 객체-저장소 수정"^]
+

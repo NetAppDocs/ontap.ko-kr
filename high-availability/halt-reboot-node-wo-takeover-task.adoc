@@ -140,4 +140,5 @@ NOTE: 명령 출력에 클러스터 HA가 구성되지 않았다는 경고가 �
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/cluster-ha-modify.html["클러스터 ha 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-relocation-start.html["저장소 집계 재배치 시작"^]
 

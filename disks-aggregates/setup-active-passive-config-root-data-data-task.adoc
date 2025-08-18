@@ -115,4 +115,5 @@ cluster1-02는 여전히 스페어 루트 파티션을 소유합니다.
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-auto-provision.html["스토리지 집계 자동 프로비저닝"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-create.html["저장소 집계 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
 

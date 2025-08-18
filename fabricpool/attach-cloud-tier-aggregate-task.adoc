@@ -76,3 +76,7 @@ myaggr       Amazon01B1           available
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-attach.html["저장소 집계 객체-저장소 연결"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-show.html["저장소 집계 객체-저장소 표시"^]
+
