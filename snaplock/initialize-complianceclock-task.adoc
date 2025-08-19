@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, complianceclock, compliance clock, initialize, worm, retention, period, node, ntp, reset, resynchronize 
 summary: SnapLock ComplianceClock은 WORM 파일의 보존 기간을 변경할 수 있는 변조를 방지합니다. SnapLock 애그리게이트를 호스팅하는 각 노드에서 시스템 규정 준수 클록을 초기화해야 합니다.  
 ---
-= 준수 시계를 초기화합니다
+= ONTAP 규정 준수 시계 초기화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -16,8 +16,8 @@ summary: ARP는 잠재적인 랜섬웨어 위협으로부터 보호하기 위해
 .이 작업에 대해
 ARP는 다음 이름 중 하나를 접두사로 사용하여 스냅샷을 생성합니다.
 
-* `Anti_ransomware_backup` : ONTAP 9.16.1 이하 버전에서 비정상 상황에 대응하여 생성되는 스냅샷과 함께 사용됩니다. 예를 들어,  `Anti_ransomware_backup.2022-12-20_1248` .
 * `Anti_ransomware_periodic_backup` : ONTAP 9.17.1 이상에서 정기적으로 생성되는 스냅샷에 사용됩니다. 예를 들어,  `Anti_ransomware_periodic_backup.2025-06-01_1248` .
+* `Anti_ransomware_backup` : ONTAP 9.16.1 이하 버전에서 비정상 상황에 대응하여 생성되는 스냅샷과 함께 사용됩니다. 예를 들어,  `Anti_ransomware_backup.2022-12-20_1248` .
 
 
 스냅샷 이외의 스냅샷에서 복원하려면  `Anti_ransomware` 시스템 공격이 식별된 후 스냅샷을 먼저 공개해야 합니다.

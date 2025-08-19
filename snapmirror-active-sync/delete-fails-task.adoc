@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/delete-fails-task.html
 keywords: troubleshooting, SM-BC, SMBC, SnapMirror, redirection fence, delete, snapmirror active sync 
 summary: 대상 볼륨에 리디렉션 펜스 세트가 있으면 SnapMirror 삭제 작업이 실패합니다. 
 ---
-= 대상 볼륨에 fence가 설정되어 있으면 SnapMirror 삭제 작업이 실패합니다
+= 대상 볼륨에 펜스가 설정된 경우 ONTAP SnapMirror 삭제 작업이 실패합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

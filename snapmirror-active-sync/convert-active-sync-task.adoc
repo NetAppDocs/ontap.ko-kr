@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/convert-active-sync-task.html
 keywords: SM-BC, SMBC, convert, SnapMirror synchronous, existing, snapmirror active sync 
 summary: SnapMirror 관계를 SnapMirror 활성 동기화로 변환합니다. 
 ---
-= 기존 SnapMirror 관계를 SnapMirror 활성 동기화 관계로 변환합니다
+= 기존 ONTAP SnapMirror 관계를 SnapMirror Active Sync 관계로 변환
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/planned-failover-unsuccessful-task.html
 keywords: troubleshooting, SM-BC, SMBC, SnapMirror, failover, planned failover, common Snapshot copy, snapmirror active sync 
 summary: '"napmirror failover start" 명령을 실행한 후 "napmirror failover show" 명령의 출력에 무중단 작업이 진행 중임을 나타내는 메시지가 표시됩니다.' 
 ---
-= 계획된 페일오버 실패
+= 계획된 ONTAP 클러스터 장애 조치가 실패했습니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

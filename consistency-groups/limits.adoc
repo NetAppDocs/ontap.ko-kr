@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency groups, object limits 
 summary: 일관성 그룹을 계획할 때는 주의해야 할 오브젝트 제한사항이 있습니다. 
 ---
-= 정합성 보장 그룹 제한
+= ONTAP 일관성 그룹 제한에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

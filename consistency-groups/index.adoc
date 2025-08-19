@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency group protection, application protection, metrocluster, write-order, application management, workload 
 summary: 일관성 그룹은 단일 유닛으로 구성된 볼륨 모음으로, 여러 볼륨 또는 LUN에 걸쳐 워크로드를 쉽게 관리하고 보호할 수 있도록 합니다. 
 ---
-= 일관성 그룹 개요
+= ONTAP 일관성 그룹에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

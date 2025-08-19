@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency groups, application tag, sql, oracle, component tag 
 summary: 애플리케이션 및 구성 요소 태그는 관리 툴로서 일관성 그룹의 다양한 워크로드를 필터링하고 식별할 수 있습니다. 
 ---
-= 응용 프로그램 및 구성 요소 태그를 수정합니다
+= ONTAP 일관성 그룹 애플리케이션 및 구성 요소 태그 수정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/use-cases-concept.html
 keywords: SM-BC, SMBC, overview, benefits, use cases, architecture, snapmirror active sync 
 summary: SnapMirror Active sync protect application with LUN을 사용하여 애플리케이션을 투명하게 페일오버할 수 있으므로 재해 발생 시 무중단 업무 운영을 보장할 수 있습니다. 
 ---
-= SnapMirror Active Sync의 사용 사례
+= ONTAP SnapMirror Active Sync 사용 사례
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

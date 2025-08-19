@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/interoperability-reference.html
 keywords: SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris, aix, hp-ux, fanout, snapmirror active sync 
 summary: SnapMirror 활성 동기화는 ONTAP의 다양한 운영 체제 및 기타 기능과 호환됩니다. 
 ---
-= ONTAP에서 SnapMirror 활성 동기화 상호 운용성
+= ONTAP SnapMirror Active Sync 상호 운용성
 :allow-uri-read: 
 :icons: font
 :linkattrs: 

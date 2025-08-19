@@ -4,7 +4,7 @@ permalink: consistency-groups/modify-geometry-task.html
 keywords: consistency group geometry, promote consistency group, demote, add consistency group 
 summary: ONTAP 9.13.1부터 입출력 작업이 중단되는 정합성 보장 그룹의 구조를 수정할 수 있습니다. 
 ---
-= 정합성 보장 그룹 지오메트리를 수정합니다
+= ONTAP 일관성 그룹 지오메트리 수정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

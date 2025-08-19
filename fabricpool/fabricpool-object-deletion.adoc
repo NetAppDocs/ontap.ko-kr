@@ -20,17 +20,17 @@ FabricPool는 연결된 오브젝트 저장소에서 블록을 삭제하지 않�
 |===
 
 
-| 오브젝트 저장소 | ONTAP 9.3 및 이전 버전 | ONTAP 9.4 - 9.7 | ONTAP 9.8 이상 | Cloud Volumes ONTAP 
+| 오브젝트 저장소 | ONTAP 9.8 이상 | ONTAP 9.7~9.4 | ONTAP 9.3 및 이전 버전 | Cloud Volumes ONTAP 
 
 
  a| 
 Amazon S3
  a| 
+20%
+ a| 
+20%
+ a| 
 0%
- a| 
-20%
- a| 
-20%
  a| 
 30%
 
@@ -39,11 +39,11 @@ Amazon S3
  a| 
 Google 클라우드 스토리지
  a| 
-해당 없음
+20%
  a| 
 12%
  a| 
-20%
+해당 없음
  a| 
 35%
 
@@ -52,11 +52,11 @@ Google 클라우드 스토리지
  a| 
 Microsoft Azure Blob 저장소
  a| 
-해당 없음
+25%
  a| 
 15%
  a| 
-25%
+해당 없음
  a| 
 35%
 
@@ -65,11 +65,11 @@ Microsoft Azure Blob 저장소
  a| 
 NetApp ONTAP S3를 참조하십시오
  a| 
-해당 없음
- a| 
-해당 없음
- a| 
 40%
+ a| 
+해당 없음
+ a| 
+해당 없음
  a| 
 해당 없음
 
@@ -78,11 +78,11 @@ NetApp ONTAP S3를 참조하십시오
  a| 
 NetApp StorageGRID를 참조하십시오
  a| 
+40%
+ a| 
+40%
+ a| 
 0%
- a| 
-40%
- a| 
-40%
  a| 
 해당 없음
 

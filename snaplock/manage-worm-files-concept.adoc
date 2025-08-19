@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 여러 가지 방법으로 WORM 파일을 관리할 수 있습니다. 파일을 WORM에 수동 또는 자동으로 커밋하고, 볼트 대상에서 WORM에 스냅샷을 커밋하고, WORM 파일을 미러링하고, 소송 중에 WORM 파일을 보존하고, WORM 파일을 삭제할 수 있습니다. 
 ---
-= WORM 파일 관리
+= ONTAP SnapLock 사용하여 WORM 파일 관리
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

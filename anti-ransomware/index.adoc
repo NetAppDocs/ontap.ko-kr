@@ -107,14 +107,14 @@ NAS 환경은 학습 모드와 활성 모드를 사용합니다 . <<arp-ai,ARP/A
 
 
 | 학습  a| 
-ONTAP 9.10.1~9.15.1의 경우, ARP를 활성화하면 ARP가 자동으로 학습 모드로 설정됩니다. 학습 모드에서 ONTAP 시스템은 엔트로피, 파일 확장자 유형, 파일 IOPS 등의 분석 영역을 기반으로 경고 프로필을 개발합니다. ARP를 30일 동안 학습 모드로 유지하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 30일 전에 자동으로 전환합니다. ONTAP 9.13.1 이전 버전에서는 수동으로 전환할 수 있습니다.
+ONTAP 9.15.1~9.10.1의 경우, ARP를 활성화하면 ARP가 자동으로 학습 모드로 설정됩니다. 학습 모드에서 ONTAP 시스템은 엔트로피, 파일 확장자 유형, 파일 IOPS 등의 분석 영역을 기반으로 경고 프로필을 개발합니다. ARP를 30일 동안 학습 모드로 유지하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 전환을 자동화하며, 이는 30일 전에 실행될 수 있습니다. ONTAP 9.13.1 이전 버전에서는 수동으로 전환할 수 있습니다.
 
 link:switch-learning-to-active-mode.html["학습 모드에서 활성 모드로 전환하는 방법에 대해 자세히 알아보세요."] .
 
 
 TIP: 이 명령은 `security anti-ransomware volume workload-behavior show` 볼륨에서 감지된 파일 확장명을 표시합니다. 이 명령을 학습 모드 초기에 실행하면 파일 유형이 정확하게 표시되는 경우 ONTAP가 다른 메트릭을 수집하고 있으므로 해당 데이터를 활성 모드로 전환하기 위한 기준으로 사용해서는 안 됩니다. 에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
  a| 
-* ONTAP 9.10.1~9.15.1을 사용한 FlexVol 볼륨
+* ONTAP 9.15.1~9.10.1을 사용한 FlexVol 볼륨
 * ONTAP 9.13.1 이상을 사용한 FlexGroup 볼륨
 
 
@@ -170,8 +170,8 @@ ARP는 학습된 분석 결과를 바탕으로 수신 데이터를 기반으로 
 
 * * Low * (낮음) *: 볼륨에서 비정상 상태를 가장 먼저 감지합니다(예: 볼륨에서 새 파일 확장자가 관찰됨). 이 감지 수준은 ARP/AI가 없는 ONTAP 9.16.1 이전 버전에서만 사용할 수 있습니다.
 +
-** ONTAP 9.10.1에서 Moderate로 에스컬레이션하기 위한 임계값은 100개 이상의 파일입니다.
 ** ONTAP 9.11.1부터 다음을 수행할 수 있습니다. link:manage-parameters-task.html["ARP에 대한 탐지 매개변수 사용자 정의"] .
+** ONTAP 9.10.1에서 Moderate로 에스컬레이션하기 위한 임계값은 100개 이상의 파일입니다.
 
 
 * *보통*: 높은 엔트로피가 감지되거나 이전에는 발견되지 않았던 동일한 파일 확장자를 가진 파일이 여러 개 관찰됩니다. 이는 ARP/AI가 적용된 ONTAP 9.16.1 이상의 기본 감지 수준입니다.

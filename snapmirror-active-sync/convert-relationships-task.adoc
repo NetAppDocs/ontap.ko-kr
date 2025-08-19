@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/convert-relationships-task.html
 keywords: SM-BC, SMBC, convert, SnapMirror synchronous, zero RPO, zero recovery time objective, zero RTO, existing, snapmirror active sync 
 summary: SnapMirror 액티브 동기화 구성에서 대칭 보호와 비대칭 보호 간에 변환을 수행합니다. 
 ---
-= SnapMirror 활성 동기화 관계 유형을 변환합니다
+= ONTAP SnapMirror 활성 동기화 관계 유형 변환
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

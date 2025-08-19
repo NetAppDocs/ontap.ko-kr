@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/upgrade-revert-task.html
 keywords: upgrade, revert, snapmirror active sync, SMBC, SM-BC 
 summary: ONTAP의 업그레이드나 복귀는 특히 ONTAP 9.9.1 이상 또는 9.7 이전 버전으로 전환할 때 SnapMirror 액티브 동기화 관계에 영향을 미칩니다. 
 ---
-= ONTAP에서 SnapMirror 활성 동기화를 사용하여 업그레이드 및 되돌립니다
+= ONTAP SnapMirror Active Sync로 업그레이드하고 되돌리기
 :allow-uri-read: 
 :nofooter: 
 :icons: font

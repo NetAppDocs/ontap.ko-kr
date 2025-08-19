@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/site-b-mediator-troubleshoot-task.html
 keywords: SM-BC, SMBC, troubleshooting, link down, Mediator, Cloud Mediator, snapmirror active sync 
 summary: 사이트 B의 중재자 연결이 연결할 수 없는 것으로 표시됩니다. 
 ---
-= 사이트 B와 중재 Down 및 사이트 A Down 사이의 연결
+= 사이트 B와 ONTAP Mediator 간의 링크가 끊어지고 사이트 A가 끊어졌습니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

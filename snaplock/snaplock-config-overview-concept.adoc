@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, configure, workflow 
 summary: SnapLock를 사용하기 전에 여러 구성 작업을 수행해야 합니다. 
 ---
-= SnapLock를 구성합니다
+= ONTAP SnapLock 구성에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application protection, two-phase commit, 2 phase, smbc, async snapmirror, local, remote, snapshot, asynchronous, svm disaster recovery, snapmirror 
 summary: 일관성 그룹을 사용하여 로컬 스냅샷, SnapMirror 비동기식, SnapMirror 액티브 동기화 및 SVM 재해 복구를 사용하여 데이터를 보호합니다. 
 ---
-= ONTAP에서 정합성 보장 그룹 보호
+= ONTAP 일관성 그룹 보호
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

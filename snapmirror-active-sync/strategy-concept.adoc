@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/strategy-concept.html
 keywords: snapmirror, snapmirror business continuity, sm-bc, deployment, recommendations 
 summary: SnapMirror Active Sync의 배포 및 모범 사례에 대해 알아보십시오. 
 ---
-= SnapMirror Active Sync에 대한 배포 전략 및 모범 사례
+= ONTAP SnapMirror Active Sync를 위한 배포 전략 및 모범 사례
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

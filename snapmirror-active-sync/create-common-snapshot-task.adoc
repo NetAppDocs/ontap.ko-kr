@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/create-common-snapshot-task.html
 keywords: SM-BC, SMBC, common Snapshot copy, manual Snapshot copy create, snapmirror active sync 
 summary: 정기적으로 예약된 스냅샷 작업 외에도 운영 SnapMirror 정합성 보장 그룹의 볼륨과 보조 SnapMirror 정합성 보장 그룹의 볼륨 간에 공통 스냅샷을 수동으로 생성할 수 있습니다. 
 ---
-= 공통 스냅샷을 생성합니다
+= ONTAP 일관성 그룹 간에 공통 스냅샷을 만듭니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

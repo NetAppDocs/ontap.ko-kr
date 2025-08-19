@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/remove-configuration-task.html
 keywords: SM-BC, SMBC, removing, protection relationship, snapmirror active sync 
 summary: 제로 RTO SnapMirror 동기식 보호를 제거하고 SnapMirror 액티브 동기화 관계 구성을 삭제할 수 있습니다. 
 ---
-= SnapMirror 활성 동기화 구성을 제거합니다
+= ONTAP SnapMirror Active Sync 구성 제거
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

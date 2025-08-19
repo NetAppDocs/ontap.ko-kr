@@ -13,8 +13,8 @@ summary: ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족
 [role="lead"]
 ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족되었는지 확인하고, 설치 패키지를 가져온 다음 호스트에서 설치 프로그램을 실행해야 합니다. 이 절차는 기존 설치의 설치 또는 업그레이드에 사용됩니다.
 
-* ONTAP 9.7부터 모든 버전의 ONTAP 중재자를 사용하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
 * ONTAP 9.8부터는 모든 버전의 ONTAP Mediator를 사용하여 SnapMirror 활성 동기화 관계를 모니터링할 수 있습니다.
+* ONTAP 9.7부터 모든 버전의 ONTAP 중재자를 사용하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
 
 
 
@@ -24,7 +24,7 @@ ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족되었는
 ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 고려 사항을 검토하세요.
 
 
-NOTE: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모드와 호환되지 않으므로 설치가 실패합니다. 명령을 사용하여 FIPS 모드가 활성화되어 있는지 확인할 수 `fips-mode-setup --check` 있습니다. 명령을 사용하여 FIPS 모드를 사용하지 않도록 설정할 수 `fips-modesetup --disable` 있습니다. ONTAP mediator 1.8 이하를 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅합니다.
+NOTE: ONTAP Mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux(RHEL) FIPS 모드와 호환되지 않아 설치가 정상적으로 이루어지지 않습니다.  FIPS 모드가 활성화되어 있는지 확인하려면 다음을 사용하세요. `fips-mode-setup --check` 명령.  다음을 사용하여 FIPS 모드를 비활성화할 수 있습니다. `fips-modesetup --disable` 명령.  ONTAP Mediator 1.8 또는 이전 버전을 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅하세요.
 
 * ONTAP Mediator를 최신 버전으로 업그레이드해야 합니다. 이전 버전의 ONTAP Mediator는 모든 ONTAP 버전과 역호환성을 유지하지만 최신 버전에는 모든 타사 요소에 대한 보안 패치가 포함되어 있습니다.
 * 새 ONTAP 중재자 버전으로 업그레이드할 때 더 높은 버전을 사용할 수 없는 경우 설치 관리자는 자동으로 권장 SCST 버전으로 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법은 을 참조하십시오link:manage-task.html["ONTAP 중재자 관리"]. 지원되는 버전은 를 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]참조하십시오.
@@ -33,7 +33,7 @@ NOTE: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모�
 [NOTE]
 ====
 * 설치에 실패하면 최신 버전의 ONTAP Mediator로 업그레이드해야 할 수 있습니다.
-* 2025년 6월 15일부터 ONTAP Mediator 1.8 및 1.9는 코드 서명 인증서가 만료되어 설치 또는 업그레이드할 수 없습니다. 설치 또는 업그레이드가 실패하면 ONTAP Mediator 1.9.1 패치 버전을 대신 사용하세요.
+* 2025년 6월 15일부터 코드 서명 인증서가 만료되어 ONTAP Mediator 1.9 및 1.8을 설치하거나 업그레이드할 수 없습니다.  설치나 업그레이드가 실패하면 대신 ONTAP Mediator 1.9.1 패치 버전을 사용하세요.
 
 
 ====
@@ -45,7 +45,7 @@ NOTE: ONTAP mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux FIPS 모�
 
 === 호스트 요구 사항
 
-RHEL(Red Hat Enterprise Linux) 또는 Rocky Linux를 설치하고 관련 리포지토리를 구성할 때 다음 요구 사항을 따르십시오.
+RHEL 또는 Rocky Linux를 설치하고 관련 저장소를 구성할 때 다음 요구 사항을 따르세요.
 
 [NOTE]
 ====
@@ -146,10 +146,10 @@ OS는 다음 요구 사항을 충족해야 합니다.
 * Red Hat Enterprise Linux
 +
 ** 호환 가능: 9.5 ^1^
-** 권장: 8.10, 9.4, 9.6 및 10
+** 권장: 10, 9.6, 9.4 및 8.10
 
 
-* Rocky Linux 8.10, 9.6 및 10
+* Rocky Linux 10, 9.6 및 8.10
 
 
 
@@ -159,11 +159,11 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 * Red Hat Enterprise Linux
 +
-** 호환되는 버전: 8.4, 8.5, 8.6, 8.7, 8.9, 9.1 및 9.3 1
-** 권장: 8.8, 8.10, 9.0, 9.2, 9.4 및 9.5
+** 호환 가능 버전: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5, 8.4 ^1^
+** 권장: 9.5, 9.4, 9.2, 9.0, 8.10, 8.8
 
 
-* Rocky Linux 8.10 및 9.5
+* Rocky Linux 9.5 및 8.10
 
 
 
@@ -173,11 +173,11 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 * Red Hat Enterprise Linux
 +
-** 호환되는 버전: 8.4, 8.5, 8.6, 8.7, 8.9, 9.1 및 9.3 1
-** 권장: 8.8, 8.10, 9.0, 9.2, 9.4 및 9.5
+** 호환 가능 버전: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5, 8.4 ^1^
+** 권장: 9.5, 9.4, 9.2, 9.0, 8.10, 8.8
 
 
-* Rocky Linux 8.10 및 9.5
+* Rocky Linux 9.5 및 8.10
 
 
 
@@ -185,8 +185,13 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.8
  a| 
-* Red Hat Enterprise Linux: 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 8.10, 9.0, 9.1, 9.2, 9.3 및 9.4
-* Rocky Linux 8.10 및 9.4
+* Red Hat Enterprise Linux:
++
+** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
+** 권장: 9.4, 9.3, 9.2, 9.1, 9.0, 8.10, 8.9, 8.8
+
+
+* Rocky Linux 9.4 및 8.10
 
 
 
@@ -194,8 +199,13 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.7
  a| 
-* Red Hat Enterprise Linux: 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 9.0, 9.1, 9.2 및 9.3
-* Rocky Linux 8.9 및 9.3
+* Red Hat Enterprise Linux:
++
+** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
+** 권장: 9.3, 9.2, 9.1, 9.0, 8.9, 8.8
+
+
+* Rocky Linux 9.3 및 8.9
 
 
 
@@ -203,8 +213,13 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.6
  a| 
-* Red Hat Enterprise Linux: 8.4, 8.5, 8.6, 8.7, 8.8, 9.0, 9.1, 9.2
-* Rocky Linux 8.8 및 9.2
+* Red Hat Enterprise Linux:
++
+** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
+** 권장: 9.2, 9.1, 9.0 및 8.8
+
+
+* Rocky Linux 9.2 및 8.8
 
 
 
@@ -212,8 +227,8 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.5
  a| 
-* Red Hat Enterprise Linux: 7.6, 7.7, 7.8, 7.9, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5
-* CentOS: 7.6, 7.7, 7.8, 7.9
+* Red Hat Enterprise Linux: 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
+* CentOS: 7.9, 7.8, 7.7 및 7.6
 
 
 
@@ -221,8 +236,8 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.4
  a| 
-* Red Hat Enterprise Linux: 7.6, 7.7, 7.8, 7.9, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5
-* CentOS: 7.6, 7.7, 7.8, 7.9
+* Red Hat Enterprise Linux: 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
+* CentOS: 7.9, 7.8, 7.7 및 7.6
 
 
 
@@ -230,8 +245,8 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.3
  a| 
-* Red Hat Enterprise Linux: 7.6, 7.7, 7.8, 7.9, 8.0, 8.1, 8.2, 8.3
-* CentOS: 7.6, 7.7, 7.8, 7.9
+* Red Hat Enterprise Linux: 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
+* CentOS: 7.9, 7.8, 7.7 및 7.6
 
 
 
@@ -239,12 +254,12 @@ OS는 다음 요구 사항을 충족해야 합니다.
  a| 
 1.2
  a| 
-* Red Hat Enterprise Linux: 7.6, 7.7, 7.8, 7.9, 8.0, 8.1
-* CentOS: 7.6, 7.7, 7.8, 7.9
+* Red Hat Enterprise Linux: 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
+* CentOS: 7.9, 7.8, 7.7 및 7.6
 
 
 |===
-. 호환되는 것은 RHEL이 더 이상 이 버전을 지원하지 않지만 ONTAP mediator는 계속 설치할 수 있다는 의미입니다.
+. 호환 가능이란 Red Hat이 더 이상 이러한 RHEL 버전을 지원하지 않지만 ONTAP Mediator는 여전히 해당 버전에 설치할 수 있음을 의미합니다.
 
 
 .OS 필수 패키지
@@ -257,7 +272,7 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 |===
 
 
-| 모든 RHEL/CentOS 버전 | RHEL 8.x/Rocky Linux 8용 추가 패키지 | RHEL 9.x/Rocky Linux 9용 추가 패키지 | RHEL 10.x / Rocky Linux 10용 추가 패키지 
+| 모든 RHEL/CentOS 버전 | RHEL 10.x / Rocky Linux 10용 추가 패키지 | RHEL 9.x/Rocky Linux 9용 추가 패키지 | RHEL 8.x/Rocky Linux 8용 추가 패키지 
 
 
  a| 
@@ -275,11 +290,8 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 * mokutil
 
  a| 
-* elfutils -libelf -devel
-* 정책 코어 유틸리티 - 비톤 - 유틸리티
-* redhat-LSB-core를 참조하십시오
-* python39
-* 피톤39-데블
+* 파이썬3.12
+* 파이썬3.12-개발
 
  a| 
 * elfutils -libelf -devel
@@ -288,8 +300,11 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 * python3-devel
 
  a| 
-* 파이썬3.12
-* 파이썬3.12-개발
+* elfutils -libelf -devel
+* 정책 코어 유틸리티 - 비톤 - 유틸리티
+* redhat-LSB-core를 참조하십시오
+* python39
+* 피톤39-데블
 
 
 |===

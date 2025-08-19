@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/recover-unplanned-failover-task.html
 keywords: fan-out, snapmirror active sync, unplanned failover 
 summary: '자동 비계획 장애 조치(AUFO) 작업은 운영 클러스터가 다운되거나 격리될 때 발생합니다. 이 경우 보조 클러스터가 운영 클러스터로 변환되어 클라이언트 서비스가 시작됩니다.' 
 ---
-= 예기치 않은 자동 페일오버 작업에서 복구합니다
+= 계획되지 않은 자동 ONTAP 클러스터 장애 조치 작업에서 복구
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

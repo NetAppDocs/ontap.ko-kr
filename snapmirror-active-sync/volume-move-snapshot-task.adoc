@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/volume-move-snapshot-task.html
 keywords: SM-BC, SMBC, volume move, troubleshooting, consistency group, Snapshot copy, snapmirror active sync 
 summary: 볼륨 이동 작업 후 볼륨 이동 작업에 대한 참조 스냅샷이 SnapMirror 관계에 대한 최신 스냅샷으로 표시됩니다. 
 ---
-= 볼륨 이동 참조 스냅샷이 최신 스냅샷으로 표시됩니다
+= 볼륨 이동 참조 스냅샷이 ONTAP SnapMirror 관계에 대한 최신 정보로 표시됩니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

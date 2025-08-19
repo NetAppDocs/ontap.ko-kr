@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/delete-fails-takeover-task.html
 keywords: troubleshooting, SM-BC, SMBC, SnapMirror, delete, takeover, consistency group, snapmirror active sync 
 summary: 'ONTAP 9.9.1이 클러스터에 설치되면 다음을 실행합니다.  `snapmirror delete` SnapMirror 활성 동기화 일관성 그룹 관계가 인수 상태인 경우 명령이 실패합니다.' 
 ---
-= takover 상태에서 SnapMirror 삭제 작업이 실패합니다
+= ONTAP SnapMirror 삭제 작업이 테이크오버 상태에서 실패합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency groups, consistency group, clone 
 summary: ONTAP 9.12.1부터 일관성 그룹을 클론 복제하여 일관성 그룹 구성 및 볼륨의 복사본을 생성할 수 있습니다. 
 ---
-= 일관성 그룹의 클론을 생성합니다
+= ONTAP 일관성 그룹 복제
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

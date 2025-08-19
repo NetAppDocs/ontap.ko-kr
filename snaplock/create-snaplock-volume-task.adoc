@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, volume, shanpshot, copy, create, complianceclock, file, worm, compliance, enterprise 
 summary: 'WORM 상태로 커밋하려는 파일 또는 스냅샷에 대한 SnapLock 볼륨을 생성해야 합니다. ONTAP 9.10.1.1부터 애그리게이트 유형에 관계없이 생성한 모든 볼륨은 기본적으로 비 SnapLock 볼륨으로 생성됩니다. SnapLock 유형으로 Compliance 또는 Enterprise를 지정하여 SnapLock 볼륨을 명시적으로 생성하려면 옵션을 사용해야 `-snaplock-type` 합니다. 기본적으로 SnapLock 유형은 로 `non-snaplock`설정됩니다.' 
 ---
-= ONTAP에서 SnapLock 볼륨을 생성하고 마운트합니다
+= ONTAP SnapLock 볼륨 생성 및 마운트
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,21 +4,21 @@ title: 정합성 보장 그룹
 entries:
 - title: 개요
   url: "/consistency-groups/index.html"
-- title: 제한
+- title: 일관성 그룹 제한에 대해 알아보세요
   url: "/consistency-groups/limits.html"
 - title: 단일 일관성 그룹을 구성합니다
   url: "/consistency-groups/configure-task.html"
 - title: 계층적 일관성 그룹을 구성합니다
   url: "/consistency-groups/configure-hierarchy-task.html"
-- title: 보호
+- title: 일관성 그룹 보호
   url: "/consistency-groups/protect-task.html"
-- title: 수정
+- title: 일관성 그룹 수정
   url: "/consistency-groups/modify-task.html"
-- title: 지오메트리 수정
+- title: 정합성 보장 그룹 지오메트리를 수정합니다
   url: "/consistency-groups/modify-geometry-task.html"
 - title: 응용 프로그램 및 구성 요소 태그를 수정합니다
   url: "/consistency-groups/modify-tags-task.html"
-- title: 복제
+- title: 일관성 그룹의 클론을 생성합니다
   url: "/consistency-groups/clone-task.html"
-- title: 삭제
+- title: 일관성 그룹을 삭제합니다
   url: "/consistency-groups/delete-task.html"

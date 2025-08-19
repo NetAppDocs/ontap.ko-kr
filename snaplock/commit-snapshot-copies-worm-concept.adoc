@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snaplock, commit, snapshot, copy, worm, snapvault, protect, snapmirror, clone, snaplock type 
 summary: SnapVault용 SnapLock를 사용하여 보조 스토리지에서 WORM으로 스냅샷을 보호할 수 있습니다. 볼트 대상에서 모든 기본 SnapLock 작업을 수행합니다. 
 ---
-= 볼트 대상에서 WORM에 스냅샷을 커밋합니다
+= ONTAP 볼트 대상의 WORM에 스냅샷 커밋
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

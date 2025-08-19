@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/snapmirror-release-fails-task.html
 keywords: SM-BC, SMBC, volume move, troubleshooting, primary down, snapmirror active sync 
 summary: 스냅샷을 삭제할 수 없으면 SnapMirror 릴리즈 작업이 실패합니다. 
 ---
-= 스냅샷을 삭제할 수 없을 때 SnapMirror 릴리즈가 실패합니다
+= 스냅샷을 삭제할 수 없을 때 ONTAP SnapMirror 릴리스가 실패합니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
