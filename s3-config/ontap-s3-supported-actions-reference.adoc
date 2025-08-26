@@ -16,6 +16,19 @@ ONTAP S3 작업은 아래 명시된 경우를 제외하고 표준 S3 REST API에
 
 NOTE: 이러한 S3 작업은 ONTAP에서 네이티브 S3 버킷을 사용할 때 특히 지원됩니다. 버전 관리, 개체 잠금 및 기타 기능과 관련된 작업과 같은 이러한 작업 중 일부는 을 사용할 때 지원되지 link:../s3-multiprotocol/index.html["S3 NAS 버킷(멀티프로토콜 NAS 볼륨의 S3)"]않습니다.
 
+특정 작업에 대해 별도로 언급하지 않는 한, ONTAP 9.8부터 다음과 같은 일반적인 요청 헤더가 지원됩니다.
+
+* `Authorization`
+* `Connection`
+* `Content-Length`
+* `Content-MD5`
+* `Content-Type`
+* `Date`
+* `Expect`
+* `Host`
+* `x-amz-date`
+
+
 
 
 == 버킷 작업
@@ -26,40 +39,72 @@ ONTAP에서 AWS S3 API를 사용하여 다음 작업이 지원됩니다.
 | 버킷 작동 | 로 시작하는 ONTAP 지원 
 
 
-| CreateBucket | ONTAP 9.11.1 
+ a| 
+CreateBucket
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.
+
+* `x-amz-bucket-object-lock-enabled`
+
+| ONTAP 9.11.1 
 
 
-| 삭제 버킷 | ONTAP 9.11.1 
+ a| 
+삭제 버킷
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.
+| ONTAP 9.11.1 
 
 
-| DeleteBuckketPolicy를 참조하십시오 | ONTAP 9.12.1 
+| DeleteBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| GetBuckketAcl | ONTAP 9.8 
+| DeleteBucketLifecycle ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| GetBuckLifecycleConfiguration 을 참조하십시오 | ONTAP 9.13.1+ * 만료 동작만 지원됩니다 
+ a| 
+DeleteBuckketPolicy를 참조하십시오
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.
+| ONTAP 9.12.1 
 
 
-| GetBucketLocation 을 참조하십시오 | ONTAP 9.10.1 
+| GetBucketAcl ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| GetBuckketPolicy를 참조하십시오 | ONTAP 9.12.1 
+| GetBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| 머리버킷 | ONTAP 9.8 
+ a| 
+GetBuckLifecycleConfiguration 을 참조하십시오
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.
+ a| 
+ONTAP 9.13.1
+
+*만료 작업만 지원됩니다.
 
 
-| ListAllMyBucket 을 참조하십시오 | ONTAP 9.8 
+
+| GetBucketLocation ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.10.1 
 
 
-| ListBucket | ONTAP 9.8 
+| GetBucketPolicy ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.12.1 
 
 
-| ListBuckketVersioning을 참조하십시오 | ONTAP 9.11.1 
+| GetBucketVersioning ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.11.1 
 
 
-| ListObjectVersions 를 선택합니다 | ONTAP 9.11.1 
+| HeadBucket ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
+
+
+| ListAllMyBuckets ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
+
+
+| ListBuckets ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
+
+
+| ListBucketVersions ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.11.1 
 
 
 | 퍼트버킷  a| 
@@ -69,10 +114,18 @@ ONTAP에서 AWS S3 API를 사용하여 다음 작업이 지원됩니다.
 
 
 
-| PutBucketLifecycleConfiguration을 참조하십시오 | ONTAP 9.13.1+ * 만료 동작만 지원됩니다 
+| PutBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.  a| 
+ONTAP 9.8
 
 
-| BucketPolicy를 참조하십시오 | ONTAP 9.12.1 
+
+| PutBucketLifecycleConfiguration ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.13.1 * 만료 작업만 지원됩니다. 
+
+
+| PutBucketPolicy ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.12.1 
+
+
+| PutBucketVersioning ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.11.1 
 |===
 
 
@@ -101,83 +154,263 @@ ONTAP 9.11.1부터 ONTAP S3는 다음과 같은 ONTAP API와 함께 개체 버�
 * PutBucketVersioning을 참조하십시오
 
 
+특정 작업에 대해 별도로 언급하지 않는 한 다음 URI 쿼리 매개변수가 지원됩니다.
+
+* `versionId`( ONTAP 9.12.1부터 시작되는 개체 작업에 필요함)
+
+
 |===
 | 개체 작업입니다 | 로 시작하는 ONTAP 지원 
 
 
-| AbortMultipartUpload 를 클릭합니다 | ONTAP 9.8 
+ a| 
+AbortMultipartUpload 를 클릭합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 쿼리 매개변수도 지원합니다.
+`uploadId`
+ a| 
+ONTAP 9.8
 
 
-| CompleteMultipartUpload를 클릭합니다 | ONTAP 9.8 
+
+ a| 
+CompleteMultipartUpload를 클릭합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 쿼리 매개변수도 지원합니다.
+`uploadId`
+ a| 
+ONTAP 9.8
 
 
-| CopyObject 를 선택합니다 | ONTAP 9.12.1 
+
+ a| 
+CopyObject 를 선택합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 헤더도 지원합니다.
+
+* `x-amz-copy-source`
+* `x-amz-copy-source-if-match`
+* `x-amz-copy-source-if-modified-since`
+* `x-amz-copy-source-if-none-match`
+* `x-amz-copy-source-if-unmodified-since`
+* `x-amz-metadata-directive`
+* `x-amz-object-lock-mode`
+* `x-amz-object-lock-retain-until-date`
+* `x-amz-tagging`
+* `x-amz-tagging-directive`
+* `x-amz-meta-<metadata-name>`
+
+| ONTAP 9.12.1 
 
 
-| CreateMultptUpload 를 클릭합니다 | ONTAP 9.8 
+ a| 
+CreateMultptUpload 를 클릭합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 헤더도 지원합니다.
+
+* `Cache-Control`
+* `Content-Disposition`
+* `Content-Encoding`
+* `Content-Language`
+* `Expires`
+* `x-amz-tagging`
+* `x-amz-object-lock-mode`
+* `x-amz-object-lock-retain-until-date`
+* `x-amz-meta-<metadata-name>`
+
+| ONTAP 9.8 
 
 
-| DeleteObject 를 클릭합니다 | ONTAP 9.8 
+ a| 
+DeleteObject 를 클릭합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.
+
+* `x-amz-bypass-governance-retention`
+
+| ONTAP 9.8 
 
 
-| DeleteObjects 를 클릭합니다 | ONTAP 9.11.1 
+| DeleteObjects ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.* `x-amz-bypass-governance-retention` | ONTAP 9.11.1 
 
 
-| DeleteObjectTagging 을 선택합니다 | ONTAP 9.9.1 
+ a| 
+DeleteObjectTagging 을 선택합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.
+| ONTAP 9.9.1 
 
 
-| GetBuckketVersioning 을 참조하십시오 | ONTAP 9.11.1 
+ a| 
+GetObject 를 참조하십시오
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 쿼리 매개변수도 지원합니다.
+
+* `partNumber`
+* `response-cache-control`
+* `response-content-disposition`
+* `response-content-encoding`
+* `response-content-language`
+* `response-content-type`
+* `response-expires`
 
 
-| GetObject 를 참조하십시오 | ONTAP 9.8 
+그리고 이 추가 요청 헤더는 다음과 같습니다.
+
+* 범위
+
+| ONTAP 9.8 
 
 
-| GetObjectAcl | ONTAP 9.8 
+| GetObjectAcl ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| GetObjectRetention을 참조하십시오 | ONTAP 9.14.1 
+ a| 
+GetObjectAttributes
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.
+
+* `x-amz-object-attributes`
+
+| ONTAP 9.17.1 
 
 
-| GetObjectTagging | ONTAP 9.9.1 
+| GetObjectRetention ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.14.1 
 
 
-| HeadObject 를 선택합니다 | ONTAP 9.8 
+| GetObjectTagging ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.9.1 
 
 
-| ListMultipartUpload 를 클릭합니다 | ONTAP 9.8 
+| HeadObject ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
-| ListObjects 를 선택합니다 | ONTAP 9.8 
+ a| 
+ListMultipartUpload 를 클릭합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `delimiter`
+* `key-marker`
+* `max-uploads`
+* `prefix`
+* `upload-id-marker`
+
+| ONTAP 9.8 
 
 
-| ListObjectsV2 | ONTAP 9.8 
+ a| 
+ListObjects 를 선택합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `delimiter`
+* `encoding-type`
+* `marker`
+* `max-keys`
+* `prefix`
+
+| ONTAP 9.8 
 
 
-| 목록 BuckketVersions | ONTAP 9.11.1 
+ a| 
+ListObjectsV2
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `continuation-token`
+* `delimiter`
+* `encoding-type`
+* `fetch-owner`
+* `max-keys`
+* `prefix`
+* `start-after`
+
+| ONTAP 9.8 
 
 
-| 목록 파트 | ONTAP 9.8 
+ a| 
+ListObjectVersions 를 선택합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `delimiter`
+* `encoding-type`
+* `key-marker`
+* `max-keys`
+* `prefix`
+* `version-id-marker`
+
+| ONTAP 9.11.1 
 
 
-| PutBucketVersioning을 참조하십시오 | ONTAP 9.11.1 
+ a| 
+목록 파트
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `max-parts`
+* `part-number-marker`
+* `uploadId`
+
+| ONTAP 9.8 
 
 
-| PutObject 를 선택합니다 | ONTAP 9.8 
+ a| 
+PutObject 를 선택합니다
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 헤더도 지원합니다.
+
+* `Cache-Control`
+* `Content-Disposition`
+* `Content-Encoding`
+* `Content-Language`
+* `Expires`
+* `x-amz-tagging`
+* `x-amz-object-lock-mode`
+* `x-amz-object-lock-retain-until-date`
+* `x-amz-meta-<metadata-name>`
+
+| ONTAP 9.8 
 
 
-| PutObjectLockConfiguration 을 참조하십시오 | ONTAP 9.14.1 
+| PutObjectLockConfiguration ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.14.1 
 
 
-| PutObjectRetention | ONTAP 9.14.1 
+ a| 
+PutObjectRetention
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.
+
+* `x-amz-bypass-governance-retention`
+
+| ONTAP 9.14.1 
 
 
-| PutObjectTagging | ONTAP 9.9.1 
+| PutObjectTagging ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다. | ONTAP 9.9.1 
 
 
 | 업로드 파트 | ONTAP 9.8 
 
 
-| 업로드파트 복사 | ONTAP 9.12.1 
+ a| 
+업로드파트 복사
+
+ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
+
+* `partNumber`
+* `uploadId`
+
+
+그리고 다음과 같은 추가 요청 헤더가 있습니다.
+
+* `x-amz-copy-source`
+* `x-amz-copy-source-if-match`
+* `x-amz-copy-source-if-modified-since`
+* `x-amz-copy-source-if-none-match`
+* `x-amz-copy-source-if-unmodified-since`
+* `x-amz-copy-source-range`
+
+| ONTAP 9.12.1 
 |===
 
 
@@ -238,7 +471,8 @@ ONTAP 9.12.1에는 버킷 정책 및 오브젝트 복사 기능이 추가되었�
 .ONTAP 9.11.1
 ONTAP 9.11.1에는 버전 관리, 미리 지정된 URL, 청크 업로드 지원, S3 API를 사용한 버킷 생성 및 삭제와 같은 일반적인 S3 작업 지원이 추가되었습니다.
 
-* ONTAP S3는 이제 x-amz-content-sha256:streaming-aws4-hMAC-sha256-payload를 사용하여 청크 업로드 서명 요청을 지원합니다
+* ONTAP S3는 이제 청크 업로드 서명 요청을 지원합니다. `x-amz-content-sha256:
+STREAMING-AWS4-HMAC-SHA256-PAYLOAD`
 * ONTAP S3는 이제 미리 설정된 URL을 사용하여 개체를 공유하거나 다른 사용자가 사용자 자격 증명 없이도 개체를 업로드할 수 있도록 클라이언트 응용 프로그램을 지원합니다.
 * CreateBucket
 * 삭제 버킷
