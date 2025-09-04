@@ -29,7 +29,45 @@ ONTAP의 최신 릴리즈로 업그레이드하려면 를 참조하십시오 xre
 
 == ONTAP 9.17.1 주요 내용
 
-ONTAP 9.17.1은 보안 관리, 데이터 보호, S3 객체 스토리지 및 스토리지 관리 분야에서 새롭고 향상된 기능을 제공합니다. 새로운 기능 및 향상된 기능의 전체 목록은 다음을 참조하세요. xref:whats-new-9171.adoc[ONTAP 9.17.1의 새로운 기능] .
+ONTAP 9.17.1은 SAN을 위한 AI 기반 자율 랜섬웨어 보호에 혁신을 제공하고 SnapMirror 액티브 동기화 및 일관성 그룹 계층 관리를 통해 NVMe 프런트엔드 호스트 지원을 추가합니다.  이러한 개선 사항을 통해 NetApp은 데이터 보안과 사이버 복원력 분야에서 리더십을 강화하고 ONTAP 성능, 확장성, 효율성 및 비즈니스 연속성을 개선합니다. 새로운 기능 및 향상된 기능의 전체 목록은 다음을 참조하세요. xref:whats-new-9171.adoc[ONTAP 9.17.1의 새로운 기능] .
+
+* xref:../anti-ransomware/index.html[자율형 랜섬웨어 보호를 통한 SAN 지원]
++
+ARP는 암호화 기반 이상 탐지 기능을 갖춘 SAN 볼륨을 지원하고, 상세한 엔트로피 통계를 위한 새로운 명령을 도입하며, 이전에 NAS에 집중되었던 System Manager의 랜섬웨어 보호 메시징 기능을 통합합니다. 구성 가능한 탐지 임계값과 더욱 확정적인 스냅샷 보존 기능은 다양한 워크로드에 대한 유연성을 높여줍니다.
+
+* xref:../system-admin/use-hsts-task.html[HTTP Strict Transport Security(HSTS) 지원]
++
+ONTAP 9.17.1은 웹 서비스에 대한 HTTP Strict Transport Security를 ​​지원하여 사용자 브라우저와 ONTAP 간의 안전한 HTTPS 통신을 시행할 수 있습니다.
+
+* xref:../networking/ipsec-prepare.html[링크 집계 그룹을 통한 IPsec 하드웨어 오프로드]
++
+ONTAP 9.17.1은 링크 집계 그룹에 대한 IPsec 하드웨어 오프로드를 지원하여 ONTAP 9.16.1에 도입된 하드웨어 오프로드 지원을 확장합니다.
+
+* xref:../networking/ipsec-prepare.html[IPsec 포스트퀀텀 사전 공유 키 지원]
++
+ONTAP 미래의 양자 컴퓨터 공격으로부터 보호하기 위해 IPsec에 대한 포스트퀀텀 사전 공유 키를 지원합니다.
+
+* xref:../encryption-at-rest/manage-keys-barbican-task.html[OpenStack Barbican 키 관리자 지원]
++
+ONTAP NetApp 볼륨 암호화(NVE) 키에 대한 OpenStack의 Barbican 키 관리자를 지원합니다.
+
+* xref:../authentication/configure-jit-elevation-task.html[JIT(Just in Time) 권한 승격 지원]
++
+ONTAP 역할 기반 액세스 제어(RBAC)를 위한 JIT 권한 승격을 지원합니다. 사용자는 구성된 역할에 대한 임시 권한 승격을 요청하여 필요에 따라 권한이 부여된 명령에 액세스할 수 있습니다. 클러스터 관리자는 JIT 권한 승격에 액세스할 수 있는 사용자, 액세스 허용 시점 및 기간을 설정할 수 있습니다.
+
+* xref:../system-admin/configure-saml-authentication-task.html[SAML 인증을 위한 Entra IdP 및 IdP 그룹 지원 지원]
++
+ONTAP SAML ID 공급자로 Microsoft Entra를 지원합니다. 또한 IdP에서 제공하는 그룹 정보를 ONTAP 역할에 매핑할 수 있습니다.
+
+* xref:../nvme/support-limitations.html#features[NVMe를 통한 호스트 액세스를 위한 SnapMirror 활성 동기화 지원]
++
+SnapMirror Active Sync는 NVMe/TCP를 사용하는 VMware 워크로드에 대한 NVMe 액세스 지원과 2노드 ONTAP 클러스터에 대한 NVMe/FC 호스트 액세스를 추가합니다.
+
+* xref:../snapmirror-active-sync/index.html[SnapMirror Active Sync를 통한 ONTAP Cloud Mediator 지원]
++
+ONTAP Cloud Mediator는 ONTAP 9.17.1에 도입되었으며 SnapMirror 액티브 동기화 관계를 지원합니다. ONTAP Mediator와 마찬가지로 클라우드 기반 Mediator는 SnapMirror 액티브 동기화 관계에 대한 쿼럼 감시 역할을 하여 투명한 장애 조치를 보장하는 동시에 제3자 사이트 유지 관리의 운영 복잡성을 줄여줍니다.
+
+
 
 
 
@@ -55,7 +93,7 @@ ONTAP 9.16.1은 최신 AFF A 시리즈 및 AFF-C 시리즈 시스템 플랫폼�
 
 * xref:../san-admin/enable-space-allocation.html[NVMe 공간 할당 해제 지원]
 +
-이제 NVMe 네임스페이스에 대해 공간 할당 해제("홀 펀칭" 및 "매핑 해제"라고도 함)가 지원됩니다. 공간 삭제는 씬 프로비저닝된 볼륨 및 NVMe 네임스페이스가 호스트 애플리케이션에서 데이터를 삭제할 때 사용되지 않는 공간을 회수하는 데 도움이 됩니다. 따라서 특히 데이터 회전율이 높은 파일 시스템에서 전반적인 스토리지 효율성이 크게 향상됩니다.
+이제 NVMe 네임스페이스에 대한 공간 할당 해제(홀 펀칭 및 언맵이라고도 함)가 지원됩니다.  공간 할당 해제는 호스트 애플리케이션에서 데이터를 삭제할 때 씬 프로비저닝된 볼륨과 NVMe 네임스페이스가 사용되지 않은 공간을 회수하는 데 도움이 됩니다.  이를 통해 전반적인 저장 효율성이 크게 향상되며, 특히 데이터 회전율이 높은 파일 시스템의 경우 더욱 그렇습니다.
 
 * xref:../flexgroup/enable-adv-capacity-flexgroup-task.html[FlexGroup 볼륨을 위한 고급 용량 밸런싱]
 +
