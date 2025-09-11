@@ -35,7 +35,7 @@ e-메일 주소, syslog 서버, webhook 애플리케이션 및 SNMP traphosts를
 
 
  a| 
-ONTAP 9.7 ~ 9.10.0
+ONTAP 9.10.0~9.7
  a| 
 SNMP traphosts만 구성합니다. ONTAP CLI로 다른 EMS 대상을 구성할 수 있다. 을 참조하십시오 link:index.html["EMS 구성 개요"].
 

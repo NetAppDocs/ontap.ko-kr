@@ -34,7 +34,7 @@ summary: 파트너의 유지 관리가 필요한 상황이나 기타 유사한 �
 | LIF를 마이그레이션하지 않고 파트너 노드를 테이크오버합니다 | 'Storage failover takeover‑skip‑lif‑migration‑before‑takeover true' 
 
 
-| 디스크 불일치가 있더라도 파트너 노드를 인수하십시오 | 'Storage failover takeover‑skip‑lif‑migration‑before‑takeover true' 
+| 디스크 불일치가 있더라도 파트너 노드를 인수하십시오 | `storage failover takeover -allow-disk-inventory-mismatch true` 
 
 
 | ONTAP 버전이 일치하지 않더라도 파트너 노드를 인수하십시오. * 참고: * 이 옵션은 무중단 ONTAP 업그레이드 프로세스 중에만 사용됩니다. | 'Storage failover takeover-option allow‑version‑mismatch'를 참조하십시오 

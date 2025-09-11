@@ -55,6 +55,7 @@ ONTAP 9의 FlexGroup 볼륨에서 지원되고 지원되지 않는 ONTAP 기능�
 
 * xref:manage-flexgroup-rebalance-task.html[FlexGroup 재조정]
 * SnapVault용 SnapLock
+* xref:../data-protection/cloud-backup-with-snapmirror-task.html[SnapMirror 클라우드]
 * FabricPool, FlexGroup 및 SVM DR이 함께 작동합니다. (ONTAP 9.12.1 이전 버전에서는 이러한 기능 중 두 가지가 함께 작동하지만 세 가지 기능이 모두 함께 작동하지는 않습니다.)
 * xref:../volumes/enable-large-vol-file-support-task.html[대용량 지원] FlexGroup 볼륨 구성원 크기를 최대 100TB에서 최대 300TB로 늘립니다.
 

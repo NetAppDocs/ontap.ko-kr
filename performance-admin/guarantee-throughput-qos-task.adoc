@@ -192,7 +192,7 @@ ONTAP 9.6 릴리스부터 C190 및 ONTAP Select 지원이 시작되었습니다.
 다음 표에서는 ONTAP 9 버전별 처리량 천장에 대한 워크로드 지원을 보여 줍니다. 루트 볼륨, 로드 공유 미러 및 데이터 보호 미러는 지원되지 않습니다.
 
 |===
-| 워크로드 지원 | ONTAP 9.3 및 이전 버전 | ONTAP 9.4 - 9.7 | ONTAP 9.8 이상 
+| 워크로드 지원 | ONTAP 9.8 이상 | ONTAP 9.7~9.4 | ONTAP 9.3 및 이전 버전 
 
 
  a| 
@@ -242,22 +242,22 @@ SVM
  a| 
 FlexGroup 볼륨
  a| 
+예
+ a| 
+예
+ a| 
 예(ONTAP 9.3만 해당)
- a| 
-예
- a| 
-예
 
 
 
  a| 
 qtree(1)
  a| 
-아니요
- a| 
-아니요
- a| 
 예
+ a| 
+아니요
+ a| 
+아니요
 
 
 
@@ -275,14 +275,14 @@ qtree(1)
  a| 
 비공유 정책 그룹입니다
  a| 
+예
+ a| 
+예
+ a| 
 아니요
- a| 
-예
- a| 
-예
 
 |===
-ONTAP 9.8부터 NFS 액세스가 FlexVol 및 FlexGroup 볼륨에서 지원됩니다. ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.
+^1^ ONTAP 9.9.1부터 SMB가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서도 SMB 액세스가 지원됩니다.  ONTAP 9.8부터 NFS가 활성화된 FlexVol 및 FlexGroup 볼륨의 qtree에서 NFS 액세스가 지원됩니다.
 
 
 

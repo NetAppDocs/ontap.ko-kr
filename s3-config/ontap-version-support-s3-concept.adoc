@@ -30,13 +30,13 @@ ONTAP S3는 Cloud Volumes ONTAP에서 사내 환경과 동일하게 구성 및 �
 | 클라우드 공급자 | ONTAP 버전 
 
 
-| Azure를 지원합니다 | ONTAP 9.9.1 이상 
+| Google 클라우드 | ONTAP 9.12.1 이상 
 
 
 | 설치하고 | ONTAP 9.11.0 이상 
 
 
-| Google 클라우드 | ONTAP 9.12.1 이상 
+| Azure를 지원합니다 | ONTAP 9.9.1 이상 
 |===
 
 

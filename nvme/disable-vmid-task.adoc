@@ -13,23 +13,4 @@ summary: NVMe 프로토콜을 실행 중이고 DH-HMAC-CHAP를 사용하여 보�
 [role="lead"]
 ONTAP 9.14.1부터 기본적으로 ONTAP는 NVMe/FC 호스트의 기능을 지원하여 고유 식별자로 가상 머신을 식별하고 NVMe/FC 호스트에서 가상 머신 리소스 활용률을 모니터링할 수 있도록 합니다. 또한 호스트측 보고 및 문제 해결이 향상됩니다.
 
-bootarg를 사용하여 이 기능을 비활성화할 수 있습니다.
-
-.단계
-. 가상 머신 식별자를 비활성화합니다.
-+
-[source, cli]
-----
-bootargs set fct_sli_appid_off <port>, <port>
-----
-+
-다음 예에서는 포트 0g 및 포트 0i에서 VMID를 비활성화합니다.
-
-+
-[listing]
-----
-bootargs set fct_sli_appid_off 0g,0i
-
-fct_sli_appid_off == 0g,0i
-----
-
+bootarg를 사용하여 이 기능을 비활성화할 수 있습니다.  지식 기반 문서를 참조하세요link:https://kb.netapp.com/on-prem/ontap/da/SAN/SAN-KBs/How_to_disable_NVMe_host_virtual_machine_identifier_in_ONTAP["ONTAP 에서 NVMe 호스트 가상 머신 식별자를 비활성화하는 방법"^] .
