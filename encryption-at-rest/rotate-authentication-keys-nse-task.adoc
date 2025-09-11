@@ -24,3 +24,7 @@ NOTE: NSE 환경에서 인증 키를 회전하면 온보드 키 관리자(OKM)�
 
 . 'storage encryption disk modify -disk * -data-key-id' 명령어를 이용하여 인증 키를 변경한다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-modify.html["저장 암호화 디스크 수정"^]
+

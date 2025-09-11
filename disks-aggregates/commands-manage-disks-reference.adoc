@@ -142,4 +142,8 @@ SSD 마모 수명을 표시합니다
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-set-led.html["저장 디스크 세트-LED"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-zerospares.html["저장 디스크 제로 스페어"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["저장 암호화 디스크 표시"^]
 

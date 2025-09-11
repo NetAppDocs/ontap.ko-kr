@@ -51,3 +51,7 @@ cluster1-01               2b         mc0      in-use                    normal
 ...
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show-media-changer.html["저장 테이프 쇼 미디어 체인저"^]
+

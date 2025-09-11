@@ -29,3 +29,7 @@ summary: 스토리지 페일오버를 설정 및 해제하는 명령입니다
 |===
 
 NOTE: 유지보수 절차의 일부로 필요한 경우에만 스토리지 페일오버를 해제해야 합니다.
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-modify.html["스토리지 장애 조치 수정"^]
+

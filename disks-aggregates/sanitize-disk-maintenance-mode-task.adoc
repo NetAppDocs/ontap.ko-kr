@@ -221,4 +221,7 @@ NOTE: 삭제 중에 노드 전원을 끄거나 스토리지 연결을 중단하�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-unfail.html["저장 디스크가 고장나지 않음"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-sanitize.html["스토리지 암호화 디스크 정리"^]
 

@@ -46,3 +46,7 @@ Disk     Aggregate Root Owner  Owner ID    Data Owner  Owner ID    Owner      Ow
 
 ....
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+

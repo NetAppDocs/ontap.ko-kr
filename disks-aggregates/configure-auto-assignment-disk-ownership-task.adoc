@@ -53,3 +53,8 @@ cluster1-1     on             on            on             default
 cluster1-2     on             on            on             default
 ----
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-modify.html["저장 디스크 옵션 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-show.html["저장 디스크 옵션 표시"^]
+

@@ -194,3 +194,7 @@ image:dwg_trafford_drawer_with_hdds_callouts.gif["이 그림에서는 DS460C 드
 
 
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+

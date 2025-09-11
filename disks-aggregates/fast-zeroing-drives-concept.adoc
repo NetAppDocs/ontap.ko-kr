@@ -61,3 +61,6 @@ storage disk zerospares
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-zerospares.html["저장 디스크 제로 스페어"^]
+

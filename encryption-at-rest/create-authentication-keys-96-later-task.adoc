@@ -110,3 +110,7 @@ node2                                 NSE-AK    yes
 에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["저장 암호화 디스크 표시"^]
+

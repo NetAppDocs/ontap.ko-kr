@@ -144,4 +144,5 @@ node1                true    true          false
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-modify.html["스토리지 장애 조치 수정"^]
 

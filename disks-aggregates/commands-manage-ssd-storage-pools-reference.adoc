@@ -54,5 +54,9 @@ ONTAP는 SSD 스토리지 풀 관리를 위한 '스토리지 풀' 명령을 제�
 
 |===
 .관련 정보
-* https://docs.netapp.com/us-en/ontap-cli["ONTAP 명령 참조입니다"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-reassign.html["스토리지 풀 재할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show.html["저장 풀 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show-aggregate.html["스토리지 풀 show-aggregate"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show-available-capacity.html["스토리지 풀 사용 가능 용량 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show-disks.html["스토리지 풀 쇼 디스크"^]
 

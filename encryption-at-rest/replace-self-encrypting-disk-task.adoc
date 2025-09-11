@@ -84,3 +84,9 @@ link:assign-authentication-keys-seds-external-task.html["FIPS 드라이브 또�
 link:assign-fips-140-2-authentication-key-task.html["FIPS 140-2 인증 키를 FIPS 드라이브에 할당"]
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show.html["저장 암호화 디스크 표시"^]
+

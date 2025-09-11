@@ -41,3 +41,7 @@ summary: 자동 테이크오버 기능은 지원되는 모든 NetApp FAS, AFF, A
 * 하 테이크오버ImpHotShelf
 * A.테이크오버임NotDef
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-modify.html["스토리지 장애 조치 수정"^]
+

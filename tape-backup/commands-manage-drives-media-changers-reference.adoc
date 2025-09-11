@@ -141,4 +141,6 @@ ONTAP에서 지원하는 테이프 드라이브를 봅니다
 이 명령은 노드 쉘에서 사용해야 합니다.
 
 |===
-에 대한 자세한 내용은 `storage tape` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+tape["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+tape["저장 테이프"^]
+

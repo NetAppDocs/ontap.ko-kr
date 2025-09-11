@@ -74,4 +74,7 @@ Awa는 지정된 로컬 계층과 연결된 볼륨에 대한 워크로드 데이
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/statistics-show-periodic.html["통계 표시-주기적"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-automated-working-set-analyzer-show.html["저장 자동화 작업 세트 분석기 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-automated-working-set-analyzer-start.html["저장 자동화 작업 세트 분석기 시작"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-automated-working-set-analyzer-stop.html["저장 자동화 작업 세트 분석기 중지"^]
 

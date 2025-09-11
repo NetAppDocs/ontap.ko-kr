@@ -101,7 +101,10 @@ KMIP 서버 또는 스토리지 시스템에서 전원을 사용할 수 없습�
 KMIP 서버용 인증 항목(예: 스마트 카드)을 제거합니다. 이렇게 하면 스토리지 시스템에서 디스크 암호화 키에 액세스할 수 없습니다.
 
 |===
-+
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-destroy.html["저장 암호화 디스크 파괴"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-modify.html["저장 암호화 디스크 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-sanitize.html["스토리지 암호화 디스크 정리"^]
 

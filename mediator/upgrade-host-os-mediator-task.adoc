@@ -226,4 +226,5 @@ peer1::>
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-show.html["보안 인증서가 표시됩니다"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-add.html["스냅미러 중재자 추가"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-remove.html["스냅미러 중재자 제거"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-iscsi-initiator-show.html["스토리지 iSCSI 이니시에이터 표시"^]
 

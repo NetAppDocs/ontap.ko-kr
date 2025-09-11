@@ -76,4 +76,5 @@ storage encryption disk modify -disk <disk_id> -fips-key-id <fips_authentication
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-modify.html["저장 암호화 디스크 수정"^]
 

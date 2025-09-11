@@ -57,3 +57,8 @@ ONTAP 9.12.1부터 시스템 관리자를 사용하여 SSD 스토리지 풀에 S
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show.html["저장 풀 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-add.html["스토리지 풀 추가"^]
+

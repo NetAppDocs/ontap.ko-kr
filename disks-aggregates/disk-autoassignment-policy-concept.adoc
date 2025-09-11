@@ -117,3 +117,9 @@ ADP(Advanced Drive Partitioning) 시스템에서 절반 채워진 쉘프에서 �
 자세한 내용을 알아보십시오 link:manual-assign-disks-ownership-manage-task.html["분할되지 않은 디스크의 디스크 소유권을 수동으로 할당합니다"].
 
 자세한 내용을 알아보십시오 link:manual-assign-ownership-partitioned-disks-task.html["분할된 디스크의 디스크 소유권을 수동으로 할당합니다"].
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-modify.html["저장 디스크 옵션 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-show.html["저장 디스크 옵션 표시"^]
+

@@ -128,3 +128,8 @@ NOTE: 'cluster modify -eligibility false' 명령을 사용하여 클러스터 �
 'Set-Privilege admin'입니다
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-show.html["스토리지 장애 조치 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-takeover.html["스토리지 장애 조치 인수"^]
+

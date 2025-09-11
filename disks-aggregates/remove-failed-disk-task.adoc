@@ -33,3 +33,8 @@ ONTAP에서는 장애가 완전히 발생한 디스크를 사용 가능한 디�
 
 . 디스크 쉘프 모델의 하드웨어 가이드에 나와 있는 지침에 따라 디스크 쉘프에서 디스크를 꺼냅니다.
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-set-led.html["저장 디스크 세트-LED"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+

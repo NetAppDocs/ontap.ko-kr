@@ -61,3 +61,9 @@ NOTE: 풀 1의 드라이브는 플렉스 0의 드라이브와 일치하도록 �
 '스토리지 집계 쇼'
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-modify.html["저장 디스크 옵션 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-option-show.html["저장 디스크 옵션 표시"^]
+

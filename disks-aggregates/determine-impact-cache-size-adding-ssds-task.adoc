@@ -33,3 +33,8 @@ Flash Pool 로컬 계층에 이미 할당된 할당 유닛이 있는 SSD 스토�
 (할당되지 않은 할당 유닛 수 4개) × 25% × 사용 가능 크기 × SSD 수
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show-available-capacity.html["스토리지 풀 사용 가능 용량 표시"^]
+

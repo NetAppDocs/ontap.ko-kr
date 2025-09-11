@@ -107,3 +107,12 @@ Info: Starting sanitize on 1 disk.
 `storage disk unfail -spare true -disk _disk_id_`
 . 디스크가 이제 스페어이고 'storage disk show -disk_disk_id_'라는 Aggregate에서 재사용할 준비가 되었는지 확인합니다
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-assign.html["저장 디스크 할당"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-unfail.html["저장 디스크가 고장나지 않음"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-modify.html["저장 암호화 디스크 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-sanitize.html["스토리지 암호화 디스크 정리"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-encryption-disk-show-status.html["저장 암호화 디스크 표시 상태"^]
+

@@ -24,3 +24,7 @@ summary: 스토리지 시스템의 각 드라이브 속성과 일치하는 핫 �
 'storage raid-options modify -node_nodename_ -name min_spare_count -value 2'
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-raid-options-modify.html["스토리지 raid 옵션 수정"^]
+

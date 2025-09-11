@@ -88,4 +88,5 @@ NOTE: 드라이브를 추가할 수 있는 올바른 슬롯은 플랫폼 모델�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-show-spare-disks.html["스토리지 집계 show-spare-disks"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-zerospares.html["저장 디스크 제로 스페어"^]
 

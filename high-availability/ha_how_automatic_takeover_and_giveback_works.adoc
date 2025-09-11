@@ -137,4 +137,8 @@ NOTE: 애그리게이트의 HA 정책을 SFO에서 CFO로 변경하는 것은 �
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+relocation["저장소 집계 재배치"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-giveback.html["스토리지 장애 조치 포기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-modify.html["스토리지 장애 조치 수정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-show-giveback.html["스토리지 장애 조치 쇼-기브백"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-failover-takeover.html["스토리지 장애 조치 인수"^]
 

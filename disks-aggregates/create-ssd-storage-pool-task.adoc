@@ -92,4 +92,6 @@ NOTE: ONTAP 9.7 이상 또는 ONTAP 9.12.1 이전 버전의 ONTAP를 사용하�
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate+show["스토리지 애그리게이트 보기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-create.html["스토리지 풀 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-pool-show.html["저장 풀 쇼"^]
 
