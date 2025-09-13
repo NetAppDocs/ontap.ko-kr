@@ -16,69 +16,6 @@ summary: SnapMirror 액티브 동기화를 사용하여 LUN이 있는 애플리�
 [role="lead"]
 SnapMirror 액티브 동기화(SnapMirror Business Continuity_[SM-BC]_ 라고도 함)를 사용하면 전체 사이트 장애 시에도 비즈니스 서비스의 지속적인 운영을 유지할 수 있으며, 보조 복사본을 사용하여 애플리케이션을 투명하게 페일오버할 수 있습니다. SnapMirror 활성 동기화로 페일오버를 트리거하는 데 수동 개입이나 사용자 지정 스크립팅이 필요하지 않습니다.
 
-SnapMirror Active Sync에 대한 지원은 ONTAP 버전에 따라 다릅니다.
-
-[cols="4*"]
-|===
-
-
-| ONTAP 버전입니다 | 지원되는 클러스터 | 지원되는 프로토콜 | 지원되는 구성 
-
-
-| 9.17.1 이상  a| 
-* AFF
-* ASA
-* C 시리즈
-* ASA r2
-
- a| 
-* iSCSI
-* FC
-* NVMe를 참조하십시오
-
- a| 
-* 비대칭 활성/활성
-
-
-
-NOTE: 비대칭 활성/활성은 ASA r2 및 NVMe를 지원하지 않습니다. NVMe 지원에 대한 자세한 내용은 다음을 참조하세요. link:../nvme/support-limitations.html["NVMe 구성, 지원 및 제한 사항"] .
-
-* 대칭적인 액티브/액티브
-
-
-
-
-| 9.15.1 이상  a| 
-* AFF
-* ASA
-* C 시리즈
-
- a| 
-* iSCSI
-* FC
-
- a| 
-* 비대칭 활성/활성
-* 대칭적 활성/활성 대칭적 활성/활성 구성은 ONTAP 9.15.1에서 2노드 클러스터를 지원합니다. 4노드 클러스터는 ONTAP 9.16.1 이상에서 지원됩니다.
-
-
-
-
-| 9.9.1 이상  a| 
-* AFF
-* ASA
-* C-시리즈 *
-
- a| 
-* iSCSI
-* FC
-
- a| 
-비대칭 활성/활성
-
-|===
-1차 및 2차 클러스터는 동일한 유형이어야 합니다. link:../san-admin/learn-about-asa.html["ASA"] , link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA r2"^] , 또는 AFF.
-
 
 NOTE: 2024년 7월부터 이전에 PDF로 게시된 기술 보고서의 콘텐츠가 ONTAP 제품 문서와 통합되었습니다. 이제 ONTAP SnapMirror 액티브 동기화 문서에 _TR-4878: SnapMirror active sync_의 콘텐츠가 포함되어 있습니다.
 
@@ -178,3 +115,87 @@ RPO는 지정된 기간 동안 허용되는 데이터 손실량인 복구 시점
 
 .즉각적인 RTO
 RTO는 복구 시간 목표를 나타냅니다. 이 시간은 운영 중단, 장애 또는 기타 데이터 손실 이벤트가 발생한 후 애플리케이션이 운영 중단 없이 정상 작업으로 돌아가도록 허용할 수 있는 시간입니다. RTO가 0이면 가동 중지 시간이 허용되지 않는다는 의미입니다.
+
+
+
+== ONTAP 버전에서 SnapMirror Active Sync 구성 지원
+
+SnapMirror Active Sync에 대한 지원은 ONTAP 버전에 따라 다릅니다.
+
+[cols="4*"]
+|===
+
+
+| ONTAP 버전입니다 | 지원되는 클러스터 | 지원되는 프로토콜 | 지원되는 구성 
+
+
+| 9.17.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+* ASA r2
+
+ a| 
+* iSCSI
+* FC
+* VMware 워크로드를 위한 NVMe
+
+ a| 
+* 비대칭 활성/활성
+
+
+
+NOTE: 비대칭 활성/활성은 ASA r2 및 NVMe를 지원하지 않습니다. NVMe 지원에 대한 자세한 내용은 다음을 참조하세요. link:../nvme/support-limitations.html["NVMe 구성, 지원 및 제한 사항"] .
+
+* 대칭적인 액티브/액티브
+
+
+
+
+| 9.16.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+* ASA r2
+
+ a| 
+* iSCSI
+* FC
+
+ a| 
+* 비대칭 활성/활성
+* 대칭적 활성/활성 대칭적 활성/활성 구성은 ONTAP 9.16.1 이상에서 4노드 클러스터를 지원합니다.  ASA r2의 경우 2노드 클러스터만 지원됩니다.
+
+
+
+
+| 9.15.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+
+ a| 
+* iSCSI
+* FC
+
+ a| 
+* 비대칭 활성/활성
+* 대칭적 활성/활성 대칭적 활성/활성 구성은 ONTAP 9.15.1에서 2노드 클러스터를 지원합니다. 4노드 클러스터는 ONTAP 9.16.1 이상에서 지원됩니다.
+
+
+
+
+| 9.9.1 이상  a| 
+* AFF
+* ASA
+* C 시리즈
+
+ a| 
+* iSCSI
+* FC
+
+ a| 
+비대칭 활성/활성
+
+|===
+1차 및 2차 클러스터는 동일한 유형이어야 합니다. link:../san-admin/learn-about-asa.html["ASA"] , link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA r2"^] , 또는 AFF.

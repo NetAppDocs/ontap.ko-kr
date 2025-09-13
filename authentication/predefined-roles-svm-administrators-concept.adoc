@@ -42,7 +42,7 @@ vsadmin을 선택합니다
 vsadmin - 볼륨
  a| 
 * 사용자 계정 로컬 암호 및 키 정보 관리
-* 볼륨 이동을 포함한 볼륨 관리
+* 볼륨 이동을 제외한 볼륨 관리
 * 할당량, qtree, 스냅샷 및 파일 관리
 * LUN 관리
 * 프로토콜 구성: NFS, SMB, iSCSI, FC, FCoE, NVMe/FC 및 NVMe/TCP

@@ -93,8 +93,6 @@ entries:
     url: "/encryption-at-rest/unencrypt-volume-data-task.html"
   - title: 암호화된 볼륨을 이동합니다
     url: "/encryption-at-rest/move-encrypted-volume-task.html"
-  - title: 볼륨 이동 명령을 실행하는 권한을 위임합니다
-    url: "/encryption-at-rest/delegate-volume-encryption-svm-administrator-task.html"
   - title: 볼륨 암호화 키를 다시 입력하다 시작 명령을 사용하여 볼륨에 대한 암호화 키를 변경합니다
     url: "/encryption-at-rest/rekey-encrypted-volume-task.html"
   - title: 볼륨 이동 시작 명령을 사용하여 볼륨의 암호화 키를 변경합니다

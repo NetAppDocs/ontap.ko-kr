@@ -16,6 +16,8 @@ summary: 'FlexVol volume을 동일한 스토리지 가상 머신(SVM) 내에서 
 .이 작업에 대해
 기본적으로 컷오버 작업이 30초 이내에 완료되지 않으면 다시 시도합니다. 및 `-cutover-action` 매개 변수를 사용하여 기본 동작을 조정할 수 `-cutover-window` 있으며, 둘 다 고급 권한 수준 액세스가 필요합니다.
 
+이 작업을 수행하려면 클러스터 관리자여야 합니다.
+
 .단계
 . 데이터 보호 미러를 이동할 때 미러 관계를 초기화하지 않은 경우 명령을 사용하여 미러 관계를 초기화하십시오. `snapmirror initialize` 에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 +
