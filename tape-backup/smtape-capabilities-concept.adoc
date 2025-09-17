@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: smtap, capabilities, snapshot, copy, preservation, deduplication, compression, restored, volume, backup, restore 
 summary: 스냅샷 백업, 증분 및 차등 백업, 복원된 볼륨에 대한 중복 제거 및 압축 기능 보존, 테이프 시딩과 같은 SMTape 기능을 사용하여 테이프 백업 및 복원 작업을 최적화할 수 있습니다. 
 ---
-= SMTape 기능
+= ONTAP 테이프 백업 및 복원 작업을 최적화하는 SMTape 기능
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

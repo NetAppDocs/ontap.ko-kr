@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, event, logging 
 summary: 이벤트 로깅을 설정하거나 해제할 수 있습니다. 
 ---
-= 이벤트 로깅 활성화 또는 비활성화
+= ONTAP 테이프 백업 및 복원 작업에 대한 이벤트 로깅 활성화 또는 비활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

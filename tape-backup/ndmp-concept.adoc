@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ncmp, considerations, using, service, storage, system 
 summary: 스토리지 시스템에서 NDMP 서비스를 시작할 때는 여러 가지 고려 사항을 고려해야 합니다. 
 ---
-= NDMP를 사용할 때의 고려 사항
+= ONTAP NDMP 서비스 사용 시 고려 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

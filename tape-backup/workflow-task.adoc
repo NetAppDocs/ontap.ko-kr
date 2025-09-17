@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: perform, tape, backup, restore, flexvol, volume, ndmp, backup, application 
 summary: NDMP 지원 백업 애플리케이션을 사용하여 테이프 백업 및 복구 작업을 수행할 수 있습니다. 
 ---
-= ONTAP에서 테이프 백업 및 복원 워크플로우
+= ONTAP 테이프 백업 및 복원 워크플로
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

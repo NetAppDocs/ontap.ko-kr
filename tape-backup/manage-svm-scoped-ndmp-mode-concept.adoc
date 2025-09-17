@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage, svm, scope, ndmp, flexvol, volumes, vserver, modify 
 summary: NDMP 옵션 및 명령을 사용하여 SVM별로 NDMP를 관리할 수 있습니다. vserver services ndmp modify 명령을 사용하여 NDMP 옵션을 수정할 수 있습니다. SVM 범위의 NDMP 모드에서는 사용자 인증이 역할 기반 액세스 제어 메커니즘과 통합됩니다. 
 ---
-= ONTAP에서 FlexVol 볼륨에 대한 SVM 범위 NDMP 모드를 관리합니다
+= FlexVol 볼륨에 대한 ONTAP SVM 범위 NDMP 모드 관리에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,6 +16,128 @@ NDMP 옵션 및 명령을 사용하여 SVM별로 NDMP를 관리할 수 있습니
 "vserver modify" 명령을 사용하여 허용 또는 허용되지 않는 프로토콜 목록에 NDMP를 추가할 수 있습니다. 기본적으로 NDMP는 허용되는 프로토콜 목록에 있습니다. NDMP가 허용되지 않는 프로토콜 목록에 추가되면 NDMP 세션을 설정할 수 없습니다.
 
 옵션을 사용하여 NDMP 데이터 연결이 설정되는 LIF 유형을 제어할 수 `-preferred-interface-role` 있습니다. NDMP 데이터 연결을 설정하는 동안 NDMP는 이 옵션에 지정된 LIF 유형에 속하는 IP 주소를 선택합니다. IP 주소가 이러한 LIF 유형 중 하나에 속하지 않으면 NDMP 데이터 연결을 설정할 수 없습니다. 에 대한 자세한 내용은 `vserver services ndmp modify` link:https://docs.netapp.com/us-en/ontap-cli/vserver-services-ndmp-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== ONTAP SVM 범위 NDMP 모드를 관리하기 위한 명령
+
+'vserver services NDMP' 명령을 사용하여 각 스토리지 가상 머신(SVM, 이전 명칭 Vserver)에서 NDMP를 관리할 수 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+NDMP 서비스를 설정합니다
+ a| 
+'vserver services ndmp on'
+
+[NOTE]
+====
+NDMP 서비스는 항상 클러스터의 모든 노드에서 설정해야 합니다. 'system services ndmp on' 명령을 사용하여 노드에서 NDMP 서비스를 설정할 수 있습니다. 기본적으로 NDMP 서비스는 노드에 대해 항상 설정됩니다.
+
+====
+
+
+ a| 
+NDMP 서비스를 해제합니다
+ a| 
+'vserver services ndmp off'
+
+
+
+ a| 
+NDMP 구성을 표시합니다
+ a| 
+'vserver services ndmp show'
+
+
+
+ a| 
+NDMP 구성을 수정합니다
+ a| 
+'vserver services ndmp modify
+
+
+
+ a| 
+기본 NDMP 버전을 표시합니다
+ a| 
+'vserver services ndmp version
+
+
+
+ a| 
+모든 NDMP 세션을 표시합니다
+ a| 
+'vserver services ndmp status'
+
+
+
+ a| 
+모든 NDMP 세션에 대한 자세한 정보를 표시합니다
+ a| 
+'vserver services ndmp probe'
+
+
+
+ a| 
+지정된 NDMP 세션을 종료합니다
+ a| 
+'vserver services ndmp kill'
+
+
+
+ a| 
+모든 NDMP 세션을 종료합니다
+ a| 
+'vserver services ndmp kill-all'
+
+
+
+ a| 
+NDMP 암호를 생성합니다
+ a| 
+'vserver services ndmp generate-password
+
+
+
+ a| 
+NDMP 확장 상태를 표시합니다
+ a| 
+'vserver services ndmp extensions show'
+
+이 명령은 고급 권한 수준에서 사용할 수 있습니다.
+
+
+
+ a| 
+NDMP 확장 상태를 수정(설정 또는 해제)합니다
+ a| 
+'vserver services ndmp extensions modify(SVM 서비스 NDMP 확장 수정
+
+이 명령은 고급 권한 수준에서 사용할 수 있습니다.
+
+
+
+ a| 
+지정된 NDMP 세션에 대해 로깅을 시작합니다
+ a| 
+'vserver services ndmp log start'를 선택합니다
+
+이 명령은 고급 권한 수준에서 사용할 수 있습니다.
+
+
+
+ a| 
+지정된 NDMP 세션에 대한 로깅을 중지합니다
+ a| 
+'vserver services ndmp log stop'
+
+이 명령은 고급 권한 수준에서 사용할 수 있습니다.
+
+|===
+에 대한 자세한 내용은 `vserver services ndmp` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+services+ndmp["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 .관련 정보
 xref:commands-manage-svm-scoped-ndmp-reference.adoc[SVM 범위의 NDMP 모드를 관리하는 명령입니다]
