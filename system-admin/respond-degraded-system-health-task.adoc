@@ -33,3 +33,7 @@ AutoSupport 메시지 또는 EMS 이벤트를 보거나 '시스템 상태' 명�
 시스템 상태가 '정상'이 아닌 경우 이 절차를 반복합니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/system-health-alert-modify.html["시스템 상태 경고 수정"^]
+

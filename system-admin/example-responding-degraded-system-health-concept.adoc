@@ -95,3 +95,6 @@ Alerting Resource Name: Shelf ID 2
         ---------------
         OK
 ----
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/system-health-alert-modify.html["시스템 상태 경고 수정"^]
+

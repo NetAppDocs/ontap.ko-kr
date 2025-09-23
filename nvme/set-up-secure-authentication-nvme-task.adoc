@@ -95,10 +95,10 @@ vserver nvme subsystem controller show
  [ -dhchap-mode {none|unidirectional|bidirectional} ]
                                                Authentication Mode
 ----
-+
-에 대한 자세한 내용은 `vserver nvme subsystem controller show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-controller-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 
 
 --
 ====
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-nvme-subsystem-controller-show.html["vserver nvme 서브시스템 컨트롤러 표시"^]
+

@@ -107,3 +107,8 @@ link:../networking/networking_reference.html["네트워크 관리"]
 CAB 지원은 수행할 수 있는 백업 유형을 결정하는 핵심 요소입니다.
 
 
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show.html["저장 테이프 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show-supported-status.html["저장 테이프 show-supported-status"^]
+

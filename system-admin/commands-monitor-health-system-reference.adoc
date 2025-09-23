@@ -271,4 +271,5 @@ summary: 시스템 상태 명령을 사용하여 시스템 리소스 상태에 �
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-port-show.html["저장 포트 표시"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-shelf-show.html["보관 선반 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/system-health-alert-delete.html["시스템 상태 경고 삭제"^]
 

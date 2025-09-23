@@ -55,4 +55,7 @@ summary: 클러스터의 노드 또는 클러스터 구성 백업 파일의 구�
 |===
 
 
-에 대한 자세한 내용은 `cluster ring show` link:https://docs.netapp.com/us-en/ontap-cli/cluster-ring-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/cluster-ring-show.html["클러스터 링 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/system-configuration-backup-copy.html["시스템 구성 백업 사본"^]
+

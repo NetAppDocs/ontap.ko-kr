@@ -38,4 +38,6 @@ STSW-3070-2_cluster-01        0      5         IBM 3573-TL_1  510a09800000412d  
 
 3 entries were displayed
 ----
-에 대한 자세한 내용은 `storage tape library config show` link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-library-config-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-library-config-show.html["스토리지 테이프 라이브러리 구성 표시"^]
+

@@ -143,4 +143,11 @@ ONTAP에서 지원하는 테이프 드라이브를 봅니다
 |===
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+tape["저장 테이프"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show.html["저장 테이프 쇼"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show-supported-status.html["저장 테이프 show-supported-status"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show-tape-drive.html["저장 테이프 쇼-테이프-드라이브"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-alias-clear.html["저장 테이프 별칭 지우기"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-alias-set.html["저장 테이프 별칭 세트"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-alias-show.html["저장 테이프 별칭 표시"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-trace.html["저장 테이프 추적"^]
 

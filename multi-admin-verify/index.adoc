@@ -621,4 +621,5 @@ MAV 규칙은 보호된 작업이 실행되기 전에 평가됩니다. 즉, 규�
 * link:https://docs.netapp.com/us-en/ontap-cli/snaplock-legal-hold-end.html["SnapLock 법적 증거 자료 보관 종료"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+aggregate["저장 집계"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+encryption["스토리지 암호화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=system["시스템"^]
 

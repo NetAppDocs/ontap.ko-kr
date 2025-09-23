@@ -32,7 +32,7 @@ Flash Pool 로컬 계층의 볼륨에 캐시 보존 정책을 할당하여 볼�
 
 . 볼륨의 적중률을 확인합니다.
 +
-'tistics show-object waf_hya_vVol-instance_volume_-counter read_ops_replaced_pwerceent|wc_write_blks_overwritted_ percent'
+`statistics show -object wafl_hya_vvol -instance _volume_ -counter read_ops_replaced_percent|wc_write_blks_overwritten_percent`
 
 . 볼륨의 '캐시 가능 읽기' 및 '프로젝트 캐시 할당'을 결정합니다.
 +

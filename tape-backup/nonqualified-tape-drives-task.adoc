@@ -48,4 +48,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/tape-config["NetApp 다운로�
 
 
 .관련 정보
-xref:qualified-tape-drives-concept.adoc[검증된 테이프 드라이브가 무엇입니까]
+* xref:qualified-tape-drives-concept.adoc[검증된 테이프 드라이브가 무엇입니까]
+* link:https://docs.netapp.com/us-en/ontap-cli/storage-tape-show-supported-status.html["저장 테이프 show-supported-status"^]
+
