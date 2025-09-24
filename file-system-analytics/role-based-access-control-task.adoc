@@ -85,13 +85,13 @@ ONTAP 9.12.1 이전 버전의 ONTAP를 사용하는 경우 ONTAP CLI를 사용�
 ** 암호 보호를 위한 보안
 ** System Manager 액세스를 위한 sysmgr입니다
 +
-'vserver services web access create-vserver_svm-name_-name rest-role StorageAdmin'
+`vserver services web access create -vserver <svm-name> -name rest -role storageAdmin`
 
 +
-'vserver services web access create-vserver_svm-name_-name security-role StorageAdmin'
+`vserver services web access create -vserver <svm-name> -name security -role storageAdmin`
 
 +
-'vserver services web access create-vserver_svm-name_-name sysmgr-role StorageAdmin'
+`vserver services web access create -vserver <svm-name> -name sysmgr -role storageAdmin`
 
 
 
