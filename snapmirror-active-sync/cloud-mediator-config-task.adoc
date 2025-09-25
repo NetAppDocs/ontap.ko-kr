@@ -28,10 +28,6 @@ ONTAP Cloud Mediator를 구성하기 전에 다음 정보를 확인해야 합니
 +
 link:cluster-config-task.html["SnapMirror 활성 동기화를 위한 ONTAP 클러스터 구성"]
 
-* 유효한 BlueXP 구독이 있습니다.
-+
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-subscribe-standard-mode.html["BlueXP 데이터 서비스 구독(표준 모드)"]
-
 * BlueXP 콘솔에서 BlueXP 조직 ID를 복사하고 ONTAP Cloud Mediator 구성 시 사용할 BlueXP 멤버 서비스 계정을 생성했습니다. 서비스 계정을 생성할 때 조직은 ONTAP Cloud Mediator를 구성한 구독으로 설정해야 합니다. 범주는 *애플리케이션*으로, 역할 유형은 * ONTAP Mediator 설정 역할*로 설정해야 합니다. 역할을 생성할 때 클라이언트 ID와 클라이언트 비밀번호를 저장해야 합니다.
 +
 link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-members["BlueXP 멤버 및 서비스 계정 추가"]

@@ -34,7 +34,7 @@ FlexGroup 재조정의 작동 방식과 이 기능이 다른 ONTAP 기능과 어
 
 * FlexVol에서 FlexGroup로의 변환
 +
-FlexVol to FlexGroup 변환 후 자동 FlexGroup 재조정을 _NOT_사용하는 것이 좋습니다. 대신 명령을 입력하여 ONTAP 9.10.1 이상에서 사용할 수 있는 중단 소급 파일 이동 기능을 사용할 수 있습니다 `volume rebalance file-move`. 에 대한 자세한 내용은 `volume rebalance file-move start` link:https://docs.netapp.com/us-en/ontap-cli/volume-rebalance-file-move-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+FlexVol 에서 FlexGroup 으로 변환한 후에는 자동 FlexGroup 재조정을 사용하지 않는 것이 좋습니다.  대신 다음을 사용하여 기존 파일을 재배포할 수 있습니다. `volume rebalance file-move start` ONTAP 9.10.1 이상에서 사용 가능한 명령입니다.  이 작업은 기본적으로 중단되지 않습니다.(`-is-disruptive false` ).  일부 바쁜 파일을 이동할 수 없는 경우 중단 모드에서 명령을 다시 실행할 수 있습니다.(`-is-disruptive true` ) 계획된 유지 관리 기간 동안. 자세히 알아보세요  `volume rebalance file-move start` 에서 link:https://docs.netapp.com/us-en/ontap-cli/volume-rebalance-file-move-start.html["ONTAP 명령 참조입니다"^] .
 
 +
 자동 FlexGroup 재조정 기능을 통해 재조정하면 FlexVol를 FlexGroup로 변환하는 경우와 같이 대량의 파일을 이동할 때 성능이 저하될 수 있으며, FlexVol 볼륨의 데이터를 50~85%까지 새로운 구성요소로 이동할 수 있습니다.
