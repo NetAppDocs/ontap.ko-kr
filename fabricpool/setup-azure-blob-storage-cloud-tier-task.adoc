@@ -14,7 +14,7 @@ summary: ONTAP 9.4 이상을 실행 중인 경우 클라우드용 Azure Blob 스
 ONTAP 9.4 이상을 실행 중인 경우 Azure Blob Storage를 FabricPool의 클라우드 계층으로 설정할 수 있습니다.
 
 .FabricPool와 함께 Microsoft Azure Blob Storage를 사용할 때의 고려 사항
-* Azure Blob Storage로 계층화할 때는 Alink:https://bluexp.netapp.com/cloud-tiering["BlueXP 계층화 라이센스"]가 필요합니다.
+* 에이link:https://console.netapp.com/cloud-tiering["NetApp 클라우드 계층화 라이선스"] Azure Blob Storage에 계층화하는 경우 필요합니다.
 * Cloud Volumes ONTAP와 함께 Azure Blob Storage를 사용하는 경우 FabricPool 라이센스가 필요하지 않습니다.
 * ONTAP에서 Azure Blob Storage 오브젝트 서버에 연결하는 데 사용하는 LIF는 10Gbps 포트에 있는 것이 좋습니다.
 * FabricPool은 현재 온프레미스 Azure 서비스인 Azure 스택을 지원하지 않습니다.

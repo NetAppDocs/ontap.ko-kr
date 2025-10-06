@@ -26,6 +26,6 @@ FabricPool를 사용하여 콜드 데이터를 클라우드에 계층화하면 �
 .관련 정보
 https://docs.netapp.com/us-en/ontap/concept_cloud_overview.html["FabricPool 시스템 관리자 문서"^]
 
-https://docs.netapp.com/us-en/bluexp-tiering/index.html["BlueXP 계층화"^]
+https://docs.netapp.com/us-en/data-services-cloud-tiering/index.html["NetApp 클라우드 계층화"^]
 
 https://www.youtube.com/playlist?list=PLdXI3bZJEw7mcD3RnEcdqZckqKkttoUpS["NetApp TechComm TV의 FabricPool 재생 목록"^]

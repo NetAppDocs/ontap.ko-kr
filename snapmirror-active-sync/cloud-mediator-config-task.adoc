@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/cloud-mediator-config-task.html 
 keywords: SM-BC, SMBC, cluster, peering, ONTAP Cloud Mediator, initialize, snapmirror active sync 
-summary: SnapMirror Active Sync와 함께 ONTAP Cloud Mediator를 사용하는 경우 먼저 BlueXP 서비스와 클라이언트 정보가 구성되어 있는지 확인해야 합니다. 
+summary: SnapMirror Active Sync와 함께 ONTAP Cloud Mediator를 사용하는 경우 먼저 NetApp Console 서비스와 클라이언트 정보가 구성되어 있는지 확인해야 합니다. 
 ---
 = SnapMirror Active Sync를 위한 ONTAP Cloud Mediator 구성
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: SnapMirror Active Sync와 함께 ONTAP Cloud Mediator를 사용하는 �
 
 
 [role="lead"]
-ONTAP 9.17.1부터 ONTAP Cloud Mediator를 사용하여 각 클러스터의 상태를 모니터링하여 비즈니스 연속성을 확보할 수 있습니다. ONTAP Cloud Mediator는 클라우드 기반 서비스입니다. SnapMirror Active Sync와 함께 ONTAP Cloud Mediator를 사용하는 경우, 먼저 BlueXP 서비스와 클라이언트 정보가 구성되어 있는지 확인하고 클러스터 피어링이 제대로 작동하는지 확인해야 합니다.
+ONTAP 9.17.1부터 ONTAP Cloud Mediator를 사용하여 각 클러스터의 상태를 모니터링하여 비즈니스 연속성을 확보할 수 있습니다. ONTAP Cloud Mediator는 클라우드 기반 서비스입니다. SnapMirror 활성 동기화와 함께 ONTAP Cloud Mediator를 사용하는 경우 먼저 NetApp 콘솔 서비스와 클라이언트 정보가 구성되어 있는지 확인하고 적절한 클러스터 피어링을 보장해야 합니다.
 
 ONTAP Mediator와 마찬가지로 ONTAP Cloud Mediator는 SnapMirror 활성 동기화 관계에서 ONTAP 클러스터가 사용하는 고가용성(HA) 메타데이터를 위한 영구적이고 펜싱된 저장소를 제공합니다. ONTAP Cloud Mediator는 쿼럼 결정을 지원하는 동기식 노드 상태 쿼리 기능을 제공하고, 컨트롤러 활성 상태 감지를 위한 ping 프록시 역할을 합니다.
 
@@ -28,9 +28,9 @@ ONTAP Cloud Mediator를 구성하기 전에 다음 정보를 확인해야 합니
 +
 link:cluster-config-task.html["SnapMirror 활성 동기화를 위한 ONTAP 클러스터 구성"]
 
-* BlueXP 콘솔에서 BlueXP 조직 ID를 복사하고 ONTAP Cloud Mediator 구성 시 사용할 BlueXP 멤버 서비스 계정을 생성했습니다. 서비스 계정을 생성할 때 조직은 ONTAP Cloud Mediator를 구성한 구독으로 설정해야 합니다. 범주는 *애플리케이션*으로, 역할 유형은 * ONTAP Mediator 설정 역할*로 설정해야 합니다. 역할을 생성할 때 클라이언트 ID와 클라이언트 비밀번호를 저장해야 합니다.
+* NetApp 콘솔에서 NetApp 콘솔 조직 ID를 복사하고 ONTAP Cloud Mediator를 구성할 때 사용할 콘솔 구성원 서비스 계정을 생성했습니다. 서비스 계정을 생성할 때 조직은 ONTAP Cloud Mediator를 구성한 구독으로 설정해야 합니다. 범주는 *애플리케이션*으로, 역할 유형은 * ONTAP Mediator 설정 역할*로 설정해야 합니다. 역할을 생성할 때 클라이언트 ID와 클라이언트 비밀번호를 저장해야 합니다.
 +
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-members["BlueXP 멤버 및 서비스 계정 추가"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-members["NetApp 콘솔 멤버 및 서비스 계정 추가"]
 
 
 
@@ -44,9 +44,9 @@ System Manager나 ONTAP CLI를 사용하여 ONTAP Cloud Mediator를 추가할 �
 . *보호 > 개요 > 중재자*로 이동하여 *추가*를 선택합니다.
 . *중개자 추가* 창에서 중개자 유형으로 *클라우드*를 선택하고 다음 정보를 입력합니다.
 +
-** BlueXP 조직 ID
-** BlueXP 클라이언트 ID
-** BlueXP 클라이언트 비밀번호
+** NetApp 콘솔 조직 ID
+** NetApp 콘솔 클라이언트 ID
+** NetApp 콘솔 클라이언트 비밀번호
 
 
 . 클러스터 피어를 선택하세요.
@@ -63,7 +63,7 @@ System Manager나 ONTAP CLI를 사용하여 ONTAP Cloud Mediator를 추가할 �
 .CLI를 참조하십시오
 --
 . ONTAP Cloud Mediator 구성: 
-`snapmirror mediator add -peer-cluster <peerClusterName> -type cloud -bluexp-org-id <BlueXP Organization ID> -service-account-client-id <Service Account Client ID> -use-http-proxy-local <true|false> -use-http-proxy-remote <true|false>`
+`snapmirror mediator add -peer-cluster <peerClusterName> -type cloud -bluexp-org-id <NetApp Console Organization ID> -service-account-client-id <Service Account Client ID> -use-http-proxy-local <true|false> -use-http-proxy-remote <true|false>`
 . ONTAP Cloud Mediator 상태 확인: 
 `snapmirror mediator show`
 +

@@ -68,7 +68,7 @@ NOTE: 다단계 업그레이드를 시작하기 전에 대상 릴리스가 하�
 
 == 지원되는 업그레이드 경로
 
-ONTAP 소프트웨어의 자동 및 수동 업그레이드에 대해 지원되는 업그레이드 경로는 다음과 같습니다.  이러한 업그레이드 경로는 사내 ONTAP 및 ONTAP Select에 적용됩니다.  다른 점이 있습니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Cloud Volumes ONTAP에 대해 지원되는 업그레이드 경로"^].
+다음 업그레이드 경로는 ONTAP 소프트웨어의 자동 및 수동 업그레이드에 지원됩니다.  이러한 업그레이드 경로는 온프레미스 ONTAP 및 ONTAP Select 에 적용됩니다.  다양한 것이 있습니다 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Cloud Volumes ONTAP에 대해 지원되는 업그레이드 경로"^] .
 
 
 NOTE: * 혼합 버전 ONTAP 클러스터 *: all_direct_and_direct multi-hop_upgrade 경로에는 혼합 버전 클러스터와 호환되는 ONTAP 버전이 포함되어 있습니다. multi-stage_upgrades에 포함된 ONTAP 버전은 혼합 버전 클러스터와 호환되지 않습니다.  예를 들어 9.8에서 9.12.1로 업그레이드하는 것은 _DIRECT_UPGRADE입니다. 9.8 및 9.12.1을 실행하는 노드가 있는 클러스터는 지원되는 혼합 버전 클러스터입니다.  9.8에서 9.13.1로의 업그레이드는 _ multi-stage_upgrade입니다.  9.8 및 9.13.1을 실행하는 노드가 있는 클러스터는 지원되는 혼합 버전 클러스터가 아닙니다.

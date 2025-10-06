@@ -14,7 +14,7 @@ summary: ONTAP 9.5 이상을 실행 중인 경우 IBM 클라우드 오브젝트 
 ONTAP 9.5 이상을 실행 중인 경우 IBM 클라우드 오브젝트 스토리지를 FabricPool의 클라우드 계층으로 설정할 수 있습니다.
 
 .FabricPool에서 IBM 클라우드 오브젝트 스토리지를 사용할 때의 고려 사항
-* IBM Cloud Object Storage로 계층화할 때는 A가 link:https://bluexp.netapp.com/cloud-tiering["BlueXP 계층화 라이센스"]필요합니다.
+* 에이link:https://console.netapp.com/cloud-tiering["NetApp 클라우드 계층화 라이선스"] IBM Cloud Object Storage로 계층화하는 경우 필요합니다.
 * ONTAP에서 IBM 클라우드 오브젝트 서버에 연결하는 데 사용하는 LIF는 10Gbps 포트에 있는 것이 좋습니다.
 
 

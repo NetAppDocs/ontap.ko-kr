@@ -30,7 +30,7 @@ ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock S
 
 
 .변조 방지 스냅샷에서 지원되는 기능
-* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-worm-snaplock.html["Cloud Volumes ONTAP"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-worm-snaplock.html["Cloud Volumes ONTAP"^]
 * FlexGroup 볼륨
 +
 스냅샷 잠금은 FlexGroup 볼륨에 대해 지원됩니다. 스냅샷 잠금은 루트 구성 요소 스냅샷에서만 발생합니다. FlexGroup 볼륨은 루트 구성 요소 만료 시간이 경과한 경우에만 삭제할 수 있습니다.

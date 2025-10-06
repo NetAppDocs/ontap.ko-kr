@@ -201,7 +201,7 @@ FlexGroup를 지원하는 SVM DR에는 8개 사이트에 대한 SnapMirror 팬�
 
 == 시스템 관리자
 
-ONTAP 9.12.1부터 System Manager는 BlueXP와 통합됩니다. 에 대해 자세히 알아보십시오 xref:../sysmgr-integration-bluexp-concept.html[System Manager와 BlueXP의 통합].
+ONTAP 9.12.1부터 System Manager가 NetApp Console과 통합되었습니다. 자세히 알아보세요 xref:../concepts/sysmgr-integration-console-concept.html[NetApp 콘솔과 시스템 관리자 통합] .
 
 [cols="30%,70%"]
 |===

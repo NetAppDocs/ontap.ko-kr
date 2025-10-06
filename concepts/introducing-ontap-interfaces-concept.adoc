@@ -1,7 +1,7 @@
 ---
 permalink: concepts/introducing-ontap-interfaces-concept.html 
 sidebar: sidebar 
-keywords: ontap interfaces, interfaces, system manager, bluexp, cli, rest api, ontapi 
+keywords: ontap interfaces, interfaces, system manager, netapp console, cli, rest api, ontapi 
 summary: ONTAP 데이터 관리 소프트웨어는 ONTAP로 보호되는 데이터를 관리하는 데 사용할 수 있는 다양한 인터페이스를 제공합니다. 
 ---
 = ONTAP 사용자 인터페이스
@@ -25,9 +25,9 @@ ONTAP 9.7은 ONTAP System Manager에서 중요한 역할을 했던 것으로 나
 
 
 
-== BlueXP
+== NetApp 콘솔
 
-ONTAP 9.12.1부터 BlueXP 웹 기반 인터페이스를 사용하여 익숙한 System Manager 대시보드를 유지하면서 단일 제어 영역에서 하이브리드 멀티클라우드 인프라를 관리할 수 있습니다. BlueXP 사용하면 클라우드 스토리지(예: BlueXP backup and recovery )를 생성 및 관리하고, NetApp 데이터 서비스(예: Cloud Backup)를 사용하고, 다양한 온프레미스 및 엣지 스토리지 장치를 제어할 수 있습니다. BlueXP 에 온프레미스 ONTAP 시스템을 추가하면 단일 인터페이스에서 모든 스토리지 및 데이터 자산을 관리할 수 있습니다.  https://docs.netapp.com/us-en/bluexp-family/["자세한 정보"^] .
+ONTAP 9.12.1부터 NetApp 콘솔 웹 기반 인터페이스를 사용하여 익숙한 System Manager 대시보드를 유지하면서 단일 제어 평면에서 하이브리드 멀티클라우드 인프라를 관리할 수 있습니다.  콘솔을 사용하면 클라우드 스토리지(예: NetApp Backup and Recovery)를 생성하고 관리하고, NetApp의 데이터 서비스(예: Cloud Backup)를 사용하고, 다양한 온프레미스 및 엣지 스토리지 장치를 제어할 수 있습니다.  온프레미스 ONTAP 시스템을 콘솔에 추가하면 단일 인터페이스에서 모든 스토리지와 데이터 자산을 관리할 수 있습니다. https://docs.netapp.com/us-en/console-family/["자세한 정보"^] .
 
 
 

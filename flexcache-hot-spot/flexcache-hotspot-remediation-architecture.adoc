@@ -30,7 +30,7 @@ image:flexcache-hotspot-hdfa-flexgroup.png["그림 1: FlexGroup 단일 파일 �
 
 핫스팟을 해결하려면 CPU 병목 현상을 제거하고 동서 트래픽도 제거합니다. FlexCache가 제대로 설정되어 있으면 도움이 될 수 있습니다.
 
-다음 예에서는 FlexCache가 System Manager, BlueXP  또는 기본 CLI 인수를 사용하여 자동으로 프로비저닝됩니다. <<Figure-1,그림 1>><<Figure-2,그림 2>> 처음에는 같지만, 둘 다 4노드, 단일 구성 NAS 컨테이너입니다. 유일한 차이점은 그림 1의 NAS 컨테이너는 FlexGroup이고 그림 2의 NAS 컨테이너는 FlexCache입니다. 각 그림은 동일한 병목 현상을 보여 줍니다. 즉, 핫 파일에 대한 볼륨 선호도 액세스를 위한 노드 1의 CPU와 지연 시간을 유발하는 동부 서부 트래픽의 병목 현상을 보여 줍니다. 자동 프로비저닝된 FlexCache로 병목 현상이 사라지지는 않았습니다.
+다음 예에서 FlexCache System Manager, NetApp Console 또는 기본 CLI 인수를 통해 자동으로 프로비저닝됩니다. <<Figure-1,그림 1>> 그리고<<Figure-2,그림 2>> 처음에는 똑같아 보입니다. 둘 다 4노드, 단일 구성 NAS 컨테이너입니다.  유일한 차이점은 그림 1의 NAS 컨테이너가 FlexGroup 이고, 그림 2의 NAS 컨테이너가 FlexCache 라는 것입니다.  각 그림은 동일한 병목 현상을 보여줍니다. 즉, 핫 파일에 대한 액세스를 제공하는 볼륨 친화성을 위한 노드 1의 CPU와 지연 시간에 영향을 미치는 동서 트래픽입니다.  자동 프로비저닝된 FlexCache 병목 현상을 제거하지 못했습니다.
 
 .그림 2: 자동 프로비저닝 FlexCache 시나리오
 image:flexcache-hotspot-hdfa-1x4x1.png["그림 2: 자동 프로비저닝 FlexCache 시나리오"]

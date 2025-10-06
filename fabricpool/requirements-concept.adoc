@@ -219,11 +219,11 @@ NOTE: ONTAP 9.15.1부터 FabricPool는 보다 공격적이고 뛰어난 성능�
 
 
 
-== BlueXP 계층화 라이센스
+== NetApp 클라우드 계층화 라이선스
 
-FabricPool을 사용하려면 타사 오브젝트 스토리지 공급자(예: Amazon S3)를 AFF 및 FAS 시스템용 클라우드 계층으로 연결할 때 용량 기반 라이센스가 필요합니다. StorageGRID 또는 ONTAP S3를 클라우드 계층으로 사용하거나 Cloud Volumes ONTAP, Amazon FSx for NetApp ONTAP 또는 Azure NetApp Files를 통해 계층화할 때는 BlueXP Tiering 라이센스가 필요하지 않습니다.
+FabricPool AFF 및 FAS 시스템의 클라우드 계층으로 타사 개체 스토리지 공급자(예: Amazon S3)를 연결할 때 용량 기반 라이선스가 필요합니다.  StorageGRID 또는 ONTAP S3를 클라우드 계층으로 사용하거나 Cloud Volumes ONTAP, Amazon FSx for NetApp ONTAP 또는 Azure NetApp Files로 계층화하는 경우 Cloud Tiering 라이선스가 필요하지 않습니다.
 
-BlueXP 라이센스(기존 FabricPool 라이센스의 애드온 또는 확장 기능 포함)는 에서 활성화됩니다 link:https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["BlueXP 디지털 지갑"^].
+NetApp Cloud Tiering 라이선스(기존 FabricPool 라이선스에 대한 추가 기능이나 확장 기능 포함)는 NetApp 콘솔에서 활성화됩니다.  자세히 알아보세요link:https://docs.netapp.com/us-en/data-services-cloud-tiering/task-licensing-cloud-tiering.html["클라우드 티어링 라이선스 설정"^] .
 
 
 

@@ -61,14 +61,14 @@ NOTE: ONTAP Mediator 1.7은 비즈니스 연속성을 위해 10개의 클러스�
 NOTE: ONTAP Mediator를 사용할 수 없는 경우 계획된 장애 조치나 자동 장애 조치를 수행할 수 없습니다.  애플리케이션 데이터는 어떠한 중단 없이 동기적으로 복제되므로 데이터 손실이 없습니다.
 
 .ONTAP 클라우드 중재자
-ONTAP 9.17.1부터 ONTAP Cloud Mediator는 BlueXP 에서 SnapMirror 액티브 동기화와 함께 사용할 수 있는 클라우드 기반 서비스로 제공됩니다. ONTAP Mediator와 유사하게 ONTAP Cloud Mediator는 SnapMirror 액티브 동기화 관계에서 다음과 같은 기능을 제공합니다.
+ONTAP 9.17.1부터 ONTAP Cloud Mediator는 NetApp 콘솔에서 클라우드 기반 서비스로 제공되며 SnapMirror Active Sync와 함께 사용할 수 있습니다. ONTAP Mediator와 유사하게 ONTAP Cloud Mediator는 SnapMirror 액티브 동기화 관계에서 다음과 같은 기능을 제공합니다.
 
 * HA 또는 SnapMirror 활성 동기화 메타데이터에 대한 지속적이고 보호된 저장소를 제공합니다.
 * 컨트롤러 활성을 위한 핑 프록시 역할을 합니다.
 * quorum 결정에 도움이 되는 동기 노드 상태 쿼리 기능을 제공합니다.
 
 
-ONTAP Cloud Mediator는 BlueXP 클라우드 서비스를 관리할 필요가 없는 제3의 사이트로 활용하여 SnapMirror Active Sync 배포를 간소화합니다. ONTAP Cloud Mediator 서비스는 온프레미스 ONTAP Mediator와 동일한 기능을 제공하지만, 제3의 사이트 유지 관리에 따른 운영 복잡성을 줄여줍니다 . 반면, ONTAP Cloud Mediator는 패키지 형태로 제공되며, 운영을 위한 독립적인 전원 및 네트워크 인프라를 갖춘 제3의 사이트에서 실행되는 Linux 호스트에 설치해야 합니다.
+ONTAP Cloud Mediator는 NetApp Console 클라우드 서비스를 관리할 필요가 없는 제3의 사이트로 사용하여 SnapMirror 활성 동기화 배포를 간소화하는 데 도움이 됩니다. ONTAP Cloud Mediator 서비스는 온프레미스 ONTAP Mediator와 동일한 기능을 제공하지만, 제3의 사이트 유지 관리에 따른 운영 복잡성을 줄여줍니다 . 반면, ONTAP Cloud Mediator는 패키지 형태로 제공되며, 운영을 위한 독립적인 전원 및 네트워크 인프라를 갖춘 제3의 사이트에서 실행되는 Linux 호스트에 설치해야 합니다.
 
 
 

@@ -23,10 +23,10 @@ CLI:  `mediator add` 명령이 다음 오류로 인해 실패합니다.
 `Error: command failed: The ping latency of the BlueXP cloud server is <x> ms which is higher than twice the recommended latency of 200 ms.`
 
 .원인:
-클러스터가 BlueXP 클라우드와 가까운 곳에 위치하지 않거나 네트워크 경로 병목 현상이 발생할 수 있습니다.
+클러스터가 NetApp 콘솔 클라우드 근처에 위치하지 않았거나 네트워크 경로 병목 현상이 있을 수 있습니다.
 
 .솔루션:
-* BlueXP 클라우드(미국 동부)의 지리적 위치와 근접성을 확인하세요.
+* NetApp Console 클라우드(미국 동부)의 지리적 위치와 근접성을 확인하세요.
 * 네트워크 경로를 최적화하거나 병목 현상을 해결합니다.
 * 네트워크 도구를 사용하여 왕복 시간(RTT)을 측정하고 지연 시간을 권장 한도 내로 줄입니다.
 * HTTP 프록시를 사용하여 성능을 향상시키세요.

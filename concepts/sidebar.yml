@@ -6,8 +6,8 @@ entries:
   url: "/concepts/ontap-platforms-concept.html"
 - title: ONTAP 사용자 인터페이스
   url: "/concepts/introducing-ontap-interfaces-concept.html"
-- title: ONTAP 시스템 관리자를 BlueXP와 통합
-  url: "/concepts/sysmgr-integration-bluexp-concept.html"
+- title: ONTAP System Manager를 NetApp 콘솔과 통합
+  url: "/concepts/sysmgr-integration-console-concept.html"
 - title: 클러스터 스토리지
   url: "/concepts/cluster-storage-concept.html"
 - title: 고가용성 쌍

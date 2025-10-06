@@ -202,7 +202,7 @@ entries:
     url: "/data-protection/install-snapmirror-cloud-license-task.html"
   - title: SnapMirror를 사용하여 데이터를 클라우드에 백업합니다
     url: "/data-protection/cloud-backup-with-snapmirror-task.html"
-  - title: BlueXP  백업 및 복구를 사용하여 데이터를 백업합니다
+  - title: NetApp Backup and Recovery를 사용하여 데이터 백업
     url: "/data-protection/cloud-backup-using-cbs-task.html"
 - section: snaplock
 - section: consistency-groups

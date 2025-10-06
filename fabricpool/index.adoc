@@ -31,5 +31,5 @@ ONTAP 9.7부터는 S3_호환 오브젝트 저장소 공급자를 선택하여 �
 
 ====
 .관련 정보
-* https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["NetApp 클라우드 계층화 설명서"^]
+* https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["NetApp 클라우드 계층화 설명서"^]
 
