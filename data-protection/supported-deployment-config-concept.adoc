@@ -47,6 +47,21 @@ SnapMirror는 _mirror-mirror_mirror-vault_,_vault-mirror_and_vault-vault_cascade
 
 미러 계단식 배열 구축은 소스 볼륨이 2차 볼륨으로 미러링되고 2차 볼륨이 3차 볼륨으로 미러링되는 관계 체인으로 구성됩니다. 2차 볼륨을 사용할 수 없게 되면 새로운 기준 전송을 수행하지 않고도 1차 볼륨과 3차 볼륨 간의 관계를 동기화할 수 있습니다.
 
+ONTAP 9의 모든 버전에서 계단식 볼륨 관계에서 장기 보존(LTR) 스냅샷은 계단식 볼륨의 최종 SnapMirror 대상 볼륨에서만 지원됩니다.  캐스케이드의 중간 볼륨에서 LTR 스냅샷을 활성화하면 백업과 스냅샷이 누락됩니다.  캐스케이드의 중간 볼륨에서 LTR 스냅샷이 활성화된 지원되지 않는 구성이 있는 경우 기술 지원 및 참조에 문의하세요.link:https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/Cascading_a_volume_with_Long-Term_Retention_(LTR)_snapshots_enabled_is_not_supported["기술 자료 문서 장기 보존(LTR) 스냅샷이 활성화된 볼륨을 계단식으로 배열하는 것은 지원되지 않습니다."^] 도움이 필요하면.
+
+다음 ONTAP 버전에서는 최종 SnapMirror 대상 볼륨을 제외한 캐스케이드의 모든 볼륨에서 LTR 스냅샷을 활성화할 수 없습니다.
+
+* 9.15.1 이상
+* 9.14.1P2 및 P4-P14
+* 9.13.1P9-P17
+* 9.12.1 P12-P19
+* 9.11.1P15-P20
+* 9.10.1P18-P20
+* 9.9.1P20
+
+
+자세히 알아보세요 link:long-term-retention-snapshots-concept.html["장기 보존 스냅샷"^] .
+
 ONTAP 9.6부터 미러 계단식 구축 환경에서 SnapMirror 동기식 관계가 지원됩니다. 운영 볼륨 및 2차 볼륨만 SnapMirror 동기식 관계에 있을 수 있습니다. 2차 볼륨과 3차 볼륨 간의 관계는 비동기식이어야 합니다.
 
 image:sm-mirror-mirror-cascade.png["SnapMirror 구축: 미러-미러 계단식 배열 복제 소스"]

@@ -8,6 +8,8 @@ entries:
   entries:
   - title: 로컬 스냅샷에 대해 알아봅니다
     url: "/data-protection/manage-local-snapshot-copies-concept.html"
+  - title: ONTAP 장기 보존 스냅샷에 대해 알아보세요
+    url: "/data-protection/long-term-retention-snapshots-concept.html"
   - title: 사용자 지정 스냅샷 정책을 구성합니다
     entries:
     - title: 사용자 지정 스냅샷 정책 구성에 대해 자세히 알아봅니다
