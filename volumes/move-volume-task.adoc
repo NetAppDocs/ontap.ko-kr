@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: move, volume 
 summary: 'FlexVol volume을 동일한 스토리지 가상 머신(SVM) 내에서 다른 애그리게이트, 노드 또는 둘 다로 이동하여 스토리지 용량의 균형을 조정합니다.' 
 ---
-= 볼륨을 이동합니다
+= ONTAP 볼륨 이동
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,12 +18,32 @@ summary: 'FlexVol volume을 동일한 스토리지 가상 머신(SVM) 내에서 
 
 이 작업을 수행하려면 클러스터 관리자여야 합니다.
 
-.단계
-. 데이터 보호 미러를 이동할 때 미러 관계를 초기화하지 않은 경우 명령을 사용하여 미러 관계를 초기화하십시오. `snapmirror initialize` 에 대한 자세한 내용은 `snapmirror initialize` link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+.시작하기 전에
+* 8K 적응 압축을 사용하는 볼륨을 다음 플랫폼 중 하나로 이동하는 경우 다음을 수행해야 합니다.link:increase-volume-active-file-system-size.html["볼륨의 활성 파일 시스템 크기를 늘립니다."] 볼륨을 이동하기 전에.  이러한 플랫폼에서는 데이터가 다른 방식으로 압축되므로 볼륨 수준이 아닌 집계 수준에서 공간이 절약됩니다.  이러한 차이로 인해 볼륨 이동 중에 볼륨 공간이 부족해지는 것을 방지하기 위해 볼륨의 활성 파일 시스템 크기는 8k 압축 절감량만큼 늘어나야 합니다.
++
+** 전용 오프로드 프로세서 스토리지 효율성을 지원하는 AFF 및 FAS 플랫폼
++
+AFF 및 FAS 플랫폼에 대해 자세히 알아보세요.link:../concepts/builtin-storage-efficiency-concept.html["전용 오프로드 프로세서 스토리지 효율성"] .
+
+** AFF C 시리즈 플랫폼
++
+를 참조하십시오link:https://hwu.netapp.com/["Hardware Universe"^] C 시리즈 플랫폼의 전체 목록은 여기에서 확인하세요.
+
+
+
+* 데이터 보호 미러를 이동하고 미러 관계를 초기화하지 않은 경우 다음을 사용하십시오. `snapmirror initialize` 미러 관계를 초기화하는 명령입니다. 자세히 알아보세요  `snapmirror initialize` 에서 link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["ONTAP 명령 참조입니다"^] .
 +
 볼륨 중 하나를 이동하려면 먼저 데이터 보호 미러 관계를 초기화해야 합니다.
 
-. 'volume move target-aggr show' 명령을 사용하여 볼륨을 이동할 수 있는 애그리게이트를 결정합니다.
+
+
+.단계
+. 볼륨을 이동할 수 있는 집계를 결정합니다.
++
+[source, cli]
+----
+volume move target-aggr show
+----
 +
 선택하는 Aggregate는 볼륨에 충분한 공간을 가져야 합니다. 즉, 사용 가능한 용량이 이동 중인 볼륨보다 큽니다.
 
@@ -46,8 +66,21 @@ node12a_aggr4    10.36GB          hdd
 +
 에 대한 자세한 내용은 `volume move target-aggr show` link:https://docs.netapp.com/us-en/ontap-cli/volume-move-target-aggr-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. 명령을 사용하여 검증 검사를 실행하여 볼륨을 의도된 Aggregate로 이동할 수 있는지 확인합니다 `volume move start -perform-validation-only`. 에 대한 자세한 내용은 `volume move start` link:https://docs.netapp.com/us-en/ontap-cli/volume-move-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-. 'volume move start' 명령을 사용하여 볼륨을 이동합니다.
+. 볼륨을 의도한 집계로 이동할 수 있는지 확인하기 위해 유효성 검사를 수행합니다.
++
+[source, cli]
+----
+volume move start -perform-validation-only
+----
++
+에 대한 자세한 내용은 `volume move start` link:https://docs.netapp.com/us-en/ontap-cli/volume-move-start.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+. 볼륨을 이동합니다.
++
+[source, cli]
+----
+volume move start
+----
 +
 다음 명령을 실행하면 VS2 SVM의 user_max 볼륨이 node12a_aggr3 애그리게이트로 이동합니다. 이동은 백그라운드 프로세스로 실행됩니다.
 
@@ -57,7 +90,12 @@ node12a_aggr4    10.36GB          hdd
 cluster1::> volume move start -vserver vs2 -volume user_max
 -destination-aggregate node12a_aggr3
 ----
-. 'volume move show' 명령을 사용하여 볼륨 이동 작업의 상태를 확인합니다.
+. 볼륨 이동 작업의 상태를 확인합니다.
++
+[source, cli]
+----
+volume move show
+----
 +
 다음 예에서는 복제 단계를 완료하고 컷오버 단계에 있는 볼륨 이동 상태를 보여줍니다.
 
@@ -75,6 +113,16 @@ vs2       user_max   healthy  cutover     -                -
 
 +
 에 대한 자세한 내용은 `volume move show` link:https://docs.netapp.com/us-en/ontap-cli/volume-move-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+. 선택적으로 압축 절감액을 확인하세요.
++
+[source, cli]
+----
+volume show-footprint -vserver <SVM> -volume <volume_name>
+----
++
+
+NOTE: 볼륨 이동이 완료된 직후에 자동으로 실행되는 사후 처리 변환 스캔을 통해 추가적인 집계 수준의 절감 효과를 실현할 수 있습니다.
 
 
 

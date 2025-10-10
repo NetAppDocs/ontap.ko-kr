@@ -56,6 +56,8 @@ entries:
     url: "/volumes/requirement-moving-volumes-san-concept.html"
   - title: 볼륨을 이동합니다
     url: "/volumes/move-volume-task.html"
+  - title: 볼륨의 활성 파일 시스템 크기 늘리기
+    url: "/volumes/increase-volume-active-file-system-size.html"
   - title: 볼륨 이동을 위한 명령입니다
     url: "/volumes/commands-move-volumes-reference.html"
   - title: 볼륨을 복사하는 방법입니다

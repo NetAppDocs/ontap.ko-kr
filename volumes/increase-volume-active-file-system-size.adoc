@@ -1,0 +1,89 @@
+---
+permalink: volumes/increase-volume-active-file-system-size.html 
+sidebar: sidebar 
+keywords: increase, active, file system, volume, cpu offload, compression offload, dedicated offload processor, storage efficiency, compression 
+summary: 전용 오프로드 프로세서 스토리지 효율성을 지원하지 않는 플랫폼에서 전용 오프로드 스토리지 효율성을 지원하지 않는 플랫폼으로 볼륨을 이동하는 경우 볼륨을 이동하기 전에 볼륨의 활성 파일 시스템 크기를 늘려 볼륨 공간이 부족해지는 것을 방지해야 합니다. 
+---
+= 8k 적응 압축에서 마이그레이션하기 전에 ONTAP 볼륨의 활성 파일 시스템을 늘립니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+8K 적응형 압축을 지원하는 플랫폼은 볼륨 수준에서 공간을 절약합니다.  AFF C 시리즈 플랫폼과 32k 압축을 지원하는 플랫폼은 전체 수준에서 공간을 절약합니다.  8k 적응 압축에서 AFF C 시리즈 플랫폼이나 32k 압축을 사용하는 플랫폼으로 볼륨을 마이그레이션하는 경우 8k 압축으로 인한 절감 효과만큼 볼륨의 활성 파일 시스템 크기를 늘려야 합니다.  이렇게 하면 볼륨을 이동하는 동안 볼륨의 여유 공간이 부족해지는 것을 방지할 수 있습니다.
+
+다음 시스템은 32k 압축을 지원합니다.
+
+[cols="2"]
+|===
+| 플랫폼 | ONTAP 버전입니다 
+
+
+ a| 
+* AFF A1K 를 참조하십시오
+* AFF A90 를 참조하십시오
+* AFF A70 를 참조하십시오
+* FAS90를 참조하십시오
+* FAS70를 참조하십시오
+
+| 9.15.1 이상 
+
+
+ a| 
+* AFF A50 를 참조하십시오
+* AFF A30 를 참조하십시오
+
+| 9.16.1 이상 
+|===
+자세히 알아보세요 link:../concepts/builtin-storage-efficiency-concept.html["32k 압축을 지원하는 AFF 및 FAS 플랫폼"] .
+
+를 참조하십시오link:https://hwu.netapp.com/["Hardware Universe"^] AFF C 시리즈 플랫폼의 전체 목록은 여기에서 확인하세요.
+
+.이 작업에 대해
+볼륨 이동 작업을 사용하여 데이터를 마이그레이션하는 경우 다음 단계를 수행합니다.  SnapMirror 작업을 사용하여 데이터를 마이그레이션하는 경우 활성 파일 시스템의 크기를 수동으로 늘릴 필요가 없습니다.  SnapMirror 대상 볼륨은 기본적으로 볼륨 자동 크기 조정을 사용하므로 볼륨 계층이 아닌 집계 계층에서 압축 절감이 실현되어 공간이 부족해질 것으로 예상되지 않습니다.
+
+.시작하기 전에
+볼륨에서 논리적 공간 보고 및 적용이 활성화되지 않은 경우 선택적으로 다음을 설정하여 활성화할 수 있습니다. `-is-space-reporting-logical` 그리고 `-is-space-enforcement-logical` 매개변수를 *true*로 설정합니다.  볼륨을 이동하기 전에 이러한 설정을 활성화하면 8k 압축에서 변환할 때 볼륨 계층에서 압축 절감 손실을 수용할 만큼 볼륨이 충분히 큰지 평가하는 데 도움이 됩니다.  볼륨에서 이러한 설정을 활성화해야 합니다.  SVM 수준에서 이러한 설정을 활성화하면 새로 생성된 볼륨에만 적용됩니다.
+
+.단계
+. 볼륨의 현재 크기와 스냅샷 예약을 확인하세요.
++
+[source, cli]
+----
+volume show-space
+----
+. 볼륨의 압축 공간 절약을 확인하세요.
++
+[source, cli]
+----
+volume show -vserver -volume -fields compression-space-saved
+----
+. 표시된 양만큼 볼륨의 활성 파일 시스템 크기를 늘리십시오. `compression-space-saved` 스냅샷 예약도 포함.
++
+[source, cli]
+----
+volume size -vserver <vserver_name> -volume <volume_name> -new-size +<size>
+----
++
+.예
+볼륨이 100GB이고 스냅샷 예약이 20%인 경우, 활성 파일 시스템은 80GB이고 스냅샷 예약은 20GB입니다.  활성 파일 시스템을 20GB 늘리려면 전체 볼륨 크기에 25GB를 추가해야 합니다. 즉, 활성 파일 시스템에 20GB를 추가하고 스냅샷 예약에 5GB(20%)를 추가해야 합니다.
+
++
+[listing]
+----
+volume size -vserver svm1 -volume volx -size +20GB
+----
+. 볼륨 크기가 증가했는지 확인하세요.
++
+[source, cli]
+----
+volume show -vserver <vserver_name> -volume <volume_name> -fields size
+----
+
+
+.결과
+볼륨의 활성 파일 시스템 크기가 늘어났으며 볼륨을 이동할 준비가 되었습니다.
+
+.다음 단계
+수행하다link:move-volume-task.html["볼륨 이동"] 데이터를 마이그레이션하려면.
