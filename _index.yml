@@ -39,21 +39,15 @@ indexpage:
       url: "/cluster-admin/index.html"
     - title: 디스크 및 로컬 계층 또는 애그리게이트 관리
       url: "/disks-aggregates/index.html"
-    - title: System Manager를 사용하여 FabricPool 계층 관리
-      url: "/concept_cloud_overview.html"
-    - title: CLI를 사용한 FabricPool 계층 관리
+    - title: FabricPool 계층 관리
       url: "/fabricpool/index.html"
   - title: 볼륨 관리
     links:
     - title: 모든 항목
       url: "/volume-admin/index.html"
-    - title: System Manager를 사용하여 FlexGroup 볼륨 관리
-      url: "/flexgroup/provision-nas-flexgroup-task.html"
-    - title: CLI를 사용한 FlexGroup 볼륨 관리
+    - title: FlexGroup 볼륨 관리
       url: "/flexgroup/index.html"
-    - title: System Manager를 사용하여 FlexCache 볼륨 관리
-      url: "/task_nas_flexcache.html"
-    - title: CLI를 사용한 FlexCache 볼륨 관리
+    - title: FlexCache 볼륨 관리
       url: "/flexcache/index.html"
   - title: 네트워크 관리
     links:
@@ -101,9 +95,7 @@ indexpage:
     links:
     - title: 모든 항목
       url: "/authentication-access-control/index.html"
-    - title: System Manager로 계정을 관리합니다
-      url: "/task_security_administrator_access.html"
-    - title: CLI를 사용하여 계정을 관리합니다
+    - title: 인증 및 RBAC 관리
       url: "/authentication/workflow-concept.html"
     - title: 웹 서비스 관리
       url: "/system-admin/manage-web-services-concept.html"
@@ -119,8 +111,6 @@ indexpage:
     links:
     - title: 모든 항목
       url: "/security-encryption/index.html"
-    - title: CLI를 사용하여 관리자 인증 및 RBAC를 관리합니다
-      url: "/authentication/index.html"
     - title: NAS 감사 및 보안 추적
       url: "/nas-audit/index.html"
     - title: 안티바이러스 구성
@@ -133,8 +123,6 @@ indexpage:
       url: "/snaplock/index.html"
     - title: SnapMirror 활성 동기화
       url: "/snapmirror-active-sync/index.html"
-    - title: System Manager로 MetroCluster 사이트를 관리합니다
-      url: "/concept_metrocluster_manage_nodes.html"
     - title: 테이프 백업을 사용한 데이터 보호
       url: "/tape-backup/index.html"
     - title: NDMP 구성
@@ -159,12 +147,14 @@ indexpage:
     links:
     - title: NetApp 랜섬웨어 방어 포트폴리오
       url: https://docs.netapp.com/us-en/ontap-technical-reports/ransomware-solutions/ransomware-overview.html
-    - title: AFF, ASA 및 FAS 플랫폼
+    - title: AFF, ASA 및 FAS 저장 시스템
       url: https://docs.netapp.com/us-en/ontap-systems/index.html
-    - title: ASA(All Flash SAN 어레이) 시스템
-      url: https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html
-    - title: ASA(All-Flash Array) R2 시스템에서 NetApp 스토리지를 사용하고 있습니다
+    - title: AFX 스토리지 시스템
+      url: https://docs.netapp.com/us-en/ontap-afx/index.html
+    - title: ASA r2 저장 시스템
       url: https://docs.netapp.com/us-en/asa-r2/index.html
+    - title: ASA 스토리지 시스템
+      url: https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html
     - title: MetroCluster
       url: https://docs.netapp.com/us-en/ontap-metrocluster/
     - title: 자동화 및 REST API

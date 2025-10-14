@@ -1,7 +1,7 @@
 ---
 permalink: concepts/ontap-platforms-concept.html 
 sidebar: sidebar 
-keywords: ontap, platforms, FAS, AFF, ONTAP Select, asa, san array, flexpod 
+keywords: ontap, platforms, FAS, AFF, ONTAP Select, asa, afx, san array, flexpod 
 summary: ONTAP 데이터 관리 소프트웨어는 블록 또는 파일 데이터를 읽고 쓰는 애플리케이션을 위한 유니파이드 스토리지를 제공합니다. 
 ---
 = ONTAP 플랫폼
@@ -15,7 +15,8 @@ ONTAP 데이터 관리 소프트웨어는 블록 또는 파일 데이터를 읽�
 
 ONTAP 구현은 다음과 같이 실행됩니다.
 
-* * NetApp 엔지니어링 시스템 *: https://docs.netapp.com/us-en/ontap-systems-family/#["FAS 하이브리드 플래시 시스템, AFF(All Flash FAS) A-Series 및 C-Series, ASA(All-Flash SAN 어레이) 플랫폼 등 여러 플랫폼을 지원합니다"^]
+* * NetApp 엔지니어링 시스템*: https://docs.netapp.com/us-en/ontap-systems-family/#["AFF, AFX, ASA 및 FAS 저장 시스템"^]
+* * ONTAP 스토리지 특성*: https://docs.netapp.com/us-en/ontap-family/#["AFX 및 ASA r2 스토리지 시스템"^] 특정 프로토콜에 초점을 맞춘 분산된 ONTAP 스토리지를 제공하는 전담 ONTAP 개성을 실행합니다.
 * * 상용 하드웨어 *: https://docs.netapp.com/us-en/ontap-select/["ONTAP Select"^]
 * *프라이빗, 퍼블릭 또는 하이브리드 클라우드*: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^] , https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["NetApp ONTAP용 Amazon FSx"^] , https://learn.microsoft.com/en-us/azure/azure-netapp-files/["Azure NetApp Files"^] , 그리고 https://cloud.google.com/netapp/volumes/docs/discover/overview["Google Cloud NetApp 볼륨"^]
 * * 동급 최고의 컨버지드 인프라를 제공하는 를 포함한 특수 구현 * https://docs.netapp.com/us-en/flexpod/index.html["FlexPod 데이터 센터"^]

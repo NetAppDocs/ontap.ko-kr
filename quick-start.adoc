@@ -40,7 +40,7 @@ link:software_setup/configure-protocols.html["NAS, SAN 또는 NVMe 프로토콜�
 .다음 단계
 * link:insights-system-optimization-task.html["시스템 최적화를 위한 통찰력 확보"]..
 * link:authentication/index.html["ONTAP 관리자 인증 및 RBAC(역할 기반 액세스 제어) 설정"] 관리자의 기능을 정의합니다.
-* link:error-messages//configure-ems-notifications-sm-task.html["가져오기 EMS(이벤트 관리 시스템) 알림을 보내도록 ONTAP를 구성합니다"] 주의를 요하는 시스템 문제에 대해 즉시 알림을 받을 수 있습니다.
+* link:error-messages//configure-ems-notifications-sm-task.html["중요한 이벤트 관리 시스템(EMS) 알림을 보내도록 ONTAP 구성"] 시스템 문제가 발생하여 주의가 필요할 경우 즉시 알림을 받을 수 있습니다.
 * 에서 ONTAP를 사용하는 방법과 에서 를 link:ransomware-solutions/ransomware-overview.html["랜섬웨어 공격으로부터 데이터를 보호합니다"]사용하는 방법에 대해 link:peering/index.html["재해 복구를 위해 데이터를 백업합니다"]알아봅니다.
 * link:system-admin/autosupport-active-iq-digital-advisor-concept.html["디지털 자문 및 AutoSupport에 대해 알아보기"]..
 * 에 System Manager를 link:task_cp_dashboard_tour.html["클러스터의 상태를 모니터링합니다"]사용합니다.

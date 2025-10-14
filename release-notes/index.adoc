@@ -16,7 +16,8 @@ ONTAP 9 데이터 관리 소프트웨어의 각 릴리즈는 ONTAP의 기능, �
 이러한 주요 기능 외에도 최신 ONTAP 릴리스에 도입된 새로운 기능 및 향상된 기능을 버전별로 포괄적으로 제공합니다.
 
 * 에 대해 자세히 알아보십시오 https://docs.netapp.com/us-en/ontap-metrocluster/releasenotes/mcc-new-features.html["새롭고 향상된 ONTAP MetroCluster 기능"^].
-* 에 대해 알아보세요  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9171.html["NetApp ASA r2 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
+* 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9171.html["NetApp AFX 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
+* 에 대해 알아보세요  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9171.html["NetApp ASA r2 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
 * 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-systems/whats-new.html["AFF, ASA 및 FAS 시스템과 지원되는 스위치에 대한 새롭고 향상된 지원"^] .
 * 의 업데이트에 대해 알아봅니다 https://docs.netapp.com/us-en/ontap-automation/whats_new.html["ONTAP REST API를 참조하십시오"^].
 
