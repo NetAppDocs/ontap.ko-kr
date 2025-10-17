@@ -65,7 +65,7 @@ ONTAP 9.10.1부터 HP-UX용 SnapMirror 액티브 동기화가 지원됩니다.
 
 ONTAP 9.10.1부터 SnapMirror 액티브 동기화는 Solaris 11.4를 지원합니다.
 
-SnapMirror 활성 동기화 환경에서 계획되지 않은 사이트 장애 조치 전환이 발생할 때 Solaris 클라이언트 애플리케이션이 중단되지 않도록 하려면 기본 Solaris OS 설정을 수정합니다. 권장 설정으로 Solaris를 구성하려면 기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Solaris_Host_support_recommended_settings_in_SnapMirror_Business_Continuity_(SM-BC)_configuration["Solaris 호스트 지원 SnapMirror 활성 동기화에서 권장 설정"^].
+SnapMirror 활성 동기화 환경에서 계획되지 않은 사이트 장애 조치(failover) 전환이 발생할 때 Solaris 클라이언트 애플리케이션이 중단되지 않도록 하려면 기본 Solaris OS 설정을 수정합니다. 권장 설정으로 Solaris를 구성하려면 다음을 참조하세요.link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Solaris_Host_support_recommended_settings_in_SnapMirror_Business_Continuity_(SM-BC)_configuration["NetApp 지식 기반: SnapMirror Active Sync에서 Solaris 호스트 지원 권장 설정"^] .
 
 
 

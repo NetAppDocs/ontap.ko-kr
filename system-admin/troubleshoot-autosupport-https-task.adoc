@@ -85,7 +85,7 @@ system node autosupport history show -node * -fields node,seq-num,destination,la
 
 .. 웹 클라이언트를 사용하여 '+https://support.netapp.com+` 액세스합니다.
 +
-액세스가 성공적으로 이루어져야 합니다. 그렇지 않은 경우 모든 방화벽이 HTTPS 및 DNS 트래픽을 허용하도록 올바르게 구성되어 있고 프록시 서버가 올바르게 구성되어 있는지 확인하십시오. support.netapp.com 에 대한 정적 이름 확인을 구성하는 방법에 대한 자세한 내용은 기술 자료 문서를 참조하십시오 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_would_a_HOST_entry_be_added_in_ONTAP_for_support.netapp.com%3F["ONTAP for support.netapp.com? 에서 호스트 항목을 추가하는 방법은"^]
+접근이 성공할 것입니다. 그렇지 않은 경우 모든 방화벽이 HTTPS 및 DNS 트래픽을 허용하도록 올바르게 구성되었는지 확인하고, 프록시 서버가 올바르게 구성되었는지 확인하세요. support.netapp.com에 대한 정적 이름 확인 구성에 대한 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_would_a_HOST_entry_be_added_in_ONTAP_for_support.netapp.com%3F["NetApp 지식 기반: ONTAP 에서 support.netapp.com에 대한 HOST 항목을 추가하려면 어떻게 해야 하나요?"^]
 
 
 

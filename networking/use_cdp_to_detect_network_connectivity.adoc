@@ -382,7 +382,7 @@ OTHER
 
 == CDP를 지원하지 않는 이더넷 스위치에 연결 중입니다
 
-여러 공급업체 스위치는 CDP를 지원하지 않습니다.  기술 자료 문서를 참조하십시오 https://kb.netapp.com/onprem/ontap/da/NAS/ONTAP_device_discovery_shows_nodes_instead_of_the_switch["ONTAP 장치 검색에는 스위치 대신 노드가 표시됩니다"^] 를 참조하십시오.
+여러 공급업체 스위치는 CDP를 지원하지 않습니다. 를 참조하십시오link:https://kb.netapp.com/onprem/ontap/da/NAS/ONTAP_device_discovery_shows_nodes_instead_of_the_switch["NetApp 지식 기반: ONTAP 장치 검색 시 스위치 대신 노드가 표시됨"^] 자세한 내용은.
 
 이 문제를 해결하는 방법에는 두 가지가 있습니다.
 

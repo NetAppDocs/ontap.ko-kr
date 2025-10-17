@@ -33,7 +33,7 @@ System Manager 또는 ONTAP CLI를 사용하여 보호 관계를 다시 설정�
 
 IMPORTANT: ONTAP 9.14.1부터 9.8까지 SnapMirror 액티브 동기화는 SnapMirror 비즈니스 연속성(SM-BC)이라고 합니다.
 
-. 보호 > 관계 * 로 이동하고 관계 상태가 "InSync"로 표시될 때까지 기다립니다.
+. *보호 > 관계*로 이동하여 관계 상태가 "동기화되지 않음"으로 표시될 때까지 기다립니다.
 . 원래 소스 클러스터에서 작업을 재개하려면 를 image:icon_kabob.gif["메뉴 옵션 아이콘"] 클릭하고 * Failover * 를 선택합니다.
 
 

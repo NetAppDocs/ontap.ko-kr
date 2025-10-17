@@ -16,8 +16,12 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 .시작하기 전에
 * KMIP SSL 클라이언트 및 서버 인증서를 설치해야 합니다.
 * 이 작업을 수행하려면 클러스터 관리자여야 합니다.
-* 외부 키 관리자를 구성하기 전에 MetroCluster 환경을 구성해야 합니다.
-* MetroCluster 환경에서는 두 클러스터에 동일한 KMIP SSL 인증서를 설치해야 합니다.
+* MetroCluster 환경에서:
++
+** 외부 키 관리자를 구성하기 전에 MetroCluster 환경을 구성해야 합니다.
+** 두 클러스터에 동일한 KMIP SSL 인증서를 설치해야 합니다.
+
+
 
 
 .단계
@@ -74,6 +78,7 @@ node2
 
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external["보안 키 관리자 외부"^]
+* xref:configure-cluster-key-server-task.html[클러스터링된 외부 키 서버를 구성합니다]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-enable.html["보안 키 관리자 외부 활성화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-show-status.html["보안 키 관리자 외부 상태 표시"^]
 

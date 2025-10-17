@@ -2,7 +2,7 @@
 permalink: nfs-admin/nfsv4-referrals-concept.html 
 sidebar: sidebar 
 keywords: nfsv4, referral, work 
-summary: 'NFSv4 조회를 설정하면 ONTAP는 NFSv4 클라이언트에 "SVM 내" 조회를 제공합니다. SVM 내 의뢰는 NFSv4 요청을 수신하는 클러스터 노드가 SVM(스토리지 가상 머신)의 다른 논리 인터페이스(LIF)에 NFSv4 클라이언트를 참조하는 경우를 말합니다.' 
+summary: 'NFSv4 참조를 활성화하면 ONTAP NFSv4 클라이언트에 대한 SVM 내부 참조를 제공합니다. SVM 내부 참조란 NFSv4 요청을 수신한 클러스터 노드가 NFSv4 클라이언트를 스토리지 가상 머신(SVM)의 다른 논리적 인터페이스(LIF)로 참조하는 경우를 말합니다.' 
 ---
 = ONTAP SVM에 대한 NFSv4 참조에 대해 알아보세요
 :allow-uri-read: 

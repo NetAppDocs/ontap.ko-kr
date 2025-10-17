@@ -42,7 +42,7 @@ MetroCluster 환경에서 ONTAP 9.6 이상을 실행하고 있고 admin SVM에�
 
 
 
-NOTE: 새로 설치된 인증서를 사용하도록 키 관리자 구성을 업데이트하면 새 클라이언트 인증서의 공개/개인 키가 이전에 설치된 키와 다른 경우 오류가 반환됩니다. 기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/The_new_client_certificate_public_or_private_keys_are_different_from_the_existing_client_certificate["새 클라이언트 인증서 공개 키 또는 개인 키가 기존 클라이언트 인증서와 다릅니다"^] 이 오류를 재정의하는 방법에 대한 지침은 을 참조하십시오.
+NOTE: 새로 설치된 인증서를 사용하도록 키 관리자 구성을 업데이트하면 새 클라이언트 인증서의 공개/개인 키가 이전에 설치된 키와 다르면 오류가 반환됩니다. 를 참조하십시오link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/The_new_client_certificate_public_or_private_keys_are_different_from_the_existing_client_certificate["NetApp 지식 기반: 새 클라이언트 인증서 공개 키 또는 개인 키가 기존 클라이언트 인증서와 다릅니다."^] 이 오류를 무시하는 방법에 대한 지침은 다음을 참조하세요.
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]

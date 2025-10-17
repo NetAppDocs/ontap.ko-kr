@@ -18,7 +18,7 @@ Onboard Key Manager를 사용하여 클러스터가 암호화된 데이터에 �
 .이 작업에 대해
 클러스터에 노드를 추가할 때마다 보안 키 관리자 온보드 활성화 명령을 실행해야 합니다. MetroCluster 구성에서는 먼저 로컬 클러스터에서 보안 키 관리자 온보드 활성화를 실행한 다음 원격 클러스터에서 동일한 암호를 사용하여 보안 키 관리자 온보드 동기화를 실행해야 합니다.
 
-및 `security key-manager onboard sync` 에 대한 자세한 `security key-manager onboard enable` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+onboard["ONTAP 명령 참조입니다"^]참조하십시오.
+자세히 알아보세요 `security key-manager onboard enable` 그리고 `security key-manager onboard sync` 에서link:https://docs.netapp.com/us-en/ontap-cli//security-key-manager-onboard-enable.html["ONTAP 명령 참조입니다"^] .
 
 기본적으로 노드를 재부팅할 때는 키 관리자 암호를 입력할 필요가 없습니다. MetroCluster를 제외하고, 사용자가 재부팅 후 암호문을 입력하도록 'cc-mode-enabled=yes' 옵션을 사용할 수 있습니다.
 
@@ -32,7 +32,7 @@ NSE(NetApp 스토리지 암호화)가 활성화되어 있고 부팅 시 올바�
 
 * 시스템 이미지 업데이트는 NetApp RSA-3072 코드 서명 인증서와 SHA-384 코드 서명 다이제스트를 함께 사용하여 일반적인 NetApp RSA-2048 코드 서명 인증서와 SHA-256 코드 서명 다이제스트 대신 이미지 무결성을 확인합니다.
 +
-업그레이드 명령은 다양한 디지털 서명을 확인하여 이미지 내용이 변경되거나 손상되지 않았는지 확인합니다. 유효성 검사에 성공하면 이미지 업데이트 프로세스가 다음 단계로 진행되고, 그렇지 않으면 이미지 업데이트가 실패합니다. 에 대한 자세한 내용은 `cluster image` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+image["ONTAP 명령 참조입니다"^]을 참조하십시오.
+업그레이드 명령은 다양한 디지털 서명을 검사하여 이미지 내용이 변경되거나 손상되지 않았는지 확인합니다.  검증이 성공하면 이미지 업데이트는 다음 단계로 진행됩니다.  검증이 실패하면 이미지 업데이트가 실패합니다.  자세히 알아보세요 `cluster image` 에서link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+image["ONTAP 명령 참조입니다"^] .
 
 
 
@@ -61,21 +61,13 @@ NOTE:  `cc-mode-enabled=yes`재부팅 후 사용자가 키 관리자 암호를 �
 +
 다음 예제에서는 재부팅할 때마다 암호를 입력할 필요 없이 키 관리자 설치 명령을 cluster1에서 시작합니다.
 
-+
-[listing]
-----
-cluster1::> security key-manager onboard enable
-
-Enter the cluster-wide passphrase for onboard key management in Vserver "cluster1"::    <32..256 ASCII characters long text>
-Reenter the cluster-wide passphrase:    <32..256 ASCII characters long text>
-----
-. 암호문 프롬프트에서 32자에서 256자 사이의 암호문을 입력하거나 64에서 256자 사이의 암호문을 "cc-mode"로 입력합니다.
+. 32~256자 사이의 암호를 입력하세요. "`cc-mode`"의 경우 64~256자 사이의 암호를 입력하세요.
 +
 
 NOTE: 지정된 ""cc-mode"" 암호가 64자 미만이면 키 관리자 설정 작업에 암호 프롬프트가 다시 표시되기 전에 5초의 지연이 발생합니다.
 
 . 암호 확인 프롬프트에서 암호를 다시 입력합니다.
-. 인증 키가 생성되었는지 확인합니다.
+. 시스템이 인증 키를 생성하는지 확인하세요.
 +
 '보안 키 관리자 키 쿼리 노드
 
@@ -84,44 +76,19 @@ NOTE: 지정된 ""cc-mode"" 암호가 64자 미만이면 키 관리자 설정 �
 NOTE:  `security key-manager key query`명령이 `security key-manager query key` 명령을 대체합니다.
 
 +
-다음 예제에서는 "cluster1"에 대해 인증 키가 생성되었는지 확인합니다.
-
-+
-[listing]
-----
-cluster1::> security key-manager key query
-       Vserver: cluster1
-   Key Manager: onboard
-          Node: node1
-
-Key Tag                               Key Type  Restored
-------------------------------------  --------  --------
-node1                                 NSE-AK    yes
-    Key ID: <id_value>
-node1                                 NSE-AK    yes
-    Key ID: <id_value>
-
-       Vserver: cluster1
-   Key Manager: onboard
-          Node: node2
-
-Key Tag                               Key Type  Restored
-------------------------------------  --------  --------
-node1                                 NSE-AK    yes
-    Key ID: <id_value>
-node2                                 NSE-AK    yes
-    Key ID: <id_value>
-----
-+
-에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html?q=security+key-manager+key+query["ONTAP 명령 참조입니다"^]을 참조하십시오.
+에 대한 자세한 내용은 `security key-manager key query` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 
 
 .작업을 마친 후
 나중에 사용할 수 있도록 암호를 스토리지 시스템 외부의 안전한 위치에 복사합니다.
 
-모든 키 관리 정보는 클러스터의 복제된 데이터베이스(RDB)에 자동으로 백업됩니다. 또한 재해 발생 시 사용할 수 있도록 정보를 수동으로 백업해야 합니다.
+시스템은 클러스터의 복제된 데이터베이스(RDB)에 주요 관리 정보를 자동으로 백업합니다.  재해 복구를 위해 이 정보를 수동으로 백업해야 합니다.
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=cluster+image["클러스터 이미지 명령"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-enable.html["보안 키 관리자 외부 활성화"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-query.html["보안 키 관리자 키 쿼리"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-onboard-enable.html["보안 키 관리자 온보드 활성화"^]
+* link:delete-key-management-database-task.html["외부 키 관리에서 온보드 키 관리로 전환"]
 

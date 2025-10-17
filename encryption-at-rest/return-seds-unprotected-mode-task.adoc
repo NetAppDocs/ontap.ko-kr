@@ -49,7 +49,7 @@ Info: Starting modify on 14 disks.
 '스토리지 암호화 디스크 표시 상태'입니다
 
 +
-"시작된 디스크"와 "완료된 디스크"의 숫자가 같을 때까지 show-status 명령을 반복합니다.
+"Disks Begun"과 "Disks Done"의 숫자가 같아질 때까지 show-status 명령을 반복합니다.
 
 +
 [listing]
@@ -88,7 +88,7 @@ Info: Starting modify on 14 disks.
 '스토리지 암호화 디스크 표시 상태'입니다
 
 +
-숫자가 같을 때까지 show-status 명령을 반복합니다. "디스크 시작" 및 "디스크 완료" 숫자가 동일하면 작업이 완료됩니다.
+숫자가 같아질 때까지 show-status 명령을 반복합니다. "disks began"과 "disks done"의 숫자가 같으면 작업이 완료됩니다.
 
 
 

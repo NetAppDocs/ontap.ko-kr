@@ -180,6 +180,6 @@ cluster1::> volume snapshot restore -vserver vs0 -volume vol1 -snapshot daily.20
 --
 ====
 .관련 정보
-* link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Ransomware_prevention_and_recovery_in_ONTAP["KB: ONTAP에서 랜섬웨어 방지 및 복구 기능을 사용할 수 있습니다"^]
+* link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Ransomware_prevention_and_recovery_in_ONTAP["NetApp 지식 기반: ONTAP 에서의 랜섬웨어 예방 및 복구"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 

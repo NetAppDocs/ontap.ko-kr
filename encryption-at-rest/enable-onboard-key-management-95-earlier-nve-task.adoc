@@ -30,12 +30,12 @@ NVE의 경우 '-enable-cc-mode yes'를 설정하면 볼륨 생성 및 볼륨 이
 NOTE: 실패한 암호 구문을 시도한 후에는 노드를 다시 재부팅해야 합니다.
 
 .시작하기 전에
-* NSE 또는 NVE를 외부 키 관리(KMIP) 서버와 함께 사용할 경우 외부 키 관리자 데이터베이스를 삭제해야 합니다.
+* 외부 키 관리(KMIP) 서버와 함께 NSE 또는 NVE를 사용하는 경우 외부 키 관리자 데이터베이스를 삭제하세요.
 +
 link:delete-key-management-database-task.html["외부 키 관리에서 온보드 키 관리로 전환"]
 
 * 이 작업을 수행하려면 클러스터 관리자여야 합니다.
-* Onboard Key Manager를 구성하기 전에 MetroCluster 환경을 구성해야 합니다.
+* Onboard Key Manager를 구성하기 전에 MetroCluster 환경을 구성하세요.
 
 
 .단계
@@ -76,12 +76,12 @@ Reenter the cluster-wide passphrase:    <32..256 ASCII characters long text>
 . 암호 확인 프롬프트에서 암호를 다시 입력합니다.
 . 모든 노드에 대해 키가 구성되었는지 확인합니다.
 +
-보안 키 관리자 키 쇼
+`security key-manager show-key-store`
 
 +
 [listing]
 ----
-cluster1::> security key-manager key show
+cluster1::> security key-manager show-key-store
 
 Node: node1
 Key Store: onboard
@@ -98,22 +98,24 @@ Key ID                                                           Used By
 <id_value> NSE-AK
 ----
 +
-에 대한 자세한 내용은 `security key-manager key show` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+key+show["ONTAP 명령 참조입니다"^]을 참조하십시오.
+자세히 알아보세요 `security key-manager show-key-store` 에서link:https://docs.netapp.com/us-en/ontap-cli-9161/security-key-manager-show-key-store.html["ONTAP 명령 참조입니다"^] .
 
 . 필요한 경우 일반 텍스트 볼륨을 암호화된 볼륨으로 변환합니다.
 +
 `volume encryption conversion start`
 
 +
-볼륨을 변환하기 전에 Onboard Key Manager를 완전히 구성해야 합니다. MetroCluster 환경에서는 두 사이트 모두에서 Onboard Key Manager를 구성해야 합니다.
+볼륨을 변환하기 전에 Onboard Key Manager를 구성하세요.  MetroCluster 환경에서는 두 사이트 모두에 구성합니다.
 
 
 
 .작업을 마친 후
 나중에 사용할 수 있도록 암호를 스토리지 시스템 외부의 안전한 위치에 복사합니다.
 
-Onboard Key Manager 암호를 구성할 때마다 재해 발생 시 사용할 수 있도록 정보를 스토리지 시스템 외부의 안전한 위치에 수동으로 백업해야 합니다. 을 참조하십시오 link:backup-key-management-information-manual-task.html["온보드 키 관리 정보를 수동으로 백업합니다"].
+온보드 키 관리자 암호를 구성할 때 재해 발생에 대비해 저장 시스템 외부의 안전한 위치에 정보를 백업하세요. 보다link:backup-key-management-information-manual-task.html["온보드 키 관리 정보를 수동으로 백업합니다"] .
 
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-setup.html["보안 키 관리자 설정"^]
+* link:backup-key-management-information-manual-task.html["온보드 키 관리 정보를 수동으로 백업합니다"]
+* link:delete-key-management-database-task.html["외부 키 관리에서 온보드 키 관리로 전환"]
+* link:https://docs.netapp.com/us-en/ontap-cli-9161/security-key-manager-show-key-store.html["보안 키 관리자 show-key-store"^]
 

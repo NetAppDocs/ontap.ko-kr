@@ -22,7 +22,7 @@ FlexGroup 볼륨에 대한 계단식 배열 및 팬아웃 관계를 만들 때 �
 * "MirrorAllSnapshots"만 지원되며 "MirrorLatest" 비동기식 미러 정책은 지원되지 않습니다.
 * 장기 보존 스냅샷은 지원되지 않습니다.
 +
-자세히 알아보세요 link:../data-protection/long-term-retention-snapshots-concept.html["장기 보존 스냅샷"^] .
+자세히 알아보세요link:../data-protection/long-term-retention-snapshots-concept.html["장기 보존 스냅샷"] .
 
 * 다중 구간 XDP 관계의 동시 업데이트가 지원됩니다.
 * A에서 B로, B에서 C로, A에서 C로 다시 동기화하거나 C에서 A로 다시 동기화하는 것을 지원합니다

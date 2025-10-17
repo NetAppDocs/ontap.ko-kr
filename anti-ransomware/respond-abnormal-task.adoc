@@ -261,7 +261,7 @@ security multi-admin-verify request veto -index[<number returned from show reque
 --
 ====
 .관련 정보
-* link:https://kb.netapp.com/onprem%2Fontap%2Fda%2FNAS%2FUnderstanding_Autonomous_Ransomware_Protection_attacks_and_the_Autonomous_Ransomware_Protection_snapshot#["KB: 자율 랜섬웨어 보호 공격과 자율 랜섬웨어 보호 스냅샷 이해"^]
+* link:https://kb.netapp.com/onprem%2Fontap%2Fda%2FNAS%2FUnderstanding_Autonomous_Ransomware_Protection_attacks_and_the_Autonomous_Ransomware_Protection_snapshot#["NetApp 지식 기반: 자율 랜섬웨어 보호 공격 및 자율 랜섬웨어 보호 스냅샷 이해"^]
 * link:modify-automatic-snapshot-options-task.html["자동 스냅샷 옵션을 수정합니다"]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume["보안 랜섬웨어 볼륨"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+request["보안 다중 관리자 확인 요청"^]

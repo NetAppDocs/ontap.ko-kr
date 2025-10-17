@@ -11,7 +11,7 @@ summary: 외부 키 관리에서 온보드 키 관리로 전환하려면 외부 
 
 
 [role="lead"]
-외부 키 관리에서 온보드 키 관리로 전환하려면 외부 키 관리 구성을 삭제해야 온보드 키 관리를 활성화할 수 있습니다.
+온보드 키 관리로 전환하려면 온보드 키 관리를 활성화하기 전에 외부 키 관리 구성을 삭제하세요.
 
 .시작하기 전에
 * 하드웨어 기반 암호화의 경우 모든 FIPS 드라이브 또는 SED의 데이터 키를 기본값으로 재설정해야 합니다.
@@ -46,15 +46,17 @@ NOTE: MetroCluster 환경에서는 admin SVM에 대해 두 클러스터 모두�
 
 
 
+자세히 알아보세요 `security key-manager external disable` 에서link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-disable.html["ONTAP 명령 참조입니다"^] .
+
 --
 .ONTAP 9.5 이하
 --
 'Security key-manager delete-KMIP-config' 명령어를 사용한다
 
-에 대한 자세한 내용은 `security key-manager delete-kmip-config` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-delete-kmip-config.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+자세히 알아보세요 `security key-manager delete-kmip-config` 에서link:https://docs.netapp.com/us-en/ontap-cli-9161/security-key-manager-delete-kmip-config.html["ONTAP 명령 참조입니다"^] .
 
 --
 ====
 .관련 정보
-* link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external["보안 키 관리자 외부"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-disable.html["보안 키 관리자 외부 비활성화"^]
 

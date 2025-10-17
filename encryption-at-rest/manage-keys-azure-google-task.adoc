@@ -94,10 +94,8 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 . SVM에서 Cloud KMS 사용
 `security key-manager external gcp enable -vserver _svm_name_ -project-id _project_id_-key-ring-name _key_ring_name_ -key-ring-location _key_ring_location_ -key-name _key_name_`
 메시지가 표시되면 서비스 계정 개인 키로 JSON 파일의 내용을 입력합니다
-. Cloud KMS가 올바른 매개 변수로 구성되었는지 확인합니다.
-`security key-manager external gcp show vserver _svm_name_`
-의 상태입니다 `kms_wrapped_key_status` 가 됩니다 `“UNKNOWN”` 암호화된 볼륨이 생성되지 않은 경우
-서비스 상태가 양호하지 않은 경우 데이터 SVM LIF를 통해 GCP 키 관리 서비스에 대한 연결을 설정합니다.
+. Cloud KMS가 올바른 매개변수로 구성되었는지 확인하세요.
+`security key-manager external gcp show vserver _svm_name_` 의 상태 `kms_wrapped_key_status` 될 것이다 `"UNKNOWN"` 암호화된 볼륨이 생성되지 않은 경우. 서비스 도달성이 적절하지 않은 경우 데이터 SVM LIF를 통해 GCP 키 관리 서비스에 대한 연결을 설정합니다.
 +
 에 대한 자세한 내용은 `security key-manager external gcp` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+key-manager+external+gcp["ONTAP 명령 참조입니다"^]을 참조하십시오.
 

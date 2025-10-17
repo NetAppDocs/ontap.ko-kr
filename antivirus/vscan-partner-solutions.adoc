@@ -30,7 +30,6 @@ NetApp는 Trellix, Symantec, Trend Micro, Sentinel One, Deep 본능 및 OPSWAT�
 | 시만텍 | link:https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/symantec-protection-engine/9-0-0.html["Symantec Protection Engine 9.0.0"^]  a| 
 * link:https://imt.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^]
 * link:https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/symantec-protection-engine/9-1-0/Installing-SPE/Support-Matrix-for-Partner-Devices-Certified-with-Symantec-Protection-Engine-(SPE)-for-Network-Attached-Storage-(NAS)-8-x.html["NAS(Network Attached Storage) 9.x.x용 Symantec Protection Engine(SPE)으로 인증된 파트너 장치 지원 매트릭스"^]
-* link:https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/symantec-protection-engine/8-2-2/Installing-SPE/Support-Matrix-for-Partner-Devices-Certified-with-Symantec-Protection-Engine-(SPE)-for-Network-Attached-Storage-(NAS)-8-x.html["NAS(Network Attached Storage) 8.x(broadcom.com Symantec SPE(Protection Engine)로 인증된 파트너 디바이스에 대한 지원 매트릭스"^]
 
 
 

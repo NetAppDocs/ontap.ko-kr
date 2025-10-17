@@ -19,7 +19,7 @@ DNS 로드 밸런싱 영역을 생성하여 LIF에 마운트된 클라이언트 
 .시작하기 전에
 로드 밸런싱 존에 대한 모든 요청을 구성된 LIF로 전달하도록 사이트 전체 DNS 서버의 DNS 전달자를 구성해야 합니다.
 
-기술 자료 문서 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_set_up_DNS_load_balancing_in_clustered_Data_ONTAP["Cluster-Mode에서 DNS 로드 밸런싱을 설정하는 방법"^] 조건부 전달을 사용하여 DNS 로드 밸런싱을 구성하는 방법에 대한 자세한 내용은 NetApp Support 사이트 를 참조하십시오.
+그만큼link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_set_up_DNS_load_balancing_in_clustered_Data_ONTAP["NetApp 지식 기반: 클러스터 모드에서 DNS 부하 분산을 설정하는 방법"^] 조건부 전달을 사용하여 DNS 부하 분산을 구성하는 방법에 대한 자세한 정보가 포함되어 있습니다.
 
 .이 작업에 대해
 * 모든 데이터 LIF는 DNS 로드 밸런싱 존 이름에 대한 DNS 쿼리에 응답할 수 있습니다.

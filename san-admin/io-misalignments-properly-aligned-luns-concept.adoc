@@ -19,7 +19,7 @@ image:bsag-cmode-lbpb.gif["LUN의 물리적 블록의 논리적 블록"]
 
 호스트 운영 체제는 모든 논리 블록에서 읽기 또는 쓰기 I/O 작업을 시작할 수 있습니다. I/O 작업은 물리적 블록의 첫 번째 논리적 블록에서 시작될 때만 정렬되는 것으로 간주됩니다. 물리적 블록의 시작이 아닌 논리적 블록에서 I/O 작업이 시작되면 I/O가 잘못 정렬된 것으로 간주됩니다. ONTAP는 자동으로 정렬 불량을 감지하여 LUN에 보고합니다. 하지만 잘못 정렬된 I/O가 있다고 해서 LUN도 제대로 정렬되지 않은 것은 아닙니다. 잘못 정렬된 I/O가 제대로 정렬된 LUN에 보고될 수 있습니다.
 
-추가 조사가 필요한 경우 기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_identify_unaligned_IO_on_LUNs["LUN에서 정렬되지 않은 IO를 어떻게 식별합니까?"^]
+추가 조사가 필요한 경우 다음을 참조하세요.link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_identify_unaligned_IO_on_LUNs["NetApp 지식 기반: LUN에서 정렬되지 않은 IO를 식별하는 방법은 무엇입니까?"^]
 
 정렬 문제 해결을 위한 도구에 대한 자세한 내용은 다음 설명서를 참조하십시오: +
 
@@ -38,7 +38,7 @@ ONTAP 9.7 이하 버전의 경우 권장 ONTAP LUN을 사용해야 합니다 `os
 
 NOTE: 경우에 따라 I/O를 정렬하기 위해 사용자 지정 파티셔닝 테이블이 필요할 수 있습니다. 그러나 접두사 값이 0보다 큰 OSType 값에서는 사용자 지정 파티션이 잘못 정렬된 I/O를 생성할 수 있습니다
 
-ONTAP 9.7 이하 버전에서 프로비저닝된 LUN에 대한 자세한 내용은 KB 문서를 참조하십시오 link:https://kb.netapp.com/onprem/ontap/da/SAN/How_to_identify_unaligned_IO_on_LUNs["LUN에서 정렬되지 않은 IO를 식별하는 방법"^].
+ONTAP 9.7 또는 이전 버전에서 프로비저닝된 LUN에 대한 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/onprem/ontap/da/SAN/How_to_identify_unaligned_IO_on_LUNs["NetApp 기술 자료: LUN에서 정렬되지 않은 IO를 식별하는 방법"^] .
 
 
 NOTE: 기본적으로 ONTAP 9.8 이상에서 프로비저닝된 새 LUN은 모든 LUN OS 유형에 대한 접두사 및 접미사 크기가 0입니다. I/O는 기본적으로 지원되는 호스트 운영 체제에 맞춰 정렬되어야 합니다.

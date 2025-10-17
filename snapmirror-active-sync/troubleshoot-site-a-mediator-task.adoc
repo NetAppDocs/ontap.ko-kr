@@ -29,7 +29,7 @@ SnapMirror 액티브 동기화를 사용할 경우 ONTAP 중재자 또는 피어
 
 | SnapMirror 활성 동기화 볼륨의 합의 상태입니다 | 'volume show_volume_name_-fields smbc-Consensus' | 를 클릭합니다 `sm-bc consensus` 필드가 표시됩니다 `Awaiting-consensus` 
 |===
-이 문제의 진단 및 해결에 대한 자세한 내용은 기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Link_between_Site_A_and_Mediator_down_and_Site_B_down_when_using_SM-BC["SnapMirror 액티브 동기화를 사용할 때 사이트 A와 중재자 다운 및 사이트 B 사이의 링크 다운"^].
+이 문제를 진단하고 해결하는 방법에 대한 추가 정보는 다음을 참조하십시오.link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/Link_between_Site_A_and_Mediator_down_and_Site_B_down_when_using_SM-BC["NetApp 기술 자료: SnapMirror Active Sync를 사용할 때 사이트 A와 Mediator 간의 링크가 끊어지고 사이트 B가 끊어짐"^] .
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/cluster-peer-show.html["클러스터 피어 쇼"^]

@@ -220,7 +220,7 @@ There are no entries matching your query.
 volume show -is-inconsistent true
 ----
 +
-기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Volume_Showing_WAFL_Inconsistent["WAFL가 일치하지 않는 볼륨으로 표시됩니다"] 정합성이 보장되지 않는 볼륨을 처리하는 방법에 대해 설명합니다.
+를 참조하십시오link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Volume_Showing_WAFL_Inconsistent["NetApp 지식 기반: 볼륨에 WAFL 일관되지 않음 표시"^] 일관되지 않은 볼륨을 해결하는 방법에 대해.
 
 
 

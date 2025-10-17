@@ -11,7 +11,7 @@ summary: FlexVol 볼륨의 기본 최대 디렉토리 크기는 모델에 따라
 
 
 [role="lead"]
-"volume modify" 명령의 "-maxdir-size" 옵션을 사용하여 특정 FlexVol 볼륨의 기본 최대 디렉토리 크기를 늘릴 수 있지만 이렇게 하면 시스템 성능에 영향을 줄 수 있습니다. 기술 자료 문서를 참조하십시오 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/What_is_maxdirsize["maxdirsize란 무엇입니까?"^].
+다음을 사용하여 특정 FlexVol volume 의 기본 최대 디렉토리 크기를 늘릴 수 있습니다. `-maxdir-size` 옵션 `volume modify` 명령을 실행할 수 있지만, 그렇게 하면 시스템 성능에 영향을 미칠 수 있습니다. 를 참조하십시오link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/What_is_maxdirsize["NetApp 지식 기반: maxdirsize란 무엇입니까?"^] .
 
 FlexVol 볼륨의 모델 종속 최대 디렉토리 크기에 대한 자세한 내용은 를 참조하십시오 link:https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"^].
 

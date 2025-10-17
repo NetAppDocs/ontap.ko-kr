@@ -13,18 +13,18 @@ summary: '클러스터에 SnapMirror 계단식 배열 관계가 구성되어 있
 [role="lead"]
 ONTAP 9의 모든 버전에서 계단식 볼륨 관계에서 장기 보존(LTR) 스냅샷은 계단식 볼륨의 최종 SnapMirror 대상 볼륨에서만 지원됩니다.  캐스케이드의 중간 볼륨에서 LTR 스냅샷을 활성화하면 백업과 스냅샷이 누락됩니다.
 
-자세히 알아보세요 link:../data-protection/long-term-retention-snapshots-concept.html["장기 보존 스냅샷"^] .
+자세히 알아보세요link:../data-protection/long-term-retention-snapshots-concept.html["장기 보존 스냅샷"] .
 
-캐스케이드의 중간 볼륨에서 LTR 스냅샷이 활성화된 지원되지 않는 구성이 있는 경우 기술 지원 및 참조에 문의하세요.link:https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/Cascading_a_volume_with_Long-Term_Retention_(LTR)_snapshots_enabled_is_not_supported["기술 자료 문서 장기 보존(LTR) 스냅샷이 활성화된 볼륨을 계단식으로 배열하는 것은 지원되지 않습니다."^] 도움이 필요하면.
+캐스케이드의 중간 볼륨에서 LTR 스냅샷이 활성화된 지원되지 않는 구성이 있는 경우 기술 지원에 문의하여 다음을 참조하십시오.link:https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/Cascading_a_volume_with_Long-Term_Retention_(LTR)_snapshots_enabled_is_not_supported["NetApp 기술 자료: 장기 보존(LTR) 스냅샷이 활성화된 볼륨을 계단식으로 배열하는 것은 지원되지 않습니다."^] 도움이 필요하면.
 
 다음 ONTAP 버전에서는 최종 SnapMirror 대상 볼륨을 제외한 캐스케이드의 모든 볼륨에서 LTR 스냅샷을 활성화할 수 없습니다.
 
 * 9.15.1 이상
-* 9.14.1P2 및 P4-P14
-* 9.13.1P9-P17
-* 9.12.1 P12-P19
-* 9.11.1P15-P20
-* 9.10.1P18-P20
+* 9.14.1P2 및 P4부터 P14까지
+* 9.13.1P9부터 P17까지
+* 9.12.1 P12부터 P19까지
+* 9.11.1P15부터 P20까지
+* 9.10.1P18부터 P20까지
 * 9.9.1P20
 
 
@@ -36,7 +36,7 @@ ONTAP 9의 모든 버전에서 계단식 볼륨 관계에서 장기 보존(LTR) 
 * LTR 스냅샷은 SnapMirror 정책 규칙에 적용되는 스케줄에 의해 정의됩니다. 이 규칙은 소스 볼륨에서 스냅샷을 복제하지 않고 대상 볼륨에 직접 스냅샷을 생성합니다.
 +
 
-NOTE: 일정 및 SnapMirror 정책에 대한 자세한 내용은 기술 자료 문서 를 참조하십시오 https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/How_does_the_schedule_parameter_in_an_ONTAP_9_SnapMirror_policy_rule_work["ONTAP 9 SnapMirror 정책 규칙에서 "schedule" 매개 변수는 어떻게 작동합니까?"^].
+NOTE: 일정 및 SnapMirror 정책에 대한 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/How_does_the_schedule_parameter_in_an_ONTAP_9_SnapMirror_policy_rule_work["NetApp 지식 기반: ONTAP 9 SnapMirror 정책 규칙의 "일정" 매개변수는 어떻게 작동합니까?"^] .
 
 
 

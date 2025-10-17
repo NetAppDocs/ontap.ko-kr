@@ -11,7 +11,7 @@ summary: 볼트 또는 미러 볼트 정책 유형을 사용하여 SnapMirror �
 
 
 [role="lead"]
-"볼트" 또는 "미러-볼트" 정책 유형을 사용하는 SnapMirror 관계를 사용하면 SnapMirror 관계의 보조 볼륨에서 직접 스냅샷을 생성할 수 있습니다.  이러한 스냅샷은 백업으로 대상에 보관됩니다.  이러한 스냅샷은 종종 장기 보존을 위해 만들어지며 장기 보존(LTR) 스냅샷이라고 합니다.
+"볼트" 또는 "미러-볼트" 정책 유형을 사용하는 SnapMirror 관계를 사용하면 SnapMirror 관계의 보조 볼륨에서 직접 스냅샷을 생성할 수 있습니다. 이러한 스냅샷은 백업으로 대상에 보관됩니다. 이러한 스냅샷은 종종 장기 보존을 위해 만들어지며 장기 보존(LTR) 스냅샷이라고 합니다.
 
 SnapMirror 정책 규칙에서 스냅샷 생성 일정, 스냅샷 이름 접두사, SnapMirror 레이블 및 보존 횟수를 지정하여 장기 보존 스냅샷을 만듭니다.  이 스냅샷은 소스의 보존 규칙에 관계없이 SnapMirror 대상 볼륨에 보존됩니다.
 
@@ -23,4 +23,6 @@ SnapMirror 캐스케이드 관계에서는 장기 보존 스냅샷을 캐스케�
 
 == 관련 정보
 
-link:define-schedule-create-local-copy-destination-task.html["ONTAP SnapMirror 스케줄을 정의하여 대상에 로컬 복제본을 생성합니다"]
+* link:supported-deployment-config-concept.html#how-cascade-deployments-work["캐스케이드 배포가 작동하는 방식에 대해 알아보세요"]
+* link:define-schedule-create-local-copy-destination-task.html["ONTAP SnapMirror 스케줄을 정의하여 대상에 로컬 복제본을 생성합니다"]
+
