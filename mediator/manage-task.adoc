@@ -357,11 +357,11 @@ Enter pass phrase for intermediate.key:
 ----
 . PKI 기관에 인증서 서명 요청을 보내 `intermediate.csr` 서명을 받습니다.
 +
-PKI 권한은 요청을 확인하고 에 서명하여 `.csr`인증서를 `intermediate.crt`생성합니다. 또한 PKI 기관으로부터 인증서에 서명한 인증서를 얻어야 `root_intermediate.crt` `intermediate.crt` 합니다.
+PKI 기관은 요청을 검증하고 서명합니다. `.csr` , 인증서 생성 `intermediate.crt` .  또한 다음을 얻어야 합니다. `root_ca.crt` 서명한 인증서 `intermediate.crt` PKI 기관의 인증서.
 
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
+NOTE: SnapMirror Business Continuity(SM-BC) 클러스터의 경우 다음을 추가해야 합니다. `intermediate.crt` 그리고 `root_ca.crt` ONTAP 클러스터에 대한 인증서. 보다link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] .
 
 
 
@@ -474,7 +474,61 @@ NOTE: 이러한 파일은 PKI 기관에서 가져왔습니다. 다른 인증서 
 
 [role="tabbed-block"]
 ====
-.ONTAP 중재자 1.9 이상
+.ONTAP Mediator 1.10 이상
+--
+인증서 구성은 다음 위치에 있는 구성 파일에서 ONTAP Mediator에 제공됩니다.  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` . 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
+
+[listing]
+----
+cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.crt'
+key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key'
+ca_cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.crt'
+ca_key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.key'
+ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.srl'
+----
+* `cert_path` 및 `key_path` 서버 인증서 변수입니다.
+* `ca_cert_path`, `ca_key_path`, 및 `ca_serial_path` CA 인증서 변수입니다.
+
+
+.단계
+. 모든 `intermediate.*` 파일을 타사 인증서로 바꿉니다.
+. 및 인증서에서 인증서 체인을 `intermediate.crt` `ontap_mediator_server.crt` 생성합니다.
++
+`cat ontap_mediator_server.crt intermediate.crt > ontap_mediator_server_chain.crt`
+
+. 업데이트 `/opt/netapp/lib/ontap_mediator/uvicorn/config.json` 파일.
++
+값을 업데이트합니다 `ssl_keyfile` , `ssl_certfile` , 그리고 `ssl_ca_certs` :
+
++
+`ssl_keyfile`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
+
++
+`ssl_certfile`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server_chain.crt`
+
++
+`ssl_ca_certs`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
+
++
+** 그만큼 `ssl_keyfile` 값은 키 경로입니다 `ontap_mediator_server.crt` 파일입니다 `ontap_mediator_server.key` .
+** 그만큼 `ssl_certfile` 값은 경로입니다 `ontap_mediator_server_chain.crt` 파일.
+** 그만큼 `ssl_ca_certs` 값은 경로입니다 `root_ca.crt` 파일.
+
+
+. 새로 생성된 인증서의 다음 특성이 올바르게 설정되었는지 확인합니다.
++
+** Linux 그룹 소유자: `netapp:netapp`
+** Linux 권한: `600`
+
+
+. ONTAP Mediator를 다시 시작하세요:
++
+`systemctl restart ontap_mediator`
+
+
+
+--
+.ONTAP Mediator 1.9.1 및 1.9
 --
 인증서 구성은 다음 위치에 있는 구성 파일에서 ONTAP Mediator에 제공됩니다.  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.config.yaml` . 이 파일에는 다음과 같은 속성이 포함되어 있습니다.
 
@@ -507,12 +561,12 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/int
 `set-placeholder = mediator_key = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
 
 +
-`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_intermediate.crt`
+`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
 
 +
 **  `mediator_cert`값은 파일의 경로입니다. `ontap_mediator_server_chain.crt`
 **  `mediator_key value`는 파일의 키 경로입니다. `ontap_mediator_server.crt` `ontap_mediator_server.key`
-**  `ca_certificate`값은 파일의 경로입니다. `root_intermediate.crt`
+**  `ca_certificate`값은 파일의 경로입니다. `root_ca.crt`
 
 
 . 새로 생성된 인증서의 다음 특성이 올바르게 설정되었는지 확인합니다.
@@ -589,7 +643,7 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ca.
 
 [role="tabbed-block"]
 ====
-.ONTAP 중재자 1.9 이상
+.ONTAP Mediator 1.10 이상
 --
 이 아닌 다른 이름을 가진 타사 인증서를 사용하거나 타사 인증서를 다른 위치에 저장할 수 `intermediate.*` 있습니다.
 
@@ -626,7 +680,90 @@ ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/int
 
 ----
 +
-.. 인증서가 인증서를 서명하는 인증서를 제공하는 인증서 구조를 사용하는 경우 `root_intermediate.crt` `intermediate.crt` `ontap_mediator_server.crt` 및 인증서에서 인증서 체인을 만듭니다 `intermediate.crt` `ontap_mediator_server.crt` .
+.. 인증서 구조를 사용하는 경우 `root_ca.crt` 인증서는 다음을 제공합니다. `intermediate.crt` 서명하는 인증서 `ontap_mediator_server.crt` 인증서, 인증서 체인을 만듭니다. `intermediate.crt` 그리고 `ontap_mediator_server.crt` 인증서:
++
+
+NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받아야 `intermediate.crt` `ontap_mediator_server.crt` 합니다.
+
++
+`cat ontap_mediator_server.crt intermediate.crt > ontap_mediator_server_chain.crt`
+
+.. 업데이트 `/opt/netapp/lib/ontap_mediator/uvicorn/config.json` 파일.
++
+값을 업데이트합니다 `ssl_keyfile` , `ssl_certfile` , 그리고 `ssl_ca_certs` :
+
++
+`ssl_keyfile`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
+
++
+`ssl_certfile`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server_chain.crt`
+
++
+`ssl_ca_certs`: `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
+
++
+*** 그만큼 `ssl_keyfile` 값은 키 경로입니다 `ontap_mediator_server.crt` 파일입니다 `ontap_mediator_server.key` .
+*** 그만큼 `ssl_certfile` 값은 경로입니다 `ontap_mediator_server_chain.crt` 파일.
+*** 그만큼 `ssl_ca_certs` 값은 경로입니다 `root_ca.crt` 파일.
++
+
+NOTE: SnapMirror Business Continuity(SM-BC) 클러스터의 경우 다음을 추가해야 합니다. `intermediate.crt` 그리고 `root_ca.crt` ONTAP 클러스터에 대한 인증서. 보다link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] .
+
+
+
+.. 새로 생성된 인증서의 다음 특성이 올바르게 설정되었는지 확인합니다.
++
+*** Linux 그룹 소유자: `netapp:netapp`
+*** Linux 권한: `600`
+
+
+
+
+. 구성 파일에서 인증서가 업데이트되면 ONTAP Mediator를 다시 시작합니다.
++
+`systemctl restart ontap_mediator`
+
+
+
+--
+.ONTAP Mediator 1.9.1 및 1.9
+--
+이 아닌 다른 이름을 가진 타사 인증서를 사용하거나 타사 인증서를 다른 위치에 저장할 수 `intermediate.*` 있습니다.
+
+.단계
+.  `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator.user_config.yaml`파일의 기본 변수 값을 재정의하도록 파일을 `ontap_mediator.config.yaml` 구성합니다.
++
+PKI 권한으로부터 얻은 `intermediate.crt` 개인 키를 해당 위치에 저장하면 `intermediate.key` `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config` `ontap_mediator.user_config.yaml` 파일은 다음 예제와 같이 표시됩니다.
+
++
+
+NOTE: 인증서에 서명하는 데 사용한 경우 `intermediate.crt` `ontap_mediator_server.crt`  `intermediate.srl` 파일이 생성됩니다. 자세한 내용은 을 <<step_2_intermediate_info_v9,2단계: 타사 CA 인증서로 서명하여 서버 인증서를 생성합니다>> 참조하십시오.
+
++
+[listing]
+----
+[root@scs000216655 server_config]# cat  ontap_mediator.user_config.yaml
+
+# This config file can be used to override the default settings in ontap_mediator.config.yaml
+# To override a setting, copy the property key from ontap_mediator.config.yaml to this file and
+# set the property to the desired value. e.g.,
+#
+# The default value for 'default_mailboxes_per_target' is 4 in ontap_mediator.config.yaml
+#
+# To override this value with 6 mailboxes per target, add the following key/value pair
+# below this comment:
+#
+# 'default_mailboxes_per_target': 6
+#
+cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.crt'
+key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key'
+ca_cert_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.crt'
+ca_key_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.key'
+ca_serial_path: '/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/intermediate.srl'
+
+----
++
+.. 인증서 구조를 사용하는 경우 `root_ca.crt` 인증서는 다음을 제공합니다. `intermediate.crt` 서명하는 인증서 `ontap_mediator_server.crt` 인증서, 인증서 체인을 만듭니다. `intermediate.crt` 그리고 `ontap_mediator_server.crt` 인증서:
 +
 
 NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받아야 `intermediate.crt` `ontap_mediator_server.crt` 합니다.
@@ -645,15 +782,15 @@ NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받�
 `set-placeholder = mediator_key = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/ontap_mediator_server.key`
 
 +
-`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_intermediate.crt`
+`set-placeholder = ca_certificate = /opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/root_ca.crt`
 
 +
 ***  `mediator_cert`값은 파일의 경로입니다. `ontap_mediator_server_chain.crt`
 ***  `mediator_key`값은 파일의 키 경로입니다. `ontap_mediator_server.crt` `ontap_mediator_server.key`
-***  `ca_certificate`값은 파일의 경로입니다. `root_intermediate.crt`
+***  `ca_certificate`값은 파일의 경로입니다. `root_ca.crt`
 +
 
-NOTE: SM-BC(SnapMirror Business Continuity) 클러스터의 경우 및 인증서를 ONTAP 클러스터에 추가해야 `intermediate.crt` `root_intermediate.crt` 합니다. 을 link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"]참조하십시오.
+NOTE: SnapMirror Business Continuity(SM-BC) 클러스터의 경우 다음을 추가해야 합니다. `intermediate.crt` 그리고 `root_ca.crt` ONTAP 클러스터에 대한 인증서. 보다link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] .
 
 
 
