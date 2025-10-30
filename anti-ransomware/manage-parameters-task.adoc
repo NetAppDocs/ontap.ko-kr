@@ -148,11 +148,11 @@ ONTAP 9.14.1부터 ARP를 사용하면 두 ARP 이벤트에 대한 경고를 지
 .볼륨에 대한 알림을 설정합니다
 * 새 파일 확장자에 대한 알림을 설정하려면 다음을 수행합니다.
 +
-`security anti-ransomware volume event-log modify -vserver <svm_name> -is-enabled-on-new-file-extension-seen true`
+`security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-new-file-extension-seen true`
 
 * ARP 스냅샷 생성을 위한 경고를 설정하려면:
 +
-`security anti-ransomware volume event-log modify -vserver <svm_name> -is-enabled-on-snapshot-copy-creation true`
+`security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-snapshot-copy-creation true`
 
 * 를 사용하여 설정을 확인합니다 `anti-ransomware volume event-log show` 명령.
 

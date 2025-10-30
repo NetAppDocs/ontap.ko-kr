@@ -4,7 +4,7 @@ title: SVM에서 파일 모니터링 및 관리를 위해 FPolicy를 사용합�
 entries:
 - title: FPolicy 이해
   entries:
-  - title: 두 부분으로 구성된 ONTAP FPolicy 솔루션에 대해 알아보세요
+  - title: ONTAP FPolicy 솔루션에 대해 알아보세요
     url: "/nas-audit/two-parts-fpolicy-solution-concept.html"
   - title: ONTAP FPolicy 동기 및 비동기 알림
     url: "/nas-audit/synchronous-asynchronous-notifications-concept.html"
