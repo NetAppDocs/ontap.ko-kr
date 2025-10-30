@@ -30,3 +30,6 @@ SMB ADS(대체 데이터 스트림)는 지원되지만 Write-Back을 통해 가�
 
 .캐시를 생성한 후 write-around 모드와 write-back 모드 간에 전환할 수 있습니까?
 예. 당신은 할 일은 링크의 플래그를 토글하는 것입니다 `is-writeback-enabled`:../FlexCache-writeback/FlexCache -writeback-enable-task.html[`flexcache modify` 명령].
+
+.캐시와 원본 간의 클러스터 간 링크에 대해 알아야 할 대역폭 고려 사항이 있습니까?
+네. FlexCache 쓰기 저장은 캐시와 원본 간의 클러스터 간 링크에 크게 의존합니다. 대역폭이 낮거나 손실이 많은 네트워크는 성능에 상당한 부정적인 영향을 미칠 수 있습니다. 작업 부하에 따라 크게 달라지므로 특정 대역폭 요구 사항은 없습니다.

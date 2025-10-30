@@ -72,7 +72,7 @@ IMPORTANT: ONTAP 9.14.1부터 9.8까지 SnapMirror 액티브 동기화는 SnapMi
 다음 예에서는 두 개의 일관성 그룹을 생성합니다. `cg_src_ on the source with `vol1` 및 `vol2` 미러링된 타겟 정합성 보장 그룹, `cg_dst`.
 
 +
-대상 경로 VS1_DST:/CG/CG_DST-item-mapping-vol_src1:@vol_dst1, vol_src2:@vol_srst2:@vol_dst2 - policy AutomatedFailOver
+`destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOverDuplex`
 
 . 대상 클러스터에서 일관성 그룹을 초기화합니다.
 +
@@ -179,7 +179,7 @@ System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 �
 +
 [listing]
 ----
-destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOver
+destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOverDuplex
 ----
 . SnapMirror 관계 초기화:
 `snapmirror initialize -destination-path <destination-consistency-group>`
@@ -218,7 +218,7 @@ NOTE: ONTAP 9.16.1부터 `-proximal-vserver peer` 이 명령의 매개 변수를
 +
 [listing]
 ----
-destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOver
+destination::> snapmirror create -source-path vs1_src:/cg/cg_src -destination-path vs1_dst:/cg/cg_dst -cg-item-mappings vol_src1:@vol_dst1,vol_src2:@vol_dst2 -policy AutomatedFailOverDuplex
 ----
 . SnapMirror 관계 초기화:
 `snapmirror initialize -destination-path <destination-consistency-group>`
