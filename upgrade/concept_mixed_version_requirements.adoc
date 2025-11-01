@@ -225,16 +225,32 @@ NOTE: ONTAP 패치(P) 릴리스 버전은 혼합 버전 클러스터의 호환�
 클러스터에 새 노드를 추가할 계획이고 해당 노드에 현재 클러스터에서 실행 중인 버전보다 더 최신 버전의 ONTAP가 필요한 경우, 새 노드를 추가하기 전에 클러스터에서 기존 노드에서 지원되는 소프트웨어 업그레이드를 수행해야 합니다. 클러스터에 추가할 노드에 필요한 최소 버전의 ONTAP로 기존 노드를 모두 업그레이드하는 것이 좋습니다. 그러나 기존 노드 중 일부가 최신 버전의 ONTAP를 지원하지 않기 때문에 이 작업이 불가능할 경우 업그레이드 프로세스의 일부로 제한된 시간 동안 혼합 버전 상태를 입력해야 합니다.
 
 .단계
-. link:concept_upgrade_methods.html["업그레이드"] 새로운 컨트롤러에 필요한 최소 ONTAP 버전을 지원하지 않는 노드는 지원하는 최대 ONTAP 버전까지 지원합니다.
+. link:concept_upgrade_methods.html["업그레이드"] 새 컨트롤러에 필요한 최소 ONTAP 버전을 지원하지 않는 노드는 지원하는 가장 높은 ONTAP 버전으로 변경합니다.
 +
-예를 들어, FAS8080이 ONTAP 9.5를 실행하는 ONTAP FAS8010을 실행하는 새 C-Series 플랫폼을 추가하려는 경우 FAS8080을 ONTAP 9.8(지원되는 최대 ONTAP 버전)으로 업그레이드해야 합니다.
+예를 들어 ONTAP 9.5를 실행하는 FAS8080이 있고 ONTAP 9.12.1을 실행하는 새로운 C-시리즈 플랫폼을 추가하는 경우 FAS8080을 ONTAP 9.8(지원하는 가장 높은 ONTAP 버전)로 업그레이드해야 합니다.
 
 . link:../system-admin/add-nodes-cluster-concept.html["클러스터에 새 노드를 추가합니다"^].
 . link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-create-aggregate-move-volumes.html["데이터를 마이그레이션합니다"^] 클러스터에서 제거 중인 노드에서 새로 추가한 노드로 이동합니다.
 . link:../system-admin/remove-nodes-cluster-concept.html["클러스터에서 지원되지 않는 노드를 제거합니다"^]..
-. link:concept_upgrade_methods.html["업그레이드"] 클러스터의 나머지 노드는 새 노드와 동일한 버전으로 유지됩니다.
+. link:concept_upgrade_methods.html["업그레이드"] 클러스터를 새 노드에서 실행 중인 동일한 ONTAP 버전 및 패치 수준으로 변경하거나 link:https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU2["권장되는 최신 패치 릴리스"^] 새로운 노드에서 실행되는 ONTAP 버전에 대한 것입니다.
+. 모든 노드가 동일한 ONTAP 버전을 실행하고 있는지 확인하세요.
 +
-필요한 경우 전체 클러스터(새 노드 포함)를 로 업그레이드합니다 link:https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU2["권장되는 최신 패치 릴리스"] 새 노드에서 실행되는 ONTAP 버전의 번호입니다.
+.. 클러스터에서 실행 중인 ONTAP 버전을 표시합니다.
++
+[source, cli]
+----
+version
+----
+.. 클러스터의 각 노드에서 실행 중인 ONTAP 버전을 표시합니다.
++
+[source, cli]
+----
+version *
+----
+
+
++
+출력에 보고된 ONTAP 버전과 차이가 있는 경우 `version *` (클러스터) 및 `version` (개별 노드) 명령을 실행하여 모든 노드를 동일한 ONTAP 및 패치 버전으로 업데이트합니다. link:concept_upgrade_methods.html["클러스터 이미지 업데이트"].
 
 
 
