@@ -25,6 +25,7 @@ ONTAP 버전에 따라 되돌리기 프로세스를 시작하기 전에 추가 �
 * link:task_preparing_snapshot_copies_before_reverting.html["스냅샷을 준비합니다"]..
 * link:task_setting_autocommit_periods_for_snaplock_volumes_before_reverting.html["SnapLock 볼륨의 자동 커밋 기간을 시간 으로 설정합니다"]..
 * MetroCluster 구성이 있는 경우link:task_disable_asuo.html["자동 계획되지 않은 전환을 비활성화합니다"]
+* link:arp-warning-clear-revert.html["비정상적인 활동에 대한 자율적 랜섬웨어 방어 경고에 대응"]되돌리기 전에.
 
 
 

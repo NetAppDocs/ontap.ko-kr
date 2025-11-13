@@ -26,7 +26,7 @@ ARP는 추가 보호를 위해 예약된 스냅샷과 함께 정기적으로 잠
 
 == 라이센스 및 지원
 
-ARP 지원은 link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview["ONTAP One 라이센스"^]. ONTAP One 라이선스가 없는 경우 ONTAP 버전에 따라 ARP 사용을 위한 다른 라이선스를 사용할 수 있습니다
+ARP 지원이 포함되어 있습니다.link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview["ONTAP One 라이센스"^] . ONTAP One 라이선스가 없는 경우 ONTAP 버전에 따라 ARP 사용을 위한 다른 라이선스를 사용할 수 있습니다
 
 [cols="2*"]
 |===
@@ -95,9 +95,9 @@ ARP의 경우 학습 모드와 활성 모드 동작은 ONTAP 버전, 볼륨 유�
 
 === NAS 환경 및 모드 유형
 
-NAS 환경은 학습 모드와 활성 모드를 사용합니다 . <<arp-ai,ARP/AI>> ONTAP 9.16.1부터 NAS 환경에서 실행되는 경우 FlexVol 볼륨과 함께 ARP를 사용할 때 학습 기간이 없습니다.
-
 다음 표는 NAS 환경에서 ONTAP 9.10.1과 이후 버전 간의 차이점을 요약한 것입니다.
+
+이전 ARP 모델이 적용된 버전에서는 활성 모니터링을 시작하기 전에 학습 기간을 두는 것이 좋습니다.  지원하는 NAS 환경의 경우<<arp-ai,ARP/AI>> 학습 기간이 없으며, 적극적인 모니터링이 즉시 시작됩니다.
 
 [cols="1,5,1"]
 |===
@@ -105,24 +105,28 @@ NAS 환경은 학습 모드와 활성 모드를 사용합니다 . <<arp-ai,ARP/A
 
 
 | 학습  a| 
-ONTAP 9.15.1~9.10.1의 경우, ARP를 활성화하면 ARP가 자동으로 학습 모드로 설정됩니다. 학습 모드에서 ONTAP 시스템은 엔트로피, 파일 확장자 유형, 파일 IOPS 등의 분석 영역을 기반으로 경고 프로필을 개발합니다. ARP를 30일 동안 학습 모드로 유지하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 전환을 자동화하며, 이는 30일 전에 실행될 수 있습니다. ONTAP 9.13.1 이전 버전에서는 수동으로 전환할 수 있습니다.
+ONTAP 의 특정 버전과 특정 볼륨 유형의 경우 ARP를 활성화하면 ARP가 자동으로 학습 모드로 설정됩니다. 학습 모드에서 ONTAP 시스템은 엔트로피, 파일 확장자 유형, 파일 IOPS 등의 분석 영역을 기반으로 경고 프로필을 개발합니다.
+
+ARP를 30일 동안 학습 모드로 유지하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 전환을 자동화하며, 이는 30일 전에 실행될 수 있습니다. ONTAP 9.13.1 이전 버전에서는 수동으로 전환할 수 있습니다.
+
+FlexVol 볼륨의 ONTAP 9.16.1부터는 활성 모드만 존재하며, 이 버전 이상으로 업그레이드된 모든 FlexVol 볼륨의 경우 학습 모드가 자동으로 활성 모드로 전환됩니다.
+
+ONTAP 9.16.1~9.17.1의 경우 FlexGroup 볼륨은 아직 ARP/AI에서 지원되지 않으며 이전 ARP 모델을 계속 실행합니다.  이러한 이유로 FlexGroup 볼륨이 포함된 이러한 버전에는 여전히 학습 기간이 권장됩니다.
+
+ONTAP 9.18.1부터 FlexVol 및 FlexGroup 볼륨 모두에 대해 활성 모드만 존재합니다.  업그레이드된 볼륨은 자동으로 활성 모드로 전환됩니다.
 
 link:switch-learning-to-active-mode.html["학습 모드에서 활성 모드로 전환하는 방법에 대해 자세히 알아보세요."] .
 
 
 TIP: 이 명령은 `security anti-ransomware volume workload-behavior show` 볼륨에서 감지된 파일 확장명을 표시합니다. 이 명령을 학습 모드 초기에 실행하면 파일 유형이 정확하게 표시되는 경우 ONTAP가 다른 메트릭을 수집하고 있으므로 해당 데이터를 활성 모드로 전환하기 위한 기준으로 사용해서는 안 됩니다. 에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
  a| 
-* ONTAP 9.15.1~9.10.1을 사용한 FlexVol 볼륨
-* ONTAP 9.13.1 이상을 사용한 FlexGroup 볼륨
+* ONTAP 9.10.1~9.15.1을 사용한 FlexVol 볼륨
+* ONTAP 9.13.1에서 ONTAP 9.17.1로의 FlexGroup 볼륨
 
 
 
 
 | 활동적인  a| 
-워크로드 특성을 평가할 수 있을 만큼 충분한 시간 동안 ARP를 학습 모드로 실행한 후, 활성 모드로 전환하여 데이터 보호를 시작할 수 있습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 전환을 자동화하며, 이는 30일 전에 실행될 수 있습니다.
-
-ONTAP 9.15.1부터 9.10.1까지는 최적 학습 기간이 완료된 후 ARP가 활성 모드로 전환됩니다. ARP가 활성 모드로 전환된 후, ONTAP 위협이 감지될 경우 데이터를 보호하기 위해 ARP 스냅샷을 생성합니다.
-
 활성 모드에서 파일 확장자가 비정상으로 표시되면 알림을 평가해야 합니다. 알림에 따라 조치를 취하여 데이터를 보호하거나, 알림을 오탐지로 표시할 수 있습니다. 알림을 오탐지로 표시하면 알림 프로필이 업데이트됩니다. 예를 들어, 새로운 파일 확장자로 인해 알림이 발생하고 해당 알림을 오탐지로 표시하면 다음에 해당 파일 확장자가 발견될 때 알림을 받지 않습니다.
  a| 
 지원되는 모든 ONTAP 버전과 FlexVol 및 FlexGroup 볼륨
@@ -140,7 +144,7 @@ SAN 환경은 활성 감지 모드로 자동 전환되기 전에 _평가_ 기간
 
 
 | 평가  a| 
-기준 암호화 동작을 확인하기 위해 2~4주간의 평가 기간이 수행됩니다. 평가 기간이 완료되었는지 확인하려면 다음을 실행하세요.  `security anti-ransomware volume show` 명령 및 확인  `Block device detection status` .
+ARP/AI는 평가 기간 동안 SAN 볼륨에 대한 즉각적인 활성 보호 기능을 제공하는 반면, 기준 암호화 동작을 확인하기 위해 2~4주간의 평가 기간이 수행됩니다.  기준 임계값이 설정되는 동안에도 감지 및 경고가 발생할 수 있습니다.  평가 기간이 완료되었는지 확인하려면 다음을 실행하세요. `security anti-ransomware volume show` 명령 및 확인 `Block device detection status` .
 
 link:respond-san-entropy-eval-period.html["SAN 볼륨 및 엔트로피 평가 기간에 대해 자세히 알아보세요."] .
  a| 
@@ -283,10 +287,15 @@ ONTAP 9.13.1부터 ARP(자율 랜섬웨어 차단) 구성을 위해 인증된 �
 
 ONTAP 9.16.1부터 ARP는 NAS 환경에서 끊임없이 진화하는 랜섬웨어를 99% 정확도로 탐지하는 랜섬웨어 방지 분석용 머신 러닝 모델을 채택하여 사이버 복원력을 향상시킵니다. ARP의 머신 러닝 모델은 시뮬레이션된 랜섬웨어 공격 전후의 대용량 파일 데이터 세트를 기반으로 사전 학습됩니다. 이러한 리소스 집약적인 학습은 ONTAP 외부에서 오픈 소스 포렌식 연구 데이터 세트를 사용하여 모델을 학습시킵니다. 고객 데이터는 전체 모델링 파이프라인에 사용되지 않으며 개인정보 보호 문제는 발생하지 않습니다. 이 학습을 통해 생성된 사전 학습된 모델은 ONTAP 에 기본 제공됩니다. 이 모델은 ONTAP CLI 또는 ONTAP API를 통해 접근하거나 수정할 수 없습니다.
 
-.FlexVol 볼륨의 ARP/AI를 위해 액티브 보호로 즉시 전환됩니다
-ARP/AI 및 FlexVol 볼륨을 사용하면<<ARP 모드에 대해 알아보세요,학습 기간>>. ARP/AI는 설치 또는 9.16으로 업그레이드하는 즉시 활성화됩니다. 를 ONTAP 9.16.1로 업그레이드하면 기존 및 새 FlexVol 볼륨에 대해 ARP가 이미 활성화되어 있는 경우 해당 볼륨에 대해 ARP/AI가 자동으로 활성화됩니다.
+.ARP/AI에 대한 능동적 보호로의 즉각적인 전환
+ARP/AI를 사용하면<<ARP 모드에 대해 알아보세요,학습 기간>> .  ARP/AI는 다음 지원되는 볼륨 유형에 대해 설치 또는 업그레이드 직후에 활성화됩니다.
 
-link:enable-arp-ai-with-au.html["ARP/AI 활성화에 대해 자세히 알아보십시오"]
+* ONTAP 9.16.1 이상을 사용한 NAS FlexVol 볼륨
+* ONTAP 9.18.1 이상을 사용한 NAS FlexGroup 볼륨
+* ONTAP 9.17.1 이상을 사용하는 SAN 볼륨(즉시 활성화됨,link:respond-san-entropy-eval-period.html["평가 기간"] )
+
+
+ARP 기능이 이미 활성화된 기존 볼륨과 새 볼륨의 경우, 클러스터를 ARP/AI 지원 ONTAP 버전으로 업그레이드하면 ARP/AI 보호가 자동으로 활성화됩니다.
 
 .ARP/AI 자동 업데이트
 최신 보안을 유지하기 위해 ARP/AI는 정기적인 ONTAP 업그레이드 및 릴리스 주기 외에도 빈번하게 자동 업데이트를 제공합니다. link:../update/enable-automatic-updates-task.html["자동 업데이트를 활성화했습니다"] 보안 파일에 대한 자동 업데이트를 선택하면 ARP/AI에 대한 자동 보안 업데이트를 받을 수 있습니다. 또한 다음 을 선택할 수도 있습니다. link:arp-ai-automatic-updates.html#manually-update-arpai-with-the-latest-security-package["이 업데이트를 수동으로 만드세요"] 업데이트가 발생하는 시기를 제어합니다.

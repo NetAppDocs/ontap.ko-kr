@@ -42,15 +42,13 @@ entries:
   url: "/san-admin/igroups-concept.html"
 - title: igroup에 대해 이니시에이터 WWPN 및 iSCSI 노드 이름을 지정합니다
   url: "/san-admin/specify-initiator-wwpns-node-names-igroup-concept.html"
-- title: VMware 및 Microsoft 복사본 오프로드를 통한 스토리지 가상화
+- title: 가상화된 SAN 환경의 장점
+  url: "/san-admin/storage-virtualization-vmware-copy-offload-concept.html"
+- title: ESX 호스트의 VMware VAAI 성능을 향상시킵니다
+  url: "/san-admin/improve-vmware-vaai-performance-esx-hosts-concept.html"
+- title: SAN 복사 오프로드
   entries:
-  - title: 개요
-    url: "/san-admin/storage-virtualization-vmware-copy-offload-concept.html"
-  - title: 가상화된 환경에서 LUN 액세스가 작동하는 방식
-    url: "/san-admin/lun-access-virtualized-environment-concept.html"
-  - title: 클러스터 SAN 환경의 LIF 고려 사항
-    url: "/san-admin/lifs-cluster-concept.html"
-  - title: ESX 호스트의 VMware VAAI 성능을 향상시킵니다
-    url: "/san-admin/improve-vmware-vaai-performance-esx-hosts-concept.html"
   - title: Microsoft ODX(Offloaded Data Transfer)
     url: "/san-admin/microsoft-offloaded-data-transfer-odx-concept.html"
+  - title: NVMe 복사 오프로드
+    url: "/san-admin/nvme-copy-offload.html"

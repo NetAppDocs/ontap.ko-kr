@@ -24,7 +24,10 @@ SVM, LUN 및 파일을 정책 그룹에 할당할 수도 있습니다.
 +
 정책 그룹을 생성할 때 SVM을 지정합니다.
 
-* 정책 그룹에 볼륨을 할당한 경우에는 SVM이 포함된 볼륨이나 하위 LUN 또는 파일을 정책 그룹에 할당할 수 없습니다.
+* ONTAP 9.18.1부터 SVM에 포함된 볼륨과 같이 QoS 정책이 있는 다른 개체 내에 포함된 개체에 QoS 정책을 할당할 수 있습니다.  중첩된 QoS 정책을 사용하면 가장 제한적인 정책이 적용됩니다.
++
+ONTAP 9.18.1 이전 릴리스에서는 QoS 정책이 있는 다른 객체 내에 포함된 객체에 QoS 정책을 할당할 수 있지만, 해당 객체는 QoS에 의해 별도로 추적되며 상호 작용하지 않습니다.  예를 들어, SVM의 상한이 50 IOP이고 FlexVol volume 의 상한이 100 IOP인 경우 FlexVol volume 100 IOP의 상한으로 제한되지만 QoS에서는 SVM 작업 부하에 대해 계산되지 않습니다.
+
 
 
 스토리지 QoS를 사용하는 방법에 대한 자세한 내용은 를 참조하십시오 link:../system-admin/index.html["시스템 관리 참조"].
@@ -38,6 +41,7 @@ SVM, LUN 및 파일을 정책 그룹에 할당할 수도 있습니다.
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=qos+policy-group["qos 정책 그룹"^]
+* 링크: https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html [qos 정책 그룹 생성]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-create.html["볼륨 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-modify.html["볼륨 수정"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=qos+statistics["QoS 통계"^]

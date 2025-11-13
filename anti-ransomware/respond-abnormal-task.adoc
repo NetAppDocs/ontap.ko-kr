@@ -81,7 +81,7 @@ System Manager 또는 ONTAP CLI를 사용하여 비정상적인 활동에 대응
 
 +
 
-NOTE: ONTAP 9.13.1 부터, ARP 설정을 보호하기 위해 MAV를 사용하는 경우, 의심스러운 작업이 하나 이상의 추가 관리자의 승인을 얻으라는 메시지를 표시합니다. link:../multi-admin-verify/request-operation-task.html["모든 관리자로부터 승인을 받아야 합니다"] MAV 승인 그룹과 연관되거나 작업이 실패합니다.
+NOTE: ONTAP 9.13.1부터 MAV를 사용하여 ARP 설정을 보호하는 경우, 명백한 의심 작업에서는 한 명 이상의 추가 관리자의 승인을 얻도록 요청합니다. link:../multi-admin-verify/request-operation-task.html["모든 관리자로부터 승인을 받아야 합니다"] MAV 승인 그룹과 연관되지 않으면 작업이 실패합니다.
 
 
 
@@ -117,6 +117,7 @@ NOTE: 전체 볼륨을 복원한 경우 지워야 할 의심되는 파일 유형
 --
 .CLI를 참조하십시오
 --
+.공격을 확인하세요
 . 랜섬웨어 공격이 의심되는 경우 다음 사항을 통지하여 공격의 시간 및 심각도를 확인하십시오.
 +
 [source, cli]
@@ -172,6 +173,9 @@ Report "report_file_vs0_vol1_14-09-2021_01-21-08" available at path "vs0:vol1/"
 ----
 cat report_file_vs0_vol1_14-09-2021_01-21-08
 ----
+
+
+.조치를 취하다
 . 파일 확장자나 엔트로피 스파이크에 대한 평가에 따라 다음 작업 중 하나를 수행하세요.
 +
 ** 거짓 양성
@@ -231,6 +235,15 @@ security anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume
 +
 이것  `clear-suspect` 작업은 공격 보고서를 지웁니다. 전체 볼륨을 복원한 경우 지울 의심 파일 유형 알림은 없습니다. ONTAP 9.16.1 이상의 ARP/AI의 경우, 분류 작업으로 트리거된 단축 보존 기간이 지나면 ARP 스냅샷이 자동으로 삭제됩니다. ONTAP 9.15.1 이하 버전의 경우, 볼륨을 복원하거나 의심 이벤트를 삭제하면 ARP 스냅샷이 자동으로 삭제됩니다.
 
+. 9.18.1부터 다음 상태를 확인할 수 있습니다. `clear-suspect` 작업:
++
+[source, cli]
+----
+security anti-ransomware volume show -clear-suspect-status -volume <vol_name> -vserver <svm_name>
+----
+
+
+.MAV 옵션
 . MAV를 사용하고 있고 예상되는 경우 `clear-suspect` 작업에 추가 승인이 필요합니다. 각 MAV 그룹 승인자는 다음을 수행해야 합니다.
 +
 .. 요청 표시:

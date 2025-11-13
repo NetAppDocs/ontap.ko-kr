@@ -28,6 +28,38 @@ ONTAP의 최신 릴리즈로 업그레이드하려면 를 참조하십시오 xre
 
 
 
+== ONTAP 9.18.1 주요 내용
+
+ONTAP 9.18.1은 데이터 인프라 현대화를 지원하기 위해 보안, 확장성, 스토리지 관리 분야에서 새롭고 향상된 기능을 제공합니다.  이러한 개선 사항은 확장하고, 더 효율적으로 운영하고, 미래를 위해 데이터를 보호하는 데 도움이 됩니다.  새로운 기능 및 향상된 기능의 전체 목록을 보려면 다음을 참조하세요.xref:whats-new-9181.adoc[ONTAP 9.18.1의 새로운 기능] .
+
+* xref:../networking/configure-backend-encryption.html[백엔드 클러스터 HA 암호화]
++
+백엔드 클러스터 네트워크를 암호화하기 위해 mTLS를 사용할 수 있는 기능입니다.
+
+* xref:../networking/configure_network_security_using_federal_information_processing_standards_fips.html[전송 중인 데이터에 대한 PQC 지원]
++
+전송 중인 데이터에 포스트 양자 알고리즘을 사용할 수 있는 능력.
+
+* xref:../networking/ipsec-prepare.html[HW 오프로드를 통한 IPv6 IPSec 지원]
++
+IPv6 주소로 하드웨어 오프로드를 통한 IPSec 지원.
+
+* xref:../anti-ransomware/use-cases-restrictions-concept.html#supported-configurations[ARP/AI 지원 FlexGroup 볼륨]
++
+NetApp FlexGroup 볼륨은 ARP/AI를 지원하여 고급 머신 러닝 기반 랜섬웨어 탐지 및 보호 기능을 제공합니다.
+
+* xref:../san-admin/nvme-copy-offload.html[NVMe를 위한 복사 오프로드]
++
+복사 작업을 스토리지에 직접 오프로드하여 대용량 데이터 전송을 가속화하고, 호스트 CPU와 네트워크 부하를 줄입니다.
+
+* xref:../s3-snapshots/list-restore-s3-snapshot.html[저장소 기반 S3 버킷 스냅샷 복원]
++
+S3 버킷에서 손상된 객체를 복원하거나 기존 버킷 위에 전체 버킷을 복원하는 기능을 제공합니다.
+
+
+
+
+
 == ONTAP 9.17.1 주요 내용
 
 ONTAP 9.17.1은 SAN을 위한 AI 기반 자율 랜섬웨어 보호에 혁신을 제공하고 SnapMirror 액티브 동기화 및 일관성 그룹 계층 관리를 통해 NVMe 프런트엔드 호스트 지원을 추가합니다.  이러한 개선 사항을 통해 NetApp은 데이터 보안과 사이버 복원력 분야에서 리더십을 강화하고 ONTAP 성능, 확장성, 효율성 및 비즈니스 연속성을 개선합니다. 새로운 기능 및 향상된 기능의 전체 목록은 다음을 참조하세요. xref:whats-new-9171.adoc[ONTAP 9.17.1의 새로운 기능] .

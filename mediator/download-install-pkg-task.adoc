@@ -11,48 +11,48 @@ summary: 설치 프로세스의 일부로 중재 설치 패키지를 다운로�
 
 
 [role="lead"]
-설치 과정의 일부로 ONTAP Mediator 설치 패키지를 다운로드하세요.
+ONTAP Mediator 설치 패키지를 다운로드하여 설치하세요.
 
 .단계
 . ONTAP Mediator 다운로드 페이지에서 ONTAP Mediator 설치 패키지를 다운로드하세요.
 +
 https://mysupport.netapp.com/site/products/all/details/ontap-mediator/downloads-tab["ONTAP 중재자 다운로드 페이지"^]
 
-. 중재자 설치 패키지가 현재 작업 디렉토리에 있는지 확인합니다.
+. Mediator 설치 패키지를 현재 작업 디렉토리에 넣었는지 확인하세요.
 +
 [listing]
 ----
-[root@sdot-r730-0003a-d6 ~]# ls ontap-mediator-1.10.tgz
+[root@sdot-r730-0003a-d6 ~]# ls ontap-mediator-1.11.0.tgz
 ----
 +
 [listing]
 ----
-ontap-mediator-1.10.tgz
+ontap-mediator-1.11.0.tgz
 ----
 +
 
 NOTE: ONTAP 중재자 버전 1.4 및 이전 버전의 경우 설치 관리자의 이름이 지정됩니다 `ontap-mediator`.
 
 +
-인터넷에 액세스할 수 없는 위치에 있는 경우 설치 프로그램이 필요한 패키지에 액세스할 수 있는지 확인해야 합니다.
+시스템에 인터넷 접속이 불가능한 경우, 설치 프로그램이 필요한 패키지에 접근할 수 있는지 확인하세요.
 
-. 필요한 경우, 중재 설치 패키지를 다운로드 디렉토리에서 Linux 중재자 호스트의 설치 디렉토리로 이동합니다.
+. 필요한 경우 Mediator 설치 패키지를 설치 디렉터리로 이동합니다.
 . 설치 프로그램 패키지의 압축을 풉니다.
 +
-`tar xvfz ontap-mediator-1.10.tgz`
+`tar xvfz ontap-mediator-1.11.0.tgz`
 
 +
 [listing]
 ----
-ontap-mediator-1.10/
-ontap-mediator-1.10/csc-prod-ONTAP-Mediator.pem
-ontap-mediator-1.10/csc-prod-chain-ONTAP-Mediator.pem
-ontap-mediator-1.10/tsa-prod-ONTAP-Mediator.pem
-ontap-mediator-1.10/tsa-prod-chain-ONTAP-Mediator.pem
-ontap-mediator-1.10/ONTAP-Mediator-production.pub
-ontap-mediator-1.10/ontap-mediator-1.10
-ontap-mediator-1.10/ontap-mediator-1.10.sig.tsr
-ontap-mediator-1.10/ontap-mediator-1.10.tsr
-ontap-mediator-1.10/ontap-mediator-1.10.sig
+ontap-mediator-1.11.0/
+ontap-mediator-1.11.0/csc-prod-ONTAP-Mediator.pem
+ontap-mediator-1.11.0/csc-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.11.0/tsa-prod-ONTAP-Mediator.pem
+ontap-mediator-1.11.0/tsa-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.11.0/ONTAP-Mediator-production.pub
+ontap-mediator-1.11.0/ontap-mediator-1.11.0
+ontap-mediator-1.11.0/ontap-mediator-1.11.0.sig.tsr
+ontap-mediator-1.11.0/ontap-mediator-1.11.0.tsr
+ontap-mediator-1.11.0/ontap-mediator-1.11.0.sig
 ----
 

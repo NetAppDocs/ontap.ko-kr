@@ -24,7 +24,7 @@ ONTAP 9.11.1부터 자율적 랜섬웨어 방어를 활성화하여 특정 볼�
 
 자율 랜섬웨어 보호(ARP)가 학습 또는 평가 모드에 있을 때 볼륨 동작에 대한 기준값을 개발합니다. 여기에는 엔트로피, 파일 확장자, 그리고 ONTAP 9.11.1부터는 IOPS가 포함됩니다. 이러한 기준값은 랜섬웨어 위협을 평가하는 데 사용됩니다. link:index.html#what-arp-detects["ARP가 감지하는 것"] .
 
-특정 볼륨 및 워크로드에는 서로 다른 감지 매개 변수가 필요합니다. 예를 들어, ARP 지원 볼륨은 다양한 유형의 파일 확장자를 호스팅할 수 있습니다. 이 경우 이전에 보지 못한 파일 확장자의 임계값 수를 기본값인 20보다 큰 수로 수정하거나 이전에 보지 못한 파일 확장자를 기준으로 경고를 비활성화할 수 있습니다. ONTAP 9.11.1부터 공격 감지 매개 변수를 수정하여 특정 워크로드에 더 잘 맞출 수 있습니다.
+특정 볼륨과 작업 부하에는 다른 감지 매개변수가 필요합니다.  예를 들어, ARP가 활성화된 볼륨은 다양한 유형의 파일 확장자를 호스팅할 수 있으며, 이 경우 이전에 본 적이 없는 파일 확장자에 대한 임계값 수를 기본값인 20보다 큰 수로 수정하거나 이전에 본 적이 없는 파일 확장자에 따른 경고를 비활성화할 수 있습니다.  ONTAP 9.11.1부터 공격 탐지 매개변수를 수정하여 특정 작업 부하에 더 잘 맞출 수 있습니다.
 
 ONTAP 9.14.1부터 ARP가 새 파일 확장자를 관찰하고 ARP가 스냅샷을 생성할 때 경고를 구성할 수 있습니다. 자세한 내용은 을 <<modify-alerts>>참조하십시오.
 
@@ -72,8 +72,8 @@ security anti-ransomware volume attack-detection-parameters show -vserver vs1 -v
                  File Create Rate Surge Notify Percentage : 100
                  File Rename Rate Surge Notify Percentage : 100
                  File Delete Rate Surge Notify Percentage : 100
- Never Seen before File Extensions Count Notify Threshold : 20
-       Never Seen before File Extensions Duration in Hour : 24
+ Never Seen before File Extensions Count Notify Threshold : 5
+       Never Seen before File Extensions Duration in Hour : 48
 ....
 . 표시된 모든 필드는 부울 또는 정수 값으로 수정할 수 있습니다. 필드를 수정하려면 다음을 사용하세요.  `security anti-ransomware volume attack-detection-parameters modify` 명령.
 +
@@ -90,8 +90,10 @@ ARP는 활성 상태에서도 감지 매개변수에 대한 기준값을 계속 
 .일회성 급지를 보고합니다
 . 알려진 상황에서 일회성 서지가 발생하고 향후 상황에서 ARP가 비슷한 서지를 보고하려면 워크로드 동작에서 서지를 지웁니다.
 +
-`security anti-ransomware volume workload-behavior clear-surge -vserver <svm_name> -volume <volume_name>`
-
+[source, cli]
+----
+security anti-ransomware volume workload-behavior clear-surge -vserver <svm_name> -volume <volume_name>
+----
 +
 에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior clear-surge` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-clear-surge.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
@@ -100,8 +102,10 @@ ARP는 활성 상태에서도 감지 매개변수에 대한 기준값을 계속 
 .기준선 서지 수정
 . 보고된 서지가 정상적인 응용 프로그램 동작으로 간주되어야 하는 경우 서지를 보고하여 기준 서지 값을 수정합니다.
 +
-`security anti-ransomware volume workload-behavior update-baseline-from-surge -vserver <svm_name> -volume <volume_name>`
-
+[source, cli]
+----
+security anti-ransomware volume workload-behavior update-baseline-from-surge -vserver <svm_name> -volume <volume_name>
+----
 +
 자세히 알아보세요  `security anti-ransomware volume workload-behavior update-baseline-from-surge` 에서 link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-update-baseline-from-surge.html["ONTAP 명령 참조입니다"^] .
 
@@ -148,24 +152,32 @@ ONTAP 9.14.1부터 ARP를 사용하면 두 ARP 이벤트에 대한 경고를 지
 .볼륨에 대한 알림을 설정합니다
 * 새 파일 확장자에 대한 알림을 설정하려면 다음을 수행합니다.
 +
-`security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-new-file-extension-seen true`
-
+[source, cli]
+----
+security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-new-file-extension-seen true`
+----
 * ARP 스냅샷 생성을 위한 경고를 설정하려면:
 +
-`security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-snapshot-copy-creation true`
-
+[source, cli]
+----
+security anti-ransomware volume event-log modify -vserver <svm_name> -volume <volume_name> -is-enabled-on-snapshot-copy-creation true
+----
 * 를 사용하여 설정을 확인합니다 `anti-ransomware volume event-log show` 명령.
 
 
 .SVM에 대한 알림 설정
 * 새 파일 확장자에 대한 알림을 설정하려면 다음을 수행합니다.
 +
-`security anti-ransomware vserver event-log modify -vserver <svm_name> -is-enabled-on-new-file-extension-seen true`
-
+[source, cli]
+----
+security anti-ransomware vserver event-log modify -vserver <svm_name> -is-enabled-on-new-file-extension-seen true
+----
 * ARP 스냅샷 생성을 위한 경고를 설정하려면:
 +
-`security anti-ransomware vserver event-log modify -vserver <svm_name> -is-enabled-on-snapshot-copy-creation true`
-
+[source, cli]
+----
+security anti-ransomware vserver event-log modify -vserver <svm_name> -is-enabled-on-snapshot-copy-creation true
+----
 * 를 사용하여 설정을 확인합니다 `security anti-ransomware vserver event-log show` 명령.
 
 

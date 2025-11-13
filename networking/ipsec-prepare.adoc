@@ -39,6 +39,9 @@ ONTAP를 통해 IPsec은 ONTAP와 NFS, SMB 및 iSCSI 프로토콜을 포함한 �
 
 IPsec은 ONTAP 9.8에서 처음 도입되었습니다. 이후 ONTAP 릴리스에서는 아래에 설명된 대로 구현 방식이 지속적으로 발전해 왔습니다.
 
+.ONTAP 9.18.1
+IPsec 하드웨어 오프로드에 대한 지원이 IPv6 트래픽으로 확장되었습니다.
+
 .ONTAP 9.17.1
 IPsec 하드웨어 오프로드에 대한 지원이 확장되었습니다. link:../networking/combine_physical_ports_to_create_interface_groups.html["링크 집계 그룹"] . link:../networking/ipsec-configure.html#define-the-security-policy-database-spd["포스트퀀텀 사전 공유 키(PPK)"] IPsec 사전 공유 키(PSK) 인증이 지원됩니다.
 
@@ -128,7 +131,7 @@ security ipsec config modify -replay-window 0
 IPsec 하드웨어 오프로드 기능을 사용하기 전에 고려해야 할 몇 가지 제한 사항이 있습니다.
 
 .IPv6를 참조하십시오
-IPv6는 IPsec 하드웨어 오프로드 기능을 지원하지 않습니다. IPv6는 IPsec 소프트웨어 구현에서만 지원됩니다.
+ONTAP 9.18.1부터 IPsec 하드웨어 오프로드 기능에 IPv6가 지원됩니다.  ONTAP 9.18.1 이전에는 IPsec 하드웨어 오프로드가 IPv6를 지원하지 않았습니다.
 
 .확장 순서 번호
 IPsec 확장 시퀀스 번호는 하드웨어 오프로드 기능에서 지원되지 않습니다. 일반적인 32비트 시퀀스 번호만 사용됩니다.

@@ -64,33 +64,33 @@ ONTAP 9.10.1부터 NAS, NFS 및 SMB FlexVol 볼륨에 ARP를 사용할 수 있�
 다른 구성 및 볼륨 유형에 대한 지원은 다음 ONTAP 버전에서 제공됩니다.
 
 |===
-|  | ONTAP 9.17.1 | ONTAP 9.16.1 | ONTAP 9.15.1 | ONTAP 9.14.1 | ONTAP 9.13.1 | ONTAP 9.12.1 | ONTAP 9.11.1 | ONTAP 9.10.1 
+|  | ONTAP 9.18.1 | ONTAP 9.17.1 | ONTAP 9.16.1 | ONTAP 9.15.1 | ONTAP 9.14.1 | ONTAP 9.13.1 | ONTAP 9.12.1 | ONTAP 9.11.1 | ONTAP 9.10.1 
 
 
-| SnapMirror 비동기로 보호되는 볼륨 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+| SnapMirror 비동기로 보호되는 볼륨 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
-| SnapMirror 비동기(SVM 재해 복구)를 통해 SVM 보호 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+| SnapMirror 비동기(SVM 재해 복구)를 통해 SVM 보호 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
-| SVM 데이터 이동성 (`vserver migrate`) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+| SVM 데이터 이동성 (`vserver migrate`) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
 
 
-| FlexGroup 볼륨^1^ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  
+| FlexGroup 볼륨^1^ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  
 
 
-| 다중 관리 검증 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  
+| 다중 관리 검증 | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  |  
 
 
-| ARP/AI 및 자동 업데이트 | ✓ | ✓ |  |  |  |  |  |  
+| ARP/AI 및 자동 업데이트 | ✓ | ✓ |  |  |  |  |  |  |  
 |===
-^1^ ARP/AI는 FlexGroup 볼륨을 지원하지 않습니다. ONTAP 9.16.1로 업그레이드한 후에도 ARP가 활성화된 FlexGroup 볼륨은 ARP/AI 이전과 동일한 ARP 모델로 계속 작동합니다.
+^1^ ONTAP 9.16.1 및 9.17.1은 FlexGroup 볼륨에 대한 ARP/AI 지원을 제공하지 않습니다.  이러한 버전으로 업그레이드한 후에도 ARP에 대해 활성화된 FlexGroup 볼륨은 ARP/AI 이전에 사용된 것과 동일한 ARP 모델로 계속 작동합니다.  ONTAP 9.18.1부터 FlexGroup 볼륨은 ARP/AI 모델을 사용합니다.
 
 
 
 ==== SnapMirror 및 ARP 상호 운용성
 
-ONTAP 9.12.1부터 SnapMirror 비동기 대상 볼륨에서 ARP가 지원됩니다. SnapMirror 동기 또는 SnapMirror 활성 동기화에서는 ARP가 지원되지 *않습니다*.
+ONTAP 9.12.1부터 SnapMirror 비동기 대상 볼륨에서 ARP가 지원됩니다. SnapMirror 동기식 또는 SnapMirror 활성 동기화에서는 ARP가 지원되지 않습니다.
 
 SnapMirror 소스 볼륨이 ARP를 지원하는 경우 SnapMirror 대상 볼륨은 자동으로 ARP 구성 상태(예:  `dry-run` 또는  `enabled` ), ARP 교육 데이터 및 ARP에서 생성한 소스 볼륨의 스냅샷. 명시적인 활성화는 필요하지 않습니다.
 
@@ -115,6 +115,9 @@ ARP는 암호화된 상태로 볼륨에 새로운 확장자가 들어오거나 �
 SAN의 경우 ARP는 볼륨 수준에서 엔트로피 통계를 분석하고 엔트로피 이상이 발견되면 감지를 트리거합니다.
 
 
+NOTE: VM 내에서 발생하는 공격을 감지하는 기능은 FlexVol 볼륨에서만 사용할 수 있으며 ONTAP 9.18.1 이상에서 FlexGroup 볼륨에 VM 데이터 저장소가 구성된 경우에는 사용할 수 없습니다.
+
+
 
 === 지원되지 않는 구성입니다
 
@@ -122,7 +125,11 @@ ONTAP S3 환경에서는 ARP가 지원되지 않습니다.
 
 ARP는 다음 볼륨 구성을 지원하지 않습니다.
 
-* FlexGroup 볼륨( ONTAP 9.10.1~9.12.1). ONTAP 9.13.1부터 FlexGroup 볼륨이 지원되지만 ARP/AI 이전에 사용된 ARP 모델로 제한됩니다.
+* FlexGroup 볼륨( ONTAP 9.10.1~9.12.1).
++
+
+NOTE: ONTAP 9.13.1부터 ONTAP 9.17.1까지 FlexGroup 볼륨이 지원되지만 ARP/AI 이전에 사용된 ARP 모델로 제한됩니다.  FlexGroup 볼륨은 ONTAP 9.18.1부터 ARP/AI에서 지원됩니다.
+
 * FlexCache 볼륨(ARP는 오리진 FlexVol 볼륨에서 지원되지만 캐시 볼륨에서는 지원되지 않음)
 * 오프라인 볼륨
 * SnapLock 볼륨

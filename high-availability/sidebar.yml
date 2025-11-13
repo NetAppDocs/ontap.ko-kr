@@ -24,3 +24,5 @@ entries:
   url: "/high-availability/ha_commands_for_enabling_and_disabling_storage_failover.html"
 - title: 인수를 시작하지 않고 ONTAP 노드를 중지하거나 재부팅합니다.
   url: "/high-availability/halt-reboot-node-wo-takeover-task.html"
+- title: HA 트래픽에 대한 암호화 구성
+  url: "/high-availability/ha-pair-encryption.html"

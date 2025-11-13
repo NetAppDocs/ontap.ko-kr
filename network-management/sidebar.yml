@@ -171,6 +171,8 @@ entries:
       url: "/networking/ipsec-prepare.html"
     - title: IPsec을 구성합니다
       url: "/networking/ipsec-configure.html"
+  - title: 백엔드 클러스터 네트워크 암호화 구성
+    url: "/networking/configure-backend-encryption.html"
   - title: LIF의 방화벽 정책을 구성합니다
     url: "/networking/configure_firewall_policies_for_lifs.html"
   - title: 방화벽 서비스 및 정책을 관리하는 명령입니다

@@ -1,0 +1,129 @@
+---
+permalink: release-notes/whats-new-9181.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, 9.18.1' 
+summary: ONTAP 9.18.1에서 사용할 수 있는 새로운 기능에 대해 알아보세요. 
+---
+= ONTAP 9.18.1의 새로운 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1에서 사용할 수 있는 새로운 기능에 대해 알아보세요.
+
+최신 ONTAP 9 릴리스에서 알려진 문제, 제한 사항 및 업그레이드 주의 사항에 대한 자세한 내용은 를 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"^]. 릴리스 정보에 액세스하려면 NetApp 계정으로 로그인하거나 계정을 만들어야 합니다.
+
+* 새로운 기능 및 향상된 기능에 대해 알아봅니다 https://docs.netapp.com/us-en/ontap-metrocluster/releasenotes/mcc-new-features.html["ONTAP MetroCluster 기능"^].
+* 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9171.html["NetApp AFX 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
+* 에 대해 알아보세요  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9171.html["NetApp ASA r2 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
+* 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-systems/whats-new.html["AFF, ASA 및 FAS 시스템과 지원되는 스위치에 대한 새롭고 향상된 지원"^] .
+* 의 업데이트에 대해 알아봅니다 https://docs.netapp.com/us-en/ontap-automation/whats_new.html["ONTAP REST API를 참조하십시오"^].
+
+
+최신 버전의 ONTAP로 업그레이드하려면 를 참조하십시오link:../upgrade/create-upgrade-plan.html["ONTAP 업그레이드를 준비합니다"].
+
+
+
+== 네트워킹
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../networking/ipsec-prepare.html[IPsec 하드웨어 오프로드 IPv6 지원]
+ a| 
+IPsec 하드웨어 오프로드 지원이 IPv6로 확장되었습니다.
+
+
+
+ a| 
+xref:../networking/configure_network_security_using_federal_information_processing_standards_fips.html[OpenSSL PQC 알고리즘]
+ a| 
+ONTAP SSL을 위한 포스트퀀텀 컴퓨팅 암호화 알고리즘을 지원합니다. 이러한 알고리즘은 미래의 양자 컴퓨팅 공격에 대한 추가적인 보호 기능을 제공하며, SSL FIPS 모드가 비활성화된 경우 사용할 수 있습니다.
+
+
+
+ a| 
+xref:../networking/configure-backend-encryption.html[ONTAP 백엔드 클러스터 네트워크 암호화]
+ a| 
+ONTAP 백엔드 클러스터 네트워크에서 전송 중인 데이터에 대해 TLS 암호화를 활성화할 수 있습니다.
+
+
+
+ a| 
+xref:../high-availability/ha-pair-encryption.html[ONTAP HA 트래픽 네트워크 암호화]
+ a| 
+고가용성(HA) 쌍의 노드 간 트래픽에 대한 암호화를 활성화할 수 있습니다.
+
+|===
+
+
+== 산
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../san-admin/nvme-copy-offload.html[NVMe 복사 오프로드]
+ a| 
+NVMe 복사 오프로드를 사용하면 NVMe 호스트가 CPU에서 ONTAP 스토리지 컨트롤러의 CPU로 복사 작업을 오프로드할 수 있습니다. 호스트는 애플리케이션 워크로드를 위해 CPU 리소스를 예약하는 동시에 한 NVMe 네임스페이스에서 다른 네임스페이스로 데이터를 복사할 수 있습니다.
+
+|===
+
+
+== S3 오브젝트 스토리지
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../s3-snapshots/list-restore-s3-snapshot.html[특정 시점 S3 스냅샷 복원 지원]
+ a| 
+S3 버킷에서 손상된 객체를 복원하거나 기존 버킷 위에 전체 버킷을 복원하는 기능을 제공합니다.
+
+|===
+
+
+== 보안
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../anti-ransomware/use-cases-restrictions-concept.html#supported-configurations[ARP/AI에 대한 FlexGroup 볼륨 지원]
+ a| 
+NetApp FlexGroup 볼륨은 ARP/AI를 지원하여 고급 머신 러닝 기반 랜섬웨어 탐지 및 보호 기능을 제공합니다.  ONTAP 9.17.1 및 이전 버전에서는 FlexGroup 볼륨에 대해 1세대 ARP만 사용할 수 있었습니다.  ONTAP 9.18.1부터 FlexGroup 볼륨은 온프레미스 ONTAP 플랫폼(AFF 및 FAS)과 가상 ONTAP 배포( Cloud Volumes ONTAP 및 ONTAP Select 포함) 모두에서 FlexVol 볼륨과 동등성을 갖습니다.  결과적으로 ARP/AI는 FlexVol 및 FlexGroup 볼륨 모두에 대한 기본 ARP 기술이 됩니다.
+
+|===
+
+
+== 스토리지 리소스 관리 기능 향상
+
+[cols="30%,70%"]
+|===
+| 업데이트 | 설명 
+
+
+ a| 
+xref:../performance-admin/adaptive-qos-policy-groups-task.html[SVM 및 볼륨에서 2단계 중첩 QoS 정책 그룹 지원]
+ a| 
+SVM과 SVM 아래의 볼륨에 동시에 QoS 정책을 할당할 수 있습니다.
+
+
+
+ a| 
+xref:../flexcache/create-volume-task.html[SVM-DR 관계에서 원본 볼륨의 SVM FlexCache 볼륨을 생성합니다.]
+ a| 
+SVM-DR 관계의 일부인 원본 볼륨의 SVM FlexCache 볼륨을 생성할 수 있습니다.
+
+|===

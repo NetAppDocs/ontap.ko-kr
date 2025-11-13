@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: anti-ransomware/arp-ai-automatic-updates.html 
-keywords: ransomware, arp, manual, downlaod, nss, automatic, ai, update, upgrade, autonomous ransomware protection, security, security files, security package, security updates, security bundle 
+keywords: ransomware, arp, manual, downlood, nss, automatic, ai, update, upgrade, autonomous ransomware protection, security, security files, security package, security updates, security bundle 
 summary: 보안 번들을 자동 또는 수동으로 업데이트하여 랜섬웨어 위협으로부터 최신 ARP/AI 보호를 유지하십시오. 
 ---
 = AI(ARP/AI)로 ONTAP 자율적 랜섬웨어 방어 업데이트
@@ -112,6 +112,6 @@ IMPORTANT: 파일 이름이 로 `ontap_security_file_arpai_` 시작하고 파일
 
 
 .관련 정보
-* link:enable-arp-ai-with-au.html["ARP/AI를 활성화합니다"]
+* link:index.html#arp-ai["ARP/AI에 대해 알아보세요"]
 * https://mysupport.netapp.com/site/user/email-subscription["소프트웨어 업데이트를 위한 이메일 구독"^]
 

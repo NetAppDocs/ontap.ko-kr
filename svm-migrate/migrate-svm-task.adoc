@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm, migrate, defaults, cutover, cleanup 
 summary: SVM 마이그레이션이 완료된 후 클라이언트가 타겟 클러스터로 자동으로 컷오버되고 불필요한 SVM이 소스 클러스터에서 제거됩니다. 자동 컷오버 및 자동 소스 클린업이 기본적으로 설정됩니다. 필요한 경우, 컷오버를 시작하기 전에 마이그레이션을 일시 중지하고 자동 소스 SVM 정리를 사용하지 않도록 설정할 수 있습니다. 
 ---
-= SVM 마이그레이션
+= ONTAP SVM 마이그레이션
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,9 @@ summary: SVM 마이그레이션이 완료된 후 클라이언트가 타겟 클�
 
 [role="lead"]
 SVM 마이그레이션이 완료된 후 클라이언트가 타겟 클러스터로 자동으로 컷오버되고 불필요한 SVM이 소스 클러스터에서 제거됩니다. 자동 컷오버 및 자동 소스 클린업이 기본적으로 설정됩니다. 필요한 경우, 컷오버를 시작하기 전에 마이그레이션을 일시 중지하고 자동 소스 SVM 정리를 사용하지 않도록 설정할 수 있습니다.
+
+.이 작업에 대해
+이 절차는 FAS, AFF, ASA 시스템에 적용됩니다.  ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 따르세요.link:https://docs.netapp.com/us-en/asa-r2/manage-data/migrate-svm.html["수행할 수 있습니다"^] SVM을 마이그레이션하려면. ASA r2 시스템은 SAN 전용 고객에게 최적화된 간소화된 ONTAP 환경을 제공합니다.
 
 * 자동 클라이언트 컷오버가 정상적으로 수행되는 경우 '-auto-cutover false' 옵션을 사용하여 마이그레이션을 일시 중지한 다음 나중에 수동으로 컷오버를 수행할 수 있습니다.
 +
@@ -25,23 +28,29 @@ xref:manual-source-removal-task.adoc[컷오버 이후 소스 SVM 수동 제거]
 
 
 
-== 자동 컷오버를 설정한 SVM 마이그레이션
+== 자동 컷오버가 활성화된 ONTAP SVM 마이그레이션
 
 기본적으로 마이그레이션은 완료되면 클라이언트가 대상 클러스터로 자동으로 컷오버되고 불필요한 SVM이 소스 클러스터에서 제거됩니다.
 
 .단계
 . 타겟 클러스터에서 사전 점검을 수행합니다.
 +
-dest_cluster > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_-check-only true"
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name> -check-only true`
+----
 . 대상 클러스터에서 SVM 마이그레이션을 시작합니다.
 +
-dest_cluster > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_'입니다
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name>
+----
 . 마이그레이션 상태 확인:
 +
-dest_cluster > vserver migrate show"를 선택합니다
-
+[source, cli]
+----
+vserver migrate show
+----
 +
 SVM 마이그레이션이 완료되면 상태가 Migrate-Complete로 표시됩니다.
 
@@ -49,44 +58,58 @@ SVM 마이그레이션이 완료되면 상태가 Migrate-Complete로 표시됩�
 
 
 
-== 자동 클라이언트 컷오버를 사용하지 않도록 설정한 상태에서 SVM 마이그레이션
+== 자동 클라이언트 전환이 비활성화된 ONTAP SVM 마이그레이션
 
 자동 클라이언트 컷오버가 정상적으로 수행되는 경우 -auto-cutover false 옵션을 사용하여 마이그레이션을 일시 중지한 다음 나중에 수동으로 컷오버를 수행할 수 있습니다. 을 참조하십시오 xref:manual-client-cutover-task.adoc[SVM 마이그레이션 후 클라이언트 수동 컷오버].
 
 .단계
 . 타겟 클러스터에서 사전 점검을 수행합니다.
 +
-dest_cluster > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_-check-only true"
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name> -check-only true`
+----
 . 대상 클러스터에서 SVM 마이그레이션을 시작합니다.
 +
-dest_cluster > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_-auto-cutover false"
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name> -auto-cutover false`
+----
 . 마이그레이션 상태 확인:
 +
-dest_cluster>vserver Migrate show" SVM 마이그레이션이 비동기 데이터 전송을 완료하면 상태를 전환할 준비가 완료되어 컷오버 작업이 준비됩니다.
+[source, cli]
+----
+vserver migrate show
+----
+
+
+SVM 마이그레이션이 비동기 데이터 전송을 완료하고 컷오버 작업을 수행할 준비가 되면 상태가 '컷오버 준비'로 표시됩니다.
 
 
 
-
-
-== 소스 정리를 사용하지 않도록 설정한 SVM 마이그레이션
+== 소스 정리가 비활성화된 ONTAP SVM 마이그레이션
 
 advance privilege-auto-source-cleanup false 옵션을 사용하여 컷오버 이후 소스 SVM의 제거를 해제한 다음 나중에 컷오버를 통해 소스 정리를 수동으로 트리거할 수 있습니다. 을 참조하십시오 xref:manual-source-removal-task.adoc[소스 SVM을 수동으로 제거합니다].
 
 .단계
 . 타겟 클러스터에서 사전 점검을 수행합니다.
 +
-dest_cluster * > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_-check-only true"
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name> -check-only true`
+----
 . 대상 클러스터에서 SVM 마이그레이션을 시작합니다.
 +
-dest_cluster * > vserver migrate start -vserver_SVM_name_-source-cluster_cluster_name_-auto-source-cleanup false
-
+[source, cli]
+----
+vserver migrate start -vserver <SVM_name> -source-cluster <cluster_name> -auto-source-cleanup false`
+----
 . 마이그레이션 상태 확인:
 +
-dest_cluster * > vserver migrate show'를 선택합니다
-
+[source, cli]
+----
+vserver migrate show
+----
 +
 상태는 SVM 마이그레이션 컷오버가 완료된 후 소스 클러스터에서의 SVM을 제거할 준비가 되면 소스 정리를 위해 준비됨으로 표시됩니다.
 

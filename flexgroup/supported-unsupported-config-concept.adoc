@@ -15,6 +15,18 @@ ONTAP 9의 FlexGroup 볼륨에서 지원되고 지원되지 않는 ONTAP 기능�
 
 
 
+== ONTAP 9.18.1부터 지원되는 기능
+
+* xref:../performance-admin/adaptive-qos-policy-groups-task.html[중첩된 QoS 정책]다음 객체 쌍에 대해 지원됩니다.
++
+** SVM에 포함된 SVM 및 FlexGroup 볼륨
+** 볼륨 내의 FlexGroup 볼륨 및 Qtree
+
+
+
+
+
+
 == ONTAP 9.16.1부터 지원되는 기능
 
 * xref:enable-adv-capacity-flexgroup-task.html[고급 용량 밸런싱]

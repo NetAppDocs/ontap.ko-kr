@@ -14,7 +14,7 @@ summary: '모든 SSL 연결에 대해 FIPS(Federal Information Processing Standa
 
 
 [role="lead"]
-ONTAP는 모든 SSL 연결에 대해 FIPS(Federal Information Processing Standards) 140-2를 준수합니다. SSL FIPS 모드를 설정 및 끄고, SSL 프로토콜을 전역적으로 설정하고, ONTAP 내에서 RC4와 같은 약한 암호를 해제할 수 있습니다.
+ONTAP 모든 SSL 연결에 대해 연방 정보 처리 표준(FIPS) 140-2를 준수합니다.  ONTAP 내에서 SSL FIPS 모드를 켜고 끌 수 있고, SSL 프로토콜을 전역적으로 설정하고, 취약한 암호를 끌 수 있습니다.
 
 기본적으로 ONTAP의 SSL은 FIPS 준수가 비활성화되고 다음 TLS 프로토콜이 활성화된 상태로 설정됩니다.
 
@@ -62,7 +62,7 @@ FIPS를 활성화하기 전에 지원되는 키 알고리즘이 없는 기존 SS
 
 자세한 내용은 을 참조하십시오 link:../authentication/enable-ssh-public-key-accounts-task.html["SSH 공개 키 계정을 활성화합니다"].
 
-및 SSL FIPS 모드 구성에 대한 자세한 `security config modify` 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/security-config-modify.html["ONTAP 명령 참조입니다"^]참조하십시오.
+ONTAP 9.18.1은 SSL을 위한 ML-KEM, ML-DSA 및 SLH-DSA 포스트 양자 컴퓨팅 암호화 알고리즘에 대한 지원을 도입하여 향후 발생할 수 있는 양자 컴퓨터 공격에 대비한 보안 계층을 추가로 제공합니다.  이러한 알고리즘은 다음과 같은 경우에만 사용할 수 있습니다.<<FIPS를 비활성화합니다,FIPS가 비활성화되었습니다>> .  FIPS가 비활성화되어 있고 피어가 이를 지원하는 경우 포스트 양자 암호화 알고리즘이 협상됩니다.
 
 
 
@@ -80,7 +80,7 @@ NOTE: FIPS가 설정되어 있으면 RSA 키 길이 4096으로 인증서를 설�
 
 . FIPS 활성화:
 +
-보안 설정 수정-인터페이스 SSL-is-FIPS-enabled true
+`security config modify -is-fips-enabled true`
 
 . 계속하라는 메시지가 나타나면 y를 입력합니다
 . ONTAP 9.9.1부터 재부팅이 필요하지 않습니다.  ONTAP 9.8 또는 이전 버전을 사용하는 경우 클러스터의 각 노드를 하나씩 수동으로 재부팅하세요.
@@ -90,7 +90,7 @@ NOTE: FIPS가 설정되어 있으면 RSA 키 길이 4096으로 인증서를 설�
 ONTAP 9.9.1 이상을 실행 중인 경우 경고 메시지가 표시되지 않습니다.
 
 ....
-security config modify -interface SSL -is-fips-enabled true
+security config modify -is-fips-enabled true
 
 Warning: This command will enable FIPS compliance and can potentially cause some non-compliant components to fail. MetroCluster and Vserver DR require FIPS to be enabled on both sites in order to be compatible.
 Do you want to continue? {y|n}: y
@@ -98,11 +98,13 @@ Do you want to continue? {y|n}: y
 Warning: When this command completes, reboot all nodes in the cluster. This is necessary to prevent components from failing due to an inconsistent security configuration state in the cluster. To avoid a service outage, reboot one node at a time and wait for it to completely initialize before rebooting the next node. Run "security config status show" command to monitor the reboot status.
 Do you want to continue? {y|n}: y
 ....
+및 SSL FIPS 모드 구성에 대한 자세한 `security config modify` 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/security-config-modify.html["ONTAP 명령 참조입니다"^]참조하십시오.
+
 
 
 == FIPS를 비활성화합니다
 
-이전 시스템 구성을 실행 중이고 이전 버전과의 호환성을 사용하여 ONTAP를 구성하려는 경우 FIPS를 사용하지 않도록 설정한 경우에만 SSLv3을 사용하도록 설정할 수 있습니다.
+ONTAP 9.18.1부터 ONTAP 의 SSL은 ML-KEM, ML-DSA, SLH-DSA 포스트 양자 컴퓨팅 암호화 알고리즘을 지원합니다.  이러한 알고리즘은 FIPS가 비활성화되어 있고 피어가 이를 지원하는 경우에만 사용할 수 있습니다.
 
 .단계
 . 고급 권한 레벨로 변경:
@@ -111,17 +113,18 @@ Do you want to continue? {y|n}: y
 
 . 다음을 입력하여 FIPS를 비활성화합니다.
 +
-보안 설정 수정-인터페이스 SSL-is-FIPS-enabled false
+`security config modify -is-fips-enabled false`
 
 . 계속하라는 메시지가 나타나면 y를 입력합니다.
 . ONTAP 9.9.1부터 재부팅이 필요하지 않습니다.  ONTAP 9.8 또는 이전 버전을 사용하는 경우 클러스터의 각 노드를 수동으로 재부팅하세요.
 
 
-.예
-ONTAP 9.9.1 이상을 실행 중인 경우 경고 메시지가 표시되지 않습니다.
+SSLv3 프로토콜을 사용해야 하는 경우 위의 절차에 따라 FIPS를 비활성화해야 합니다.  FIPS가 비활성화된 경우에만 SSLv3를 활성화할 수 있습니다.
+
+다음 명령을 사용하여 SSLv3를 활성화할 수 있습니다.  ONTAP 9.9.1 이상을 실행 중인 경우 경고 메시지가 나타나지 않습니다.
 
 ....
-security config modify -interface SSL -supported-protocols SSLv3
+security config modify -supported-protocols SSLv3
 
 Warning: Enabling the SSLv3 protocol may reduce the security of the interface, and is not recommended.
 Do you want to continue? {y|n}: y
@@ -129,8 +132,6 @@ Do you want to continue? {y|n}: y
 Warning: When this command completes, reboot all nodes in the cluster. This is necessary to prevent components from failing due to an inconsistent security configuration state in the cluster. To avoid a service outage, reboot one node at a time and wait for it to completely initialize before rebooting the next node. Run "security config status show" command to monitor the reboot status.
 Do you want to continue? {y|n}: y
 ....
-에 대한 자세한 내용은 `security config status show` link:https://docs.netapp.com/us-en/ontap-cli/security-config-status-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
 
 
 == FIPS 준수 상태를 봅니다
@@ -138,25 +139,31 @@ Do you want to continue? {y|n}: y
 전체 클러스터에서 현재 보안 구성 설정이 실행되고 있는지 확인할 수 있습니다.
 
 .단계
-. 클러스터의 각 노드를 하나씩 재부팅합니다.
-+
-모든 클러스터 노드를 동시에 재부팅하지 마십시오. 클러스터의 모든 애플리케이션이 새로운 보안 구성을 실행하고 FIPS 켜기/끄기 모드, 프로토콜 및 암호를 변경하는 경우 재부팅이 필요합니다.
-
+. ONTAP 9.8 또는 이전 버전을 사용하는 경우 클러스터의 각 노드를 하나씩 수동으로 재부팅하세요.
 . 현재 준수 상태 보기:
 +
 '보안 구성 쇼'
 
 +
 ....
-security config show
-
-          Cluster                                              Cluster Security
-Interface FIPS Mode  Supported Protocols     Supported Ciphers Config Ready
---------- ---------- ----------------------- ----------------- ----------------
-SSL       false      TLSv1_2, TLSv1_1, TLSv1 ALL:!LOW:!aNULL:  yes
-                                             !EXP:!eNULL
+cluster1::> security config show
+Cluster    Supported
+FIPS Mode  Protocols Supported Cipher Suites
+---------- --------- ----------------------------------------------------------
+false      TLSv1.3,  TLS_RSA_WITH_AES_128_CCM, TLS_RSA_WITH_AES_128_CCM_8,
+           TLSv1.2   TLS_RSA_WITH_AES_128_GCM_SHA256,
+                     TLS_RSA_WITH_AES_128_CBC_SHA,
+                     TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CCM,
+                     TLS_RSA_WITH_AES_256_CCM_8,
+                     ...
 ....
 +
 에 대한 자세한 내용은 `security config show` link:https://docs.netapp.com/us-en/ontap-cli/security-config-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
+
+
+.관련 정보
+* link:https://csrc.nist.gov/pubs/fips/203/final["FIPS 203: 모듈 격자 기반 키 캡슐화 메커니즘 표준(ML-KEM)"^]
+* link:https://csrc.nist.gov/pubs/fips/204/final["FIPS 204: 모듈 격자 기반 디지털 서명 표준(ML-DSA)"^]
+* link:https://csrc.nist.gov/pubs/fips/205/final["FIPS 205: 상태 비저장 해시 기반 디지털 서명 표준(SLH-DSA)"^]
 

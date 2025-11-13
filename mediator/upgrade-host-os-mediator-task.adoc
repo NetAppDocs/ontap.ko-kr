@@ -14,17 +14,12 @@ summary: 설치 프로세스의 일부로 호스트 운영 체제를 업그레�
 ONTAP 중재자를 위한 호스트 OS를 최신 버전으로 업그레이드하려면 먼저 ONTAP 중재자를 제거해야 합니다.
 
 .이 작업에 대해
-leapp 업그레이드 도구를 사용하여 ONTAP 중재자를 최신 주요 버전(예: 7.x에서 8.x)으로 업그레이드하는 경우 도구가 시스템에 등록된 리포지토리에 설치된 RPM의 새 버전을 감지하기 때문에 ONTAP 중재자를 제거해야 합니다.
+leapp-upgrade 도구를 사용하여 ONTAP Mediator의 호스트 OS를 업그레이드하기 전에 ONTAP Mediator를 제거하세요.  이 도구는 등록된 저장소에서 새로운 RPM 버전을 확인합니다.
 
-rpm 파일은 ONTAP 중재자 설치 프로그램의 일부로 설치되었기 때문에 해당 검색에 포함됩니다. 그러나 .rpm 파일은 설치 프로그램의 일부로 압축 해제되었고 등록된 리포지토리에서 다운로드되지 않았으므로 업그레이드를 찾을 수 없습니다. 이 경우 leapp-upgrade 도구가 패키지를 제거합니다.
-
-지원 사례를 분류하는 데 사용될 로그 파일을 보존하려면 OS를 업그레이드하기 전에 파일을 백업하고 ONTAP Mediator 패키지를 다시 설치한 후 복원해야 합니다. ONTAP Mediator 에 연결된 ONTAP 클러스터는 ONTAP Mediator 설치 후 다시 연결해야 합니다.
-
-
-NOTE: 다음 단계를 순서대로 수행해야 합니다. ONTAP Mediator를 다시 설치한 직후 ontap_mediator를 중지하고 로그 파일을 교체한 후 다시 시작해야 합니다. 이는 로그가 손실되지 않도록 하기 위한 조치입니다.
+ONTAP Mediator 설치 프로그램은 .rpm 파일을 설치하고, leapp-upgrade 도구는 이 파일을 검색에 포함합니다.  설치 프로그램이 등록된 저장소에서 파일을 다운로드하는 대신 압축을 풀기 때문에 도구에서 업그레이드를 찾을 수 없습니다.  패키지를 제거하려면 leapp-upgrade 도구를 사용해야 합니다.
 
 .단계
-. 로그 파일을 백업합니다.
+. 로그 파일을 백업하세요.
 +
 ....
 [rootmediator-host ~]# tar -czf ontap_mediator_file_backup.tgz -C /opt/netapp/lib/ontap_mediator ./log ./ontap_mediator/server_config/ontap_mediator.user_config.yaml
@@ -40,7 +35,7 @@ NOTE: 다음 단계를 순서대로 수행해야 합니다. ONTAP Mediator를 �
 ./ontap_mediator/server_config/ontap_mediator.user_config.yaml
 [rootmediator-host ~]#
 ....
-. leapp-upgrade 툴을 사용하여 업그레이드를 수행합니다.
+. leapp-upgrade 도구를 사용하여 업그레이드를 수행합니다.
 +
 ....
 [rootmediator-host ~]# leapp preupgrade --target 8.4
@@ -53,21 +48,21 @@ NAME="Red Hat Enterprise Linux"
 VERSION="8.4 (Ootpa)"
 [rootmediator-host ~]#
 ....
-. ONTAP 중재자를 다시 설치합니다.
+. ONTAP Mediator를 다시 설치하세요:
 +
 
 NOTE: 로그 파일 손실을 방지하기 위해 ONTAP 중재자를 재설치한 후 바로 나머지 단계를 수행하십시오.
 
 +
 ....
-[rootmediator-host ~]# ontap-mediator-1.10/ontap-mediator-1.10
+[rootmediator-host ~]# ontap-mediator-1.11.0/ontap-mediator-1.11.0
 
 ONTAP Mediator: Self Extracting Installer
 
   ..<snip installation>..
 [rootmediator-host ~]#
 ....
-. ontap_mediator를 중지합니다.
+. ontap_mediator 중지:
 +
 ....
 [rootmediator-host ~]# systemctl stop ontap_mediator
@@ -79,17 +74,19 @@ ONTAP Mediator: Self Extracting Installer
 [rootmediator-host ~]# tar -xf ontap_mediator_log_backup.tgz -C /opt/netapp/lib/ontap_mediator
 [rootmediator-host ~]#
 ....
-. ontap_mediator를 시작합니다.
+. ontap_mediator를 시작합니다:
 +
 ....
 [rootmediator-host ~]# systemctl start ontap_mediator
 [rootmediator-host ~]#
 ....
-. 모든 ONTAP 클러스터를 업그레이드된 ONTAP 중재자로 다시 연결합니다
-+
-.IP를 통한 MetroCluster 절차
-[%collapsible]
+. 모든 ONTAP 클러스터를 업그레이드된 ONTAP Mediator에 다시 연결합니다.
+
+
+[role="tabbed-block"]
 ====
+.IP를 통한 MetroCluster
+--
 ....
 siteA::> metrocluster configuration-settings mediator show
 Mediator IP     Port    Node                    Configuration Connection
@@ -127,12 +124,10 @@ Mediator IP     Port    Node                    Configuration Connection
                         siteB-node2             true          true
 siteA::>
 ....
-====
-+
-.SnapMirror 활성 동기화 절차
-[%collapsible]
-====
-SnapMirror 액티브 동기화의 경우 /opt/netapp 디렉토리 외부에 TLS 인증서를 설치한 경우 다시 설치할 필요가 없습니다. 기본 생성 자체 서명 인증서를 사용하거나 /opt/NetApp 디렉토리에 사용자 지정 인증서를 저장한 경우 해당 인증서를 백업 및 복원해야 합니다.
+--
+.SnapMirror 활성 동기화
+--
+SnapMirror Active Sync의 경우 /opt/netapp 외부에 저장된 TLS 인증서를 다시 설치할 필요가 없습니다.  /opt/netapp에 저장된 인증서를 백업하고 복원합니다.
 
 ....
 peer1::> snapmirror mediator show
@@ -217,9 +212,8 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 peer1::>
 
 ....
+--
 ====
-
-
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-delete.html["보안 인증서 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]

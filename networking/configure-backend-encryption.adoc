@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: networking/configure-backend-encryption.html 
+keywords: cluster network, encryption, TLS, data-in-flight, backend network 
+summary: 클러스터 네트워크 암호화 설정 구성 
+---
+= ONTAP 백엔드 클러스터 네트워크 암호화 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.18.1부터 백엔드 클러스터 네트워크에서 전송 중인 데이터에 대한 TLS(전송 계층 보안) 암호화를 구성할 수 있습니다.  이 암호화는 백엔드 클러스터 네트워크의 ONTAP 노드 간에 전송될 때 ONTAP 에 저장된 고객 데이터를 보호합니다.
+
+.이 작업에 대해
+* 백엔드 클러스터 네트워크 암호화는 기본적으로 비활성화되어 있습니다.
+* 백엔드 클러스터 네트워크 암호화가 활성화되면 ONTAP 에 저장된 모든 고객 데이터는 백엔드 클러스터 네트워크의 ONTAP 노드 간에 전송될 때 암호화됩니다.  제어 경로 데이터와 같은 일부 클러스터 네트워크 트래픽은 암호화되지 않습니다.
+* 기본적으로 백엔드 클러스터 네트워크 암호화는 클러스터의 각 노드에 대해 자동 생성된 인증서를 사용합니다.  당신은 할 수 있습니다<<클러스터 네트워크 암호화 인증서 관리>> 각 노드에서 사용자 정의 설치 인증서를 사용합니다.
+
+
+.시작하기 전에
+* 당신은 ONTAP 관리자여야 합니다. `admin` 다음 작업을 수행하기 위한 권한 수준입니다.
+* 백엔드 클러스터 네트워크 암호화를 활성화하려면 클러스터의 모든 노드에서 ONTAP 9.18.1 이상을 실행해야 합니다.
+
+
+
+
+== 클러스터 네트워크 통신에 대한 암호화를 활성화하거나 비활성화합니다.
+
+.단계
+. 현재 클러스터 네트워크 암호화 상태를 확인하세요.
++
+[source, cli]
+----
+security cluster-network show
+----
++
+이 명령은 클러스터 네트워크 암호화의 현재 상태를 보여줍니다.
+
++
+[source]
+----
+Cluster-1::*> security cluster-network show
+
+Enabled: true
+
+Mode: tls
+
+Status: READY
+----
+. TLS 백엔드 클러스터 네트워크 암호화를 활성화하거나 비활성화합니다.
++
+[source, cli]
+----
+security cluster-network modify -enabled <true|false>
+----
++
+이 명령은 백엔드 클러스터 네트워크에서 전송 중인 고객 데이터에 대한 암호화된 통신을 활성화하거나 비활성화합니다.
+
+
+
+
+
+== 클러스터 네트워크 암호화 인증서 관리
+
+. 현재 클러스터 네트워크 암호화 인증서 정보를 확인하세요.
++
+[source, cli]
+----
+security cluster-network certificate show
+----
++
+이 명령은 현재 클러스터 네트워크 암호화 인증서 정보를 보여줍니다.
+
++
+[source]
+----
+security cluster-network certificate show
+Node                  Certificate Name                      CA
+--------------------- -----------------------------------   --------------
+node1                 -                                     Cluster-1_Root_CA
+node2                 -                                     Cluster-1_Root_CA
+node3                 google_issued_cert1                   Google_CA1
+node4                 google_issued_cert2                   Google_CA1
+----
++
+클러스터의 각 노드에 대한 인증서 및 인증 기관(CA) 이름이 표시됩니다.
+
+. 노드의 클러스터 네트워크 암호화 인증서를 수정합니다.
++
+[source, cli]
+----
+security cluster-network certificate modify -node <node_name> -name <certificate_name>
+----
++
+이 명령은 특정 노드에 대한 클러스터 네트워크 암호화 인증서를 수정합니다.  이 명령을 실행하기 전에 인증서를 설치하고 설치된 CA에서 서명해야 합니다.  인증서 관리에 대한 자세한 내용은 다음을 참조하세요.link:../authentication/manage-certificates-sm-task.html["System Manager를 사용하여 ONTAP 인증서를 관리합니다"] .  만약에 `-name` 지정하지 않으면 자동 생성된 기본 인증서가 사용됩니다.
+
+
