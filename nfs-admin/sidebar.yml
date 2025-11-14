@@ -308,6 +308,8 @@ entries:
     url: "/nfs-admin/ontap-support-nfsv41-concept.html"
   - title: NFSv4.2 지원에 대해 알아보세요
     url: "/nfs-admin/ontap-support-nfsv42-concept.html"
+  - title: NFS 성능을 위한 nconnect에 대해 알아보세요
+    url: "/nfs-admin/nconnect-concept.html"
   - title: 병렬 NFS 지원에 대해 알아보세요
     url: "/nfs-admin/ontap-support-parallel-nfs-concept.html"
   - title: NFS 하드 마운트에 대해 알아보세요

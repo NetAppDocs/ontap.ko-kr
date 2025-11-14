@@ -1,0 +1,48 @@
+---
+permalink: nfs-admin/nconnect-concept.html 
+sidebar: sidebar 
+keywords: nconnect, nfs, performance, tcp connections, nfsv3, nfsv4.2 nfsv4.1 
+summary: nconnect는 단일 마운트 지점에 대해 여러 TCP 연결을 활성화하여 NFS 성능을 향상시킵니다. 
+---
+= NFS 성능을 위한 nconnect에 대해 알아보세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.8부터 NFSv4.1이 활성화된 경우 nconnect 기능을 기본적으로 사용할 수 있습니다. nconnect는 단일 마운트에 대해 여러 TCP 연결을 허용하여 NFS 클라이언트 성능을 향상시킵니다.
+
+
+
+== nconnect 작동 방식
+
+이전 버전의 NFS 클라이언트 구축에서는 마운트와 단일 TCP 연결만 사용합니다. ONTAP에서 단일 TCP 연결은 IOPS 증가에 따라 병목 현상을 일으킬 수 있습니다.
+
+nconnect가 활성화된 클라이언트는 단일 NFS 마운트와 연관된 여러 TCP 연결(최대 16개)을 가질 수 있습니다. nconnect는 단 하나의 IP 주소만 사용하고 해당 단일 IP를 통해 여러 TCP 연결을 설정하여 NFS 내보내기를 마운트합니다. NFS 클라이언트는 파일 작업을 라운드 로빈 방식으로 여러 TCP 연결에 분산하여 사용 가능한 네트워크 대역폭에서 더 높은 처리량을 얻습니다.
+
+
+
+== 지원되는 NFS 버전
+
+* nconnect는 NFSv3, NFSv4.2 및 NFSv4.1 마운트에 권장됩니다.
+* nconnect는 NFSv4.0 마운트에 권장되지 않습니다.
++
+
+NOTE: 최적의 성능을 위해 NetApp NFSv4.0 대신 nconnect와 함께 NFSv4.1을 사용할 것을 권장합니다. NFSv4.0은 여러 연결을 지원하는 반면, nconnect를 탑재한 NFSv4.1은 더 나은 부하 분산과 향상된 처리량을 제공합니다.
+
+
+
+
+
+== 고객 지원
+
+nconnect가 클라이언트 버전에서 지원되는지 확인하려면 NFS 클라이언트 설명서를 참조하십시오.
+
+
+
+== 관련 정보
+
+* link:ontap-support-nfsv41-concept.html["NFSv4.1에 대한 ONTAP 지원에 대해 알아보세요"]
+* link:ontap-support-nfsv42-concept.html["NFSv4.2에 대한 ONTAP 지원에 대해 알아보세요"]
+
