@@ -80,3 +80,6 @@ cluster_dst::> snapmirror resync -source-path svm1:volA -destination-path svm_ba
 
 --
 ====
+.관련 정보
+* link:resync-svm-destination-task.html["ONTAP SnapMirror 대상 SVM에서 데이터를 다시 동기화합니다"]
+

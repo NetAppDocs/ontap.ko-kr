@@ -37,7 +37,7 @@ SCST 버전 정보는 를 <<SCST 지원 매트릭스>>참조하십시오.
 
 * Rocky Linux 10.1, 9.7 및 8.10을 지원합니다.
 * Oracle Linux 10.0 및 9.6 지원.
-* MCCIP에 IPv6 지원을 추가합니다.
+* MetroCluster IP 구성에 IPv6에 대한 지원을 추가합니다.
 * fapolicyd에 대한 지원을 추가합니다.
 
 
