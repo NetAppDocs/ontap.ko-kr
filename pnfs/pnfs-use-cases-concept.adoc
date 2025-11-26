@@ -1,0 +1,116 @@
+---
+permalink: pnfs/pnfs-use-cases-concept.html 
+sidebar: sidebar 
+keywords: tr-4063, pnfs, use cases, nconnect, session trunking, referrals, advanced capacity balancing, technical report 
+summary: pNFS는 nconnect, 세션 트렁킹, 고급 용량 밸런싱을 포함한 다양한 ONTAP 기능과 함께 사용하여 성능과 유연성을 개선할 수 있습니다. 
+---
+= ONTAP 에서의 pNFS 사용 사례
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+pNFS는 다양한 ONTAP 기능과 함께 사용하여 성능을 개선하고 NFS 워크로드에 대한 유연성을 높일 수 있습니다.
+
+
+
+== nconnect를 사용한 pNFS
+
+NFS는 최근의 일부 클라이언트와 서버에 새로운 마운트 옵션을 도입했는데, 이를 통해 단일 IP 주소를 마운트하는 동안 여러 TCP 연결을 제공할 수 있는 방법이 제공됩니다. 이를 통해 작업을 더 효율적으로 병렬화하고, NFS 서버와 클라이언트의 제한을 해결하고, 특정 작업 부하에 대한 전반적인 성능을 향상시킬 수 있는 메커니즘이 제공됩니다. 클라이언트가 nconnect를 지원하는 경우 ONTAP 9.8 이상에서 nconnect가 지원됩니다.
+
+pNFS와 함께 nconnect를 사용하는 경우, NFS 서버에서 광고한 각 pNFS 장치에 대해 nconnect 옵션을 사용하여 연결이 병렬화됩니다. 예를 들어, nconnect가 4로 설정되어 있고 pNFS에 적합한 인터페이스가 4개 있는 경우, 생성되는 연결의 총 수는 마운트 지점당 최대 16개(nconnect 4개 x IP 주소 4개)가 됩니다.
+
+.nconnect가 4로 설정된 pNFS
+image::pNFS_fig_015.png[nconnect=4인 pNFS]
+
+link:../nfs-admin/ontap-support-nfsv41-concept.html["NFSv4.1에 대한 ONTAP 지원에 대해 자세히 알아보세요"]
+
+
+
+== NFSv4.1 세션 트렁킹을 사용한 pNFS
+
+NFSv4.1 세션 트렁킹 (https://datatracker.ietf.org/doc/html/rfc5661#section-2.10.5["RFC 5661, 섹션 2.10.5"^])은 클라이언트와 서버 간에 여러 개의 TCP 연결을 사용하여 데이터 전송 속도를 높이는 것입니다. ONTAP 9.14.1에는 NFSv4.1 세션 트렁킹에 대한 지원이 추가되었으며 세션 트렁킹을 지원하는 클라이언트와 함께 사용해야 합니다.
+
+ONTAP 에서는 세션 트렁킹을 클러스터의 여러 노드에 걸쳐 사용하여 연결 전반에 걸쳐 추가 처리량과 중복성을 제공할 수 있습니다.
+
+세션 트렁킹은 여러 가지 방법으로 설정할 수 있습니다.
+
+* *마운트 옵션을 통해 자동으로 검색:* 대부분의 최신 NFS 클라이언트에서 세션 트렁킹은 마운트 옵션을 통해 설정할 수 있습니다(OS 공급업체의 설명서 확인). 이 옵션은 NFS 서버에 신호를 보내 세션 트렁크에 대한 정보를 클라이언트로 다시 전송합니다. 이 정보는 NFS 패킷을 통해 나타납니다. `fs_location4` 부르다.
++
+사용되는 마운트 옵션은 클라이언트의 OS 버전에 따라 달라집니다. 예를 들어, Ubuntu Linux 플레이버는 일반적으로 다음을 사용합니다. `max_connect=n` 세션 트렁크를 사용해야 한다는 신호를 보냅니다. RHEL Linux 배포판에서는 `trunkdiscovery` mount 옵션이 사용됩니다.
+
++
+.우분투 예제
+[listing]
+----
+mount -o vers=4.1,max_connect=8 10.10.10.10:/pNFS /mnt/pNFS
+----
++
+.RHEL 예제
+[listing]
+----
+mount -o vers=4.1,trunkdiscovery 10.10.10.10:/pNFS /mnt/pNFS
+----
++
+
+NOTE: 사용하려고 시도하는 경우 `max_connect` RHEL 배포판에서는 nconnect로 처리되며 세션 트렁킹이 예상대로 작동하지 않습니다.
+
+* *수동으로 설정:* 각 개별 IP 주소를 동일한 내보내기 경로와 마운트 지점에 마운트하여 세션 트렁킹을 수동으로 설정할 수 있습니다. 예를 들어, 동일한 노드에 두 개의 IP 주소(10.10.10.10 및 10.10.10.11)가 있는 경우 내보내기 경로 `/pNFS`, mount 명령을 두 번 실행합니다.
++
+[listing]
+----
+mount -o vers=4.1 10.10.10.10:/pNFS /mnt/pNFS
+mount -o vers=4.1 10.10.10.11:/pNFS /mnt/pNFS
+----
++
+트렁크에 참여하려는 모든 인터페이스에서 이 과정을 반복합니다.
+
+
+
+
+NOTE: 각 노드는 자체 세션 트렁크를 갖습니다. 줄기는 노드를 가로지르지 않습니다.
+
+
+NOTE: pNFS를 사용할 때는 세션 트렁킹 또는 nconnect만 사용하세요. 둘 다 사용하면 바람직하지 않은 동작이 발생할 수 있습니다. 예를 들어, 메타데이터 서버 연결만 nconnect의 이점을 얻고 데이터 서버는 단일 연결을 사용합니다.
+
+.ONTAP 의 NFSv4.1 세션 트렁킹
+image::pNFS_fig_016.png[ONTAP 의 NFSv4.1 세션 트렁킹]
+
+pNFS는 클러스터에 참여하는 각 노드에 대한 로컬 경로를 제공할 수 있으며, 세션 트렁킹과 함께 사용하면 pNFS는 노드당 세션 트렁크를 활용하여 전체 클러스터의 처리량을 극대화할 수 있습니다.
+
+image::pNFS_fig_017.png[ONTAP 에서 pNFS를 사용한 NFSv4.1 세션 트렁킹]
+
+언제 `trunkdiscovery` 이 사용되는 경우, 마운트 인터페이스가 위치한 NFS 서버 노드의 나열된 세션 트렁크 인터페이스에 대해 추가된 GETATTR 호출(FS_Locations)이 활용됩니다. 해당 주소가 반환되면 반환된 주소로 후속 마운트가 수행됩니다. 이는 마운트 중 패킷 캡처에서 확인할 수 있습니다.
+
+.마운트 중 NFS 세션 트렁크 검색: 패킷 캡처
+image::pNFS_fig_018.png[마운트 중 NFS 세션 트렁크 검색: 패킷 캡처]
+
+link:../nfs-trunking/index.html["NFS 트렁킹에 대해 자세히 알아보세요"]
+
+
+
+== pNFS 대 NFSv4.1 참조
+
+NFSv4.1 참조는 마운트 요청 시 클라이언트를 볼륨 위치로 안내하는 초기 마운트 경로 리디렉션 모드를 제공합니다. NFSv4.1 참조는 단일 SVM 내에서 작동합니다. 이 기능은 NFS 마운트를 데이터 볼륨과 동일한 노드에 있는 네트워크 인터페이스로 로컬화하려고 시도합니다. 클라이언트에 마운트된 동안 해당 인터페이스나 볼륨이 다른 노드로 이동하면 새로운 마운트가 설정될 때까지 데이터 경로는 더 이상 지역화되지 않습니다.
+
+pNFS는 마운트 경로를 지역화하려고 시도하지 않습니다. 대신 마운트 경로를 사용하여 메타데이터 서버를 구축한 다음 필요에 따라 데이터 경로를 동적으로 로컬화합니다.
+
+NFSv4.1 참조는 pNFS와 함께 사용할 수 있지만 해당 기능은 필요하지 않습니다. pNFS로 추천을 활성화해도 눈에 띄는 결과는 나타나지 않습니다.
+
+link:../nfs-admin/enable-disable-nfsv4-referrals-task.html["NFSv4 참조 활성화 또는 비활성화"]
+
+
+
+== pNFS와 고급 용량 균형 조정의 상호 작용
+
+link:../flexgroup/enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"] ONTAP 에서는 FlexGroup 볼륨의 구성 볼륨에 파일 데이터의 일부를 기록합니다(단일 FlexVol 볼륨에서는 지원되지 않음). 파일이 커짐에 따라 ONTAP 같은 노드나 다른 노드에 있을 수 있는 다른 구성 볼륨의 새로운 멀티파트 inode에 데이터를 쓰기 시작하기로 결정합니다. 이러한 다중 inode 파일에 대한 쓰기, 읽기 및 메타데이터 작업은 클라이언트에 투명하고 중단 없이 수행됩니다. 고급 용량 밸런싱은 FlexGroup 구성 볼륨 간의 공간 관리를 개선하여 보다 일관된 성능을 제공합니다.
+
+pNFS는 NFS 서버에 저장된 파일 레이아웃 정보에 따라 데이터 IO를 로컬 네트워크 경로로 리디렉션할 수 있습니다. 여러 구성 볼륨에 걸쳐 여러 부분으로 구성된 단일 대용량 파일이 생성되고 잠재적으로 클러스터의 여러 노드에 걸쳐 있을 때 ONTAP 의 pNFS는 각 파일 부분에 로컬 트래픽을 제공할 수 있습니다. ONTAP 모든 파일 부분에 대한 파일 레이아웃 정보도 유지 관리하기 때문입니다. 파일을 읽을 때, 데이터 경로 지역성은 필요에 따라 변경됩니다.
+
+.pNFS를 통한 고급 용량 균형 조정
+image::pNFS_fig_019.png[pNFS를 통한 고급 용량 균형 조정]
+
+.관련 정보
+* link:../flexgroup/supported-unsupported-config-concept.html["FlexGroup 볼륨 구성"]
+

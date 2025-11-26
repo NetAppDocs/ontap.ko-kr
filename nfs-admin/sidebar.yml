@@ -1,6 +1,6 @@
 ---
 section: nfs-admin
-title: CLI에서 NFS를 관리합니다
+title: NFS 관리
 entries:
 - title: NFS 프로토콜에 대한 파일 액세스에 대해 알아보세요
   url: "/nfs-admin/index.html"
@@ -314,6 +314,7 @@ entries:
     url: "/nfs-admin/ontap-support-parallel-nfs-concept.html"
   - title: NFS 하드 마운트에 대해 알아보세요
     url: "/nfs-admin/hard-mounts-concept.html"
+- section: pnfs
 - title: NFS 및 SMB 파일 및 디렉토리 명명 종속성
   pdf-filename: 파일 및 디렉토리 이름 지정 종속성입니다
   entries:

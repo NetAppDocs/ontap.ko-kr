@@ -1,6 +1,6 @@
 ---
 section: nfs-config
-title: CLI를 사용하여 NFS를 구성합니다
+title: NFS 구성
 entries:
 - title: CLI를 사용하여 NFS 구성에 대해 알아보세요
   url: "/nfs-config/index.html"

@@ -1,0 +1,95 @@
+---
+permalink: pnfs/pnfs-plan-concept.html 
+sidebar: sidebar 
+keywords: tr-4063, pnfs, plan, prerequisites, requirements, flexgroup, nfsv4.1, nfsv4.2, interoperability, limits, technical report 
+summary: ONTAP 에서 pNFS를 사용하기 전에 전제 조건을 충족하는지 확인하고 상호 운용성 요구 사항과 제한 사항을 이해하세요. 
+---
+= pNFS 배포 계획
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사용자 환경에 pNFS를 배포하기 전에 전제 조건을 충족하는지 확인하고 상호 운용성 요구 사항과 구성 제한 사항을 이해해야 합니다.
+
+
+
+== 필수 구성 요소
+
+ONTAP 에서 pNFS를 활성화하고 사용하기 전에 다음 요구 사항이 충족되는지 확인하세요.
+
+* NFS 서버에서 NFSv4.1 이상이 활성화되어 있습니다.
+* 적어도 하나 link:pnfs-architecture-concept.html#data-path-information["데이터 LIF는 노드당 존재합니다."] NFS 서버를 호스팅하는 SVM의 클러스터에서
+* 모두 link:pnfs-architecture-concept.html#data-path-information["SVM의 데이터 LIF는 라우팅 가능합니다."] NFS 클라이언트에
+* NFS 클라이언트는 pNFS를 지원합니다(2014년 이후의 대부분의 최신 Linux 배포판).
+* SVM의 클라이언트와 모든 데이터 LIF 간의 네트워크 연결이 작동합니다.
+* 모든 데이터 LIF에 대해 DNS 확인(호스트 이름 사용 시)이 올바르게 구성되었습니다.
+* link:pnfs-architecture-concept.html#interaction-of-pnfs-with-flexgroup-volumes["FlexGroup 볼륨"] 구성됨(최상의 결과를 위해 권장됨)
+* link:pnfs-tuning-performance-concept.html#nfsv4-x-id-domains["NFSv4.x ID 도메인이 일치합니다."] 클라이언트와 ONTAP 간
+* link:pnfs-tuning-performance-concept.html#nfs-kerberos["NFS 케르베로스"] (사용되는 경우) SVM의 모든 데이터 LIF에서 활성화됩니다.
+
+
+
+
+== 모범 사례 요약
+
+사용자 환경에서 pNFS를 구현할 때 다음 모범 사례를 따르세요.
+
+* 사용 link:pnfs-tuning-performance-concept.html#volume-type-recommendations["FlexGroup 볼륨"] 최상의 성능과 용량 확장을 위해
+* 모든 것을 확인하십시오 link:pnfs-tuning-performance-concept.html#network-interface-connectivity["SVM의 네트워크 인터페이스는 라우팅 가능합니다."] 고객에게
+* link:pnfs-tuning-performance-concept.html#nfsv4-0["NFSv4.0을 해제합니다"] 클라이언트가 NFSv4.1 이상을 사용하도록 하려면
+* 여러 네트워크 인터페이스와 노드에 걸쳐 마운트 포인트를 분산합니다.
+* 라운드 로빈 DNS를 사용하세요 link:pnfs-tuning-performance-concept.html#metadata-server["부하 분산 메타데이터 서버"]
+* 확인하다 link:pnfs-tuning-performance-concept.html#nfsv4-x-id-domains["NFSv4.x ID 도메인이 일치합니다."] 클라이언트와 서버에서
+* 지휘하다 link:pnfs-tuning-performance-concept.html#network-interface-migration["네트워크 인터페이스 마이그레이션"] 그리고 link:pnfs-tuning-performance-concept.html#storage-failoversgivebacks["스토리지 장애 조치"] 유지 관리 기간 동안
+* 할 수 있게 하다 link:pnfs-tuning-performance-concept.html#nfs-kerberos["NFS 케르베로스"] Kerberos 보안을 사용하는 경우 모든 데이터 LIF에 대해
+* 사용을 피하세요 link:pnfs-tuning-performance-concept.html#nfsv4-1-referrals["NFSv4.1 참조"] pNFS를 사용할 때
+* 시험 link:pnfs-tuning-performance-concept.html#nconnect["nconnect 설정"] TCP 연결 제한이 너무 커지지 않도록 주의하세요.
+* 고려하다 link:pnfs-use-cases-concept.html#pnfs-with-nfsv4-1-session-trunking["세션 트렁킹"] 대안으로 link:pnfs-use-cases-concept.html#pnfs-with-nconnect["nConnect(연결)"] (둘을 함께 사용하지 마세요)
+* 확인하다 link:pnfs-tuning-performance-concept.html#client-recommendations["클라이언트 OS 공급업체 지원"] 배포 전 pNFS용
+
+
+
+
+== 상호 운용성
+
+ONTAP 의 pNFS는 RFC 호환 NFS 클라이언트와 함께 작동하도록 설계되었습니다. 다음 고려 사항이 적용됩니다.
+
+* 가장 현대적인 link:pnfs-tuning-performance-concept.html#client-recommendations["2014년 이후의 Linux 배포판"] pNFS 지원(RHEL 6.4, Fedora 17 이상)
+* pNFS가 지원되는지 클라이언트 OS 공급업체에 확인하세요.
+* pNFS는 FlexVol 과 함께 작동합니다. link:pnfs-architecture-concept.html#interaction-of-pnfs-with-flexgroup-volumes["FlexGroup 볼륨"]
+* pNFS는 NFSv4.1에서 지원됩니다. link:pnfs-tuning-performance-concept.html#nfsv4-2["NFSv4.2"]
+* pNFS는 다음과 함께 사용할 수 있습니다. link:pnfs-tuning-performance-concept.html#nfs-kerberos["NFS 케르베로스"] (krb5, krb5i, krb5p) 하지만 성능에 영향을 미칠 수 있습니다.
+* pNFS는 다음과 함께 사용할 수 있습니다. link:pnfs-use-cases-concept.html#pnfs-with-nconnect["nConnect(연결)"] 또는 link:pnfs-use-cases-concept.html#pnfs-with-nfsv4-1-session-trunking["세션 트렁킹"] (하지만 동시에 두 가지를 할 수는 없음)
+* pNFS는 작동하지 않습니다 link:pnfs-tuning-performance-concept.html#nfsv4-0["NFSv4.0"]
+
+
+
+
+== 제한
+
+ONTAP 의 pNFS에는 다음 제한이 적용됩니다.
+
+* link:pnfs-tuning-performance-concept.html#nconnect["TCP 연결 제한"] 노드당 플랫폼에 따라 다릅니다(특정 제한 사항은 NetApp Hardware Universe 확인하세요)
+* 최대 파일 크기: 볼륨 유형 및 ONTAP 버전에 따라 다름
+* 최대 파일 수: 최대 2000억 개의 파일 link:pnfs-architecture-concept.html#interaction-of-pnfs-with-flexgroup-volumes["FlexGroup 볼륨"]
+* 최대 용량: 최대 60PB link:pnfs-architecture-concept.html#interaction-of-pnfs-with-flexgroup-volumes["FlexGroup 볼륨"]
+* link:pnfs-tuning-performance-concept.html#network-interface-connectivity["네트워크 인터페이스 수"]: 노드당 최소 하나의 데이터 LIF가 필요합니다. 부하 분산을 위해 더 필요할 수 있습니다.
+
+
+사용시 link:pnfs-use-cases-concept.html#pnfs-with-nconnect["pNFS와 연결"]TCP 연결 수가 빠르게 증가한다는 점을 알아두세요.
+
+* nconnect를 사용한 각 클라이언트 마운트는 데이터 LIF당 여러 개의 TCP 연결을 생성합니다.
+* 많은 클라이언트가 높은 nconnect 값을 사용하므로 link:pnfs-tuning-performance-concept.html#nconnect["TCP 연결 제한"] 초과될 수 있습니다
+* TCP 연결 제한을 초과하면 기존 연결이 해제될 때까지 새 연결이 차단됩니다.
+
+
+.관련 정보
+* link:../nfs-admin/enable-disable-nfsv41-task.html["NFSv4.1 활성화 또는 비활성화"]
+* link:../nfs-config/create-lif-task.html["LIF를 생성합니다"]
+* link:../nfs-admin/ontap-support-nfsv41-concept.html["NFSv4.1에 대한 ONTAP 지원"]
+* link:../nfs-admin/ontap-support-nfsv42-concept.html["NFSv4.2에 대한 ONTAP 지원"]
+* https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]
+* link:../flexgroup/index.html["FlexGroup 볼륨 관리"]
+

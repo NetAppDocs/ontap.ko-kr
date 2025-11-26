@@ -1,0 +1,53 @@
+---
+permalink: pnfs/pnfs-overview.html 
+sidebar: sidebar 
+keywords: tr-4063, technical report, pnfs, parallel nfs, nfsv4.1, nfsv4.2, performance, metadata, data path 
+summary: '병렬 NFS(pNFS)는 NFS 클라이언트가 저장 장치에서 직접 병렬로 읽기/쓰기 작업을 수행할 수 있도록 하여 성능을 향상시키고, 잠재적인 병목 현상인 NFS 서버를 우회합니다.' 
+---
+= ONTAP 의 병렬 NFS(pNFS)에 대해 알아보세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+병렬 NFS는 2010년 1월 RFC-5661에 따라 RFC 표준으로 도입되었으며, 이를 통해 클라이언트가 메타데이터와 데이터 경로를 분리하여 NFSv4.1 서버의 파일 데이터에 직접 액세스할 수 있게 되었습니다. 이러한 직접 접근 방식은 데이터 현지화, CPU 효율성, 작업 병렬화를 통해 성능상의 이점을 제공합니다. 이후 2018년에는 pNFS 레이아웃 유형(RFC-8434)을 다루는 RFC가 작성되었으며, 이는 파일, 블록 및 객체 레이아웃에 대한 표준을 정의합니다. ONTAP pNFS 작업에 파일 레이아웃 유형을 활용합니다.
+
+
+NOTE: 2024년 7월부터 이전에 PDF로 게시되었던 기술 보고서의 콘텐츠가 ONTAP 제품 문서에 통합되었습니다. ONTAP NFS 스토리지 관리 설명서에는 이제 _TR-4063: NetApp ONTAP의 병렬 네트워크 파일 시스템(pNFS)_의 내용이 포함되어 있습니다.
+
+수년 동안 NFSv3는 거의 모든 사용 사례에 사용되는 NFS 프로토콜의 표준 버전이었습니다. 그러나 이 프로토콜에는 상태 저장 기능 부족, 기본적인 권한 모델, 기본 잠금 기능 등의 한계가 있었습니다. NFSv4.0(RFC 7530)은 NFSv3에 비해 여러 가지 개선 사항을 도입했으며, 병렬 NFS(pNFS)와 같은 기능이 추가된 후속 NFSv4.1(RFC 5661)과 NFSv4.2(RFC 7862) 버전에서 더욱 개선되었습니다.
+
+
+
+== NFSv4.x의 이점
+
+NFSv4.x는 NFSv3에 비해 다음과 같은 이점을 제공합니다.
+
+* NFSv4는 운영에 단일 포트(2049)만 사용하므로 방화벽에 친화적입니다.
+* NFSv4.x의 위임과 같은 고급적이고 공격적인 캐시 관리
+* 암호화를 사용하는 강력한 RPC 보안 선택
+* 문자의 국제화
+* 복합 연산
+* TCP에서만 작동합니다
+* 상태 저장 프로토콜(NFSv3와 같은 상태 비저장 프로토콜 아님)
+* 효율적인 인증 메커니즘을 위한 전체 Kerberos 통합
+* NFS 추천
+* UNIX 및 Windows와 호환되는 액세스 제어 지원
+* 문자열 기반 사용자 및 그룹 식별자
+* pNFS(NFSv4.1)
+* 확장된 속성(NFSv4.2)
+* 보안 레이블(NFSv4.2)
+* 스파스 파일 작업(FALLOCATE)(NFSv4.2)
+
+
+모범 사례 및 기능에 대한 세부 정보를 포함하여 일반 NFSv4.x에 대한 자세한 내용은 다음을 참조하세요. https://www.netapp.com/pdf.html?item=/media/10720-tr-4067.pdf["NetApp 기술 보고서 4067: NFS 모범 사례 및 구축 가이드"^].
+
+.관련 정보
+* link:../nfs-config/index.html["NFS 구성 개요"]
+* link:../nfs-admin/index.html["NFS 관리 개요"]
+* link:../flexgroup/index.html["FlexGroup 볼륨 관리"]
+* link:../nfs-trunking/index.html["NFS 트렁킹 개요"]
+* https://www.netapp.com/pdf.html?item=/media/19370-tr-4523.pdf[]
+* link:https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["NetApp 기술 보고서 4616: ONTAP에서 Microsoft Active Directory와 NFS Kerberos"^]
+

@@ -63,9 +63,9 @@ indexpage:
       url: "/nas-management/index.html"
     - title: System Manager로 NAS 프로토콜을 관리합니다
       url: "/concept_nas_provision_overview.html"
-    - title: CLI를 사용하여 NFS를 구성합니다
+    - title: NFS 구성
       url: "/nfs-config/index.html"
-    - title: CLI에서 NFS를 관리합니다
+    - title: NFS 관리
       url: "/nfs-admin/index.html"
     - title: CLI를 사용하여 SMB를 구성합니다
       url: "/smb-config/index.html"
