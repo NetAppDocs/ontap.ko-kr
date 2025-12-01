@@ -44,16 +44,15 @@ ONTAP 9.11.1부터는 SVM에서 클러스터된 외부 키 관리 서버에 대�
 SVM에 이미 최대 4개의 기본 키 서버가 활성화되어 있는 경우, 새로운 주요 서버를 추가하기 전에 기존 기본 키 서버 중 하나를 제거해야 합니다.
 . 기본 키 관리자를 활성화합니다.
 `security key-manager external enable -vserver _svm_name_ -key-servers _server_ip_ -client-cert _client_cert_name_ -server-ca-certs _server_ca_cert_names_`
-. 2차 키 서버를 추가하도록 1차 키 서버를 수정합니다. 를 클릭합니다 `-secondary-key-servers` 매개 변수에는 최대 3개의 주요 서버로 구성된 쉼표로 구분된 목록을 사용할 수 있습니다.
+. 기본 키 서버를 수정하여 보조 키 서버를 추가합니다. 그만큼 `-secondary-key-servers` 매개변수는 최대 3개의 키 서버를 쉼표로 구분하여 나열할 수 있습니다. 보조 키 서버에 대한 포트 번호를 포함하지 마세요.
 `security key-manager external modify-server -vserver _svm_name_ -key-servers _primary_key_server_ -secondary-key-servers _list_of_key_servers_`
 
 
 --
 .기존 기본 키 서버에 보조 키 서버를 추가합니다
 --
-. 2차 키 서버를 추가하도록 1차 키 서버를 수정합니다. 를 클릭합니다 `-secondary-key-servers` 매개 변수에는 최대 3개의 주요 서버로 구성된 쉼표로 구분된 목록을 사용할 수 있습니다.
-`security key-manager external modify-server -vserver _svm_name_ -key-servers _primary_key_server_ -secondary-key-servers _list_of_key_servers_`
-보조 키 서버에 대한 자세한 내용은 을 참조하십시오  <<mod-secondary>>.
+. 기본 키 서버를 수정하여 보조 키 서버를 추가합니다. 그만큼 `-secondary-key-servers` 매개변수는 최대 3개의 키 서버를 쉼표로 구분하여 나열할 수 있습니다. 보조 키 서버에 대한 포트 번호를 포함하지 마세요.
+`security key-manager external modify-server -vserver _svm_name_ -key-servers _primary_key_server_ -secondary-key-servers _list_of_key_servers_` 보조 키 서버에 대한 자세한 내용은 다음을 참조하세요. <<mod-secondary>>.
 
 
 --
@@ -76,7 +75,7 @@ SVM에 이미 최대 4개의 기본 키 서버가 활성화되어 있는 경우,
 
 === 보조 키 서버를 수정합니다
 
-2차 키 서버는 보안 키 관리자 외부 수정-서버 명령어의 '-2차-키-서버' 매개변수로 관리된다. '-secondary-key-servers' 매개변수는 쉼표로 구분된 목록을 허용합니다. 목록에 있는 보조 키 서버의 지정된 순서에 따라 보조 키 서버의 액세스 순서가 결정됩니다. 액세스 순서는 2차 키 서버가 다른 순서로 입력된 상태에서 보안 키 관리자 외부 수정 서버 명령을 실행하여 수정할 수 있습니다.
+보조 키 서버는 다음과 같이 관리됩니다. `-secondary-key-servers` 의 매개변수 `security key-manager external modify-server` 명령. 그만큼 `-secondary-key-servers` 매개변수는 쉼표로 구분된 목록을 허용합니다. 목록에서 보조 키 서버의 지정된 순서는 보조 키 서버의 액세스 순서를 결정합니다. 명령을 실행하여 액세스 순서를 수정할 수 있습니다. `security key-manager external modify-server` 2차 키 서버는 다른 순서로 입력됩니다. 보조 키 서버에 대한 포트 번호를 포함하지 마세요.
 
 2차 키 서버를 제거하려면 제거할 키 서버를 생략하면서 유지하고자 하는 키 서버가 '-2차 키 서버' 인수에 포함되어야 합니다. 모든 보조 키 서버를 제거하려면 '-' 인수를 사용하여 아무 것도 표시하지 않습니다.
 
