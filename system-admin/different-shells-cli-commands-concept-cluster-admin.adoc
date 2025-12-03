@@ -45,11 +45,7 @@ summary: 클러스터에는 클러스터 셸, 노드 쉘, 시스템 쉘과 같�
 
 일반적으로 사용되는 노드 쉘의 명령 및 옵션은 클러스터 쉘에 터널링되거나 별칭되어 클러스터 쉘에서도 실행될 수 있습니다.
 
-클러스터 쉘에서 지원되는 노드 쉘은 'vserver options clustershell' 명령을 사용하여 액세스할 수 있습니다. 이러한 옵션을 보려면 다음 중 하나를 실행합니다.
-
-* 으로 클러스터 셸 CLI를 쿼리합니다 `vserver options -vserver _nodename_or_clustername_ -option-name ?`
-* 에 대한 자세한 내용은 `vserver options` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+options["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+클러스터 셸에서 지원되는 Nodeshell 옵션은 다음을 사용하여 액세스할 수 있습니다. `vserver options clustershell` 명령. 이러한 옵션을 보려면 다음을 사용하여 클러스터셸 CLI를 쿼리할 수 있습니다. `vserver options -vserver _nodename_or_clustername_ -option-name ?`
 
 클러스터 쉘에 노드 쉘이나 레거시 명령 또는 옵션을 입력하고 명령 또는 옵션에 동일한 클러스터 셸 명령이 있으면 ONTAP에서 사용할 클러스터 셸 명령을 알려줍니다.
 
