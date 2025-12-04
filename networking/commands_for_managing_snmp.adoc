@@ -61,7 +61,7 @@ SNMP 사용자를 구성합니다
  a| 
 SNMP 사용자를 표시합니다
  a| 
-보안 snmpusers 및 보안 로그인 show-application snmp
+`security snmpusers`그리고 `security login show -application snmp`
 
 
 

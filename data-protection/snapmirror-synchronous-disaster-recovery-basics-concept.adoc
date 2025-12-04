@@ -183,6 +183,7 @@ ONTAP Select
 
 다음 기능은 SnapMirror 동기식 관계에서 지원되지 않습니다.
 
+* 자율 랜섬웨어 보호
 * 정합성 보장 그룹
 * DP_Optimized(DPO) 시스템
 * FlexGroup 볼륨

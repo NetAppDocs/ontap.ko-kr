@@ -15,11 +15,11 @@ SLM(Selective LUN Map)을 사용하는 것 외에도 igroup 및 포트 세트를
 
 Portset을 SLM과 함께 사용하여 특정 타겟에 대한 액세스를 특정 이니시에이터에 추가로 제한할 수 있습니다. 포트 세트와 함께 SLM을 사용하는 경우 LUN을 소유한 노드의 HA 파트너와 해당 노드의 포트셋 LIF 세트에서 LUN에 액세스할 수 있습니다.
 
-다음 예에서는 initiator1에 포트셋 이 없습니다. initiator1은 가 없으면 LIF1 및 LIF2 모두를 통해 lun1에 액세스할 수 있습니다.
+다음 예에서 host1에는 포트셋이 없습니다. 포트셋이 없으면 host1은 LIF1과 LIF2를 통해 LUN1에 액세스할 수 있습니다.
 
-image:bsag-c-mode-no-portset.gif["포트셋 없이 LUN 액세스를 보여 주는 이미지입니다"]
+image:bsag-c-mode-no-portset.png["포트셋 없이 LUN 액세스를 보여 주는 이미지입니다"]
 
-포트셋 를 사용하여 lun1에 대한 액세스를 제한할 수 있습니다. 다음 예제에서 initiator1은 LIF1을 통해서만 lun1을 액세스할 수 있습니다. 그러나 LIF2가 portset1에 없으므로 initiator1이 LIF2를 통해 lun1에 액세스할 수 없습니다.
+포트셋을 사용하여 LUN1에 대한 액세스를 제한할 수 있습니다. 다음 예에서 host1은 LIF1을 통해서만 LUN1에 액세스할 수 있습니다. 하지만 LIF2가 portset1에 없기 때문에 host1은 LIF2를 통해 LUN1에 액세스할 수 없습니다.
 
 image:bsag-c-mode-portset.gif["포트 et을 사용한 LUN 액세스를 보여 주는 이미지입니다"]
 

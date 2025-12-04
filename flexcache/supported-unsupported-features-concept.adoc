@@ -186,6 +186,9 @@ FabricPool
 ONTAP 9.7부터 지원됩니다
 
 
+NOTE: FabricPool 계층화가 활성화된 원본 볼륨에 대한 캐시로 FlexCache 볼륨을 생성할 수 있지만 FlexCache 볼륨 자체는 계층화할 수 없습니다.
+
+
 
  a| 
 FlexCache 재해 복구

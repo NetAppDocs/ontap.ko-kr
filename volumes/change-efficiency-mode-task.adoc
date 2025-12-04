@@ -11,9 +11,28 @@ summary: 'AFF 볼륨의 스토리지 효율성 모드를 `default` 에서 로 `e
 
 
 [role="lead"]
-ONTAP 9.10.1부터 볼륨 레벨 스토리지 효율성 모드_default_and_efficient_는 AFF 시스템에서만 지원됩니다. 이러한 모드는 새 AFF 볼륨을 생성할 때 기본 모드인 파일 압축(기본값) 또는 온도에 민감한 스토리지 효율성(효율적) 중에서 선택할 수 있습니다.  `volume efficiency modify`명령을 사용하여 AFF 볼륨의 스토리지 효율성 모드를 `default` 에서 로 `efficient`변경하거나, 볼륨 효율성이 아직 설정되지 않은 경우 효율성 모드를 설정할 수 있습니다.
+ONTAP 9.10.1부터 볼륨 수준 스토리지 효율성 모드인 _default_ 및 _efficient_는 AFF 시스템에서만 지원됩니다. 이러한 모드에서는 새로운 AFF 볼륨을 생성할 때 기본 모드인 파일 압축(기본값)과 온도에 민감한 저장 효율성(효율적) 중에서 선택할 수 있습니다. 이 모드에서는 온도에 민감한 저장 효율성을 활성화합니다.
 
 .단계
+ONTAP 시스템 관리자 또는 ONTAP CLI를 사용하여 이 작업을 수행할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+ONTAP 9.10.1부터, 온도에 민감한 스토리지 효율성 기능을 사용하여 시스템 관리자를 사용하여 스토리지 효율성을 높일 수 있습니다. 성능 기반 스토리지 효율성은 기본적으로 활성화되어 있습니다.
+
+. 스토리지 > 볼륨 * 을 클릭합니다.
+. 스토리지 효율성을 설정하거나 해제할 볼륨을 찾은 다음 을 클릭합니다 image:icon_kabob.gif["메뉴 옵션 아이콘"].
+. Edit > Volumes * 를 클릭하고 * Storage Efficiency * 로 스크롤합니다.
+. Enable 상위 스토리지 효율성 * 을 선택합니다.
+
+
+--
+.CLI를 참조하십시오
+--
+당신은 사용할 수 있습니다 `volume efficiency modify` AFF 볼륨의 저장 효율성 모드를 변경하는 명령 `default` 에게 `efficient`또는 볼륨 효율성이 아직 설정되지 않은 경우 효율성 모드를 설정할 수 있습니다.
+
 . 볼륨 효율성 모드를 변경합니다.
 +
 [listing]
@@ -22,4 +41,6 @@ volume efficiency modify -vserver <vserver name> -volume <volume name> -storage-
 ----
 
 
+--
+====
 에 대한 자세한 내용은 `volume efficiency modify` link:https://docs.netapp.com/us-en/ontap-cli/volume-efficiency-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.

@@ -113,7 +113,7 @@ ONTAP Mediator를 중지하려면 다음 단계를 수행하세요.
 
 . ONTAP Mediator 및 SCST 비활성화:
 +
-`systemctl diable ontap_mediator mediator-scst`
+`systemctl disable ontap_mediator mediator-scst`
 
 
 
