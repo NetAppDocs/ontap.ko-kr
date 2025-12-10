@@ -86,10 +86,9 @@ ONTAP 의 pNFS에는 다음 제한이 적용됩니다.
 
 
 .관련 정보
+* link:pnfs-tuning-performance-concept.html#network-interface-connectivity["pNFS용 네트워크 인터페이스 연결"]
 * link:../nfs-admin/enable-disable-nfsv41-task.html["NFSv4.1 활성화 또는 비활성화"]
-* link:../nfs-config/create-lif-task.html["LIF를 생성합니다"]
 * link:../nfs-admin/ontap-support-nfsv41-concept.html["NFSv4.1에 대한 ONTAP 지원"]
 * link:../nfs-admin/ontap-support-nfsv42-concept.html["NFSv4.2에 대한 ONTAP 지원"]
 * https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]
-* link:../flexgroup/index.html["FlexGroup 볼륨 관리"]
 

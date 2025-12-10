@@ -52,4 +52,5 @@ image::pNFS_fig_020.png[pNFS 구성 요구 사항]
 .관련 정보
 * link:../nfs-config/index.html["NFS 구성"]
 * link:../nfs-admin/ontap-support-nfsv41-concept.html["NFSv4.1에 대한 ONTAP 지원"]
+* link:pnfs-tuning-performance-concept.html#network-interface-connectivity["pNFS용 네트워크 인터페이스 연결"]
 
