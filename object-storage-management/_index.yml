@@ -48,7 +48,3 @@ indexpage:
       url: "/../s3-audit/create-enable-config-task.html"
     - title: 감사할 버킷을 선택합니다
       url: "/../s3-audit/select-buckets-task.html"
-  - title: 더 많은 리소스
-    links:
-    - title: TR-4814:S3 in ONTAP 모범 사례
-      url: https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf
