@@ -24,17 +24,45 @@ ONTAP 업그레이드 전에 펌웨어를 수동으로 업데이트할 필요는
 
 원활한 업데이트를 준비하려면 업그레이드를 시작하기 전에 SP 또는 BMC를 재부팅해야 합니다.
 
-.단계
-. 업그레이드 전에 SP 또는 BMC를 재부팅합니다.
+ONTAP CLI, SP 또는 BMC 사용하여 재부팅하십시오.
+
+[role="tabbed-block"]
+====
+.CLI를 참조하십시오
+--
+. SP 또는 BMC 재부팅하십시오.
 +
 [source, cli]
 ----
 system service-processor reboot-sp -node <node_name>
 ----
+
+
+--
+.SP
+--
+. SP 를 재부팅하세요:
 +
+[source, cli]
+----
+sp reboot
+----
+
+
+--
+.BMC
+--
+. BMC 를 재부팅하세요:
++
+[source, cli]
+----
+bmc reboot
+----
+
+
+--
+====
 한 번에 하나의 SP 또는 BMC만 재부팅합니다.  재부팅된 SP 또는 BMC가 완전히 재활용될 때까지 기다린 후 다음 SP를 재부팅합니다.
-
-
 
 또한 link:../update/firmware-task.html["펌웨어를 수동으로 업데이트합니다"]ONTAP 업그레이드 사이에 가능합니다. Digital Advisor가 있으면 link:https://activeiq.netapp.com/system-firmware/["ONTAP 이미지에 현재 포함되어 있는 펌웨어 버전 목록을 봅니다"^]가능합니다.
 
