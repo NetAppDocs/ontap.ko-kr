@@ -49,10 +49,6 @@ NOTE: 클러스터당 최대 노드는 * 지원되는 플랫폼 혼합 * 에서 
 
 | 9.17.1  a| 
 * VMware 워크로드를 위한 SnapMirror 액티브 싱크 NVMe/FC 및 NVMe/TCP 호스트 액세스.
-+
-
-NOTE: VMware에서 NVMe/TCP를 사용하려면 VMware 버그 ID: TR1049746이 해결되어야 합니다.
-
 
 
 

@@ -305,10 +305,6 @@ SnapMirror Active Sync는 SAN 프로토콜을 지원합니다.
 * FC 및 iSCSI 프로토콜은 ONTAP 9.9.1부터 지원됩니다.
 * NVMe 프로토콜은 ONTAP 9.17.1부터 VMware 워크로드에서 지원됩니다.
 +
-
-NOTE: VMware에서 NVMe/TCP를 사용하려면 VMware 버그 ID: TR1049746이 해결되어야 합니다.
-
-+
 SnapMirror Active Sync는 NVMe 프로토콜을 사용하여 다음을 지원하지 않습니다.
 
 +
