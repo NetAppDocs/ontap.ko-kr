@@ -80,7 +80,7 @@ NOTE: FIPS가 설정되어 있으면 RSA 키 길이 4096으로 인증서를 설�
 
 . FIPS 활성화:
 +
-`security config modify -is-fips-enabled true`
+`security config modify * -is-fips-enabled true`
 
 . 계속하라는 메시지가 나타나면 y를 입력합니다
 . ONTAP 9.9.1부터 재부팅이 필요하지 않습니다.  ONTAP 9.8 또는 이전 버전을 사용하는 경우 클러스터의 각 노드를 하나씩 수동으로 재부팅하세요.
