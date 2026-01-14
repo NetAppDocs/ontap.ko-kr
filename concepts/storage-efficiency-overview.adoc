@@ -65,7 +65,12 @@ xref:flexclone-volumes-files-luns-concept.html[FlexClone 기술] 스냅샷 메�
 ONTAP는 link:../volumes/enable-temperature-sensitive-efficiency-concept.html["온도에 민감한 스토리지 효율성"] 볼륨의 데이터에 액세스하는 빈도를 평가하고 해당 데이터에 적용되는 압축 수준에 해당 빈도를 매핑함으로써 이점을 제공합니다. 자주 액세스하지 않는 콜드 데이터의 경우 더 큰 데이터 블록이 압축됩니다. 자주 액세스하여 자주 덮어쓰는 핫 데이터의 경우 더 작은 데이터 블록이 압축되므로 프로세스 효율성이 향상됩니다.
 
 +
-ONTAP 9.8에 도입된 온도에 민감한 스토리지 효율성(TSSE)은 새로 생성된 씬 프로비저닝된 AFF 볼륨에서 자동으로 활성화됩니다. 하드웨어 오프로드 프로세서를 사용하는 ONTAP 9.15.1에 도입된 에서는  이 기능이 사용되지 link:builtin-storage-efficiency-concept.html["AFF A70, AFF A90 및 AFF A1K 플랫폼"]않습니다.
+ONTAP 9.8에서 도입된 온도 감응형 스토리지 효율(TSSE)은 새로 생성된 씬 프로비저닝 AFF 볼륨에서 자동으로 활성화됩니다. 해당 기능은 활성화되어 있지 않습니다.link:builtin-storage-efficiency-concept.html["AFF A70, AFF A90 및 AFF A1K 플랫폼"] ONTAP 9.15.1에 도입된 이 기능은 하드웨어 오프로드 프로세서를 사용합니다.
+
+
+
+
+NOTE: TSSE는 두꺼운 프로비저닝 볼륨에서만 지원되지 않습니다.
 
 * * CPU 또는 전용 오프로드 프로세서 스토리지 효율성 *
 +
