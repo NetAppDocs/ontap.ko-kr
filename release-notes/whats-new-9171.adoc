@@ -85,6 +85,13 @@ xref:../s3-multiprotocol/index.html#object-multipart-upload[태그 지정 및 �
 
 
  a| 
+xref:../anti-ransomware/index.html[자율형 랜섬웨어 보호 스냅샷 업데이트]
+ a| 
+ONTAP ARP 스냅샷에 대한 몇 가지 업데이트를 도입했습니다.
+
+
+
+ a| 
 xref:../system-admin/use-hsts-task.html[HTTP Strict Transport Security(HSTS) 지원]
  a| 
 ONTAP 웹 서비스에 대해 HTTP Strict Transport Security를 지원하여 사용자 브라우저와 ONTAP 간의 안전한 HTTPS 통신을 시행할 수 있습니다.
