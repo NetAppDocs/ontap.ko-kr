@@ -5,8 +5,6 @@ url: "/volume-admin/index.html"
 entries:
 - title: System Manager를 사용하여 볼륨 및 LUN 관리
   entries:
-  - title: 개요
-    url: "/volume-admin-overview-concept.html"
   - title: 볼륨 관리
     entries:
     - title: System Manager를 사용하여 ONTAP 볼륨 관리
