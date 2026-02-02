@@ -6,12 +6,14 @@ entries:
   url: "/anti-ransomware/index.html"
 - title: 활용 사례 및 고려 사항
   url: "/anti-ransomware/use-cases-restrictions-concept.html"
-- title: ARP 보호 활성화
+- title: ARP 활성화
   entries:
-  - title: 자율주행 랜섬웨어 보호 활성화
+  - title: 특정 볼륨에서 ARP 활성화
     url: "/anti-ransomware/enable-task.html"
-  - title: 기본적으로 Autonomous 랜섬웨어 Protection을 활성화합니다
+  - title: 새 볼륨에서 기본적으로 ARP를 활성화합니다
     url: "/anti-ransomware/enable-default-task.html"
+  - title: ARP 기본 활성화 옵트아웃
+    url: "/anti-ransomware/default-enable-change.html"
 - title: 학습 모드에서 활성 모드로 전환합니다
   url: "/anti-ransomware/switch-learning-to-active-mode.html"
 - title: SAN 볼륨의 엔트로피 평가 기간에 대해 알아보세요

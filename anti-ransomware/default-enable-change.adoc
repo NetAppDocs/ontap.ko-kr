@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/default-enable-change.html 
+keywords: ransomware, arp, enable, set up, autonomous ransomware protection 
+summary: ONTAP 9.18.1부터 ARP가 기본적으로 자동으로 활성화됩니다. 12시간의 유예 기간 동안 또는 이후에 이 기본 활성화를 선택 해제할 수 있습니다. 
+---
+= ONTAP 자율형 랜섬웨어 보호 기능의 기본 활성화를 해제합니다
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.18.1부터 ARP 라이센스가 설치되어 있는 경우 업그레이드 또는 새로 설치한 후 12시간의 워밍업 기간이 지나면 AFF A-series 및 AFF C-series, ASA, ASA r2 시스템의 모든 새 볼륨에서 ARP(Autonomous Ransomware Protection)가 기본적으로 자동으로 활성화됩니다. System Manager 또는 ONTAP CLI를 사용하여 12시간 유예 기간 중 또는 이후에 이 기본 활성화를 해제할 수 있습니다.
+
+
+NOTE: 기존 볼륨은 ARP용 link:enable-task.html["수동으로 활성화됨"]이어야 합니다.
+
+.이 작업에 대해
+이 절차에 대해 선택한 설정은 나중에 변경할 수 있습니다. 유예 기간 이후에는 언제든지 기본 활성화 기능을 켜거나 끌 수 있습니다.
+
+[source, cli]
+----
+security anti-ransomware auto-enable modify -new-volume-auto-enable false|true
+----
+.단계
+System Manager 또는 ONTAP CLI를 사용하여 ARP 기본 활성화 옵션을 관리할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 클러스터 > 설정 * 을 선택합니다.
+. 다음 중 하나를 수행합니다.
++
+** 활성 유예 기간 동안 비활성화:
++
+... *랜섬웨어 방지* 섹션에서 ARP가 활성화되기까지 남은 시간을 나타내는 메시지가 표시됩니다. *활성화 안 함*을 선택합니다.
+... 다음 대화 상자에서 *Disable*을 선택하여 새 볼륨에 대한 기본 ARP 활성화가 해제되었는지 확인하십시오.
+
+
+** 유예 기간 후 비활성화:
++
+... *랜섬웨어 방지* 섹션에서 image:icon_pencil.gif["편집 아이콘"]를 선택하세요.
+... 확인란을 선택한 다음 *저장*을 클릭하여 새 볼륨에 대한 기본 ARP 활성화를 비활성화합니다.
+
+
+
+
+
+
+--
+.CLI를 참조하십시오
+--
+. 기본 활성화 상태를 확인합니다.
++
+[source, cli]
+----
+security anti-ransomware auto-enable show
+----
+. 새 볼륨에 대한 기본 활성화 비활성화:
++
+[source, cli]
+----
+security anti-ransomware auto-enable modify -new-volume-auto-enable false
+----
+
+
+--
+====
+.관련 정보
+* link:enable-task.html["개별 볼륨에서 ONTAP 자율형 랜섬웨어 보호 기능을 활성화합니다"]
+

@@ -110,9 +110,9 @@ SnapMirror S3
 * link:../s3-config/create-bucket-lifecycle-rule-task.html["버킷 수명 주기 관리"] (ONTAP 9.13.1부터)
 * FabricPool 클라우드 계층(네이티브 S3만 해당)
 * FabricPool 로컬 계층(NAS 볼륨만 해당)
+* FlexCache 볼륨(ONTAP 9.18.1부터 지원)
 
  a| 
-* FlexCache 볼륨
 * FPolicy를 참조하십시오
 * Qtree
 * 할당량

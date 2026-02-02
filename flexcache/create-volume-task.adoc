@@ -11,16 +11,17 @@ summary: 핫 객체에 액세스할 때 성능을 개선하기 위해 동일한 
 
 
 [role="lead"]
-핫 객체에 액세스할 때 성능을 개선하기 위해 동일한 클러스터에 FlexCache 볼륨을 생성할 수 있습니다. 여러 위치에 데이터 센터가 있는 경우 원격 클러스터에 FlexCache 볼륨을 생성하여 데이터 액세스를 가속할 수 있습니다.
+자주 사용되는 객체에 액세스할 때 성능을 향상시키기 위해 동일한 ONTAP 클러스터 내에 FlexCache 볼륨을 생성할 수 있습니다. 데이터 센터가 여러 위치에 있는 경우 원격 ONTAP 클러스터에 FlexCache 볼륨을 생성하여 데이터 액세스 속도를 높일 수 있습니다.
 
 .이 작업에 대해
-* ONTAP 9.5부터 FlexCache는 FlexVol 볼륨을 원본 볼륨으로, FlexGroup 볼륨을 FlexCache 볼륨으로 지원합니다.
-* ONTAP 9.7부터 FlexVol volume 볼륨과 FlexGroup 볼륨이 모두 원본 볼륨으로 지원됩니다.
-* ONTAP 9.14.0부터 암호화된 소스에서 암호화되지 않은 FlexCache 볼륨을 만들 수 있습니다.
+* ONTAP 9.18.1부터 볼륨 생성 시 `-is-s3-enabled` 옵션을 `true`로 설정하여 FlexCache 볼륨에서 NAS S3 버킷 액세스를 활성화할 수 있습니다. 이 옵션은 기본적으로 비활성화되어 있습니다.
 * ONTAP 9.18.1부터 FlexCache SVM-DR 관계에 속하는 SVM이 있는 원본 볼륨에 대한 캐시 볼륨을 생성하는 것을 지원합니다.
 +
 ONTAP 9.18.1 이상을 실행하는 경우 스토리지 관리자는 SVM-DR 관계에 속한 원본 볼륨의 캐시 볼륨을 생성하기 전에 SVM-DR 관계에 속한 기본 및 보조 원본 SVM 모두와 캐시 SVM을 피어링해야 합니다.
 
+* ONTAP 9.14.0부터 암호화된 소스에서 암호화되지 않은 FlexCache 볼륨을 만들 수 있습니다.
+* ONTAP 9.7부터 FlexVol 볼륨과 FlexGroup 볼륨 모두 원본 볼륨으로 지원됩니다.
+* ONTAP 9.5부터 FlexCache는 FlexVol 볼륨을 원본 볼륨으로, FlexGroup 볼륨을 FlexCache 볼륨으로 지원합니다.
 
 
 .시작하기 전에
@@ -39,7 +40,7 @@ NOTE: HA 쌍이 를 사용 중인 경우 link:https://docs.netapp.com/us-en/onta
 ====
 .시스템 관리자
 --
-. FlexCache 볼륨이 원본 볼륨과 다른 클러스터에 있는 경우 클러스터 피어 관계를 생성합니다.
+. FlexCache 볼륨이 원본 볼륨과 다른 ONTAP 클러스터에 있는 경우 클러스터 피어 관계를 생성합니다.
 +
 .. 로컬 클러스터에서 * 보호 > 개요 * 를 클릭합니다.
 .. Intercluster Settings * 를 확장하고 * Add Network Interfaces * 를 클릭한 후 클러스터에 대한 클러스터 간 네트워크 인터페이스를 추가합니다.
@@ -144,7 +145,7 @@ vserver peer create -vserver <local_SVM> -peer-vserver <remote_SVM> -peer-cluste
 +
 [source, cli]
 ----
-volume flexcache create -vserver <cache_svm> -volume <cache_vol_name> -auto-provision-as flexgroup -size <vol_size> -origin-vserver <origin_svm> -origin-volume <origin_vol_name>
+volume flexcache create -vserver <cache_svm> -volume <cache_vol_name> -auto-provision-as flexgroup -size <vol_size> -origin-vserver <origin_svm> -origin-volume <origin_vol_name> -is-s3-enabled true|false
 ----
 +
 다음 예에서는 FlexCache 볼륨을 생성하고 프로비저닝할 기존 애그리게이트를 자동으로 선택합니다.
@@ -161,8 +162,16 @@ cluster1::> volume flexcache create -vserver vs_1 -volume fc1 -auto-provision-as
 +
 [listing]
 ----
-cluster1::> flexcache create -vserver vs34 -volume fc4 -aggr-list aggr34,aggr43 -origin-volume origin1 -size 400m -junction-path /fc4
+cluster1::> volume flexcache create -vserver vs34 -volume fc4 -aggr-list aggr34,aggr43 -origin-volume origin1 -size 400m -junction-path /fc4
 [Job 903] Job succeeded: Successful
+----
++
+다음 예제는 FlexCache 볼륨에서 S3 액세스를 활성화합니다.
+
++
+[listing]
+----
+cluster1::> volume flexcache create -vserver vs3 -volume cache_vs3_vol33 -origin-volume vol33 -origin-vserver vs3 -junction-path /cache_vs3_vol33 -is-s3-enabled true
 ----
 . FlexCache 볼륨과 원본 볼륨에서 FlexCache 관계를 확인합니다.
 +

@@ -5,14 +5,7 @@ keywords: anti-ransomware workloads, anti-ransomware requirements, anti-ransomwa
 summary: ARP는 NAS 및 SAN 워크로드에서 지원됩니다. NFS 스토리지의 데이터베이스, Windows 또는 Linux 홈 디렉터리, 비디오 및 이미지 워크로드에 가장 적합합니다. 
 ---
 = ONTAP 자율적 랜섬웨어 방어 사용 사례 및 고려사항
-:hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -83,8 +76,13 @@ ONTAP 9.10.1부터 NAS, NFS 및 SMB FlexVol 볼륨에 ARP를 사용할 수 있�
 
 
 | ARP/AI 및 자동 업데이트 | ✓ | ✓ |  |  |  |  |  |  |  
+
+
+| ARP/AI 기본 활성화^2^ | ✓ |  |  |  |  |  |  |  |  
 |===
 ^1^ ONTAP 9.16.1 및 9.17.1은 FlexGroup 볼륨에 대한 ARP/AI 지원을 제공하지 않습니다.  이러한 버전으로 업그레이드한 후에도 ARP에 대해 활성화된 FlexGroup 볼륨은 ARP/AI 이전에 사용된 것과 동일한 ARP 모델로 계속 작동합니다.  ONTAP 9.18.1부터 FlexGroup 볼륨은 ARP/AI 모델을 사용합니다.
+
+^2^ ONTAP 9.18.1부터 AFF A 시리즈 및 AFF C 시리즈, ASA 및 ASA r2 시스템에 대해 ARP/AI 기본 활성화 동작이 제공됩니다. 이 동작은 업그레이드 후 12시간의 유예 기간이 지난 후 또는 ONTAP 9.18.1을 새로 설치하는 경우 즉시 모든 새 볼륨에서 ARP/AI를 자동으로 활성화합니다. link:enable-task.html["기존 볼륨"]에서 ARP를 수동으로 활성화해야 합니다.
 
 
 
@@ -157,7 +155,7 @@ ARP는 처리량과 최대 IOPS로 측정했을 때 시스템 성능에 미치�
 
 | 쓰기 집약적이며 데이터를 압축할 수 없습니다. | 60  a| 
 * NAS: ONTAP 9.15.1 및 이전 버전의 경우 최대 IOPS의 10%
-* NAS: ONTAP 9.16.1 이상의 경우 최대 IOPS의 4%
+* NAS: ONTAP 9.16.1 이상 버전의 경우 최대 IOPS의 5%
 * SAN: ONTAP 9.17.1 이상의 경우 최대 IOPS의 5%
 
 
@@ -165,6 +163,33 @@ ARP는 처리량과 최대 IOPS로 측정했을 때 시스템 성능에 미치�
 ^1^ 권장 한도를 초과하여 볼륨을 추가하더라도 이러한 백분율을 넘으면 시스템 성능이 저하되지 않습니다.
 
 ARP 분석은 우선순위에 따라 실행되므로 보호된 볼륨 수가 늘어날수록 각 볼륨에서 분석이 실행되는 빈도가 줄어듭니다.
+
+[NOTE]
+====
+대량의 새 볼륨에 대해 ARP를 기본적으로 활성화하면 시스템 리소스 사용량이 증가할 수 있습니다. 볼륨에서 ARP를 활성화할 때는 스냅샷과 같은 경쟁 프로세스의 공간 요구 사항을 고려하십시오.
+
+====
+
+
+== 플랫폼별 ARP의 볼륨 제한
+
+ONTAP 9.18.1부터 ARP는 플랫폼 유형 및 CPU 코어 개수를 기반으로 증가된 볼륨 제한을 지원합니다.
+
+[cols="40,30"]
+|===
+| 플랫폼 유형 | 노드당 최대 ARP 지원 볼륨 
+
+
+| 로우엔드(CPU 코어 수가 최대 20개인 시스템) | 250 
+
+
+| 중급(최대 64개의 CPU 코어가 있는 시스템) | 500입니다 
+
+
+| 고급형(CPU 코어 개수가 64개 이상인 시스템) | 1000입니다 
+|===
+
+NOTE: CPU 코어 개수는 2노드 HA 쌍의 각 개별 노드에 적용됩니다.
 
 
 

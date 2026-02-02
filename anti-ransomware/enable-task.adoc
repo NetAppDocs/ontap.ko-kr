@@ -4,7 +4,7 @@ permalink: anti-ransomware/enable-task.html
 keywords: ransomware, arp, enable, set up, autonomous ransomware protection 
 summary: 'ONTAP 9.10.1부터 신규 또는 기존 볼륨에서 ARP(자율적 랜섬웨어 방어)를 활성화할 수 있습니다.' 
 ---
-= ONTAP 자율적 랜섬웨어 방어 활성화
+= 볼륨에서 ONTAP 자율형 랜섬웨어 보호 기능을 활성화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 'ONTAP 9.10.1부터 신규 또는 기존 볼륨에서 ARP(자율적 랜
 
 [role="lead"]
 ONTAP 9.10.1부터 기존 볼륨에서 ARP(자율적 랜섬웨어 방어)를 활성화하거나 새 볼륨을 생성한 후 처음부터 ARP를 활성화할 수 있습니다.
-
-모든 새로운 볼륨이 기본적으로 자율적 랜섬웨어 방어(ARP)에 활성화되도록 ONTAP 클러스터를 구성하려면 다음을 참조하십시오.link:enable-default-task.html["관련 ARP 절차"]
 
 .이 작업에 대해
 ARP를 활성화하려면 환경에 맞는 절차를 따르십시오.<<enable-arp-prereq,귀하의 환경이 특정 요구 사항을 충족하는지 확인하십시오.>> :
