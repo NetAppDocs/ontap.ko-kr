@@ -15,6 +15,9 @@ summary: 기본 볼륨 삭제 동작은 실수로 삭제된 FlexVol 볼륨을 �
 
 RW 또는 DP(volume show 명령 출력에서 볼 수 있음)가 있는 볼륨에 대한 볼륨 삭제 요청이 발생하면 볼륨이 부분적으로 삭제된 상태로 이동합니다. 기본적으로 이 항목은 완전히 삭제되기 전에 최소 12시간 동안 복구 대기열에 유지됩니다.
 
+
+NOTE: 삭제된 볼륨을 포함하는 SVM을 삭제하면 볼륨 복구 큐(VRQ)가 비워집니다. SVM이 소유한 볼륨을 복구할 필요가 없다는 것이 확실한 경우에만 SVM을 삭제하십시오. 소유 SVM이 삭제되면 볼륨 복구 큐에 있는 볼륨은 존재할 수 없습니다.
+
 .관련 정보
 * link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_use_the_Volume_Recovery_Queue["볼륨 복구 대기열 사용 방법"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/volume-delete.html["볼륨 삭제"^]

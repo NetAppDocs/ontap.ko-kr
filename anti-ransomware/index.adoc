@@ -85,7 +85,11 @@ ONTAP 9.18.1부터 AFF A 시리즈 및 AFF C 시리즈, ASA 및 ASA r2 시스템
 
 ONTAP에는 랜섬웨어로부터 보호하기 위한 FPolicy, 스냅샷, SnapLock 및 Active IQ Digital Advisor(Digital Advisor라고도 함)와 같은 기능이 포함되어 있지만, ARP는 추가적인 방어 계층을 제공합니다.
 
-랜섬웨어로부터 보호하는 NetApp 포트폴리오의 다른 기능에 대해 자세히 알아보려면 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap-technical-reports/ransomware-solutions/ransomware-active-iq.html["Ransomware 및 NetApp의 보호 포트폴리오"^] .
+랜섬웨어로부터 보호하는 NetApp 포트폴리오의 다른 기능에 대한 자세한 내용은 다음을 참조하십시오.
+
+* link:https://docs.netapp.com/us-en/ontap-technical-reports/ransomware-solutions/ransomware-active-iq.html["Ransomware 및 NetApp의 보호 포트폴리오"^]
+* link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-ps-hardening.html#ontap-cli-or-via-automation-script["PowerShell을 사용한 ONTAP 사이버 볼트 강화"^]
+
 
 
 
