@@ -11,6 +11,12 @@ entries:
 - title: FlexCache 볼륨을 생성합니다
   url: "/flexcache/create-volume-task.html"
 - section: flexcache-writeback
+- title: FlexCache 이중성
+  entries:
+  - title: FAQ 를 참조하십시오
+    url: "/flexcache/flexcache-duality-faq.html"
+  - title: NAS FlexCache 볼륨에 대한 S3 액세스를 활성화합니다
+    url: "/flexcache/enable-flexcache-duality.html"
 - title: FlexCache 볼륨 관리
   entries:
   - title: FlexCache 볼륨 감사에 대해 자세히 알아보십시오

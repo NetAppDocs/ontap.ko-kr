@@ -1,0 +1,332 @@
+---
+permalink: flexcache/enable-flexcache-duality.html 
+sidebar: sidebar 
+keywords: flexcache, s3, nas, dual protocol, certificates, ontap 9.18.1 
+summary: ONTAP 9.18.1부터 NAS FlexCache 볼륨에 대한 S3 액세스를 활성화할 수 있습니다. 이를 통해 클라이언트는 NFS 및 SMB와 같은 기존 NAS 프로토콜 외에도 S3 프로토콜을 사용하여 FlexCache 볼륨에 저장된 데이터에 액세스할 수 있습니다. 이 가이드는 설정 방법에 대한 빠른 시작 가이드입니다. 
+---
+= NAS FlexCache 볼륨에 대한 S3 액세스를 활성화합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.18.1부터 NAS FlexCache 볼륨에 대한 S3 액세스를 활성화할 수 있으며, 이를 "이중성"이라고도 합니다. 이를 통해 클라이언트는 NFS 및 SMB와 같은 기존 NAS 프로토콜 외에도 S3 프로토콜을 사용하여 FlexCache 볼륨에 저장된 데이터에 액세스할 수 있습니다. 다음 정보를 사용하여 FlexCache 이중성을 설정할 수 있습니다.
+
+
+
+== 필수 구성 요소
+
+시작하기 전에 다음 필수 조건을 모두 완료했는지 확인하십시오.
+
+* S3 프로토콜과 원하는 NAS 프로토콜(NFS, SMB 또는 둘 다)에 대한 라이센스가 부여되고 SVM에 구성되어 있는지 확인하십시오.
+* DNS 및 기타 필요한 서비스가 구성되어 있는지 확인하십시오.
+* 클러스터 및 SVM 피어링됨
+* FlexCache 볼륨 생성
+* 데이터 LIF가 생성되었습니다
+
+
+
+NOTE: FlexCache 이중성에 대한 더 자세한 문서는 link:https://docs.netapp.com/us-en/ontap/s3-multiprotocol/index.html#how-s3-multiprotocol-support-works["ONTAP S3 멀티프로토콜 지원"]을 참조하십시오.
+
+
+
+== 1단계: 인증서 생성 및 서명
+
+FlexCache 볼륨에 대한 S3 액세스를 활성화하려면 FlexCache 볼륨을 호스팅하는 SVM에 인증서를 설치해야 합니다. 이 예제에서는 자체 서명 인증서를 사용하지만 운영 환경에서는 신뢰할 수 있는 인증 기관(CA)에서 서명한 인증서를 사용해야 합니다.
+
+. [[anchor1-step]]SVM 루트 CA 생성:
++
+[source, cli]
+----
+security certificate create -vserver <svm> -type root-ca -common-name <arbitrary_name>
+----
+. [[anchor2-step]]인증서 서명 요청 생성:
++
+[source, cli]
+----
+security certificate generate-csr -common-name <dns_name_of_data_lif> -dns-name <dns_name_of_data_lif> -ipaddr <data_lif_ip>
+----
++
+출력 예:
+
++
+[listing]
+----
+-----BEGIN CERTIFICATE REQUEST-----
+MIICzjCCAbYCAQAwHzEdMBsGA1UEAxMUY2FjaGUxZy1kYXRhLm5hcy5sYWIwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCusJk075O8Uh329cHI6x+BaRS2
+w5wrqvzoYlidXtYmdCH3m1DDprBiAyfIwBC0/iU3Xd5NpB7nc1wK1CI2VEkrXGUg
+...
+vMIGN351+FgzLQ4X5lKfoMXCV70NqIakxzEmkTIUDKv7n9EVZ4b5DTTlrL03X/nK
++Bim2y2y180PaFB3NauZHTnIIzIc8zCp2IEqmFWyMDcdBjP9KS0+jNm4QhuXiM8F
+D7gm3g/O70qa5OxbAEal5o4NbOl95U0T0rwqTaSzFG0XQnK2PmA1OIwS5ET35p3Z
+dLU=
+-----END CERTIFICATE REQUEST-----
+----
++
+개인 키 예:
+
++
+[listing]
+----
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCusJk075O8Uh32
+9cHI6x+BaRS2w5wrqvzoYlidXtYmdCH3m1DDprBiAyfIwBC0/iU3Xd5NpB7nc1wK
+1CI2VEkrXGUgwBtx1K4IlrCTB829Q1aLGAQXVyWnzhQc4tS5PW/DsQ8t7olZ9zEI
+...
+rXGEdDaqp7jQGNXUGlbxO3zcBil1/A9Hc6oalNECgYBKwe3PeZamiwhIHLy9ph7w
+dJfFCshsPalMuAp2OuKIAnNa9l6fT9y5kf9tIbskT+t5Dth8bmV9pwe8UZaK5eC4
+Svxm19jHT5QqloDaZVUmMXFKyKoqPDdfvcDk2Eb5gMfIIb0a3TPC/jqqpDn9BzuH
+TO02fuRvRR/G/HUz2yRd+A==
+-----END PRIVATE KEY-----
+----
++
+
+NOTE: 나중에 참조할 수 있도록 인증서 요청서와 개인 키 사본을 보관하십시오.
+
+. [[anchor3-step]]인증서에 서명합니다.
++
+ `root-ca`는 <<anchor1-step,SVM 루트 CA 생성>>에서 생성한 것입니다.
+
++
+[source, cli]
+----
+certificate sign -ca <svm_root_ca> -ca-serial <svm_root_ca_sn> -expire-days 364 -format PEM -vserver <svm>
+----
+. <<anchor2-step,인증서 서명 요청 생성>>에서 생성된 CSR(Certificate Signing Request)을 붙여넣습니다.
++
+예:
+
++
+[listing]
+----
+-----BEGIN CERTIFICATE REQUEST-----
+MIICzjCCAbYCAQAwHzEdMBsGA1UEAxMUY2FjaGUxZy1kYXRhLm5hcy5sYWIwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCusJk075O8Uh329cHI6x+BaRS2
+w5wrqvzoYlidXtYmdCH3m1DDprBiAyfIwBC0/iU3Xd5NpB7nc1wK1CI2VEkrXGUg
+...
+vMIGN351+FgzLQ4X5lKfoMXCV70NqIakxzEmkTIUDKv7n9EVZ4b5DTTlrL03X/nK
++Bim2y2y180PaFB3NauZHTnIIzIc8zCp2IEqmFWyMDcdBjP9KS0+jNm4QhuXiM8F
+D7gm3g/O70qa5OxbAEal5o4NbOl95U0T0rwqTaSzFG0XQnK2PmA1OIwS5ET35p3Z
+dLU=
+-----END CERTIFICATE REQUEST-----
+----
++
+이 명령은 다음 예와 유사한 서명된 인증서를 콘솔에 출력합니다.
+
++
+서명된 인증서 예:
+
++
+[listing]
+----
+-----BEGIN CERTIFICATE-----
+MIIDdzCCAl+gAwIBAgIIGHolbgv5DPowDQYJKoZIhvcNAQELBQAwLjEfMB0GA1UE
+AxMWY2FjaGUtMTY0Zy1zdm0tcm9vdC1jYTELMAkGA1UEBhMCVVMwHhcNMjUxMTIx
+MjIxNTU4WhcNMjYxMTIwMjIxNTU4WjAfMR0wGwYDVQQDExRjYWNoZTFnLWRhdGEu
+...
+qS7zhj3ikWE3Gp9s+QijKWXx/0HDd1UuGqy0QZNqNm/M0mqVnokJNk5F4fBFxMiR
+1o63BxL8xGIRdtTCjjb2Gq2Wj7EClUw6CykEkxAcVk+XrRtArGkNtcYdtHfUsKVE
+wswvv0rNydrNnWhJLhSl8TW5Tex+OMyTXgk9/3K8kB0mAMrtxxYjt8tm+gztkivf
+J0eo1uDJhaNxqwEZRzFyGaa4k1+56oFzRfTc
+-----END CERTIFICATE-----
+----
+. 다음 단계를 위해 인증서를 복사합니다.
+. SVM에 서버 인증서를 설치합니다.
++
+[source, cli]
+----
+certificate install -type server -vserver <svm> -cert-name flexcache-duality
+----
+. <<anchor3-step,인증서에 서명합니다>>에서 서명된 인증서를 붙여넣습니다.
++
+예:
+
++
+[listing]
+----
+Please enter Certificate: Press <Enter> [twice] when done
+-----BEGIN CERTIFICATE-----
+MIIDdzCCAl+gAwIBAgIIGHolbgv5DPowDQYJKoZIhvcNAQELBQAwLjEfMB0GA1UE
+AxMWY2FjaGUtMTY0Zy1zdm0tcm9vdC1jYTELMAkGA1UEBhMCVVMwHhcNMjUxMTIx
+MjIxNTU4WhcNMjYxMTIwMjIxNTU4WjAfMR0wGwYDVQQDExRjYWNoZTFnLWRhdGEu
+bmFzLmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK6wmTTvk7xS
+...
+qS7zhj3ikWE3Gp9s+QijKWXx/0HDd1UuGqy0QZNqNm/M0mqVnokJNk5F4fBFxMiR
+1o63BxL8xGIRdtTCjjb2Gq2Wj7EClUw6CykEkxAcVk+XrRtArGkNtcYdtHfUsKVE
+wswvv0rNydrNnWhJLhSl8TW5Tex+OMyTXgk9/3K8kB0mAMrtxxYjt8tm+gztkivf
+J0eo1uDJhaNxqwEZRzFyGaa4k1+56oFzRfTc
+-----END CERTIFICATE-----
+----
+. <<anchor2-step,인증서 서명 요청 생성>>에서 생성된 개인 키를 붙여넣습니다.
++
+예:
+
++
+[listing]
+----
+Please enter Private Key: Press <Enter> [twice] when done
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCusJk075O8Uh32
+9cHI6x+BaRS2w5wrqvzoYlidXtYmdCH3m1DDprBiAyfIwBC0/iU3Xd5NpB7nc1wK
+1CI2VEkrXGUgwBtx1K4IlrCTB829Q1aLGAQXVyWnzhQc4tS5PW/DsQ8t7olZ9zEI
+W/gaEIajgpXIwGNWZ+weKQK+yoolxC+gy4IUE7WvnEUiezaIdoqzyPhYq5GC4XWf
+0johpQugOPe0/w2nVFRWJoFQp3ZP3NZAXc8H0qkRB6SjaM243XV2jnuEzX2joXvT
+wHHH+IBAQ2JDs7s1TY0I20e49J2Fx2+HvUxDx4BHao7CCHA1+MnmEl+9E38wTaEk
+NLsU724ZAgMBAAECggEABHUy06wxcIk5hO3S9Ik1FDZV3JWzsu5gGdLSQOHRd5W+
+...
+rXGEdDaqp7jQGNXUGlbxO3zcBil1/A9Hc6oalNECgYBKwe3PeZamiwhIHLy9ph7w
+dJfFCshsPalMuAp2OuKIAnNa9l6fT9y5kf9tIbskT+t5Dth8bmV9pwe8UZaK5eC4
+Svxm19jHT5QqloDaZVUmMXFKyKoqPDdfvcDk2Eb5gMfIIb0a3TPC/jqqpDn9BzuH
+TO02fuRvRR/G/HUz2yRd+A==
+-----END PRIVATE KEY-----
+----
+. 서버 인증서의 인증서 체인을 구성하는 인증 기관(CA)의 인증서를 입력하십시오.
++
+이는 서버 인증서를 발급한 CA 인증서부터 시작하여 루트 CA 인증서까지 이어질 수 있습니다.
+
++
+[listing]
+----
+Do you want to continue entering root and/or intermediate certificates {y|n}: n
+
+You should keep a copy of the private key and the CA-signed digital certificate for future reference.
+
+The installed certificate's CA and serial number for reference:
+CA: cache-164g-svm-root-ca
+serial: 187A256E0BF90CFA
+----
+. SVM 루트 CA의 공개 키를 가져옵니다.
++
+[source, cli]
+----
+security certificate show -vserver <svm> -common-name <root_ca_cn> -ca <root_ca_cn> -type root-ca -instance
+
+-----BEGIN CERTIFICATE-----
+MIIDgTCCAmmgAwIBAgIIGHokTnbsHKEwDQYJKoZIhvcNAQELBQAwLjEfMB0GA1UE
+AxMWY2FjaGUtMTY0Zy1zdm0tcm9vdC1jYTELMAkGA1UEBhMCVVMwHhcNMjUxMTIx
+MjE1NTIzWhcNMjYxMTIxMjE1NTIzWjAuMR8wHQYDVQQDExZjYWNoZS0xNjRnLXN2
+bS1yb290LWNhMQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+...
+DoOL7vZFFt44xd+rp0DwafhSnLH5HNhdIAfa2JvZW+eJ7rgevH9wmOzyc1vaihl3
+Ewtb6cz1a/mtESSYRNBmGkIGM/SFCy5v1ROZXCzF96XPbYQN4cW0AYI3AHYBZP0A
+HlNzDR8iml4k9IuKf6BHLFA+VwLTJJZKrdf5Jvjgh0trGAbQGI/Hp2Bjuiopkui+
+n4aa5Rz0JFQopqQddAYnMuvcq10CyNn7S0vF/XLd3fJaprH8kQ==
+-----END CERTIFICATE-----
+----
++
+
+NOTE: 이는 클라이언트가 SVM 루트 CA에서 서명한 인증서를 신뢰하도록 구성하는 데 필요합니다. 공개 키가 콘솔에 출력됩니다. 공개 키를 복사하여 저장하십시오. 이 명령의 값은 <<anchor1-step,SVM 루트 CA 생성>>에 입력한 값과 동일합니다.
+
+
+
+
+
+== 2단계: S3 서버 구성
+
+. S3 프로토콜 액세스 활성화:
++
+[source, cli]
+----
+vserver show -vserver <svm> -fields allowed-protocols
+----
++
+
+NOTE: S3는 기본적으로 SVM 수준에서 허용됩니다.
+
+. 기존 정책 복제:
++
+[source, cli]
+----
+network interface service-policy clone -vserver <svm> -policy default-data-files -target-vserver <svm> -target-policy <any_name>
+----
+. 복제된 정책에 S3를 추가합니다.
++
+[source, cli]
+----
+network interface service-policy add-service -vserver <svm> -policy <any_name> -service data-s3-server
+----
+. 데이터 LIF에 새 정책을 추가합니다.
++
+[source, cli]
+----
+network interface modify -vserver <svm> -lif <data_lif> -service-policy duality
+----
++
+
+NOTE: 기존 LIF의 서비스 정책을 수정하면 중단이 발생할 수 있습니다. LIF를 중지했다가 새 서비스에 대한 리스너와 함께 다시 시작해야 합니다. TCP는 이 작업에서 빠르게 복구되어야 하지만 잠재적인 영향을 인지하고 있어야 합니다.
+
+. SVM에 S3 오브젝트 저장소 서버를 생성합니다.
++
+[source, cli]
+----
+vserver object-store-server create -vserver <svm> -object-store-server <dns_name_of_data_lif> -certificate-name flexcache-duality
+----
+. FlexCache 볼륨에서 S3 기능을 활성화합니다.
++
+ `flexcache config`옵션 `-is-s3-enabled`을 버킷을 생성하기 전에  `true`로 설정해야 합니다. 또한  `-is-writeback-enabled`옵션을  `false`로 설정해야 합니다.
+
++
+다음 명령은 기존 FlexCache를 수정합니다.
+
++
+[source, cli]
+----
+flexcache config modify -vserver <svm> -volume <fcache_vol> -is-writeback-enabled false -is-s3-enabled true
+----
+. S3 버킷 생성:
++
+[source, cli]
+----
+vserver object-store-server bucket create -vserver <svm> -bucket <bucket_name> -type nas -nas-path <flexcache_junction_path>
+----
+. 버킷 정책 생성:
++
+[source, cli]
+----
+vserver object-store-server bucket policy add-statement -vserver <svm> -bucket <bucket_name> -effect allow
+----
+. S3 사용자 생성:
++
+[source, cli]
+----
+vserver object-store-server user create -user <user> -comment ""
+----
++
+출력 예:
+
++
+[listing]
+----
+    Vserver: <svm>>
+       User: <user>>
+ Access Key: WCOT7...Y7D6U
+ Secret Key: 6143s...pd__P
+    Warning: The secret key won't be displayed again. Save this key for future use.
+----
+. 루트 사용자의 키 재생성:
++
+[source, cli]
+----
+vserver object-store-server user regenerate-keys -vserver <svm> -user root
+----
++
+출력 예:
+
++
+[listing]
+----
+    Vserver: <svm>>
+       User: root
+ Access Key: US791...2F1RB
+ Secret Key: tgYmn...8_3o2
+    Warning: The secret key won't be displayed again. Save this key for future use.
+----
+
+
+
+
+== 3단계: 클라이언트 설정
+
+다양한 S3 클라이언트를 사용할 수 있습니다. AWS CLI를 사용하는 것이 좋은 시작점입니다. 자세한 내용은 link:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html["AWS CLI 설치"^]을 참조하십시오.
