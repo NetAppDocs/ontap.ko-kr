@@ -19,13 +19,17 @@ LIF에서 지원되는 트래픽 유형을 결정하는 LIF에 서비스 정책(
 
 NOTE: 네트워크 트래픽을 관리하는 방법은 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에서 트래픽을 관리해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking/lif_roles95.html["LIF 역할(ONTAP 9.5 이하)"^].
 
+
+IMPORTANT: FCP 및 NVMe/FCP 프로토콜은 현재 서비스 정책이 필요하지 않습니다.
+
 네트워크 인터페이스 service-policy show 명령을 사용하여 서비스 정책과 세부 정보를 표시할 수 있습니다
 
 에 대한 자세한 내용은 `network interface service-policy show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 특정 서비스에 바인딩되지 않은 기능은 시스템 정의 동작을 사용하여 아웃바운드 연결에 대해 LIF를 선택합니다.
 
-빈 서비스 정책이 있는 LIF에서 애플리케이션이 예기치 않게 동작할 수 있습니다.
+
+NOTE: 빈 서비스 정책이 있는 LIF에서 애플리케이션이 예기치 않게 동작할 수 있습니다.
 
 
 

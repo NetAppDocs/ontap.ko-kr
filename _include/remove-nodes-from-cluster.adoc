@@ -1,0 +1,148 @@
+= 
+:allow-uri-read: 
+
+
+. 권한 수준을 고급으로 변경합니다.
++
+[source, cli]
+----
+set -privilege advanced
+----
+. 클러스터에서 epsilon을 가진 노드를 식별하십시오.
++
+[source, cli]
+----
+cluster show
+----
++
+다음 예에서 "node0"은 현재 epsilon을 보유하고 있습니다.
+
++
+[listing]
+----
+cluster::*>
+Node                 Health  Eligibility  Epsilon
+-------------------- ------- ------------ ------------
+node0                true    true         true
+node1                true    true         false
+node2                true    true         false
+node3                true    true         false
+----
+. [[epsilon-true]]제거하려는 노드가 epsilon을 보유하고 있는 경우:
++
+.. 제거하려는 노드에서 epsilon을 이동합니다.
++
+[source, cli]
+----
+cluster modify -node <name_of_node_to_be_removed> -epsilon false
+----
+.. 제거하지 않을 노드로 epsilon을 이동합니다.
++
+[source, cli]
+----
+cluster modify -node <node_name> -epsilon true
+----
+
+
+. 현재 마스터 노드를 식별합니다.
++
+[source, cli]
+----
+cluster ring show
+----
++
+마스터 노드는 `vldb` , , `vifmgr`, `bcomd` 및 `crs` 같은 프로세스를 포함하는 노드입니다. `mgmt`
+
+. 제거하려는 노드가 현재 master 노드인 경우, 클러스터의 다른 노드가 master 노드로 선출될 수 있도록 설정하십시오.
++
+.. 현재 마스터 노드가 클러스터에 참여할 수 없는 상태가 되도록 합니다.
++
+[source, cli]
+----
+cluster modify -node <node_name> -eligibility false
+----
++
+해당 노드는 자격이 복원될 때까지 비정상 상태로 표시됩니다. 마스터 노드가 자격을 상실하면 클러스터 쿼럼에 의해 나머지 노드 중 하나가 새로운 마스터로 선출됩니다.
+
++
+[NOTE]
+====
+HA 쌍에서 첫 번째 노드에 대해 이 단계를 수행하는 경우 해당 노드만 부적격으로 표시해야 합니다. HA 파트너의 상태는 수정하지 마십시오.
+
+파트너 노드를 새로운 마스터로 선택한 경우, 해당 노드가 epsilon을 보유하고 있는지 확인한 후 마스터 자격 박탈을 진행해야 합니다. 파트너 노드가 epsilon을 보유하고 있다면, 해당 노드를 마스터 자격 박탈하기 전에 클러스터에 남아 있는 다른 노드로 epsilon을 이동해야 합니다. 이 작업은 파트너 노드를 제거하기 위해 위의 단계를 반복할 때 수행합니다.
+
+====
+.. 이전 마스터 노드가 클러스터에 다시 참여할 수 있도록 합니다.
++
+[source, cli]
+----
+cluster modify -node <node_name> -eligibility true
+----
+
+
+. 클러스터에서 제거하지 않을 노드의 원격 노드 관리 LIF 또는 클러스터 관리 LIF에 로그인하십시오.
+. 클러스터에서 노드를 제거합니다.
++
+|===
+| 이 ONTAP 버전의 경우... | 이 명령 사용... 
+
+
+ a| 
+ONTAP 9.3
+ a| 
+[source, cli]
+----
+cluster unjoin
+----
+
+
+ a| 
+ONTAP 9.4 이상
+ a| 
+노드 이름:
+
+[source, cli]
+----
+cluster remove-node -node <node_name>
+----
+노드 IP 사용:
+
+[source, cli]
+----
+cluster remove-node -cluster_ip <node_ip>
+----
+|===
++
+혼합 버전 클러스터가 있고 마지막 하위 버전 노드를 제거하는 경우 이 명령과 함께 '-skip-last-low-version-node-check' 매개 변수를 사용합니다.
+
++
+시스템에서 다음 정보를 알려줍니다.
+
++
+** 또한 클러스터의 페일오버 파트너도 제거해야 합니다.
+** 노드가 제거된 후 클러스터에 다시 참여하기 전에 부팅 메뉴 옵션 *(4) Clean configuration and initialize all disks* 또는 옵션 *(9) Configure Advanced Drive Partitioning*을 사용하여 노드의 구성을 지우고 모든 디스크를 초기화해야 합니다.
++
+노드를 제거하기 전에 해결해야 하는 조건이 있는 경우 실패 메시지가 생성됩니다. 예를 들어, 메시지에서 제거해야 하는 공유 리소스가 노드에 포함되어 있거나 해당 노드가 반드시 해제해야 하는 클러스터 HA 구성 또는 스토리지 페일오버 구성에 포함되어 있음을 나타낼 수 있습니다.
+
++
+노드가 쿼럼 마스터인 경우 클러스터가 잠시 손실되었다가 쿼럼으로 돌아갑니다. 이 쿼럼 손실은 일시적이며 데이터 작업에 영향을 주지 않습니다.
+
+
+
+. 오류 메시지에 오류 상태가 표시되면 해당 조건을 해결하고 클러스터 remove-node 또는 cluster unjoin 명령을 다시 실행합니다.
++
+노드는 클러스터에서 성공적으로 제거된 후 자동으로 재부팅됩니다.
+
+. 노드를 용도 변경할 경우 노드 구성을 지우고 모든 디스크를 초기화합니다.
++
+.. 부팅 프로세스 중에 부팅 메뉴가 표시되면 Ctrl-C를 눌러 부팅 메뉴를 표시합니다.
+.. 부팅 메뉴 옵션 *(4) Clean configuration and initialize all disks*를 선택합니다.
+
+
+. [[return-admin]]admin 권한 수준으로 돌아갑니다:
++
+[source, cli]
+----
+set -privilege admin
+----
+
