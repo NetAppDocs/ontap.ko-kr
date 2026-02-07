@@ -14,6 +14,7 @@ summary: ONTAP 9.3부터는 새 구성요소를 볼륨에 추가하여 SnapMirro
 ONTAP 9.3부터는 새 구성요소를 볼륨에 추가하여 SnapMirror 관계에 있는 소스 FlexGroup 볼륨과 타겟 FlexGroup 볼륨을 확장할 수 있습니다. 대상 볼륨을 수동 또는 자동으로 확장할 수 있습니다.
 
 .이 작업에 대해
+* 이 작업은 FlexGroup 볼륨 확장을 자동으로 관리하는 SVM-DR 관계에는 적용되지 않습니다.
 * 확장 후에는 소스 FlexGroup 볼륨과 SnapMirror 관계의 타겟 FlexGroup 볼륨에 있는 구성 수가 일치해야 합니다.
 +
 볼륨의 구성요소 수가 일치하지 않는 경우 SnapMirror 전송이 실패합니다.
