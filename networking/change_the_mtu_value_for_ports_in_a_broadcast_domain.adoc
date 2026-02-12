@@ -19,28 +19,57 @@ summary: 브로드캐스트 도메인의 MTU 값을 수정하여 브로드캐스
 
 NOTE: 브로드캐스트 도메인 포트의 MTU 값을 변경하는 절차는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에서 브로드캐스트 도메인 포트의 MTU 값을 변경해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-bd/change_the_mtu_value_for_ports_in_a_broadcast_domain97.html["브로드캐스트 도메인의 포트에 대한 MTU 값 변경(ONTAP 9.7 이하)"^].
 
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+ONTAP 9.12.1부터 System Manager를 사용하여 브로드캐스트 도메인의 MTU 값을 수정하면 해당 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경할 수 있습니다.
+
+.단계
+. *Network > Broadcast Domains*를 선택합니다.
+. *브로드캐스트 도메인* 섹션에서 MTU 값을 변경하려는 브로드캐스트 도메인의 이름을 선택합니다.
+. 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경할 것인지 확인하는 메시지가 나타납니다. 변경을 진행하려면 *Yes*를 클릭하십시오.
+. 필요에 따라 MTU 값을 수정하고 변경 사항을 저장하십시오.
++
+시스템은 브로드캐스트 도메인의 모든 포트에 새 MTU 값을 적용하므로 해당 포트를 통한 트래픽이 잠시 중단됩니다.
+
+
+
+--
+.CLI를 참조하십시오
+--
 .시작하기 전에
 MTU 값은 e0M 포트 처리 관리 트래픽을 제외하고 해당 계층 2 네트워크에 연결된 모든 장치와 일치해야 합니다.
 
 .이 작업에 대해
-MTU 값을 변경하면 영향을 받는 포트에서 트래픽이 잠시 중단됩니다. MTU를 변경하려면 y로 답해야 한다는 메시지가 표시됩니다.
+MTU 값을 변경하면 해당 포트를 통한 트래픽이 잠시 중단됩니다. 시스템에 메시지가 표시되며, MTU 변경을 위해서는 *y*를 입력해야 합니다.
 
 .단계
 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경합니다.
 
-....
+[listing]
+----
 network port broadcast-domain modify -broadcast-domain <broadcast_domain_name> -mtu <mtu_value> [-ipspace <ipspace_name>]
-....
+----
+위치:
+
 * broadcast_domain은 브로드캐스트 도메인의 이름입니다.
 * Mtu는 IP 패킷의 MTU 크기이고 1500과 9000은 일반적인 값입니다.
-* IPSpace는 이 브로드캐스트 도메인이 상주하는 IPspace의 이름입니다. 이 옵션에 대한 값을 지정하지 않으면 "기본" IPspace가 사용됩니다. 다음 명령을 실행하면 브로드캐스트 도메인 bcast1의 모든 포트에 대한 MTU가 9000으로 변경됩니다.
+* `ipspace`는 이 브로드캐스트 도메인이 상주하는 IPspace의 이름입니다. 이 옵션에 값을 지정하지 않으면 "Default" IPspace가 사용됩니다.
++
+다음 명령은 브로드캐스트 도메인 bcast1의 모든 포트에 대한 MTU를 9000으로 변경합니다.
 
-
-....
++
+[listing]
+----
 network port broadcast-domain modify -broadcast-domain <Default-1> -mtu < 9000 >
 Warning: Changing broadcast domain settings will cause a momentary data-serving interruption.
 Do you want to continue? {y|n}: <y>
-....
+----
+
+
+--
+====
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/network-port-broadcast-domain-modify.html["네트워크 포트 브로드캐스트 - 도메인 수정"^]
 

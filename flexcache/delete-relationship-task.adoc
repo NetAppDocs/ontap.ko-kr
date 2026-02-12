@@ -13,6 +13,9 @@ summary: 더 이상 FlexCache 볼륨이 필요하지 않은 경우 FlexCache 관
 [role="lead"]
 더 이상 FlexCache 볼륨이 필요하지 않은 경우 FlexCache 관계 및 FlexCache 볼륨을 삭제할 수 있습니다.
 
+.시작하기 전에
+FlexCache 쓰기 되돌림 기능이 활성화된 경우 FlexCache 볼륨을 삭제하기 전에 먼저 해당 기능을 비활성화해야 합니다. link:../flexcache-writeback/flexcache-writeback-enable-task.html#disable-write-back-on-a-flexcache-volume["FlexCache 볼륨에서 write-back을 비활성화합니다"]을 참조하십시오.
+
 .단계
 . FlexCache 볼륨이 있는 클러스터에서 FlexCache 볼륨을 오프라인으로 설정합니다.
 +
