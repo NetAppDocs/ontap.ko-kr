@@ -22,6 +22,7 @@ ONTAP 9.11.1부터는 LDAP_Fast BIND_FUNGION(_CONNEC동시 바인드_)을 활용
 
 link:https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/dc4eb502-fb94-470c-9ab8-ad09fa720ea6["빠른 바인딩 사용에 대해 알아보십시오."^]
 
+.시작하기 전에
 LDAP 고속 바인딩에 기존 LDAP 클라이언트 구성을 사용할 수 있습니다. 그러나 LDAP 클라이언트를 TLS 또는 LDAPS용으로 구성하는 것이 좋습니다. 그렇지 않으면 암호를 일반 텍스트로 유선으로 보냅니다.
 
 ONTAP 환경에서 LDAP 고속 바인딩을 사용하려면 다음 요구 사항을 충족해야 합니다.
@@ -29,6 +30,7 @@ ONTAP 환경에서 LDAP 고속 바인딩을 사용하려면 다음 요구 사항
 * ONTAP admin 사용자는 빠른 바인딩을 지원하는 LDAP 서버에 구성해야 합니다.
 * ONTAP SVM은 이름 서비스 스위치(nsswitch) 데이터베이스에서 LDAP에 대해 구성해야 합니다.
 * ONTAP admin 사용자 및 그룹 계정은 빠른 바인딩을 사용하여 nsswitch 인증에 맞게 구성해야 합니다.
+* 빠른 바인딩이 성공하려면 관리자의 UID 번호와 GID 번호가 입력되어 있고 조회 가능해야 합니다.
 
 
 .단계

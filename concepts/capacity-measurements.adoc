@@ -39,7 +39,7 @@ ONTAP CLI에서 물리적으로 사용된 공간은 ONTAP 버전에 따라 다�
 | `volume show-space` | `physical used` | 애그리게이트의 절감 효과를 포함하여 볼륨 레벨 스토리지 효율성 절감 효과를 반영합니다. 
 
 
-| '볼륨 쇼' | `physical used` | 집계 수준의 스토리지 효율성 절감 효과가 포함되지 않으므로 link:..volumes/enable-temperature-sensitive-efficiency-concept.html["TSSE 지원 플랫폼"]의 볼륨 물리적 사용 공간을 정확하게 반영하지 않습니다. 
+| '볼륨 쇼' | `physical used` | 집계 수준의 스토리지 효율성 절감 효과가 포함되지 않으므로 link:../volumes/enable-temperature-sensitive-efficiency-concept.html["TSSE 지원 플랫폼"]의 볼륨 물리적 사용 공간을 정확하게 반영하지 않습니다. 
 
 
 .3+| 9.13.1 이하 | 볼륨 쇼 풋프린트 | `effective_total_footprint` | 애그리게이트의 절감 효과를 포함하여 실제 사용된 디스크 공간을 반영합니다. 
