@@ -23,7 +23,7 @@ NOTE: 브로드캐스트 도메인 포트의 MTU 값을 변경하는 절차는 O
 ====
 .시스템 관리자
 --
-ONTAP 9.12.1부터 System Manager를 사용하여 브로드캐스트 도메인의 MTU 값을 수정하면 해당 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경할 수 있습니다.
+ONTAP 9.12.0부터 System Manager를 사용하여 브로드캐스트 도메인의 MTU 값을 수정하면 해당 브로드캐스트 도메인의 모든 포트에 대한 MTU 값을 변경할 수 있습니다.
 
 .단계
 . *Network > Broadcast Domains*를 선택합니다.
