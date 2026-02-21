@@ -27,7 +27,7 @@ Hyper-V 서버는 Windows 2012 Server 이상에서 구성해야 합니다. 독�
 * Microsoft 클러스터 및 Hyper-V 서버 생성에 대한 자세한 내용은 Microsoft 웹 사이트를 참조하십시오.
 * SnapManager for Hyper-V는 SMB 구성을 통한 Hyper-V와 통합되도록 설계된 신속한 스냅샷 기반 백업 서비스를 지원하는 호스트 기반 애플리케이션입니다.
 +
-SMB 구성을 통한 Hyper-V에서 SnapManager를 사용하는 방법에 대한 자세한 내용은 _SnapManager for Hyper-V 설치 및 관리 가이드 _ 를 참조하십시오.
+SMB 구성을 통해 Hyper-V에서 SnapManager를 사용하는 방법에 대한 자세한 내용은 https://docs.netapp.com/us-en/snapmanager-hyper-v/index.html["SnapManager for Hyper-V 설명서"]를 참조하십시오.
 
 
 
