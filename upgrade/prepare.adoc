@@ -1,20 +1,22 @@
 ---
 permalink: upgrade/prepare.html 
 sidebar: sidebar 
-keywords: upgrade, ontap, prepare, digital advisor, preparation, before you upgrade, plan, upgrade overview, upgrade summary 
+keywords: upgrade, ontap, prepare, digital advisor, preparation, before you upgrade, plan, upgrade overview, upgrade summary, upgrade health checker 
 summary: ONTAP 업그레이드를 준비하면 업그레이드 위험 또는 차단기를 식별하고 완화하며 구성에 적용되는 특별한 고려 사항을 파악할 수 있습니다. 
 ---
-= Upgrade Advisor 없이 ONTAP 소프트웨어 업그레이드 준비
+= ONTAP 소프트웨어 업그레이드를 수동으로 준비합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 소프트웨어 업그레이드를 올바르게 준비하면 업그레이드 프로세스를 시작하기 전에 잠재적 업그레이드 위험 또는 방해 요인을 식별하고 완화할 수 있습니다. 업그레이드 준비 중에 업그레이드하기 전에 고려해야 할 특별한 사항을 확인할 수도 있습니다. 예를 들어 클러스터에서 SSL FIPS 모드가 활성화되어 있고 관리자 계정이 인증을 위해 SSH 공개 키를 사용하는 경우 대상 ONTAP 릴리즈에서 호스트 키 알고리즘이 지원되는지 확인해야 합니다.
+수동으로 업그레이드를 준비하는 경우, 알려진 문제나 장애 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위해 여러 작업을 완료해야 합니다. 예를 들어, 클러스터에서 SSL FIPS 모드가 활성화되어 있고 관리자 계정이 인증에 SSH 공개 키를 사용하는 경우, 대상 ONTAP 릴리스에서 호스트 키 알고리즘이 지원되는지 확인해야 합니다.
 
-에 대해 활성 SupportEdge 계약이 있는 link:https://docs.netapp.com/us-en/active-iq/upgrade_advisor_overview.html["디지털 자문업체"^] link:create-upgrade-plan.html["Upgrade Advisor로 업그레이드를 계획하십시오"]경우. Active IQ 디지털 어드바이저(디지털 어드바이저)에 액세스할 수 없는 경우 다음을 수행하여 ONTAP 업그레이드를 준비해야 합니다.
 
+NOTE: Active IQ Digital Advisor 또는 Upgrade Health Checker에서 Upgrade Advisor를 사용하면 수동 준비가 필요하지 않습니다. 두 도구 모두 업그레이드 계획을 수립하고, 문제점과 경고를 식별하고, 불확실성과 위험을 최소화하는 데 도움이 되는 정보를 제공합니다. link:create-upgrade-plan.html["Upgrade Advisor 또는 Upgrade Health Checker를 사용하여 업그레이드 준비"]에 대해 자세히 알아보십시오.
+
+.단계
 . link:choose-target-version.html["대상 ONTAP 릴리스를 선택합니다"].
 . 대상 릴리스에 대한 의 _업그레이드 주의_및_알려진 문제 및 제한 사항_섹션을 검토하십시오link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"].
 +

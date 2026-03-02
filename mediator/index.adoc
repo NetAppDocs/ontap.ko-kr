@@ -89,7 +89,7 @@ ONTAP 중재자
  a| 
 31784/TCP
  a| 
-클러스터 관리 LIF
+cluster-mgmt 및 node-mgmt LIF
  a| 
 인바운드
  a| 
@@ -100,11 +100,11 @@ ONTAP 중재자 웹 서버
 
 
  a| 
-3260/TCP 1
+3260/tcp
  a| 
-노드 데이터 LIF 또는 노드 관리 LIF
+노드 관리 LIF
  a| 
-양방향
+인바운드
  a| 
 ONTAP는 iSCSI 대상을 중재합니다
  a| 

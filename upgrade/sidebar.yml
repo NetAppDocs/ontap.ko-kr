@@ -12,9 +12,9 @@ entries:
   entries:
   - title: 업그레이드에 걸리는 시간을 결정합니다
     url: "/upgrade/how-long-upgrade-will-take.html"
-  - title: Upgrade Advisor로 업그레이드 준비
+  - title: Upgrade Advisor 또는 Upgrade Health Checker를 사용하여 업그레이드 준비
     url: "/upgrade/create-upgrade-plan.html"
-  - title: Upgrade Advisor 없이 업그레이드 준비
+  - title: 수동으로 업그레이드 준비
     entries:
     - title: 준비 요약
       url: "/upgrade/prepare.html"
