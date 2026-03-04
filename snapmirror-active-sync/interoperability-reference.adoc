@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: snapmirror-active-sync/interoperability-reference.html 
-keywords: SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris, aix, hp-ux, fanout, snapmirror active sync 
+keywords: SM-BC, SMBC, restrictions, consistency group, endpoint limits, solaris, aix, hp-ux, fanout, tamperproof snapshots, snapmirror active sync 
 summary: SnapMirror 활성 동기화는 ONTAP의 다양한 운영 체제 및 기타 기능과 호환됩니다. 
 ---
 = ONTAP SnapMirror Active Sync 상호 운용성
@@ -116,6 +116,12 @@ ONTAP 9.11.1부터 xref:../data-protection/restore-single-file-snapshot-task.htm
 
 .부분 파일 SnapRestore
 ONTAP 9.12.1부터 link:../data-protection/restore-part-file-snapshot-task.html["부분 LUN 복원"]SnapMirror 활성 동기화 볼륨에 대해 이 지원됩니다. SnapMirror 활성 동기화 소스(볼륨)와 대상(스냅샷) 볼륨 간에 복제된 응용 프로그램 생성 스냅샷에서 데이터를 복원할 수 있습니다. 여러 데이터베이스를 동일한 LUN에 저장하는 호스트에서 데이터베이스를 복구해야 하는 경우 부분 LUN 또는 파일 복구가 필요할 수 있습니다. 이 기능을 사용하려면 데이터 및 바이트 수의 시작 바이트 오프셋을 알고 있어야 합니다.
+
+
+
+=== 변조 방지 스냅샷
+
+SnapMirror 활성 동기화에서는 변조 방지 스냅샷이 지원되지 않습니다.
 
 
 
