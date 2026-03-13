@@ -38,11 +38,13 @@ entries:
       url: "/performance-admin/enable-disable-throughput-floors-v2-task.html"
     - title: 스토리지 QoS 워크플로우
       url: "/performance-admin/qos-workflow-concept.html"
+    - title: QoS 정책 그룹 할당 제한
+      url: "/performance-admin/policy-group-assignment-restrictions.html"
     - title: QoS를 사용하여 처리량 한도를 설정합니다
       url: "/performance-admin/set-throughput-ceiling-qos-task.html"
     - title: QoS를 사용하여 처리량 기반 설정
       url: "/performance-admin/set-throughput-floor-qos-task.html"
-    - title: 적응형 QoS 정책 그룹을 사용합니다
+    - title: 적응형 QoS를 사용하여 처리량 설정
       url: "/performance-admin/adaptive-qos-policy-groups-task.html"
     - title: 적응형 정책 그룹 템플릿을 설정합니다
       url: "/performance-admin/adaptive-policy-template-task.html"

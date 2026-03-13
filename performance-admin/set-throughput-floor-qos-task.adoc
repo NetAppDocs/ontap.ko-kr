@@ -2,23 +2,26 @@
 permalink: performance-admin/set-throughput-floor-qos-task.html 
 sidebar: sidebar 
 keywords: setting, throughput, floor, qos 
-summary: '정책 그룹의 최소 처리량 필드를 사용하여 스토리지 오브젝트 워크로드의 처리량 기준(QoS Min)을 정의할 수 있습니다. 스토리지 객체를 생성하거나 수정할 때 정책 그룹을 적용할 수 있습니다. ONTAP 9.8부터는 처리량(IOPS 또는 MBps, IOPS 및 MBps)을 지정할 수 있습니다.' 
+summary: QoS 최소값 또는 처리량 하한값은 경쟁 워크로드와 관계없이 특정 워크로드의 처리량이 최소 IOPS 또는 MBps 또는 IOPS 및 MBps 값 이하로 떨어지지 않도록 보장합니다. 처리량 하한값을 설정하여 중요 워크로드의 우선순위를 높이고 최소 성능 요구 사항을 충족하십시오. 
 ---
-= ONTAP에서 QoS로 처리량 기준을 설정합니다
+= ONTAP QoS 정책 그룹을 사용하여 처리량 하한값을 설정하세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-정책 그룹의 '처리량' 필드를 사용하여 스토리지 오브젝트 워크로드의 처리량(QoS Min)을 정의할 수 있습니다. 스토리지 객체를 생성하거나 수정할 때 정책 그룹을 적용할 수 있습니다. ONTAP 9.8부터는 처리량(IOPS 또는 MBps, IOPS 및 MBps)을 지정할 수 있습니다.
+QoS 최소값 또는 처리량 하한값은 경쟁 워크로드와 관계없이 특정 워크로드의 처리량이 최소 IOPS 또는 MBps 또는 IOPS 및 MBps 값 이하로 떨어지지 않도록 보장합니다. 처리량 하한값을 설정하여 중요 워크로드의 우선순위를 높이고 최소 성능 요구 사항을 충족하십시오.
+
+ `min-throughput` 필드를 정책 그룹에 사용하여 스토리지 객체 워크로드에 대한 처리량 하한(QoS Min)을 정의할 수 있습니다. 스토리지 객체를 생성하거나 수정할 때 정책 그룹을 적용할 수 있습니다.
 
 .시작하기 전에
 * 정책 그룹을 생성하려면 클러스터 관리자여야 합니다.
-* ONTAP 9.13.1부터 를 사용하여 SVM 레벨에서 처리량 바닥글을 적용할 수 있습니다.xref:adaptive-policy-template-task.html[적응형 정책 그룹 템플릿입니다] QoS 정책 그룹을 갖는 SVM에서는 적응형 정책 그룹 템플릿을 설정할 수 없습니다.
 
 
 .이 작업에 대해
+* ONTAP 9.13.1부터 를 사용하여 SVM 레벨에서 처리량 바닥글을 적용할 수 있습니다.xref:adaptive-policy-template-task.html[적응형 정책 그룹 템플릿입니다] QoS 정책 그룹을 갖는 SVM에서는 적응형 정책 그룹 템플릿을 설정할 수 없습니다.
+* ONTAP 9.8부터 처리량 하한값을 IOPS 또는 MBps, 또는 IOPS와 MBps로 지정할 수 있습니다.
 * ONTAP 9.4부터 _non-shared_QoS 정책 그룹을 사용하여 각 구성원 작업 부하에 대해 정의된 처리 층을 개별적으로 적용할 수 있습니다. 이는 처리량 플로어의 정책 그룹을 여러 워크로드에 적용할 수 있는 유일한 조건입니다.
 +
 비공유 정책 그룹을 지정하기 위해 QoS policy-group create 명령에 대해 -is-shared=false를 설정합니다.
@@ -33,14 +36,15 @@ summary: '정책 그룹의 최소 처리량 필드를 사용하여 스토리지 
 . 에 설명된 대로 노드 또는 애그리게이트에서 적절한 성능 용량이 있는지 확인합니다 link:identify-remaining-performance-capacity-task.html["남은 성능 용량 식별"].
 . 정책 그룹 생성:
 +
-'QoS policy-group create-policy group_policy_group_-vserver_SVM_-min-throughput_QoS_target_-is-shared true|false'
-
+[source, cli]
+----
+qos policy-group create -policy-group <policy_group> -vserver <SVM> -min-throughput <qos_target> -is-shared <true|false>
+----
 +
 에 대한 자세한 내용은 `qos policy-group create` link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. 명령을 사용하여 처리량 최저치를 조정할 수 `qos policy-group modify` 있습니다.
 +
-다음 명령을 실행하면 처리량이 최소 1,000 IOPS인 공유 정책 그룹이 `pg-vs2` 생성됩니다.
+다음 예제는 최소 처리량 1,000 IOPS로 공유 정책 그룹 `pg-vs2`을 생성합니다.
 
 +
 [listing]
@@ -48,7 +52,7 @@ summary: '정책 그룹의 최소 처리량 필드를 사용하여 스토리지 
 cluster1::> qos policy-group create -policy group pg-vs2 -vserver vs2 -min-throughput 1000iops -is-shared true
 ----
 +
-다음 명령을 실행하면 처리량 제한 없이 비공유 정책 그룹 'pg-vs4'가 생성됩니다.
+다음 예제는 처리량 제한이 없는 비공유 정책 그룹 `pg-vs4`을 생성합니다.
 
 +
 [listing]
@@ -56,27 +60,31 @@ cluster1::> qos policy-group create -policy group pg-vs2 -vserver vs2 -min-throu
 cluster1::> qos policy-group create -policy group pg-vs4 -vserver vs4 -is-shared false
 ----
 +
-에 대한 자세한 내용은 `qos policy-group modify` link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+처리량 하한을 조정하려면  `qos policy-group modify` 명령을 사용할 수 있습니다.  `qos policy-group modify`에 대해 자세히 알아보려면 link:https://docs.netapp.com/us-en/ontap-cli/qos-policy-group-modify.html["ONTAP 명령 참조입니다"^]를 참조하십시오.
 
 . 볼륨 또는 LUN에 정책 그룹 적용:
 +
-`_storage_object_ create -vserver _SVM_ -qos-policy-group _policy_group_`당신은 사용할 수 있습니다 `_storage_object_modify` 저장소 개체에 다른 정책 그룹을 적용하는 명령입니다.
+[source, cli]
+----
+vserver create -vserver <SVM> -qos-policy-group <policy_group>
+----
++
+ `vserver modify` 명령을 사용하여 스토리지 객체에 다른 정책 그룹을 적용할 수 있습니다.
 
 +
-다음 명령은 정책 그룹 pg-app2를 볼륨 app2에 적용합니다.
+다음 예는 정책 그룹 `pg-app2`을 볼륨 `app2`에 적용합니다:
 
 +
 [listing]
 ----
 cluster1::> volume create -vserver vs2 -volume app2 -aggregate aggr1 -qos-policy-group pg-app2
 ----
-+
-이 절차에서 설명하는 명령에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]참조하십시오.
-
 . 정책 그룹 성능 모니터링:
 +
-QoS 통계 성능 표시
-
+[source, cli]
+----
+qos statistics performance show
+----
 +
 [NOTE]
 ====
@@ -84,7 +92,7 @@ QoS 통계 성능 표시
 
 ====
 +
-다음 명령을 실행하면 정책 그룹 성능이 표시됩니다.
+다음 예에서는 정책 그룹 성능을 보여 줍니다.
 
 +
 [listing]
@@ -102,8 +110,10 @@ _System-Background         30           0KB/s        0ms
 
 . 워크로드 성능 모니터링:
 +
-QoS 통계 워크로드 성능 표시
-
+[source, cli]
+----
+qos statistics workload performance show
+----
 +
 [NOTE]
 ====
@@ -111,7 +121,7 @@ QoS 통계 워크로드 성능 표시
 
 ====
 +
-다음 명령을 실행하면 워크로드 성능이 표시됩니다.
+다음 예에서는 워크로드 성능을 보여 줍니다.
 
 +
 [listing]
@@ -128,10 +138,6 @@ _Scan_Backgro..   5688       20            0KB/s        0ms
 +
 에 대한 자세한 내용은 `qos statistics workload performance show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-performance-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-+
-[NOTE]
-====
+
+
 명령을 사용하여 QoS 워크로드에 대한 자세한 지연 시간 통계를 볼 수 `qos statistics workload latency show` 있습니다. 에 대한 자세한 내용은 `qos statistics workload latency show` link:https://docs.netapp.com/us-en/ontap-cli/qos-statistics-workload-latency-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-====
-

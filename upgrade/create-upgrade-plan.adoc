@@ -2,7 +2,7 @@
 permalink: upgrade/create-upgrade-plan.html 
 sidebar: sidebar 
 keywords: ontap, upgrade, plan, planning, upgrade advisor, upgrade health checker, advisor, digital advisor, active iq, create an upgrade plan 
-summary: Active IQ Digital Advisor 또는 Upgrade Health Checker에서 Upgrade Advisor를 사용하여 환경 및 클러스터 구성에 맞는 업그레이드 보고서를 자동으로 생성할 수 있습니다. 
+summary: Active IQ Digital Advisor 또는 Upgrade Health Checker의 Upgrade Advisor를 사용하여 사용자 환경 및 클러스터 구성에 맞는 업그레이드 보고서를 자동으로 생성할 수 있습니다. 
 ---
 = Upgrade Advisor 또는 Upgrade Health Checker를 사용하여 ONTAP 업그레이드를 준비하십시오
 :allow-uri-read: 
