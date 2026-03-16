@@ -354,6 +354,8 @@ entries:
       url: "/smb-admin/examples-export-policy-rules-reference.html"
     - title: SMB 액세스에 대한 엑스포트 정책을 설정하거나 해제합니다
       url: "/smb-admin/enable-disable-export-policies-task.html"
+    - title: SVM 루트 볼륨의 SMB 엑스포트 정책을 엽니다
+      url: "/smb-config/open-export-policy-svm-root-volume-task.html"
   - title: Storage-Level Access Guard를 사용하여 파일 액세스를 보호합니다
     entries:
     - title: 개요

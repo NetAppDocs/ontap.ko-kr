@@ -50,12 +50,8 @@ entries:
     url: "/concepts/namespaces-junction-points-concept.html"
 - title: 경로 페일오버
   entries:
-  - title: 개요
+  - title: 경로 페일오버에 대해 알아보십시오
     url: "/concepts/path-failover-concept.html"
-  - title: NAS 경로 페일오버
-    url: "/concepts/nas-path-failover-concept.html"
-  - title: SAN 경로 페일오버
-    url: "/concepts/san-path-failover-concept.html"
 - title: 로드 밸런싱
   url: "/concepts/load-balancing-concept.html"
 - title: 복제

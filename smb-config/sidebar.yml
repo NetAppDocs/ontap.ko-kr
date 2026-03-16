@@ -24,8 +24,6 @@ entries:
     url: "/smb-config/create-svms-data-access-task.html"
   - title: SVM에서 SMB 프로토콜이 활성화되어 있는지 확인합니다
     url: "/smb-config/verify-protocol-enabled-task.html"
-  - title: SVM 루트 볼륨의 SMB 엑스포트 정책을 엽니다
-    url: "/smb-config/open-export-policy-svm-root-volume-task.html"
   - title: SMB LIF를 생성합니다
     url: "/smb-config/create-lif-task.html"
   - title: SMB 호스트 이름 확인을 위해 DNS를 활성화합니다

@@ -2,8 +2,6 @@
 section: update
 title: 펌웨어, 시스템 및 보안 업데이트
 entries:
-- title: 개요
-  url: "/update/index.html"
 - title: 자동 업데이트 설치 예약 방법
   url: "/update/how-auto-updates-scheduled.html"
 - title: 자동 업데이트를 활성화합니다

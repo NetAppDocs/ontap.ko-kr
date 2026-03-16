@@ -18,10 +18,6 @@ entries:
     url: "/san-config/fc-switch-config-best-practices-concept.html"
   - title: 권장되는 FC 타겟 포트 구성 및 속도
     url: "/san-config/fc-target-port-config-recommendations-concept.html"
-  - title: FC 어댑터 포트를 구성합니다
-    url: "/san-config/configure-fc-adapters-initiator-target.html"
-  - title: FC 어댑터를 관리하는 명령입니다
-    url: "/san-config/commands-manage-fc-adapters-reference.html"
   - title: X1133A-R6 어댑터를 사용할 때 연결이 끊어지지 않도록 하십시오
     url: "/san-config/prevent-loss-connectivity-x1133a-r6-adapter-concept.html"
 - title: FCoE 구성
