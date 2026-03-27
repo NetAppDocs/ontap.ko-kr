@@ -21,11 +21,16 @@ summary: 루트 교체 절차는 운영 중단 없이 현재 루트 애그리게
 * EOS 디스크 쉘프의 쉘프 교체를 수행할 때
 
 
+
+NOTE: 루트 볼륨 재배치 중에 노드가 재부팅되면서 활성 SSH 세션이 모두 종료됩니다.
+
 .단계
 . 루트 애그리게이트 재배치:
 +
-'system node migrate-root-node_name-disklist disk_list-raid-type raid_type'
-
+[source, cli]
+----
+system node migrate-root -node node_name -disklist disk_list -raid-type raid_type
+----
 +
 ** * -노드 *
 +
@@ -43,8 +48,10 @@ summary: 루트 교체 절차는 운영 중단 없이 현재 루트 애그리게
 
 . 작업 진행 상황 모니터링:
 +
-job show-id jobid-instance입니다
-
+[source, cli]
+----
+job show -id jobid -instance
+----
 
 
 .결과
