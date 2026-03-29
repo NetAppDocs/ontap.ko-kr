@@ -39,5 +39,5 @@ MetroCluster 구성을 사용하는 경우 초기 구성에 대한 설명서의 
 * link:manage-disks-overview-concept.html["디스크를 관리합니다"]
 * link:manage-raid-configs-overview-concept.html["RAID 구성을 관리합니다"]
 * link:flash-pool-aggregate-caching-policies-concept.html["Flash Pool 계층 관리"]
-* link:../concepts/index.html["FabricPool 클라우드 계층 관리"]
+* link:../fabricpool/setup-object-store-as-cloud-tier-task.html["FabricPool 클라우드 계층 관리"]
 
