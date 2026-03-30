@@ -98,9 +98,12 @@ SnapMirror S3
  a| 
 * QoS 최대(천장)
 * 최소 QoS(층)
+* 중첩된 QoS 정책
++
+link:../performance-admin/policy-group-assignment-restrictions.html["QoS 정책 그룹 할당 제한"]
+
 
  a| 
--
 
 
 
@@ -109,9 +112,9 @@ SnapMirror S3
  a| 
 * link:../s3-audit/index.html["S3 이벤트를 감사합니다"] (ONTAP 9.10.1부터)
 * link:../s3-config/create-bucket-lifecycle-rule-task.html["버킷 수명 주기 관리"] (ONTAP 9.13.1부터)
-* FabricPool 클라우드 계층(네이티브 S3만 해당)
-* FabricPool 로컬 계층(NAS 볼륨만 해당)
-* FlexCache 볼륨(ONTAP 9.18.1부터 지원)
+* FabricPool 클라우드 계층(link:../s3-config/index.html["네이티브 S3 전용"])
+* FabricPool 로컬 계층(link:../s3-multiprotocol/index.html["NAS 볼륨만"])
+* link:../flexcache/supported-unsupported-features-concept.html#supported-features["FlexCache 볼륨"](ONTAP 9.18.1부터)
 
  a| 
 * FPolicy를 참조하십시오
