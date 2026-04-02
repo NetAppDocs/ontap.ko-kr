@@ -165,4 +165,4 @@ NVMe 네임스페이스를 사용하여 작업할 때 다음을 숙지해야 합
 
 
 .관련 정보
-link:https://www.netapp.com/pdf.html?item=/media/10680-tr4080.pdf["최신 SAN의 모범 사례"]
+link:https://www.netapp.com/pdf.html?item=/media/10680-tr4080.pdf["최신 SAN의 모범 사례"^]

@@ -122,7 +122,7 @@ Default Site Used by LIFs Without Site Membership:
 
 
 
-NOTE: DDNS 업데이트에 대한 RFC 규칙을 준수하지 않는 SVM FQDN의 구성 오류를 방지하려면 RFC와 호환되는 FQDN 이름을 사용합니다. 자세한 내용은 을 참조하십시오 link:https://tools.ietf.org/html/rfc1123["RFC 1123"].
+NOTE: DDNS 업데이트에 대한 RFC 규칙을 준수하지 않는 SVM FQDN의 구성 오류를 방지하려면 RFC를 준수하는 FQDN 이름을 사용하십시오. 자세한 내용은 link:https://tools.ietf.org/html/rfc1123["RFC 1123"^]를 참조하십시오.
 
 .단계
 . SVM에서 DDNS 구성:

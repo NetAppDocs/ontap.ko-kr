@@ -24,7 +24,7 @@ ONTAP 9.9.0부터:
 * ONTAP 9.x.0 릴리즈는 클라우드 전용 릴리즈이며 Cloud Volumes ONTAP 시스템을 지원합니다. 릴리스 버전 뒤의 별표(*)는 클라우드 전용 릴리스를 나타냅니다.
 +
 
-NOTE: ONTAP 9.16.0은 클라우드 전용 규칙에 대한 예외입니다.link:https://docs.netapp.com/us-en/asa-r2/learn-more/software-support-limitations.html["ASA r2 시스템"] .  릴리스 버전 뒤에 있는 더하기 기호(+)는 ASA r2와 클라우드 지원 릴리스를 모두 나타냅니다.  ASA r2 시스템은 다른 ASA r2 시스템에 대해서만 SnapMirror 관계를 지원합니다.
+NOTE: ONTAP 9.16.0은 link:https://docs.netapp.com/us-en/asa-r2/learn-more/software-support-limitations.html["ASA r2 시스템"^]에 대한 지원을 제공하므로 클라우드 전용 규칙의 예외입니다. 릴리스 버전 뒤의 더하기 기호(+)는 ASA r2 및 클라우드 지원 릴리스를 모두 나타냅니다. ASA r2 시스템은 다른 ASA r2 시스템에 대한 SnapMirror 관계만 지원합니다.
 
 * ONTAP 9.x.1 릴리스는 일반 릴리스이며 온-프레미스 및 Cloud Volumes ONTAP 시스템을 모두 지원합니다.
 

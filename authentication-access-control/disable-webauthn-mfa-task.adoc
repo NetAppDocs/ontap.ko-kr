@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: authentication-access-control/disable-webauthn-mfa-task.html 
-keywords: mfa, multi-factor, authentication, authorization, webauthn, FIDO2, hardware key, disable, system manager 
+keywords: mfa, multifactor, multi-factor, authentication, authorization, webauthn, FIDO2, hardware key, disable, system manager 
 summary: System Manager 사용자에 대해 WebAuthn MFA를 사용하도록 설정한 경우 언제든지 사용하지 않도록 설정할 수 있습니다. 
 ---
 = ONTAP 시스템 관리자 사용자를 위한 WebAuthn MFA를 비활성화합니다

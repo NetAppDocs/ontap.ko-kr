@@ -25,8 +25,8 @@ Digital Advisor로 할 수 있는 작업은 다음과 같습니다.
 
 
 .관련 정보
-https://docs.netapp.com/us-en/active-iq/["NetApp 설명서: 디지털 어드바이저"]
+https://docs.netapp.com/us-en/active-iq/["NetApp 설명서: 디지털 어드바이저"^]
 
-https://aiq.netapp.com/custom-dashboard/search["Digital Advisor를 실행합니다"]
+https://aiq.netapp.com/custom-dashboard/search["Digital Advisor를 실행합니다"^]
 
-https://www.netapp.com/us/services/support-edge.aspx["SupportEdge 서비스"]
+https://www.netapp.com/us/services/support-edge.aspx["SupportEdge 서비스"^]
