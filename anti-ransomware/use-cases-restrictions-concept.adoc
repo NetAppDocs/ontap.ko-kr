@@ -139,6 +139,7 @@ NOTE: ONTAP 9.13.1부터 ONTAP 9.17.1까지 FlexGroup 볼륨이 지원되지만 
 * 제한된 볼륨
 * 스토리지 VM의 루트 볼륨입니다
 * 중지된 스토리지 VM의 볼륨입니다
+* FlexVol에서 FlexGroup 변환(변환 전에 ARP를 비활성화해야 합니다)
 
 
 
