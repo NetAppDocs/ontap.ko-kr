@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: networking/delete_a_broadcast_domain.html 
-keywords: 'delete, deleting, remove, removing, broadcast, domain, delete a broadcast domain, delete unnecessary broadcast domains; this moves associated ports to the "default" IPspace' 
-summary: '불필요한 브로드캐스트 도메인을 삭제합니다. 그러면 연결된 포트가 "기본" IPspace로 이동합니다' 
+keywords: delete, deleting, remove, removing, broadcast, domain, delete a broadcast domain, delete unnecessary broadcast domains 
+summary: 불필요한 브로드캐스트 도메인을 삭제합니다. 이렇게 하면 관련 포트가 기본 IPspace로 이동합니다. 
 ---
 = ONTAP 브로드캐스트 도메인을 삭제합니다
 :hardbreaks:

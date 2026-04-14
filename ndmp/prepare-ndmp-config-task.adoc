@@ -64,11 +64,11 @@ http://mysupport.netapp.com/NOW/download/tools/tape_config["NetApp 다운로드:
 
 . 클러스터의 모든 노드에 인터클러스터 LIF가 있는지 확인합니다.
 +
-.. 'network interface show-role 인터클러스터' 명령을 사용하여 노드의 인터클러스터 LIF를 봅니다.
+..  `network interface show -service-policy default-intercluster` 명령을 사용하여 노드의 인터클러스터 LIF를 확인합니다.
 +
 [listing]
 ----
-cluster1::> network interface show -role intercluster
+cluster1::> network interface show -service-policy default-intercluster
 
             Logical    Status     Network            Current       Current Is
 Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
@@ -82,11 +82,11 @@ cluster1    IC1        up/up      192.0.2.65/24      cluster1-1    e0a     true
 +
 [listing]
 ----
-cluster1::> network interface create -vserver cluster1 -lif IC2 -role intercluster
+cluster1::> network interface create -vserver cluster1 -lif IC2 -service-policy default-intercluster
 -home-node cluster1-2 -home-port e0b -address 192.0.2.68 -netmask 255.255.255.0
 -status-admin up -failover-policy local-only -firewall-policy intercluster
 
-cluster1::> network interface show -role intercluster
+cluster1::> network interface show -service-policy default-intercluster
 
             Logical    Status     Network            Current       Current Is
 Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home

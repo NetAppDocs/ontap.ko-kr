@@ -2,7 +2,7 @@
 permalink: concepts/client-protocols-concept.html 
 sidebar: sidebar 
 keywords: client protocols 
-summary: 'ONTAP는 NFS, SMB, FC, FCoE, iSCSI, NVMe 및 S3:' 
+summary: ONTAP는 NFS, SMB, FC, FCoE, iSCSI, NVMe 및 S3를 포함한 모든 주요 업계 표준 클라이언트 프로토콜을 지원합니다. 
 ---
 = 클라이언트 프로토콜
 :allow-uri-read: 

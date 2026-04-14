@@ -2,7 +2,7 @@
 permalink: nas-audit/determine-complete-path-audited-object-task.html 
 sidebar: sidebar 
 keywords: determine, complete path, audited object 
-summary: '감사 레코드의 <ObjectName> 태그에 인쇄된 개체 경로에는 볼륨의 이름(괄호 안에 표시)과 포함하는 볼륨의 루트에서 가져온 상대 경로가 포함됩니다. 연결 경로를 포함하여 감사된 개체의 전체 경로를 결정하려면 특정 단계를 수행해야 합니다.' 
+summary: 감사 레코드의 ObjectName 태그에 표시되는 객체 경로는 괄호 안에 볼륨 이름과 해당 볼륨의 루트에서부터의 상대 경로를 포함합니다. 접합 경로를 포함하여 감사 대상 객체의 전체 경로를 확인하려면 몇 가지 단계를 수행해야 합니다. 
 ---
 = ONTAP 감사 객체에 대한 전체 경로를 결정합니다
 :allow-uri-read: 
