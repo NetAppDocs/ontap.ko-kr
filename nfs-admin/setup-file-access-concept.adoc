@@ -2,7 +2,7 @@
 permalink: nfs-admin/setup-file-access-concept.html 
 sidebar: sidebar 
 keywords: setting, file, access, nfs 
-summary: '고객이 NFS를 사용하여 SVM(스토리지 가상 시스템)의 파일에 액세스할 수 있도록 하려면 여러 단계를 완료해야 합니다. 환경의 현재 구성에 따라 몇 가지 추가 단계가 선택적으로 제공됩니다.' 
+summary: NFS를 사용하여 클라이언트가 스토리지 가상 머신의 파일에 액세스할 수 있도록 하려면 몇 가지 단계를 완료해야 합니다. 현재 환경 구성에 따라 선택 사항인 추가 단계도 있습니다. 
 ---
 = ONTAP SVM에서 NFS 파일 액세스 설정에 대해 알아보세요
 :allow-uri-read: 

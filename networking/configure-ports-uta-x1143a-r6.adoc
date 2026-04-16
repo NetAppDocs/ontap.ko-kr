@@ -2,7 +2,7 @@
 permalink: networking/configure-ports-uta-x1143a-r6.html 
 sidebar: sidebar 
 keywords: configure, ports 
-summary: '통합 타겟 어댑터(X1143A-R6)를 구성하려면 동일한 퍼스낼리티 모드에서 동일한 칩에 두 개의 인접 포트를 구성해야 합니다.' 
+summary: 통합 타겟 어댑터를 구성하려면 동일한 칩에 있는 인접한 두 포트를 동일한 퍼스널리티 모드로 구성해야 합니다. 
 ---
 = ONTAP 네트워크를 위해 UTA X1143A-R6 포트를 구성합니다
 :allow-uri-read: 

@@ -1,7 +1,7 @@
 ---
 permalink: nfs-trunking/enable-server-task.html 
 sidebar: sidebar 
-keywords: NFS, servers, enable, NFS, trunking, enabled, NAS, svm, 
+keywords: NFS, servers, enable, NFS, trunking, enabled, NAS, svm 
 summary: NFSv4.1 이상을 실행하는 NFS 서버에서 트렁킹이 명시적으로 활성화되어야 합니다. NFSv4.1 이상은 NFS 서버가 생성될 때 기본적으로 사용하도록 설정됩니다. 
 ---
 = ONTAP NFS 서버에서 트렁킹을 활성화합니다

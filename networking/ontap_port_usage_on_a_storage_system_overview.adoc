@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/ontap_port_usage_on_a_storage_system_overview.html 
 keywords: port, tcp, udp, http, https, ssh, ontap ports overview, communication ports, port conflicts, ontap ports for inbound traffic, ontap ports for outbound traffic, internal ports 
-summary: 특정 서비스와 ONTAP 통신을 위한 예약된 포트입니다 
+summary: 특정 서비스와의 ONTAP 통신을 위해 예약된 포트입니다. 
 ---
 = ONTAP 네트워크의 포트 사용에 대해 알아봅니다
 :hardbreaks:

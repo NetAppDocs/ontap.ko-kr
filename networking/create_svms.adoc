@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/create_svms.html 
 keywords: create, creation, creating, add, adding, svm, storage, virtual, machine, create svms, create storage virtual machines, create an svm to serve data to clients, system manager 
-summary: SVM을 생성하여 클라이언트에 데이터 제공 
+summary: 클라이언트에 데이터를 제공하는 SVM을 생성합니다. 
 ---
 = ONTAP 네트워크용 SVM을 생성합니다
 :hardbreaks:

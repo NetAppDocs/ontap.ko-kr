@@ -1,7 +1,7 @@
 ---
 permalink: nfs-admin/manage-nfsv4-storepool-controls-task.html 
 sidebar: sidebar 
-keywords: enable, disable, nfsv4, storepool, controls, limit, client, resource, blocked, 
+keywords: enable, disable, nfsv4, storepool, controls, limit, client, resource, blocked 
 summary: ONTAP 9.13부터 관리자는 클라이언트 저장소 풀 리소스 제한당 한도에 도달하면 NFS 서버가 NFS 클라이언트에 대한 리소스를 거부하도록 설정할 수 있습니다. 
 ---
 = ONTAP NFSv4 스토어풀 한도 관리

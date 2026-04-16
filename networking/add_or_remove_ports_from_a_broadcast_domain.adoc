@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/add_or_remove_ports_from_a_broadcast_domain.html 
 keywords: adding, add, create, creating, remove, removing, delete, deleting, port, broadcast, domain, reachability, repair, physical, switch, configuration, add or remove ports from a broadcast domain, system manager, reassign, broadcast domain, port, unassign, move, change 
-summary: 브로드캐스트 도메인에서 포트를 수동으로 추가 및 제거할 필요는 없으며, 이 방법은 권장되지 않습니다 
+summary: 브로드캐스트 도메인에서 포트를 수동으로 추가하거나 제거하는 것은 필요하지 않으며 권장되지도 않습니다. 
 ---
 = ONTAP 브로드캐스트 도메인에서 포트를 추가하거나 제거합니다
 :hardbreaks:

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/configure-backend-encryption.html 
 keywords: cluster network, encryption, TLS, data-in-flight, backend network 
-summary: 클러스터 네트워크 암호화 설정 구성 
+summary: 클러스터 네트워크 암호화 설정을 구성합니다. 
 ---
 = ONTAP 백엔드 클러스터 네트워크 암호화 구성
 :allow-uri-read: 

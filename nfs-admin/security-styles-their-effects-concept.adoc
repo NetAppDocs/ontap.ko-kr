@@ -2,7 +2,7 @@
 permalink: nfs-admin/security-styles-their-effects-concept.html 
 sidebar: sidebar 
 keywords: security, style, effect, unix, ntfs, mixed, unified 
-summary: UNIX, NTFS, 혼합 및 통합 등 네 가지 보안 유형이 있습니다. 각 보안 스타일은 데이터에 대한 사용 권한이 처리되는 방식에 다른 영향을 줍니다. 용도에 맞는 적절한 보안 스타일을 선택할 수 있도록 다양한 효과를 이해해야 합니다. 
+summary: 보안 스타일에는 UNIX, NTFS, 혼합, 통합의 네 가지 유형이 있습니다. 각 보안 스타일은 데이터 권한 처리 방식에 서로 다른 영향을 미칩니다. 목적에 맞는 적절한 보안 스타일을 선택하려면 이러한 차이점을 이해해야 합니다. 
 ---
 = ONTAP NAS 보안 스타일 알아보기
 :allow-uri-read: 

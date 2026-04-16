@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/display_broadcast_domains.html 
 keywords: display, view, show, broadcast, domain, display broadcast domains, view a list of broadcast domains within each ipspace in a cluster 
-summary: 클러스터 내 각 IPspace 내의 브로드캐스트 도메인 목록을 봅니다 
+summary: 클러스터 내 각 IPspace에 있는 브로드캐스트 도메인 목록을 봅니다. 
 ---
 = ONTAP 브로드캐스트 도메인을 봅니다
 :hardbreaks:

@@ -2,7 +2,7 @@
 permalink: nfs-admin/how-ontap-creates-file-directory-names-concept.html 
 sidebar: sidebar 
 keywords: ontap, create, file, directory, name 
-summary: ONTAP는 SMB 클라이언트에서 액세스할 수 있는 디렉토리인 원래 긴 이름과 8.3 형식의 이름을 사용하여 파일 또는 디렉토리의 이름을 두 개 생성하고 유지합니다. 
+summary: 'ONTAP는 SMB 클라이언트에서 액세스할 수 있는 모든 디렉터리의 파일 또는 디렉터리에 대해 두 가지 이름(원래의 긴 이름과 8.3 형식의 이름)을 생성하고 유지 관리합니다.' 
 ---
 = ONTAP NFS 파일 및 디렉토리 이름 생성에 대해 알아보세요
 :allow-uri-read: 

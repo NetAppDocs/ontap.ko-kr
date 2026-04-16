@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/configure_network_ports_cluster_administrators_only_overview.html 
 keywords: introducing, introduction, overview, network, port, port type, type, physical, interface group, vlan, vip, virtual, naming, convention, configure network ports overview, introducing physical and virtual network ports 
-summary: 물리적 및 가상 네트워크 포트 소개 
+summary: 물리적 네트워크 포트와 가상 네트워크 포트를 소개합니다. 
 ---
 = ONTAP 네트워크 포트 구성에 대해 자세히 알아보십시오
 :hardbreaks:

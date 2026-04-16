@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/configure_broadcast_domains_cluster_administrators_only_overview.html 
 keywords: broadcast, domain, overview, introduction, introducing, configure broadcast domains overview for ontap 9.8 and later, broadcast domains group network ports that belong to the same layer 2 network, example, sample, broadcast, domains, example of using broadcast domains, sample broadcast domain 
-summary: 브로드캐스트 도메인은 동일한 계층 2 네트워크에 속하는 네트워크 포트를 그룹화합니다 
+summary: 브로드캐스트 도메인은 동일한 계층 2 네트워크에 속하는 네트워크 포트를 그룹화합니다. 
 ---
 = ONTAP 브로드캐스트 도메인에 대해 알아봅니다
 :hardbreaks:

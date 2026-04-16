@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: networking/configure_network_security_using_federal_information_processing_standards_fips.html 
 keywords: fips 140-2, compliant, ssl, connections, tlsv1.2, tlsv1.1, tlsv1, enable fips, disable fips, compliance status, SSL 
-summary: '모든 SSL 연결에 대해 FIPS(Federal Information Processing Standards) 140-2 준수' 
+summary: 모든 SSL 연결에 대해 Federal Information Processing Standards 140-2를 준수합니다. 
 ---
 = 모든 SSL 연결에 FIPS를 사용하여 ONTAP 네트워크 보안을 구성합니다
 :hardbreaks:
