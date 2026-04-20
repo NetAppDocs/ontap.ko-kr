@@ -2,7 +2,7 @@
 permalink: volumes/quota-notifications-concept.html 
 sidebar: sidebar 
 keywords: understanding, quota, notifications 
-summary: '할당량 알림은 EMS(이벤트 관리 시스템)로 전송되고 SNMP 트랩으로도 구성된 메시지입니다.' 
+summary: 할당량 알림은 이벤트 관리 시스템으로 전송되는 메시지이며 SNMP 트랩으로도 구성됩니다. 
 ---
 = 할당량 알림에 대해 알아봅니다
 :allow-uri-read: 

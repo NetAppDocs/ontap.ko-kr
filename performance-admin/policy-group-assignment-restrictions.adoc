@@ -2,7 +2,7 @@
 permalink: performance-admin/policy-group-assignment-restrictions.html 
 sidebar: sidebar 
 keywords: use, adaptive, qos, policy, groups 
-summary: 적응형 QoS 정책 그룹을 사용하면 볼륨 크기가 변경될 때 IOPS와 TB|GB의 비율을 유지하면서 처리량 상한 또는 하한 크기를 자동으로 확장할 수 있습니다. 이는 대규모 구축 환경에서 수백 또는 수천 개의 워크로드를 관리할 때 큰 이점입니다. 
+summary: 적응형 QoS 정책 그룹을 사용하면 볼륨 크기에 따라 처리량 상한 또는 하한을 자동으로 조정하여 볼륨 크기 변화에 따른 IOPS 대 TB 또는 GB 비율을 유지할 수 있습니다. 이는 대규모 배포 환경에서 수백 또는 수천 개의 워크로드를 관리할 때 매우 유용한 이점입니다. 
 ---
 = QoS 정책 그룹 할당 제한
 :allow-uri-read: 

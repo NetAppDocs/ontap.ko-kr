@@ -2,7 +2,7 @@
 permalink: system-admin/manage-licenses-concept.html 
 sidebar: sidebar 
 keywords: manage, license, ontap one, enable, add, record, software, entitlement, keys, codes, risk, usage, cluster, administrator, nlf, bundle 
-summary: '라이센스는 하나 이상의 소프트웨어 사용 권한의 기록입니다. ONTAP 9.10.1부터 모든 라이센스는 여러 기능을 사용할 수 있는 단일 파일인 NetApp 라이센스 파일(NLF)로 제공됩니다.  2023년 5월부터 모든 AFF 시스템(A-series 및 C-series 모두)과 FAS 시스템은 ONTAP One 소프트웨어 제품군 또는 ONTAP 기본 소프트웨어 제품군과 함께 판매되며, 2023년 6월부터 모든 ASA 시스템은 SAN용 ONTAP One과 함께 판매됩니다.' 
+summary: 라이선스는 하나 이상의 소프트웨어 사용 권한에 대한 기록입니다. ONTAP 9.10.1부터 모든 라이선스는 NetApp 라이선스 파일 형태로 제공되며, 이 파일은 여러 기능을 사용할 수 있도록 하는 단일 파일입니다. 2023년 5월부터 모든 AFF 시스템과 FAS 시스템은 ONTAP One 소프트웨어 제품군 또는 ONTAP Base 소프트웨어 제품군과 함께 판매되며, 2023년 6월부터 모든 ASA 시스템은 ONTAP One for SAN과 함께 판매됩니다. 
 ---
 = ONTAP 라이센스 개요
 :allow-uri-read: 

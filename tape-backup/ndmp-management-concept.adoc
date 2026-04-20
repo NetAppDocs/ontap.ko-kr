@@ -2,7 +2,7 @@
 permalink: tape-backup/ndmp-management-concept.html 
 sidebar: sidebar 
 keywords: understand, ndmp, flexvol, volume, network, data, management, protocol, storage, devices, systems, tape, library 
-summary: 'NDMP(Network Data Management Protocol)는 스토리지 시스템 및 테이프 라이브러리와 같은 운영 스토리지 디바이스와 보조 스토리지 디바이스 간의 백업, 복구 및 기타 데이터 전송 유형을 제어하는 표준화된 프로토콜입니다.' 
+summary: 네트워크 데이터 관리 프로토콜은 스토리지 시스템 및 테이프 라이브러리와 같은 운영 스토리지 장치와 2차 스토리지 장치 간의 백업, 복구 및 기타 유형의 데이터 전송을 제어하기 위한 표준화된 프로토콜입니다. 
 ---
 = ONTAP FlexVol 볼륨에 대한 NDMP에 대해 알아보세요
 :allow-uri-read: 

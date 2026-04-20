@@ -2,7 +2,7 @@
 permalink: smb-admin/requirements-gpos-concept.html 
 sidebar: sidebar 
 keywords: group, policy, object, gpo, smb, server, system, requirement, requirements for using gpos with your smb server 
-summary: 'SMB 서버에서 GPO(그룹 정책 개체)를 사용하려면 시스템이 여러 요구 사항을 충족해야 합니다.' 
+summary: SMB 서버에서 그룹 정책 개체를 사용하려면 시스템이 몇 가지 요구 사항을 충족해야 합니다. 
 ---
 = GPO에 대한 ONTAP SMB 서버 요구 사항
 :allow-uri-read: 

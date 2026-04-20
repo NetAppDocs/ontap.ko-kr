@@ -1,7 +1,7 @@
 ---
 permalink: tape-backup/dump-restore-event-log-message-format-concept.html 
 sidebar: sidebar 
-keywords: event, dump, restore, log, message, 
+keywords: event, dump, restore, log, message 
 summary: 각 덤프 및 복원 이벤트에 대해 백업 로그 파일에 메시지가 기록됩니다. 
 ---
 = ONTAP 덤프 및 복원 이벤트 로그 메시지 형식

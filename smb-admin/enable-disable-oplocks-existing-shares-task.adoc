@@ -2,7 +2,7 @@
 permalink: smb-admin/enable-disable-oplocks-existing-shares-task.html 
 sidebar: sidebar 
 keywords: oplock, enable, smb, share, storage, virtual, machine, svm, default, circumstance, disable, alternative, enable or disable oplocks on existing smb shares 
-summary: 'oplocks는 기본적으로 스토리지 가상 시스템(SVM)의 SMB 공유에 설정됩니다. 경우에 따라 oplocks를 해제할 수도 있습니다. 이전에 공유에서 oplocks를 해제한 경우에는 oplocks를 다시 설정할 수도 있습니다.' 
+summary: 스토리지 가상 머신의 SMB 공유에서는 기본적으로 Oplock이 활성화되어 있습니다. 특정 상황에서는 Oplock을 비활성화해야 할 수도 있습니다. 또는 이전에 공유에서 Oplock을 비활성화한 경우 다시 활성화해야 할 수도 있습니다. 
 ---
 = 기존 ONTAP SMB 공유에서 oplocks를 사용하거나 사용하지 않도록 설정합니다
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: smb-admin/enable-disable-access-based-enumeration-task.html 
 sidebar: sidebar 
 keywords: enable, disable, access-based, enumeration, abe, smb, allow, prevent, user, permission, access, enable or disable access-based enumeration on smb shares 
-summary: 'SMB 공유에서 ABE(Access-Based Enumeration)를 설정하거나 해제하여 사용자가 액세스 권한이 없는 공유 리소스를 볼 수 없도록 하거나 허용할 수 있습니다.' 
+summary: SMB 공유에서 액세스 기반 열거를 활성화 또는 비활성화하여 사용자가 액세스 권한이 없는 공유 리소스를 보지 못하도록 허용하거나 차단할 수 있습니다. 
 ---
 = ONTAP SMB 공유에서 액세스 기반 열거 활성화 또는 비활성화
 :allow-uri-read: 

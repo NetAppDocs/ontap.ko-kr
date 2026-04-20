@@ -2,7 +2,7 @@
 permalink: san-admin/configure-svm-fc-task.html 
 sidebar: sidebar 
 keywords: configure, svm, for fc 
-summary: 'FC용 SVM(Storage Virtual Machine)을 구성하려면 SVM용 LIF를 생성하고 이러한 LIF에 FC 프로토콜을 할당해야 합니다.' 
+summary: FC용 스토리지 가상 머신을 구성하려면 SVM용 LIF를 생성하고 해당 LIF에 FC 프로토콜을 할당해야 합니다. 
 ---
 = FC용 SVM 구성
 :allow-uri-read: 

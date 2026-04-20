@@ -2,7 +2,7 @@
 permalink: san-admin/manage-nvme-concept.html 
 sidebar: sidebar 
 keywords: manage, nvme, overview, license 
-summary: 'NVMe(Non-Volatile Memory Express) 프로토콜을 사용하여 SAN 환경에 스토리지를 제공할 수 있습니다. NVMe 프로토콜은 솔리드 스테이트 스토리지의 성능을 위해 최적화되어 있습니다.' 
+summary: 'SAN 환경에서 스토리지를 제공하기 위해 NVMe(비휘발성 메모리 익스프레스) 프로토콜을 사용할 수 있습니다. NVMe 프로토콜은 솔리드 스테이트 스토리지의 성능에 최적화되어 있습니다.' 
 ---
 = NVMe 개요
 :allow-uri-read: 

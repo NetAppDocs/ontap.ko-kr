@@ -2,7 +2,7 @@
 permalink: system-admin/config-backup-file-concept.html 
 sidebar: sidebar 
 keywords: configuration, backup, files, archive, files 
-summary: '구성 백업 파일은 클러스터에 필요한 구성 가능한 모든 옵션과 해당 클러스터 내의 노드가 올바르게 작동하는 데 필요한 정보를 포함하는 아카이브 파일(.7z)입니다.' 
+summary: 구성 백업 파일은 클러스터와 그 안의 노드가 제대로 작동하는 데 필요한 모든 구성 가능한 옵션에 대한 정보를 포함하는 아카이브 파일입니다. 
 ---
 = ONTAP 구성 백업 파일에 대해 알아봅니다
 :allow-uri-read: 

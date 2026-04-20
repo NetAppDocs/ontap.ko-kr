@@ -2,7 +2,7 @@
 permalink: tape-backup/read-socket-received-eof-reference.html 
 sidebar: sidebar 
 keywords: communicate, remote, tape, ndmp, three, connection, end, file, mark, read, socket, eof 
-summary: NDMP 3방향 연결에서 원격 테이프와 파일 끝 표시에 도달하려고 했습니다. 
+summary: NDMP 3방향 연결에서 원격 테이프와 통신하려는 시도가 파일 끝 표시에 도달했습니다. 
 ---
 = 소켓 수신 EOF를 판독합니다
 :allow-uri-read: 

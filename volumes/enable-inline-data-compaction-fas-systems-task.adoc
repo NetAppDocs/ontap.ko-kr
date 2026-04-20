@@ -2,7 +2,7 @@
 permalink: volumes/enable-inline-data-compaction-fas-systems-task.html 
 sidebar: sidebar 
 keywords: enable, inline, data compaction, fas systems, hdd aggregate, volume efficiency 
-summary: '볼륨 또는 애그리게이트 레벨에서 Flash Pool(하이브리드) 애그리게이트 또는 HDD 애그리게이트가 포함된 FAS 시스템에서 인라인 데이터 컴팩션을 지원합니다.' 
+summary: Flash Pool 애그리게이트 또는 HDD 애그리게이트가 있는 FAS 시스템에서 볼륨 또는 애그리게이트 레벨에서 인라인 데이터 컴팩션을 설정합니다. 
 ---
 = FAS 시스템에 대해 인라인 데이터 컴팩션을 사용하도록 설정합니다
 :allow-uri-read: 

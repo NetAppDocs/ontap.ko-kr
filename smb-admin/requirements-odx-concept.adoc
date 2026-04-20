@@ -2,7 +2,7 @@
 permalink: smb-admin/requirements-odx-concept.html 
 sidebar: sidebar 
 keywords: odx, copy, offload, storage, virtual, machine, svm, requirement, requirements for using odx, odx 
-summary: '복사 오프로드를 SVM(스토리지 가상 머신)과 함께 사용하려면 먼저 특정 요구사항을 알고 있어야 합니다.' 
+summary: 스토리지 가상 머신에서 복사 오프로드에 ODX를 사용하려면 먼저 특정 요구 사항을 숙지해야 합니다. 
 ---
 = ONTAP SMB 서버에서 ODX를 사용하기 위한 요구 사항
 :allow-uri-read: 

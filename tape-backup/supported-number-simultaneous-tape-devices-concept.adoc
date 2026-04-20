@@ -2,7 +2,7 @@
 permalink: tape-backup/supported-number-simultaneous-tape-devices-concept.html 
 sidebar: sidebar 
 keywords: supported, number, simultaneoud, tape, devices, fibre, channel, scsi, sas, attachments, router, devices 
-summary: 'ONTAP는 Fibre Channel, SCSI 또는 SAS 접속 장치를 혼합하여 각 스토리지 시스템(노드당)에 대해 최대 64개의 동시 테이프 드라이브 접속, 16개의 미디어 체인저 및 16개의 브리지 또는 라우터 디바이스를 지원합니다.' 
+summary: ONTAP는 파이버 채널, SCSI 또는 SAS 연결 방식을 어떤 조합으로든 사용하여 각 스토리지 시스템당 최대 64개의 테이프 드라이브 동시 연결, 16개의 미디어 체인저, 16개의 브리지 또는 라우터 장치를 지원합니다. 
 ---
 = 동시에 지원되는 ONTAP 테이프 장치 수
 :allow-uri-read: 

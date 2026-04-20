@@ -2,7 +2,7 @@
 permalink: revert/task_disable_asuo.html 
 sidebar: sidebar 
 keywords: ontap, revert, reversion, reverting, two-node, 2-node, four-node, 4-node, metrocluster, mcc, configurations 
-summary: '2노드 또는 4노드 MetroCluster 구성을 되돌리기 전에 자동 비계획 전환 \(AUSO\)을 해제해야 합니다.' 
+summary: 2노드 또는 4노드 MetroCluster 구성을 되돌리기 전에 자동 비계획 전환을 비활성화해야 합니다. 
 ---
 = MetroCluster 구성을 되돌리기 전에 자동 계획되지 않은 전환을 비활성화합니다.
 :allow-uri-read: 

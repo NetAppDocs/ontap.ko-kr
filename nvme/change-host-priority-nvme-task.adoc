@@ -1,7 +1,7 @@
 ---
 permalink: nvme/change-host-priority-nvme-task.html 
 sidebar: sidebar 
-keywords: manage, nvme, host, priority, regular, high priority, allocate more I/O, allocate, higher, i/o, queue counts, queue-depths, queue, depth 
+keywords: manage, nvme, host, priority, regular, high priority, allocate more input and output, allocate, higher, input and output, queue counts, queue-depths, queue, depth 
 summary: ONTAP 9.14.1부터 NVM 하위 시스템에서 특정 호스트에 대한 리소스 할당의 우선 순위를 지정할 수 있습니다. 
 ---
 = NVMe 호스트 우선순위를 변경합니다

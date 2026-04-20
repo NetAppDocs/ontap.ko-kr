@@ -2,7 +2,7 @@
 permalink: smb-admin/supported-dynamic-access-control-reference.html 
 sidebar: sidebar 
 keywords: dynamic, access, control, dac, cifs, server, understand, ontap, support, functionality, active, directory, environment, supported dynamic access control functionality 
-summary: 'CIFS 서버에서 DAC(동적 액세스 제어)를 사용하려면 ONTAP가 Active Directory 환경에서 동적 액세스 제어 기능을 지원하는 방법을 이해해야 합니다.' 
+summary: CIFS 서버에서 동적 액세스 제어를 사용하려면 ONTAP이 Active Directory 환경에서 동적 액세스 제어 기능을 지원하는 방식을 이해해야 합니다. 
 ---
 = ONTAP SMB 서버에 지원되는 DAC 기능
 :allow-uri-read: 

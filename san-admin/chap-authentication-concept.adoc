@@ -2,7 +2,7 @@
 permalink: san-admin/chap-authentication-concept.html 
 sidebar: sidebar 
 keywords: what, chap, authentication, challenge handshake authentication protocol 
-summary: 'CHAP(Challenge Handshake Authentication Protocol)는 iSCSI 이니시에이터와 타겟 간의 인증된 통신을 활성화합니다. CHAP 인증을 사용하는 경우 이니시에이터와 스토리지 시스템 모두에서 CHAP 사용자 이름 및 암호를 정의합니다.' 
+summary: 'CHAP(Challenge Handshake Authentication Protocol)는 iSCSI 이니시에이터와 타겟 간의 인증된 통신을 가능하게 합니다. CHAP 인증을 사용할 때는 이니시에이터와 스토리지 시스템 모두에서 CHAP 사용자 이름과 암호를 정의합니다.' 
 ---
 = ONTAP 에서 iSCSI 이니시에이터에 대한 CHAP 인증에 대해 알아보세요.
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: tape-backup/assign-tape-aliases-concept.html 
 sidebar: sidebar 
 keywords: aliasing, ppn, physical, path, name, sn, serial, number, medium, changer, alias, name 
-summary: '에일리어싱은 장치 식별 과정을 간소화합니다. 앨리어싱은 테이프 또는 미디어 체인저의 물리적 경로 이름(PPN) 또는 일련 번호(SN)를 영구적이지만 수정할 수 있는 별칭 이름에 바인딩합니다.' 
+summary: 별칭 지정은 장치 식별 프로세스를 간소화합니다. 별칭 지정은 테이프 또는 미디어 체인저의 물리적 경로 이름 또는 일련 번호를 영구적이지만 수정 가능한 별칭 이름과 연결합니다. 
 ---
 = 테이프 앨리어싱 개요
 :allow-uri-read: 

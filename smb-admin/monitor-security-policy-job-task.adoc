@@ -2,7 +2,7 @@
 permalink: smb-admin/monitor-security-policy-job-task.html 
 sidebar: sidebar 
 keywords: apply, security, policy, storage, virtual, machine, svm, monitor, progress, policy, job, ascertain, application, long-running, bulk, security, file, folder, monitor the security policy job 
-summary: '보안 정책을 SVM(스토리지 가상 머신)에 적용할 때 보안 정책 작업을 모니터링하여 작업 진행률을 모니터링할 수 있습니다. 이 기능은 보안 정책의 응용 프로그램이 성공했는지 확인하려는 경우에 유용합니다. 이 기능은 많은 수의 파일과 폴더에 대량 보안을 적용하는 장기 실행 작업이 있는 경우에도 유용합니다.' 
+summary: 스토리지 가상 머신에 보안 정책을 적용할 때 보안 정책 작업을 모니터링하여 작업 진행 상황을 모니터링할 수 있습니다. 이는 보안 정책 적용이 성공했는지 확인하려는 경우에 유용합니다. 또한 많은 수의 파일 및 폴더에 대량 보안을 적용하는 장기 실행 작업이 있는 경우에도 유용합니다. 
 ---
 = ONTAP SMB 보안 정책 작업 모니터링
 :allow-uri-read: 

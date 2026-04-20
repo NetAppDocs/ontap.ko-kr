@@ -2,7 +2,7 @@
 permalink: san-admin/isns-concept.html 
 sidebar: sidebar 
 keywords: isns, isns server, internet storage name service, iscsi, iqn 
-summary: 'iSNS(Internet Storage Name Service)는 TCP/IP 스토리지 네트워크에서 iSCSI 디바이스를 자동으로 검색하고 관리할 수 있도록 하는 프로토콜입니다. iSNS 서버는 IP 주소, iSCSI 노드 이름 IQN 및 포털 그룹을 포함하여 네트워크의 활성 iSCSI 장치에 대한 정보를 유지 관리합니다.' 
+summary: 'Internet Storage Name Service는 TCP/IP 스토리지 네트워크에서 iSCSI 장치의 자동 검색 및 관리를 지원하는 프로토콜입니다. iSNS 서버는 네트워크에서 활성 iSCSI 장치에 대한 정보(IP 주소, iSCSI 노드 이름 IQN, 포털 그룹 등)를 유지 관리합니다.' 
 ---
 = ONTAP의 iSNS(인터넷 저장소 이름 서비스)입니다
 :allow-uri-read: 

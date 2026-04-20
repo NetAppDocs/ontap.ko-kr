@@ -2,7 +2,7 @@
 permalink: volumes/move-volume-task.html 
 sidebar: sidebar 
 keywords: move, volume 
-summary: 'FlexVol volume을 동일한 스토리지 가상 머신(SVM) 내에서 다른 애그리게이트, 노드 또는 둘 다로 이동하여 스토리지 용량의 균형을 조정합니다.' 
+summary: FlexVol 볼륨을 동일한 스토리지 가상 머신 내의 다른 애그리게이트, 노드 또는 둘 다로 이동하여 스토리지 용량의 균형을 유지합니다. 
 ---
 = ONTAP 볼륨 이동
 :allow-uri-read: 

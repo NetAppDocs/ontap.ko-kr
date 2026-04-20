@@ -2,7 +2,7 @@
 permalink: volumes/enable-deduplication-volume-task.html 
 sidebar: sidebar 
 keywords: enable, deduplication, volume, FlexVol, postprocess, inline 
-summary: 'FlexVol volume에서 중복제거(사후 처리 또는 인라인)를 활성화하여 스토리지 효율성을 달성합니다.' 
+summary: FlexVol 볼륨에서 중복 제거를 활성화하여 스토리지 효율성을 높이십시오. 
 ---
 = 볼륨에 대해 중복 제거를 설정합니다
 :allow-uri-read: 

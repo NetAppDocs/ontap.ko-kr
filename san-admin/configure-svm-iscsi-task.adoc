@@ -2,7 +2,7 @@
 permalink: san-admin/configure-svm-iscsi-task.html 
 sidebar: sidebar 
 keywords: configure, svm, iscsi 
-summary: 'iSCSI를 위한 SVM(Storage Virtual Machine)을 구성하려면 SVM용 LIF를 생성하고 이러한 LIF에 iSCSI 프로토콜을 할당해야 합니다.' 
+summary: iSCSI용 스토리지 가상 머신을 구성하려면 SVM용 LIF를 생성하고 해당 LIF에 iSCSI 프로토콜을 할당해야 합니다. 
 ---
 = iSCSI용 SVM을 구성합니다
 :allow-uri-read: 

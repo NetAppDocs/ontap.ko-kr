@@ -2,7 +2,7 @@
 permalink: smb-admin/manage-acls-dynamic-access-control-aces-task.html 
 sidebar: sidebar 
 keywords: resource, acl, applied, apply, dynamic, access, control, ace, disable, dynamic, storage, virtual, machine, svm, remove, non-dynamic, manage acls that contain dynamic access control aces when dynamic access control is disabled 
-summary: '동적 액세스 제어 ACE로 ACL이 적용된 리소스가 있고 SVM(스토리지 가상 시스템)에서 동적 액세스 제어를 사용하지 않도록 설정한 경우 해당 리소스에서 비 동적 액세스 제어 ACE를 관리하기 전에 동적 액세스 제어 ACE를 제거해야 합니다.' 
+summary: Dynamic Access Control ACE가 적용된 ACL이 있는 리소스가 있고 스토리지 가상 머신에서 Dynamic Access Control을 비활성화한 경우, 해당 리소스의 비Dynamic Access Control ACE를 관리하려면 먼저 Dynamic Access Control ACE를 제거해야 합니다. 
 ---
 = ONTAP SMB 서버에서 DAC가 비활성화된 경우 DAC ACE가 포함된 ACL 관리
 :allow-uri-read: 

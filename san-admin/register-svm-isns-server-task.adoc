@@ -2,7 +2,7 @@
 permalink: san-admin/register-svm-isns-server-task.html 
 sidebar: sidebar 
 keywords: register, svm, isns, server 
-summary: 'vserver iSCSI iSNS 명령을 사용하여 iSNS 서버에 등록할 SVM(스토리지 가상 머신)을 구성할 수 있습니다.' 
+summary: vserver iscsi isns 명령을 사용하여 스토리지 가상 머신이 iSNS 서버에 등록하도록 구성할 수 있습니다. 
 ---
 = iSNS 서버를 사용하여 SVM을 등록합니다
 :allow-uri-read: 

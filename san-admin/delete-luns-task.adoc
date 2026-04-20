@@ -2,7 +2,7 @@
 permalink: san-admin/delete-luns-task.html 
 sidebar: sidebar 
 keywords: delete, luns 
-summary: 'LUN이 더 이상 필요하지 않은 경우 SVM(스토리지 가상 시스템)에서 LUN을 삭제할 수 있습니다.' 
+summary: 더 이상 LUN이 필요하지 않은 경우 스토리지 가상 머신에서 LUN을 삭제할 수 있습니다. 
 ---
 = LUN을 삭제합니다
 :allow-uri-read: 

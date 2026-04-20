@@ -2,7 +2,7 @@
 permalink: san-admin/manage-san-initiators-task.html 
 sidebar: sidebar 
 keywords: system manager, san, add, initiator group, igroup, initiator 
-summary: 'System Manager를 사용하여 이니시에이터 그룹(igroup)과 이니시에이터를 보고 관리할 수 있습니다.' 
+summary: System Manager를 사용하여 이니시에이터 그룹 및 이니시에이터를 확인하고 관리할 수 있습니다. 
 ---
 = SAN 이니시에이터 및 igroup을 보고 관리합니다
 :allow-uri-read: 

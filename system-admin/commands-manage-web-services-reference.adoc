@@ -2,7 +2,7 @@
 permalink: system-admin/commands-manage-web-services-reference.html 
 sidebar: sidebar 
 keywords: command, manage, web, service, vserver, svm, storage, virtual. machine 
-summary: 'SVM 서비스 웹 명령을 사용하여 클러스터 또는 SVM(스토리지 가상 머신)의 웹 서비스 가용성을 관리할 수 있습니다. SVM 서비스 웹 액세스 명령을 사용하여 웹 서비스에 대한 역할의 액세스를 제어합니다.' 
+summary: vserver services web 명령을 사용하여 클러스터 또는 스토리지 가상 머신에 대한 웹 서비스의 가용성을 관리합니다. vserver services web access 명령을 사용하여 웹 서비스에 대한 역할의 액세스를 제어합니다. 
 ---
 = 웹 서비스 관리를 위한 ONTAP 명령
 :allow-uri-read: 

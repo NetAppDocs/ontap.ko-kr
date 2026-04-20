@@ -1,8 +1,8 @@
 ---
 permalink: san-admin/io-misalignments-properly-aligned-luns-concept.html 
 sidebar: sidebar 
-keywords: i/o misalignments, occur, properly, aligned, luns 
-summary: ONTAP는 올바르게 정렬된 LUN에 대한 I/O 정렬 불량을 보고할 수 있습니다. 일반적으로 이 정렬 불량 경고는 LUN이 제대로 프로비저닝되고 파티셔닝 테이블이 올바른 경우에 무시할 수 있습니다. 
+keywords: input and output misalignments, occur, properly, aligned, luns 
+summary: ONTAP는 올바르게 정렬된 LUN에서도 입력 및 출력 정렬 오류를 보고할 수 있습니다. 일반적으로 LUN이 올바르게 프로비저닝되었고 파티셔닝 테이블이 정확하다고 확신하는 경우 이러한 정렬 오류 경고는 무시해도 됩니다. 
 ---
 = 올바르게 정렬된 LUN의 입출력 정렬 불량 개요
 :allow-uri-read: 

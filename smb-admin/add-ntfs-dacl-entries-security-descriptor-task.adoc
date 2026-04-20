@@ -2,7 +2,7 @@
 permalink: smb-admin/add-ntfs-dacl-entries-security-descriptor-task.html 
 sidebar: sidebar 
 keywords: add, dacl, discretionary, access, control, list, access, control, entries, aces, ntfs, security, descriptor, acls, add ntfs dacl access control entries to the ntfs security 
-summary: 'NTFS 보안 설명자에 DACL(임의 액세스 제어 목록) ACE(액세스 제어 항목)를 추가하는 것은 파일이나 폴더에 NTFS ACL을 구성하고 적용하는 두 번째 단계입니다. 각 항목은 액세스가 허용되거나 거부된 개체를 식별하고 ACE에 정의된 파일 또는 폴더에 대해 개체가 수행할 수 있거나 수행할 수 없는 작업을 정의합니다.' 
+summary: NTFS 보안 설명자에 DACL 액세스 제어 항목을 추가하는 것은 파일 또는 폴더에 NTFS ACL을 구성하고 적용하는 두 번째 단계입니다. 각 항목은 어떤 개체에 대한 액세스가 허용되거나 거부되는지를 식별하고, 해당 개체가 ACE에 정의된 파일 또는 폴더에 대해 수행할 수 있는 작업과 수행할 수 없는 작업을 정의합니다. 
 ---
 = ONTAP SMB 서버의 NTFS 보안 설명자에 NTFS DACL 액세스 제어 항목 추가
 :allow-uri-read: 

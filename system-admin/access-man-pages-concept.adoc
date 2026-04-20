@@ -2,7 +2,7 @@
 permalink: system-admin/access-man-pages-concept.html 
 sidebar: sidebar 
 keywords: method, access, ontap, man, pages, command, line 
-summary: 'ONTAP 매뉴얼(MAN) 페이지에서는 ONTAP 명령 사용 방법에 대해 설명합니다. CLI 및 NetApp Support 사이트에서 제공됩니다.' 
+summary: ONTAP 매뉴얼 페이지에는 ONTAP 명령 사용 방법이 설명되어 있습니다. 명령줄과 NetApp 지원 사이트에서 확인할 수 있습니다. 
 ---
 = ONTAP CLI man 페이지에 액세스하는 방법
 :allow-uri-read: 

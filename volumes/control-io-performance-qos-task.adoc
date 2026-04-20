@@ -1,8 +1,8 @@
 ---
 permalink: volumes/control-io-performance-qos-task.html 
 sidebar: sidebar 
-keywords: control, monitor, i/o performance, flexvol volumes, using storage qos, qos, performance, throttle, flexvol, policy, policy group 
-summary: 스토리지 QoS 정책 그룹을 통해 FlexVol 볼륨의 I/O 성능을 제어하여 워크로드를 관리할 수 있습니다. 
+keywords: control, monitor, input and output performance, flexvol volumes, using storage qos, qos, performance, throttle, flexvol, policy, policy group 
+summary: 스토리지 QoS 정책 그룹을 사용하여 워크로드를 관리하면 FlexVol 볼륨의 입력 및 출력 성능을 제어할 수 있습니다. 
 ---
 = 스토리지 QoS로 FlexVol volume I/O 성능을 제어 및 모니터링합니다
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: tape-backup/enhanced-dar-functionality-concept.html 
 sidebar: sidebar 
 keywords: dar, functionality, direct, access, recovery, files, nt, stream 
-summary: '디렉토리 DAR 및 파일 및 NT 스트림의 DAR에 향상된 직접 액세스 복구(DAR) 기능을 사용할 수 있습니다. 기본적으로 향상된 DAR 기능은 활성화되어 있습니다.' 
+summary: 디렉터리 DAR 및 파일과 NT 스트림의 DAR에 대해 향상된 직접 액세스 복구 기능을 사용할 수 있습니다. 향상된 DAR 기능은 기본적으로 활성화되어 있습니다. 
 ---
 = ONTAP NDMP의 향상된 DAR 기능에 대해 알아보세요.
 :allow-uri-read: 

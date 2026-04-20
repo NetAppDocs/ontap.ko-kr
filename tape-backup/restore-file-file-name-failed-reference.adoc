@@ -2,7 +2,7 @@
 permalink: tape-backup/restore-file-file-name-failed-reference.html 
 sidebar: sidebar 
 keywords: restore, file, name, failed, dar, fail, lun, direct, access, recovery 
-summary: '대상 볼륨에 있는 LUN의 파일 이름과 동일한 파일 이름의 DAR(Direct Access Recovery)이 수행된 경우 DAR가 실패합니다.' 
+summary: 대상 볼륨의 LUN과 파일 이름이 동일한 파일의 DAR을 수행하면 DAR이 실패합니다. 
 ---
 = file name> 파일을 복원하지 못했습니다
 :allow-uri-read: 

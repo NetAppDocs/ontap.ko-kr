@@ -2,7 +2,7 @@
 permalink: smb-admin/revert-dynamic-access-control-concept.html 
 sidebar: sidebar 
 keywords: aware, revert, version, ontap, support, dynamic, access, control, dac, revert considerations for dynamic access control 
-summary: 'DAC(동적 액세스 제어)를 지원하지 않는 ONTAP 버전으로 되돌릴 경우 어떤 일이 발생할지, 되돌리기 전과 후에 무엇을 해야 하는지 알고 있어야 합니다.' 
+summary: Dynamic Access Control을 지원하지 않는 ONTAP 버전으로 되돌릴 때 발생하는 상황과 되돌리기 전후에 수행해야 할 작업에 대해 알아두어야 합니다. 
 ---
 = ONTAP SMB 서버의 DAC에 대한 고려 사항 되돌리기
 :allow-uri-read: 

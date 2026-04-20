@@ -2,7 +2,7 @@
 permalink: system-admin/install-ca-signed-client-certificate-kmip-server-task.html 
 sidebar: sidebar 
 keywords: install, ca, signed, client, certificate, kmip, server, key, management, interoperability, protocol, server 
-summary: '클라이언트 및 서버 CA 유형과 함께 KMIP(Key Management Interoperability Protocol)(-subtype KMIP-cert 매개 변수)의 인증서 하위 유형은 클러스터 및 KMIP 서버와 같은 외부 키 관리자를 상호 인증하는 데 인증서가 사용됨을 나타냅니다.' 
+summary: Key Management Interoperability Protocol의 인증서 하위 유형은 client 및 server-ca 유형과 함께 해당 인증서가 클러스터와 KMIP 서버와 같은 외부 키 관리자 간의 상호 인증에 사용됨을 지정합니다. 
 ---
 = ONTAP 의 KMIP 서버에 대한 CA 서명 클라이언트 인증서 설치
 :allow-uri-read: 
