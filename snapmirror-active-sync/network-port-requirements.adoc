@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: snapmirror-active-sync/network-port-requirements.html 
+keywords: SM-BC, SMBC, SM-AS, restrictions, firewall, network ports, snapmirror active sync 
+summary: ONTAP SnapMirror 액티브 싱크 네트워크 포트 요구 사항 
+---
+= 네트워크 포트 요구 사항
+:allow-uri-read: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror 액티브 싱크 복제에는 몇 가지 네트워크 포트 요구 사항이 있습니다.
+
+예를 들어, 복제에 참여하는 각 노드는 파트너 노드의 상태를 모니터링하고, 복제 활동을 제어하며, 데이터 자체도 복제되어야 합니다. 또한, ONTAP Mediator 또는 ONTAP Cloud Mediator는 쿼럼 서비스를 제공하고 장애 조치를 지원하기 위해 모든 노드와 통신해야 합니다. 이러한 모든 기능은 각각 다른 엔드포인트 및 포트 요구 사항을 가지고 있습니다.
+
+대부분의 경우 SnapMirror 액티브 싱크 복제는 포트 또는 대상 기반 제한 없이 내부 네트워크에서 작동합니다. 방화벽, 라우터, 네트워크 토폴로지 또는 기타 메커니즘으로 인해 IP 트래픽이 제한되는 경우 다음 연결 요구 사항을 확인해야 합니다.
+
+
+
+== 클러스터 간/피어 링크를 사용한 노드 간 통신
+
+|===
+| 포트 | 출처 | 방향 | 목적지 | 목적 
+
+
+| 3260/tcp | 클러스터 간 LIF | 둘 다 | 클러스터 간 LIF | LUN 합의 
+
+
+ a| 
+11104/tcp + 11105/tcp
+| 클러스터 간 LIF | 둘 다 | 클러스터 간 LIF  a| 
+클러스터 간 통신
+
+SnapMirror 데이터 전송
+
+
+
+| 443/tcp (HTTPS) | 클러스터 간 LIF | 둘 다 | 클러스터 간 LIF | 클러스터 간 관리 
+
+
+| 10000/tcp  a| 
+cluster-mgmt LIF + node-mgmt LIF
+| 둘 다 | 선택 사항 | Active IQ Unified Manager와의 통신 
+|===
+
+
+== 중재자와 클러스터 노드 간의 통신
+
+|===
+| 포트 | 출처 | 방향 | 목적지 | 목적 
+
+
+| 22/tcp (SSH) | 관리 호스트 | 인바운드 | ONTAP 중재자 | ONTAP Mediator 관리 
+
+
+| 31784/tcp (HTTPS) | cluster-mgmt LIF | 인바운드 | ONTAP 중재자 웹 서버 | REST API 
+
+
+| 31784/TCP | 노드 관리 LIF | 인바운드 | ONTAP 중재자 웹 서버 | 쿼럼 서비스 
+|===
