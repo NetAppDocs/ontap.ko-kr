@@ -60,18 +60,10 @@ volume modify -vserver <svm_name> -volume <volume_name> -is-large-size-enabled t
 ----
 volume modify -vserver vs2 -volume data_vol -is-large-size-enabled true
 ----
-. 볼륨을 다시 마운트하여 새 구성 설정을 활성화합니다.
-+
-[source, cli]
-----
-volume unmount -vserver <svm_name> -volume <volume_name>
-----
-+
-[source, cli]
-----
-volume mount -vserver <svm_name> -volume <volume_name>
-----
 
+
+.다음 단계
+NFS 클라이언트에 대해 대용량 볼륨 및 파일 지원을 활성화한 경우 새 최대 파일 크기가 적용되려면 클라이언트를 다시 마운트해야 합니다.
 
 .관련 정보
 * link:../volumes/create-volume-task.html["ONTAP NFS 볼륨 생성"]
