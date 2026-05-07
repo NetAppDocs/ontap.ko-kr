@@ -14,20 +14,21 @@ summary: ONTAP Mediator를 설치하려면 모든 필수 구성 요소가 충족
 ONTAP Mediator를 설치하거나 업그레이드하려면 모든 필수 구성 요소를 충족하고, 설치 패키지를 다운로드한 다음 호스트에서 설치 프로그램을 실행해야 합니다.
 
 * ONTAP 9.8부터는 모든 버전의 ONTAP Mediator를 사용하여 SnapMirror 활성 동기화 관계를 모니터링할 수 있습니다.
-* ONTAP Mediator의 모든 버전을 사용하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
+* ONTAP Mediator를 iSCSI 프로토콜로 구성하면 모든 버전의 ONTAP Mediator를 사용하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
+* ONTAP 9.19.1 및 ONTAP Mediator 1.12부터 HTTPS 통신을 사용하는 ONTAP Mediator를 구성하여 MetroCluster IP 구성을 모니터링할 수 있습니다.
 
 
 
 
 == 설치 및 업그레이드 고려 사항
 
-ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 사항을 검토하세요.
+ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 정보를 검토하십시오.
 
 
 NOTE: ONTAP Mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux(RHEL) FIPS 모드와 호환되지 않아 성공적으로 설치할 수 없습니다.  FIPS 모드가 활성화되어 있는지 확인하려면 다음을 사용하세요. `fips-mode-setup --check` 명령.  다음을 사용하여 FIPS 모드를 비활성화할 수 있습니다. `fips-modesetup --disable` 명령. ONTAP Mediator 1.8 또는 이전 버전을 성공적으로 설치하려면 FIPS 모드를 비활성화한 후 재부팅하세요.
 
 * ONTAP Mediator를 최신 버전으로 업그레이드해야 합니다.  이전 버전은 모든 ONTAP 릴리스에서 여전히 작동하지만 최신 버전에는 타사 구성 요소에 대한 보안 패치가 포함되어 있습니다.
-* 새 ONTAP 중재자 버전으로 업그레이드할 때 더 높은 버전을 사용할 수 없는 경우 설치 관리자는 자동으로 권장 SCST 버전으로 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법은 을 참조하십시오link:manage-task.html["ONTAP 중재자 관리"]. 지원되는 버전은 를 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]참조하십시오.
+* SCST 패키지가 포함된 새로운 ONTAP Mediator 버전으로 업그레이드할 경우, 설치 프로그램은 더 높은 버전이 없는 한 권장 SCST 버전으로 자동 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법에 대한 지침은 link:manage-task.html["ONTAP 중재자 관리"]을 참조하십시오. 지원되는 버전은 link:whats-new-concept.html#scst-support-matrix["SCST 지원 매트릭스"]을 참조하십시오.
 
 
 [NOTE]
@@ -43,7 +44,36 @@ NOTE: ONTAP Mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux(RHEL) FIP
 
 
 
-=== 호스트 요구 사항
+=== ONTAP Mediator의 HTTPS 및 iSCSI 설치 옵션
+
+* ONTAP Mediator에서는 SCST 패키지를 사용하여 MetroCluster IP 구성에서 통신을 위한 iSCSI를 제공합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. ONTAP Mediator 1.12부터는 iSCSI 대신 HTTPS를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다.
+
+
+[CAUTION]
+====
+* ONTAP Mediator가 MetroCluster IP 구성에서 HTTPS 프로토콜로 구성된 경우, 단일 ONTAP Mediator 인스턴스는 하나의 MetroCluster IP 구성만 모니터링할 수 있습니다. 여러 MetroCluster IP 구성을 동시에 모니터링하는 것은 지원되지 않습니다.
+* 여러 MetroCluster IP 구성을 모니터링하기 위해 HTTPS로 구성된 ONTAP Mediator가 필요한 경우 각 MetroCluster IP 구성에 대해 별도의 ONTAP Mediator 인스턴스를 구성해야 합니다. MetroCluster IP에 대해 HTTPS로 ONTAP Mediator를 구성하기 전에 MetroCluster IP 환경에 대한 요구 사항을 신중하게 평가해야 합니다.
+
+
+====
+* ONTAP Mediator 1.12 이상 버전을 설치하거나 업그레이드할 때 iSCSI 및 HTTPS를 모두 지원하는 ONTAP Mediator를 설치할지, 아니면 HTTPS만 지원하는 ONTAP Mediator를 설치할지 선택할 수 있습니다. HTTPS만 지원하는 ONTAP Mediator를 설치하도록 선택하면 SCST 패키지는 설치되지 않습니다.
+* SCST가 설치된 ONTAP Mediator 1.11 이하 버전에서 업그레이드할 때 HTTPS 전용 옵션을 선택하면 SCST 패키지가 제거되고 새 ONTAP Mediator 버전에는 SCST 패키지가 포함되지 않습니다.
+* HTTPS만 지원하는 ONTAP Mediator 설치는 다음과 같은 사용 사례에 한해 지원됩니다.
++
+** ONTAP Mediator를 SnapMirror 액티브 동기화 클러스터 모니터링에만 사용할 계획입니다.
+** ONTAP Mediator 인스턴스당 하나의 MetroCluster IP 구성을 모니터링하기 위해 ONTAP Mediator를 HTTPS로 구성할 계획입니다.
+
+
+* 다음 시나리오에서는 ONTAP Mediator를 iSCSI 및 HTTPS 지원과 함께 설치해야 합니다.
++
+** 하나 이상의 MetroCluster IP 구성을 모니터링하기 위해 ONTAP Mediator를 iSCSI로 구성할 계획입니다.
+
+
+
+
+
+
+== 호스트 요구 사항
 
 RHEL 또는 Rocky Linux를 설치하고 관련 저장소를 구성할 때 다음 요구 사항을 따르세요.
 
@@ -64,9 +94,36 @@ RHEL 또는 Rocky Linux를 설치하고 관련 저장소를 구성할 때 다음
 ====
 
 
-.네트워킹 요구 사항
-다음 포트가 ONTAP 중재자에 사용 가능하고 사용되지 않는지 확인합니다.
 
+
+== 방화벽 및 네트워킹 요구 사항
+
+ONTAP Mediator는 특정 서비스와 통신하기 위해 여러 포트를 사용합니다.
+
+* 타사 방화벽을 사용 중인 경우:
++
+** HTTPS 액세스가 활성화되어 있어야 합니다.
+** 포트 31784와 3260에 대한 액세스를 허용하도록 구성해야 합니다.
++
+기본 Red Hat 또는 CentOS 방화벽을 사용하는 경우 Mediator 설치 중에 방화벽이 자동으로 구성됩니다.
+
+
+
+* 인터넷에 액세스할 수 없는 Linux 호스트의 경우 로컬 리포지토리에서 필요한 패키지를 사용할 수 있는지 확인합니다.
++
+Linux 환경에서 LACP(Link Aggregation Control Protocol)를 사용하는 경우 커널을 구성하고 `sysctl net.ipv4.conf.all.arp_ignore` 을 로 `2`설정합니다.
+
+
+
+다음 표는 방화벽에서 허용해야 하는 port 목록입니다.
+
+[NOTE]
+====
+* iSCSI 포트는 MetroCluster IP 구성에서만 필요합니다.
+* 22/tcp 포트는 정상 작동에는 필요하지 않지만 유지보수를 위해 일시적으로 활성화하고 유지보수 세션이 완료되면 비활성화할 수 있습니다.
+
+
+====
 |===
 
 
@@ -111,16 +168,13 @@ ONTAP는 iSCSI 대상을 중재합니다
 ( MetroCluster IP 구성에 필요) 사서함에 대한 iSCSI 데이터 연결
 
 |===
-SMBC 고객의 경우 ONTAP는 포트 3260을 활성화 또는 연결할 필요가 없습니다.
 
-* 타사 방화벽을 사용하는 경우 다음을 참조하세요.link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#firewall-requirements-for-ontap-mediator["ONTAP 중재자를 위한 방화벽 요구 사항"^] .
-* 인터넷에 액세스할 수 없는 Linux 호스트의 경우 로컬 리포지토리에서 필요한 패키지를 사용할 수 있는지 확인합니다.
-+
-Linux 환경에서 LACP(Link Aggregation Control Protocol)를 사용하는 경우 커널을 구성하고 `sysctl net.ipv4.conf.all.arp_ignore` 을 로 `2`설정합니다.
+NOTE: HTTPS를 사용하여 통신하는 SnapMirror 액티브 동기화 또는 MetroCluster IP ONTAP 미디에이터의 경우 ONTAP에서 포트 3260을 활성화하거나 연결할 필요가 없습니다.
 
 
 
-.OS 요구 사항
+== OS 요구 사항
+
 OS는 다음 요구 사항을 충족해야 합니다.
 
 * 64비트 물리적 설치 또는 가상 머신
@@ -136,6 +190,21 @@ OS는 다음 요구 사항을 충족해야 합니다.
 
 
 | ONTAP 중재자 버전 | 지원되는 Linux 버전 
+
+
+ a| 
+1.12
+ a| 
+* Red Hat Enterprise Linux
++
+** 호환 가능: 10.1 및 9.7 ^1^
+** 권장 사항: 10.2, 10.0, 9.8, 9.6, 9.4 및 8.10
+
+
+* Rocky Linux 10.2, 9.8 및 8.10
+* Oracle Linux 10.1 및 9.7
+
+
 
 
  a| 
@@ -331,7 +400,12 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 
 
 
-=== OS 업그레이드 고려 사항 및 커널 호환성
+=== OS 업그레이드 및 커널 호환성 요구 사항
+
+ONTAP Mediator와 함께 SCST 패키지를 설치할 경우 다음과 같은 요구 사항이 적용됩니다.
+
+
+NOTE: HTTPS만 지원하는 ONTAP Mediator 1.12 이상을 설치한 경우 SCST 패키지가 설치되지 않으므로 커널 호환성 요구 사항이 적용되지 않습니다.
 
 * 커널을 제외한 모든 라이브러리 패키지를 업데이트할 수 있지만 ONTAP Mediator에서 변경 사항을 적용하려면 재부팅이 필요할 수 있습니다.  재부팅이 필요한 경우 가동 중지 시간을 예약하세요.
 * OS 커널을 최신 상태로 유지해야 합니다.  커널 코어를 지원되는 버전으로 업그레이드하세요.link:whats-new-concept.html#scst-support-matrix["ONTAP 중재자 버전 매트릭스"] .  시스템을 재부팅해야 하므로, 정전에 대비한 유지 관리 기간을 계획하세요.
@@ -345,7 +419,7 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 [NOTE]
 ====
 * 커널 버전이 운영 체제 버전과 일치해야 합니다.
-* 테스트된 SCST 모듈이 작동하지 않을 수 있으므로 ONTAP Mediator 릴리스에 대해 지원되는 OS 버전 이상으로 커널을 업그레이드하지 마세요.
+* ONTAP Mediator 릴리스에서 지원하는 OS 버전 이상으로 커널을 업그레이드하지 마십시오. 테스트를 거친 SCST 모듈이 작동하지 않을 수 있습니다.
 
 
 ====
@@ -356,7 +430,9 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 ONTAP mediator는 UEFI 보안 부팅이 활성화되어 있거나 활성화되지 않은 시스템에 설치할 수 있습니다.
 
 .이 작업에 대해
-필요하지 않거나 ONTAP mediator 설치 문제를 해결하는 경우 ONTAP mediator를 설치하기 전에 UEFI 보안 부팅을 사용하지 않도록 선택할 수 있습니다. 시스템 설정에서 UEFI 보안 부팅 옵션을 비활성화합니다.
+* 필요하지 않거나 ONTAP mediator 설치 문제를 해결하는 경우 ONTAP mediator를 설치하기 전에 UEFI 보안 부팅을 사용하지 않도록 선택할 수 있습니다. 시스템 설정에서 UEFI 보안 부팅 옵션을 비활성화합니다.
+* HTTPS만 지원하는 ONTAP Mediator 1.12 이상을 설치한 경우 SCST 패키지가 설치되지 않으므로 이 작업을 건너뛸 수 있습니다.
+
 
 [NOTE]
 ====

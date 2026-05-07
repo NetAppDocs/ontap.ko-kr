@@ -2,16 +2,25 @@
 permalink: san-admin/move-san-lifs-task.html 
 sidebar: sidebar 
 keywords: move, san, lifs 
-summary: 노드를 오프라인으로 전환해야 하는 경우, SAN LIF를 이동하여 WWPN과 같은 구성 정보를 보존하고 스위치 패브릭의 영역 변경을 방지할 수 있습니다. SAN LIF는 이동하기 전에 오프라인으로 전환해야 하므로, 호스트 트래픽은 LUN에 대한 중단 없는 액세스를 제공하기 위해 호스트 멀티패싱 소프트웨어에 의존해야 합니다. SAN LIF는 클러스터 내의 모든 노드로 이동할 수 있지만, 스토리지 가상 머신 간에는 이동할 수 없습니다. 
+summary: 노드를 오프라인으로 전환해야 하는 경우, SAN LIF를 이동하여 WWPN과 같은 구성 정보를 보존하고 스위치 패브릭의 영역 변경을 방지할 수 있습니다. 
 ---
-= SAN LIF를 이동합니다
+= ONTAP SAN LIF 이동
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-노드를 오프라인 상태로 전환해야 하는 경우 SAN LIF를 이동하여 WWPN과 같은 구성 정보를 유지하고 스위치 패브릭의 재조닝(zoning)을 방지할 수 있습니다. SAN LIF가 이동되기 전에 먼저 오프라인으로 전환되어야 하므로 호스트 트래픽은 호스트 다중 경로 소프트웨어를 통해 LUN에 대한 무중단 액세스를 제공해야 합니다. SAN LIF를 클러스터의 아무 노드로 이동할 수 있지만 SVM(스토리지 가상 머신) 간에 SAN LIF를 이동할 수 없습니다.
+노드를 오프라인으로 전환해야 하는 경우 WWPN과 같은 구성 정보를 보존하기 위해 SAN LIF를 이동할 수 있습니다. LIF를 이동하는 데에는 FC 패브릭의 영역 재지정이나 클러스터 호스트와 대상 인터페이스 간의 새로운 iSCSI 세션 생성이 필요하지 않습니다. SAN LIF는 클러스터 내의 모든 노드로 이동할 수 있지만 스토리지 가상 머신(SVM) 간에는 이동할 수 없습니다.
+
+LIF를 이동하면 다음과 같은 작업을 중단 없이 수행할 수 있습니다.
+
+* LUN 또는 네임스페이스 데이터에 액세스하는 호스트에 투명한 방식으로 클러스터의 HA 쌍 하나를 업그레이드된 HA 쌍으로 교체합니다
+* 대상 인터페이스 카드를 업그레이드합니다
+* SVM(스토리지 가상 시스템)의 리소스를 클러스터의 한 노드 세트에서 클러스터의 다른 노드 세트로 이동합니다
+
+
+ `network interface move` 명령을 사용하여 SAN LIF를 이동할 수 없습니다. SAN LIF를 이동하려면 오프라인 상태로 전환한 후 새 홈 노드 또는 포트로 이동하고 다시 온라인 상태로 전환해야 합니다. SAN LIF는 이동 전에 오프라인 상태로 전환해야 하므로 호스트 트래픽은 호스트 다중 경로 소프트웨어를 사용하여 LUN에 대한 무중단 액세스를 제공해야 I/O 중단이 발생하지 않습니다.
 
 .시작하기 전에
 LIF가 포트 세트의 구성원인 경우 LIF를 다른 노드로 이동하기 전에 포트 세트에서 LIF를 제거해야 합니다.
@@ -22,31 +31,38 @@ LIF가 포트 세트의 구성원인 경우 LIF를 다른 노드로 이동하기
 .단계
 . LIF의 관리 및 운영 상태를 봅니다.
 +
-'network interface show -vserver_vserver_name_'
-
+[source, cli]
+----
+network interface show -vserver <SVM_name>
+----
 +
 에 대한 자세한 내용은 `network interface show` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . LIF의 상태를 '자체'(오프라인)로 변경합니다.
 +
-'network interface modify -vserver_vserver_name_-lif_LIF_name_-status-admin down'
-
+[source, cli]
+----
+network interface modify -vserver <SVM_name> -lif <LIF_name> -status-admin down
+----
 +
 에 대한 자세한 내용은 `network interface modify` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . LIF를 새 노드 및 포트에 할당합니다.
 +
-'network interface modify -vserver_vserver_name_-lif_LIF_name_-home-node_node_name_-home-port_port_name_'
-
+[source, cli]
+----
+network interface modify -vserver <SVM_name> -lif <LIF_name> -home-node <node_name> -home-port <port_name>
+----
 . LIF의 상태를 '위쪽'(온라인)으로 변경합니다.
 +
-'network interface modify -vserver_vserver_name_-lif_LIF_name_-status-admin up
-
-+
-에 대한 자세한 내용은 `up` link:https://docs.netapp.com/us-en/ontap-cli/up.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
+[source, cli]
+----
+network interface modify -vserver <SVM_name> -lif <LIF_name> -status-admin up
+----
 . 변경 사항 확인:
 +
-'network interface show -vserver_vserver_name_'
-
+[source, cli]
+----
+network interface show -vserver <SVM_name>
+----
 

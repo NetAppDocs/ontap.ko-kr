@@ -1,0 +1,158 @@
+---
+permalink: nfs-admin/enable-disable-nfs-task.html 
+sidebar: sidebar 
+keywords: enable, disable, nfsv3, nfsv4, nfsv4.2, ontap, netapp, nfsv4.1, storage vm, svm, storage virtual machine, nfs, -v3, -v4, -v4.1, -v4.2 
+summary: System Manager 또는 CLI를 사용하여 NFS 버전을 활성화 또는 비활성화할 수 있습니다. 이를 통해 NFS 프로토콜을 사용하는 클라이언트의 파일 액세스가 가능합니다. 
+---
+= ONTAP SVM에 대해 NFS를 활성화 또는 비활성화합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+System Manager 또는 CLI를 사용하여 NFS 버전을 활성화 또는 비활성화할 수 있습니다. 이를 통해 NFS 프로토콜을 사용하는 클라이언트의 파일 액세스가 가능합니다.
+
+기본적으로 NFSv3은 지원되는 모든 ONTAP 9 버전에서 활성화되어 있습니다. ONTAP 9.9.1부터는 NFSv4.1 및 NFSv4.2가 기본적으로 활성화되어 있으며, 이전 버전에서는 기본적으로 비활성화되어 있습니다.
+
+ONTAP 9.19.1부터 NFSv4.1과 NFSv4.2를 독립적으로 활성화 또는 비활성화할 수 있습니다. ONTAP 9.19.1 이전에는 NFSv4.1과 NFSv4.2를 함께 활성화 또는 비활성화할 수만 있었습니다. 기본적으로 관리자가 명시적으로 비활성화하지 않는 한 새 NFS 서비스가 생성될 때 NFSv4.1과 NFSv4.2가 모두 활성화됩니다.
+
+
+NOTE: NFSv4.2 파일 액세스 이벤트에 대한 FPolicy 모니터링은 지원되지 않습니다. FPolicy 모니터링을 구성하려면 SVM에서 NFSv4.2를 비활성화해야 합니다. 자세한 내용은 link:nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html["ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합"]를 참조하십시오.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+.단계
+. System Manager에서 *Cluster > Storage VMs*를 선택하고 스토리지 VM을 선택한 다음 *Settings*를 선택하고 *NFS* 아래에서 image:icon_gear.gif["작업 아이콘"] 또는 image:icon-edit-pencil-blue-outline.png["편집 아이콘"]를 선택합니다.
+. *NFS 활성화* 확인란을 선택합니다.
+. NFS 프로토콜 활성화 또는 비활성화:
++
+** NFSv3를 활성화하려면 *버전 3 지원 활성화* 확인란을 선택하고 다음 옵션을 고려하십시오.
++
+*** NFSv3에 대한 64비트 파일 시스템 ID 및 파일 식별자 지원을 활성화하려면 *64비트 FSID 및 파일 식별자 활성화* 확인란을 선택하십시오.
+
+
+** NFSv3를 비활성화하려면 *버전 3 지원 활성화* 확인란을 선택 취소합니다.
+** NFSv4.0을 활성화하려면 *버전 4 지원 활성화* 확인란을 선택하고 다음 옵션을 고려하십시오.
++
+*** 액세스 제어 목록 사용을 허용하려면 *ACL 사용* 확인란을 선택하십시오.
+*** 읽기 전용 액세스를 허용하려면 *읽기 위임 사용* 확인란을 선택하십시오.
+*** 쓰기 액세스를 허용하려면 *쓰기 위임 활성화* 확인란을 선택하십시오.
+*** 64비트 파일 시스템 ID 및 파일 식별자 지원을 활성화하려면 *64비트 FSID 및 파일 식별자 사용* 확인란을 선택하십시오. 이 확인란은 NFSv4.0, NFSv4.1 및 NFSv4.2에 적용됩니다. 이는 NFSv3의 64비트 지원을 제어하는 데 사용되는 확인란과는 별개입니다.
+
+
+** NFSv4.0을 비활성화하려면 *버전 4 지원 활성화* 확인란을 선택 취소합니다.
+** NFSv4.1을 활성화하려면 *버전 4.1 및 4.2 지원 활성화* 확인란을 선택한 다음 *버전 4.1 지원 활성화* 확인란을 선택합니다. 다음 옵션을 고려하십시오.
++
+*** 액세스 제어 목록 사용을 허용하려면 *ACL 사용* 확인란을 선택하십시오.
+*** 읽기 전용 액세스를 허용하려면 *읽기 위임 사용* 확인란을 선택하십시오.
+*** 쓰기 액세스를 허용하려면 *쓰기 위임 활성화* 확인란을 선택하십시오.
+*** 클라이언트가 성능 향상을 위해 병렬 NFS(pNFS)를 사용할 수 있도록 하려면 *pNFS* 확인란을 선택하십시오.
+*** 64비트 파일 시스템 ID 및 파일 식별자 지원을 활성화하려면 *64비트 FSID 및 파일 식별자 사용* 확인란을 선택하십시오. 이 확인란은 NFSv4.0, NFSv4.1 및 NFSv4.2에 적용됩니다. 이는 NFSv3의 64비트 지원을 제어하는 데 사용되는 확인란과는 별개입니다.
+
+
+** NFSv4.1을 비활성화하려면 *버전 4.1 지원 활성화* 확인란을 선택 취소합니다.
+** NFSv4.2를 활성화하려면 *버전 4.1 및 4.2 지원 활성화* 확인란을 선택한 다음 *버전 4.2 지원 활성화* 확인란을 선택합니다. 다음 옵션을 고려하십시오.
++
+*** 액세스 제어 목록 사용을 허용하려면 *ACL 사용* 확인란을 선택하십시오.
+*** 읽기 전용 액세스를 허용하려면 *읽기 위임 사용* 확인란을 선택하십시오.
+*** 쓰기 액세스를 허용하려면 *쓰기 위임 활성화* 확인란을 선택하십시오.
+*** 클라이언트가 성능 향상을 위해 병렬 NFS(pNFS)를 사용할 수 있도록 하려면 *pNFS* 확인란을 선택하십시오.
+*** 64비트 파일 시스템 ID 및 파일 식별자 지원을 활성화하려면 *64비트 FSID 및 파일 식별자 사용* 확인란을 선택하십시오. 이 확인란은 NFSv4.0, NFSv4.1 및 NFSv4.2에 적용됩니다. 이는 NFSv3의 64비트 지원을 제어하는 데 사용되는 확인란과는 별개입니다.
+
+
+** NFSv4.2를 비활성화하려면 *버전 4.2 지원 활성화* 확인란을 선택 취소합니다.
+
+
+. 선택적으로 NFS 프로토콜에 사용할 *V4 ID 도메인 이름*을 지정할 수 있습니다.
+. 저장 * 을 선택합니다.
+
+
+--
+.CLI를 참조하십시오
+--
+.단계
+. 다음 작업 중 하나를 수행합니다.
++
+[cols="1*, 1*, 1*"]
+|===
+| 원하는 작업 | 버전... | 다음 명령을 입력합니다... 
+
+
+.4+| NFS 활성화  a| 
+NFSv3
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v3 enabled
+----
+
+
+ a| 
+NFSv4.0
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.0 enabled
+----
+
+
+ a| 
+NFSv4.1
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.1 enabled
+----
+
+
+ a| 
+NFSv4.2
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.2 enabled
+----
+
+
+.4+| NFS 비활성화  a| 
+NFSv3
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v3 disabled
+----
+
+
+ a| 
+NFSv4.0
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.0 disabled
+----
+
+
+ a| 
+NFSv4.1
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.1 disabled
+----
+
+
+ a| 
+NFSv4.2
+ a| 
+[source, cli]
+----
+vserver nfs modify -vserver vserver_name -v4.2 disabled
+----
+|===
+
+
+--
+====

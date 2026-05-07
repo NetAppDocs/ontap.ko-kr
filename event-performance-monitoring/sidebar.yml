@@ -19,6 +19,14 @@ entries:
     url: "/insights-system-optimization-task.html"
   - title: 기본 FPolicy를 구성합니다
     url: "/insights-configure-native-fpolicy-task.html"
+- title: System Manager를 사용하여 SVM 성능 모니터링
+  entries:
+  - title: ONTAP System Manager의 SVM 관리자 대시보드에 대해 알아보십시오
+    url: "/concept-svm-admin-dashboard-sm.html"
+  - title: ONTAP System Manager를 사용하여 SVM 관리자 액세스 권한 할당
+    url: "/task-assign-svm-admin-access-sm.html"
+  - title: System Manager를 사용하여 ONTAP SVM 관리 및 모니터링
+    url: "/task-svm-admin-dashboard-sm.html"
 - section: performance-admin
 - title: Unified Manager를 사용하여 클러스터 성능을 모니터링하고 관리하세요.
   entries:

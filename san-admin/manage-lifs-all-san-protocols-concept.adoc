@@ -4,26 +4,23 @@ sidebar: sidebar
 keywords: manage, lifs, san protocols 
 summary: LIF는 SAN 호스트에 연결됩니다. 포트셋에서 제거하거나, 스토리지 가상 머신 내의 다른 노드로 이동하거나, 삭제할 수 있습니다. 
 ---
-= 모든 SAN 프로토콜에 대한 LIF 관리
+= SAN 환경을 위한 ONTAP LIF에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-이니시에이터는 SAN 환경의 클러스터에 대한 페일오버 기능에 MPIO(다중 경로 I/O) 및 ALUA(Asymmetric Logical Unit Access)를 사용해야 합니다. 노드에 장애가 발생할 경우 LIF는 장애가 발생한 파트너 노드의 IP 주소를 마이그레이션하거나 가정하지 않습니다. 대신, 호스트에서 ALUA를 사용하여 LIF를 통해 LUN 액세스를 위한 적절한 경로를 선택해야 합니다.
+ONTAP 시스템의 LUN과 네임스페이스는 스토리지 가상 머신(SVM) 내에 저장됩니다. 네트워크 인터페이스(LIF)를 통해 SAN 클라이언트는 SVM에 연결하여 SVM에 포함된 LUN 및 네임스페이스의 데이터에 액세스할 수 있습니다.
 
-HA 쌍에서 처리하는 LUN에 대한 액세스를 허용하려면 논리 인터페이스(LIF)를 사용하여 HA 쌍의 각 노드에서 하나 이상의 iSCSI 경로를 생성해야 합니다.  SAN을 지원하는 모든 SVM(스토리지 가상 머신)마다 하나의 관리 LIF를 구성해야 합니다.
-
-직접 연결 또는 이더넷 스위치 사용이 연결에 지원됩니다. 두 가지 연결 유형에 대해 LIF를 생성해야 합니다.
-
-* SAN을 지원하는 모든 SVM(스토리지 가상 머신)마다 하나의 관리 LIF를 구성해야 합니다.
-노드당 두 개의 LIF를 구성할 수 있으며, FC와 함께 사용되는 각 패브릭과 iSCSI용 이더넷 네트워크를 각각 하나씩 구성할 수 있습니다.
+* SAN을 지원하는 모든 스토리지 가상 머신(SVM)에 대해 하나의 관리 LIF를 구성해야 합니다.
+* 노드당 두 개의 LIF를 구성할 수 있으며, 하나는 FC에 사용되는 각 패브릭용이고 다른 하나는 iSCSI용 이더넷 네트워크 분리용입니다.
+* 연결 방식으로는 직접 연결 또는 이더넷 스위치를 사용하는 방식이 지원됩니다. 두 가지 연결 방식 모두에 대해 LIF를 구성해야 합니다.
 
 
-LIF를 생성한 후 포트 세트에서 제거하고 SVM(스토리지 가상 머신) 내의 다른 노드로 이동한 후 삭제할 수 있습니다.
+학습 방법 link:../networking/create_a_lif.html["LIF를 생성합니다"]
 
 .관련 정보
-* link:../networking/configure_lifs_cluster_administrators_only_overview.html#lif-failover-and-giveback["LIF 개요 구성"]
-* link:../networking/create_a_lif.html["LIF를 생성합니다"]
+* link:../networking/configure_lifs_cluster_administrators_only_overview.html["LIF 구성에 대해 자세히 알아보십시오"]
+* link:multipath-automatic-lif-failover-support.html["SAN 자동 LIF 페일오버 지원에 대해 알아보십시오"].
 

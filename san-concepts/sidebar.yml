@@ -24,6 +24,8 @@ entries:
   url: "/san-admin/san-provisioning-fc-concept.html"
 - title: NVMe를 이용한 SAN 프로비저닝
   url: "/san-admin/san-provisioning-nvme-concept.html"
+- title: SAN 다중 경로 및 자동 LIF 페일오버 지원
+  url: "/san-admin/multipath-automatic-lif-failover-support.html"
 - title: SAN 볼륨
   entries:
   - title: 개요

@@ -44,4 +44,6 @@ vserver services name-service ldap client show
 
 
 .관련 정보
-link:../nfs-admin/index.html["NFS 관리"]
+* link:../nfs-admin/index.html["NFS 관리"]
+* link:../networking/configure-tls-offload.html["TLS 하드웨어 오프로드 구성"]
+

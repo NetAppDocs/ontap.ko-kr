@@ -151,12 +151,8 @@ entries:
     url: "/nfs-admin/view-nfs-exports-svms-concept.html"
 - title: NFS를 사용하여 파일 액세스를 관리합니다
   entries:
-  - title: SVM에 대해 NFSv3 활성화 또는 비활성화
-    url: "/nfs-admin/enable-disable-nfsv3-task.html"
-  - title: SVM에 대해 NFSv4.0을 활성화하거나 비활성화합니다.
-    url: "/nfs-admin/enable-disable-nfsv40-task.html"
-  - title: SVM에 대해 NFSv4.1을 활성화하거나 비활성화합니다.
-    url: "/nfs-admin/enable-disable-nfsv41-task.html"
+  - title: ONTAP SVM에 대해 NFS를 활성화 또는 비활성화합니다
+    url: "/nfs-admin/enable-disable-nfs-task.html"
   - title: NFSv4 저장소 풀 제한을 관리합니다
     url: "/nfs-admin/manage-nfsv4-storepool-controls-task.html"
   - title: SVM에 대한 pNFS 활성화 또는 비활성화

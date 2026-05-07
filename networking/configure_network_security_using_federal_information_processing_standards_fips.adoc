@@ -166,4 +166,5 @@ false      TLSv1.3,  TLS_RSA_WITH_AES_128_CCM, TLS_RSA_WITH_AES_128_CCM_8,
 * link:https://csrc.nist.gov/pubs/fips/203/final["FIPS 203: 모듈 격자 기반 키 캡슐화 메커니즘 표준(ML-KEM)"^]
 * link:https://csrc.nist.gov/pubs/fips/204/final["FIPS 204: 모듈 격자 기반 디지털 서명 표준(ML-DSA)"^]
 * link:https://csrc.nist.gov/pubs/fips/205/final["FIPS 205: 상태 비저장 해시 기반 디지털 서명 표준(SLH-DSA)"^]
+* link:../networking/configure-tls-offload.html["TLS 하드웨어 오프로드 구성"]
 

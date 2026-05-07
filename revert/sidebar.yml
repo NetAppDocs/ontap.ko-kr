@@ -34,6 +34,12 @@ entries:
         url: "/revert/task_disable_asuo.html"
       - title: ARP 경고에 응답
         url: "/revert/arp-warning-clear-revert.html"
+    - title: ONTAP 9.19.1
+      entries:
+      - title: QoS 정책 그룹
+        url: "/revert/modify-qos-policy-groups.html"
+      - title: 두 번째 S3 액세스 키
+        url: "/revert/second-s3-access-key.html"
     - title: ONTAP 9.18.1
       entries:
       - title: 랜섬웨어 방지 자동 활성화

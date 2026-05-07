@@ -154,8 +154,6 @@ entries:
     url: "/san-admin/manage-lifs-all-san-protocols-concept.html"
   - title: NVMe LIF를 구성합니다
     url: "/san-admin/configure-nvme-lif-task.html"
-  - title: SAN LIF를 이동하기 전에 알아야 할 사항
-    url: "/san-admin/lif-movement-concept.html"
   - title: 포트 세트에서 SAN LIF를 제거합니다
     url: "/san-admin/remove-lif-from-portset-task.html"
   - title: SAN LIF를 이동합니다

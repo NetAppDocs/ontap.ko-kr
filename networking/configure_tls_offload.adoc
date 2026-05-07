@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: networking/configure-tls-offload.html 
+keywords: TLS offload, TLS, performance 
+summary: TLS 오프로드 설정을 구성합니다 
+---
+= ONTAP TLS 하드웨어 오프로드 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.19.1부터 지원되는 이더넷 카드의 리소스를 활용하여 TLS 사후 핸드셰이크 성능을 개선하도록 TLS 오프로드를 구성할 수 있습니다. 이 기능은 암호화 및 복호화를 오프로드하여 CPU 오버헤드를 줄이고 성능을 개선합니다.
+
+.이 작업에 대해
+* TLS 오프로드는 기본적으로 비활성화되어 있습니다.
+* AES-GCM 암호 제품군(TLSv1.2/TLSv1.3, 128/256비트)만 오프로드됩니다.
+* TLS 핸드셰이크 단계는 오프로드되지 않습니다. 핸드셰이크 이후의 데이터 전송 단계만 오프로드됩니다.
+* 네트워크 논리 인터페이스(LIF)를 오프로드 기능이 없는 포트로 마이그레이션하면 자동으로 소프트웨어 대체가 수행됩니다.
++
+TLS 오프로드 연결의 경우, TLS 암호화 작업은 일반적으로 소프트웨어를 거치지 않고 오프로드 기능을 갖춘 NIC에서 처리됩니다. 이 연결과 관련된 LIF가 TLS 오프로드 기능을 지원하지 않는 네트워크 포트로 이동하면 암호화 작업은 소프트웨어로 되돌아가 시스템 커널에서 처리됩니다.
+
+* 관리 인터페이스(HTTPS, REST API)는 이 설정의 영향을 받지 않습니다.
+* TLS hardware 오프로드 설정은 클러스터 전체에 적용됩니다.
+
+
+TLS 하드웨어 오프로드를 사용하려면 지원되는 네트워크 카드가 필요합니다. 지원되는 네트워크 카드는 다음과 같습니다.
+
+* 4포트 CX7 10/25 GbE
+* 2포트 CX6-Dx 40/100 GbE
+* 2포트 CX7 40/100 GbE
+* 2포트 CX7 40/100/200
+
+
+4포트 CX7 10/25GbE, 2포트 CX6-Dx 40/100GbE 및 2포트 CX7 40/100GbE 카드는 다음 AFF 플랫폼에서 지원됩니다.
+
+* AFF A20 를 참조하십시오
+* AFF A30 를 참조하십시오
+* AFF A50 를 참조하십시오
+* AFF C30 를 참조하십시오
+* AFF C60 를 참조하십시오
+
+
+4포트 2포트 CX6-Dx 40/100GbE, 2포트 CX7 40/100GbE 및 2포트 CX7 40/100/200GbE 카드는 다음 AFF 및 FAS 플랫폼에서 지원됩니다.
+
+* AFF A70-90
+* AFF C80 를 참조하십시오
+* FAS70를 참조하십시오
+* FAS90를 참조하십시오
+* AFF A1K 를 참조하십시오
+
+
+.시작하기 전에
+* 당신은 ONTAP 관리자여야 합니다. `admin` 다음 작업을 수행하기 위한 권한 수준입니다.
+* 모든 노드는 ONTAP 9.19.1 이상을 실행해야 합니다.
+
+
+
+
+== TLS 오프로드 활성화 또는 비활성화
+
+.단계
+. 현재 TLS 오프로드 상태를 확인하십시오.
++
+[source, cli]
+----
+security config show
+----
++
+이 명령은 클러스터 전체의 TLS 오프로드 설정을 표시합니다.
+
++
+[listing]
+----
+cluster1::*> security config show
+Cluster    Supported Offload
+FIPS Mode  Protocols Enabled Supported Cipher Suites
+---------- --------- ------- --------------------------------------------------
+false      TLSv1.3,  false   TLS_RSA_WITH_AES_128_CCM,
+           TLSv1.2           TLS_RSA_WITH_AES_128_CCM_8,
+                             TLS_RSA_WITH_AES_128_GCM_SHA256,
+                             TLS_RSA_WITH_AES_128_CBC_SHA,
+                             TLS_RSA_WITH_AES_128_CBC_SHA256,
+                             TLS_RSA_WITH_AES_256_CCM,
+[...]
+----
+. TLS 오프로드 활성화 또는 비활성화:
++
+[source, cli]
+----
+security config modify -is-offload-enabled {true|false}
+----
++
+이 명령은 새 연결의 TLS 데이터 단계에 대한 하드웨어 오프로드를 활성화 또는 비활성화합니다. TLS 오프로드 기능을 활성화하기 전에 생성된 기존 연결은 해당 연결을 삭제하고 다시 생성하기 전까지는 오프로드되지 않습니다.
+
++
+TLS 오프로드를 활성화할 때는 인터페이스를 지정해야 합니다.
+
++
+[source, cli]
+----
+security config modify -is-offload-enabled true -interface SSL
+----
+
+
+.관련 정보
+* link:https://docs.netapp.com/us-en/ontap-cli/security-config-show.html["security config show"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-config-modify.html["보안 구성 수정"^]
+

@@ -15,6 +15,11 @@ FPolicy 이벤트를 구성할 때는 NFSv4 파일 액세스 작업을 모니터
 
 ONTAP 9.15.1부터 FPolicy는 NFSv4.1 프로토콜을 지원합니다.
 
+ONTAP 9.19.1부터 관리자는 System Manager, CLI 또는 REST API를 사용하여 개별 스토리지 VM에 대해 프로토콜을 활성화 또는 비활성화함으로써 SVM 수준에서 NFSv4.2 가용성을 제어할 수 있습니다.
+
+
+NOTE: NFSv4.2 파일 액세스 이벤트에 대한 FPolicy 모니터링은 지원되지 않습니다. FPolicy 모니터링을 구성하려면 SVM에서 NFSv4.2를 비활성화해야 합니다. 자세한 내용은 link:nfs-admin/enable-disable-nfs-task.html["ONTAP SVM에 대해 NFS를 활성화 또는 비활성화합니다"]를 참조하십시오.
+
 NFSv4 또는 NFSv4.1 파일 액세스 이벤트에 대한 FPolicy 모니터링에 대해 지원되는 파일 작업 및 필터 조합의 목록이 다음 표에 나와 있습니다.
 
 [cols="30,70"]

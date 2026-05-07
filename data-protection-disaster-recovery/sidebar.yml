@@ -221,18 +221,18 @@ entries:
       url: "/mediator/workflow-summary.html"
     - title: 설치 또는 업그레이드를 준비합니다
       url: "/mediator/index.html"
-    - title: 호스트 OS 및 중재자 업그레이드
-      url: "/mediator/upgrade-host-os-mediator-task.html"
     - title: 리포지토리에 대한 액세스를 설정합니다
       url: "/mediator/enable-access-repos-task.html"
     - title: 설치 패키지를 다운로드합니다
       url: "/mediator/download-install-pkg-task.html"
     - title: 코드 서명을 확인합니다
       url: "/mediator/verify-code-signature-task.html"
-    - title: 중재자 패키지를 설치합니다
+    - title: ONTAP Mediator 패키지를 설치합니다
       url: "/mediator/install-mediator-pkg-task.html"
     - title: 설치를 확인합니다
       url: "/mediator/verify-install-task.html"
+    - title: 호스트 운영 체제를 업그레이드하고 ONTAP Mediator를 다시 설치하거나 업그레이드하십시오.
+      url: "/mediator/upgrade-host-os-mediator-task.html"
     - title: 설치 후 구성
       url: "/mediator/post-install-config-concept.html"
   - title: ONTAP 중재자 관리

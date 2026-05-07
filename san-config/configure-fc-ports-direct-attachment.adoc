@@ -1,0 +1,106 @@
+---
+permalink: san-config/configure-fc-ports-direct-attachment.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= FC 및 FC-NVMe 호스트에 직접 연결하도록 ONTAP FC 포트 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.19.1부터 FC 및 FC-NVMe 호스트와 ONTAP 스토리지 간의 연결을 설정하는 데 FC 스위치가 필요하지 않습니다. 호스트는 AFF, ASA, ASA r2 및 FAS 시스템의 FC 어댑터 포트에 직접 연결할 수 있습니다. 직접 연결 기능은 특히 간편함이 중요한 원격 사이트 및 하이브리드 환경에서 유용합니다. 호스트에 직접 연결하기 전에 FC 포트를 오프라인으로 전환하고 토폴로지를 수정해야 합니다.
+
+직접 연결 구성에 사용되는 FC 포트에는 다음과 같은 제한 사항이 있습니다.
+
+* 해당 포트는 하나의 스토리지 VM(SVM)에만 할당할 수 있습니다.
+* 직접 연결용으로 구성한 후에는 하나의 네트워크 인터페이스(LIF)만 포트에 할당할 수 있습니다.
+* 해당 포트는 FC 프로토콜 또는 FC-NVMe 프로토콜을 지원할 수 있지만 둘 다 지원할 수는 없습니다.
+
+
+.시작하기 전에
+클러스터 관리자여야 합니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. System Manager에서 *Network > FC ports*를 선택합니다.
+. 직접 연결을 위해 구성하려는 포트 옆의 image:icon_kabob.gif["선택 아이콘"]을(를) 선택한 다음 *토폴로지 편집*을 선택합니다.
+. *Topology*에서 *Direct*를 선택한 다음 *I want to change the topology and take the port offline*을 선택합니다.
+. *저장*을 선택합니다.
+. 대상 포트용 케이블을 호스트 이니시에이터에 직접 연결하십시오.
+. ASA r2 시스템을 사용하는 경우 link:https://docs.netapp.com/us-en/asa-r2/administer/manage-client-vm-access.html#create-a-lif-network-interface["이 System Manager 절차"^]를 따라 LIF를 생성하십시오. AFF, ASA 또는 FAS 시스템을 사용하는 경우 다음 단계를 따라 LIF를 생성하십시오.
++
+.. *Network > Interfaces*를 선택한 다음 image:icon_add.gif["아이콘 추가"]를 선택합니다.
+.. FC 또는 NVMe/FC 프로토콜을 선택하십시오.
+.. LIF의 이름을 지정하거나 ONTAP에서 생성한 이름을 사용합니다.
+.. 서브넷이 하나 이상 구성되어 있는 경우 LIF에 사용할 서브넷을 선택할 수 있습니다.
+.. 서브넷을 선택하지 않으면 브로드캐스트 도메인에 대한 IP 주소와 서브넷 마스크를 지정할 수 있습니다.
+.. 브로드캐스트 도메인에서 홈 포트를 선택하십시오.
++
+홈 포트 제어는 브로드캐스트 도메인 또는 서브넷 선택에 따라 표시됩니다
+
+.. 저장 * 을 선택합니다.
++
+LIF가 생성되면 해당 포트는 자동으로 온라인 상태가 됩니다.
+
+
+
+
+
+.다음 단계
+System Manager에서 *Network > FC ports*를 선택한 다음 *Topology*가 *Direct*로 표시되는지 확인하십시오.
+
+--
+.CLI를 참조하십시오
+--
+. 어댑터 포트에 사용되는 LIF의 관리 및 운영 상태를 확인하십시오.
++
+[source, cli]
+----
+network interface show -vserver <SVM_name>
+----
+. 어댑터를 오프라인 상태로 전환:
++
+[source, cli]
+----
+network fcp adapter modify -node <node_name> -adapter <adapter_port> -status-admin down
+----
+. 어댑터 포트에서 모든 LIF를 제거합니다.
++
+[source, cli]
+----
+network interface delete -vserver <SVM_name> -lif <lif_name>,<lif_name>
+----
+. 어댑터 포트 토폴로지를 direct로 변경하십시오.
++
+[source, cli]
+----
+network fcp adapter modify -node <node_name> -adapter <adapter_port> -topology direct
+----
+. 대상 포트용 케이블을 호스트 이니시에이터에 직접 연결하십시오.
+. 단일 LIF 인터페이스 생성:
++
+[source, cli]
+----
+network interface create -vserver <SVM_name> -lif <lif_name> -data protocol fcp|fcp-nvme -home-node <node_name> -home-port <port_name>
+----
++
+LIF 생성 후 포트가 자동으로 활성화됩니다.
+
+. 포트가 직접 연결용으로 구성되어 있는지 확인하십시오.
++
+[source, cli]
+----
+network fcp adapter show -fields topologies-supported
+----
++
+토폴로지는 직접 형식으로 표시되어야 합니다.
+
+
+
+--
+====

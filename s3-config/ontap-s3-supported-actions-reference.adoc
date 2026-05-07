@@ -131,6 +131,33 @@ ONTAP 9.8
 
 == 오브젝트 작업
 
+ONTAP 9.19.1부터 ONTAP S3는 객체 업로드에 대한 조건부 쓰기 적용 및 객체 삭제에 대한 조건부 삭제 적용을 지원합니다. 조건부 쓰기 및 삭제는 객체의 덮어쓰기 또는 의도하지 않은 삭제를 방지하는 방법을 제공합니다. 조건부 작업은 TLS 연결을 통해 AWS_V4 서명 방법을 사용하여 요청이 이루어진 경우에만 작동합니다. 다음 조건부 헤더 및 객체 작업이 지원됩니다.
+
+|===
+| 개체 작업입니다 | 조건부 헤더 
+
+
+ a| 
+PutObject 를 선택합니다
+
+CopyObject 를 선택합니다
+
+CompleteMultipartUpload를 클릭합니다
+ a| 
+if-none-match
+
+if-match
+
+
+
+ a| 
+DeleteObject 를 클릭합니다
+
+DeleteObjects 를 클릭합니다
+ a| 
+If-match
+
+|===
 ONTAP 9.9.1부터 ONTAP S3는 오브젝트 메타데이터 및 태그 지정을 지원합니다.
 
 * PutObject 및 CreateMultipartUpload 를 사용하여 키-값 쌍을 포함합니다 `x-amz-meta-<key>.`

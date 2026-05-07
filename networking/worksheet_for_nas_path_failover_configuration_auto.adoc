@@ -19,6 +19,8 @@ NAS 경로 페일오버를 구성하기 전에 워크시트의 모든 섹션을 
 
 NOTE: ONTAP 네트워크의 NAS 장애 조치에 대한 정보는 ONTAP 9.7 및 이전 버전에서 다릅니다. ONTAP 9.7 이하를 실행하는 네트워크에서 NAS 페일오버를 구성해야 하는 경우 을 참조하십시오link:https://docs.netapp.com/us-en/ontap-system-manager-classic/networking-failover/worksheet_for_nas_path_failover_configuration_manual.html["NAS 경로 페일오버 구성용 워크시트(ONTAP 9.7 이하)"^].
 
+ONTAP 9.19.1부터 ONTAP 시스템 정의 페일오버 그룹 정책은 NAS 데이터 LIF의 페일오버 타겟을 동적으로 확장하여 클러스터 내 사용 가능한 모든 노드의 브로드캐스트 도메인에 있는 사용 가능한 모든 포트를 포함할 수 있습니다. 시스템 정의 정책을 모든 페일오버 그룹에 적용할 수 있습니다. ONTAP 9.19.1 이전에는 이 정책이 적용된 LIF는 클러스터 내에서 다른 하나의 노드로만 페일오버할 수 있었습니다. 해당 노드가 쿼럼을 충족하지 못하면 다른 노드가 사용 가능하더라도 LIF는 페일오버되지 않았습니다.
+
 
 
 == IPSpace 구성
