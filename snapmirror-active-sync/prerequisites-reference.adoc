@@ -137,21 +137,6 @@ ASA r2
 
 
  a| 
-1.12
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능: 10.1 및 9.7 ^1^
-** 권장 사항: 10.2, 10.0, 9.8, 9.6, 9.4 및 8.10
-
-
-* Rocky Linux 10.2, 9.8 및 8.10
-* Oracle Linux 10.1 및 9.7
-
-
-
-
- a| 
 1.11
  a| 
 * Red Hat Enterprise Linux

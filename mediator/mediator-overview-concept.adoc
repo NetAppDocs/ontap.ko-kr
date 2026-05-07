@@ -66,15 +66,9 @@ ONTAP 중재자 패키지와 SCST 커널 모듈을 제거합니다. 여기에는
 
 
 
-== SCST 및 커널 업데이트
+== 특별 참고 사항
 
-ONTAP Mediator는 MetroCluster IP 구성에서 통신을 위해 iSCSI를 제공하기 위해 SCST를 사용합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. 커널 업데이트 후 SCST를 다시 설치해야 할 수 있습니다. 또는 ONTAP Mediator를 제거한 다음 다시 설치하고 ONTAP 관계를 재구성합니다. SCST에 대한 자세한 내용은 link:https://scst.sourceforge.net/["SCST: Linux용 범용 SCSI 타겟 하위 시스템"^]을(를) 참조하십시오.
-
-
-NOTE: 서버 OS 커널 업데이트는 ONTAP의 유지보수 윈도우와 조정해야 합니다.
+ONTAP Mediator는 iSCSI를 제공하기 위해 SCST에 의존합니다( http://scst.sourceforge.net/index.html[] 참조). 이 패키지는 설치 중에 커널용으로 특별히 컴파일되는 커널 모듈입니다. 커널이 업데이트되면 SCST를 다시 설치해야 할 수 있습니다. 또는 ONTAP Mediator를 제거한 후 다시 설치하고 ONTAP 관계를 재구성하십시오.
 
 
-
-== HTTPS 및 iSCSI 지원
-
-ONTAP Mediator 1.12부터 HTTPS 또는 iSCSI를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다. iSCSI와 HTTPS를 모두 지원하거나 HTTPS만 지원하도록 ONTAP Mediator를 설치할 수 있습니다. ONTAP Mediator를 HTTPS만 지원하도록 설치하는 경우 SCST 패키지는 설치되지 않습니다. 자세한 내용은 link:index.html#https-iscsi-installation["ONTAP Mediator의 HTTPS 및 iSCSI 설치 옵션"]을 참조하십시오.
+NOTE: 서버 OS 커널에 대한 모든 업데이트는 ONTAP의 유지보수 윈도우와 조율되어야 합니다.
