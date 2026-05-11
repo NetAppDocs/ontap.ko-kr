@@ -97,7 +97,10 @@ ONTAP Select
 | SnapMirror 동기식 관계의 운영 볼륨에 대한 바이러스 백신 | ONTAP 9.6 |  
 
 
-| 애플리케이션이 생성한 스냅샷 복제입니다 | ONTAP 9.7 | 스냅샷이 해당 시점에 적절한 레이블로 태그된 경우 `snapshot create` SnapMirror CLI나 ONTAP API를 사용하여 애플리케이션을 정지시킨 후 사용자가 생성한 스냅샷이나 외부 스크립트로 생성한 스냅샷을 동기식으로 복제합니다. 스냅샷 정책을 사용하여 생성된 예약된 스냅샷은 복제되지 않습니다. 애플리케이션에서 생성된 스냅샷 복제에 대한 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/How_to_replicate_application_created_snapshots_with_SnapMirror_Synchronous["NetApp 지식 기반: SnapMirror 동기를 사용하여 애플리케이션에서 생성된 스냅샷을 복제하는 방법"^] . 
+| 애플리케이션이 생성한 스냅샷 복제입니다 | ONTAP 9.7 |  `snapshot create` 작업 시 CLI 또는 ONTAP API를 사용하여 스냅샷에 적절한 레이블이 지정되면 SnapMirror는 애플리케이션을 정지시킨 후 사용자가 생성한 스냅샷이나 외부 스크립트로 생성된 스냅샷을 동기적으로 복제합니다. ONTAP 9.14.1부터는 애플리케이션에서 생성된 스냅샷 복제에 대한 레이블 요구 사항이 더 이상 존재하지 않습니다. 애플리케이션에서 생성된 스냅샷 복제에 대한 자세한 내용은 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapMirror/How_to_replicate_application_created_snapshots_with_SnapMirror_Synchronous["NetApp 지식 기반: SnapMirror 동기를 사용하여 애플리케이션에서 생성된 스냅샷을 복제하는 방법"^]를 참조하십시오. 
+
+
+| 자율적 랜섬웨어 방어 | ONTAP 9.19.1 |  
 
 
 | 클론 자동 삭제 | ONTAP 9.6 |  
@@ -157,6 +160,9 @@ ONTAP Select
 | 높은 메타데이터 작업 빈도 제한을 제거합니다 | ONTAP 9.6 |  
 
 
+| 예약된 스냅샷 복제 | ONTAP 9.19.1 | ONTAP 9.19.1 버전부터는 SnapMirror 정책을 사용하여 예약된 스냅샷 복제를 활성화할 수 있습니다. ONTAP 9.19.1 이전 버전에서는 스냅샷 정책을 사용하여 생성된 예약된 스냅샷은 복제되지 않습니다. 
+
+
 | TLS 1.2 암호화를 사용하여 전송 중인 중요한 데이터에 대한 보안 | ONTAP 9.6 |  
 
 
@@ -186,7 +192,6 @@ ONTAP Select
 
 다음 기능은 SnapMirror 동기식 관계에서 지원되지 않습니다.
 
-* 자율 랜섬웨어 보호
 * 정합성 보장 그룹
 * DP_Optimized(DPO) 시스템
 * FlexGroup 볼륨
