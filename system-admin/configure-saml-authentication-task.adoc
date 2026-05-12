@@ -113,7 +113,7 @@ IDP_Uri는 IDP 메타데이터를 다운로드할 수 있는 IDP 호스트의 FT
 
 +
 
-NOTE: 일부 URL에는 물음표(?) 문자가 포함되어 있습니다. 물음표는 ONTAP 명령줄의 활성 도움말을 활성화합니다. 물음표가 있는 URL을 입력하려면 먼저 다음 명령을 사용하여 활성 도움말을 비활성화해야 합니다.  `set -active-help false` . 활성 도움말은 나중에 다음 명령을 사용하여 다시 활성화할 수 있습니다.  `set -active-help true` . 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"] .
+NOTE: 일부 URL에는 물음표(?) 문자가 포함되어 있습니다. 물음표는 ONTAP 명령줄 활성 도움말을 활성화합니다. 물음표가 포함된 URL을 입력하려면 먼저 명령 `set -active-help false`을 사용하여 활성 도움말을 비활성화해야 합니다. 활성 도움말은 나중에 명령 `set -active-help true`을 사용하여 다시 활성화할 수 있습니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/set.html["ONTAP 명령 참조입니다"^]를 참조하십시오.
 
 +
 'ontap_host_name'은 SAML 서비스 공급자 호스트의 호스트 이름 또는 IP 주소이며, 이 경우 ONTAP 시스템입니다. 기본적으로 클러스터 관리 LIF의 IP 주소가 사용됩니다.

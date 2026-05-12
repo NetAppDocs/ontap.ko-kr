@@ -47,7 +47,7 @@ ONTAP 업그레이드를 수행하기 전에 * 소프트웨어 구성 변경 *, 
 Upgrade Health Checker는 규모가 크거나 복잡한 환경, 인터넷 접속이 제한적인 환경, 또는 기존 자동화 및 오케스트레이션 프레임워크를 사용하는 사용자에게 적합한 온프레미스 도구입니다. Upgrade Health Checker를 사용하기 위해 SupportEdge 계약이 필요한 것은 아닙니다.
 
 .시작하기 전에
-업그레이드 계획을 생성하는 데 사용하려면 먼저 link:https://docs.netapp.com/us-en/upgrade-health-checker/set-up-upgrade-health-checker.html["Upgrade Health Checker를 다운로드하고 설정합니다"]해야 합니다.
+업그레이드 계획을 생성하는 데 사용하려면 먼저 link:https://docs.netapp.com/us-en/upgrade-health-checker/set-up-upgrade-health-checker.html["Upgrade Health Checker를 다운로드하고 설정합니다"^]해야 합니다.
 
 .단계
 . link:https://docs.netapp.com/us-en/upgrade-health-checker/generate-report-upgrade-health-checker.html["Upgrade Health Checker를 사용하여 업그레이드 계획 생성"^].

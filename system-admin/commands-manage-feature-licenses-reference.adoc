@@ -30,14 +30,14 @@ ONTAP CLI를 사용할 수 있습니다 `system license` 클러스터에 대한 
 * 만료 날짜(해당하는 경우
 
  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/system-license-show-status.html["시스템 라이센스 표시 - 상태"]
+link:https://docs.netapp.com/us-en/ontap-cli/system-license-show-status.html["시스템 라이센스 표시 - 상태"^]
 
 
 
  a| 
 만료되었거나 사용되지 않은 라이센스를 표시하거나 제거합니다
  a| 
-link:https://docs.netapp.com/us-en/ontap-cli/system-license-clean-up.html["시스템 라이센스 정리"]
+link:https://docs.netapp.com/us-en/ontap-cli/system-license-clean-up.html["시스템 라이센스 정리"^]
 
 
 

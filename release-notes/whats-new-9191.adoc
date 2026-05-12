@@ -74,7 +74,7 @@ SVM이 지원하는 NFS 버전 관리
  a| 
 NFSv4.2 지원은 NFSv4.1 설정과 독립적으로 관리되므로 각 SVM은 필요에 따라 NFSv4.2 기능을 알리거나 숨길 수 있습니다. 기본적으로 새 NFS 서비스가 생성될 때 관리자가 명시적으로 비활성화하지 않는 한 NFSv4.2가 활성화됩니다.
 
-* https://docs.netapp.com/us-en/ontap/nfs-admin/enable-disable-nfsv42-task.html["ONTAP SVM에 대해 NFSv4.2를 활성화 또는 비활성화합니다"]
+* xref:../nfs-admin/enable-disable-nfs-task.html[ONTAP SVM에 대해 NFSv4.2를 활성화 또는 비활성화합니다]
 * https://docs.netapp.com/us-en/ontap/task_nas_enable_linux_nfs.html["ONTAP 시스템 관리자를 사용하여 NFS를 사용하여 Linux 서버에 NAS 스토리지 활성화"]
 
 

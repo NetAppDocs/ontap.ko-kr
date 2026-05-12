@@ -291,4 +291,4 @@ set -privilege admin
 아무 작업도 수행합니다 link:task_what_to_do_after_upgrade.html["업그레이드 후 작업"].
 
 .관련 정보
-link:https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html["MetroCluster 재해 복구"]
+link:https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html["MetroCluster 재해 복구"^]

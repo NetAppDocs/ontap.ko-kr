@@ -12,10 +12,8 @@ entries:
     url: "/san-config/benefits-vlans-iscsi-concept.html"
 - title: FC 구성
   entries:
-  - title: FC 및 FC-NVMe 패브릭 구성
+  - title: FC 및 FC-NVMe 패브릭과 직접 연결 구성
     url: "/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html"
-  - title: 직접 연결을 위한 FC 포트 구성
-    url: "/san-config/configure-fc-ports-direct-attachment.html"
   - title: FC 스위치 구성 모범 사례
     url: "/san-config/fc-switch-config-best-practices-concept.html"
   - title: 권장되는 FC 타겟 포트 구성 및 속도

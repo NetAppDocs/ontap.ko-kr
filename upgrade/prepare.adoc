@@ -18,7 +18,7 @@ NOTE: Active IQ Digital Advisor 또는 Upgrade Health Checker에서 Upgrade Advi
 
 .단계
 . link:choose-target-version.html["대상 ONTAP 릴리스를 선택합니다"].
-. 대상 릴리스에 대한 의 _업그레이드 주의_및_알려진 문제 및 제한 사항_섹션을 검토하십시오link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"].
+. 대상 릴리스에 대한 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"^]의 _업그레이드 주의 사항_ 및 _알려진 문제 및 제한 사항_ 섹션을 검토하십시오.
 +
 _업그레이드 주의 사항_ 업그레이드하기 전에 알아야 할 잠재적인 문제에 대해 설명합니다. _알려진 문제 및 제한 사항_ 업그레이드 후 발생할 수 있는 예기치 않은 시스템 동작을 설명합니다.
 

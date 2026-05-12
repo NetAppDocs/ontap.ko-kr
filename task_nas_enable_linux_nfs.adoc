@@ -40,7 +40,7 @@ image:workflow_nas_enable_linux_nfs.png["워크플로 요약: 1 NFS 2 활성화 
 ... 필요에 따라 특정 NFS 프로토콜 버전 및 옵션을 활성화 또는 비활성화합니다.
 +
 
-NOTE: NFSv4.2 파일 액세스 이벤트에 대한 FPolicy 모니터링은 지원되지 않습니다. FPolicy 모니터링을 구성하려면 SVM에서 NFSv4.2를 비활성화해야 합니다. 자세한 내용은 link:nfs-admin/enable-disable-nfs-task.html["ONTAP SVM에 대해 NFS를 활성화 또는 비활성화합니다"]를 참조하십시오.
+NOTE: NFSv4.2 파일 액세스 이벤트에 대한 FPolicy 모니터링은 지원되지 않습니다. FPolicy 모니터링을 구성하려면 SVM에서 NFSv4.2를 비활성화해야 합니다. 자세한 내용은 link:./nfs-admin/enable-disable-nfs-task.html["ONTAP SVM에 대해 NFS를 활성화 또는 비활성화합니다"]를 참조하십시오.
 
 
 

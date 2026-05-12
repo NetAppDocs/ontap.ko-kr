@@ -176,7 +176,7 @@ vserver modify -vserver <vserver_name> -storage-limit 0
 .관련 정보
 * xref:../concepts/capacity-measurements-in-sm-concept.adoc[System Manager의 용량 측정]
 * xref:../task_admin_monitor_capacity_in_sm.html[System Manager에서 클러스터, 계층, SVM 용량 모니터링]
-* link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["SVM 생성"]
-* link:https://docs.netapp.com/us-en/ontap-cli/vserver-show.html["vserver show 를 참조하십시오"]
-* link:https://docs.netapp.com/us-en/ontap-cli/vserver-modify.html["SVM 수정"]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["SVM 생성"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-show.html["vserver show 를 참조하십시오"^]
+* link:https://docs.netapp.com/us-en/ontap-cli/vserver-modify.html["SVM 수정"^]
 

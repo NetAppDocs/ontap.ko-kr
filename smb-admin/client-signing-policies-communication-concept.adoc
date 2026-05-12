@@ -167,6 +167,6 @@ AES-CMAC
 |===
 [NOTE]
 ====
-Microsoft는 더 이상 '고유 서명 통신(클라이언트에서 동의한 경우)' 또는 '고유 서명 통신(서버에서 동의한 경우)' 그룹 정책 설정을 사용할 것을 권장하지 않습니다. Microsoft는 또한 "EnableSecuritySignature" 레지스트리 설정을 더 이상 사용하지 않을 것을 권장합니다. 이러한 옵션은 SMB 1 동작에만 영향을 미치며 Digitally sign communications (Always)(항상 서명 통신) 그룹 정책 설정 또는 RequireSecuritySignature(요구 보안 서명) 레지스트리 설정으로 대체할 수 있습니다. 또한 Microsoft 블로그에서 자세한 정보를 얻을 수 있습니다. http://blogs.technet.com/b/josebda/archive/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2.aspx[The SMB 서명의 기본 사항(SMB1 및 SMB2 모두 포함)]
+Microsoft는 더 이상  `Digitally sign communications (if client agrees)` 또는  `Digitally sign communications (if server agrees)` 그룹 정책 설정 사용을 권장하지 않습니다. 또한 Microsoft는 더 이상  `EnableSecuritySignature` 레지스트리 설정 사용을 권장하지 않습니다. 이러한 옵션은 SMB 1 동작에만 영향을 미치며  `Digitally sign communications (always)` 그룹 정책 설정 또는  `RequireSecuritySignature` 레지스트리 설정으로 대체할 수 있습니다. link:http://blogs.technet.com/b/josebda/archive/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2.aspx["Microsoft 블로그: SMB 서명의 기본 사항(SMB1 및 SMB2 모두 포함)"^]에서 자세한 정보를 확인할 수도 있습니다.
 
 ====
