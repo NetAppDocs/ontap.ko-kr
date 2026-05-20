@@ -175,7 +175,7 @@ network interface show -vserver <SVM_name>
 +
 [source, cli]
 ----
-network interface modify -vserver <SVM_name> -lif <*---> -status-admin down
+network interface modify -vserver <SVM_name> -lif* -status-admin down
 ----
 . 어댑터 포트에서 모든 LIF를 제거합니다.
 +
