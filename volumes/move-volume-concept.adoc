@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, move, flexvol, volume, works 
 summary: 프로세스 중 FlexVol volume 이동 및 클라이언트 액세스 단계를 이해합니다. 
 ---
-= FlexVol 볼륨 개요 이동
+= ONTAP FlexVol 볼륨 이동에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

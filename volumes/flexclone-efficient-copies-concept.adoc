@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: use, flexclone, volumes, create, efficient, copies, flexvol volumes 
 summary: FlexClone 볼륨은 데이터 보호 또는 기타 목적으로 관리할 수 있는 상위 FlexVol volume의 쓰기 가능하고 공간 효율적인 시점 복사본입니다. 
 ---
-= FlexClone 볼륨 사용 개요
+= ONTAP FlexClone 볼륨에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

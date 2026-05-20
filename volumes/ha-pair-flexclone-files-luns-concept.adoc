@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, ha configuration, works with, flexclone files, flexclone luns 
 summary: FlexClone 파일 및 FlexClone LUN 작업은 HA 구성에서 지원됩니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN에서 HA 구성의 작동 방식
+= ONTAP HA 구성이 FlexClone 파일 및 FlexClone LUN과 어떻게 연동되는지 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configuration, settings, space-reserved files, luns, semi-thick volume provisioning 
 summary: 반씩 씩 볼륨 프로비저닝을 기반으로 하는 FlexVol volume 및 파일 또는 LUN 구성은 사전에 할당되는 스토리지가 더 적지만 제한이 있습니다. 
 ---
-= 반씩 볼륨 프로비저닝을 사용하는 공간 예약 파일 또는 LUN에 대한 구성 설정입니다
+= ONTAP 반씩 볼륨 프로비저닝을 사용하는 공간 예약 파일 또는 LUN에 대한 구성 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

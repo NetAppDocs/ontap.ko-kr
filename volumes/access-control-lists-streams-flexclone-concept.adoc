@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access control lists, flexclone files, flexclone luns, inheritance, ACL, ACLs, acl, acls, flexclone 
 summary: FlexClone 파일 및 FlexClone LUN은 부모 파일 및 LUN의 액세스 제어 목록을 상속합니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN에 의한 액세스 제어 목록 상속
+= ONTAP FlexClone 파일과 FlexClone LUN이 액세스 제어 목록을 상속하는 방식에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: run, modify, scheduling, efficiency, operations, deduplication, data, compression 
 summary: 볼륨에 대한 중복제거 또는 데이터 압축 작업의 예약을 수정합니다. 
 ---
-= 예약을 통해 효율성 작업을 실행합니다
+= 스케줄링을 사용하여 ONTAP 효율성 작업 실행
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

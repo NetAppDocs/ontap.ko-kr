@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, du command, qtree, flexvol, usage, quota report, space 
 summary: du 명령에서 반환되는 사용량 값은 데이터 블록으로 인해 qtree 또는 볼륨의 할당량 보고서에 표시되는 값보다 클 수 있습니다. 
 ---
-= du 명령과 공간 사용에 대한 할당량 보고서 간 불일치입니다
+= ONTAP du 명령과 공간 사용량에 대한 할당량 보고서 간의 불일치
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

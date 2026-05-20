@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, volume, snapmirror, works, files, flexclone luns 
 summary: FlexClone 파일 및 FlexClone LUN과 함께 볼륨 SnapMirror을 사용하면 클론 복제된 엔터티가 한 번만 복제되므로 공간 절약 효과를 유지하는 데 도움이 됩니다. 
 ---
-= volume SnapMirror가 FlexClone 파일 및 FlexClone LUN과 작동하는 방식
+= ONTAP 볼륨 SnapMirror가 FlexClone 파일 및 FlexClone LUN과 함께 작동하는 방식에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

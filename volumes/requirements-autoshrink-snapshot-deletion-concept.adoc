@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements, enabling, autoshrink, automatic, snapshot copy, deletion 
 summary: 자동 축소 기능은 특정 구성 요구 사항이 충족되는 경우 자동 스냅샷 삭제와 함께 사용할 수 있습니다. 
 ---
-= 자동 축소 및 자동 스냅샷 삭제를 모두 사용하기 위한 요구 사항
+= ONTAP 자동 축소 및 자동 스냅샷 삭제를 모두 활성화하기 위한 요구 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

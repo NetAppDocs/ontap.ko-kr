@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: when to, use, resizing 
 summary: 할당량 크기 조정은 할당량 초기화보다 빠르지만 제한이 있습니다. 
 ---
-= 크기 조정 사용 시기 이해
+= ONTAP 할당량 크기 조정에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

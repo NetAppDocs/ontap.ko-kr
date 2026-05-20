@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recommended, volume, file, lun configuration, combinations 
 summary: FlexVol volume 및 파일 또는 LUN 구성의 특정 조합의 이점과 비용을 이해합니다. 
 ---
-= 권장되는 볼륨 및 파일 또는 LUN 구성 조합 개요
+= 권장 ONTAP 볼륨 및 LUN 구성 조합
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

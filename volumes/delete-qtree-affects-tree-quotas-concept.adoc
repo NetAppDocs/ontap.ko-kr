@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deleting, qtree, affects, tree quotas, quota, quotas 
 summary: qtree를 삭제할 경우 명시적 또는 파생된 qtree에 적용되는 모든 할당량이 ONTAP에서 더 이상 적용되지 않습니다. 
 ---
-= Qtree가 삭제되고 트리 할당량에 미치는 영향입니다
+= ONTAP qtree 삭제가 트리 할당량에 미치는 영향에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

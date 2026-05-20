@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: what, logical, space, enforcement, does 
 summary: ONTAP 9 .5 이상에서 논리적 공간 적용을 활성화하면 볼륨이 가득 찼거나 거의 가득 차면 사용자에게 알림이 표시됩니다. 
 ---
-= 논리적 공간 적용
+= ONTAP 논리적 공간 적용
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

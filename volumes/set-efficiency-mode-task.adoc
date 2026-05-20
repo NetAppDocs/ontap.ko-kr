@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, temperature, sensitive, storage, efficiency, mode, performance mode, efficient mode, set, System Manager, higher efficiency 
 summary: ONTAP 9.10.1부터 새 AFF 볼륨을 생성할 때 스토리지 효율성 모드를 설정할 수 있습니다. 
 ---
-= 볼륨 생성 중에 스토리지 효율성 모드를 설정합니다
+= 볼륨 생성 중 ONTAP 스토리지 효율성 모드 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

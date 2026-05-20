@@ -4,7 +4,7 @@ permalink: software_setup/workflow-summary.html
 keywords: cluster, setup, set up get started, workflow, summary 
 summary: NetApp은 System Manager를 사용하여 새 클러스터를 설정할 것을 권장합니다. System Manager에서 노드 관리 IP 주소의 할당 및 클러스터 초기화를 포함하여 클러스터 설정을 위한 간단하고 쉬운 작업 흐름을 제공합니다. 
 ---
-= ONTAP 클러스터 설정 워크플로 요약
+= ONTAP 클러스터 설정 워크플로우
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

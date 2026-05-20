@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how quotas work, special windows groups 
 summary: 다른 Windows 그룹과 다르게 할당량을 처리하는 몇 가지 특수 Windows 그룹이 있습니다. 이러한 특수 그룹에 할당량이 적용되는 방식을 이해해야 합니다. 
 ---
-= 특수 Windows 그룹에서 할당량을 사용하는 방법
+= ONTAP 할당량이 특수 Windows 그룹에서 어떻게 작동하는지 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

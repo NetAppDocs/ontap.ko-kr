@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: quotas, quota targets, quota types 
 summary: 모든 할당량에는 특정 유형이 있습니다. 할당량 대상은 유형에서 파생되며 할당량 제한이 적용되는 사용자, 그룹 또는 qtree를 지정합니다. 
 ---
-= 할당량 대상 및 유형
+= ONTAP 할당량 목표 및 유형에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

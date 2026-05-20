@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, space reservation, works, flexclone files, flexclone luns 
 summary: FlexClone 파일과 FlexClone LUN을 사용할 때는 공간 예약 속성이 작동하는 방식을 이해해야 합니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN에서 공간 예약이 작동하는 방식
+= ONTAP 공간 예약이 FlexClone 파일 및 FlexClone LUN과 어떻게 연동되는지 알아보십시오.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

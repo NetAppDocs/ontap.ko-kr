@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume efficiency policy, run, efficiency, operation, volume, policy 
 summary: 볼륨 효율성 정책을 생성하여 볼륨에서 효율성 작업을 실행할 수 있습니다. 
 ---
-= 볼륨 효율성 정책을 생성합니다
+= ONTAP 볼륨 효율성 정책 생성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove space savings, undo space savings 
 summary: 역전을 수용할 공간이 충분한 경우 볼륨에 대해 효율성 작업을 실행하여 얻은 공간 절약 효과를 제거합니다. 
 ---
-= 볼륨에서 공간 절약 효과를 제거하는 방법에 대한 추가 정보입니다
+= ONTAP 볼륨에서 공간 절약 기능을 제거합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

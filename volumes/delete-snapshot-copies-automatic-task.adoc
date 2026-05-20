@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapshot, copies, automatically, flexclone luns, automatic, lun, luns 
 summary: 스냅샷 및 FlexClone LUN을 자동으로 삭제하는 정책을 정의하여 공간 활용률을 관리할 수 있습니다. 
 ---
-= 공간을 관리하기 위해 자동 스냅샷 및 LUN 삭제를 활성화합니다
+= 자동 ONTAP 스냅샷 및 LUN 삭제를 활성화하여 공간 관리
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

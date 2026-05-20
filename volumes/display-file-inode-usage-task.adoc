@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: flexvol, file limit, inode, maximum 
 summary: FlexVol 볼륨의 파일 제한 도달을 방지하기 위해 inode 수를 늘려야 하는지 여부를 판단하십시오. 
 ---
-= 볼륨에 대한 파일 및 inode 사용을 확인합니다
+= ONTAP 볼륨의 파일 및 inode 사용량을 확인합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands to, manage, quota rules, quota policies, command, commands, quota, quotas, policy, policies 
 summary: ' `volume quota policy rule`명령을 사용하여 할당량 규칙을 구성할 수 있으며 `volume quota policy` 명령과 일부 `vserver` 명령을 사용하여 할당량 정책을 구성할 수 있습니다.' 
 ---
-= 할당량 규칙 및 할당량 정책을 관리하는 명령입니다
+= ONTAP 명령을 사용하여 할당량 규칙 및 할당량 정책 관리
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

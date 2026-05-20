@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirement, moving, volumes, san environments 
 summary: SAN 환경에서 볼륨을 이동하기 전에 준비해야 합니다. 
 ---
-= SAN 환경에서 볼륨을 이동하기 위한 요구 사항
+= ONTAP SAN 볼륨 이동을 위한 요구 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

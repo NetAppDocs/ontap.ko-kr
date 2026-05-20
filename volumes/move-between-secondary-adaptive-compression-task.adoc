@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: move, secondary compression, adaptive compression 
 summary: 데이터 읽기의 양에 따라 보조 압축과 적응형 압축 간에 전환할 수 있습니다. 
 ---
-= 보조 압축과 적응형 압축 간에 이동
+= ONTAP 2차 압축과 적응형 압축 간 전환
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

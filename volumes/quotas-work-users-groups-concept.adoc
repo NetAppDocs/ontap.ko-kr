@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how quotas work, users, groups 
 summary: 사용자 또는 그룹을 할당량의 타겟으로 지정할 수 있습니다. 할당량을 정의할 때 고려해야 할 몇 가지 구축 차이점이 있습니다. 
 ---
-= 사용자 및 그룹에서 할당량이 작동하는 방식에 대한 개요입니다
+= ONTAP 할당량이 사용자 및 그룹과 어떻게 연동되는지 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

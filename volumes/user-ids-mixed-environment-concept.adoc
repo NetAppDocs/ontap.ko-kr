@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap determines, determine user ids, mixed environment 
 summary: 사용자 할당량을 적용할 때 ONTAP에서 UNIX 또는 Windows ID를 사용할지 여부를 결정하는 요인은 여러 가지입니다. 
 ---
-= ONTAP에서 혼합 환경의 사용자 ID를 확인하는 방법
+= ONTAP이 혼합 환경에서 사용자 ID를 결정하는 방법을 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

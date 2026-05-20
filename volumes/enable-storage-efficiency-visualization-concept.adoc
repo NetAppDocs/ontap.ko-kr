@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, efficiency, visualization, storage aggregate 
 summary: 시스템에 있는 모든 애그리게이트의 스토리지 효율성을 보여주는 다양한 뷰를 보여주십시오. 
 ---
-= 스토리지 효율성 시각화
+= ONTAP 스토리지 효율성 시각화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

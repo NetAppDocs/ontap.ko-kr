@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: default, user, group quotas, create, derived, quotas, quota, derived quota 
 summary: 기본 사용자 또는 그룹 할당량을 생성하면 동일한 레벨에서 파일을 소유한 모든 사용자 또는 그룹에 대해 파생된 할당량이 생성됩니다. 
 ---
-= 기본 사용자 및 그룹 할당량이 파생 할당량을 생성하는 방법
+= ONTAP 기본 사용자 및 그룹 할당량이 파생 할당량을 생성하는 방법을 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

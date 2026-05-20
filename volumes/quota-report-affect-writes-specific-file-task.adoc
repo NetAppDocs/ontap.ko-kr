@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: use, quota report, determine, quotas limit, writes, specific file 
 summary: 특정 파일 경로에 대해 volume quota report 명령을 사용하여 파일에 대한 쓰기 작업에 영향을 주는 할당량 제한을 확인할 수 있습니다. 
 ---
-= 할당량 보고서를 사용하여 특정 파일에 대한 쓰기를 제한하는 할당량을 결정합니다
+= ONTAP 할당량 보고서를 사용하여 특정 파일에 대한 쓰기를 제한하는 할당량을 확인하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

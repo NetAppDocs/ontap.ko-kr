@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, snapshot copies, work, flexclone files, flexclone luns 
 summary: 스냅샷과 FlexClone 파일, FlexClone LUN 간의 시너지 효과 및 특정 제한 사항을 이해합니다. 
 ---
-= 스냅샷이 FlexClone 파일 및 FlexClone LUN에서 작동하는 방식
+= ONTAP 스냅샷이 FlexClone 파일 및 FlexClone LUN과 어떻게 연동되는지 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

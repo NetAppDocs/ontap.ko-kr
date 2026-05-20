@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: use, flexclone files, flexclone luns, create, efficient, copies, files, luns 
 summary: FlexClone 파일 및 FlexClone LUN은 상위 파일 및 상위 LUN의 쓰기 가능하고 공간 효율적인 클론입니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN 사용 개요
+= ONTAP FlexClone 파일 및 FlexClone LUN에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

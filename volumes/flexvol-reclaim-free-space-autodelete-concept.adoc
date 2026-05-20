@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, flexvol, volume, reclaim, free, space, autodelete, setting 
 summary: FlexVol volume의 자동 삭제 설정을 활성화하여 FlexClone 파일과 FlexClone LUN을 자동으로 삭제하고 볼륨의 여유 공간을 확보할 수 있습니다. 
 ---
-= 자동 삭제 개요 를 통해 FlexVol 볼륨 및 여유 공간 재확보
+= ONTAP FlexVol 볼륨의 자동 삭제 기능을 통해 여유 공간을 확보하는 방법에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

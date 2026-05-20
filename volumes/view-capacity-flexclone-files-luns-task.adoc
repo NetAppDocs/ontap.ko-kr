@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view, node, capacity, creating, deleting, flexclone, files, flexclone luns 
 summary: 노드에 대한 분할 로드를 확인하여 FlexClone 파일 및 FlexClone LUN을 생성 및 삭제하기 위한 요청을 받을 수 있는 용량이 노드에 있는지 확인합니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN을 생성 및 삭제하기 전에 노드 용량을 확인합니다
+= ONTAP FlexClone 파일 및 FlexClone LUN을 생성 및 삭제하기 전에 노드 용량을 확인하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

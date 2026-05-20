@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, quota, process 
 summary: 할당량은 디스크 공간 및 사용자, 그룹 또는 qtree에서 사용되는 파일 수를 제한하거나 추적하는 데 도움이 되며 특정 FlexVol volume 또는 qtree에 적용됩니다. 
 ---
-= 할당량 프로세스
+= ONTAP 할당량에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

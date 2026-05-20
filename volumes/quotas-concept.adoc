@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: why use quotas, quota benefits 
 summary: 할당량을 사용하여 FlexVol 볼륨의 리소스 사용량을 관리하고 모니터링할 수 있습니다. 
 ---
-= 할당량 사용의 이점
+= ONTAP 할당량 사용의 이점
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

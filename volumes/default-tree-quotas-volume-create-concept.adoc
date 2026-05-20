@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: default, tree quotas, flexvol volume, create, derived tree quotas, derived, quota, tree 
 summary: FlexVol 볼륨에 기본 트리 할당량을 생성하면 해당 볼륨의 모든 qtree에 대해 해당 파생 트리 할당량이 자동으로 생성됩니다. 
 ---
-= FlexVol 볼륨의 기본 트리 할당량이 파생 트리 할당량을 생성하는 방법
+= ONTAP FlexVol 볼륨의 기본 트리 할당량이 파생 트리 할당량을 생성하는 방법을 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

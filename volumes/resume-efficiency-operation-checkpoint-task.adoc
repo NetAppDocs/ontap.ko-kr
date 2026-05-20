@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, halted, efficiency, operation 
 summary: 시스템에 의해 효율성 작업이 중지되면 동일한 지점에서 효율성 작업을 재개할 수 있습니다. 
 ---
-= 중단된 효율성 작업을 다시 시작합니다
+= 중단된 ONTAP 효율성 작업을 재개합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

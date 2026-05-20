@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: why, enforced, quotas, differ, configured, quotas 
 summary: 할당량 보고서에 표시된 적용 할당량을 구성한 할당량과 비교할 수 있도록 적용된 할당량이 구성된 견적과 어떻게 다른지 이해합니다 
 ---
-= 사용자 추가 할당량이 구성된 할당량과 다른 이유
+= ONTAP에서 적용하는 할당량이 구성된 할당량과 어떻게 다른지 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

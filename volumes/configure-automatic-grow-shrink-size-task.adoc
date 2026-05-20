@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, volumes, automatically, grow, shrink, size, automatic, space 
 summary: FlexVol 볼륨이 현재 필요한 공간에 따라 자동으로 확장 및 축소되도록 구성할 수 있습니다. 
 ---
-= 크기를 자동으로 확대 및 축소하도록 볼륨을 구성합니다
+= ONTAP 볼륨이 자동으로 확장 및 축소되도록 구성합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

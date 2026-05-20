@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, autoshrink functionality, interacts with, snapshot copy, deletion, automatic 
 summary: 자동 축소 기능은 FlexVol volume 크기를 축소하므로 볼륨 스냅샷이 자동으로 삭제되는 경우에도 영향을 미칠 수 있습니다. 
 ---
-= 자동 축소 기능 및 스냅샷 삭제
+= ONTAP 자동 축소 기능과 스냅샷 삭제 기능의 상호 작용에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

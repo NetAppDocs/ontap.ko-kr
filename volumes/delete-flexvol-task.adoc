@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, flexvol volume, flexvol, volume 
 summary: ONTAP CLI를 사용하여 더 이상 필요하지 않은 FlexVol volume을 삭제할 수 있습니다. 
 ---
-= FlexVol 볼륨을 삭제합니다
+= ONTAP FlexVol 볼륨을 삭제합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

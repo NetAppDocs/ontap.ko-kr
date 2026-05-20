@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configuration, settings, non-space-reserved, files, luns, thin-provisioned, volumes 
 summary: FlexVol volume와 파일 또는 LUN 구성을 결합하려면 스토리지를 미리 할당하고 사용 가능한 공간을 관리해야 공간 부족을 방지할 수 있습니다. 
 ---
-= 비공간 예약 파일 또는 씬 프로비저닝된 볼륨이 있는 LUN에 대한 설정입니다
+= 공간 예약이 되지 않은 파일 또는 씬 프로비저닝된 ONTAP 볼륨이 있는 LUN에 대한 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

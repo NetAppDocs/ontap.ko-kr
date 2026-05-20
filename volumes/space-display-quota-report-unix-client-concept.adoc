@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: difference, space usage, displayed, quota report, unix client 
 summary: FlexVol volume 또는 qtree의 할당량 보고서에 표시되는 사용된 디스크 공간의 값은 같은 볼륨 또는 qtree에 대해 UNIX 클라이언트에서 표시하는 값과 다를 수 있습니다. 
 ---
-= 할당량 보고서와 UNIX 클라이언트에 의해 표시되는 공간 사용량 차이에 대한 개요입니다
+= ONTAP 할당량 보고서와 UNIX 클라이언트에서 표시되는 공간 사용량 차이
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

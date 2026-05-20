@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: methods to, copy, volume 
 summary: 볼륨을 복사하는 방법은 집계 위치와 원래 볼륨의 스냅샷을 보존하려는 경우에 따라 다릅니다. 
 ---
-= 볼륨을 복사하는 방법입니다
+= ONTAP 볼륨 복사 방법
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

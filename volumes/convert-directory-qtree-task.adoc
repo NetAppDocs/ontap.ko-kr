@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: convert, directory, qtree 
 summary: FlexVol volume의 루트에 qtree로 전환하려는 디렉토리가 있는 경우 디렉토리에 있는 데이터를 같은 이름의 새 qtree로 마이그레이션해야 합니다. 
 ---
-= 디렉토리를 qtree로 변환합니다
+= ONTAP FlexVol 볼륨의 루트 디렉터리를 qtree로 변환합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

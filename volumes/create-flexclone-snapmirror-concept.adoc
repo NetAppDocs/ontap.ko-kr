@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: considerations, creating, flexclone volume, from snapmirror, source, destination, volume, flexclone, snapmirror, future 
 summary: 기존 SnapMirror 관계에서 소스 또는 타겟 볼륨에서 FlexClone 볼륨을 생성할 수 있지만, 그렇게 할 경우 향후 SnapMirror 복제 작업에 영향을 미칠 수 있습니다. 
 ---
-= SnapMirror 소스 또는 타겟 볼륨에서 FlexClone 볼륨을 생성할 때의 고려 사항
+= ONTAP SnapMirror 소스 또는 대상 볼륨에서 FlexClone 볼륨을 생성하는 방법에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: considerations, recommendations, moving volumes, flexclone volume, metroCluster configuration 
 summary: 볼륨을 이동할 때 고려해야 할 몇 가지 고려 사항과 권장 사항이 있습니다. 이러한 볼륨은 MetroCluster와 같은 시스템 구성과 함께 이동 중인 볼륨을 기반으로 합니다. 볼륨을 이동하기 전에 모든 관련 문제를 이해해야 합니다. 
 ---
-= 볼륨 이동 시 고려 사항 및 권장 사항
+= ONTAP 볼륨 이동에 대한 권장 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

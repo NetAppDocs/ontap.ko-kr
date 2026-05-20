@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: df, command, file, size, reporting, reports, space, usage, qtree, quota 
 summary: df 명령에서 공간 사용량을 보고하는 방법은 할당량 구성에 따라 다릅니다. 
 ---
-= df 명령이 파일 크기를 어떻게 계산하는지 확인합니다
+= df 명령이 파일 크기를 어떻게 고려하는지 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

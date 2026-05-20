@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protection, against, accidental, volume, deletion 
 summary: 기본 볼륨 삭제 동작은 실수로 삭제된 FlexVol 볼륨을 복구하는 데 도움이 됩니다. 
 ---
-= 우발적인 볼륨 삭제로부터 보호
+= 실수로 인한 ONTAP 볼륨 삭제 방지
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

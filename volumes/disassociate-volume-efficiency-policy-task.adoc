@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disassociate, volume, efficiency, policy, deduplication, data, compression 
 summary: 볼륨에서 볼륨 효율성 정책을 분리하면 볼륨에 대한 예약 기반 중복제거 및 데이터 압축 작업을 더 이상 중단할 수 있습니다. 
 ---
-= 볼륨 효율성 정책을 볼륨에서 연결 해제합니다
+= ONTAP 볼륨에서 볼륨 효율성 정책 연결 해제
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

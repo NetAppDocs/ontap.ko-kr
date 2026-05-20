@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rehost, nfs, volumes 
 summary: NFS 프로토콜을 사용하여 데이터를 제공하는 볼륨을 재호스팅할 수 있습니다. 
 ---
-= NFS 볼륨을 재호스팅합니다
+= ONTAP NFS 볼륨을 다시 호스팅합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

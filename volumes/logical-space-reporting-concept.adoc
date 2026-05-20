@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: what, logical, space, reporting, shows 
 summary: 볼륨에 대한 논리적 공간 보고를 활성화하면 시스템의 총 공간 외에 사용된 논리적 공간과 사용 가능한 공간이 표시됩니다. 
 ---
-= 논리적 공간 보고
+= ONTAP 논리적 공간 보고
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

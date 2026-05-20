@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, moving, volumes, to move, move 
 summary: ONTAP CLI는 볼륨 이동을 관리하기 위한 특정 명령을 제공합니다. 
 ---
-= ONTAP에서 볼륨을 이동하기 위한 명령입니다
+= 볼륨 이동을 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

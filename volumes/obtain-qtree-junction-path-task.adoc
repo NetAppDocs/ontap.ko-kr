@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: obtain, qtree, junction, path 
 summary: qtree의 접합 경로 또는 네임스페이스 경로를 획득하여 개별 qtree를 마운트할 수 있습니다. 
 ---
-= qtree 접합 경로를 확보합니다
+= ONTAP qtree 접합 경로를 얻으십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: relocate, root volumes, new aggregates 
 summary: 루트 교체 절차는 운영 중단 없이 현재 루트 애그리게이트를 다른 디스크 세트로 마이그레이션합니다. 
 ---
-= 루트 볼륨을 새 애그리게이트로 재배치합니다
+= ONTAP 루트 볼륨을 새 애그리게이트로 재배치합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

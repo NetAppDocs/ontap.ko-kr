@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, unix users, for quotas 
 summary: 할당량에 대해 UNIX 사용자를 여러 가지 형식 중 하나로 지정할 수 있습니다. 
 ---
-= 할당량에 대해 UNIX 사용자를 지정합니다
+= ONTAP 할당량에 대한 UNIX 사용자 지정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

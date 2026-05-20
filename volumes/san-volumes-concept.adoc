@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: understand, san volumes 
 summary: SAN 볼륨 프로비저닝에 대한 기본 옵션과 각 옵션이 ONTAP 블록 공유 기술의 볼륨 공간 및 공간 요구사항을 관리하는 방법을 이해합니다. 
 ---
-= SAN 볼륨 프로비저닝 개요
+= SAN 볼륨 프로비저닝에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

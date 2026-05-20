@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view, efficiency, view statistics, flexvol, volume 
 summary: 용량 계획 또는 다른 목적으로 FlexVol volume에서 실행되는 효율성 작업에 대한 세부 정보를 봅니다. 
 ---
-= FlexVol 볼륨의 효율성 통계를 확인합니다
+= ONTAP FlexVol 볼륨의 효율성 통계 보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands for, managing, flexvol, volumes, manage, command 
 summary: ONTAP CLI를 사용하여 FlexVol 볼륨을 관리하는 특정 명령이 있습니다. 
 ---
-= ONTAP에서 FlexVol 볼륨을 관리하는 명령입니다
+= FlexVol 볼륨 관리를 위한 ONTAP 명령
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

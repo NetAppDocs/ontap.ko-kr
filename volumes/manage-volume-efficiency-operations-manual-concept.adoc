@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage, volume, efficiency, operations, manually 
 summary: 효율성 작업을 수동으로 실행하여 효율성 작업이 볼륨에 대해 실행되는 방식을 관리합니다. 
 ---
-= 수동으로 볼륨 효율성 작업 관리 개요
+= ONTAP 볼륨 효율성 작업을 수동으로 관리합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

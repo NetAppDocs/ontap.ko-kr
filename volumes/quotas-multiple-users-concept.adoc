@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how quotas work, with multiple users 
 summary: 동일한 할당량 대상에 여러 사용자를 배치하면 할당량으로 정의된 제한이 각 개별 사용자에게 적용되지 않습니다. 할당량 제한값은 할당량 대상의 모든 사용자 간에 공유됩니다. 
 ---
-= 여러 사용자에게 할당량이 작동하는 방식
+= ONTAP 할당량이 여러 사용자와 함께 작동하는 방식 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

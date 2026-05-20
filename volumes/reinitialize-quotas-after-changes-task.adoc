@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reinitialize, quotas, after making, extensive, changes 
 summary: 기존 할당량 정의를 크게 변경한 후에는 영향을 받는 모든 볼륨에서 할당량을 다시 초기화해야 합니다. 
 ---
-= 대대적인 변경 작업을 수행한 후 할당량을 다시 초기화합니다
+= 대규모 변경 후 ONTAP 할당량을 다시 초기화하세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

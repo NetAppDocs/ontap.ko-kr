@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deduplication, flexclone files, flexclone luns, files, luns, flexclone, efficiency, efficient, blocks, block 
 summary: 중복제거가 활성화되어 있는 볼륨에서 상위 파일 및 상위 LUN의 FlexClone 파일 또는 FlexClone LUN을 생성하여 물리적 스토리지 공간의 효율성을 개선할 수 있습니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN을 사용한 데이터 중복 제거
+= ONTAP FlexClone 파일 및 FlexClone LUN을 사용한 데이터 중복 제거
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

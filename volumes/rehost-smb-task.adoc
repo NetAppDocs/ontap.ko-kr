@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rehost, cifs volumes, smb 
 summary: SMB 프로토콜을 사용하여 데이터를 제공하는 볼륨을 재호스팅합니다. 
 ---
-= SMB 볼륨을 재호스팅합니다
+= ONTAP SMB 볼륨 재호스팅
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

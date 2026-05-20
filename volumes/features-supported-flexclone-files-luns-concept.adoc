@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: flexclone files, flexclone luns, ontap features, supported, features 
 summary: FlexClone 파일 및 FlexClone LUN은 중복 제거, 스냅샷, 할당량, 볼륨 SnapMirror 등 다양한 ONTAP 기능을 지원합니다. 
 ---
-= FlexClone 파일 및 FlexClone LUN에서 지원하는 기능입니다
+= FlexClone 파일 및 FlexClone LUN에서 지원하는 ONTAP 기능
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

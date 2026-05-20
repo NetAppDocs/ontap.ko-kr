@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, data compression, FlexVol, space, volume, volume efficiency modify 
 summary: ' `volume efficiency modify`명령을 사용하여 데이터 압축을 활성화하고 FlexVol volume에 압축 유형을 할당하여 절약 공간을 확보합니다.' 
 ---
-= 볼륨에 대해 데이터 압축을 설정합니다
+= ONTAP 볼륨에서 데이터 압축을 활성화합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

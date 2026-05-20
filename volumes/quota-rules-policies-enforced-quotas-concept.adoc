@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: understand quotas, quota rules, quota policies 
 summary: '할당량은 FlexVol 볼륨별 할당량 규칙에 정의됩니다. 이러한 할당량 규칙은 스토리지 가상 머신(SVM)에 대한 할당량 정책으로 통합되어 SVM의 각 볼륨에서 활성화됩니다.' 
 ---
-= 할당량, 할당량 규칙 및 할당량 정책을 이해합니다
+= ONTAP 할당량, 할당량 규칙 및 할당량 정책에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

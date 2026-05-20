@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, fabricpool, efficiency, temperature, change, efficient, snapmirror, volume, move 
 summary: 스토리지 효율성 동작은 활성 상태이거나 동시에 시작되는 다른 스토리지 작업의 영향을 받을 수 있습니다. 
 ---
-= 볼륨 이동 및 SnapMirror 작업에 대한 스토리지 효율성 동작
+= ONTAP 볼륨 이동 및 SnapMirror 작업 시 스토리지 효율성 동작
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

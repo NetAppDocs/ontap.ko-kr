@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: how, derived, quotas, work 
 summary: 명시적 할당량이 아닌 기본 할당량의 결과로 적용되는 할당량을 파생 할당량이라고 합니다. 
 ---
-= 파생 할당량의 작동 방식
+= ONTAP 파생 할당량에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rehost, san volumes 
 summary: 매핑된 LUN을 통해 데이터를 제공하는 SAN 볼륨을 재호스팅합니다. 
 ---
-= SAN 볼륨을 재호스팅합니다
+= ONTAP SAN 볼륨을 다시 호스팅합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

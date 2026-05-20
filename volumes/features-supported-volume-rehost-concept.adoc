@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: features, do not support, volume rehost 
 summary: 볼륨 재호스트를 지원하지 않는 ONTAP 기능에는 몇 가지가 있습니다. 재호스트 작업을 시도하기 전에 이러한 기능을 숙지해야 합니다. 
 ---
-= ONTAP에서 볼륨 재호스트에서는 기능이 지원되지 않습니다
+= 볼륨 재호스팅에서 지원되지 않는 ONTAP 기능
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

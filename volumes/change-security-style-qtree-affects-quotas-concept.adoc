@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: changing, security, style of a qtree, affects, user quotas, qtree, security style, style, quota 
 summary: qtree의 보안 스타일을 변경하면 할당량 계산 방식에 영향을 미칠 수 있습니다. Qtree의 보안 스타일을 변경한 후에는 항상 할당량을 다시 초기화해야 합니다. 
 ---
-= Qtree 보안 스타일 및 사용자 할당량
+= ONTAP qtree 보안 스타일 및 사용자 할당량
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
