@@ -33,7 +33,7 @@ image:metrocluster-av-config.png["MetroCluster/DR 구성"]
 .단계
 . 스캐너 풀 생성:
 +
-'vserver vscan scanner -pool create -vserver_data_SVM|cluster_admin_SVM_-scanner -pool_scanner_pool_-hostname_vscan_server_hostname_-privileged-users_privileged_users_'
+`vserver vscan scanner-pool create -vserver <data_SVM|cluster_admin_SVM> -scanner-pool <scanner_pool> -hostnames <Vscan_server_hostnames> -privileged-users <privileged_users>`
 
 +
 ** 개별 SVM용으로 정의된 풀에 대해 데이터 SVM을 지정하고, 클러스터의 모든 SVM에 대해 정의된 풀에 대해 클러스터 관리 SVM을 지정합니다.
@@ -56,36 +56,36 @@ image:metrocluster-av-config.png["MetroCluster/DR 구성"]
 +
 [listing]
 ----
-cluster1::> vserver vscan scanner-pool create -vserver cifssvm1 -
-scanner-pool pool1_for_site1 -hostnames scan1 -privileged-users cifs
+site_A::> vserver vscan scanner-pool create -vserver cifssvm1 -
+scanner-pool pool1_for_siteA -hostnames scan1 -privileged-users cifs
 \u1,cifs\u2
 
-cluster1::> vserver vscan scanner-pool create -vserver cifssvm1 -
-scanner-pool pool1_for_site2 -hostnames scan1 -privileged-users cifs
+site_B::> vserver vscan scanner-pool create -vserver cifssvm1 -
+scanner-pool pool1_for_siteB -hostnames scan1 -privileged-users cifs
 \u1,cifs\u2
 
-cluster1::> vserver vscan scanner-pool create -vserver cifssvm1 -
-scanner-pool pool2_for_site1 -hostnames scan2 -privileged-users cifs
+site_A::> vserver vscan scanner-pool create -vserver cifssvm1 -
+scanner-pool pool2_for_siteA -hostnames scan2 -privileged-users cifs
 \u1,cifs\u2
 
-cluster1::> vserver vscan scanner-pool create -vserver cifssvm1 -
-scanner-pool pool2_for_site2 -hostnames scan2 -privileged-users cifs
+site_B::> vserver vscan scanner-pool create -vserver cifssvm1 -
+scanner-pool pool2_for_siteB -hostnames scan2 -privileged-users cifs
 \u1,cifs\u2
 ----
 . 스캐너 풀이 생성되었는지 확인합니다.
 +
-`vserver vscan scanner-pool show -vserver _data_SVM|cluster_admin_SVM_ -scanner-pool _scanner_pool_`
+`vserver vscan scanner-pool show -vserver <data_SVM|cluster_admin_SVM> -scanner-pool <scanner_pool>`
 
 +
-다음 명령을 실행하면 스캐너 풀 'pool1'에 대한 세부 정보가 표시됩니다.
+다음 명령은 스캐너 풀에 대한 세부 정보를 표시합니다 `pool1_for_siteA`.
 
 +
 [listing]
 ----
-cluster1::> vserver vscan scanner-pool show -vserver cifssvm1 -scanner-pool pool1_for_site1
+site_A::> vserver vscan scanner-pool show -vserver cifssvm1 -scanner-pool pool1_for_siteA
 
                                     Vserver: cifssvm1
-                               Scanner Pool: pool1_for_site1
+                               Scanner Pool: pool1_for_siteA
                              Applied Policy: idle
                              Current Status: off
          Cluster on Which Policy Is Applied: -
