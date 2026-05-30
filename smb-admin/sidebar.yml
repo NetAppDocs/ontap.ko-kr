@@ -140,12 +140,8 @@ entries:
       url: "/smb-admin/requirements-gpos-concept.html"
     - title: ONTAP SMB 서버에서 GPO 지원을 설정하거나 해제합니다
       url: "/smb-admin/enable-disable-gpo-support-task.html"
-    - title: SMB 서버에서 GPO를 업데이트하는 방법
-      entries:
-      - title: ONTAP SMB 서버에서 GPO를 업데이트하는 방법에 대해 알아봅니다
-        url: "/smb-admin/gpos-updated-server-concept.html"
-      - title: GPO 업데이트가 실패하는 경우 수행할 작업
-        url: "/smb-admin/gpo-updates-failing-reference.html"
+    - title: ONTAP SMB 서버에서 GPO를 업데이트하는 방법에 대해 알아봅니다
+      url: "/smb-admin/gpos-updated-server-concept.html"
     - title: ONTAP SMB 서버에서 GPO 설정을 수동으로 업데이트합니다
       url: "/smb-admin/manual-update-gpo-settings-task.html"
     - title: ONTAP SMB GPO 구성에 대한 정보를 표시합니다
