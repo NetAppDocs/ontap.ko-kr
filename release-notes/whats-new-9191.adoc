@@ -168,6 +168,9 @@ xref:../anti-ransomware/use-cases-restrictions-concept.html#supported-configurat
 ARP/AI는 지원되는 플랫폼에서 SnapMirror 동기식(NAS 및 SAN) 및 SnapMirror 활성 동기화 SAN 관계에 참여하는 볼륨을 지원합니다. ARP/AI는 FAS, AFF 및 AFX 시스템의 SnapMirror 동기식 관계에서 기본 볼륨을, AFF 및 ASA r2 시스템의 SnapMirror 활성 동기화 SAN 관계에서 기본 볼륨을 보호할 수 있습니다. ARP/AI는 관계에서 활성 상태인 읽기/쓰기 가능 기본 볼륨에서 실행되어 기본 볼륨 전용 ARP 스냅샷을 생성하고 머신 러닝 기반 랜섬웨어 탐지 기능을 제공합니다.
 
 
+NOTE: ONTAP 9.19.1 RC로 업그레이드하고 ARP를 활성화한 후 관계에서 짧은 Out-of-Sync 상태가 발생할 수 있습니다. 이 상태는 일시적이며 별도의 조치 없이 관계가 자동으로 재동기화됩니다.
+
+
 
  a| 
 xref:../networking/configure-tls-offload.html[TLS 오프로드 구성]
