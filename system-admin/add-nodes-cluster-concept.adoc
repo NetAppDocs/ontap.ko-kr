@@ -135,7 +135,7 @@ command line interface:
 +
 [NOTE]
 ====
-설정 GUI를 사용하여 클러스터를 설정하는 방법에 대한 자세한 내용은 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap/task_admin_add_nodes_to_cluster.html["노드 관리 문서"] . 에 대한 자세한 내용은 `cluster setup` link:https://docs.netapp.com/us-en/ontap-cli/cluster-setup.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+설정 GUI를 사용하여 클러스터를 설정하는 방법에 대한 자세한 내용은 link:../task_admin_add_nodes_to_cluster.html["노드 관리 문서"]를 참조하십시오.  `cluster setup`에 대해 자세히 알아보려면 link:https://docs.netapp.com/us-en/ontap-cli/cluster-setup.html["ONTAP 명령 참조입니다"^]를 참조하십시오.
 
 ====
 . Enter 키를 눌러 CLI를 사용하여 이 작업을 완료합니다. 새 클러스터를 생성하거나 기존 클러스터에 가입하라는 메시지가 표시되면 ' * join * '을 입력합니다.

@@ -42,6 +42,6 @@ cluster1::> event route add-destinations -messagename hm.alert* -destinations he
 
 
 .관련 정보
-* link:../networking/networking_reference.html["System Manager를 사용하여 ONTAP 네트워크를 시각화합니다"^]
+* link:../networking/networking_reference.html["System Manager를 사용하여 ONTAP 네트워크를 시각화합니다"]
 * link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_SNMP_monitoring_on_DATA_ONTAP["DATA ONTAP 에서 SNMP 모니터링을 구성하는 방법"^]
 

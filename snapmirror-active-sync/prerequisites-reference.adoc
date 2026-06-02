@@ -370,5 +370,5 @@ SnapMirror 액티브 동기화 볼륨에서는 NTFS 보안 스타일이 * 지원
 == 추가 정보
 
 * link:https://hwu.netapp.com/["Hardware Universe"^]
-* link:../mediator/mediator-overview-concept.html["ONTAP 중재자 개요"^]
+* link:../mediator/mediator-overview-concept.html["ONTAP 중재자 개요"]
 

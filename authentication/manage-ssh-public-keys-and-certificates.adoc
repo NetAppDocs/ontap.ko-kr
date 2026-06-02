@@ -30,7 +30,7 @@ SSH 공개 키와 X.509 인증서를 모두 사용하여 SSH를 통해 계정을
 +
 ** CA(인증 기관)로부터 인증서를 받아야 합니다.
 ** 명령을 사용하여 인증서 체인(중간 및 루트 CA 인증서)을 `security certificate install` 설치해야 합니다. 에 대한 자세한 내용은 `security certificate install` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-** SSH용 OCSP를 활성화해야 합니다. 을 참조하십시오 link:../system-admin/verify-digital-certificates-valid-ocsp-task.html["디지털 인증서가 OCSP를 사용하여 유효한지 확인합니다"^] 를 참조하십시오.
+** SSH에 OCSP를 활성화해야 합니다. 지침은 link:../system-admin/verify-digital-certificates-valid-ocsp-task.html["디지털 인증서가 OCSP를 사용하여 유효한지 확인합니다"]를 참조하십시오.
 
 
 

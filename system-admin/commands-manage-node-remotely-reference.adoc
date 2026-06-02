@@ -20,9 +20,9 @@ SP 에 액세스하여 SP CLI 명령을 실행하거나 BMC 에 액세스하여 
 * 그만큼 `help` BMC 의 명령: `BMC> help`
 
 
-자세히 알아보세요 `help` SP 및 BMC 에 사용 가능한 명령 옵션link:https://docs.netapp.com/us-en/ontap/system-admin/online-help-at-sp-bmc-cli-task.html["ONTAP SP/BMC CLI에서 도움말 정보를 봅니다"^] .
+SP 및 BMC에서 사용할 수 있는 `help` 명령 옵션에 대해 자세히 알아보려면 link:online-help-at-sp-bmc-cli-task.html["ONTAP SP/BMC CLI에서 도움말 정보를 봅니다"]를 참조하십시오.
 
-해당 ONTAP BMC CLI에 대해 자세히 알아보세요.link:https://docs.netapp.com/us-en/ontap/system-admin/bmc-cli-commands-reference.html["ONTAP 베이스보드 관리 컨트롤러에 대해 지원되는 CLI 명령"^] .
+link:bmc-cli-commands-reference.html["ONTAP 베이스보드 관리 컨트롤러에 대해 지원되는 CLI 명령"]에서 해당 ONTAP BMC CLI에 대해 자세히 알아보십시오.
 
 |===
 | 원하는 작업 | 이 SP 명령 사용... | 이 BMC 명령 사용... | 이 ONTAP 명령을 사용하세요... 

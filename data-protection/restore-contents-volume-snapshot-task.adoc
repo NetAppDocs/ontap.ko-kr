@@ -34,7 +34,7 @@ System Manager 또는 ONTAP CLI를 사용하여 이전 스냅샷에서 복원할
 +
 [source, cli]
 ----
-volume snapshot show -vserver <SVM> -volume <volume>
+volume snapshot show -vserver <svm> -volume <volume>
 ----
 +
 다음 예에서는 의 스냅샷을 `vol1` 보여 줍니다.
@@ -61,7 +61,7 @@ vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 +
 [source, cli]
 ----
-volume snapshot restore -vserver <SVM> -volume <volume> -snapshot <snapshot>
+volume snapshot restore -vserver <svm> -volume <volume> -snapshot <snapshot>
 ----
 +
 다음 예에서는 vol1의 내용을 복원합니다.

@@ -142,5 +142,5 @@ ONTAP 9.17.1부터 SnapMirror Active Sync는 NVMe 프로토콜을 지원합니�
 |===
 .관련 정보
 * link:https://hwu.netapp.com/["Hardware Universe"^]
-* link:../consistency-groups/limits.html["정합성 보장 그룹 제한"^]
+* link:../consistency-groups/limits.html["정합성 보장 그룹 제한"]
 

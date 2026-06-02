@@ -11,87 +11,150 @@ summary: ARP는 잠재적인 랜섬웨어 위협으로부터 보호하기 위해
 
 
 [role="lead"]
-자율 랜섬웨어 보호(ARP)는 잠재적인 랜섬웨어 위협으로부터 보호하기 위해 스냅샷을 생성합니다. 이러한 ARP 스냅샷 중 하나 또는 볼륨의 다른 스냅샷을 사용하여 데이터를 복원할 수 있습니다.
+Autonomous Ransomware Protection(ARP)는 잠재적인 랜섬웨어 위협으로부터 보호하기 위해 스냅샷을 생성합니다. ARP 스냅샷 또는 볼륨의 다른 스냅샷을 사용하여 데이터를 복원할 수 있습니다.
 
 .이 작업에 대해
-ARP는 다음 이름 중 하나를 접두사로 사용하여 스냅샷을 생성합니다.
+잠재적인 공격 상황에 따라 다음 방법 중 하나로 데이터를 복구할 수 있습니다.
+
+* *<<restore-from-arp-snapshot,가장 최근의 ARP 스냅샷에서 복원>>*: 무결성이 확실한 경우 사용 가능한 최신 ARP 스냅샷을 복구에 사용하십시오.
+* *<<restore-from-earlier-snapshot,가장 최근의 ARP 스냅샷이 아닌 다른 스냅샷에서 복원>>*: 먼저 가장 최근의 ARP 스냅샷에 대한 잠금을 해제한 다음, 원하는 이전 스냅샷에서 복원하십시오.
+* *<<restore-without-attack,시스템 공격이 보고되지 않았지만 복원을 원하는 경우>>*: 먼저  `Anti_ransomware` 스냅샷에서 복원한 다음, 선택한 스냅샷에서 볼륨을 추가로 복원하십시오.
+
+
+ARP는 다음 이름 중 하나가 접두사로 붙은 스냅샷을 생성합니다.
 
 * `Anti_ransomware_periodic_backup` : ONTAP 9.17.1 이상에서 정기적으로 생성되는 스냅샷에 사용됩니다. 예를 들어,  `Anti_ransomware_periodic_backup.2025-06-01_1248` .
 * `Anti_ransomware_attack_backup`: ONTAP 9.17.1 이상에서 비정상 상황에 대응하여 생성된 스냅샷에 사용됩니다. 예를 들어,  `Anti_ransomware_attack_backup.2025-08-25_1248` .
 * `Anti_ransomware_backup` : ONTAP 9.16.1 이하 버전에서 비정상 상황에 대응하여 생성되는 스냅샷과 함께 사용됩니다. 예를 들어,  `Anti_ransomware_backup.2022-12-20_1248` .
 
 
-스냅샷 이외의 스냅샷에서 복원하려면  `Anti_ransomware` 시스템 공격이 식별된 후 스냅샷을 먼저 공개해야 합니다.
-
-시스템 공격이 보고되지 않으면 먼저 다음에서 복원해야 합니다.  `Anti_ransomware` 스냅샷을 만든 다음 선택한 스냅샷에서 볼륨의 후속 복원을 완료합니다.
-
-.SnapMirror 관계 및 ARP 스냅샷에 대한 자세한 정보
-[%collapsible]
-====
-ARP 보호 볼륨이 SnapMirror 관계에 속한 경우, 스냅샷에서 볼륨을 복원한 후 해당 볼륨의 모든 미러 사본을 수동으로 업데이트해야 합니다. 이 단계를 건너뛰면 미러 사본을 사용할 수 없게 되어 삭제했다가 다시 만들어야 할 수 있습니다.
-
-ARP로 보호되는 볼륨이 ONTAP 9.19.1 RC에서 SnapMirror 동기식 또는 SnapMirror 활성 동기화 관계의 일부인 경우 추가적인 복구 고려 사항이 적용됩니다.
-
-* ARP 스냅샷은 운영 볼륨에만 생성되고 유지됩니다. SnapMirror 동기식 또는 SnapMirror 액티브 동기화의 일부로 2차 볼륨에 복제되지 않습니다.
-* ARP 활성화 상태는 페일오버 중에 복제되지 않습니다. 페일오버 후 복구 볼륨에서 link:enable-task.html["ARP를 다시 활성화합니다"]해야 합니다.
-* SnapMirror 동기식 또는 SnapMirror 활성 동기화 볼륨에서 볼륨 수준 복원(`volume snapshot restore`을 수행하려면 SnapMirror 동기식 또는 SnapMirror 활성 동기화 관계를 일시적으로 중지하거나 해제해야 할 수 있습니다.
-* 많은 경우, 기본 볼륨의 ARP 또는 기타 스냅샷에서 FlexClone 또는 파일 수준 복구 작업을 사용하여 SnapMirror 동기식 또는 SnapMirror 액티브 싱크를 중단하지 않고도 문제를 피할 수 있습니다.
-
-
-====
 .시작하기 전에
-link:respond-abnormal-task.html["해당 공격을 잠재적인 랜섬웨어 공격으로 표시해야 합니다."] 스냅샷에서 데이터를 복원하기 전에.
+* 비정상적인 활동 경고에 대응하는 경우, 데이터 복구를 진행하기 전에 link:respond-abnormal-task.html#classify-as-potential-ransomware-attack-and-recover-data["먼저 잠재적인 랜섬웨어 공격으로 분류해야 합니다"].
+* 복원 절차를 완료하기 전에 <<choose-a-recovery-method,복원 방법>> 및 <<recovery-constraints-and-considerations,복구 고려 사항 및 제약 조건에 대해 알아보십시오>>를 선택해야 합니다.
+
 
 .단계
-System Manager 또는 ONTAP CLI를 사용하여 데이터를 복원할 수 있습니다.
+ARP에서 이상을 감지한 후 데이터를 복원해야 하는 경우 다음 단계를 따르십시오.
+
+
+
+== 복구 방법을 선택하십시오
+
+데이터 손상 정도와 운영 요구 사항에 따라 다음 복구 방법 중 하나 또는 여러 가지를 조합하여 선택하십시오.
+
+* *볼륨 스냅샷 복원*: 선택한 스냅샷(ARP 또는 예약된 스냅샷) 시점으로 전체 볼륨을 롤백합니다. 이 방법이 가장 빠르지만 복원 지점 이후에 생성된 모든 스냅샷이 제거됩니다.
+* *클린 스냅샷에서 FlexClone 생성*: 선택한 스냅샷에서 클론 볼륨을 생성하고, 포렌식 분석이나 추가 복구를 위해 원본 볼륨과 모든 스냅샷을 보존합니다. 감염된 상위 볼륨을 클린 클론과 격리하려면 클론을 상위 볼륨에서 분리하는 것이 좋습니다.
++
+link:../volumes/create-flexclone-task.html["스냅샷에서 FlexClone 볼륨 생성"] 및 link:../volumes/split-flexclone-from-parent-task.html["상위 볼륨에서 FlexClone 분할"]에 대해 자세히 알아보십시오.
+
+* *단일 파일 SnapRestore*: 스냅샷에서 개별 파일을 복원합니다. 각 파일은 서로 다른 스냅샷에서 가져올 수 있습니다. 이 기능은 영향을 받는 파일 수가 비교적 적은 경우(수십 개에서 수백 개)에 유용합니다.
++
+link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 단일 파일 복원"]에 대해 자세히 알아보십시오.
+
+* * `.snapshot` 디렉터리에서 데이터 복사*: 표준 파일 복사 작업을 사용하여 스냅샷 마운트 지점의 데이터를 새 볼륨으로 복사합니다. 이 방법을 사용하면 분석을 위해 원본 볼륨과 스냅샷을 보존할 수 있습니다.
+* *하이브리드 방식*: 먼저 SnapRestore를 사용하여 볼륨을 가장 가까운 클린 스냅샷으로 롤백한 다음, 남아 있는 손상된 파일을 다른 스냅샷 또는 외부 백업에서 개별적으로 복원합니다.
+
+
+
+
+== 복구 제약 조건 및 고려 사항
+
+* ONTAP 9.15.1 이하 버전에서는 ARP 스냅샷 잠금을 해제하면 ARP 스냅샷이 즉시 삭제됩니다. ARP 스냅샷에서 복원할 계획이 없는 경우에만 잠금을 해제하십시오.
+* 이전 스냅샷에서 복원하기 전에 랜섬웨어 방지 잠금을 해제하는 것은 `volume snapshot restore`를 사용할 때만 필요합니다. FlexClone, 단일 파일 SnapRestore, 데이터 복사 작업 또는 이와 유사한 방법에는 필요하지 않습니다.
+
+
+.SnapMirror 고려 사항
+* ONTAP 9.19.1 RC에서 볼륨이 SnapMirror 동기식 또는 SnapMirror 활성 동기식 SAN 관계의 일부이고 볼륨 수준 복원을 계획하는 경우, 일시 중지하거나 link:../data-protection/make-destination-volume-writeable-task.html["복원하기 전에 관계를 끊으십시오"] 복원 후 보호를 다시 설정하십시오.
+* SnapMirror 관계에 참여하는 동안 ARP 보호 볼륨을 스냅샷에서 복원하는 경우 복원 후 모든 미러 복사본을 수동으로 업데이트하십시오. 그렇지 않으면 미러 복사본을 사용할 수 없게 되어 삭제 후 다시 생성해야 할 수 있습니다.
+
+
+스냅샷 및 페일오버 고려 사항을 포함한 전체 SnapMirror 및 ARP 상호 운용성 동작에 대한 자세한 내용은 link:use-cases-restrictions-concept.html#snapmirror["SnapMirror 및 ARP 상호 운용성"]을(를) 참조하십시오.
+
+
+
+== 시스템 공격 후 복원
+
+볼륨 스냅샷 복원의 경우 스냅샷 소스 및 상황에 따라 다음 흐름 중 하나를 선택하십시오.
+
+* <<restore-from-arp-snapshot,가장 최근의 ARP 스냅샷에서 복원>>
+* <<restore-from-earlier-snapshot,이전 스냅샷에서 복원>>
+
+
+
+
+=== 가장 최근의 ARP 스냅샷에서 복원
+
+가장 최근의 ARP 스냅샷(복구에 사용할 수 있는 가장 최신 스냅샷)에서 복원할 수 있다는 확신이 있을 때 이 복원 흐름을 선택하십시오.
 
 [role="tabbed-block"]
 ====
 .시스템 관리자
 --
-.시스템 공격 후 복원
-. ARP 스냅샷에서 복원하려면 2단계로 건너뜁니다. 이전 스냅샷에서 복원하려면 먼저 ARP 스냅샷의 잠금을 해제해야 합니다.
+. 스토리지 > 볼륨 * 을 선택한 다음 볼륨 및 * Snapshot 복사본 * 을 선택합니다.
+. ONTAP 9.16.1 이상 버전의 경우 볼륨 복원을 실행하기 전에 link:respond-abnormal-task.html#arp-snapshot-decision-sm-pre-restore["의심스러운 파일 지우기"].
 +
-.. 스토리지 > 볼륨 * 을 선택합니다.
-.. 보안 * 을 선택한 다음 * 의심되는 파일 형식 보기 * 를 선택합니다.
-.. 파일을 "잠재적 랜섬웨어 공격"으로 표시합니다.
-.. Update * 및 * Clear Suspect File Types * 를 선택합니다.
 
+NOTE: 의심스러운 파일을 삭제한 후에는 ARP 스냅샷이 기본적으로 7일 동안 보존됩니다. 데이터 복구에 더 많은 시간이 필요한 경우 link:modify-automatic-snapshot-options-task.html["ARP 스냅샷 설정 조정"]를 사용하여 스냅샷 보존 기간을 원하는 값으로 늘릴 수 있습니다. 모든 데이터 복구가 완료되면 보존 기간을 줄일 수 있습니다.
 
-. 볼륨에 스냅샷을 표시합니다.
-+
-스토리지 > 볼륨 * 을 선택한 다음 볼륨 및 * Snapshot 복사본 * 을 선택합니다.
-
-. 복원하려는 스냅샷 옆에 있는 을 선택한 다음 * Restore * 를 선택합니다image:icon_kabob.gif["메뉴 옵션 아이콘"].
-+
-ONTAP 9.19.1 RC에서 볼륨이 SnapMirror 동기식 또는 SnapMirror 활성 동기식 SAN 관계의 일부이고 볼륨 수준 복원을 수행할 계획이라면 SnapMirror 동기식 또는 SnapMirror 활성 동기식 설명서를 참조하여 복원을 시작하기 전에 정지하거나 link:../data-protection/make-destination-volume-writeable-task.html["보호 관계를 중단합니다"]한 다음 복원이 완료된 후 보호를 다시 설정하십시오.
-
-
-
-.시스템 공격이 확인되지 않은 경우 복원합니다
-. 볼륨에 스냅샷을 표시합니다.
-+
-스토리지 > 볼륨 * 을 선택한 다음 볼륨 및 * Snapshot 복사본 * 을 선택합니다.
-
-. 선택하다 image:icon_kabob.gif["메뉴 옵션 아이콘"] 그런 다음 선택하세요  `Anti_ransomware` 스냅 사진.
-. Restore * 를 선택합니다.
-. Snapshot Copies * 메뉴로 돌아간 다음 사용할 스냅샷을 선택합니다. Restore * 를 선택합니다.
+. 복원하려는 최신 ARP 스냅샷 (`Anti_ransomware`) 옆에 있는 image:icon_kabob.gif["메뉴 옵션 아이콘"]을 선택한 다음, *복원*을 선택합니다.
+. ONTAP 9.15.1 이하 버전의 경우 복원이 완료된 후 link:respond-abnormal-task.html#arp-snapshot-decision-sm-post-restore["의심스러운 파일 지우기"].
 
 
 --
 .CLI를 참조하십시오
 --
-.시스템 공격 후 복원
-ARP 스냅샷에서 복원하려면 2단계로 건너뜁니다. 이전 스냅샷에서 데이터를 복원하려면 ARP 스냅샷의 잠금을 해제해야 합니다.
-
-
-NOTE: 아래에 설명된 `volume snapshot restore` 명령을 사용하여 이전 스냅샷에서 복원하는 경우에만 랜섬웨어 방지 SnapLock을 해제해야 합니다. FlexClone, 단일 파일 SnapRestore 또는 기타 방법을 사용하여 데이터를 복원하는 경우에는 이 과정이 필요하지 않습니다.
-
-. 공격을 잠재적인 랜섬웨어 공격으로 표시 (`-false-positive false` ) 및 의심스러운 파일 삭제 (`clear-suspect` ):
+. 볼륨의 스냅샷을 나열합니다.
 +
 [source, cli]
 ----
-anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume <vol_name> [<extension identifiers>] -false-positive false
+volume snapshot show -vserver <svm> -volume <volume>
+----
+. ONTAP 9.16.1 이상 버전의 경우 `volume snapshot restore`을 실행하기 전에 link:respond-abnormal-task.html#arp-snapshot-decision-cli-pre-restore["의심스러운 파일 지우기"]을 수행하십시오.
+. 스냅숏에서 볼륨의 내용 복원:
++
+[source, cli]
+----
+volume snapshot restore -vserver <svm> -volume <volume> -snapshot <snapshot>
+----
+. ONTAP 9.15.1 이하 버전의 경우 복원이 완료된 후 link:respond-abnormal-task.html#arp-snapshot-decision-cli-post-restore["의심스러운 파일 지우기"].
+
+
+--
+====
+
+
+=== 이전 스냅샷에서 복원
+
+최신 스냅샷에 대한 신뢰도가 부족하여 이전 스냅샷에서 복원하려는 경우 이 절차를 선택하십시오. 이전 스냅샷에서 복원하기 전에 가장 최근 ARP 스냅샷의 잠금을 해제하십시오.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 최근 ARP 스냅샷에 대한 잠금을 해제합니다.
++
+.. 스토리지 > 볼륨 * 을 선택합니다.
+.. 보안 * 을 선택한 다음 * 의심되는 파일 형식 보기 * 를 선택합니다.
+.. 파일을 "잠재적 랜섬웨어 공격"으로 표시합니다.
+.. *의심스러운 파일 형식 업데이트 및 지우기*를 선택합니다.
++
+
+NOTE: link:respond-abnormal-task.html["ONTAP ARP가 감지한 비정상적인 활동에 응답합니다"]의 단계를 사용하여 활동을 잠재적인 랜섬웨어 공격으로 이미 분류한 경우 여기에서 의심되는 파일 유형만 지우면 됩니다.
+
+
+
+. 스토리지 > 볼륨 * 을 선택한 다음 볼륨 및 * Snapshot 복사본 * 을 선택합니다.
+. 복원할 이전 스냅샷 옆의 image:icon_kabob.gif["메뉴 옵션 아이콘"]를 선택한 다음 *복원*을 선택하세요.
+
+
+--
+.CLI를 참조하십시오
+--
+. 이전 스냅샷에서 복원하는 경우 `volume snapshot restore` 해당 공격을 잠재적 랜섬웨어로 표시(`-false-positive false`하고 의심스러운 파일을 삭제하여 잠금을 해제하십시오.
++
+[source, cli]
+----
+security anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume <vol_name> [<extension identifiers>] -false-positive false
 ----
 +
 다음 매개변수 중 하나를 사용하여 확장자를 식별하세요.
@@ -102,12 +165,11 @@ anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume <vol_nam
 ** `[-start-time _date_time_ -end-time _date_time_]` : 지울 파일 범위의 시작 및 종료 시간(형식: "MM/DD/YYYY HH:MM:SS")입니다.
 
 
-. ONTAP 9.19.1 RC에서 볼륨이 SnapMirror 동기식 또는 SnapMirror 활성 동기화 SAN 관계의 일부이고 볼륨 수준 복원을 수행하려는 경우 `volume snapshot restore`, 복원 작업을 실행하기 전에 SnapMirror 동기식 또는 SnapMirror 활성 동기화 설명서에 따라 정지하거나 link:../data-protection/make-destination-volume-writeable-task.html["SnapMirror 동기식 또는 SnapMirror 활성 동기화 관계를 해제합니다"]해야 합니다.
 . 볼륨의 스냅샷을 나열합니다.
 +
 [source, cli]
 ----
-volume snapshot show -vserver <SVM> -volume <volume>
+volume snapshot show -vserver <svm> -volume <volume>
 ----
 +
 다음 예에서는 의 스냅샷을 `vol1` 보여 줍니다.
@@ -134,7 +196,7 @@ vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
 +
 [source, cli]
 ----
-volume snapshot restore -vserver <SVM> -volume <volume> -snapshot <snapshot>
+volume snapshot restore -vserver <svm> -volume <volume> -snapshot <snapshot>
 ----
 +
 다음 예에서는 vol1의 내용을 복원합니다.
@@ -146,48 +208,45 @@ cluster1::> volume snapshot restore -vserver vs0 -volume vol1 -snapshot daily.20
 ----
 
 
-.시스템 공격이 확인되지 않은 경우 복원합니다
-. 볼륨의 스냅샷을 나열합니다.
+--
+====
+
+
+== 시스템 공격이 확인되지 않은 경우 복원
+
+공격이 식별되지 않으면 먼저 가장 최근의 ARP 스냅샷에서 복원한 다음 선택한 이전 스냅샷에서 복원하십시오.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 스토리지 > 볼륨 * 을 선택한 다음 볼륨 및 * Snapshot 복사본 * 을 선택합니다.
+. image:icon_kabob.gif["메뉴 옵션 아이콘"]을 선택한 다음 가장 최근  `Anti_ransomware` 스냅샷을 선택합니다.
+. Restore * 를 선택합니다.
+. *스냅샷 복사본* 메뉴로 돌아가서 사용할 이전 스냅샷을 선택합니다.
+. Restore * 를 선택합니다.
+
+
+--
+.CLI를 참조하십시오
+--
+. 먼저 가장 최근의 ARP 스냅샷에서 복원하십시오.
++
+.. 볼륨의 스냅샷을 나열합니다.
 +
 [source, cli]
 ----
-volume snapshot show -vserver <SVM> -volume <volume>
+volume snapshot show -vserver <svm> -volume <volume>
 ----
-+
-다음 예에서는 의 스냅샷을 `vol1` 보여 줍니다.
-
-+
-[listing]
-----
-
-clus1::> volume snapshot show -vserver vs1 -volume vol1
-
-Vserver Volume Snapshot                State    Size  Total% Used%
-------- ------ ---------- ----------- ------   -----  ------ -----
-vs1	    vol1   hourly.2013-01-25_0005  valid   224KB     0%    0%
-               daily.2013-01-25_0010   valid   92KB      0%    0%
-               hourly.2013-01-25_0105  valid   228KB     0%    0%
-               hourly.2013-01-25_0205  valid   236KB     0%    0%
-               hourly.2013-01-25_0305  valid   244KB     0%    0%
-               hourly.2013-01-25_0405  valid   244KB     0%    0%
-               hourly.2013-01-25_0505  valid   244KB     0%    0%
-
-7 entries were displayed.
-----
-. 스냅숏에서 볼륨의 내용 복원:
+.. 스냅숏에서 볼륨의 내용 복원:
 +
 [source, cli]
 ----
-volume snapshot restore -vserver <SVM> -volume <volume> -snapshot <snapshot>
+volume snapshot restore -vserver <svm> -volume <volume> -snapshot <snapshot>
 ----
-+
-다음 예에서는 vol1의 내용을 복원합니다.
 
-+
-[listing]
-----
-cluster1::> volume snapshot restore -vserver vs0 -volume vol1 -snapshot daily.2013-01-25_0010
-----
+
+. 사용할 이전 스냅샷을 선택하고 복원을 반복하십시오.
 
 
 에 대한 자세한 내용은 `volume snapshot` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=volume+snapshot["ONTAP 명령 참조입니다"^]을 참조하십시오.

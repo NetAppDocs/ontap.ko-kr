@@ -39,7 +39,7 @@ CDP는 클러스터 스위치 상태 모니터에서 클러스터, 스토리지 
 
 |===
 .관련 정보
-link:../system-admin/index.html["시스템 관리"^]
+link:../system-admin/index.html["시스템 관리"]
 
 
 
