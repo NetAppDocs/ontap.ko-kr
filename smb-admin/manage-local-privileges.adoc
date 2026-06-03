@@ -1,0 +1,213 @@
+---
+permalink: smb-admin/manage-local-privileges.html 
+sidebar: sidebar 
+keywords: manage, right, user, local, domain, add, privilege, override, default, object, enhance, customize, user, group, add privileges to local or domain users or groups 
+summary: 권한을 추가하여 로컬 또는 도메인 사용자 또는 그룹의 사용자 권한을 관리할 수 있습니다. 추가된 권한은 이러한 개체에 할당된 기본 권한을 재정의합니다. 사용자 또는 그룹에 있는 권한을 사용자 지정할 수 있으므로 보안이 강화됩니다. 
+---
+= ONTAP SMB 로컬 또는 도메인 사용자 또는 그룹에 대한 권한 관리
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== ONTAP SMB 로컬 또는 도메인 사용자나 그룹에 권한 추가
+
+권한을 추가하여 로컬 또는 도메인 사용자 또는 그룹의 사용자 권한을 관리할 수 있습니다. 추가된 권한은 이러한 개체에 할당된 기본 권한을 재정의합니다. 사용자 또는 그룹에 있는 권한을 사용자 지정할 수 있으므로 보안이 강화됩니다.
+
+.시작하기 전에
+권한을 추가할 로컬 또는 도메인 사용자 또는 그룹이 이미 있어야 합니다.
+
+.이 작업에 대해
+객체에 권한을 추가하면 해당 사용자 또는 그룹에 대한 기본 권한이 재정의됩니다. 권한을 추가해도 이전에 추가한 권한은 제거되지 않습니다.
+
+로컬 또는 도메인 사용자 또는 그룹에 권한을 추가할 때는 다음 사항을 염두에 두어야 합니다.
+
+* 하나 이상의 권한을 추가할 수 있습니다.
+* 도메인 사용자 또는 그룹에 권한을 추가할 때 ONTAP는 도메인 컨트롤러에 문의하여 도메인 사용자 또는 그룹의 유효성을 검사할 수 있습니다.
++
+ONTAP가 도메인 컨트롤러에 연결할 수 없는 경우 명령이 실패할 수 있습니다.
+
+
+
+.단계
+. 로컬 또는 도메인 사용자나 그룹에 하나 이상의 권한을 추가합니다.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege add-privilege -vserver <SVM_name> -user-or-group-name <name> -privileges <privilege>[,...]
+----
+. 원하는 권한이 해당 개체에 적용되었는지 확인하십시오.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege show -vserver <SVM_name> -user-or-group-name <name>
+----
+
+
+.예
+다음 예에서는 스토리지 가상 머신(SVM, 이전 명칭 Vserver)의 사용자 " cifs_server\sue ""에 "'seTcbPrivilege'" 및 "'setTakeOwnershipPrivilege"" 권한을 추가합니다1.
+
+[listing]
+----
+cluster1::> vserver cifs users-and-groups privilege add-privilege -vserver vs1 -user-or-group-name CIFS_SERVER\sue -privileges SeTcbPrivilege,SeTakeOwnershipPrivilege
+
+cluster1::> vserver cifs users-and-groups privilege show -vserver vs1
+Vserver   User or Group Name    Privileges
+--------- --------------------- ---------------
+vs1       CIFS_SERVER\sue       SeTcbPrivilege
+                                SeTakeOwnershipPrivilege
+----
+
+
+== ONTAP SMB 로컬 또는 도메인 사용자나 그룹의 권한 제거
+
+권한을 제거하여 로컬 또는 도메인 사용자 또는 그룹에 대한 사용자 권한을 관리할 수 있습니다. 이렇게 하면 사용자와 그룹이 보유한 최대 권한을 사용자 지정할 수 있으므로 보안이 강화됩니다.
+
+.시작하기 전에
+권한을 제거할 로컬 또는 도메인 사용자 또는 그룹이 이미 있어야 합니다.
+
+.이 작업에 대해
+로컬 또는 도메인 사용자 또는 그룹에서 권한을 제거할 때는 다음 사항을 염두에 두어야 합니다.
+
+* 하나 이상의 권한을 제거할 수 있습니다.
+* 도메인 사용자 또는 그룹에서 권한을 제거할 때 ONTAP는 도메인 컨트롤러에 문의하여 도메인 사용자 또는 그룹의 유효성을 검사할 수 있습니다.
++
+ONTAP가 도메인 컨트롤러에 연결할 수 없는 경우 명령이 실패할 수 있습니다.
+
+
+
+.단계
+. 로컬 또는 도메인 사용자 또는 그룹에서 하나 이상의 권한을 제거합니다.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege remove-privilege -vserver <SVM_name> -user-or-group-name <name> -privileges <privilege>[,...]
+----
+. 원하는 권한이 해당 개체에서 제거되었는지 확인하십시오.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege show -vserver <SVM_name> -user-or-group-name <name>
+----
+
+
+.예
+다음 예에서는 스토리지 가상 머신(SVM, 이전 명칭 Vserver)의 사용자 " cifs_server\sue "(cifs_server\sue ")에서 "'seTcbPrivilege' 및 "'setegenershipPrivilege'" 권한을 제거합니다1.
+
+[listing]
+----
+cluster1::> vserver cifs users-and-groups privilege show -vserver vs1
+Vserver   User or Group Name    Privileges
+--------- --------------------- ---------------
+vs1       CIFS_SERVER\sue       SeTcbPrivilege
+                                SeTakeOwnershipPrivilege
+
+cluster1::> vserver cifs users-and-groups privilege remove-privilege -vserver vs1 -user-or-group-name CIFS_SERVER\sue -privileges SeTcbPrivilege,SeTakeOwnershipPrivilege
+
+cluster1::> vserver cifs users-and-groups privilege show -vserver vs1
+Vserver   User or Group Name    Privileges
+--------- --------------------- -------------------
+vs1       CIFS_SERVER\sue       -
+----
+
+
+== ONTAP SMB 로컬 또는 도메인 사용자 및 그룹에 대한 권한 재설정
+
+로컬 또는 도메인 사용자 및 그룹에 대한 권한을 재설정할 수 있습니다. 이 기능은 로컬 또는 도메인 사용자 또는 그룹에 대한 권한을 수정한 후 해당 수정 사항이 더 이상 필요 또는 필요하지 않을 때 유용합니다.
+
+.이 작업에 대해
+로컬 또는 도메인 사용자 또는 그룹에 대한 권한을 재설정하면 해당 개체에 대한 권한 항목이 제거됩니다.
+
+.단계
+. 로컬 또는 도메인 사용자 또는 그룹의 권한을 재설정합니다.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege reset-privilege -vserver <SVM_name> -user-or-group-name <name>
+----
+. 개체에 대한 권한이 재설정되었는지 확인합니다.
++
+[source, cli]
+----
+vserver cifs users-and-groups privilege show -vserver <SVM_name> -user-or-group-name <name>
+----
+
+
+.예
+다음 예에서는 스토리지 가상 머신(SVM, 이전 명칭 Vserver) VS1 에서 사용자 "'cifs_server\sue'"에 대한 권한을 재설정합니다. 기본적으로 일반 사용자는 자신의 계정과 연결된 권한이 없습니다.
+
+[listing]
+----
+cluster1::> vserver cifs users-and-groups privilege show
+Vserver   User or Group Name    Privileges
+--------- --------------------- ---------------
+vs1       CIFS_SERVER\sue       SeTcbPrivilege
+                                SeTakeOwnershipPrivilege
+
+cluster1::> vserver cifs users-and-groups privilege reset-privilege -vserver vs1 -user-or-group-name CIFS_SERVER\sue
+
+cluster1::> vserver cifs users-and-groups privilege show
+This table is currently empty.
+----
+다음 예제에서는 ""BUILTIN\Administrators" 그룹에 대한 권한을 다시 설정하여 권한 항목을 효과적으로 제거합니다.
+
+[listing]
+----
+cluster1::> vserver cifs users-and-groups privilege show
+Vserver   User or Group Name       Privileges
+--------- ------------------------ -------------------
+vs1       BUILTIN\Administrators   SeRestorePrivilege
+                                   SeSecurityPrivilege
+                                   SeTakeOwnershipPrivilege
+
+cluster1::> vserver cifs users-and-groups privilege reset-privilege -vserver vs1 -user-or-group-name BUILTIN\Administrators
+
+cluster1::> vserver cifs users-and-groups privilege show
+This table is currently empty.
+----
+
+
+== ONTAP SMB 권한 재정의에 대한 정보 표시
+
+도메인 또는 로컬 사용자 계정 또는 그룹에 할당된 사용자 지정 권한에 대한 정보를 표시할 수 있습니다. 이 정보를 통해 원하는 사용자 권한이 적용되는지 여부를 확인할 수 있습니다.
+
+.단계
+. 다음 작업 중 하나를 수행합니다.
++
+|===
+| 다음에 대한 정보를 표시하려면... | 이 명령을 입력하십시오... 
+
+
+ a| 
+SVM(스토리지 가상 시스템)의 모든 도메인 및 로컬 사용자 및 그룹에 대한 사용자 지정 권한
+ a| 
+`vserver cifs users-and-groups privilege show -vserver <SVM_name>`
+
+
+
+ a| 
+SVM에서 특정 도메인 또는 로컬 사용자 및 그룹에 대한 사용자 지정 권한
+ a| 
+`vserver cifs users-and-groups privilege show -vserver <SVM_name> -user-or-group-name <name>`
+
+|===
++
+이 명령을 실행할 때 선택할 수 있는 다른 선택적 매개 변수가 있습니다. 에 대한 자세한 내용은 `vserver cifs users-and-groups privilege show` link:https://docs.netapp.com/us-en/ontap-cli/vserver-cifs-users-and-groups-privilege-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+.예
+다음 명령을 실행하면 SVM VS1 에 대한 로컬 또는 도메인 사용자 및 그룹과 명시적으로 연결된 모든 권한이 표시됩니다.
+
+[listing]
+----
+cluster1::> vserver cifs users-and-groups privilege show -vserver vs1
+Vserver    User or Group Name     Privileges
+--------- ---------------------   ---------------
+vs1       BUILTIN\Administrators  SeTakeOwnershipPrivilege
+                                  SeRestorePrivilege
+vs1       CIFS_SERVER\sue         SeTcbPrivilege
+                                  SeTakeOwnershipPrivilege
+----

@@ -20,6 +20,8 @@ entries:
     entries:
     - title: SMB 세션
       url: "/revert/terminate-smb-sessions.html"
+    - title: 로컬 사용자 및 그룹이 있는 SMB SVM
+      url: "/smb-admin/guidelines-reverting-local-users-groups-concept.html"
     - title: SnapMirror/SnapVault 관계
       url: "/revert/concept_reversion_requirements_for_snapmirror_and_snapvault_relationships.html"
     - title: 중복제거된 볼륨

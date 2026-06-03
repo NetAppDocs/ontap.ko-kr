@@ -1,0 +1,241 @@
+---
+permalink: smb-admin/commands-manage-ntfs-smb.html 
+sidebar: sidebar 
+keywords: ontap, command, managing, manage, security, descriptor, create, modify, delete, display, information, commands for managing ntfs security descriptors 
+summary: 'ONTAP 명령을 사용하여 DACL 및 SACL에 있는 NTFS 보안 설명자와 액세스 제어 항목(ACE)을 생성, 수정, 삭제하고 관련 정보를 표시할 수 있습니다. 또한 ONTAP 명령을 사용하여 SMB 보안 정책, 정책 작업 및 정책 작업을 관리할 수 있습니다.' 
+---
+= NTFS 및 SMB 보안 정책과 액세스 제어 항목을 관리하기 위한 ONTAP 명령
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 명령을 사용하여 DACL 및 SACL에 있는 NTFS 보안 설명자와 액세스 제어 항목(ACE)을 생성, 수정, 삭제하고 관련 정보를 표시할 수 있습니다. 또한 ONTAP 명령을 사용하여 SMB 보안 정책, 정책 작업 및 정책 작업을 관리할 수 있습니다.
+
+
+
+== SMB 서버에서 NTFS 보안 설명자를 관리하기 위한 ONTAP 명령
+
+보안 설명자를 관리하기 위한 특정 ONTAP 명령이 있습니다. 보안 설명자에 대한 정보를 생성, 수정, 삭제 및 표시할 수 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+NTFS 보안 설명자를 만듭니다
+ a| 
+'vserver security file-directory NTFS create'
+
+
+
+ a| 
+기존 NTFS 보안 설명자를 수정합니다
+ a| 
+'vserver security file-directory NTFS modify'를 참조하십시오
+
+
+
+ a| 
+기존 NTFS 보안 설명자에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory NTFS show'
+
+
+
+ a| 
+NTFS 보안 설명자를 삭제합니다
+ a| 
+'vserver security file-directory NTFS delete
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory ntfs` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+ntfs["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== SMB 서버에서 NTFS DACL 액세스 제어 항목을 관리하기 위한 ONTAP 명령
+
+DACL ACE(액세스 제어 항목)를 관리하기 위한 특정 ONTAP 명령이 있습니다. 언제든지 ACE를 NTFS DACL에 추가할 수 있습니다. DACL의 ACE에 대한 정보를 수정, 삭제 및 표시하여 기존 NTFS DACL을 관리할 수도 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+ACE를 만들어 NTFS DACL에 추가합니다
+ a| 
+'vserver security file-directory NTFS DACL add'
+
+
+
+ a| 
+NTFS DACL에서 기존 ACE를 수정합니다
+ a| 
+'vserver security file-directory NTFS DACL modify'를 선택합니다
+
+
+
+ a| 
+NTFS DACL의 기존 ACE에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory NTFS DACL show'
+
+
+
+ a| 
+NTFS DACL에서 기존 ACE를 제거합니다
+ a| 
+'vserver security file-directory NTFS DACL remove'
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory ntfs dacl` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+ntfs+dacl["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== SMB 서버에서 NTFS SACL 액세스 제어 항목을 관리하기 위한 ONTAP 명령
+
+SACL ACE(액세스 제어 항목)를 관리하기 위한 특정 ONTAP 명령이 있습니다. 언제든지 ACE를 NTFS SACL에 추가할 수 있습니다. SACL의 ACE에 대한 정보를 수정, 삭제 및 표시하여 기존 NTFS SACL을 관리할 수도 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+ACE를 만들어 NTFS SACL에 추가합니다
+ a| 
+'vserver security file-directory NTFS SACL add'
+
+
+
+ a| 
+NTFS SACL에서 기존 ACE를 수정합니다
+ a| 
+'vserver security file-directory NTFS SACL modify'를 참조하십시오
+
+
+
+ a| 
+NTFS SACL의 기존 ACE에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory NTFS SACL show'
+
+
+
+ a| 
+NTFS SACL에서 기존 ACE를 제거합니다
+ a| 
+'vserver security file-directory NTFS SACL remove'
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory ntfs sacl` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+ntfs+sacl["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== SMB 보안 정책을 관리하기 위한 ONTAP 명령
+
+보안 정책을 관리하기 위한 특정 ONTAP 명령이 있습니다. 정책에 대한 정보를 표시하고 정책을 삭제할 수 있습니다. 보안 정책을 수정할 수 없습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+보안 정책을 생성합니다
+ a| 
+'vserver security file-directory policy create'를 참조하십시오
+
+
+
+ a| 
+보안 정책에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory policy show'를 선택합니다
+
+
+
+ a| 
+보안 정책을 삭제합니다
+ a| 
+'vserver security file-directory policy delete
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory policy` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+policy["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== SMB 보안 정책 작업을 관리하기 위한 ONTAP 명령
+
+보안 정책 작업에 대한 정보를 추가, 수정, 제거 및 표시하는 ONTAP 명령이 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+보안 정책 작업을 추가합니다
+ a| 
+'vserver security file-directory policy task add'
+
+
+
+ a| 
+보안 정책 작업을 수정합니다
+ a| 
+'vserver security file-directory policy task modify'를 선택합니다
+
+
+
+ a| 
+보안 정책 작업에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory policy task show'를 선택합니다
+
+
+
+ a| 
+보안 정책 작업을 제거합니다
+ a| 
+'vserver security file-directory policy task remove'
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory policy task` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+policy+task["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+== SMB 보안 정책 작업을 관리하기 위한 ONTAP 명령
+
+보안 정책 작업에 대한 정보를 일시 중지, 다시 시작, 중지 및 표시하는 ONTAP 명령이 있습니다.
+
+|===
+| 원하는 작업 | 이 명령 사용... 
+
+
+ a| 
+보안 정책 작업을 일시 중지합니다
+ a| 
+'vserver security file-directory job pause -vserver vserver_name -id integer'
+
+
+
+ a| 
+보안 정책 작업을 다시 시작합니다
+ a| 
+'vserver security file-directory job resume - vserver vserver_name -id integer'
+
+
+
+ a| 
+보안 정책 작업에 대한 정보를 표시합니다
+ a| 
+'vserver security file-directory job show‑vserver_name' 이 명령을 사용하여 작업의 작업 ID를 확인할 수 있습니다.
+
+
+
+ a| 
+보안 정책 작업을 중지합니다
+ a| 
+'vserver security file-directory job stop -vserver vserver_name -id integer'
+
+|===
+에 대한 자세한 내용은 `vserver security file-directory job` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=vserver+security+file-directory+job["ONTAP 명령 참조입니다"^]을 참조하십시오.

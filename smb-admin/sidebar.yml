@@ -30,78 +30,16 @@ entries:
       url: "/smb-admin/configure-grant-unix-group-permission-users-task.html"
     - title: 익명 사용자에 대한 ONTAP SMB 액세스 제한을 구성합니다
       url: "/smb-admin/configure-access-restrictions-anonymous-users-task.html"
-    - title: UNIX 보안 스타일 데이터를 위해 SMB 클라이언트에 파일 보안을 제공하는 방법을 관리합니다
-      entries:
-      - title: 개요
-        url: "/smb-admin/manage-file-security-clients-unix-style-concept.html"
-      - title: UNIX 보안 스타일 데이터의 경우 ONTAP SMB 클라이언트에 NTFS ACL 표시를 구성합니다
-        url: "/smb-admin/enable-disable-ntfs-acls-unix-security-task.html"
-      - title: SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
-        url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
-        url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
-  - title: SMB 서버 보안 설정을 관리합니다
+  - title: UNIX 보안 스타일 데이터를 위해 SMB 클라이언트에 파일 보안을 제공하는 방법을 관리합니다
     entries:
-    - title: ONTAP SMB 클라이언트 인증 처리에 대해 알아봅니다
-      url: "/smb-admin/authentication-access-security-concept.html"
-    - title: ONTAP SVM 재해 복구 구성을 위한 SMB 서버 보안 설정에 대해 알아보십시오
-      url: "/smb-admin/server-security-settings-svm-disaster-recovery-concept.html"
-    - title: ONTAP SMB 서버 보안 설정에 대한 정보를 표시합니다
-      url: "/smb-admin/display-server-security-settings-task.html"
-    - title: 로컬 SMB 사용자에 대한 ONTAP 암호 복잡성을 구성합니다
-      url: "/smb-admin/enable-disable-password-complexity-local-users-task.html"
-    - title: ONTAP SMB 서버 Kerberos 보안 설정을 수정합니다
-      url: "/smb-admin/modify-server-kerberos-security-settings-task.html"
-    - title: ONTAP SMB 서버 최소 인증 보안 수준을 설정합니다
-      url: "/smb-admin/set-server-minimum-authentication-security-level-task.html"
-    - title: AES 암호화를 사용하여 Kerberos 기반 통신을 위한 강력한 ONTAP SMB 보안을 구성합니다
-      url: "/smb-admin/configure-kerberos-aes-encryption-concept.html"
-    - title: ONTAP SMB Kerberos 기반 통신에 대해 AES 암호화를 구성합니다
-      url: "/smb-admin/enable-disable-aes-encryption-kerberos-task.html"
-    - title: SMB 서명을 사용하여 네트워크 보안을 강화합니다
-      entries:
-      - title: ONTAP SMB 서명을 사용하여 네트워크 보안을 향상시키는 방법에 대해 알아보십시오
-        url: "/smb-admin/signing-enhance-network-security-concept.html"
-      - title: 서명 정책이 ONTAP SMB 서버와의 통신에 어떤 영향을 미치는지 알아봅니다
-        url: "/smb-admin/client-signing-policies-communication-concept.html"
-      - title: ONTAP SMB 서명의 성능 영향에 대해 알아보십시오
-        url: "/smb-admin/performance-impact-signing-concept.html"
-      - title: ONTAP SMB 서명 구성 권장 사항
-        url: "/smb-admin/recommendations-configure-signing-concept.html"
-      - title: 여러 데이터 LIFS에 대한 ONTAP SMB 서명 구성에 대해 자세히 알아보십시오
-        url: "/smb-admin/signing-multiple-data-lifs-concept.html"
-      - title: 수신 SMB 트래픽에 대한 ONTAP 서명을 구성합니다
-        url: "/smb-admin/enable-disable-required-signing-incoming-traffic-task.html"
-      - title: ONTAP SMB 세션이 서명되어 있는지 확인합니다
-        url: "/smb-admin/determine-sessions-signed-task.html"
-      - title: ONTAP SMB 서명 세션 통계를 모니터링합니다
-        url: "/smb-admin/monitor-signed-session-statistics-task.html"
-    - title: SMB를 통한 데이터 전송을 위해 SMB 서버에서 필요한 SMB 암호화를 구성합니다
-      entries:
-      - title: ONTAP SMB 암호화에 대해 알아보십시오
-        url: "/smb-admin/configure-required-encryption-concept.html"
-      - title: ONTAP SMB 암호화가 성능에 미치는 영향에 대해 알아보십시오
-        url: "/smb-admin/performance-impact-encryption-concept.html"
-      - title: 들어오는 트래픽에 대해 ONTAP SMB 암호화를 구성합니다
-        url: "/smb-admin/enable-disable-encryption-incoming-traffic-task.html"
-      - title: 클라이언트가 암호화된 ONTAP SMB 세션을 사용하여 연결되어 있는지 확인합니다
-        url: "/smb-admin/determine-clients-connected-encrypted-task.html"
-      - title: ONTAP SMB 암호화 통계를 모니터링합니다
-        url: "/smb-admin/monitor-encryption-statistics-task.html"
-    - title: 보안 LDAP 세션 통신
-      entries:
-      - title: ONTAP SMB LDAP 서명 및 봉인에 대해 자세히 알아보십시오
-        url: "/smb-admin/ldap-signing-sealing-concepts-concept.html"
-      - title: ONTAP SMB 서버에서 LDAP 서명 및 봉인을 활성화합니다
-        url: "/smb-admin/enable-ldap-signing-sealing-task.html"
-      - title: TLS를 통해 LDAP를 구성합니다
-        entries:
-        - title: ONTAP SMB SVM에 대한 자체 서명 루트 CA 인증서를 내보냅니다
-          url: "/smb-admin/export-copy-self-signed-root-ca-certificate-task.html"
-        - title: ONTAP SMB SVM에 자체 서명된 루트 CA 인증서를 설치합니다
-          url: "/smb-admin/install-self-signed-root-ca-certificate-svm-task.html"
-        - title: ONTAP SMB 서버에서 TLS를 통한 LDAP를 활성화합니다
-          url: "/smb-admin/enable-ldap-over-ssl-tls-task.html"
+    - title: 개요
+      url: "/smb-admin/manage-file-security-clients-unix-style-concept.html"
+    - title: UNIX 보안 스타일 데이터의 경우 ONTAP SMB 클라이언트에 NTFS ACL 표시를 구성합니다
+      url: "/smb-admin/enable-disable-ntfs-acls-unix-security-task.html"
+    - title: SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
+      url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
+    - title: SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
+      url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
   - title: 성능 및 이중화를 위해 ONTAP SMB 다중 채널을 구성합니다
     url: "/smb-admin/configure-multichannel-performance-task.html"
   - title: SMB 서버에서 기본 Windows 사용자를 UNIX 사용자 매핑으로 구성합니다
@@ -218,24 +156,68 @@ entries:
       url: "/smb-admin/disable-ipv6-smb-concept.html"
     - title: IPv6 SMB 세션에 대한 정보를 모니터링하고 표시합니다
       url: "/smb-admin/monitor-display-ipv6-sessions-task.html"
+- title: SMB 서버 보안 설정을 관리합니다
+  entries:
+  - title: ONTAP SMB 클라이언트 인증 처리에 대해 알아봅니다
+    url: "/smb-admin/authentication-access-security-concept.html"
+  - title: ONTAP SVM 재해 복구 구성을 위한 SMB 서버 보안 설정에 대해 알아보십시오
+    url: "/smb-admin/server-security-settings-svm-disaster-recovery-concept.html"
+  - title: ONTAP SMB 서버 보안 설정에 대한 정보를 표시합니다
+    url: "/smb-admin/display-server-security-settings-task.html"
+  - title: 로컬 SMB 사용자에 대한 ONTAP 암호 복잡성을 구성합니다
+    url: "/smb-admin/enable-disable-password-complexity-local-users-task.html"
+  - title: ONTAP SMB 서버 Kerberos 보안 설정을 수정합니다
+    url: "/smb-admin/modify-server-kerberos-security-settings-task.html"
+  - title: ONTAP SMB 서버 최소 인증 보안 수준을 설정합니다
+    url: "/smb-admin/set-server-minimum-authentication-security-level-task.html"
+  - title: AES 암호화를 사용하여 Kerberos 기반 통신을 위한 강력한 ONTAP SMB 보안을 구성합니다
+    url: "/smb-admin/configure-kerberos-aes-encryption-concept.html"
+  - title: ONTAP SMB Kerberos 기반 통신에 대해 AES 암호화를 구성합니다
+    url: "/smb-admin/enable-disable-aes-encryption-kerberos-task.html"
+  - title: SMB 서명을 사용하여 네트워크 보안을 강화합니다
+    entries:
+    - title: ONTAP SMB 서명을 사용하여 네트워크 보안을 향상시키는 방법에 대해 알아보십시오
+      url: "/smb-admin/signing-enhance-network-security-concept.html"
+    - title: 서명 정책이 ONTAP SMB 서버와의 통신에 어떤 영향을 미치는지 알아봅니다
+      url: "/smb-admin/client-signing-policies-communication-concept.html"
+    - title: ONTAP SMB 서명의 성능 영향에 대해 알아보십시오
+      url: "/smb-admin/performance-impact-signing-concept.html"
+    - title: ONTAP SMB 서명 구성 권장 사항
+      url: "/smb-admin/recommendations-configure-signing-concept.html"
+    - title: 여러 데이터 LIFS에 대한 ONTAP SMB 서명 구성에 대해 자세히 알아보십시오
+      url: "/smb-admin/signing-multiple-data-lifs-concept.html"
+    - title: 수신 SMB 트래픽에 대한 ONTAP 서명을 구성합니다
+      url: "/smb-admin/enable-disable-required-signing-incoming-traffic-task.html"
+    - title: ONTAP SMB 세션이 서명되어 있는지 확인합니다
+      url: "/smb-admin/determine-sessions-signed-task.html"
+    - title: ONTAP SMB 서명 세션 통계를 모니터링합니다
+      url: "/smb-admin/monitor-signed-session-statistics-task.html"
+  - title: SMB를 통한 데이터 전송을 위해 SMB 서버에서 필요한 SMB 암호화를 구성합니다
+    entries:
+    - title: ONTAP SMB 암호화에 대해 알아보십시오
+      url: "/smb-admin/configure-required-encryption-concept.html"
+    - title: ONTAP SMB 암호화가 성능에 미치는 영향에 대해 알아보십시오
+      url: "/smb-admin/performance-impact-encryption-concept.html"
+    - title: 들어오는 트래픽에 대해 ONTAP SMB 암호화를 구성합니다
+      url: "/smb-admin/enable-disable-encryption-incoming-traffic-task.html"
+    - title: 클라이언트가 암호화된 ONTAP SMB 세션을 사용하여 연결되어 있는지 확인합니다
+      url: "/smb-admin/determine-clients-connected-encrypted-task.html"
+    - title: ONTAP SMB 암호화 통계를 모니터링합니다
+      url: "/smb-admin/monitor-encryption-statistics-task.html"
+  - title: 보안 LDAP 세션 통신
+    entries:
+    - title: ONTAP SMB LDAP 서명 및 봉인에 대해 자세히 알아보십시오
+      url: "/smb-admin/ldap-signing-sealing-concepts-concept.html"
+    - title: ONTAP SMB 서버에서 LDAP 서명 및 봉인을 활성화합니다
+      url: "/smb-admin/enable-ldap-signing-sealing-task.html"
+    - title: TLS를 통해 LDAP를 구성합니다
+      url: "/smb-admin/configure-ldap-tls.html"
 - title: SMB를 사용하여 파일 액세스를 설정합니다
   entries:
   - title: 보안 스타일을 구성합니다
     entries:
-    - title: 보안 스타일이 데이터 액세스에 미치는 영향
-      entries:
-      - title: SMB 보안 스타일과 그 영향에 대해 알아보십시오
-        url: "/smb-admin/security-styles-their-effects-concept.html"
-      - title: SMB 보안 스타일을 설정할 위치 및 시기에 대해 알아보십시오
-        url: "/smb-admin/set-security-styles-concept.html"
-      - title: SVM에서 사용할 SMB 보안 유형을 결정합니다
-        url: "/smb-admin/decide-security-style-svm-flexvol-concept.html"
-      - title: SMB 보안 스타일 상속에 대해 알아보십시오
-        url: "/smb-admin/security-style-inheritance-concept.html"
-      - title: SMB FlexVol 볼륨에 대한 UNIX 사용 권한을 유지하는 방법에 대해 알아봅니다
-        url: "/smb-admin/how-ontap-preserves-unix-permissions-concept.html"
-      - title: SMB SVM의 Windows 보안 탭을 사용하여 UNIX 권한을 관리합니다
-        url: "/smb-admin/unix-permissions-windows-security-tab-concept.html"
+    - title: SMB 보안 스타일에 대해 알아보십시오
+      url: "/smb-admin/security-styles-their-effects-concept.html"
     - title: SVM 루트 볼륨에 SMB 보안 형식을 구성합니다
       url: "/smb-admin/configure-security-styles-svm-root-volumes-task.html"
     - title: FlexVol 볼륨에 SMB 보안 스타일을 구성합니다
@@ -292,12 +274,8 @@ entries:
       url: "/smb-admin/share-naming-requirements-concept.html"
     - title: 멀티 프로토콜 환경에서 공유를 생성할 때 SMB 디렉토리 대/소문자 구분 요구 사항에 대해 알아보십시오
       url: "/smb-admin/directory-case-sensitivity-share-multiprotocol-concept.html"
-    - title: SMB 공유 속성을 사용합니다
-      entries:
-      - title: SMB 공유 속성 사용에 대해 자세히 알아봅니다
-        url: "/smb-admin/share-properties-concept.html"
-      - title: 기존 SMB 공유에서 공유 속성을 추가하거나 제거합니다
-        url: "/smb-admin/add-remove-share-properties-existing-share-task.html"
+    - title: 기존 SMB 공유에서 공유 속성을 추가하거나 제거합니다
+      url: "/smb-admin/add-remove-share-properties-existing-share-task.html"
     - title: force-group 공유 설정을 사용하여 SMB 사용자 액세스를 최적화합니다
       url: "/smb-admin/optimize-user-access-force-group-share-concept.html"
     - title: 강제 그룹 공유 설정을 사용하여 SMB 공유를 생성합니다
@@ -372,30 +350,18 @@ entries:
   entries:
   - title: 로컬 사용자 및 그룹을 인증 및 인증에 사용합니다
     entries:
-    - title: ONTAP에서 로컬 사용자 및 그룹을 사용하는 방법
-      entries:
-      - title: 로컬 사용자 및 그룹 개념
-        url: "/smb-admin/local-users-groups-concepts-concept.html"
-      - title: 로컬 사용자 및 로컬 그룹을 만드는 이유
-        url: "/smb-admin/reasons-creating-local-users-groups-concept.html"
-      - title: 로컬 사용자 인증의 작동 방식
-        url: "/smb-admin/local-user-authentication-concept.html"
-      - title: 사용자 액세스 토큰을 구성하는 방법입니다
-        url: "/smb-admin/user-access-tokens-are-constructed-concept.html"
-      - title: 로컬 그룹이 포함된 SVM에서 SnapMirror 사용 지침
-        url: "/smb-admin/snapmirror-svms-local-groups-concept.html"
-      - title: CIFS 서버를 삭제할 때 로컬 사용자 및 그룹이 어떻게 됩니까
-        url: "/smb-admin/local-users-groups-when-deleting-servers-concept.html"
-      - title: 로컬 사용자 및 그룹과 함께 Microsoft Management Console을 사용하는 방법
-        url: "/smb-admin/microsoft-management-console-local-users-groups-concept.html"
-      - title: 되돌리기 지침
-        url: "/smb-admin/guidelines-reverting-local-users-groups-concept.html"
-    - title: 어떤 로컬 권한이 있는지 확인합니다
-      entries:
-      - title: 지원되는 권한 목록입니다
-        url: "/smb-admin/list-supported-privileges-reference.html"
-      - title: 권한을 할당합니다
-        url: "/smb-admin/assign-privileges-concept.html"
+    - title: 로컬 사용자 및 그룹 개념
+      url: "/smb-admin/local-users-groups-concepts-concept.html"
+    - title: 로컬 사용자 인증의 작동 방식
+      url: "/smb-admin/local-user-authentication-concept.html"
+    - title: CIFS 서버를 삭제할 때 로컬 사용자 및 그룹이 어떻게 됩니까
+      url: "/smb-admin/local-users-groups-when-deleting-servers-concept.html"
+    - title: 로컬 사용자 및 그룹과 함께 Microsoft Management Console을 사용하는 방법
+      url: "/smb-admin/microsoft-management-console-local-users-groups-concept.html"
+    - title: 로컬 그룹이 포함된 SVM에서 SnapMirror 사용 지침
+      url: "/smb-admin/snapmirror-svms-local-groups-concept.html"
+    - title: SMB 권한에 대해 알아보십시오
+      url: "/smb-admin/assign-privileges-concept.html"
     - title: BUILTIN 그룹 및 로컬 관리자 계정 사용에 대한 지침
       url: "/smb-admin/builtin-groups-local-administrator-account-concept.html"
     - title: 로컬 사용자 암호 요구 사항
@@ -403,51 +369,13 @@ entries:
     - title: 사전 정의된 BUILTIN 그룹 및 기본 권한
       url: "/smb-admin/builtin-groups-default-privileges-reference.html"
     - title: 로컬 사용자 및 그룹 기능을 설정하거나 해제합니다
-      entries:
-      - title: 개요
-        url: "/smb-admin/enable-disable-local-users-groups-concept.html"
-      - title: 로컬 사용자 및 그룹을 설정하거나 해제합니다
-        url: "/smb-admin/enable-disable-local-users-groups-task.html"
-      - title: 로컬 사용자 인증을 사용하거나 사용하지 않도록 설정합니다
-        url: "/smb-admin/enable-disable-local-user-authentication-task.html"
+      url: "/smb-admin/enable-disable-local-users-groups-authentication.html"
     - title: 로컬 사용자 계정을 관리합니다
-      entries:
-      - title: 로컬 사용자 계정을 수정합니다
-        url: "/smb-admin/modify-local-user-accounts-reference.html"
-      - title: 로컬 사용자 계정을 설정하거나 해제합니다
-        url: "/smb-admin/enable-disable-local-user-accounts-task.html"
-      - title: 로컬 사용자 계정 암호를 변경합니다
-        url: "/smb-admin/change-local-user-account-passwords-task.html"
-      - title: 로컬 사용자에 대한 정보를 표시합니다
-        url: "/smb-admin/display-local-users-task.html"
-      - title: 로컬 사용자의 그룹 구성원 자격에 대한 정보를 표시합니다
-        url: "/smb-admin/display-group-memberships-local-users-task.html"
-      - title: 로컬 사용자 계정을 삭제합니다
-        url: "/smb-admin/delete-local-user-accounts-task.html"
+      url: "/smb-admin/manage-local-user-accounts.html"
     - title: 로컬 그룹을 관리합니다
-      entries:
-      - title: 로컬 그룹을 수정합니다
-        url: "/smb-admin/modify-local-groups-reference.html"
-      - title: 로컬 그룹에 대한 정보를 표시합니다
-        url: "/smb-admin/display-local-groups-task.html"
-      - title: 로컬 그룹 구성원 자격을 관리합니다
-        url: "/smb-admin/manage-local-group-membership-task.html"
-      - title: 로컬 그룹 구성원에 대한 정보를 표시합니다
-        url: "/smb-admin/display-members-local-groups-task.html"
-      - title: 로컬 그룹을 삭제합니다
-        url: "/smb-admin/delete-local-group-task.html"
-      - title: 로컬 데이터베이스에서 도메인 사용자 및 그룹 이름을 업데이트합니다
-        url: "/smb-admin/update-domain-user-group-names-local-databases-task.html"
+      url: "/smb-admin/manage-local-groups.html"
     - title: 로컬 권한을 관리합니다
-      entries:
-      - title: SMB 로컬 또는 도메인 사용자나 그룹에 권한 추가
-        url: "/smb-admin/add-privileges-local-domain-users-groups-task.html"
-      - title: SMB 로컬 또는 도메인 사용자나 그룹의 권한 제거
-        url: "/smb-admin/remove-privileges-local-domain-users-groups-task.html"
-      - title: SMB 로컬 또는 도메인 사용자 및 그룹에 대한 권한 재설정
-        url: "/smb-admin/reset-privileges-local-domain-users-groups-task.html"
-      - title: SMB 권한 재정의에 대한 정보 표시
-        url: "/smb-admin/display-privilege-overrides-task.html"
+      url: "/smb-admin/manage-local-privileges.html"
   - title: 우회 통과 검사를 구성합니다
     entries:
     - title: SMB 바이패스 트래버스 검사 구성에 대해 알아보세요
@@ -484,62 +412,46 @@ entries:
       url: "/smb-admin/security-descriptors-apply-file-folder-security-concept.html"
     - title: SVM 재해 복구 대상에서 로컬 SMB 사용자 또는 그룹을 사용하는 파일 디렉터리 정책을 적용하는 방법에 대해 알아보세요.
       url: "/smb-admin/file-directory-policies-local-users-groups-concept.html"
-    - title: CLI를 사용하여 NTFS 파일 및 폴더에 파일 보안을 구성하고 적용합니다
-      entries:
-      - title: SMB 서버에 NTFS 보안 설명자 만들기
-        url: "/smb-admin/create-ntfs-security-descriptor-file-task.html"
-      - title: SMB 서버의 NTFS 보안 설명자에 NTFS DACL 액세스 제어 항목 추가
-        url: "/smb-admin/add-ntfs-dacl-entries-security-descriptor-task.html"
-      - title: SMB 보안 정책 만들기
-        url: "/smb-admin/create-security-policies-file-task.html"
-      - title: 보안 정책에 작업을 추가합니다
-        url: "/smb-admin/add-task-security-policy-file-task.html"
-      - title: 보안 정책을 적용합니다
-        url: "/smb-admin/apply-security-policies-file-task.html"
-      - title: SMB 보안 정책 작업 모니터링
-        url: "/smb-admin/monitor-security-policy-job-task.html"
-      - title: SMB 파일 보안 확인
-        url: "/smb-admin/verify-applied-file-security-task.html"
-    - title: CLI를 사용하여 NTFS 파일 및 폴더에 감사 정책을 구성하고 적용합니다
-      entries:
-      - title: NTFS 파일 및 폴더에 SMB 감사 정책을 구성하고 적용하는 명령
-        url: "/smb-admin/configure-apply-audit-policies-ntfs-files-folders-task.html"
-      - title: SMB 서버에 NTFS 보안 설명자 만들기
-        url: "/smb-admin/create-ntfs-security-descriptor-audit-task.html"
-      - title: SMB 서버의 NTFS 보안 설명자에 NTFS SACL 액세스 제어 항목 추가
-        url: "/smb-admin/add-ntfs-sacl-entries-security-descriptor-task.html"
-      - title: SMB 보안 정책 만들기
-        url: "/smb-admin/create-security-policies-audit-task.html"
-      - title: SMB 보안 정책에 작업 추가
-        url: "/smb-admin/add-task-security-policy-audit-task.html"
-      - title: SMB 보안 정책 적용
-        url: "/smb-admin/apply-security-policies-audit-task.html"
-      - title: SMB 보안 정책 작업 모니터링
-        url: "/smb-admin/monitor-security-policy-job-task.html"
-      - title: SMB 감사 정책 확인
-        url: "/smb-admin/verify-applied-audit-policy-task.html"
-    - title: SMB 보안 정책 작업 관리에 대해 알아보세요
-      url: "/smb-admin/manage-security-policy-jobs-concept.html"
-    - title: SMB 서버에서 NTFS 보안 설명자를 관리하기 위한 명령
-      url: "/smb-admin/commands-manage-ntfs-security-descriptors-reference.html"
-    - title: SMB 서버에서 NTFS DACL 액세스 제어 항목을 관리하기 위한 명령
-      url: "/smb-admin/commands-manage-ntfs-dacl-reference.html"
-    - title: SMB 서버에서 NTFS SACL 액세스 제어 항목을 관리하기 위한 명령
-      url: "/smb-admin/commands-manage-ntfs-sacl-reference.html"
-    - title: SMB 보안 정책을 관리하기 위한 명령
-      url: "/smb-admin/commands-manage-security-policies-reference.html"
-    - title: SMB 보안 정책 작업 관리를 위한 명령
-      url: "/smb-admin/commands-manage-security-policy-tasks-reference.html"
-    - title: SMB 보안 정책 작업 관리를 위한 명령
-      url: "/smb-admin/commands-manage-security-policy-jobs-reference.html"
-  - title: SMB 공유에 대한 메타데이터 캐시를 구성합니다
+  - title: CLI를 사용하여 NTFS 파일 및 폴더에 파일 보안을 구성하고 적용합니다
     entries:
-    - title: SMB 메타데이터 캐싱에 대해 알아보세요
-      url: "/smb-admin/metadata-caching-concept.html"
-    - title: SMB 메타데이터 캐시를 설정합니다
-      url: "/smb-admin/enable-metadata-cache-task.html"
-    - title: SMB 메타데이터 캐시 항목의 수명을 구성합니다
-      url: "/smb-admin/configure-lifetime-metadata-cache-entries-task.html"
+    - title: SMB 서버에 NTFS 보안 설명자 만들기
+      url: "/smb-admin/create-ntfs-security-descriptor-file-task.html"
+    - title: SMB 서버의 NTFS 보안 설명자에 NTFS DACL 액세스 제어 항목 추가
+      url: "/smb-admin/add-ntfs-dacl-entries-security-descriptor-task.html"
+    - title: SMB 보안 정책 만들기
+      url: "/smb-admin/create-security-policies-file-task.html"
+    - title: 보안 정책에 작업을 추가합니다
+      url: "/smb-admin/add-task-security-policy-file-task.html"
+    - title: 보안 정책을 적용합니다
+      url: "/smb-admin/apply-security-policies-file-task.html"
+    - title: SMB 보안 정책 작업 모니터링
+      url: "/smb-admin/monitor-security-policy-job-task.html"
+    - title: SMB 파일 보안 확인
+      url: "/smb-admin/verify-applied-file-security-task.html"
+  - title: CLI를 사용하여 NTFS 파일 및 폴더에 감사 정책을 구성하고 적용합니다
+    entries:
+    - title: NTFS 파일 및 폴더에 SMB 감사 정책을 구성하고 적용하는 명령
+      url: "/smb-admin/configure-apply-audit-policies-ntfs-files-folders-task.html"
+    - title: SMB 서버에 NTFS 보안 설명자 만들기
+      url: "/smb-admin/create-ntfs-security-descriptor-audit-task.html"
+    - title: SMB 서버의 NTFS 보안 설명자에 NTFS SACL 액세스 제어 항목 추가
+      url: "/smb-admin/add-ntfs-sacl-entries-security-descriptor-task.html"
+    - title: SMB 보안 정책 만들기
+      url: "/smb-admin/create-security-policies-audit-task.html"
+    - title: SMB 보안 정책에 작업 추가
+      url: "/smb-admin/add-task-security-policy-audit-task.html"
+    - title: SMB 보안 정책 적용
+      url: "/smb-admin/apply-security-policies-audit-task.html"
+    - title: SMB 보안 정책 작업 모니터링
+      url: "/smb-admin/monitor-security-policy-job-task.html"
+    - title: SMB 감사 정책 확인
+      url: "/smb-admin/verify-applied-audit-policy-task.html"
+  - title: SMB 보안 정책 작업 관리에 대해 알아보세요
+    url: "/smb-admin/manage-security-policy-jobs-concept.html"
+  - title: SMB 서버에서 NTFS 보안 설명자를 관리하기 위한 명령
+    url: "/smb-admin/commands-manage-ntfs-smb.html"
+  - title: SMB 공유에 대한 메타데이터 캐시를 구성합니다
+    url: "/smb-admin/configure-metadata-cache-smb.html"
   - title: 파일 잠금 관리
     entries:
     - title: 프로토콜 간 SMB 파일 잠금에 대해 알아보세요
@@ -614,14 +526,12 @@ entries:
     entries:
     - title: SMB 서버에서 동적 홈 디렉토리를 활성화하는 방법에 대해 알아보세요.
       url: "/smb-admin/dynamic-home-directories-concept.html"
-    - title: 홈 디렉토리 공유
-      entries:
-      - title: SMB 홈 디렉토리 공유 추가
-        url: "/smb-admin/add-home-directory-share-task.html"
-      - title: 홈 디렉토리 공유에 대한 고유한 SMB 사용자 이름 요구 사항에 대해 알아보세요.
-        url: "/smb-admin/home-directory-shares-unique-user-names-concept.html"
-      - title: 업그레이드 후 정적 SMB 홈 디렉토리 공유 이름에 어떤 일이 발생하는지 알아보세요.
-        url: "/smb-admin/static-home-directory-share-names-upgrading-concept.html"
+    - title: SMB 홈 디렉토리 공유 추가
+      url: "/smb-admin/add-home-directory-share-task.html"
+    - title: 홈 디렉토리 공유에 대한 고유한 SMB 사용자 이름 요구 사항에 대해 알아보세요.
+      url: "/smb-admin/home-directory-shares-unique-user-names-concept.html"
+    - title: 업그레이드 후 정적 SMB 홈 디렉토리 공유 이름에 어떤 일이 발생하는지 알아보세요.
+      url: "/smb-admin/static-home-directory-share-names-upgrading-concept.html"
     - title: SMB 홈 디렉토리 검색 경로 추가
       url: "/smb-admin/add-home-directory-search-path-task.html"
     - title: "%w 및 %d 변수를 사용하여 SMB 홈 디렉토리 구성을 만듭니다."
@@ -652,80 +562,56 @@ entries:
       url: "/smb-admin/commands-manage-symbolic-link-mappings-reference.html"
     - title: SMB 서버의 Windows 백업 애플리케이션 및 Unix 스타일 심볼릭 링크
       url: "/smb-admin/windows-backup-symlinks.html"
-  - title: BranchCache를 사용하여 지사에 SMB 공유 콘텐츠를 캐싱합니다
+  - title: BranchCache에 대해 알아보십시오
     entries:
-    - title: 지점 사무실에서 SMB 공유 콘텐츠를 캐시하기 위해 BranchCache를 사용하는 방법에 대해 알아보세요.
+    - title: 지사에서 BranchCache를 사용하여 SMB 공유 콘텐츠 캐싱
       url: "/smb-admin/branchcache-cache-share-content-branch-office-concept.html"
-    - title: 요구사항 및 지침
-      entries:
-      - title: SMB BranchCache 버전 지원에 대해 알아보세요
-        url: "/smb-admin/branchcache-version-support-concept.html"
-      - title: SMB 네트워크 프로토콜 지원 요구 사항에 대해 알아보세요
-        url: "/smb-admin/network-protocol-support-requirements-concept.html"
-      - title: SMB 및 Windows 호스트 버전 요구 사항에 대해 알아보세요
-        url: "/smb-admin/windows-hosts-version-requirements-concept.html"
-      - title: SMB가 BranchCache 해시를 무효화하는 이유에 대해 알아보세요.
-        url: "/smb-admin/reasons-invalidates-branchcache-hashes-concept.html"
-      - title: SMB 해시 저장소 위치 선택에 대해 알아보세요
-        url: "/smb-admin/choosing-hash-store-location-concept.html"
-      - title: SMB BranchCache 권장 사항에 대해 알아보세요
-        url: "/smb-admin/branchcache-recommendations-concept.html"
-    - title: BranchCache를 구성합니다
-      entries:
-      - title: SMB BranchCache 구성에 대해 알아보세요
-        url: "/smb-admin/configure-branchcache-concept.html"
-      - title: SMB BranchCache 구성을 위한 요구 사항
-        url: "/smb-admin/requirements-configuring-branchcache-concept.html"
-      - title: SMB 서버에서 BranchCache 구성
-        url: "/smb-admin/configure-branchcache-task.html"
-      - title: SMB의 원격 사무실에서 BranchCache를 구성하는 방법에 대해 알아보세요.
-        url: "/smb-admin/configure-branchcache-remote-office-concept.html"
-    - title: BranchCache 지원 SMB 공유를 구성합니다
-      entries:
-      - title: BranchCache 지원 SMB 공유 구성에 대해 알아보세요
-        url: "/smb-admin/configure-branchcache-enabled-shares-concept.html"
-      - title: BranchCache 지원 SMB 공유 만들기
-        url: "/smb-admin/create-branchcache-enabled-share-task.html"
-      - title: 기존 SMB 공유에서 BranchCache 활성화
-        url: "/smb-admin/enable-branchcache-existing-share-task.html"
-    - title: BranchCache 구성을 관리하고 모니터링합니다
-      entries:
-      - title: SMB 공유에서 BranchCache 구성 수정
-        url: "/smb-admin/modify-branchcache-config-task.html"
-      - title: SMB 공유에서 BranchCache 구성에 대한 정보 표시
-        url: "/smb-admin/display-branchcache-config-task.html"
-      - title: SMB BranchCache 서버 키 변경
-        url: "/smb-admin/change-branchcache-server-key-task.html"
-      - title: 지정된 SMB 경로에서 BranchCache 해시를 미리 계산합니다.
-        url: "/smb-admin/precompute-branchcache-hashes-specified-paths-task.html"
-      - title: SMB SVM BranchCache 해시 저장소에서 해시 플러시
-        url: "/smb-admin/flush-hashes-svm-branchcache-task.html"
-      - title: SMB BranchCache 통계 표시
-        url: "/smb-admin/display-branchcache-statistics-task.html"
-      - title: BranchCache 그룹 정책 개체에 대한 SMB 지원에 대해 알아보세요.
-        url: "/smb-admin/support-branchcache-group-policy-objects-concept.html"
-      - title: SMB BranchCache 그룹 정책 개체에 대한 정보 표시
-        url: "/smb-admin/display-branchcache-group-policy-objects-task.html"
-    - title: SMB 공유에서 BranchCache를 해제합니다
-      entries:
-      - title: SMB 공유에서 BranchCache 비활성화에 대해 알아보세요
-        url: "/smb-admin/disable-branchcache-shares-concept.html"
-      - title: 단일 SMB 공유에서 BranchCache를 비활성화합니다
-        url: "/smb-admin/disable-branchcache-single-share-task.html"
-      - title: 모든 SMB 공유에서 자동 캐싱을 중지합니다
-        url: "/smb-admin/stop-automatic-caching-all-shares-task.html"
-    - title: SVM에서 BranchCache를 비활성화하거나 활성화합니다
-      entries:
-      - title: SMB 서버에서 BranchCache를 비활성화하거나 다시 활성화하면 어떤 일이 발생하는지 알아보세요.
-        url: "/smb-admin/disable-reenable-branchcache-server-concept.html"
-      - title: SMB 공유에서 BranchCache 비활성화 또는 활성화
-        url: "/smb-admin/disable-enable-branchcache-task.html"
-    - title: SVM에서 BranchCache 구성을 삭제합니다
-      entries:
-      - title: SMB 공유에서 BranchCache 구성을 삭제하면 어떤 일이 발생하는지 알아보세요.
-        url: "/smb-admin/delete-branchcache-config-concept.html"
-      - title: SMB 공유에서 BranchCache 구성을 삭제합니다.
-        url: "/smb-admin/delete-branchcache-config-task.html"
+    - title: SMB BranchCache 버전 지원
+      url: "/smb-admin/branchcache-version-support-concept.html"
+    - title: SMB 네트워크 프로토콜 지원 요구 사항
+      url: "/smb-admin/network-protocol-support-requirements-concept.html"
+    - title: SMB 및 Windows 호스트 버전 요구 사항
+      url: "/smb-admin/windows-hosts-version-requirements-concept.html"
+    - title: SMB가 BranchCache 해시를 무효화하는 이유
+      url: "/smb-admin/reasons-invalidates-branchcache-hashes-concept.html"
+    - title: SMB 해시 저장소 위치 선택
+      url: "/smb-admin/choosing-hash-store-location-concept.html"
+    - title: SMB BranchCache 권장 사항
+      url: "/smb-admin/branchcache-recommendations-concept.html"
+  - title: SMB 서버에서 BranchCache 구성
+    url: "/smb-admin/configure-branchcache-task.html"
+  - title: BranchCache 활성화 및 비활성화
+    entries:
+    - title: BranchCache 지원 SMB 공유 활성화에 대해 알아보십시오
+      url: "/smb-admin/configure-branchcache-enabled-shares-concept.html"
+    - title: 새 SMB 공유에서 BranchCache를 활성화합니다
+      url: "/smb-admin/create-branchcache-enabled-share-task.html"
+    - title: 기존 SMB 공유에서 BranchCache 활성화
+      url: "/smb-admin/enable-branchcache-existing-share-task.html"
+    - title: 단일 SMB 공유에서 BranchCache를 비활성화합니다
+      url: "/smb-admin/disable-branchcache-single-share-task.html"
+    - title: SVM에서 BranchCache를 비활성화 또는 활성화합니다
+      url: "/smb-admin/disable-enable-branchcache-task.html"
+    - title: SVM에서 BranchCache 삭제
+      url: "/smb-admin/delete-branchcache-config-task.html"
+  - title: BranchCache 구성을 관리하고 모니터링합니다
+    entries:
+    - title: SMB 공유에서 BranchCache 구성 수정
+      url: "/smb-admin/modify-branchcache-config-task.html"
+    - title: SMB 공유에서 BranchCache 구성에 대한 정보 표시
+      url: "/smb-admin/display-branchcache-config-task.html"
+    - title: SMB BranchCache 서버 키 변경
+      url: "/smb-admin/change-branchcache-server-key-task.html"
+    - title: 지정된 SMB 경로에서 BranchCache 해시를 미리 계산합니다.
+      url: "/smb-admin/precompute-branchcache-hashes-specified-paths-task.html"
+    - title: SMB SVM BranchCache 해시 저장소에서 해시 플러시
+      url: "/smb-admin/flush-hashes-svm-branchcache-task.html"
+    - title: SMB BranchCache 통계 표시
+      url: "/smb-admin/display-branchcache-statistics-task.html"
+    - title: BranchCache 그룹 정책 개체에 대한 SMB 지원에 대해 알아보세요.
+      url: "/smb-admin/support-branchcache-group-policy-objects-concept.html"
+    - title: SMB BranchCache 그룹 정책 개체에 대한 정보 표시
+      url: "/smb-admin/display-branchcache-group-policy-objects-task.html"
     - title: SMB BranchCache를 되돌릴 때 어떤 일이 발생하는지 알아보세요.
       url: "/smb-admin/branchcache-when-reverting-concept.html"
   - title: Microsoft 원격 복제 성능 향상
