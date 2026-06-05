@@ -11,7 +11,9 @@ summary: NVMe 프로토콜을 사용하는 시스템의 경우 하나 이상의 
 
 
 [role="lead"]
-다음 단계를 사용하여 기존 스토리지 VM에서 NVMe 지원 호스트에 대한 네임스페이스를 생성하고 스토리지를 프로비저닝할 수 있습니다.
+스토리지를 프로비저닝하면 NVMe 호스트가 ONTAP 스토리지 시스템에서 데이터를 읽고 쓸 수 있게 됩니다. NVMe 프로토콜을 사용하는 시스템의 경우 하나 이상의 NVMe 네임스페이스와 서브시스템을 생성해야 합니다. 각 네임스페이스는 호스트에서 데이터 액세스를 허용하도록 NVMe 서브시스템에 매핑할 수 있습니다.
+
+NVMe 서브시스템을 포함하는 스토리지 가상 머신(SVM)에 NVMe/FC 및 NVMe/TCP 네트워크 인터페이스가 모두 있는 경우, NVMe 서브시스템에 매핑된 네임스페이스는 NVMe/FC 및 NVMe/TCP 전송 프로토콜을 통해 모두 액세스할 수 있습니다. FC에 대한 NVMe 지원은 ONTAP 9.4 이상에서 사용할 수 있습니다. TCP에 대한 NVMe 지원은 ONTAP 9.10.1 이상에서 사용할 수 있습니다. 네임스페이스에 대한 프로토콜별 액세스가 필요한 경우 각 프로토콜에 대해 link:configure-svm-nvme-task.html["SVM 구성"]해야 합니다.
 
 .이 작업에 대해
 이 절차는 FAS, AFF, ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 따르세요. link:https://docs.netapp.com/us-en/asa-r2/manage-data/provision-san-storage.html["수행할 수 있습니다"^] 저장소를 프로비저닝합니다. ASA R2 시스템은 SAN 전용 고객을 대상으로 단순화된 ONTAP 환경을 제공합니다.
