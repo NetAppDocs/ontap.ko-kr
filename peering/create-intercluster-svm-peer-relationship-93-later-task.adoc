@@ -39,7 +39,7 @@ cluster02            vs1,vs2               snapmirror
 ----
 . 데이터 보호 소스 클러스터에서 데이터 보호 대상 클러스터의 사전 승인된 SVM과 피어 관계를 생성합니다.
 +
-'vserver peer create-vserver_local_SVM_-peer-vserver_remote_SVM_'
+`vserver peer create -vserver _local_SVM_ -peer-cluster _peer_cluster_ -peer-vserver _remote_SVM_ -application _application_`
 
 +
 에 대한 자세한 내용은 `vserver peer create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-peer-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
@@ -50,7 +50,7 @@ cluster02            vs1,vs2               snapmirror
 +
 [listing]
 ----
-cluster01::> vserver peer create -vserver pvs1 -peer-vserver vs1
+cluster01::> vserver peer create -vserver pvs1 -peer-cluster cluster02 -peer-vserver vs1 -application snapmirror
 ----
 . SVM 피어 관계 확인:
 +
