@@ -122,7 +122,7 @@ SnapMirror Synchronous 구성에서 지원되는 최대 FlexVol 볼륨 크기가
 | 업데이트 | 설명 
 
 
-| xref:/san-admin/resize-lun-task.html[AFF 및 FAS 플랫폼의 최대 LUN 크기가 증가합니다] | ONTAP 9.12.1P2부터 AFF 및 FAS 플랫폼에서 지원되는 최대 LUN 크기가 16TB에서 128TB로 증가했습니다. 
+| xref:../san-admin/resize-lun-task.html[AFF 및 FAS 플랫폼의 최대 LUN 크기가 증가합니다] | ONTAP 9.12.1P2부터 AFF 및 FAS 플랫폼에서 지원되는 최대 LUN 크기가 16TB에서 128TB로 증가했습니다. 
 
 
 | link:https://hwu.netapp.com/["증가된 NVMe 제한"^]  a| 
