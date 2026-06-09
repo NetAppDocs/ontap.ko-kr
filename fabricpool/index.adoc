@@ -30,6 +30,3 @@ FabricPool는 AFF 시스템의 하이브리드 스토리지 솔루션으로, All
 ONTAP 9.7부터는 S3_호환 오브젝트 저장소 공급자를 선택하여 일반 S3 API를 지원하는 추가 오브젝트 저장소 공급자를 사용할 수 있습니다.
 
 ====
-.관련 정보
-* https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["NetApp 클라우드 계층화 설명서"^]
-
