@@ -65,9 +65,7 @@ ONTAP 9.10.1
 ARP는 클러스터, SVM 및 볼륨 수준에서 유연한 활성화 옵션을 제공하므로 새 볼륨에 대해 자동 기본 활성화를 구성하거나 필요에 따라 기존 볼륨에서 ARP를 수동으로 활성화할 수 있습니다.
 
 .새 볼륨에서 자동 기본 활성화
-ONTAP 9.18.1부터 AFF A 시리즈 및 AFF C 시리즈, ASA 및 ASA r2 시스템의 모든 새 볼륨에서 ARP가 기본적으로 자동으로 활성화됩니다. 이 자동 기본 ARP 활성화는 link:use-cases-restrictions-concept.html#unsupported-configurations["지원되지 않는 볼륨 또는 구성"]에는 적용되지 않습니다.
-
-새 볼륨에 대한 ARP 기본 활성화는 업그레이드 후 12시간의 유예 기간이 지난 후에 적용되거나, ONTAP 9.18.1을 새로 설치하는 경우에는 ARP 라이센스가 설치되어 있으면 즉시 적용됩니다. 기존 볼륨에는 <<manual-default-enablement,ARP를 수동으로 활성화합니다>>해야 합니다.
+ONTAP 9.18.1부터 AFF A 시리즈 및 AFF C 시리즈, ASA 및 ASA r2 시스템의 모든 새 볼륨에서 ARP가 기본적으로 자동으로 활성화됩니다. 이 자동 기본 ARP 활성화는 link:use-cases-restrictions-concept.html#unsupported-configurations["지원되지 않는 볼륨 또는 구성"]에는 적용되지 않습니다. 기존 볼륨에서는 <<manual-default-enablement,ARP를 수동으로 활성화합니다>>해야 합니다. 업그레이드 시 기본 활성화가 적용되는 방법에 대한 자세한 내용은 link:use-cases-restrictions-concept.html#arp-upgrade-considerations["ARP 버전별 업그레이드 고려 사항"]를 참조하십시오.
 
 유예 기간 동안 link:default-enable-change.html["시스템 관리자 또는 ONTAP CLI를 사용하여 클러스터 수준에서 새 볼륨에 대한 기본 활성화를 해제할 수 있습니다."]. 옵트아웃하지 않으면 유예 기간이 끝난 후 생성된 모든 새 볼륨에 대해 ARP가 자동으로 활성화됩니다. 유예 기간 후에 필요 사항이 변경되면 언제든지 기본 활성화 기능을 켜거나 끌 수 있습니다.
 
