@@ -56,6 +56,8 @@ indexpage:
       url: "/../consistency-groups/modify-task.html"
     - title: SnapMirror 활성 동기화
       url: "/../snapmirror-active-sync/index.html"
+    - title: NetApp TechCommTV에서 SnapMirror 활성 동기화
+      url: https://www.youtube.com/watch?v=0yEvQPyNCF8
   - title: SnapMirror 클라우드
     links:
     - title: SnapMirror 클라우드 라이센스

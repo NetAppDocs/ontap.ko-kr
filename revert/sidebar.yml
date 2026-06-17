@@ -36,6 +36,8 @@ entries:
       url: "/revert/arp-warning-clear-revert.html"
   - title: ONTAP 9.19.1
     entries:
+    - title: 액티브-액티브 SVM
+      url: "/revert/delete-active-active-svms.html"
     - title: QoS 정책 그룹
       url: "/revert/modify-qos-policy-groups.html"
     - title: 두 번째 S3 액세스 키

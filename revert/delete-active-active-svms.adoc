@@ -1,0 +1,38 @@
+---
+permalink: revert/delete-active-active-svms.html 
+sidebar: sidebar 
+keywords: delete, active-active, SVMs, storage virtual machines, revert 
+summary: 클라이언트 연결에 대해 트렁킹을 사용하도록 설정하고 ONTAP 9.12.1로 이전 릴리즈를 되돌리는 경우 되돌리기 전에 모든 NFSv4.1 서버에서 트렁킹을 해제해야 합니다. 
+---
+= ONTAP 9.19.1에서 되돌리기 전에 액티브-액티브 SVM을 삭제하십시오.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.18.1 이하 버전에서는 SAN 액티브-액티브 다중 경로가 지원되지 않습니다. ONTAP 9.19.1에서 이전 버전으로 되돌리기 전에 액티브-액티브 구성으로 설정된 스토리지 가상 머신(SVM)을 모두 삭제해야 합니다.
+
+.단계
+. SAN 다중 경로 옵션이 active-active 또는 active-active-scsi-only로 구성된 SVM을 식별하십시오.
++
+[source, cli]
+----
+vserver show
+----
+. 액티브-액티브 또는 액티브-액티브-SCSI 전용 다중 경로로 구성된 SVM을 모두 삭제하십시오.
++
+[source, cli]
+----
+vserver delete -vserver <SVM>
+----
+. SVM이 삭제되었는지 확인하십시오.
++
+[source, cli]
+----
+vserver show
+----
+
+
+.관련 정보
+자세한 내용은 ONTAP 9.19.1 이상 버전의 link:../san-admin/multipath-automatic-lif-failover-support.html["SAN 액티브-액티브 다중 경로 지원"]을 참조하십시오.

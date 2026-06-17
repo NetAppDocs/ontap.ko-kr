@@ -146,4 +146,4 @@ file1  file2
 --
 ====
 .관련 정보
-https://www.netapp.com/pdf.html?item=/media/12385-tr4571pdf.pdf["NetApp 기술 보고서 4571: NetApp FlexGroup 모범 사례 및 구현 가이드"^]
+https://www.netapp.com/pdf.html?item=/media/12385-tr4571.pdf["NetApp 기술 보고서 4571: NetApp FlexGroup 모범 사례 및 구현 가이드"^]

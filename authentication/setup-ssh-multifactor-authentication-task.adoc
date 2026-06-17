@@ -152,6 +152,6 @@ link:configure-local-account-mfa-totp-task.html["TOTP로 MFA에 대한 로컬 �
 
 
 .관련 정보
-* link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647pdf.pdf["ONTAP 9의 다단계 인증(TR-4647)"^]
+* link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647.pdf["ONTAP 9의 다단계 인증(TR-4647)"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
 
