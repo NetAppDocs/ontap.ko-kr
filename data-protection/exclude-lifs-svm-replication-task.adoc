@@ -159,6 +159,7 @@ cluster_dst::> snapmirror initialize -source-path svm1: -destination-path svm_ba
 재해가 발생할 경우 데이터 액세스를 위해 대상 SVM에서 네트워크 및 프로토콜을 구성해야 합니다.
 
 .관련 정보
+* link:convert-exclude-svm-replication-task.html["ONTAP SnapMirror SVM 복제 관계에 SVM 구성 정보를 포함하도록 변환합니다"]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-create.html["SnapMirror 생성"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-initialize.html["SnapMirror 초기화"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-policy-create.html["스냅미러 정책 생성"^]

@@ -1,0 +1,40 @@
+---
+permalink: data-protection/convert-exclude-svm-replication-task.html 
+sidebar: sidebar 
+keywords: exclude, network, name service, other settings, svm replication, disaster recovery, convert 
+summary: 'SVM 구성 정보를 복제 과정에서 제외하는 SVM DR 관계를 구성 정보를 복제하는 관계로 변환하려면  `-identity-preserve true` 매개변수를 사용하십시오.' 
+---
+= ONTAP SnapMirror SVM 복제 관계에 SVM 구성 정보를 포함하도록 변환합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SVM 구성 정보를 복제 과정에서 제외하는 SVM DR 관계를 구성 정보를 복제하는 관계로 변환하려면  `-identity-preserve true` 매개변수를 사용하십시오.
+
+.시작하기 전에
+SnapMirror 전송이 진행 중인 경우, 전송이 완료될 때까지 기다리거나 전송을 중단하십시오.
+
+.단계
+. 타겟 클러스터에서 관계를 중지합니다.
++
+`snapmirror quiesce -destination-path <destination_svm>`:
+
+. 관계 상태가 정지되면 타겟 클러스터에서 해당 관계를 삭제합니다.
++
+`snapmirror delete -destination-path <destination_svm>`:
+
+. 소스 클러스터에서 SnapMirror 스냅샷 정보를 삭제하지 않고 관계를 해제합니다.
++
+`snapmirror release -destination-path <destination_svm>: -relationship-info-only true`
+
+. 대상 시스템에서 다음 명령어를 사용하여 복제 관계를 다시 생성합니다. `-identity-preserve true`
++
+`snapmirror create -source-path <source_svm>: -destination-path <destination_svm>: -policy <policy> -schedule <schedule> -identity-preserve true`
+
+. 대상 클러스터에서 SnapMirror 관계를 다시 동기화합니다.
++
+`snapmirror resync -destination-path <destination_svm>:`
+
+

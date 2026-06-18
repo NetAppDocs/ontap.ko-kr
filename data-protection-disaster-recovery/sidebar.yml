@@ -162,6 +162,8 @@ entries:
       url: "/data-protection/exclude-lifs-svm-replication-task.html"
     - title: SnapMirror SVM 복제에서 네트워크, 네임 서비스 및 기타 설정을 제외합니다
       url: "/data-protection/exclude-network-name-service-svm-replication-task.html"
+    - title: ONTAP SnapMirror SVM 복제 관계에 SVM 구성 정보를 포함하도록 변환합니다
+      url: "/data-protection/convert-exclude-svm-replication-task.html"
     - title: SVM DR 관계에 사용할 로컬 계층 지정
       url: "/data-protection/specify-svmdr-vol-dest-aggr.html"
     - title: 'SMB만 해당: SMB 서버를 생성합니다'
