@@ -29,4 +29,4 @@ https://docs.netapp.com/us-en/active-iq/["NetApp 설명서: 디지털 어드바�
 
 https://aiq.netapp.com/custom-dashboard/search["Digital Advisor를 실행합니다"^]
 
-https://www.netapp.com/us/services/support-edge.aspx["SupportEdge 서비스"^]
+https://www.netapp.com/netapp-services/["AI 기반 SupportEdge를 통한 지원 서비스"^]

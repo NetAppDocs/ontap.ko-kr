@@ -29,6 +29,10 @@ ONTAP 9.17.1부터:
 
 NAS 및 SAN 볼륨의 엔트로피 급증에 대한 자세한 내용은 System Manager의 랜섬웨어 방지 페이지에서 확인할 수 있습니다.
 
+ARP는 탐지 및 스냅샷 생성을 자동화하지만, 파일이나 이벤트가 실제로 악성인지 여부를 최종적으로 판단하려면 수동 조사가 필요합니다. ARP는 이벤트가 실제 랜섬웨어 공격인지 여부를 확실하게 판단할 수 없습니다. ARP는 의심스러운 활동을 표시하지만, 해당 이벤트가 실제 랜섬웨어인지 아니면 오탐(양성 활동)인지 여부는 직접 조사하고 확인해야 합니다.
+
+link:determine-ransomware-tips.html["파일이나 이벤트가 실제로 악성인지 여부를 판단합니다."].
+
 ARP 경고 알림이 발행되면 다음 두 가지 방법 중 하나로 활동을 지정하여 응답합니다.
 
 * *긍정 오류*
@@ -288,6 +292,10 @@ security anti-ransomware volume attack generate-report -vserver vs0 -volume vol1
 ....
 Report "report_file_vs0_vol1_14-09-2021_01-21-08" available at path "vs0:vol1/"
 ....
++
+
+NOTE: 보고서 파일은 공격 중에 의심되는 모든 파일의 전체 목록이 아닙니다.
+
 .. 관리 클라이언트 시스템에서 보고서를 봅니다. 예를 들면 다음과 같습니다.
 +
 [listing]

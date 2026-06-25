@@ -322,6 +322,7 @@ ARP는 검증된 ONTAP 데이터 보호 및 재해 복구 기술을 기반으로
 공격에 대응하고 데이터를 복구하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 * link:respond-abnormal-task.html["비정상적인 활동에 응답합니다"]
+* link:determine-ransomware-tips.html["랜섬웨어 공격이 실제인지 확인합니다"]
 * link:recover-data-task.html["ARP 스냅샷에서 데이터 복구"]
 * link:../data-protection/restore-contents-volume-snapshot-task.html["ONTAP 스냅샷에서 복구"]
 * link:https://www.netapp.com/blog/smart-ransomware-recovery["스마트 랜섬웨어 복구"^]

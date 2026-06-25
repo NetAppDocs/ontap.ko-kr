@@ -15,30 +15,18 @@ summary: 전용 오프로드 프로세서 스토리지 효율성을 지원하지
 
 다음 시스템은 32k 압축을 지원합니다.
 
-[cols="2"]
-|===
-| 플랫폼 | ONTAP 버전입니다 
-
-
- a| 
-* AFF A1K 를 참조하십시오
-* AFF A90 를 참조하십시오
-* AFF A70 를 참조하십시오
-* FAS90를 참조하십시오
-* FAS70를 참조하십시오
-
-| 9.15.1 이상 
-
-
- a| 
 * AFF C80 를 참조하십시오
 * AFF C60 를 참조하십시오
 * AFF C30 를 참조하십시오
+* AFF A90 를 참조하십시오
+* AFF A70 를 참조하십시오
 * AFF A50 를 참조하십시오
 * AFF A30 를 참조하십시오
+* AFF A1K 를 참조하십시오
+* FAS90를 참조하십시오
+* FAS70를 참조하십시오
 
-| 9.16.1 이상 
-|===
+
 자세히 알아보세요 link:../concepts/builtin-storage-efficiency-concept.html["32k 압축을 지원하는 AFF 및 FAS 플랫폼"] .
 
 를 참조하십시오link:https://hwu.netapp.com/["Hardware Universe"^] AFF C 시리즈 플랫폼의 전체 목록은 여기에서 확인하세요.
