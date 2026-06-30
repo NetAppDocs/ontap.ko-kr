@@ -52,7 +52,7 @@ ONTAP 9.19.1 버전부터 특정 AFF, ASA r2 및 FAS 시스템에서 필요한 Q
 [NOTE]
 ====
 * MetroCluster 구성은 직접 연결을 지원하지 않습니다.
-* 직접 연결 구성은 link:../svm-migrate/migrate-svm-task.html["SMV 마이그레이션"]을(를) 지원하지 않습니다.
+* 직접 연결 구성은 link:../svm-migrate/migrate-svm-task.html["SVM 마이그레이션"]을(를) 지원하지 않습니다.
 
 
 ====

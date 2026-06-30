@@ -72,6 +72,6 @@ ONTAP는 원격 사용자 인증을 위해 SAML(Security Assertion Markup Langua
 
 == ONTAP REST API 클라이언트가 포함된 OAuth 2.0
 
-Open Authorization(OAuth 2.0) 프레임워크에 대한 지원은 ONTAP 9.14부터 제공됩니다. 클라이언트가 REST API를 사용하여 ONTAP에 액세스할 때 OAuth 2.0만 사용하여 권한 부여 및 액세스 결정을 제어할 수 있습니다. 하지만 CLI, System Manager, REST API를 포함한 모든 ONTAP 관리 인터페이스에서 기능을 구성하고 사용하도록 설정할 수 있습니다.
+ONTAP 9.14 버전부터 OAuth 2.0(Open Authorization) 프레임워크를 지원합니다. OAuth 2.0을 사용하여 권한 부여 및 액세스 제어 결정을 내리려면 클라이언트가 ONTAP REST API를 통해 ONTAP에 액세스해야 합니다. 하지만 ONTAP CLI, System Manager, ONTAP REST API 등 모든 ONTAP 관리 인터페이스에서 이 기능을 구성하고 활성화할 수 있습니다.
 
 표준 OAuth 2.0 기능은 널리 사용되는 여러 인증 서버와 함께 지원됩니다. 상호 TLS를 기반으로 보낸 사람 제한 액세스 토큰을 사용하면 ONTAP 보안을 더욱 강화할 수 있습니다. 또한 자체 포함된 범위, ONTAP REST 역할 및 로컬 사용자 정의와의 통합 등 다양한 인증 옵션을 사용할 수 있습니다. 을 참조하십시오 link:../authentication/overview-oauth2.html["ONTAP OAuth 2.0 구축 개요"] 를 참조하십시오.

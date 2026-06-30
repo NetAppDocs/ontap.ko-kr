@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: authentication/overview-oauth2.html 
 keywords: oauth 2.0, oauth2, access token, bearer token, authentication, authorization, mutual tls, mtls, adfs, auth0, oidc, entra id 
-summary: 'ONTAP 9.14부터 OAuth 2.0(Open Authorization 2.0) 프레임워크를 사용하여 ONTAP 클러스터에 대한 액세스를 제어할 수 있습니다. 이 기능은 ONTAP CLI, System Manager, REST API를 포함한 모든 ONTAP 관리 인터페이스를 사용하여 구성할 수 있습니다. 그러나 OAuth 2.0 권한 부여 및 액세스 제어 결정은 클라이언트가 REST API를 사용하여 ONTAP에 액세스할 때만 적용할 수 있습니다.' 
+summary: 'ONTAP 9.14 버전부터는 Open Authorization(OAuth 2.0) 프레임워크를 사용하여 ONTAP 클러스터에 대한 액세스를 제어할 수 있습니다. 이 기능은 ONTAP CLI, System Manager, ONTAP REST API를 포함한 모든 ONTAP 관리 인터페이스를 통해 구성할 수 있습니다. 단, OAuth 2.0 인증 및 액세스 제어 결정은 클라이언트가 ONTAP REST API를 사용하여 ONTAP에 액세스할 때만 적용됩니다.' 
 ---
 = ONTAP OAuth 2.0 구축 개요
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'ONTAP 9.14부터 OAuth 2.0(Open Authorization 2.0) 프레임워크를 
 
 
 [role="lead"]
-ONTAP 9.14부터 OAuth 2.0(Open Authorization 2.0) 프레임워크를 사용하여 ONTAP 클러스터에 대한 액세스를 제어할 수 있습니다. 이 기능은 ONTAP CLI, System Manager, REST API를 포함한 모든 ONTAP 관리 인터페이스를 사용하여 구성할 수 있습니다. 그러나 OAuth 2.0 권한 부여 및 액세스 제어 결정은 클라이언트가 REST API를 사용하여 ONTAP에 액세스할 때만 적용할 수 있습니다.
+ONTAP 9.14 버전부터는 Open Authorization(OAuth 2.0) 프레임워크를 사용하여 ONTAP 클러스터에 대한 액세스를 제어할 수 있습니다. 이 기능은 ONTAP CLI, System Manager, ONTAP REST API를 포함한 모든 ONTAP 관리 인터페이스를 통해 구성할 수 있습니다. 단, OAuth 2.0 인증 및 액세스 제어 결정은 클라이언트가 ONTAP REST API를 사용하여 ONTAP에 액세스할 때만 적용됩니다.
 
 
 NOTE: OAuth 2.0 지원은 ONTAP 9.14.0에서 처음 도입되었으며 사용 중인 ONTAP 릴리스에 따라 가용성이 달라집니다. 를 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 릴리즈 노트"^] 를 참조하십시오.

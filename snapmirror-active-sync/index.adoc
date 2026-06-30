@@ -99,7 +99,7 @@ SnapMirror 액티브 동기화는 네트워크 파티션 시 I/O를 제공하기
 
 Primary-bias는 SnapMirror Active Sync Protected 데이터 세트의 가용성을 개선하는 특별한 쿼럼 구현입니다. 운영 복사본을 사용할 수 있는 경우 두 클러스터 모두에서 ONTAP 중재자에 연결할 수 없을 때 운영 바이어스가 적용됩니다.
 
-Primary-first 및 primary bias는 ONTAP 9.15.1부터 SnapMirror 액티브 동기화에서 지원됩니다. 1차 복사본은 System Manager에서 지정되고 REST API 및 CLI를 사용하여 출력됩니다.
+ONTAP 9.15.1 버전부터 SnapMirror 활성 동기화에서 기본 복사본 우선 및 기본 복사본 편향이 지원됩니다. 기본 복사본은 System Manager에서 지정되며 ONTAP REST API 및 ONTAP CLI를 통해 출력됩니다.
 
 .동기화 중단(OOS)
 응용 프로그램 입출력이 보조 스토리지 시스템으로 복제되지 않으면** 비동기 상태로 보고됩니다. 동기화 중단 상태는 보조 볼륨이 기본(소스)과 동기화되지 않았으며 SnapMirror 복제가 발생하지 않음을 의미합니다.

@@ -229,6 +229,13 @@ SVM 재해 복구는 지원되지 않습니다.
 
 
  a| 
+SnapMirror 클라우드
+ a| 
+SVM 재해 복구는 지원되지 않습니다.
+
+
+
+ a| 
 SnapMirror Synchronous
  a| 
 SVM 재해 복구는 지원되지 않습니다.

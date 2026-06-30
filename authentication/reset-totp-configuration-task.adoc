@@ -28,7 +28,7 @@ security login totp delete -vserver <svm_name> -username <account_username>
 ----
 +
 
-NOTE: ONTAP 9.19.1부터 CLI를 사용하여 TOTP 비밀 키를 삭제하려면 유효한 TOTP 코드 또는 스크래치 코드를 입력해야 합니다. REST API를 사용하여 TOTP 비밀 키를 삭제할 수 없습니다.
+NOTE: ONTAP 9.19.1 버전부터는 ONTAP CLI를 사용하여 TOTP 비밀 키를 삭제하려면 유효한 TOTP 코드 또는 스크래치 코드를 입력해야 합니다. ONTAP REST API를 사용해서는 TOTP 비밀 키를 삭제할 수 없습니다.
 
 . 새 TOTP 암호 키 생성:
 +
