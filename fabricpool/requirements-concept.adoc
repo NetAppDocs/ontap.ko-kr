@@ -126,7 +126,6 @@ HDD FabricPools는 SAS, FSA, BSAS 및 mSATA 디스크와 함께 지원되며 CPU
 
 * 다음 FabricPool 기능을 사용하려면 ONTAP 9.12.1 이상을 실행해야 합니다.
 +
-** SVM 마이그레이션
 ** FabricPool, FlexGroup 및 SVM-DR 지원 협력 (9.12.1 이전에는 이 두 가지 기능이 함께 작동했지만 세 가지 기능이 모두 함께 작동되지는 않았습니다.)
 
 

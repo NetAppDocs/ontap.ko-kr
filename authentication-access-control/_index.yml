@@ -20,8 +20,6 @@ indexpage:
       url: "/../system-admin/manage-web-services-concept.html"
     - title: 인증서를 사용하여 원격 서버의 ID를 확인합니다
       url: "/../system-admin/verify-identity-remote-servers-certificates-concept.html"
-    - title: 클러스터 및 KMIP 서버를 수동으로 인증합니다
-      url: "/../system-admin/mutually-authenticating-cluster-kmip-server-concept.html"
   - title: 인증 및 권한 부여
     links:
     - title: OAuth 2.0 인증을 구성합니다
@@ -30,6 +28,8 @@ indexpage:
       url: "/../system-admin/configure-saml-authentication-task.html"
     - title: WebAuthn MFA를 활성화합니다
       url: "/../authentication-access-control/enable-webauthn-mfa-task.html"
+    - title: 클러스터 및 KMIP 서버를 수동으로 인증합니다
+      url: "/../system-admin/mutually-authenticating-cluster-kmip-server-concept.html"
   - title: 관리자 인증 및 RBAC 관리
     links:
     - title: 관리자 인증 및 RBAC 워크플로
