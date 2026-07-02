@@ -366,7 +366,7 @@ SnapMirror 비동기식 관계 *
 
  a| 
  a| 
-* FlexCache 원점:
+FlexCache 원본:
 
 * 원본 FlexVol의 FlexCache 볼륨을 가질 수 있습니다
 * 원본 FlexGroup의 FlexCache 볼륨을 가질 수 있습니다
