@@ -174,50 +174,22 @@ entries:
         url: "/volumes/quotas-multiple-users-concept.html"
       - title: 할당량에 대한 UNIX 및 Windows 이름 링크
         url: "/volumes/link-unix-windows-names-quotas-concept.html"
-    - title: 트리 할당량의 작동 방식
-      entries:
-      - title: 개요
-        url: "/volumes/tree-quotas-concept.html"
-      - title: 사용자 및 그룹 할당량이 Qtree에서 작동하는 방식
-        url: "/volumes/user-group-quotas-qtrees-concept.html"
-      - title: FlexVol 볼륨의 기본 트리 할당량이 파생 트리 할당량을 생성하는 방법
-        url: "/volumes/default-tree-quotas-volume-create-concept.html"
-      - title: FlexVol 볼륨의 기본 사용자 할당량이 해당 볼륨의 qtree에 대한 할당량에 미치는 영향
-        url: "/volumes/default-user-quotas-volume-affect-qtrees-concept.html"
+    - title: 트리 할당량에 대해 알아보십시오
+      url: "/volumes/tree-quotas-concept.html"
     - title: Qtree 변경이 할당량에 미치는 영향
       url: "/volumes/qtree-changes-affect-quotas-concept.html"
     - title: 할당량이 활성화되는 방식
-      entries:
-      - title: 개요
-        url: "/volumes/quotas-activated-concept.html"
-      - title: 크기 조정 사용 시기 이해
-        url: "/volumes/resizing-concept.html"
-      - title: 전체 할당량 재초기화가 필요한 경우
-        url: "/volumes/full-quota-reinitialization-required-concept.html"
-    - title: 할당량 정보를 보는 방법
-      entries:
-      - title: 개요
-        url: "/volumes/view-quota-concept.html"
-      - title: 할당량 보고서를 사용하여 어떤 할당량이 유효한지 확인합니다
-        url: "/volumes/quota-report-quotas-effect-concept.html"
-      - title: 사용자 추가 할당량이 구성된 할당량과 다른 이유
-        url: "/volumes/enforced-quotas-differ-configured-concept.html"
-      - title: 할당량 보고서를 사용하여 특정 파일에 대한 쓰기를 제한하는 할당량을 결정합니다
-        url: "/volumes/quota-report-affect-writes-specific-file-task.html"
-      - title: 할당량에 대한 정보를 표시하는 명령입니다
-        url: "/volumes/commands-display-quotas-reference.html"
-      - title: 볼륨 할당량 정책 규칙 표시 및 볼륨 할당량 보고서 명령을 사용하는 경우
-        url: "/volumes/quota-reports-policy-rule-show-command-concept.html"
+      url: "/volumes/quotas-activated-concept.html"
+    - title: 할당량 크기 조정 및 재초기화에 대해 알아보기
+      url: "/volumes/quota-resize-reinitialization.html"
+    - title: 할당량 보고서에 대해 알아보기
+      url: "/volumes/quota-reports.html"
+    - title: 할당량에 대한 정보를 표시하는 명령입니다
+      url: "/volumes/commands-display-quotas-reference.html"
+    - title: 사용자 추가 할당량이 구성된 할당량과 다른 이유
+      url: "/volumes/enforced-quotas-differ-configured-concept.html"
     - title: 할당량 보고서 및 UNIX 클라이언트에 의해 표시되는 공간 사용량 차이
-      entries:
-      - title: 개요
-        url: "/volumes/space-display-quota-report-unix-client-concept.html"
-      - title: ls 명령과 공간 사용에 대한 할당량 보고서 간의 불일치입니다
-        url: "/volumes/ls-command-space-usage-concept.html"
-      - title: df 명령이 파일 크기를 어떻게 계산하는지 확인합니다
-        url: "/volumes/df-command-file-size-concept.html"
-      - title: du 명령이 공간 사용을 어떻게 계산하는지 보여 줍니다
-        url: "/volumes/du-command-space-usage-concept.html"
+      url: "/volumes/space-display-quota-report-unix-client-concept.html"
     - title: 할당량 구성의 예
       url: "/volumes/examples-quota-config-concept.html"
   - title: SVM에서 할당량 설정
