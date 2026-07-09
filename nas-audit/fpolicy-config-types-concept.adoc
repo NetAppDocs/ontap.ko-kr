@@ -28,6 +28,7 @@ summary: 두 가지 기본 FPolicy 구성 유형이 있습니다. 한 구성은 
 
 
 
+[[when-to-create-a-native-fpolicy-configuration]]
 == 기본 FPolicy 구성을 생성하는 경우
 
 기본 FPolicy 구성에서는 ONTAP 내부 FPolicy 엔진을 사용하여 파일의 확장명에 따라 파일 작업을 모니터링하고 차단합니다. 이 솔루션에는 외부 FPolicy 서버(FPolicy 서버)가 필요하지 않습니다. 이 간단한 솔루션이 필요한 경우 기본 파일 차단 구성을 사용하는 것이 좋습니다.
@@ -51,6 +52,7 @@ summary: 두 가지 기본 FPolicy 구성 유형이 있습니다. 한 구성은 
 
 
 
+[[when-to-create-a-configuration-that-uses-external-fpolicy-servers]]
 == 외부 FPolicy 서버를 사용하는 구성을 생성하는 시기
 
 외부 FPolicy 서버를 사용하여 알림을 처리 및 관리하는 FPolicy 구성은 파일 확장자에 따라 단순한 파일 차단이 필요한 사용 사례에 적합한 강력한 솔루션을 제공합니다.

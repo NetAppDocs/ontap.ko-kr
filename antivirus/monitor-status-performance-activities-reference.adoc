@@ -17,6 +17,7 @@ Vscan 서버와 관련된 문제를 진단합니다.
 
 
 
+[[view-vscan-server-connection-information]]
 == Vscan 서버 연결 정보를 봅니다
 
 Vscan 서버의 연결 상태를 보고 이미 사용 중인 연결을 관리할 수 있습니다
@@ -60,6 +61,7 @@ Vscan 서버의 연결 상태 정보
 
 
 
+[[view-vscan-server-statistics]]
 == Vscan 서버 통계를 봅니다
 
 Vscan 서버별 통계를 확인하여 성능을 모니터링하고 바이러스 검사 관련 문제를 진단할 수 있습니다. Vscan을 사용하려면 먼저 데이터 샘플을 수집해야 합니다.  `statistics show` Vscan 서버 통계를 표시하는 명령입니다.
@@ -77,6 +79,7 @@ Vscan 서버별 통계를 확인하여 성능을 모니터링하고 바이러스
 
 
 
+[[view-statistics-for-vscan-server-requests-and-latencies]]
 === Vscan 서버 요청 및 대기 시간에 대한 통계를 봅니다
 
 ONTAP를 사용할 수 있습니다 `offbox_vscan` Vscan의 속도를 모니터링하기 위해 SVM 단위로 카운터를 사용합니다
@@ -143,6 +146,7 @@ scan_latency 3433501us
 ----
 
 
+[[view-statistics-for-individual-vscan-server-requests-and-latencies]]
 === 개별 Vscan 서버 요청 및 대기 시간에 대한 통계를 봅니다
 
 ONTAP를 사용할 수 있습니다 `offbox_vscan_server` Vscan 서버당, SVM당, 오프박스 Vscan 서버의 카운터,
@@ -195,6 +199,7 @@ scan_latency 3433830us
 ----
 
 
+[[view-statistics-for-vscan-server-utilization]]
 === Vscan 서버 활용도에 대한 통계를 봅니다
 
 ONTAP를 사용할 수도 있습니다 `offbox_vscan_server` Vscan 서버 – 측면 활용 수집 카운터

@@ -18,6 +18,7 @@ NOTE: 다음 명령은 FlexVol 볼륨에서만 실행할 수 있습니다.
 
 
 
+[[commands-for-managing-quota-rules]]
 == 할당량 규칙을 관리하는 명령입니다
 
 [cols="2*"]
@@ -54,6 +55,7 @@ NOTE: 다음 명령은 FlexVol 볼륨에서만 실행할 수 있습니다.
 |===
 
 
+[[commands-for-managing-quota-policies]]
 == 할당량 정책을 관리하는 명령입니다
 
 [cols="2*"]

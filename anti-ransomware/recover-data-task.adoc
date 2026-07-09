@@ -38,6 +38,7 @@ ARP에서 이상을 감지한 후 데이터를 복원해야 하는 경우 다음
 
 
 
+[[choose-a-recovery-method]]
 == 복구 방법을 선택하십시오
 
 데이터 손상 정도와 운영 요구 사항에 따라 다음 복구 방법 중 하나 또는 여러 가지를 조합하여 선택하십시오.
@@ -57,6 +58,7 @@ link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 
 
 
 
+[[recovery-constraints-and-considerations]]
 == 복구 제약 조건 및 고려 사항
 
 * ONTAP 9.15.1 이하 버전에서는 ARP 스냅샷 잠금을 해제하면 ARP 스냅샷이 즉시 삭제됩니다. ARP 스냅샷에서 복원할 계획이 없는 경우에만 잠금을 해제하십시오.
@@ -72,6 +74,8 @@ link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 
 
 
 
+[[restore-after-system-attack]]
+[[restore-after-a-system-attack]]
 == 시스템 공격 후 복원
 
 볼륨 스냅샷 복원의 경우 스냅샷 소스 및 상황에 따라 다음 흐름 중 하나를 선택하십시오.
@@ -82,6 +86,8 @@ link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 
 
 
 
+[[restore-from-arp-snapshot]]
+[[restore-from-the-most-recent-arp-snapshot]]
 === 가장 최근의 ARP 스냅샷에서 복원
 
 가장 최근의 ARP 스냅샷(복구에 사용할 수 있는 가장 최신 스냅샷)에서 복원할 수 있다는 확신이 있을 때 이 복원 흐름을 선택하십시오.
@@ -123,6 +129,8 @@ volume snapshot restore -vserver <svm> -volume <volume> -snapshot <snapshot>
 ====
 
 
+[[restore-from-earlier-snapshot]]
+[[restore-from-an-earlier-snapshot]]
 === 이전 스냅샷에서 복원
 
 최신 스냅샷에 대한 신뢰도가 부족하여 이전 스냅샷에서 복원하려는 경우 이 절차를 선택하십시오. 이전 스냅샷에서 복원하기 전에 가장 최근 ARP 스냅샷의 잠금을 해제하십시오.
@@ -212,6 +220,8 @@ cluster1::> volume snapshot restore -vserver vs0 -volume vol1 -snapshot daily.20
 ====
 
 
+[[restore-without-attack]]
+[[restore-when-a-system-attack-is-not-identified]]
 == 시스템 공격이 확인되지 않은 경우 복원
 
 공격이 식별되지 않으면 먼저 가장 최근의 ARP 스냅샷에서 복원한 다음 선택한 이전 스냅샷에서 복원하십시오.

@@ -15,12 +15,14 @@ FlexVol 볼륨을 공간 제한 이상으로 확장하려면 FlexVol 볼륨을 F
 
 
 
+[[considerations-for-converting-flexvol-volumes-to-flexgroup-volumes]]
 == FlexVol 볼륨을 FlexGroup 볼륨으로 변환할 때의 고려 사항
 
 당신은 이것을 알고 있어야 합니다 link:supported-unsupported-config-concept.html["지원되는 기능 및 작업"] FlexVol 볼륨을 FlexGroup 볼륨으로 변환하기로 결정하기 전에.
 
 
 
+[[operations-not-supported-during-conversion]]
 == 변환 중에는 작업이 지원되지 않습니다
 
 볼륨 변환이 진행 중일 때는 다음 작업이 허용되지 않습니다.
@@ -47,6 +49,7 @@ FlexVol 볼륨을 공간 제한 이상으로 확장하려면 FlexVol 볼륨을 F
 
 
 
+[[configurations-that-are-not-supported-with-flexgroup-volumes]]
 == FlexGroup 볼륨에서 지원되지 않는 구성입니다
 
 * 오프라인 또는 제한된 볼륨

@@ -110,6 +110,7 @@ NTFS입니다
 |===
 
 
+[[learn-about-ontap-smb-security-style-inheritance]]
 == ONTAP SMB 보안 스타일 상속에 대해 알아보십시오
 
 새 FlexVol 볼륨 또는 qtree를 생성할 때 보안 스타일을 지정하지 않으면 보안 스타일이 다른 방식으로 상속됩니다.

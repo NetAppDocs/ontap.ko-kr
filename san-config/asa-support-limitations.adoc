@@ -25,6 +25,7 @@ NOTE: 이러한 제한 사항은 ASA 시스템에 적용됩니다. ASA r2 시스
 
 
 
+[[san-protocols-and-supported-number-of-nodes-per-cluster]]
 == SAN 프로토콜 및 클러스터당 지원되는 노드 수
 
 지원되는 SAN 프로토콜과 클러스터당 최대 노드 수는 MetroCluster가 아닌 구성인지 MetroCluster 구성이 있는지에 따라 달라집니다.
@@ -127,6 +128,7 @@ NOTE: 이러한 제한 사항은 ASA 시스템에 적용됩니다. ASA r2 시스
 ====
 
 
+[[support-for-persistent-ports]]
 == 영구 포트 지원
 
 ONTAP 9.8부터는 FC 프로토콜을 사용하도록 구성된 ASA(All-Flash SAN Array)에서 영구 포트가 기본적으로 활성화됩니다. 영구 포트는 FC에만 사용할 수 있으며 WWPN(World Wide Port Name)으로 식별되는 영역 구성원이 필요합니다.

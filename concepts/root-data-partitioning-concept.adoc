@@ -31,6 +31,7 @@ image:root-data-data.gif["루트 데이터 파티셔닝의 예입니다"]
 
 
 
+[[drives-partitioned-and-used-for-the-root-aggregate]]
 == 드라이브를 파티셔닝하고 루트 애그리게이트에 사용됩니다
 
 루트 애그리게이트에서 사용하도록 분할된 드라이브는 시스템 구성에 따라 다릅니다.

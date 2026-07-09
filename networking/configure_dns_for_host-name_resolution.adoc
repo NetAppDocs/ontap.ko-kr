@@ -22,6 +22,7 @@ ONTAP는 UNIX 시스템의 '/etc/nsswitch.conf' 파일에 해당하는 테이블
 
 
 
+[[configure-an-svm-and-data-lifs-for-host-name-resolution-using-an-external-dns-server]]
 == 외부 DNS 서버를 사용하여 호스트 이름 확인을 위해 SVM 및 데이터 LIF를 구성합니다
 
 SVM에서 DNS를 사용하도록 설정하려면 'vserver services name-service dns' 명령을 사용하고, 호스트 이름 확인을 위해 DNS를 사용하도록 구성할 수 있습니다. 호스트 이름은 외부 DNS 서버를 사용하여 확인됩니다.
@@ -67,6 +68,7 @@ DNS와 관련된 서비스 정책에 대한 자세한 내용은 를 참조하십
 
 
 
+[[configure-the-name-service-switch-table-for-host-name-resolution]]
 == 호스트 이름 확인을 위해 이름 서비스 스위치 테이블을 구성합니다
 
 ONTAP가 로컬 또는 외부 이름 서비스에 문의하여 호스트 정보를 검색할 수 있도록 이름 서비스 스위치 테이블을 올바르게 구성해야 합니다.

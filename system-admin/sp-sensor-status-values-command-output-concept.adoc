@@ -41,6 +41,7 @@ Sensor ID              : IO_Slot1_Present (0x74)
 
 
 
+[[systemfwstatus]]
 == System_FW_Status를 선택합니다
 
 System_FW_Status 센서의 상태는 0xAABB 형태로 나타납니다. AA와 BB의 정보를 조합하여 센서의 상태를 확인할 수 있습니다.
@@ -192,6 +193,7 @@ SP watchdog 콜드 리셋
 
 
 
+[[systemwatchdog]]
 == System_Watchdog(시스템 감시 장치
 
 System_Watchdog 센서는 다음 상태 중 하나일 수 있습니다.
@@ -244,6 +246,7 @@ System_Watchdog 센서는 다음 상태 중 하나일 수 있습니다.
 
 
 
+[[psu1inputtype-and-psu2inputtype]]
 == PSU1_Input_Type 및 PSU2_Input_Type
 
 직류(DC) 전원 공급 장치의 경우 PSU1_Input_Type 및 PSU2_Input_Type 센서가 적용되지 않습니다. 교류(AC) 전원 공급 장치의 경우 센서 상태는 다음 값 중 하나일 수 있습니다.

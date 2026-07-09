@@ -67,6 +67,7 @@ summary: 이 FlexVol 볼륨 및 파일 또는 LUN 구성 조합을 사용하면 
 |===
 
 
+[[technology-restrictions]]
 == 기술 제한
 
 이 구성 조합에는 다음 볼륨 스토리지 효율성 기술을 사용할 수 없습니다.
@@ -81,6 +82,7 @@ summary: 이 FlexVol 볼륨 및 파일 또는 LUN 구성 조합을 사용하면 
 
 
 
+[[additional-considerations]]
 == 추가 고려 사항
 
 이 구성 조합을 사용할 때는 다음 사항을 고려해야 합니다.

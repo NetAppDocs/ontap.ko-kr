@@ -15,6 +15,7 @@ ONTAP Mediator는 각 릴리스마다 새로운 기능 향상을 제공합니다
 
 
 
+[[enhancements]]
 == 향상된 기능
 
 SCST 버전 정보는 를 <<SCST 지원 매트릭스>>참조하십시오.
@@ -206,6 +207,7 @@ SCST 버전 정보는 를 <<SCST 지원 매트릭스>>참조하십시오.
 |===
 
 
+[[os-support-matrix]]
 == OS 지원 매트릭스
 
 |===
@@ -1312,6 +1314,7 @@ Oracle Linux 10
 
 
 
+[[scst-support-matrix]]
 == SCST 지원 매트릭스
 
 다음 표는 ONTAP mediator의 각 버전에 대해 지원되는 SCST 버전을 보여줍니다.

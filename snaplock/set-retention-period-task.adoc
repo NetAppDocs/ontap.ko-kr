@@ -55,6 +55,7 @@ ONTAP 9.12.1부터 보존 기간이 설정된 WORM 파일 `unspecified` SnapLock
 
 
 
+[[set-the-default-retention-period]]
 == 기본 보존 기간을 설정합니다
 
 'volume SnapLock modify' 명령을 사용하여 SnapLock 볼륨의 파일에 대한 기본 보존 기간을 설정할 수 있습니다.
@@ -218,6 +219,7 @@ cluster1::> volume snaplock modify -vserver vs1 -volume vol1 -default-retention-
 
 
 
+[[set-the-retention-time-for-a-file-explicitly]]
 == 파일의 보존 시간을 명시적으로 설정합니다
 
 파일의 마지막 액세스 시간을 수정하여 파일의 보존 시간을 명시적으로 설정할 수 있습니다. NFS 또는 CIFS를 통해 적합한 명령 또는 프로그램을 사용하여 마지막 액세스 시간을 수정할 수 있습니다.
@@ -250,6 +252,7 @@ touch -a -t 202011210600 document.txt
 
 
 
+[[set-the-file-retention-period-after-an-event]]
 == 이벤트 후 파일 보존 기간을 설정합니다
 
 ONTAP 9.3부터 EBR(SnapLock_Event Based Retention)_Feature를 사용하여 이벤트 발생 후 파일이 유지되는 기간을 정의할 수 있습니다.

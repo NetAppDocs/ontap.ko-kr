@@ -55,6 +55,7 @@ summary: 자동 반환 명령
 |===
 
 
+[[how-variations-of-the-storage-failover-modify-command-affect-automatic-giveback]]
 == 스토리지 페일오버 수정 명령의 변화가 자동 반환에 미치는 영향
 
 자동 반환 작업은 스토리지 페일오버 수정 명령의 매개 변수를 구성하는 방법에 따라 달라집니다.
@@ -140,6 +141,7 @@ summary: 자동 반환 명령
 
 
 
+[[the-effects-of-automatic-giveback-parameter-combinations-that-apply-to-panic-situations]]
 == 패닉 상황에 적용되는 자동 반환 매개 변수 조합의 효과
 
 다음 표에는 패닉 상황에 적용되는 '스토리지 페일오버 수정' 명령 매개 변수가 나와 있습니다.

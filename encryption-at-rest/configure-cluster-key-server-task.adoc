@@ -30,6 +30,7 @@ NetApp Storage Encryption(NSE), NetApp Volume Encryption(NVE), NetApp Aggregate 
 
 
 
+[[create-a-clustered-key-server]]
 == 클러스터링된 키 서버를 생성합니다
 
 구성 절차는 기본 키 서버를 구성했는지 여부에 따라 달라집니다.
@@ -96,12 +97,14 @@ NOTE: 실행 중이라면 `security key-manager external modify-server` MetroClu
 ====
 
 
+[[modify-clustered-key-servers]]
 == 클러스터링된 키 서버를 수정합니다
 
 보조 키 서버를 추가 및 제거하고, 보조 키 서버의 액세스 순서를 변경하거나, 특정 키 서버의 지정(기본 또는 보조)을 변경하여 클러스터형 외부 키 서버를 수정할 수 있습니다.  MetroCluster 구성에서 클러스터된 외부 키 서버를 수정하는 경우 NetApp 두 클러스터에서 동일한 키 서버를 사용할 것을 강력히 권장합니다.
 
 
 
+[[modify-secondary-key-servers]]
 === 보조 키 서버를 수정합니다
 
  `security key-manager external modify-server`명령의 `-secondary-key-servers`  매개변수를 사용하여 보조 키 서버를 관리합니다. 그만큼 `-secondary-key-servers` 매개변수는 쉼표로 구분된 목록을 허용합니다. 목록에서 보조 키 서버의 지정된 순서는 보조 키 서버의 액세스 순서를 결정합니다. 보조 키 서버가 다른 순서로 입력된 상태에서  `security key-manager external modify-server` 명령을 실행하여 액세스 순서를 수정할 수 있습니다. 보조 키 서버에 대한 포트 번호를 포함하지 마세요.
@@ -113,6 +116,7 @@ NOTE: 실행 중이라면 `security key-manager external modify-server` MetroClu
 
 
 
+[[convert-primary-and-secondary-key-servers]]
 === 기본 및 보조 키 서버를 변환합니다
 
 다음 단계에 따라 특정 키 서버의 지정(기본 또는 보조)을 변경할 수 있습니다.

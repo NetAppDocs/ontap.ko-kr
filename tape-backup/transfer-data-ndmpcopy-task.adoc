@@ -125,6 +125,7 @@ IPv6 주소가 지정된 경우 대괄호로 묶어야 합니다.
 
 
 
+[[options-for-the-ndmpcopy-command]]
 == ndmpcopy 명령에 대한 옵션입니다
 
 nodeshell 명령에 사용할 수 있는 옵션을 `ndmpcopy` 이해해야 link:transfer-data-ndmpcopy-task.html["데이터를 전송합니다"]합니다.

@@ -17,6 +17,7 @@ symlink 및 hard link를 감사할 때는 몇 가지 고려 사항을 염두에 
 
 
 
+[[symlinks]]
 == Symlink
 
 Symlink는 대상 오브젝트의 위치에 대한 포인터가 포함된 별도의 inode가 있는 파일이며, 대상이라고 합니다. symlink를 통해 개체에 액세스할 때 ONTAP는 자동으로 symlink를 해석하고 볼륨의 대상 개체에 대한 실제 정규 프로토콜 무관 경로를 따릅니다.
@@ -33,6 +34,7 @@ lrwxrwxrwx 1 user1 group1 10 Apr  2 09:54 softlink.txt -> target.txt
 ----
 
 
+[[hard-links]]
 == 하드 링크
 
 하드 링크는 파일 시스템의 기존 파일과 이름을 연결하는 디렉토리 항목입니다. 하드 링크는 원본 파일의 inode 위치를 가리킵니다. ONTAP에서 symlink를 해석하는 방법과 마찬가지로 ONTAP는 하드 링크를 해석하고 볼륨의 대상 개체에 대한 실제 정규 경로를 따릅니다. 하드 링크 개체에 대한 액세스가 감사되면 감사 이벤트는 하드 링크 경로가 아닌 ObjectName 태그에 이 절대 정규 경로를 기록합니다.

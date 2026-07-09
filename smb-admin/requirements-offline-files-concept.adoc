@@ -15,18 +15,21 @@ CIFS 서버에서 Microsoft 오프라인 파일 기능을 사용하려면 먼저
 
 
 
+[[ontap-version-requirements]]
 == ONTAP 버전 요구 사항
 
 ONTAP 릴리스는 오프라인 파일을 지원합니다.
 
 
 
+[[smb-protocol-version-requirements]]
 == SMB 프로토콜 버전 요구 사항
 
 SVM(스토리지 가상 시스템)의 경우 ONTAP은 모든 버전의 SMB에서 오프라인 파일을 지원합니다.
 
 
 
+[[windows-client-requirements]]
 == Windows 클라이언트 요구 사항
 
 Windows 클라이언트는 오프라인 파일을 지원해야 합니다.

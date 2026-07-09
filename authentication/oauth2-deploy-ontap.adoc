@@ -18,12 +18,14 @@ summary: 핵심 OAuth 2.0 기능을 배포하려면 세 가지 기본 단계가 
 
 
 
+[[before-you-begin]]
 == 시작하기 전에
 
 ONTAP를 구성하기 전에 OAuth 2.0 배포를 준비해야 합니다. 예를 들어 인증서의 서명 방법 및 방화벽 뒤에 있는지 등 인증 서버를 평가해야 합니다. 을 참조하십시오 link:../authentication/oauth2-prepare.html["ONTAP와 함께 OAuth 2.0을 배포할 준비를 하십시오"] 를 참조하십시오.
 
 
 
+[[step-1-install-the-authorization-server-root-ca-certificates]]
 == 1단계: 인증 서버 루트 CA 인증서를 설치합니다
 
 ONTAP에는 미리 설치된 루트 CA 인증서가 다수 포함되어 있습니다. 따라서 대부분의 경우 추가 구성 없이 ONTAP에서 인증 서버의 인증서를 즉시 인식합니다. 그러나 인증 서버 인증서 서명 방법에 따라 루트 CA 인증서와 중간 인증서를 설치해야 할 수도 있습니다.
@@ -81,6 +83,7 @@ ONTAP 액세스 방법에 따라 올바른 절차를 선택합니다.
 ====
 
 
+[[step-2-configure-the-authorization-server]]
 == 2단계: 인증 서버를 구성합니다
 
 ONTAP에 하나 이상의 인증 서버를 정의해야 합니다. 구성 및 배포 계획에 따라 매개 변수 값을 선택해야 합니다. 검토 link:../authentication/oauth2-deployment-scenarios.html["OAuth2 배포 시나리오"] 구성에 필요한 정확한 매개 변수를 결정합니다.
@@ -142,6 +145,7 @@ security oauth2 client create \
 ====
 
 
+[[step-3-enable-oauth-2-0]]
 == 3단계: OAuth 2.0을 활성화합니다
 
 마지막 단계는 OAuth 2.0을 활성화하는 것입니다. ONTAP 클러스터에 대한 전역 설정입니다.

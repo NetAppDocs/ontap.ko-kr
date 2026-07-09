@@ -44,6 +44,7 @@ ONTAP 9.10.1 시작:
 
 
 
+[[firewall-policies-and-lifs]]
 == 방화벽 정책 및 LIF
 
 LIF 방화벽 정책을 사용하여 각 LIF에서 클러스터에 대한 액세스를 제한합니다. 기본 방화벽 정책이 각 LIF 유형에 대한 시스템 액세스에 미치는 영향과 LIF에 대한 보안을 늘리거나 줄일 수 있도록 방화벽 정책을 사용자 지정하는 방법을 이해해야 합니다.
@@ -107,6 +108,7 @@ DNS, NDMP, ndmps, portmap
 |===
 
 
+[[portmap-service-configuration]]
 == portmap 서비스 구성
 
 portmap 서비스는 RPC 서비스를 수신 대기 포트에 매핑합니다.
@@ -149,6 +151,7 @@ SVM 또는 클러스터 방화벽 정책에서 portmap 서비스를 제거하려
 
 
 
+[[create-a-firewall-policy-and-assign-it-to-a-lif]]
 == 방화벽 정책을 생성하여 LIF에 할당합니다
 
 LIF를 생성할 때 각 LIF에 기본 방화벽 정책이 할당됩니다. 대부분의 경우 기본 방화벽 설정이 잘 작동하고 변경할 필요가 없습니다. LIF에 액세스할 수 있는 네트워크 서비스 또는 IP 주소를 변경하려면 사용자 지정 방화벽 정책을 생성하여 LIF에 할당할 수 있습니다.

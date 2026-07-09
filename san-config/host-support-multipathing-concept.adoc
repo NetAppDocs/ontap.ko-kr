@@ -33,6 +33,7 @@ link:../san-admin/multipath-automatic-lif-failover-support.html["ONTAP에서 지
 
 
 
+[[recommended-number-of-paths-from-host-to-nodes-in-cluster]]
 == 클러스터의 호스트에서 노드까지 권장되는 경로 수입니다
 
 호스트에서 클러스터의 각 노드로 이어지는 경로가 8개를 초과할 수 없습니다. 또한 호스트 OS 및 호스트에서 사용되는 다중 경로에 대해 지원할 수 있는 총 경로 수를 초과하지 않아야 합니다.

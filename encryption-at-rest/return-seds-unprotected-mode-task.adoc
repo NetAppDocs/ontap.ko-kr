@@ -94,6 +94,7 @@ Info: Starting modify on 14 disks.
 
 
 
+[[maintenance-mode]]
 == 유지보수 모드
 
 ONTAP 9.7부터 유지 관리 모드에서 FIPS 드라이브를 다시 입력하다 이전 섹션에서 ONTAP CLI 지침을 사용할 수 없는 경우에만 유지보수 모드를 사용해야 합니다.

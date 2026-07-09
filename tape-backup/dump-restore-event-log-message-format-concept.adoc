@@ -51,6 +51,7 @@ RST
 
 
 
+[[learn-about-ontap-logging-events]]
 == ONTAP 로깅 이벤트에 대해 알아보세요
 
 로그로 시작하는 메시지의 이벤트 필드는 로깅 시작 또는 로깅 종료를 지정합니다.
@@ -76,6 +77,7 @@ Stop_Logging(로깅 중지)
 |===
 
 
+[[learn-about-ontap-dump-events]]
 == ONTAP 덤프 이벤트에 대해 알아보세요
 
 덤프 이벤트의 이벤트 필드에는 이벤트 유형 다음에 괄호 안에 이벤트 관련 정보가 표시됩니다.
@@ -177,6 +179,7 @@ base_dump입니다
 |===
 
 
+[[learn-about-ontap-restore-events]]
 == ONTAP 복원 이벤트에 대해 알아보세요
 
 복원 이벤트의 이벤트 필드에는 이벤트 유형 다음에 이벤트 관련 정보가 괄호 안에 표시됩니다.

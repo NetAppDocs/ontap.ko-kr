@@ -17,6 +17,7 @@ summary: 백업 애플리케이션이 CAB을 인식하면 NDMP 서버가 볼륨 
 
 
 
+[[local-ndmp-backup-and-three-way-ndmp-backup]]
 == 로컬 NDMP 백업 및 3방향 NDMP 백업
 
 image:local_and_three-way_backup_in_vserver_aware_ndmp_mode.png["로컬 및 3방향 백업 다이어그램"]

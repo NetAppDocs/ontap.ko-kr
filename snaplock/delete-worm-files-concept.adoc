@@ -15,6 +15,7 @@ summary: 권한 있는 삭제 기능을 사용하여 보존 기간 동안 엔터
 
 
 
+[[create-a-snaplock-administrator-account]]
 == SnapLock 관리자 계정을 만듭니다
 
 권한 있는 삭제를 수행하려면 SnapLock 관리자 권한이 있어야 합니다. 이러한 권한은 vsadmin-SnapLock 역할에 정의되어 있습니다. 해당 역할이 아직 할당되지 않은 경우 클러스터 관리자에게 SnapLock 관리자 역할을 가진 SVM 관리자 계정을 만들도록 요청할 수 있습니다.
@@ -44,6 +45,7 @@ cluster1::> security login create -vserver SVM1 -user-or-group-name SnapLockAdmi
 
 
 
+[[enable-the-privileged-delete-feature]]
 == 권한 있는 삭제 기능을 활성화합니다
 
 삭제하려는 WORM 파일이 포함된 엔터프라이즈 볼륨에서 권한 있는 삭제 기능을 명시적으로 활성화해야 합니다.
@@ -73,6 +75,7 @@ SVM1::> volume snaplock modify -vserver SVM1 -volume dataVol -privileged-delete 
 
 
 
+[[delete-enterprise-mode-worm-files]]
 == 엔터프라이즈 모드 WORM 파일을 삭제합니다
 
 권한이 있는 삭제 기능을 사용하여 보존 기간 동안 엔터프라이즈 모드 WORM 파일을 삭제할 수 있습니다.

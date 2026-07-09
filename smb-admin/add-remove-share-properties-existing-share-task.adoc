@@ -91,6 +91,7 @@ oplocks
 |===
 
 
+[[add-share-properties-on-existing-ontap-smb-shares]]
 == 기존 ONTAP SMB 공유에 공유 속성 추가
 
 기존 SMB 공유에 공유 속성을 추가하여 사용자 지정할 수 있습니다. 이는 환경의 변화하는 요구 사항에 맞춰 공유 구성을 변경하려는 경우 유용할 수 있습니다.
@@ -143,6 +144,7 @@ vs1        share1  /share1   oplocks      -          Everyone / Full Control
 ----
 
 
+[[remove-share-properties-on-existing-ontap-smb-shares]]
 == 기존 ONTAP SMB 공유에서 공유 속성을 제거합니다.
 
 기존 SMB 공유에서 공유 속성을 제거하여 공유를 사용자 지정할 수 있습니다. 이는 환경의 변화하는 요구 사항에 맞춰 공유 구성을 변경하려는 경우 유용할 수 있습니다.

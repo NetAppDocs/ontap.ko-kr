@@ -17,6 +17,7 @@ SP CLI 명령 'system power off' 또는 'system power cycle'을 사용하여 노
 
 
 
+[[reboot-a-node-at-the-system-prompt]]
 == 시스템 프롬프트에서 노드를 재부팅합니다
 
 시스템 프롬프트에서 일반 모드로 노드를 재부팅할 수 있습니다. 노드는 PC CompactFlash 카드와 같은 부팅 장치에서 부팅하도록 구성됩니다.
@@ -77,6 +78,7 @@ cluster1::> system node reboot -node node1 -reason "software upgrade"
 
 
 
+[[boot-ontap-at-the-boot-environment-prompt]]
 == 부팅 환경 프롬프트에서 ONTAP를 부팅합니다
 
 노드의 부팅 환경 프롬프트에서 현재 릴리즈 또는 ONTAP의 백업 릴리즈를 부팅할 수 있습니다.
@@ -119,6 +121,7 @@ boot_backup입니다
 
 
 
+[[shut-down-a-node]]
 == 노드를 종료합니다
 
 노드가 응답하지 않거나 지원 담당자가 문제 해결 작업의 일부로 종료하도록 안내하는 경우 노드를 종료할 수 있습니다.

@@ -25,6 +25,7 @@ NOTE: IPspace는 라우팅 도메인에서 IPv4 및 IPv6 주소를 모두 지원
 
 
 
+[[example-of-using-ipspaces]]
 == IPspace 사용 예
 
 IPspace를 사용하는 일반적인 애플리케이션 은 SSP(스토리지 서비스 공급자)에서 SSP(회사 A)와 B의 고객을 SSP 단지의 ONTAP 클러스터에 연결해야 하며, 두 회사 모두 동일한 프라이빗 IP 주소 범위를 사용합니다.
@@ -50,6 +51,7 @@ image:ontap_nm_image10.jpeg["IPspace 예"]
 
 
 
+[[standard-properties-of-ipspaces]]
 == IPspace의 표준 속성
 
 특수 IPspace는 클러스터를 처음 생성할 때 기본적으로 생성됩니다. 또한 IPspace별로 특수 스토리지 가상 머신(SVM)을 생성합니다.

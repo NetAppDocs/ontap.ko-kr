@@ -20,6 +20,7 @@ ONTAP Mediator를 설치하거나 업그레이드하려면 모든 필수 구성 
 
 
 
+[[installation-and-upgrade-considerations]]
 == 설치 및 업그레이드 고려 사항
 
 ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 정보를 검토하십시오.
@@ -44,6 +45,8 @@ NOTE: ONTAP Mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux(RHEL) FIP
 
 
 
+[[https-iscsi-installation]]
+[[https-and-iscsi-installation-options-for-ontap-mediator]]
 === ONTAP Mediator의 HTTPS 및 iSCSI 설치 옵션
 
 * ONTAP Mediator에서는 SCST 패키지를 사용하여 MetroCluster IP 구성에서 통신을 위한 iSCSI를 제공합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. ONTAP Mediator 1.12부터는 iSCSI 대신 HTTPS를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다.
@@ -73,6 +76,7 @@ NOTE: ONTAP Mediator 1.8 및 이전 버전은 Red Hat Enterprise Linux(RHEL) FIP
 
 
 
+[[host-requirements]]
 == 호스트 요구 사항
 
 RHEL 또는 Rocky Linux를 설치하고 관련 저장소를 구성할 때 다음 요구 사항을 따르세요.
@@ -96,6 +100,7 @@ RHEL 또는 Rocky Linux를 설치하고 관련 저장소를 구성할 때 다음
 
 
 
+[[firewall-and-networking-requirements]]
 == 방화벽 및 네트워킹 요구 사항
 
 ONTAP Mediator는 특정 서비스와 통신하기 위해 여러 포트를 사용합니다.
@@ -173,6 +178,7 @@ NOTE: HTTPS를 사용하여 통신하는 SnapMirror 액티브 동기화 또는 M
 
 
 
+[[os-requirements]]
 == OS 요구 사항
 
 OS는 다음 요구 사항을 충족해야 합니다.
@@ -400,6 +406,7 @@ NOTE: 패키지는 사전 설치되거나 ONTAP 중재자 설치 프로그램에
 
 
 
+[[os-upgrade-and-kernel-compatibility-requirements]]
 === OS 업그레이드 및 커널 호환성 요구 사항
 
 ONTAP Mediator와 함께 SCST 패키지를 설치할 경우 다음과 같은 요구 사항이 적용됩니다.
@@ -425,6 +432,7 @@ NOTE: HTTPS만 지원하는 ONTAP Mediator 1.12 이상을 설치한 경우 SCST 
 ====
 
 
+[[install-ontap-mediator-when-uefi-secure-boot-is-enabled]]
 == UEFI 보안 부팅이 활성화된 경우 ONTAP mediator를 설치합니다
 
 ONTAP mediator는 UEFI 보안 부팅이 활성화되어 있거나 활성화되지 않은 시스템에 설치할 수 있습니다.

@@ -17,6 +17,7 @@ TCP 또는 TCP/IPv6 네트워크를 통해 3방향 NDMP 백업 또는 복구 작
 
 
 
+[[ndmp-data-connection-type-when-cab-extension-is-supported-by-the-backup-application]]
 == 백업 애플리케이션에서 CAB 확장을 지원하는 경우의 NDMP 데이터 연결 유형입니다
 
 |===
@@ -52,6 +53,7 @@ TCP, TCP/IPv6
 |===
 
 
+[[ndmp-data-connection-type-when-cab-extension-is-not-supported-by-the-backup-application]]
 == 백업 애플리케이션에서 CAB 확장을 지원하지 않는 경우 NDMP 데이터 연결 유형입니다
 
 |===

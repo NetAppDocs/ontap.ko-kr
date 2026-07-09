@@ -15,6 +15,7 @@ ONTAP 9.11.1부터 FlexCache 볼륨의 '-atime-update' 필드를 활성화하여
 
 
 
+[[overview]]
 == 개요
 
 ONTAP는 읽기, READLINK 및 readdir을 사용하여 읽은 파일 및 디렉터리에 대한 액세스 시간 업데이트를 관리할 수 있는 "-atime-update"라는 볼륨 수준 필드를 제공합니다. aTime은 자주 액세스하지 않는 파일과 디렉토리의 데이터 수명 주기 결정에 사용됩니다. 자주 액세스하지 않는 파일은 결국 아카이브 스토리지로 마이그레이션되며 나중에 테이프로 이동하는 경우가 많습니다.
@@ -23,6 +24,7 @@ atime-update 필드는 기존 볼륨과 새로 생성된 FlexCache 볼륨에서 
 
 
 
+[[before-you-begin]]
 == 시작하기 전에
 
 * 모든 FlexCache 볼륨에서 ONTAP 9.11.1 이상이 실행되고 있어야 합니다.
@@ -31,6 +33,7 @@ atime-update 필드는 기존 볼륨과 새로 생성된 FlexCache 볼륨에서 
 
 
 
+[[about-this-task]]
 == 이 작업에 대해
 
 '-atime-update-period'를 86400초로 설정하면 파일에 대해 수행된 읽기 유사 작업의 수에 관계없이 24시간 간격으로 한 번 이상의 액세스 시간을 업데이트할 수 없습니다.

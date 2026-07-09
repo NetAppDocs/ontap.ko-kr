@@ -15,6 +15,7 @@ CIFS 서버에서 IPv6를 사용하려면 ONTAP가 CIFS 서비스에 대한 SMB 
 
 
 
+[[windows-client-and-server-support]]
 == Windows 클라이언트 및 서버 지원
 
 ONTAP는 IPv6를 지원하는 Windows 서버 및 클라이언트를 지원합니다. 다음은 Microsoft Windows 클라이언트 및 서버 IPv6 지원에 대한 설명입니다.
@@ -37,6 +38,7 @@ NT 도메인은 IPv6에서 지원되지 않습니다.
 ====
 
 
+[[additional-cifs-services-support]]
 == 추가 CIFS 서비스 지원
 
 ONTAP는 SMB 파일 공유 및 Active Directory 서비스에 대한 IPv6 지원 외에도 다음에 대한 IPv6 지원을 제공합니다.
@@ -51,6 +53,7 @@ ONTAP는 SMB 파일 공유 및 Active Directory 서비스에 대한 IPv6 지원 
 
 
 
+[[name-service-and-authentication-service-support]]
 == 네임 서비스 및 인증 서비스 지원
 
 IPv6에서는 다음 이름 서비스와의 통신이 지원됩니다.

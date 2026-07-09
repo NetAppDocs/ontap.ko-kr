@@ -820,6 +820,7 @@ fapolicyd not installed or no rules.d directory found, skipping fapolicyd config
 ====
 
 
+[[register-the-security-key-for-uefi-secure-boot]]
 == UEFI 보안 부팅을 위한 보안 키 등록
 
 ONTAP Mediator 1.4부터 UEFI 시스템에서 보안 부팅 메커니즘이 활성화됩니다.  보안 부팅이 활성화된 경우 설치 후 보안 키를 등록하기 위한 추가 단계를 거쳐야 합니다.
@@ -858,6 +859,7 @@ README.module-signing  scst_module_key.der  scst_module_key.priv`
 
 
 
+[[signing-scst-kernel-modules]]
 == SCST 커널 모듈 서명
 
 ONTAP Mediator가 설치된 후 systemctl status가 `mediator-scst` 실패(비활성)로 표시되는 경우 다음 단계에 따라 SCST 커널 모듈에 서명하세요.

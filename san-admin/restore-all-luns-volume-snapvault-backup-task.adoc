@@ -87,6 +87,7 @@ Do you want to continue? {y|n}: y
 
 
 
+[[restoring-a-volume-from-a-snapvault-backup]]
 == SnapVault 백업에서 볼륨 복원
 
 다음 예에서는 스냅샷이 생성된 후에 LUN_D라는 LUN이 볼륨에 추가되었습니다. 스냅샷에서 전체 볼륨을 복구한 후 LUN_D가 더 이상 나타나지 않습니다.

@@ -26,6 +26,7 @@ summary: 환경 변수는 NDMP 지원 백업 애플리케이션과 스토리지 
 
 
 
+[[environment-variables-supported-by-ontap]]
 == ONTAP에서 지원하는 환경 변수입니다
 
 ONTAP 연관된 기본값이 있는 환경 변수를 지원합니다.  하지만 이러한 기본값을 수동으로 수정할 수 있습니다.
@@ -41,6 +42,7 @@ ONTAP 연관된 기본값이 있는 환경 변수를 지원합니다.  하지만
 ====
 
 
+[[environment-variables-supported-for-dump-and-smtape]]
 == 덤프 및 SMTape에 대해 지원되는 환경 변수입니다
 
 |===
@@ -118,6 +120,7 @@ N
 |===
 
 
+[[environment-variables-supported-for-dump]]
 == 덤프에 대해 지원되는 환경 변수입니다
 
 |===
@@ -500,6 +503,7 @@ Y를 누릅니다
 |===
 
 
+[[environment-variables-supported-for-smtape]]
 == SMTape에 지원되는 환경 변수입니다
 
 |===

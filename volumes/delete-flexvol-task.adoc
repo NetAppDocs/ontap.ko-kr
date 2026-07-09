@@ -39,6 +39,7 @@ summary: ONTAP CLI를 사용하여 더 이상 필요하지 않은 FlexVol volume
 
 
 
+[[result]]
 == 결과
 
 연관된 할당량 정책 및 qtree와 함께 볼륨이 삭제됩니다.

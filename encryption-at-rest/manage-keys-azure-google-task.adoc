@@ -35,6 +35,7 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 
 
 
+[[enable-external-key-management]]
 == 외부 키 관리를 활성화합니다
 
 외부 키 관리를 사용하는 방법은 사용하는 특정 키 관리자에 따라 다릅니다. 해당 키 관리자 및 환경의 탭을 선택합니다.

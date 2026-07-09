@@ -15,6 +15,7 @@ summary: 내보내기 정책의 예를 검토하여 ONTAP에서 내보내기 정
 
 
 
+[[sample-ontap-implementation-of-a-7-mode-export]]
 == 7-Mode 내보내기의 ONTAP 구현 예
 
 다음 예에서는 '/etc/export' 파일에 나타나는 7-Mode 내보내기를 보여 줍니다.
@@ -179,6 +180,7 @@ Sys(AUTH_SYS로 인증받은 클라이언트)
 
 
 
+[[sample-consolidation-of-7-mode-exports]]
 == 7-Mode 엑스포트 통합의 예
 
 다음 예에서는 10개의 qtree당 한 줄이 포함된 7-Mode '/etc/export' 파일을 보여 줍니다.

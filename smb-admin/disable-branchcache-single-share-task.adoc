@@ -17,6 +17,7 @@ SMB 공유의 BranchCache가 이후에 처음 설정된 후 비활성화되면 O
 
 
 
+[[disable-branchcache-on-a-single-ontap-smb-share]]
 == 단일 ONTAP SMB 공유에서 BranchCache 비활성화
 
 이전에 캐시된 콘텐츠를 제공한 특정 공유에 캐싱 서비스를 제공하지 않으려면 기존 SMB 공유에서 BranchCache를 사용하지 않도록 설정할 수 있습니다.
@@ -83,6 +84,7 @@ Vscan File-Operations Profile: standard
 ----
 
 
+[[stop-automatic-caching-on-all-ontap-smb-shares]]
 == 모든 ONTAP SMB 공유에서 자동 캐싱 중지
 
 BranchCache 구성에서 각 SVM(스토리지 가상 머신)의 모든 SMB 공유에 대한 캐싱을 자동으로 설정하는 경우 BranchCache 구성을 수정하여 모든 SMB 공유의 컨텐츠를 자동으로 캐싱하지 않도록 할 수 있습니다.

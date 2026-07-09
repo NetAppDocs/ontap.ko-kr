@@ -15,6 +15,7 @@ snapshot reserve_는 스냅샷을 위한 디스크 공간의 비율을 기본값
 
 
 
+[[when-to-increase-the-snapshot-reserve]]
 == 스냅숏 예비 공간을 늘릴 시기
 
 스냅숏 예비 공간을 증가할지 여부를 결정할 때 스냅숏은 마지막 스냅숏이 만들어진 이후 파일의 변경 내용만 기록한다는 점을 기억해야 합니다. 활성 파일 시스템의 블록이 수정되거나 삭제될 때만 디스크 공간을 사용합니다.
@@ -32,6 +33,7 @@ image:how-snapshots-consume-disk-space.gif["스냅샷이 사용하는 디스크 
 
 
 
+[[how-deleting-protected-files-can-lead-to-less-file-space-than-expected]]
 == 보호된 파일을 삭제하면 예상보다 파일 공간이 줄어들 수 있습니다
 
 스냅샷은 해당 블록을 사용한 파일을 삭제한 후에도 해당 블록을 가리킵니다. 따라서 스냅숏 예비 공간이 소진되면 전체 파일 시스템을 삭제하면 사용 중인 파일 시스템보다 사용 가능한 공간이 줄어드는 직관적인 결과가 발생할 수 있습니다.

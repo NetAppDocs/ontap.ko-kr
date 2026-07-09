@@ -40,12 +40,14 @@ image:flexgroup1.png["System Manager의 파일 시스템 분석 스크린샷"]
 
 
 
+[[supported-volume-types]]
 == 지원되는 볼륨 유형
 
 파일 시스템 분석은 FlexCache 캐시 및 SnapMirror 대상 볼륨을 제외하고 활성 NAS 데이터가 있는 볼륨에 대한 가시성을 제공하도록 설계되었습니다.
 
 
 
+[[file-system-analytics-feature-availability]]
 == 파일 시스템 분석 기능 가용성
 
 각 ONTAP 릴리즈는 파일 시스템 분석 범위를 확장합니다.
@@ -92,6 +94,7 @@ image:flexgroup1.png["System Manager의 파일 시스템 분석 스크린샷"]
 |===
 
 
+[[learn-more-about-file-system-analytics]]
 == 파일 시스템 분석에 대해 자세히 알아보십시오
 
 video::0oRHfZIYurk[youtube,width=848,height=480]

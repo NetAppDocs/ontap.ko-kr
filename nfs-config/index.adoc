@@ -32,6 +32,7 @@ System Manager를 사용하여 NAS 멀티 프로토콜 액세스를 구성하려
 
 
 
+[[other-ways-to-do-this-in-ontap]]
 == ONTAP에서 이 작업을 수행하는 다른 방법
 
 |===

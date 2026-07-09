@@ -15,6 +15,7 @@ summary: SSH 공개 키 인증의 경우 관리자 계정의 공개 키와 X.509
 
 
 
+[[associate-a-public-key-and-x-509-certificate-with-an-administrator-account]]
 == 공개 키와 X.509 인증서를 관리자 계정에 연결합니다
 
 ONTAP 9.13.1 부터는 X.509 인증서를 관리자 계정과 연결된 공개 키와 연결할 수 있습니다. 이렇게 하면 해당 계정에 대한 SSH 로그인 시 인증서 만료 또는 해지 확인을 추가로 보호할 수 있습니다.
@@ -64,6 +65,7 @@ Please enter Certificate: Press <Enter> when done
 ----
 
 
+[[remove-the-certificate-association-from-the-ssh-public-key-for-an-administrator-account]]
 == 관리자 계정의 SSH 공개 키에서 인증서 연결을 제거합니다
 
 공개 키를 유지하면서 계정의 SSH 공개 키에서 현재 인증서 연결을 제거할 수 있습니다.
@@ -94,6 +96,7 @@ cluster1::> security login publickey modify -vserver engData2 -username svmadmin
 ----
 
 
+[[remove-the-public-key-and-certificate-association-from-an-administrator-account]]
 == 관리자 계정에서 공개 키 및 인증서 연결을 제거합니다
 
 계정에서 현재 공개 키 및 인증서 구성을 제거할 수 있습니다.

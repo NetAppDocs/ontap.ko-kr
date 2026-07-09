@@ -133,6 +133,7 @@ system service-processor image modify -node <node_name> -autoupdate true
 
 
 
+[[video-automatic-firmware-update]]
 == 비디오: 자동 펌웨어 업데이트
 
 ONTAP 9.10.1부터 제공되는 자동 펌웨어 업데이트 기능을 살펴보십시오.

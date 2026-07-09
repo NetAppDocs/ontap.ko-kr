@@ -29,6 +29,7 @@ summary: 자동 테이크오버 기능은 지원되는 모든 NetApp FAS, AFF, A
 |===
 
 
+[[enable-email-notification-if-the-takeover-capability-is-disabled]]
 == 테이크오버 기능이 비활성화된 경우 이메일 알림을 활성화하십시오
 
 탈취 기능이 비활성화된 경우 프롬프트 알림을 받으려면 ""탈취 불가능" EMS 메시지에 대한 자동 이메일 알림을 사용하도록 시스템을 구성해야 합니다.

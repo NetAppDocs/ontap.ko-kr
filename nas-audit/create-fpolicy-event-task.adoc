@@ -18,6 +18,7 @@ FPolicy 이벤트를 완료해야 link:../nas-audit/fpolicy-event-config-workshe
 
 
 
+[[create-the-fpolicy-event]]
 == FPolicy 이벤트를 생성합니다
 
 . 'vserver FPolicy event create' 명령을 사용하여 FPolicy 이벤트를 생성합니다.
@@ -42,6 +43,7 @@ vs1.example.com   event1    cifs      open, close,  -         false
 
 
 
+[[create-the-fpolicy-access-denied-events]]
 == FPolicy 액세스 거부 이벤트를 생성합니다
 
 ONTAP 9.13.1 부터는 권한이 없어 실패한 파일 작업에 대한 알림을 받을 수 있습니다. 이러한 알림은 보안, 랜섬웨어 보호 및 거버넌스에 유용합니다.

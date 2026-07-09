@@ -27,6 +27,7 @@ ONTAP CLI를 사용하여 이 고급 구성을 수행합니다. 명령에서 두
 
 
 
+[[create-a-2x2x2-inter-svm-hdfa-configuration]]
 == 2x2x2 Inter-SVM HDFA 구성을 생성합니다
 
 . 그림 1과 같이 2x2x2x2 SVM 간 HDFA 구성을 지원하려면 준비 시트를 작성합니다.
@@ -65,6 +66,7 @@ cache::> net int create -vserver svm1 -home-port e0a -home-node node1 -address 1
 
 
 
+[[create-a-4x1x4-intra-svm-hdfa]]
 == 4x1x4 내부 SVM HDFA를 생성합니다
 
 . 그림 2와 같이 4x1x4 SVM 간 HDFA 구성을 지원하려면 준비 시트를 작성합니다.

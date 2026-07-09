@@ -15,6 +15,7 @@ summary: 이 워크시트를 사용하여 FPolicy 외부 엔진 구성 프로세
 
 
 
+[[information-for-a-basic-external-engine-configuration]]
 == 기본 외부 엔진 구성에 대한 정보
 
 각 매개 변수 설정을 외부 엔진 구성에 포함할지 여부를 기록한 다음 포함하려는 매개 변수의 값을 기록해야 합니다.
@@ -122,6 +123,7 @@ summary: 이 워크시트를 사용하여 FPolicy 외부 엔진 구성 프로세
 |===
 
 
+[[information-for-advanced-external-engine-parameters]]
 == 고급 외부 엔진 매개 변수에 대한 정보입니다
 
 고급 매개 변수를 사용하여 외부 엔진을 구성하려면 고급 권한 모드에서 구성 명령을 입력해야 합니다.

@@ -275,6 +275,7 @@ NA/NA Data ONTAP 이벤트 ID 9998
 |===
 
 
+[[additional-information-about-event-4656]]
 == 이벤트 4656에 대한 추가 정보
 
 감사 XML 이벤트의 HandleID 태그에는 액세스한 개체(파일 또는 디렉터리)의 핸들이 들어 있습니다. evtx 4656 이벤트에 대한 "HandleID" 태그는 open 이벤트가 새 개체를 만들거나 기존 개체를 여는 데 사용되는지 여부에 따라 다른 정보를 포함합니다.

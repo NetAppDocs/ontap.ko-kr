@@ -15,6 +15,7 @@ summary: 이 워크시트를 사용하여 SMB 구성에서 SQL Server 및 Hyper-
 
 
 
+[[information-about-smb-shares-properties-and-configuration-settings]]
 == SMB 공유 속성 및 구성 설정에 대한 정보입니다
 
 각 공유에 대해 다음 정보를 지정해야 합니다.
@@ -49,6 +50,7 @@ SVM 이름은 모든 공유에서 동일합니다
 
 
 
+[[information-about-share-paths]]
 == 공유 경로에 대한 정보입니다
 
 원격 VSS를 사용하여 Hyper-V 파일을 백업하는 경우 Hyper-V 서버에서 가상 머신 파일이 저장된 스토리지 위치로 SMB 연결을 설정할 때 사용할 공유 경로를 선택해야 합니다. 네임스페이스에서 어느 지점에서나 공유를 생성할 수 있지만 Hyper-V 서버가 사용하는 공유의 경로에 접합된 볼륨이 포함되어서는 안 됩니다. 교차점이 포함된 공유 경로에서는 섀도 복사본 작업을 수행할 수 없습니다.
@@ -77,6 +79,7 @@ vs1     vol4          true     /data2/vol4          RW_volume
 ====
 
 
+[[planning-worksheet]]
 == 계획 워크시트
 
 |===

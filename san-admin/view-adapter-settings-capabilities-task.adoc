@@ -15,6 +15,7 @@ summary: 특정 명령을 사용하여 FC/UTA 어댑터에 대한 정보를 볼 
 
 
 
+[[fc-target-adapter]]
 == FC 타겟 어댑터
 
 .단계
@@ -29,6 +30,7 @@ summary: 특정 명령을 사용하여 FC/UTA 어댑터에 대한 정보를 볼 
 
 
 
+[[unified-target-adapter-uta-x1143a-r6]]
 == UTA(Unified Target Adapter) X1143A-R6
 
 .단계

@@ -17,6 +17,7 @@ FC 이니시에이터 어댑터 명령은 노드 레벨에서만 작동합니다
 
 
 
+[[commands-for-managing-fc-target-adapters]]
 == FC 타겟 어댑터를 관리하는 명령입니다
 
 [cols="2*"]
@@ -74,6 +75,7 @@ FC 프로토콜이 실행된 시간을 표시합니다
 |===
 
 
+[[commands-for-managing-fc-initiator-adapters]]
 == FC 이니시에이터 어댑터를 관리하는 명령입니다
 
 [cols="2*"]
@@ -103,6 +105,7 @@ FC 프로토콜이 실행된 시간을 표시합니다
 |===
 
 
+[[commands-for-managing-onboard-fc-adapters]]
 == 온보드 FC 어댑터를 관리하는 명령입니다
 
 [cols="2*"]

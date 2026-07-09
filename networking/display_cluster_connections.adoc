@@ -18,6 +18,7 @@ summary: 클러스터의 모든 활성 또는 수신 대기 연결을 보거나 
 
 
 
+[[display-active-connections-by-client-cluster-administrators-only]]
 == 클라이언트별 활성 연결 표시(클러스터 관리자만 해당)
 
 클라이언트별로 활성 연결을 확인하여 특정 클라이언트가 사용 중인 노드를 확인하고 노드당 클라이언트 수 간의 불균형을 확인할 수 있습니다.
@@ -59,6 +60,7 @@ node3   vs1             customer.example.org       1
 ....
 
 
+[[display-active-connections-by-protocol-cluster-administrators-only]]
 == 프로토콜별 활성 연결 표시(클러스터 관리자만 해당)
 
 노드의 프로토콜(TCP 또는 UDP)별로 활성 연결 수를 표시하여 클러스터 내의 프로토콜 사용량을 비교할 수 있습니다.
@@ -97,6 +99,7 @@ node3
 ....
 
 
+[[display-active-connections-by-service-cluster-administrators-only]]
 == 서비스별 활성 연결 표시(클러스터 관리자만 해당)
 
 클러스터의 각 노드에 대해 서비스 유형(예: NFS, SMB, 마운트 등)별로 활성 연결 수를 표시할 수 있습니다. 이 기능은 클러스터 내의 서비스 사용을 비교하여 노드의 운영 워크로드를 확인하는 데 유용합니다.
@@ -136,6 +139,7 @@ node3
 ....
 
 
+[[display-active-connections-by-lif-on-a-node-and-svm]]
 == LIF를 사용하여 노드 및 SVM에 활성 연결을 표시합니다
 
 노드 및 SVM(스토리지 가상 머신)별로 각 LIF의 활성 연결 수를 표시하여 클러스터 내 LIF 간 연결 불균형을 확인할 수 있습니다.
@@ -176,6 +180,7 @@ node3
 ....
 
 
+[[display-active-connections-in-a-cluster]]
 == 클러스터의 활성 연결을 표시합니다
 
 클러스터의 활성 연결에 대한 정보를 표시하여 개별 연결에 사용되는 LIF, 포트, 원격 호스트, 서비스, SVM(스토리지 가상 머신) 및 프로토콜을 볼 수 있습니다.
@@ -223,6 +228,7 @@ vs1      data1:111           host1.aa.com:12017  UDP/port-map
 ....
 
 
+[[display-listening-connections-in-a-cluster]]
 == 클러스터의 수신 대기 연결을 표시합니다
 
 클러스터에서 수신 대기 중인 연결에 대한 정보를 표시하여 지정된 프로토콜 및 서비스의 연결을 수락하는 LIF 및 포트를 볼 수 있습니다.

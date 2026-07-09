@@ -26,6 +26,7 @@ NOTE: 일부 노드만 ONTAP 9.16.1 P4 이상으로 업그레이드된 환경에
 
 
 
+[[enable-or-disable-cross-cluster-auditing]]
 == 클러스터 간 감사 활성화 또는 비활성화
 
 .단계
@@ -58,6 +59,7 @@ security audit show
 
 
 
+[[effects-of-enabling-get-auditing]]
 == GET 감사 활성화의 효과
 
 ONTAP 9.17.1부터  https://docs.netapp.com/us-en/ontap-cli/security-audit-modify.html["CLI, HTTP, ONTAPI GET 감사 활성화"^] 피어링된 클러스터에서는 클러스터 간 사용자 시작 GET 요청에 대한 감사도 활성화할 수 있습니다. 이전 ONTAP 버전에서는 GET 감사가 로컬 클러스터의 요청에만 적용되었습니다. ONTAP 9.17.1에서는  `cluster-peer` 옵션 설정  `on` 로컬 클러스터와 클러스터 간 요청이 모두 감사합니다.

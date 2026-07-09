@@ -15,18 +15,21 @@ CIFS 서버에서 Microsoft의 폴더 리디렉션을 사용하려면 먼저 ONT
 
 
 
+[[ontap-version-requirements]]
 == ONTAP 버전 요구 사항
 
 ONTAP는 Microsoft 폴더 리디렉션을 지원합니다.
 
 
 
+[[smb-protocol-version-requirements]]
 == SMB 프로토콜 버전 요구 사항
 
 SVM(스토리지 가상 시스템)의 경우 ONTAP는 모든 버전의 SMB에서 Microsoft의 폴더 리디렉션을 지원합니다.
 
 
 
+[[windows-client-requirements]]
 == Windows 클라이언트 요구 사항
 
 사용자가 Microsoft의 폴더 리디렉션을 사용하려면 Windows 클라이언트가 이 기능을 지원해야 합니다.

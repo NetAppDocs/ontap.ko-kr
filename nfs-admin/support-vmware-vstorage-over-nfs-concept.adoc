@@ -15,6 +15,7 @@ ONTAP는 NFS 환경에서 특정 VMware VAAI(vStorage APIs for Array Integration
 
 
 
+[[supported-features]]
 == 지원되는 기능
 
 지원되는 기능은 다음과 같습니다.
@@ -31,6 +32,7 @@ VMDK 파일용 공간을 예약하여 스토리지 공간을 보장합니다.
 
 
 
+[[limitations]]
 == 제한 사항
 
 VMware vStorage over NFS에는 다음과 같은 제한 사항이 있습니다.

@@ -24,6 +24,7 @@ summary: 애플리케이션 및 관리 요구사항에 따라 FlexVol 볼륨과 
 
 
 
+[[space-reserved-files-or-luns-with-thick-volume-provisioning]]
 == 일반 볼륨 프로비저닝이 있는 공간 예약 파일 또는 LUN
 
 * 이점: *
@@ -40,6 +41,7 @@ summary: 애플리케이션 및 관리 요구사항에 따라 FlexVol 볼륨과 
 
 
 
+[[non-space-reserved-files-or-luns-with-thin-volume-provisioning]]
 == 씬 볼륨 프로비저닝이 있는 공간 예약 파일이 아닌 LUN
 
 * 이점: *
@@ -56,6 +58,7 @@ summary: 애플리케이션 및 관리 요구사항에 따라 FlexVol 볼륨과 
 
 
 
+[[space-reserved-files-or-luns-with-semi-thick-volume-provisioning]]
 == 반씩 볼륨 프로비저닝을 사용하는 공간 예약 파일 또는 LUN
 
 * 이점: *

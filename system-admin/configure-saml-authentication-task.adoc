@@ -15,6 +15,7 @@ ONTAP 9.3부터 웹 서비스에 대한 SAML(Security Assertion Markup Language)
 
 
 
+[[enable-saml-authentication]]
 == SAML 인증을 활성화합니다
 
 System Manager 또는 CLI를 사용하여 SAML 인증을 활성화하려면 다음 단계를 수행하십시오. 클러스터에서 ONTAP 9.7 이하를 실행 중인 경우에는 System Manager에서 따라야 하는 단계가 다릅니다. 시스템에서 사용할 수 있는 System Manager 온라인 도움말을 참조하십시오.
@@ -202,6 +203,7 @@ admin1         http        password      backup           no     none
 ====
 
 
+[[disable-saml-authentication]]
 == SAML 인증을 비활성화합니다
 
 외부 ID 공급자(IdP)를 통한 원격 System Manager 사용자 인증을 중지하려면 SAML 인증을 비활성화할 수 있습니다. SAML 인증을 비활성화하면 로컬 사용자 인증 또는 Active Directory 및 LDAP와 같은 구성된 디렉터리 서비스 공급자가 사용자를 인증하는 데 사용됩니다.
@@ -235,6 +237,7 @@ admin1         http        password      backup           no     none
 ====
 
 
+[[configure-third-party-idp]]
 == 타사 IdP 구성
 
 .이 작업에 대해
@@ -334,6 +337,7 @@ ONTAP 에서 SAML을 활성화할 때 제공된 호스트 메타데이터 XML을
 ====
 
 
+[[troubleshoot-issues-with-saml-configuration]]
 == SAML 구성 관련 문제를 해결합니다
 
 SAML(Security Assertion Markup Language) 인증을 구성하지 못한 경우 SAML 구성이 실패한 각 노드를 수동으로 복구하고 장애를 복구할 수 있습니다. 복구 프로세스 중에 웹 서버가 다시 시작되고 활성 HTTP 연결 또는 HTTPS 연결이 중단됩니다.

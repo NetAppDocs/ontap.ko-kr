@@ -88,6 +88,7 @@ vs1      10.0.0.51    up      Response time (msec): 2
 ....
 
 
+[[configure-dynamic-dns-on-the-svm]]
 == SVM에서 동적 DNS를 구성합니다
 
 Active Directory 통합 DNS 서버가 DNS에 있는 NFS 또는 SMB 서버의 DNS 레코드를 동적으로 등록하도록 하려면 SVM에서 DDNS(동적 DNS)를 구성해야 합니다.

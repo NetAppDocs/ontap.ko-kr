@@ -15,6 +15,7 @@ pNFS는 메타데이터와 데이터 경로를 분리하고, 데이터 지역화
 
 
 
+[[challenges-of-traditional-nfs-and-benefits-of-pnfs]]
 == 기존 NFS의 과제와 pNFS의 이점
 
 다음 표는 기존 NFS의 문제점을 보여주고 ONTAP 의 pNFS가 이를 어떻게 해결하는지 설명합니다.
@@ -34,6 +35,7 @@ pNFS는 메타데이터와 데이터 경로를 분리하고, 데이터 지역화
 |===
 
 
+[[configuration-requirements]]
 == 구성 요구 사항
 
 NetApp ONTAP 에서 pNFS를 구성하려면 다음이 필요합니다.

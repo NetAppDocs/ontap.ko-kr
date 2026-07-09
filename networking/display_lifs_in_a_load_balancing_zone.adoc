@@ -50,6 +50,7 @@ zone_name은 load balancing zone의 이름을 지정한다.
 |===
 
 
+[[examples-of-displaying-load-balancing-zones-for-lifs]]
 == LIF의 로드 밸런싱 존 표시 예
 
 다음 명령을 실행하면 SVM vs0에 대한 로드 밸런싱 존 storage.company.com 에 있는 모든 LIF의 세부 정보가 표시됩니다.

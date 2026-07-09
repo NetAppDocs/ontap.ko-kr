@@ -20,6 +20,7 @@ ONTAP 9.15.1부터 FlexCache 볼륨에서 FlexCache Write-back 모드를 활성�
 
 
 
+[[create-a-new-flexcache-volume-with-write-back-enabled]]
 == Write-back이 설정된 새 FlexCache 볼륨을 생성합니다
 
 .단계
@@ -142,6 +143,7 @@ volume flexcache create -vserver <cache_vserver_name> -volume <cache_flexgroup_n
 ====
 
 
+[[enable-flexcache-write-back-on-an-existing-flexcache-volume]]
 == 기존 FlexCache 볼륨에서 FlexCache write-back을 활성화합니다
 
 ONTAP System Manager 또는 ONTAP CLI를 사용하여 기존 FlexCache 볼륨에서 FlexCache write-back을 활성화할 수 있습니다.
@@ -170,6 +172,7 @@ volume flexcache config modify -volume <cache_flexgroup_name> -is-writeback-enab
 ====
 
 
+[[check-if-flexcache-write-back-is-enabled]]
 == FlexCache write-back이 활성화되어 있는지 확인한다
 
 .단계
@@ -198,6 +201,7 @@ volume flexcache config show -volume <cache_flexgroup_name> -fields is-writeback
 ====
 
 
+[[disable-write-back-on-a-flexcache-volume]]
 == FlexCache 볼륨에서 write-back을 비활성화합니다
 
 FlexCache 볼륨을 삭제하려면 먼저 FlexCache Write-Back을 비활성화해야 합니다.

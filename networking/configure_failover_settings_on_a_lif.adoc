@@ -55,6 +55,7 @@ network interface modify -vserver <vserver_name> -lif <lif_name> -failover-polic
 ....
 
 
+[[examples-of-configuring-failover-settings-and-disabling-failover]]
 == 페일오버 설정 구성 및 페일오버 해제의 예
 
 다음 명령은 페일오버 정책을 브로드캐스트 도메인 전체에 설정하고 페일오버 그룹 fg3의 포트를 SVM vs3의 LIF data1의 페일오버 타겟으로 사용합니다.

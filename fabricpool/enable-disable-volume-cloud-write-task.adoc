@@ -24,6 +24,7 @@ ONTAP 9.14.1부터는 FabricPool의 신규 또는 기존 볼륨에 있는 클라
 
 
 
+[[enable-writing-directly-to-the-cloud-during-volume-creation]]
 == 볼륨 생성 시 클라우드에 직접 쓸 수 있습니다
 
 .단계
@@ -51,6 +52,7 @@ volume create -vserver vs1 -volume vol1 -is-cloud-write-enabled true -aggregate 
 
 
 
+[[enable-writing-directly-to-the-cloud-on-an-existing-volume]]
 == 기존 볼륨의 클라우드에 직접 쓸 수 있습니다
 
 .단계
@@ -78,6 +80,7 @@ volume modify -vserver vs1 -volume vol1 -is-cloud-write-enabled true
 
 
 
+[[disable-writing-directly-to-the-cloud-on-a-volume]]
 == 볼륨에 있는 클라우드에 직접 쓰기를 비활성화합니다
 
 .단계

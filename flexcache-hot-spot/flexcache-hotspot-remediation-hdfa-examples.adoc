@@ -18,19 +18,23 @@ NOTE: HDFA는 다음 구문을 사용하여 표현됩니다. `HDFs per HDFA x no
 
 
 
+[[2x2x2-hdfa-configuration]]
 == 2x2x2 HDFA 구성
 
 <<Figure-1,그림 1>> 은 2x2x2x2 HDFA 구성의 예입니다. 두 개의 HDFS, 각각 두 개의 노드를 스패닝하고 각 노드는 두 개의 구성 볼륨을 포함합니다. 이 예에서 각 클라이언트는 핫 파일에 직접 액세스할 확률이 50%입니다. 네 고객 중 두 명은 동서 트래픽을 가지고 있습니다. 중요한 것은 이제 두 개의 HDFS가 존재한다는 것입니다. 즉, 핫 파일의 두 가지 캐시를 의미합니다. 현재 핫 파일에 대한 액세스를 처리하는 CPU/볼륨 선호도가 2개 있습니다.
 
+[[Figure-1]]
 .그림 1: 2x2x2 HDFA 구성
 image:flexcache-hotspot-hdfa-2x2x2.png["그림 1: 2x2x2 HDFA 구성"]
 
 
 
+[[4x1x4-hdfa-configuration]]
 == 4x1x4 HDFA 구성
 
 <<Figure-2,그림 2>> 최적의 구성을 나타냅니다. 4x1x4 HDFA 구성의 한 예로 4개의 HDFS가 단일 노드에 포함되고 각 노드는 4개의 구성 요소를 포함합니다. 이 예에서는 각 클라이언트가 핫 파일의 캐시에 직접 액세스할 수 있도록 보장합니다. 4개의 다른 노드에 4개의 캐시된 파일이 있으므로 4개의 서로 다른 CPU/볼륨 선호도가 핫 파일에 대한 서비스 액세스를 지원합니다. 또한 동서 트래픽이 생성되지 않습니다.
 
+[[Figure-2]]
 .그림 2: 4x1x4 HDFA 구성
 image:flexcache-hotspot-hdfa-4x1x4.png["그림 2: 4x1x4 HDFA"]
 

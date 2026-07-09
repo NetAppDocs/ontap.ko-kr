@@ -15,6 +15,7 @@ CIFS 서버에서 DAC(동적 액세스 제어)를 사용하려면 ONTAP가 Activ
 
 
 
+[[supported-for-dynamic-access-control]]
 == 동적 액세스 제어에 지원됩니다
 
 ONTAP는 CIFS 서버에서 동적 액세스 제어가 설정된 경우 다음 기능을 지원합니다.
@@ -66,6 +67,7 @@ ONTAP CLI를 사용하여 중앙 액세스 정책 보안에 대한 정보 표시
 |===
 
 
+[[unsupported-for-dynamic-access-control]]
 == 동적 액세스 제어에 지원되지 않습니다
 
 CIFS 서버에서 동적 액세스 제어가 설정된 경우 ONTAP는 다음 기능을 지원하지 않습니다.

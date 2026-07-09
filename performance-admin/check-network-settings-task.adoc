@@ -15,6 +15,7 @@ summary: 스토리지 시스템의 네트워크 설정이 클라이언트 또는
 
 
 
+[[about-this-task]]
 == 이 작업에 대해
 
 브로드캐스트 도메인 내의 모든 포트는 MTU 크기가 동일하며 e0M 포트 처리 관리 트래픽을 제외하고 있습니다. 포트가 broadcast-domain의 일부인 경우 broadcast-domain modify 명령을 사용하여 수정된 broadcast-domain 내의 모든 포트에 대한 MTU를 변경한다.

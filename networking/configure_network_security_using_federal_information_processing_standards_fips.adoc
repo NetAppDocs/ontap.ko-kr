@@ -66,6 +66,7 @@ ONTAP 9.18.1은 SSL을 위한 ML-KEM, ML-DSA 및 SLH-DSA 포스트 양자 컴퓨
 
 
 
+[[enable-fips]]
 == FIPS를 사용하도록 설정합니다
 
 모든 보안 사용자는 시스템 설치 또는 업그레이드 직후 보안 구성을 조정하는 것이 좋습니다. SSL FIPS 모드가 활성화되면 ONTAP에서 외부 클라이언트 또는 ONTAP 외부의 서버 구성 요소로의 SSL 통신은 SSL에 FIPS 호환 암호화를 사용합니다.
@@ -102,6 +103,7 @@ Do you want to continue? {y|n}: y
 
 
 
+[[disable-fips]]
 == FIPS를 비활성화합니다
 
 ONTAP 9.18.1부터 ONTAP 의 SSL은 ML-KEM, ML-DSA, SLH-DSA 포스트 양자 컴퓨팅 암호화 알고리즘을 지원합니다.  이러한 알고리즘은 FIPS가 비활성화되어 있고 피어가 이를 지원하는 경우에만 사용할 수 있습니다.
@@ -134,6 +136,7 @@ Do you want to continue? {y|n}: y
 ....
 
 
+[[view-fips-compliance-status]]
 == FIPS 준수 상태를 봅니다
 
 전체 클러스터에서 현재 보안 구성 설정이 실행되고 있는지 확인할 수 있습니다.

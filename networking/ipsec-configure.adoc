@@ -21,6 +21,7 @@ NOTE: IPsec을 구성하기 전에 반드시 link:../networking/ipsec-prepare.ht
 
 
 
+[[enable-ipsec-on-the-cluster]]
 == 클러스터에서 IPsec을 활성화합니다
 
 클러스터에서 IPsec을 활성화하여 전송 중에 데이터가 지속적으로 암호화되고 안전하게 보호되도록 할 수 있습니다.
@@ -51,6 +52,7 @@ NOTE: IPsec을 구성하기 전에 반드시 link:../networking/ipsec-prepare.ht
 
 
 
+[[prepare-for-ipsec-policy-creation-with-certificate-authentication]]
 == 인증서 인증을 사용하여 IPsec 정책 생성을 준비합니다
 
 인증을 위해 사전 공유 키(PSK)만 사용하고 인증서 인증을 사용하지 않는 경우 이 단계를 건너뛸 수 있습니다.
@@ -86,6 +88,7 @@ ONTAP의 인증서에 대한 자세한 내용은 ONTAP 9 설명서의 보안 인
 
 
 
+[[define-the-security-policy-database-spd]]
 == 보안 정책 데이터베이스(SPD) 정의
 
 IPsec은 네트워크에서 트래픽이 흐르도록 허용하기 전에 SPD 항목을 필요로 합니다. PSK 또는 인증서를 인증에 사용하는지에 관계없이 적용됩니다.
@@ -131,6 +134,7 @@ ONTAP와 클라이언트 모두 일치하는 IPsec 정책을 설정하고 인증
 
 
 
+[[use-ipsec-identities]]
 == IPsec ID를 사용합니다
 
 사전 공유 키 인증 방법의 경우 호스트와 클라이언트 모두 strongSwan을 사용하고 호스트 또는 클라이언트에 대해 와일드카드 정책을 선택하지 않은 경우 로컬 및 원격 ID는 선택 사항입니다.
@@ -151,6 +155,7 @@ ONTAP 내에서 SPD 항목을 수정하거나 SPD 정책을 생성하는 동안 
 
 
 
+[[ipsec-multiple-client-configuration]]
 == IPsec 다중 클라이언트 구성
 
 적은 수의 클라이언트가 IPsec을 활용해야 하는 경우 각 클라이언트에 대해 단일 SPD 항목을 사용하는 것이 충분합니다. 하지만 수백 또는 수천 개의 클라이언트가 IPsec을 활용해야 하는 경우 NetApp은 IPsec 다중 클라이언트 구성을 사용할 것을 권장합니다.
@@ -205,6 +210,7 @@ NOTE: 서브넷 구성에서 단일 정책 항목을 사용하는 경우 해당 
 
 
 
+[[display-ipsec-statistics]]
 == IPsec 통계를 표시합니다
 
 협상을 통해 ONTAP SVM IP 주소와 클라이언트 IP 주소 간에 IKE SA(Security Association)라는 보안 채널을 설정할 수 있습니다. IPsec SAS는 실제 데이터 암호화 및 암호 해독 작업을 수행할 수 있도록 두 엔드포인트 모두에 설치됩니다. 통계 명령을 사용하여 IPsec SAS 및 IKE SAS의 상태를 확인할 수 있습니다.

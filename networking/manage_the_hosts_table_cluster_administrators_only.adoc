@@ -18,6 +18,7 @@ summary: admin SVM의 hosts 테이블에서 호스트 이름 항목을 관리합
 
 
 
+[[commands-for-managing-local-host-name-entries]]
 == 로컬 호스트 이름 항목을 관리하는 명령입니다
 
 'vserver services name-service dns hosts' 명령을 사용하여 DNS 호스트 테이블 항목을 생성, 수정 또는 삭제할 수 있습니다.

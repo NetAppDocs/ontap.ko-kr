@@ -24,6 +24,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 
 
 
+[[data-protection]]
 == 데이터 보호
 
 [cols="30%,70%"]
@@ -53,6 +54,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[file-access-protocols]]
 == 파일 액세스 프로토콜
 
 [cols="30%,70%"]
@@ -64,6 +66,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[networking]]
 == 네트워킹
 
 [cols="30%,70%"]
@@ -89,6 +92,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[s3-object-storage]]
 == S3 오브젝트 스토리지
 
 [cols="30%,70%"]
@@ -103,6 +107,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[san]]
 == 산
 
 [cols="30%,70%"]
@@ -117,6 +122,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[security]]
 == 보안
 
 [cols="30%,70%"]
@@ -131,6 +137,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[storage-efficiency]]
 == 스토리지 효율성
 
 [cols="30%,70%"]
@@ -145,6 +152,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[storage-resource-management-enhancements]]
 == 스토리지 리소스 관리 기능 향상
 
 [cols="30%,70%"]
@@ -168,6 +176,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[svm-management-enhancements]]
 == SVM 관리 개선 사항
 
 [cols="30%,70%"]
@@ -179,6 +188,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 |===
 
 
+[[system-manager]]
 == 시스템 관리자
 
 [cols="30%,70%"]

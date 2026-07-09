@@ -15,6 +15,7 @@ ONTAP 9.8부터 SnapLock 볼륨을 엔터프라이즈부터 규정 준수까지 
 
 
 
+[[create-a-snaplock-security-administrator-account]]
 == SnapLock 보안 관리자 계정을 만듭니다
 
 SnapLock 볼륨 이동을 수행하려면 SnapLock 보안 관리자 권한이 있어야 합니다. 이 권한은 ONTAP 9.8에 도입된 _SnapLock_역할을 통해 부여됩니다. 해당 역할이 아직 할당되지 않은 경우 클러스터 관리자에게 이 SnapLock 보안 역할을 가진 SnapLock 보안 사용자를 만들도록 요청할 수 있습니다.
@@ -47,6 +48,7 @@ cluster1::> security login create -vserver cluster1 -user-or-group-name SnapLock
 
 
 
+[[move-a-snaplock-volume]]
 == SnapLock 볼륨을 이동합니다
 
 'volume move' 명령을 사용하여 SnapLock 볼륨을 대상 애그리게이트로 이동할 수 있습니다.

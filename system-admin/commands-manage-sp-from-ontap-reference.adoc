@@ -15,6 +15,7 @@ ONTAP에서는 SP 네트워크 구성, SP 펌웨어 이미지, SP에 대한 SSH 
 
 
 
+[[commands-for-managing-the-sp-network-configuration]]
 == SP 네트워크 구성을 관리하는 명령입니다
 
 |===
@@ -113,6 +114,7 @@ SP API 서비스 구성을 표시합니다
 |===
 
 
+[[commands-for-managing-the-sp-firmware-image]]
 == SP 펌웨어 이미지를 관리하는 명령입니다
 
 |===
@@ -168,6 +170,7 @@ SP 펌웨어 이미지는 ONTAP와 함께 패키지로 제공됩니다. ONTAP와
 |===
 
 
+[[commands-for-managing-ssh-access-to-the-sp]]
 == SP에 대한 SSH 액세스를 관리하는 명령입니다
 
 |===
@@ -196,6 +199,7 @@ SP에 액세스할 수 있는 IP 주소를 표시합니다
 |===
 
 
+[[commands-for-general-sp-administration]]
 == 일반 SP 관리를 위한 명령입니다
 
 |===

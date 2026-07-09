@@ -17,6 +17,7 @@ NDMP 옵션과 명령을 사용하여 노드 레벨에서 NDMP를 관리할 수 
 
 
 
+[[commands-for-managing-ontap-node-scoped-ndmp-mode]]
 == ONTAP 노드 범위 NDMP 모드를 관리하기 위한 명령
 
 'system services ndmp' 명령을 사용하여 노드 레벨에서 NDMP를 관리할 수 있습니다. 이러한 명령 중 일부는 더 이상 사용되지 않으며 향후 주요 릴리즈에서 제거될 예정입니다.
@@ -180,6 +181,7 @@ NDMP 서비스 데몬을 중지합니다
 
 
 
+[[user-authentication-in-a-node-scoped-ndmp-mode]]
 == 노드 범위 NDMP 모드의 사용자 인증
 
 노드 범위 NDMP 모드에서는 NDMP 관련 자격 증명을 사용하여 스토리지 시스템에 액세스해야 테이프 백업 및 복구 작업을 수행할 수 있습니다.

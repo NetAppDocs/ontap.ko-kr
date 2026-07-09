@@ -48,6 +48,7 @@ ONTAP 9.18.1부터 HA 쌍 노드 간에 암호화된 통신을 구성할 수 있
 
 
 
+[[cluster-resiliency-and-diagnostic-improvements]]
 == 클러스터 복원력 및 진단 기능 향상
 
 ONTAP 9.9.1부터 다음과 같은 복원력과 진단 기능이 클러스터 작동을 향상시킵니다.

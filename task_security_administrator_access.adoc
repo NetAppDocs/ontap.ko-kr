@@ -29,6 +29,7 @@ summary: 특정_역할_을 관리자에게 할당하여 관리자가 System Mana
 
 
 
+[[assigning-a-role-to-an-administrator]]
 == 관리자에게 역할 할당
 
 다음과 같이 관리자에게 역할을 할당합니다.
@@ -43,6 +44,7 @@ summary: 특정_역할_을 관리자에게 할당하여 관리자가 System Mana
 
 
 
+[[changing-an-administrators-role]]
 == 관리자 역할 변경
 
 다음과 같이 관리자의 역할을 변경합니다.

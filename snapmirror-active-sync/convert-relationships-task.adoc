@@ -18,6 +18,7 @@ ONTAP 9.15.1부터 비대칭에서 대칭 액티브/액티브로, 또는 그 반
 
 
 
+[[convert-to-a-symmetric-activeactive-relationship]]
 == 대칭 액티브/액티브 관계로 변환합니다
 
 비대칭 보호 기능이 있는 iSCSI 또는 FC SnapMirror 활성 동기화 관계를 대칭 활성/활성으로 변환할 수 있습니다.
@@ -155,6 +156,7 @@ SiteB::> lun mapping create -igroup  <igroup> -path <path_name>
 ====
 
 
+[[convert-from-symmetric-activeactive-to-an-asymmetric-iscsi-or-fc-relationship]]
 == 대칭형 액티브/액티브 관계에서 비대칭형 iSCSI 또는 FC 관계로 변환
 
 iSCSI 또는 FC를 사용하여 대칭적 액티브/액티브 보호를 구성한 경우 ONTAP CLI를 사용하여 해당 관계를 비대칭적 보호로 변환할 수 있습니다.

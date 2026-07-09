@@ -21,6 +21,7 @@ image:snapvault-data-protection.gif["SnapMirror 소산 데이터 보호 관계"]
 
 
 
+[[how-vault-data-protection-relationships-are-initialized]]
 == 볼트 데이터 보호 관계가 초기화되는 방법
 
 관계에 대한 SnapMirror 정책에서는 기본 내용과 모든 업데이트를 정의합니다.
@@ -29,6 +30,7 @@ image:snapvault-data-protection.gif["SnapMirror 소산 데이터 보호 관계"]
 
 
 
+[[how-vault-data-protection-relationships-are-updated]]
 == 볼트 데이터 보호 관계를 업데이트하는 방법
 
 업데이트는 구성한 일정에 따라 비동기식입니다. 관계 정책에 정의된 규칙은 업데이트에 포함할 새 스냅샷과 보존할 복제본 수를 식별합니다. 정책에 정의된 레이블(예: ""월")은 소스의 스냅샷 정책에 정의된 하나 이상의 레이블과 일치해야 합니다. 그렇지 않으면 복제가 실패합니다.

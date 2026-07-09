@@ -89,6 +89,7 @@ Do you want to continue? (y|n): y
 ====
 
 
+[[enable-compliance-clock-resynchronization-for-an-ntp-configured-system]]
 == NTP 구성 시스템에 대해 규정 준수 클럭 재동기화를 설정합니다
 
 NTP 서버가 구성되면 SnapLock Compliance 시계 동기화 기능을 활성화할 수 있습니다.

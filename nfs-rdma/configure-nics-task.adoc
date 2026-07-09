@@ -15,6 +15,7 @@ RDMA를 통한 NFS를 사용하려면 클라이언트 시스템과 스토리지 
 
 
 
+[[storage-platform-configuration]]
 == 스토리지 플랫폼 구성
 
 대상 RNIC 지원에 대한 자세한 내용은 를 https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"^]참조하십시오.
@@ -49,6 +50,7 @@ network port modify -node <nodename> -port <portname> -flowcontrol-admin full
 
 
 
+[[client-system-configuration]]
 == 클라이언트 시스템 구성
 
 RDMA 기반 NFS에 대해 지원되는 클라이언트 운영 체제에 대한 자세한 내용은 를 https://imt.netapp.com/matrix/["NetApp 상호 운용성 매트릭스(IMT)"^]참조하십시오. RoCE v2 지원 RNIC에 대해서는 해당 RNIC 공급업체 설명서를 참조하십시오.

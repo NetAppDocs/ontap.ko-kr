@@ -15,12 +15,14 @@ FPolicy 서버에 연결할 때 SSL을 사용하도록 FPolicy 외부 엔진을 
 
 
 
+[[ssl-server-authentication]]
 == SSL 서버 인증
 
 SSL 서버 인증에 FPolicy 외부 엔진을 구성하도록 선택한 경우 외부 엔진을 생성하기 전에 FPolicy 서버 인증서에 서명한 CA(인증 기관)의 공개 인증서를 설치해야 합니다.
 
 
 
+[[mutual-authentication]]
 == 상호 인증
 
 SVM(스토리지 가상 머신) 데이터 LIF를 외부 FPolicy 서버에 연결할 때 SSL 상호 인증을 사용하도록 FPolicy 외부 엔진을 구성한 경우, 외부 엔진을 생성합니다. FPolicy 서버 인증서에 서명한 CA의 공용 인증서를 SVM 인증을 위한 공용 인증서 및 키 파일과 함께 설치해야 합니다. FPolicy 정책이 설치된 인증서를 사용하는 동안에는 이 인증서를 삭제하지 마십시오.
@@ -31,6 +33,7 @@ FPolicy가 외부 FPolicy 서버에 연결할 때 상호 인증에 인증서를 
 
 
 
+[[install-certificates-for-ssl]]
 == SSL용 인증서를 설치합니다
 
 FPolicy 서버 인증서에 서명하는 데 사용되는 CA의 공개 인증서는 을 사용하여 설치됩니다 `security certificate install` 명령과 함께 `-type` 매개 변수를 로 설정합니다 `client-ca`. SVM 인증에 필요한 개인 키와 공개 인증서는 을 사용하여 설치합니다 `security certificate install` 명령과 함께 `-type` 매개 변수를 로 설정합니다 `server`.

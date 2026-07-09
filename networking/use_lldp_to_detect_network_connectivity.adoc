@@ -60,6 +60,7 @@ NOTE: LLDP 사양은 SNMP MIB를 통해 수집된 정보에 대한 액세스를 
 
 
 
+[[enable-or-disable-lldp]]
 == LLDP를 활성화 또는 비활성화합니다
 
 LLDP 호환 인접 장치를 검색하고 보급을 보내려면 클러스터의 각 노드에서 LLDP를 활성화해야 합니다. ONTAP 9.7부터 LLDP는 기본적으로 노드의 모든 포트에서 활성화됩니다.
@@ -123,6 +124,7 @@ options lldp.enable {on|off}
 
 
 
+[[view-lldp-neighbor-information]]
 == LLDP 인접 정보를 봅니다
 
 포트가 LLDP 호환 장치에 연결되어 있는 경우, 클러스터 노드의 각 포트에 연결된 인접 장치에 대한 정보를 볼 수 있습니다. network device-discovery show 명령을 사용하여 인접 항목 정보를 볼 수 있습니다.
@@ -152,6 +154,7 @@ cluster-1_01/lldp
 
 
 
+[[adjust-the-interval-for-transmitting-lldp-advertisements]]
 == LLDP 광고 전송 간격을 조정합니다
 
 LLDP 광고는 주기적으로 LLDP 이웃에게 전송됩니다. 네트워크 트래픽과 네트워크 토폴로지의 변경 내용에 따라 LLDP 광고 전송 간격을 늘리거나 줄일 수 있습니다.
@@ -192,6 +195,7 @@ options lldp.xmit.interval <interval>
 
 
 
+[[adjust-the-time-to-live-value-for-lldp-advertisements]]
 == LLDP 광고의 실시간 값을 조정합니다
 
 TTL(Time-to-Live)은 인접 LLDP 호환 장치의 캐시에 LLDP 광고가 저장되는 기간입니다. TTL은 각 LLDP 패킷에서 공고되며 LLDP 패킷이 노드에 수신될 때마다 업데이트됩니다. TTL은 나가는 LLDP 프레임에서 수정할 수 있습니다.
@@ -236,6 +240,7 @@ options lldp.xmit.hold <hold_value>
 
 
 
+[[view-or-clear-lldp-statistics]]
 == LLDP 통계를 보거나 지웁니다
 
 각 노드의 클러스터 및 비 클러스터 포트에 대한 LLDP 통계를 보고 잠재적인 네트워크 연결 문제를 감지할 수 있습니다. LLDP 통계는 마지막 삭제 시점으로부터 누적됩니다.
@@ -270,6 +275,7 @@ LLDP 통계를 지웁니다
 |===
 
 
+[[show-and-clear-statistics-example]]
 === 통계 예제를 표시하고 지웁니다
 
 다음 명령을 실행하면 LLDP 통계가 지워지기 전에 표시됩니다. 마지막 통계 삭제 이후 송수신된 총 패킷 수가 출력에 표시됩니다.

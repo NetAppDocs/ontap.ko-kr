@@ -21,6 +21,7 @@ iSNS 서비스를 사용하려는 경우 iSNS(Internet Storage Name Service) 서
 
 
 
+[[what-an-isns-server-does]]
 == iSNS 서버의 기능
 
 iSNS 서버는 iSNS(Internet Storage Name Service) 프로토콜을 사용하여 IP 주소, iSCSI 노드 이름(IQN) 및 포털 그룹을 포함하여 네트워크의 활성 iSCSI 장치에 대한 정보를 유지합니다.
@@ -31,6 +32,7 @@ NetApp은 iSNS 서버를 제공하거나 재판매하지 않습니다. NetApp에
 
 
 
+[[how-svms-interact-with-an-isns-server]]
 == SVM이 iSNS 서버와 상호 작용하는 방식
 
 iSNS 서버는 SVM 관리 LIF를 통해 각 SVM(스토리지 가상 시스템)과 통신합니다. 관리 LIF는 특정 SVM을 위한 iSNS 서비스를 사용하여 모든 iSCSI 대상 노드 이름, 별칭 및 포털 정보를 등록합니다.
@@ -51,6 +53,7 @@ iSNS를 처음 구성한 후 SVM 구성 설정이 변경되면 ONTAP에서 iSNS 
 
 
 
+[[commands-for-managing-isns]]
 == iSNS 관리 명령입니다
 
 ONTAP는 iSNS 서비스를 관리하는 명령을 제공합니다.

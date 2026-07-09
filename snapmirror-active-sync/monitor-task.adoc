@@ -27,12 +27,14 @@ NOTE: ONTAP 9.15.1부터 System Manager는 두 클러스터의 SnapMirror 활성
 
 
 
+[[ontap-mediator]]
 == ONTAP 중재자
 
 정상 작동 중에는 ONTAP 중재자 상태가 연결되어야 합니다. 다른 상태에 있는 경우 오류 상태를 나타낼 수 있습니다. 를 검토할 수 있습니다 link:https://docs.netapp.com/us-en/ontap-ems-9131/sm-mediator-events.html["EMS(이벤트 관리 시스템) 메시지"^] 오류 및 적절한 수정 조치를 확인합니다.
 
 
 
+[[planned-failover-operations]]
 == 계획된 페일오버 작업
 
 'napmirror failover show' 명령을 사용하여 계획된 페일오버 작업의 상태 및 진행률을 모니터링할 수 있습니다. 예를 들면 다음과 같습니다.
@@ -49,6 +51,7 @@ ClusterA::> snapmirror show
 
 
 
+[[automatic-unplanned-failover-operations]]
 == 계획되지 않은 페일오버 작업을 자동으로 수행합니다
 
 계획되지 않은 자동 페일오버 중에 를 사용하여 작업 상태를 모니터링할 수 있습니다 `snapmirror failover show` 명령.
@@ -70,6 +73,7 @@ Last Progress Update: -
 
 
 
+[[snapmirror-active-sync-availability]]
 == SnapMirror 활성 동기화 가용성
 
 운영 클러스터, 2차 클러스터 또는 둘 다에서 일련의 명령을 사용하여 SnapMirror 액티브 동기화 관계의 가용성을 확인할 수 있습니다.

@@ -50,6 +50,7 @@ image:batch_upgrade_set_4_ieops-1620.png["일괄 업그레이드 4단계"]
 
 
 
+[[recommended-ontap-upgrade-methods-based-on-configuration]]
 == 구성에 따라 권장되는 ONTAP 업그레이드 방법
 
 구성에서 지원되는 업그레이드 방법은 권장 사용 순서에 따라 나열됩니다.

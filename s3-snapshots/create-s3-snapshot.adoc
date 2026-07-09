@@ -48,6 +48,7 @@ vserver object-store-server bucket snapshot create -bucket bucket-a -snapshot sn
 
 
 
+[[manually-create-s3-snapshots]]
 == S3 스냅샷을 수동으로 생성합니다
 
 ONTAP CLI를 사용하여 S3 스냅샷을 수동으로 생성할 수 있습니다. 이 절차는 로컬 클러스터에만 스냅샷을 생성합니다.
@@ -71,6 +72,7 @@ vserver object-store-server bucket snapshot create -vserver vs0 -bucket website-
 
 
 
+[[assign-an-s3-snapshot-policy-to-a-bucket]]
 == 버킷에 S3 스냅샷 정책을 할당합니다
 
 S3 버킷 수준에서 스냅샷 정책을 구성하면 ONTAP가 예약된 S3 스냅샷을 자동으로 생성합니다. 기존 스냅샷 정책과 마찬가지로 S3 스냅샷에 대해 최대 5개의 일정을 구성할 수 있습니다.

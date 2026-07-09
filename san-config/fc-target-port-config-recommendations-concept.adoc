@@ -17,6 +17,7 @@ FC 타겟 포트는 FC 프로토콜에 대해 구성 및 사용되는 것과 정
 
 
 
+[[configuration-for-fc-target-ports-with-shared-asics]]
 == 공유 ASIC를 통한 FC 타겟 포트 구성
 
 다음 플랫폼에는 공유 ASIC(Application-Specific Integrated Circuits)와 포트 쌍이 있습니다. 확장 어댑터를 이러한 플랫폼에 사용할 경우 연결에 동일한 ASIC를 사용하지 않도록 FC 포트를 구성해야 합니다.
@@ -49,6 +50,7 @@ FC 타겟 포트는 FC 프로토콜에 대해 구성 및 사용되는 것과 정
 |===
 
 
+[[fc-target-port-supported-speeds]]
 == FC 타겟 포트의 지원 속도입니다
 
 FC 타겟 포트는 다른 속도로 실행되도록 구성할 수 있습니다. 지정된 호스트에서 사용하는 모든 타겟 포트는 동일한 속도로 설정되어야 합니다. 대상 포트 속도를 연결할 장치의 속도와 일치하도록 설정해야 합니다. 포트 속도에 자동 협상을 사용하지 마십시오. autonegotiation으로 설정된 포트는 Takeover/Giveback 또는 기타 중단 후 다시 연결하는 데 더 오래 걸릴 수 있습니다.

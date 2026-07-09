@@ -15,6 +15,7 @@ ONTAP 9.6 이상을 실행 중인 경우 FabricPool용 클라우드 계층으로
 
 
 
+[[additional-considerations-for-using-google-cloud-storage-with-fabricpool]]
 == FabricPool에서 Google 클라우드 스토리지를 사용할 때 고려해야 할 추가 사항
 
 * 온프레미스 클러스터에서 Google Cloud Storage로 티어링을 할 때는 link:install-license-aws-azure-ibm-task.html["FabricPool 라이센스"]가 필요합니다.

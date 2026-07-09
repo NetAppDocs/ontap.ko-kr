@@ -111,6 +111,7 @@ Do you want to continue? {y|n}: y
 ====
 
 
+[[other-ways-to-do-this-in-ontap]]
 == ONTAP에서 이 작업을 수행하는 다른 방법
 
 [cols="2"]
