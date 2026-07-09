@@ -83,8 +83,8 @@ volume analytics on -vserver <svm_name> -volume <volume_name> [-foreground {true
 ====
 
 
-[[modify]]
 [[modify-default-file-system-analytics-settings]]
+[[modify]]
 == 기본 파일 시스템 분석 설정을 수정합니다
 
 ONTAP 9.13.1부터 SVM 또는 클러스터 설정을 수정하여 새 볼륨에 대해 파일 시스템 분석을 기본적으로 활성화할 수 있습니다.

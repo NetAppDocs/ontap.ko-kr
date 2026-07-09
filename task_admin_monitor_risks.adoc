@@ -22,8 +22,8 @@ NetApp Digital Advisor는 스토리지 환경의 위험을 줄이고 성능 및 
 
 
 
-[[link_active_iq]]
 [[link-to-your-digital-advisor-account]]
+[[link_active_iq]]
 == Digital Advisor 계정에 대한 링크
 
 Digital Advisor의 위험에 대한 정보를 받으려면 먼저 System Manager에서 Digital Advisor 계정에 연결해야 합니다.
@@ -56,8 +56,8 @@ NOTE: 위험 수를 보여 주는 메시지를 클릭하여 각 위험에 대한
 
 
 
-[[view_risk_details]]
 [[view-details-of-risks]]
+[[view_risk_details]]
 == 위험에 대한 세부 정보를 봅니다
 
 ONTAP 9.10.0부터 Digital Advisor에서 보고한 위험이 영향 영역별로 분류된 것을 System Manager에서 확인할 수 있습니다. 또한 보고된 각 위험, 시스템에 미치는 잠재적 영향 및 취할 수 있는 수정 조치에 대한 자세한 정보를 볼 수 있습니다.

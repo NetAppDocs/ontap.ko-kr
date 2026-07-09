@@ -116,8 +116,8 @@ node1*> vol status
 
 
 
-[[relocate-root]]
 [[relocate-root-volumes-to-new-aggregates]]
+[[relocate-root]]
 == 루트 볼륨을 새 애그리게이트로 재배치
 
 루트 교체 절차는 운영 중단 없이 현재 루트 애그리게이트를 다른 디스크 세트로 마이그레이션합니다.

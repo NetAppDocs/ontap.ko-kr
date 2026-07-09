@@ -154,8 +154,8 @@ NOTE: System Manager에서 용량 표현은 루트 스토리지 계층(애그리
 
 
 
-[[view-max-cap-limit-svm]]
 [[view-the-maximum-capacity-limit-of-a-storage-vm]]
+[[view-max-cap-limit-svm]]
 == 스토리지 VM의 최대 용량 한도를 봅니다
 
 ONTAP 9.13.1 부터는 스토리지 VM의 최대 용량 한도를 확인할 수 있습니다.

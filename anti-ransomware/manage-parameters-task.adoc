@@ -116,8 +116,8 @@ security anti-ransomware volume workload-behavior update-baseline-from-surge -vs
 
 
 
-[[modify-alerts]]
 [[configure-arp-alerts]]
+[[modify-alerts]]
 == ARP 경고를 구성합니다
 
 ONTAP 9.14.1부터 ARP를 사용하면 두 ARP 이벤트에 대한 경고를 지정할 수 있습니다.

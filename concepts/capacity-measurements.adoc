@@ -146,8 +146,8 @@ NOTE: System Manager에서 용량 표현은 루트 스토리지 계층(애그리
 
 
 
-[[cap-calc-svm]]
 [[capacity-of-a-storage-vm]]
+[[cap-calc-svm]]
 == 스토리지 VM의 용량입니다
 
 스토리지 VM의 최대 용량은 볼륨에 할당된 총 공간과 할당되지 않은 나머지 공간에 따라 결정됩니다.
@@ -169,8 +169,8 @@ ONTAP 9.13.1 을 시작으로 클러스터 관리자가 할 수 있습니다 lin
 
 
 
-[[cap-measurement-units]]
 [[capacity-measurement-units-in-system-manager]]
+[[cap-measurement-units]]
 == System Manager의 용량 측정 단위
 
 System Manager는 1024바이트(2^10^)바이트의 이진 단위를 기준으로 스토리지 용량을 계산합니다.

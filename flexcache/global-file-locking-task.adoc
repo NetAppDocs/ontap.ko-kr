@@ -27,8 +27,8 @@ ONTAP 9.10.1 버전부터 FlexCache 볼륨에 전역 파일 잠금을 적용하�
 
 
 
-[[enable-gfl-new]]
 [[enable-global-file-locking-on-new-flexcache-volumes]]
+[[enable-gfl-new]]
 == 새 FlexCache 볼륨에서 글로벌 파일 잠금을 설정합니다
 
 .단계
@@ -44,8 +44,8 @@ NOTE: 기본값은 '-is-global-file-locking'입니다. 이후에 볼륨에 대�
 
 
 
-[[enable-gfl-existing]]
 [[enable-global-file-locking-on-existing-flexcache-volumes]]
+[[enable-gfl-existing]]
 == 기존 FlexCache 볼륨에서 글로벌 파일 잠금을 설정합니다
 
 .단계
