@@ -13,7 +13,7 @@ summary: ONTAP는 ONTAP 9.8부터 사내 환경을 위한 S3 오브젝트 스토
 [role="lead"]
 S3 오브젝트 스토리지는 ONTAP 9.8 이상을 사용하는 모든 AFF, FAS 및 ONTAP Select 플랫폼에서 지원됩니다.
 
-FC, iSCSI, NFS, NVMe_oF 및 SMB 등의 다른 프로토콜과 마찬가지로, S3을 사용하려면 먼저 라이센스를 설치해야 ONTAP에서 사용할 수 있습니다. S3 라이센스는 비용이 들지 않는 라이센스이지만 ONTAP 9.8로 업그레이드하는 시스템에 설치해야 합니다. S3 라이센스는 NetApp 지원 사이트의 에서 다운로드할 수 link:https://mysupport.netapp.com/site/systems/master-license-keys/ontaps3["마스터 라이센스 키 페이지"^] 있습니다.
+FC, iSCSI, NFS, NVMe_oF, SMB와 같은 다른 프로토콜과 마찬가지로 S3를 ONTAP에서 사용하려면 라이센스 키를 설치해야 합니다. S3 라이센스 키는 무료 라이센스 키이지만, ONTAP 9.8로 업그레이드하는 시스템에 반드시 설치해야 합니다. S3 라이센스 키는 link:https://mysupport.netapp.com/site/systems/master-license-keys/ontaps3["라이센스 키 페이지"^] NetApp Support 사이트에서 다운로드할 수 있습니다.
 
 새로운 ONTAP 9.8 이상 시스템에는 S3 라이센스가 사전 설치되어 있습니다.
 

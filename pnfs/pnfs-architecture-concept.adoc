@@ -84,7 +84,7 @@ Vserver Name    Mapping ID      Dsid            LIF IP
 DEMO            16              2488            10.193.67.211
 ----
 
-NOTE: 이 명령에는 볼륨 이름이 없습니다. 대신 해당 볼륨과 연관된 숫자 ID, 즉 마스터 세트 ID(MSID)와 데이터 세트 ID(DSID)가 사용됩니다. 매핑과 관련된 볼륨을 찾으려면 다음을 사용할 수 있습니다. `volume show -dsid [dsid_numeric]` 또는 `volume show -msid [msid_numeric]` ONTAP CLI의 고급 권한으로.
+NOTE: 이 명령에서는 볼륨 이름이 사용되지 않습니다.  대신 해당 볼륨과 연결된 숫자 ID(MSID 및 DSID)가 사용됩니다.  매핑과 연결된 볼륨을 찾으려면 ONTAP CLI의 고급 권한에서  `volume show -dsid [dsid_numeric]` 또는  `volume show -msid [msid_numeric]`을(를) 사용할 수 있습니다.
 
 클라이언트가 메타데이터 서버 연결과 원격인 노드에 있는 파일을 읽거나 쓰려고 시도하면 pNFS는 해당 작업에 대한 데이터 로컬리티를 보장하기 위해 적절한 액세스 경로를 협상하고 클라이언트는 파일에 액세스하기 위해 클러스터 네트워크를 탐색하는 대신 광고된 pNFS 장치로 리디렉션합니다. 이렇게 하면 CPU 오버헤드와 네트워크 지연 시간을 줄이는 데 도움이 됩니다.
 
