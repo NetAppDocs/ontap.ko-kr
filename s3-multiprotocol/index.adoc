@@ -122,6 +122,7 @@ FabricPool 용량 계층입니다:: S3 NAS 버킷을 FabricPool의 용량 계층
 +
 --
 * ByPassGovernanceRetention 을 참조하십시오
+* CopyObject는 SnapLock 볼륨에서 지원되지 않습니다
 * DeleteBucketLifecycleConfiguration을 참조하십시오
 * GetBuckLifecycleConfiguration 을 참조하십시오
 * GetBucketObjectLockConfiguration 을 참조하십시오
