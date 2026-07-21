@@ -96,6 +96,8 @@ entries:
       url: "/nfs-admin/validate-qtree-ids-qtree-file-operations-task.html"
     - title: NFS FlexVol 볼륨에 대한 정책 제한 및 중첩된 연결 내보내기
       url: "/nfs-admin/export-policy-restrictions-nested-junctions-concept.html"
+  - title: 전송 중인 NFS 트래픽을 암호화하려면 NFS over TLS를 활성화하십시오.
+    url: "/nfs-admin/enable-nfs-over-tls-task.html"
   - title: 강력한 보안을 위해 NFS와 Kerberos 사용
     entries:
     - title: Kerberos에 대한 NFS 지원

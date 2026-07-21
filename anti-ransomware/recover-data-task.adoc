@@ -66,7 +66,7 @@ link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 
 
 
 .SnapMirror 고려 사항
-* ONTAP 9.19.1 RC에서 볼륨이 SnapMirror 동기식 또는 SnapMirror 활성 동기식 SAN 관계의 일부이고 볼륨 수준 복원을 계획하는 경우, 일시 중지하거나 link:../data-protection/make-destination-volume-writeable-task.html["복원하기 전에 관계를 끊으십시오"] 복원 후 보호를 다시 설정하십시오.
+* 볼륨이 ONTAP 9.19.1의 SnapMirror 동기식 또는 SnapMirror 활성 동기화 SAN 관계의 일부이고 볼륨 수준 복원을 계획하는 경우, 복원 후 보호를 일시 중지하거나 link:../data-protection/make-destination-volume-writeable-task.html["복원하기 전에 관계를 끊으십시오"] 한 다음 보호를 다시 설정하십시오.
 * SnapMirror 관계에 참여하는 동안 ARP 보호 볼륨을 스냅샷에서 복원하는 경우 복원 후 모든 미러 복사본을 수동으로 업데이트하십시오. 그렇지 않으면 미러 복사본을 사용할 수 없게 되어 삭제 후 다시 생성해야 할 수 있습니다.
 
 

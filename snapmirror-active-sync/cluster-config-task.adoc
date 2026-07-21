@@ -39,16 +39,22 @@ link:../peering/create-intercluster-svm-peer-relationship-93-later-task.html["SV
 +
 link:../smb-config/create-volume-task.html["볼륨을 생성하는 중입니다"]
 
-. 두 클러스터의 각 노드에 최소한 하나의 SAN LIF(해당되는 경우 FC 또는 iSCSI)가 생성됩니다.
+. SAN 구성을 위한 SAN LIF(FC 또는 iSCSI 중 해당하는 것)가 두 클러스터의 각 노드에 최소 하나 이상 생성되거나, 보조 클러스터로 복제하기 위한 NAS LIF(NFS 또는 SMB 중 해당하는 것)가 기본 클러스터의 각 노드에 최소 하나 이상 생성되어야 합니다.
 +
 link:../san-admin/manage-lifs-all-san-protocols-concept.html["클러스터 SAN 환경에서 LIF에 대한 고려 사항"]
 
 +
 link:../networking/create_a_lif.html["LIF 생성"]
 
-. 필요한 LUN이 생성되어 igroup에 매핑됩니다. igroup은 LUN을 애플리케이션 호스트의 개시자에 매핑하는 데 사용됩니다.
++
+link:../nfs-config/index.html["NFS 구성에 대해 알아보기"]
+
++
+link:../smb-config/index.html["SMB 구성에 대해 알아보기"]
+
+. SAN 전용: 필요한 LUN이 생성되어 igroup에 매핑되며, 이 igroup은 애플리케이션 호스트의 이니시에이터에 LUN을 매핑하는 데 사용됩니다.
 +
 link:../san-admin/provision-storage.html["LUN을 생성하고 igroup을 매핑합니다"]
 
-. 새로운 LUN을 발견하기 위해 애플리케이션 호스트를 다시 검사합니다.
+. 애플리케이션 호스트를 다시 스캔하여 새로운 LUN 또는 볼륨이 있는지 확인합니다.
 

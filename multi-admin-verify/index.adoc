@@ -155,6 +155,7 @@ admin이 여러 개인 검증이 필요한 명령 세트 제어
 * `security multi-admin-verify rule create` ^6^
 * `security multi-admin-verify rule delete` ^6^
 * `security multi-admin-verify rule modify` ^6^
+* `security key-manager external gcp disable` ^7^
 * `security key-manager onboard update-passphrase` (영어
 * `security saml-sp create` (영어
 * `security saml-sp delete` (영어

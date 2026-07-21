@@ -32,8 +32,10 @@ entries:
     url: "/snapmirror-active-sync/cloud-mediator-requirements-concept.html"
   - title: ONTAP 클라우드 메디에이터 구성
     url: "/snapmirror-active-sync/cloud-mediator-config-task.html"
-  - title: 보호 구성
+  - title: SAN 보호 구성
     url: "/snapmirror-active-sync/protect-task.html"
+  - title: NAS 보호 구성
+    url: "/snapmirror-active-sync/protect-nas-task.html"
   - title: SnapMirror 활성 동기화로 변환
     url: "/snapmirror-active-sync/convert-active-sync-task.html"
   - title: 대칭 액티브/액티브로 변환합니다

@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/protect-task.html
 keywords: SM-BC, snapmirror business continuity, consistency group, remote protection, destination, scsi, nvme 
 summary: 비즈니스 연속성을 위해 보호를 구성하려면 ONTAP 소스 클러스터에서 LUN을 선택하고 일관성 그룹에 추가해야 합니다. 
 ---
-= ONTAP SnapMirror Active Sync로 보호하세요
+= ONTAP SnapMirror 액티브 동기화를 사용하여 SAN 보호
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
@@ -23,7 +23,7 @@ SnapMirror 액티브 동기화는 ONTAP 9.15.1부터 대칭 액티브/액티브 
 [[configure-asymmetric-protection]]
 == 비대칭 보호를 구성합니다
 
-SnapMirror 활성 동기화를 사용하여 비대칭 보호를 구성하려면 ONTAP 소스 클러스터에서 LUN을 선택하고 일관성 그룹에 추가해야 합니다.
+SnapMirror 액티브 동기화를 사용하여 SAN 구성에 대한 비대칭 보호를 구성하려면 ONTAP 소스 클러스터에서 LUN을 선택하고 이를 일관성 그룹에 추가해야 합니다.
 
 .시작하기 전에
 * SnapMirror 동기식 라이센스가 있어야 합니다.
@@ -102,7 +102,7 @@ IMPORTANT: ONTAP 9.8부터 ONTAP 9.14.1까지 SnapMirror 활성 동기화는 Sna
 [[configure-symmetric-activeactive-protection]]
 == 대칭 액티브/액티브 보호 구성
 
-System Manager 또는 ONTAP CLI를 사용하여 대칭 보호를 설정할 수 있습니다. 두 인터페이스 모두에서 에 대한 단계가 다릅니다 xref:index.html#key-concepts[균일 및 비균일 설정].
+시스템 관리자 또는 ONTAP CLI를 사용하여 SAN 구성에 대한 대칭 보호를 설정할 수 있습니다. 두 인터페이스 모두에서 xref:index.html#key-concepts[균일 및 비균일 설정]에 대한 단계가 다릅니다.
 
 .시작하기 전에
 * 두 클러스터에서 모두 ONTAP 9.15.1 이상을 실행해야 한다.

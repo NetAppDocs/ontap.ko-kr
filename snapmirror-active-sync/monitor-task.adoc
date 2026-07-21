@@ -37,7 +37,7 @@ NOTE: ONTAP 9.15.1부터 System Manager는 두 클러스터의 SnapMirror 활성
 [[planned-failover-operations]]
 == 계획된 페일오버 작업
 
-'napmirror failover show' 명령을 사용하여 계획된 페일오버 작업의 상태 및 진행률을 모니터링할 수 있습니다. 예를 들면 다음과 같습니다.
+ `snapmirror failover show` 명령을 사용하여 계획된 페일오버 작업의 상태와 진행 상황을 모니터링할 수 있습니다. 예를 들어 SAN 구성의 경우:
 
 ....
 ClusterB::> snapmirror failover start -destination-path vs1:/cg/dcg1

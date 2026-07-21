@@ -139,6 +139,10 @@ entries:
       url: "/networking/delete_a_lif.html"
   - title: 가상 IP(VIP) LIF
     url: "/networking/configure_virtual_ip_vip_lifs.html"
+- title: TCP 스택
+  entries:
+  - title: TCP WAN 성능 향상
+    url: "/networking/improve-tcp-wan-performance.html"
 - title: 네트워크 로드 밸런싱
   entries:
   - title: 네트워크 트래픽 최적화(클러스터 관리자만 해당)
