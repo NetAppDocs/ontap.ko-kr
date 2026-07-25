@@ -179,7 +179,7 @@ ASA r2
 
 
 * Rocky Linux 10.2, 9.8 및 8.10
-* Oracle Linux 10.1 및 9.7
+* Oracle Linux 10.1 및 9.8
 
 
 

@@ -26,12 +26,15 @@ ONTAP 9.6부터, 외부 키 관리 서버의 I/O 제한 시간 및 사용자 이
 
 . 클러스터의 외부 키 관리자 서버 속성 수정:
 +
-'Security key-manager external modify-server-vserver admin_SVM-key-server host_name|ip_address:port,... -timeout 1...60 - username user_name'입니다
+`security key-manager external modify-server -vserver admin_SVM -key-server host_name|IP_address:port,... -timeout 0...60 -username user_name`
 
 +
 [NOTE]
 ====
-시간 초과 값은 초 단위로 표시됩니다. 사용자 이름을 수정하면 새 암호를 입력하라는 메시지가 표시됩니다. 클러스터 로그인 프롬프트에서 명령을 실행하면 '_admin_SVM_'이(가) 현재 클러스터의 admin SVM으로 기본 설정됩니다. 외부 키 관리자 서버 속성을 수정하려면 클러스터 관리자여야 합니다.
+** 타임아웃 값은 KMIP 서버와의 연결을 설정하는 데 걸리는 시간(초)입니다. 0을 지정하면 타임아웃이 없으므로 연결 요청은 무기한 대기할 수 있습니다. 1~60 사이의 값을 지정하면 지정된 시간(초) 내에 KMIP 키 서버에 연결할 수 없는 경우 연결 요청이 타임아웃됩니다.
+** 사용자 이름을 변경하면 새 비밀번호를 입력하라는 메시지가 표시됩니다.
+** 클러스터 로그인 프롬프트에서 해당 명령을 실행하면  `_admin_SVM_`기본적으로 현재 클러스터의 관리자 SVM이 사용됩니다. 외부 키 관리자 서버 속성을 수정하려면 클러스터 관리자여야 합니다.
+
 
 ====
 +
@@ -42,14 +45,17 @@ ONTAP 9.6부터, 외부 키 관리 서버의 I/O 제한 시간 및 사용자 이
 ----
 clusterl::> security key-manager external modify-server -vserver cluster1 -key-server ks1.local -timeout 45
 ----
-. SVM에 대한 외부 키 관리자 서버 속성 수정(NVE만 해당):
+. SVM에 대한 외부 키 관리자 서버 속성을 수정합니다.
 +
-'Security key-manager external modify-server-vserver SVM-key-server host_name|ip_address:port,... -timeout 1...60 - username user_name'입니다
+`security key-manager external modify-server -vserver SVM -key-server host_name|IP_address:port,... -timeout 0...60 -username user_name`
 
 +
 [NOTE]
 ====
-시간 초과 값은 초 단위로 표시됩니다. 사용자 이름을 수정하면 새 암호를 입력하라는 메시지가 표시됩니다. SVM 로그인 프롬프트에서 명령을 실행하면 '_SVM_'이(가) 현재 SVM으로 기본 설정됩니다. 외부 키 관리자 서버 속성을 수정하려면 클러스터 또는 SVM 관리자여야 합니다.
+** 타임아웃 값은 KMIP 서버와의 연결을 설정하는 데 걸리는 시간(초)입니다. 0을 지정하면 타임아웃이 없으므로 연결 요청은 무기한 대기할 수 있습니다. 1~60 사이의 값을 지정하면 지정된 시간(초) 내에 KMIP 키 서버에 연결할 수 없는 경우 연결 요청이 타임아웃됩니다.
+** 사용자 이름을 변경하면 새 비밀번호를 입력하라는 메시지가 표시됩니다.
+** SVM 로그인 프롬프트에서 해당 명령을 실행하면  `_SVM_`기본적으로 현재 SVM이 사용됩니다. 외부 키 관리자 서버 속성을 수정하려면 클러스터 또는 SVM 관리자여야 합니다.
+
 
 ====
 +

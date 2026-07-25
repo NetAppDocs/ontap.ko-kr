@@ -124,7 +124,7 @@ entries:
     url: "/volumes/manage-svm-capacity.html"
 - title: 할당량을 사용하여 리소스 사용을 제한하거나 추적합니다
   entries:
-  - title: 할당량 프로세스 개요
+  - title: 할당량에 대해 알아보기
     entries:
     - title: 할당량, 할당량 규칙 및 할당량 정책을 이해합니다
       url: "/volumes/quota-rules-policies-enforced-quotas-concept.html"
@@ -138,48 +138,54 @@ entries:
       url: "/volumes/quota-notifications-concept.html"
     - title: 할당량 대상 및 유형
       url: "/volumes/quota-targets-types-concept.html"
-    - title: 특별한 종류의 할당량입니다
-      entries:
-      - title: 기본 할당량의 작동 방식
-        url: "/volumes/default-quotas-concept.html"
-      - title: 명시적 할당량을 사용하는 방법
-        url: "/volumes/explicit-quotas-concept.html"
-      - title: 파생 할당량의 작동 방식
-        url: "/volumes/derived-quotas-concept.html"
-      - title: 추적 할당량을 사용합니다
-        url: "/volumes/track-quotas-concept.html"
     - title: 할당량을 적용하는 방법
       url: "/volumes/quotas-applied-concept.html"
     - title: 할당량 정책을 할당할 때 고려해야 할 사항입니다
       url: "/volumes/assign-quota-policies-concept.html"
-    - title: 사용자 및 그룹에서 할당량이 작동하는 방식
-      entries:
-      - title: 개요
-        url: "/volumes/quotas-work-users-groups-concept.html"
-      - title: 할당량에 대해 UNIX 사용자를 지정합니다
-        url: "/volumes/specify-unix-users-quotas-concept.html"
-      - title: 할당량에 대한 Windows 사용자를 지정합니다
-        url: "/volumes/specify-windows-users-quotas-concept.html"
-      - title: 기본 사용자 및 그룹 할당량이 파생 할당량을 생성하는 방법
-        url: "/volumes/default-user-group-quotas-derived-concept.html"
-      - title: 루트 사용자에게 할당량을 적용하는 방법
-        url: "/volumes/quotas-applied-root-user-concept.html"
-      - title: 특수 Windows 그룹에서 할당량을 사용하는 방법
-        url: "/volumes/quotas-special-windows-groups-concept.html"
-      - title: ID가 여러 개인 사용자에게 할당량을 적용하는 방법
-        url: "/volumes/quotas-applied-users-multiple-ids-concept.html"
-      - title: ONTAP에서 혼합 환경의 사용자 ID를 확인하는 방법
-        url: "/volumes/user-ids-mixed-environment-concept.html"
-      - title: 여러 사용자에게 할당량이 작동하는 방식
-        url: "/volumes/quotas-multiple-users-concept.html"
-      - title: 할당량에 대한 UNIX 및 Windows 이름 링크
-        url: "/volumes/link-unix-windows-names-quotas-concept.html"
+    - title: 할당량이 활성화되는 방식
+      url: "/volumes/quotas-activated-concept.html"
+  - title: 특별한 종류의 할당량입니다
+    entries:
+    - title: 기본 할당량의 작동 방식
+      url: "/volumes/default-quotas-concept.html"
+    - title: 명시적 할당량을 사용하는 방법
+      url: "/volumes/explicit-quotas-concept.html"
+    - title: 파생 할당량의 작동 방식
+      url: "/volumes/derived-quotas-concept.html"
+    - title: 추적 할당량을 사용합니다
+      url: "/volumes/track-quotas-concept.html"
+  - title: SVM에서 할당량 설정
+    url: "/volumes/setup-quotas-svm-task.html"
+  - title: 사용자 및 그룹에서 할당량이 작동하는 방식
+    entries:
+    - title: 개요
+      url: "/volumes/quotas-work-users-groups-concept.html"
+    - title: 할당량에 대해 UNIX 사용자를 지정합니다
+      url: "/volumes/specify-unix-users-quotas-concept.html"
+    - title: 할당량에 대한 Windows 사용자를 지정합니다
+      url: "/volumes/specify-windows-users-quotas-concept.html"
+    - title: 기본 사용자 및 그룹 할당량이 파생 할당량을 생성하는 방법
+      url: "/volumes/default-user-group-quotas-derived-concept.html"
+    - title: 루트 사용자에게 할당량을 적용하는 방법
+      url: "/volumes/quotas-applied-root-user-concept.html"
+    - title: 특수 Windows 그룹에서 할당량을 사용하는 방법
+      url: "/volumes/quotas-special-windows-groups-concept.html"
+    - title: ID가 여러 개인 사용자에게 할당량을 적용하는 방법
+      url: "/volumes/quotas-applied-users-multiple-ids-concept.html"
+    - title: ONTAP에서 혼합 환경의 사용자 ID를 확인하는 방법
+      url: "/volumes/user-ids-mixed-environment-concept.html"
+    - title: 여러 사용자에게 할당량이 작동하는 방식
+      url: "/volumes/quotas-multiple-users-concept.html"
+    - title: 할당량에 대한 UNIX 및 Windows 이름 링크
+      url: "/volumes/link-unix-windows-names-quotas-concept.html"
+  - title: 할당량과 qtree에 대해 알아보기
+    entries:
     - title: 트리 할당량에 대해 알아보십시오
       url: "/volumes/tree-quotas-concept.html"
     - title: Qtree 변경이 할당량에 미치는 영향
       url: "/volumes/qtree-changes-affect-quotas-concept.html"
-    - title: 할당량이 활성화되는 방식
-      url: "/volumes/quotas-activated-concept.html"
+  - title: 할당량 관리
+    entries:
     - title: 할당량 크기 조정 및 재초기화에 대해 알아보기
       url: "/volumes/quota-resize-reinitialization.html"
     - title: 할당량 보고서에 대해 알아보기
@@ -192,16 +198,14 @@ entries:
       url: "/volumes/space-display-quota-report-unix-client-concept.html"
     - title: 할당량 구성의 예
       url: "/volumes/examples-quota-config-concept.html"
-  - title: SVM에서 할당량 설정
-    url: "/volumes/setup-quotas-svm-task.html"
-  - title: 할당량 제한을 수정(또는 크기 조정)합니다
-    url: "/volumes/change-existing-quota-limits-task.html"
-  - title: 대대적인 변경 작업을 수행한 후 할당량을 다시 초기화합니다
-    url: "/volumes/reinitialize-quotas-after-changes-task.html"
-  - title: 할당량 규칙 및 할당량 정책을 관리하는 명령입니다
-    url: "/volumes/commands-manage-quota-rules-policies-reference.html"
-  - title: 할당량을 설정 및 수정하는 명령입니다
-    url: "/volumes/commands-activate-modify-quotas-reference.html"
+    - title: 할당량 제한을 수정(또는 크기 조정)합니다
+      url: "/volumes/change-existing-quota-limits-task.html"
+    - title: 대대적인 변경 작업을 수행한 후 할당량을 다시 초기화합니다
+      url: "/volumes/reinitialize-quotas-after-changes-task.html"
+    - title: 할당량 규칙 및 할당량 정책을 관리하는 명령입니다
+      url: "/volumes/commands-manage-quota-rules-policies-reference.html"
+    - title: 할당량을 설정 및 수정하는 명령입니다
+      url: "/volumes/commands-activate-modify-quotas-reference.html"
 - title: 중복제거, 데이터 압축, 데이터 컴팩션을 사용하여 스토리지 효율성을 높입니다
   entries:
   - title: 개요

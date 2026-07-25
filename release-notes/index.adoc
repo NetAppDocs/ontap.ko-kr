@@ -57,7 +57,7 @@ NAS 지원을 통해 SnapMirror 액티브 싱크는 이제 투명한 페일오�
 +
 AFF 시스템은 자동 LIF 페일오버를 지원하는 액티브-액티브 다중 경로를 제공하여 모든 SAN 경로를 활성 최적화 상태로 유지함으로써 페일오버 중에도 호스트 I/O가 즉시 지속되도록 합니다. 
 
-* xref:https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html[FLI의 iSCSI 지원]
+* link:https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html["FLI의 iSCSI 지원"^]
 +
 외부 LUN 가져오기(FLI)에 대한 iSCSI 지원을 추가하여 기존 iSCSI 연결을 사용하여 최소한의 중단으로 타사 스토리지 시스템의 블록 데이터를 ONTAP으로 마이그레이션할 수 있습니다. 
 
