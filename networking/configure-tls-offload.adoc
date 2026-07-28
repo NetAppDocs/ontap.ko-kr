@@ -26,41 +26,74 @@ TLS 오프로드 연결의 경우, TLS 암호화 작업은 일반적으로 소�
 
 
 .지원되는 네트워크 카드 및 플랫폼
-TLS 하드웨어 오프로드를 사용하려면 지원되는 네트워크 카드가 필요합니다. 지원되는 네트워크 카드는 다음과 같습니다.
+TLS 하드웨어 오프로드를 사용하려면 지원되는 네트워크 카드가 필요합니다. 다음 표는 플랫폼별로 지원되는 네트워크 카드를 나열합니다.
 
+[cols="1,2,3a"]
+|===
+| 플랫폼 제품군 | 플랫폼 | 지원되는 네트워크 카드 
+
+
+| AFF 및 FAS | AFF A20, AFF A30, AFF A50, AFF C30, AFF C60, FAS50  a| 
 * 4포트 CX7 10/25 GbE
-* 2포트 CX6-Dx 40/100 GbE
+* 2포트 CX6-DX 40/100 GbE
 * 2포트 CX7 40/100 GbE
-* 2포트 CX7 40/100/200
 
 
-4포트 CX7 10/25GbE, 2포트 CX6-Dx 40/100GbE 및 2포트 CX7 40/100GbE 카드는 다음 AFF 플랫폼에서 지원됩니다.
-
-* AFF A20 를 참조하십시오
-* AFF A30 를 참조하십시오
-* AFF A50 를 참조하십시오
-* AFF C30 를 참조하십시오
-* AFF C60 를 참조하십시오
 
 
-4포트 2포트 CX6-Dx 40/100GbE, 2포트 CX7 40/100GbE 및 2포트 CX7 40/100/200GbE 카드는 다음 AFF 및 FAS 플랫폼에서 지원됩니다.
-
-* AFF A70-90
-* AFF C80 를 참조하십시오
-* FAS70를 참조하십시오
-* FAS90를 참조하십시오
-* AFF A1K 를 참조하십시오
+| AFF 및 FAS | AFF A70, AFF A90, AFF C80, FAS70, FAS90, AFF A1K  a| 
+* 2포트 CX6-DX 40/100 GbE
+* 2포트 CX7 40/100 GbE
+* 2포트 CX7 40/100/200/400 GbE
 
 
+
+
+| ASA | ASA A20, ASA A30, ASA A50, ASA C30  a| 
+* 4포트 CX7 10/25 GbE
+* 2포트 CX6-DX 40/100 GbE
+* 2포트 CX7 40/100 GbE
+
+
+
+
+| ASA | ASA A70, ASA A90, ASA A1K  a| 
+* 2포트 CX6-DX 40/100 GbE
+* 2포트 CX7 40/100 GbE
+* 2포트 CX7 40/100/200/400 GbE
+
+
+
+
+| AFX | AFX 1K  a| 
+* 2포트 CX6-DX 40/100 GbE
+* 2포트 CX7 40/100 GbE
+* 2포트 CX7 40/100/200/400 GbE
+
+
+
+
+| AFX | AFX 2K  a| 
+* 2포트 CX7 40/100/200/400 GbE
+
+
+|===
 .지원되는 트래픽 유형
 TLS 하드웨어 오프로드는 다음과 같은 트래픽 유형을 지원합니다.
 
+* NFS 를 참조하십시오
 * NVMe/TCP
 * 클러스터 피어링 암호화
 * FabricPool
 * S3
 * NFS 를 참조하십시오
 
+
+
+NOTE: ASA 시스템에서 TLS 하드웨어 오프로드는 NVMe/TCP 트래픽에만 적용됩니다. ASA 플랫폼에서는 NFS over TLS, FabricPool 및 S3가 지원되지 않습니다.
+
+
+NOTE: AFX 플랫폼에서 TLS 하드웨어 오프로드는 NFS 및 S3 프런트엔드 트래픽 유형을 지원합니다. AFX는 SAN/블록 프로토콜을 지원하지 않으므로 NVMe/TCP는 AFX 플랫폼에서 지원되지 않습니다.
 
 .시작하기 전에
 * 당신은 ONTAP 관리자여야 합니다. `admin` 다음 작업을 수행하기 위한 권한 수준입니다.
@@ -101,19 +134,11 @@ false      TLSv1.3,  false   TLS_RSA_WITH_AES_128_CCM,
 +
 [source, cli]
 ----
-security config modify -is-offload-enabled {true|false}
+security config modify * -is-offload-enabled {true|false}
 ----
 +
 이 명령은 새 연결의 TLS 데이터 단계에 대한 하드웨어 오프로드를 활성화 또는 비활성화합니다. TLS 오프로드 기능을 활성화하기 전에 생성된 기존 연결은 해당 연결을 삭제하고 다시 생성하기 전까지는 오프로드되지 않습니다.
 
-+
-TLS 오프로드를 활성화할 때는 인터페이스를 지정해야 합니다.
-
-+
-[source, cli]
-----
-security config modify -is-offload-enabled true -interface SSL
-----
 
 
 .관련 정보

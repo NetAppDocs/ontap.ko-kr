@@ -33,6 +33,11 @@ NOTE: 클러스터 LIF 리소스가 포화 상태가 되면 성능 저하가 발
 .이 작업에 대해
 ONTAP 9.8 이상에서 ONTAP S3 서버에 대해 로드 밸런싱이 활성화됩니다. 서버의 호스트 이름이 둘 이상의 IP 주소로 확인되는 경우 ONTAP는 반환된 모든 IP 주소(최대 16개의 IP 주소)를 사용하여 클라이언트 연결을 설정합니다. 연결이 설정되면 IP 주소가 라운드 로빈 방식으로 선택됩니다.
 
+
+
+[[set-up-the-ontap-s3-cloud-tier-for-fabricpool]]
+== FabricPool용 ONTAP S3 클라우드 계층 설정
+
 .단계
 ONTAP System Manager 또는 ONTAP CLI를 사용하여 ONTAP S3를 FabricPool용 클라우드 계층으로 설정할 수 있습니다.
 
@@ -103,6 +108,41 @@ cluster1::> storage aggregate object-store config create
 
 --
 ====
+
+
+[[change-the-ontap-s3-fqdn-for-fabricpool-tiering]]
+== FabricPool 계층화를 위한 ONTAP S3 FQDN 변경
+
+FQDN 업데이트를 포함한 네트워크 변경이 필요한 경우 네트워크 중단을 방지하기 위해 FabricPool 티어링에 사용되는 ONTAP S3 FQDN을 변경해야 합니다.
+
+.단계
+. FabricPool 계층에 대한 인증서 확인을 비활성화합니다.
++
+`storage aggregate object-store config modify -object-store-name <object store> -is-certificate-validation-enabled false`
+
+. ONTAP S3 서버의 FQDN 변경:
++
+`vserver object-store-server modify -vserver <vserver> -object-store-server <new fqdn>`
+
+. (선택 사항) 인증서 유효성 검사가 필요하고 호스트 이름이 변경된 경우, link:../s3-config/create-install-ca-certificate-svm-task.html["인증서를 갱신합니다"].
+. FabricPool 계층을 새 FQDN으로 업데이트합니다.
++
+`storage aggregate object-store config modify -object-store-name <object_store_name> -server <new fqdn>`
+
+. FabricPool 계층에서 모든 객체 저장소와 해당 미러 저장소(있는 경우)를 사용할 수 있는지 확인하십시오.
++
+`storage aggregate object-store show -fields object-store-availability,mirror-type,is-mirror-degraded`
+
++
+자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/storage-aggregate-object-store-show.html#description["저장소 집계 객체-저장소 표시"^]을 참조하십시오.
+
+. 다른 객체 저장소가 있는 경우에도 이 단계를 반복하십시오.
+. ONTAP S3 서버와 FabricPool 계층에서 인증서를 갱신한 경우 인증서 확인을 다시 활성화하십시오.
++
+`storage aggregate object-store config modify -object-store-name <object store> -is-certificate-validation-enabled true`
+
+
+
 [[create-lif]]
 .관련 정보
 * link:../smb-config/create-lif-task.html["SMB용 LIF를 생성합니다"]
