@@ -37,42 +37,42 @@ entries:
       url: "/nfs-config/configure-name-services-concept.html"
     - title: NFS 이름 서비스 스위치 테이블 구성
       url: "/nfs-config/configure-name-service-switch-table-task.html"
-    - title: 로컬 UNIX 사용자 및 그룹을 구성합니다
-      entries:
-      - title: NFS SVM에 대한 로컬 UNIX 사용자 및 그룹에 대해 알아보세요.
-        url: "/nfs-config/configure-local-unix-users-groups-concept.html"
-      - title: NFS SVM에서 로컬 UNIX 사용자 만들기
-        url: "/nfs-config/create-local-unix-user-task.html"
-      - title: NFS SVM에 로컬 UNIX 사용자 목록 로드
-        url: "/nfs-config/load-local-unix-users-uri-task.html"
-      - title: NFS SVM에 로컬 UNIX 그룹 만들기
-        url: "/nfs-config/create-local-unix-group-task.html"
-      - title: NFS SVM의 로컬 UNIX 그룹에 사용자 추가
-        url: "/nfs-config/add-user-local-unix-group-task.html"
-      - title: NFS SVM의 URI에서 로컬 UNIX 그룹 로드
-        url: "/nfs-config/load-local-unix-groups-uri-task.html"
-    - title: 넷그룹으로 작업합니다
-      entries:
-      - title: NFS SVM의 넷그룹에 대해 알아보세요
-        url: "/nfs-config/work-netgroups-task.html"
-      - title: NFS SVM의 URI에서 넷그룹 로드
-        url: "/nfs-config/load-netgroups-svms-task.html"
-      - title: NFS SVM 넷그룹 정의 확인
-        url: "/nfs-config/verify-status-netgroup-definitions-task.html"
+  - title: 로컬 UNIX 사용자 및 그룹을 구성합니다
+    entries:
+    - title: NFS SVM에 대한 로컬 UNIX 사용자 및 그룹에 대해 알아보세요.
+      url: "/nfs-config/configure-local-unix-users-groups-concept.html"
+    - title: NFS SVM에서 로컬 UNIX 사용자 만들기
+      url: "/nfs-config/create-local-unix-user-task.html"
+    - title: NFS SVM에 로컬 UNIX 사용자 목록 로드
+      url: "/nfs-config/load-local-unix-users-uri-task.html"
+    - title: NFS SVM에 로컬 UNIX 그룹 만들기
+      url: "/nfs-config/create-local-unix-group-task.html"
+    - title: NFS SVM의 로컬 UNIX 그룹에 사용자 추가
+      url: "/nfs-config/add-user-local-unix-group-task.html"
+    - title: NFS SVM의 URI에서 로컬 UNIX 그룹 로드
+      url: "/nfs-config/load-local-unix-groups-uri-task.html"
+  - title: 넷그룹으로 작업합니다
+    entries:
+    - title: NFS SVM의 넷그룹에 대해 알아보세요
+      url: "/nfs-config/work-netgroups-task.html"
+    - title: NFS SVM의 URI에서 넷그룹 로드
+      url: "/nfs-config/load-netgroups-svms-task.html"
+    - title: NFS SVM 넷그룹 정의 확인
+      url: "/nfs-config/verify-status-netgroup-definitions-task.html"
     - title: NFS SVM에 대한 NIS 도메인 구성 만들기
       url: "/nfs-config/create-nis-domain-config-task.html"
-    - title: LDAP를 사용합니다
-      entries:
-      - title: NFS SVM에서 LDAP 이름 서비스 사용에 대해 알아보세요
-        url: "/nfs-config/using-ldap-concept.html"
-      - title: NFS SVM에 대한 새 LDAP 클라이언트 스키마 만들기
-        url: "/nfs-config/create-new-ldap-client-schema-task.html"
-      - title: NFS 액세스를 위한 LDAP 클라이언트 구성 만들기
-        url: "/nfs-config/create-ldap-client-config-task.html"
-      - title: LDAP 클라이언트 구성을 NFS SVM과 연결합니다.
-        url: "/nfs-config/enable-ldap-svms-task.html"
-      - title: NFS SVM에 대한 LDAP 소스 확인
-        url: "/nfs-config/configure-svms-ldap-task.html"
+  - title: LDAP를 사용합니다
+    entries:
+    - title: NFS SVM에서 LDAP 이름 서비스 사용에 대해 알아보세요
+      url: "/nfs-config/using-ldap-concept.html"
+    - title: NFS SVM에 대한 새 LDAP 클라이언트 스키마 만들기
+      url: "/nfs-config/create-new-ldap-client-schema-task.html"
+    - title: NFS 액세스를 위한 LDAP 클라이언트 구성 만들기
+      url: "/nfs-config/create-ldap-client-config-task.html"
+    - title: LDAP 클라이언트 구성을 NFS SVM과 연결합니다.
+      url: "/nfs-config/enable-ldap-svms-task.html"
+    - title: NFS SVM에 대한 LDAP 소스 확인
+      url: "/nfs-config/configure-svms-ldap-task.html"
   - title: 강력한 보안을 위해 NFS와 Kerberos 사용
     entries:
     - title: 보안 인증을 위해 NFS와 함께 Kerberos를 사용하는 방법에 대해 알아보세요.

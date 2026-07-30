@@ -111,25 +111,25 @@ entries:
     entries:
     - title: NFS 이름 서비스 스위치 구성에 대해 알아보세요
       url: "/nfs-admin/ontap-name-service-switch-config-concept.html"
-    - title: LDAP를 사용합니다
-      pdf-filename: LDAP 서버를 사용합니다
-      entries:
-      - title: NFS SVM용 LDAP에 대해 알아보세요
-        url: "/nfs-admin/using-ldap-concept.html"
-      - title: NFS SVM에 대한 LDAP 서명 및 봉인에 대해 알아보세요.
-        url: "/nfs-admin/ldap-signing-sealing-concept.html"
-      - title: NFS SVM용 LDAPS에 대해 알아보세요
-        url: "/nfs-admin/ldaps-concept.html"
-      - title: NFS SVM에 대한 LDAP RFC2307bis 지원 활성화
-        url: "/nfs-admin/enable-ldap-rfc2307bis-support-task.html"
-      - title: LDAP 디렉토리 검색을 위한 NFS 구성 옵션
-        url: "/nfs-admin/config-options-ldap-directory-searches-concept.html"
-      - title: NFS SVM에 대한 LDAP 디렉토리 netgroup-by-host 검색의 성능 향상
-        url: "/nfs-admin/improve-performance-ldap-directory-searches-task.html"
-      - title: NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다.
-        url: "/nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html"
-      - title: NFS SVM에 대한 LDAP 통계 표시
-        url: "/nfs-admin/display-ldap-statistics-task.html"
+  - title: LDAP를 사용합니다
+    pdf-filename: LDAP 서버를 사용합니다
+    entries:
+    - title: NFS SVM용 LDAP에 대해 알아보세요
+      url: "/nfs-admin/using-ldap-concept.html"
+    - title: NFS SVM에 대한 LDAP 서명 및 봉인에 대해 알아보세요.
+      url: "/nfs-admin/ldap-signing-sealing-concept.html"
+    - title: NFS SVM용 LDAPS에 대해 알아보세요
+      url: "/nfs-admin/ldaps-concept.html"
+    - title: NFS SVM에 대한 LDAP RFC2307bis 지원 활성화
+      url: "/nfs-admin/enable-ldap-rfc2307bis-support-task.html"
+    - title: LDAP 디렉토리 검색을 위한 NFS 구성 옵션
+      url: "/nfs-admin/config-options-ldap-directory-searches-concept.html"
+    - title: NFS SVM에 대한 LDAP 디렉토리 netgroup-by-host 검색의 성능 향상
+      url: "/nfs-admin/improve-performance-ldap-directory-searches-task.html"
+    - title: NFS SVM에 대한 nsswitch 인증을 위해 LDAP 빠른 바인딩을 사용합니다.
+      url: "/nfs-admin/ldap-fast-bind-nsswitch-authentication-task.html"
+    - title: NFS SVM에 대한 LDAP 통계 표시
+      url: "/nfs-admin/display-ldap-statistics-task.html"
   - title: 이름 매핑을 구성합니다
     pdf-filename: ID 매핑을 위한 이름 매핑을 구성합니다
     entries:

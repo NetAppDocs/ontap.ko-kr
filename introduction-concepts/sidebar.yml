@@ -1,8 +1,0 @@
----
-section: introduction-concepts
-title: 소개 및 개념
-url: "/introduction-concepts/index.html"
-entries:
-- section: concepts
-- title: System Manager와 BlueXP의 통합
-  url: "/concepts/sysmgr-integration-bluexp-concept.html"
