@@ -1,0 +1,41 @@
+---
+permalink: fabricpool/modify-cloud-retrieval-policy-task.html 
+sidebar: sidebar 
+keywords: cloud retrieval, controls, volume, default, tiering policy 
+summary: ONTAP 9.8에서 도입된 -cloud-retrieval-policy 옵션을 사용하여 볼륨의 클라우드 검색 정책을 변경할 수 있습니다. 
+---
+= 볼륨의 클라우드 검색 정책 수정
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FabricPool 클라우드 데이터 검색은 데이터가 로컬 계층에 다시 기록되는 시점을 결정하는 검색 정책에 의해 제어됩니다. 읽기 패턴은 순차적이거나 임의적일 수 있습니다.
+
+예를 들어, 'Auto' 볼륨 계층화 정책을 사용하는 경우, 콜드 블록이 순차적으로 읽히면 콜드 상태로 유지되어 클라우드 계층에 남아 있습니다. 대부분의 클라이언트 애플리케이션에서 이는 바람직한 동작이며, 바이러스 백신 및 분석 애플리케이션에서 흔히 발생하는 심층 파일 검사로 인해 콜드 데이터가 로컬 계층에 기록되는 것을 방지합니다.
+
+ONTAP 9.8부터는 볼륨의 클라우드 검색 정책을 변경하여 link:tiering-policies-concept.html#how-cloud-retrieval-policies-work-with-tiering-policies["기본 클라우드 검색"] 동작을 재정의할 수 있습니다.
+
+.시작하기 전에
+* '-cloud-retrieval-policy' 옵션을 사용하여 볼륨을 수정하려면 ONTAP 9.8 이상이 필요합니다.
+* 이 작업을 수행하려면 고급 권한 수준이 있어야 합니다.
+* 계층화 정책의 동작을 클라우드 검색 정책으로 이해해야 합니다.
++
+link:tiering-policies-concept.html#how-cloud-retrieval-policies-work-with-tiering-policies["클라우드 검색 정책이 계층화 정책과 연동되는 방식"]
+
+
+
+.단계
+. 기존 볼륨의 클라우드 검색 정책을 수정하려면 `volume modify` 명령에 `-cloud-retrieval-policy` 옵션을 사용하십시오.
++
+[listing]
+----
+volume create -volume <volume_name> -vserver <vserver_name> - tiering-policy <policy_name> -cloud-retrieval-policy
+----
++
+[listing]
+----
+vol modify -volume fp_volume4 -vserver vs0 -cloud-retrieval-policy promote
+----
+
