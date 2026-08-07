@@ -110,6 +110,7 @@ link:../performance-admin/policy-group-assignment-restrictions.html["QoS 정책 
  a| 
 추가 기능
  a| 
+* 볼륨 이동은 FlexGroup 볼륨을 구성하는 개별 멤버 볼륨에 대해 지원됩니다.
 * link:../s3-audit/index.html["S3 이벤트를 감사합니다"] (ONTAP 9.10.1부터)
 * link:../s3-config/create-bucket-lifecycle-rule-task.html["버킷 수명 주기 관리"] (ONTAP 9.13.1부터)
 * FabricPool 클라우드 계층(link:../s3-config/index.html["네이티브 S3 전용"])
@@ -117,6 +118,7 @@ link:../performance-admin/policy-group-assignment-restrictions.html["QoS 정책 
 * link:../flexcache/supported-unsupported-features-concept.html#supported-features["FlexCache 볼륨"](ONTAP 9.18.1부터)
 
  a| 
+* S3 버킷에서 사용하는 FlexGroup 볼륨의 경우 볼륨 이동이 지원되지 않습니다.
 * FPolicy를 참조하십시오
 * Qtree
 * 할당량

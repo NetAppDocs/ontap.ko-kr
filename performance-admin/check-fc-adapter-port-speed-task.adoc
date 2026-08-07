@@ -19,7 +19,7 @@ summary: 어댑터 대상 포트 속도는 성능을 최적화하기 위해 연�
 .단계
 . 어댑터를 오프라인 상태로 전환:
 +
-'network fcp adapter modify -node_nodename_-adapter_adapter_-state_down_'
+`network fcp adapter modify -node _nodename_ -adapter _adapter_ -status-admin _down_`
 
 +
 에 대한 자세한 내용은 `network fcp adapter modify` link:https://docs.netapp.com/us-en/ontap-cli/network-fcp-adapter-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
@@ -37,7 +37,7 @@ FCP 어댑터 show-instance(FCP 어댑터 show-instance)
 
 . 어댑터를 온라인으로 전환합니다.
 +
-'network fcp adapter modify -node_nodename_-adapter_adapter_ - state up'
+`network fcp adapter modify -node _nodename_ -adapter _adapter_ -status-admin up`
 
 . 어댑터에 있는 모든 LIF를 온라인으로 전환합니다.
 +

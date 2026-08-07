@@ -67,7 +67,7 @@ cluster_dst:> vserver create -vserver svm_backup -subtype dp-destination
 +
 에 대한 자세한 내용은 `vserver create` link:https://docs.netapp.com/us-en/ontap-cli/vserver-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-. 대상 클러스터에서 'vserver peer create' 명령을 사용하여 SVM 피어 관계를 생성합니다.
+. 소스 클러스터에서  `vserver peer create` 명령을 사용하여 SVM 피어 관계를 생성합니다.
 +
 자세한 내용은 을 참조하십시오 link:../peering/create-intercluster-svm-peer-relationship-93-later-task.html["SVM 인터클러스터 피어 관계를 생성합니다"].
 
