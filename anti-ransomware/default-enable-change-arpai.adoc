@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/default-enable-change-arpai.html 
+keywords: ARP AI, arpai, opt out, disable automatic enablement, autonomous ransomware protection AI, ONTAP 9.18.1, grace period, AFF, ASA, upgrade 
+summary: 지원되는 AFF 및 ASA 시스템에서 ONTAP 9.18.1 이상으로 업그레이드할 경우, 유예 기간 이후 새 볼륨에 대해 ARP/AI가 기본적으로 활성화됩니다. 언제든지 옵트아웃하거나 설정을 변경할 수 있습니다. 
+---
+= 업그레이드 중 ONTAP ARP/AI 자동 활성화 관리
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.18.1 이상으로 업그레이드할 경우, 안티랜섬웨어 라이선스가 설치되어 있으면 AFF A 시리즈, AFF C 시리즈, ASA 및 ASA r2 시스템의 모든 새 볼륨에 대해 12시간의 유예 기간 후 AI 기반 자율 랜섬웨어 보호(ARP/AI)가 기본적으로 자동으로 활성화됩니다. 이 절차를 사용하여 유예 기간 중 또는 이후에 자동 기본 활성화를 해제하거나, 업그레이드 후 언제든지 설정을 변경할 수 있습니다.
+
+
+NOTE: ONTAP 9.15.1 이하 버전을 사용 중인 경우 link:index.html["자율형 랜섬웨어 보호에 대해 알아보세요"]을 참조하십시오.
+
+
+NOTE: ONTAP 9.17.1 이하 버전을 실행 중인 경우 클러스터 수준의 자동 기본 활성화는 적용되지 않습니다. SVM 수준의 기본 활성화는 link:enable-default-arpai.html["새 볼륨에서 기본적으로 ARP/AI 활성화"]을(를) 사용하여 구성할 수 있습니다.
+
+
+NOTE: 기존 볼륨은 ARP/AI에 대해 link:enable-arpai.html["수동으로 활성화됨"]이어야 합니다.
+
+
+NOTE: ONTAP 9.19.1부터 SnapMirror 동기식 및 SnapMirror 액티브 동기식 SAN 관계를 포함하는 클러스터에 대해 기본 ARP/AI 활성화가 적용됩니다. ONTAP 9.18.1에서는 이러한 구성에 대해 기본 활성화가 비활성화되었습니다. 클러스터 간 SnapMirror 동기식 관계의 경우, 소스 및 대상 클러스터 모두 ONTAP 9.19.1로 업그레이드된 후에 기본 활성화가 적용됩니다.
+
+.이 작업에 대해
+선택한 설정은 나중에 변경할 수 있습니다. 유예 기간 이후에는 언제든지 자동 기본값 활성화 기능을 켜거나 끌 수 있습니다.
+
+[source, cli]
+----
+security anti-ransomware auto-enable modify -new-volume-auto-enable false|true
+----
+.단계
+시스템 관리자 또는 ONTAP CLI를 사용하여 ARP/AI 자동 기본값 활성화를 관리할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 클러스터 > 설정 * 을 선택합니다.
+. 다음 중 하나를 수행합니다.
++
+** 활성 유예 기간 동안 비활성화:
++
+... *랜섬웨어 방지* 섹션에서 ARP/AI가 활성화되기까지 남은 시간을 나타내는 메시지가 표시됩니다. *활성화 안 함*을 선택합니다.
+... 다음 대화 상자에서 *사용 안 함*을 선택하여 새 볼륨에 대한 기본 ARP/AI 활성화가 꺼져 있음을 확인합니다.
+
+
+** 유예 기간 후 비활성화:
++
+... *랜섬웨어 방지* 섹션에서 image:icon_pencil.gif["편집 아이콘"]를 선택하세요.
+... 확인란을 선택한 다음 *저장*을 클릭하여 새 볼륨에 대한 자동 기본 ARP/AI 활성화를 비활성화합니다.
+
+
+
+
+
+
+--
+.CLI를 참조하십시오
+--
+. 자동 활성화 상태를 확인합니다.
++
+[source, cli]
+----
+security anti-ransomware auto-enable show
+----
+. 새 볼륨에 대한 자동 기본 설정 활성화를 비활성화합니다.
++
+[source, cli]
+----
+security anti-ransomware auto-enable modify -new-volume-auto-enable false
+----
+
+
+--
+====
+.관련 정보
+* link:enable-arpai.html["개별 볼륨에서 ARP/AI 활성화"]
+

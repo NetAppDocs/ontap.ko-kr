@@ -1,0 +1,254 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/learn-about-arpai.html 
+keywords: ransomware, arpai, arp ai, autonomous protection, ai, machine learning, security, detect, detection, threat, attack, anti-ransomware, entropy, snapshot, NAS, SAN, automatic updates, evaluation period 
+summary: ONTAP 9.16.1부터 ARP/AI는 사전 학습된 머신러닝 모델을 사용하여 학습 기간 없이 NAS 및 SAN 환경에 즉각적인 활성 랜섬웨어 보호 기능을 제공합니다. 
+---
+= ONTAP ARP/AI에 대해 알아보기(ONTAP 9.16.1 이상)
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.16.1부터 자율형 랜섬웨어 보호는 사전 학습된 머신러닝 모델(ARP/AI)을 사용하여 NAS 및 SAN 환경에서 끊임없이 진화하는 랜섬웨어를 탐지합니다. ARP/AI는 학습 기간 없이 즉각적인 능동적 보호 기능을 제공하며, ONTAP 릴리스와 관계없이 자동 보안 업데이트를 지원합니다.
+
+ARP/AI는 ONTAP 9.10.1부터 9.15.1까지 사용되었던 이전 ARP 모델과 구별됩니다. 이전 모델은 능동적인 보호를 시작하기 전에 학습 기간이 필요했습니다. 기능 비교는 link:index.html#autonomous-ransomware-protection-with-ai-arp-ai-and-legacy-arp-feature-comparison["ARP/AI와 기존 ARP 기능 비교"]을 참조하십시오.
+
+
+
+[[how-arpai-works]]
+== ARP/AI 작동 방식
+
+ARP/AI의 머신러닝 모델은 모의 랜섬웨어 공격 전후의 대규모 파일 데이터셋을 사용하여 사전 학습됩니다.  이러한 리소스 집약적인 학습은 오픈 소스 포렌식 연구 데이터셋을 사용하여 ONTAP 외부에서 수행됩니다.  고객 데이터는 전체 모델링 파이프라인에서 사용되지 않습니다.  사전 학습된 모델은 ONTAP에 온박스로 포함되어 있으며 ONTAP CLI 또는 ONTAP API를 통해 접근하거나 수정할 수 없습니다.
+
+.지원되는 볼륨에 대한 즉각적인 보호
+ARP/AI는 다음과 같은 지원되는 볼륨 유형에 대해 즉각적인 활성 보호 기능을 제공합니다.
+
+* ONTAP 9.16.1 이상을 사용한 NAS FlexVol 볼륨
+* ONTAP 9.18.1 이상을 사용한 NAS FlexGroup 볼륨
+* ONTAP 9.17.1 이상의 SAN FlexVol 볼륨(즉시 활성화되며, link:entropy-eval-period-arpai.html["평가 기간"] 중에도 활성화됨)
+
+
+
+NOTE: 이전 ARP 기능에서의 전환 등 업그레이드 관련 동작에 대해서는 link:support-arpai.html#arp-upgrade-considerations["기존 클러스터 업그레이드 시 고려 사항"]을 참조하십시오.
+
+.자동 보안 업데이트
+최신 랜섬웨어 위협으로부터 최신 보호 기능을 유지하기 위해 ARP/AI는 정기적인 ONTAP 업그레이드 및 릴리스 주기와 관계없이 빈번한 자동 업데이트를 제공합니다. link:../update/enable-automatic-updates-task.html["자동 업데이트를 활성화했습니다"]가 있는 경우 보안 파일에 대한 자동 업데이트를 선택한 후 ARP/AI에 대한 자동 보안 업데이트를 받을 수도 있습니다. 또한 link:update-arpai.html#manually-update-arpai-with-the-latest-security-package["이 업데이트를 수동으로 만드세요"] 업데이트 시점을 제어할 수 있습니다.
+
+ONTAP 9.16.1부터 시스템 및 펌웨어 업데이트 외에 ARP/AI용 보안 업데이트를 System Manager를 사용하여 사용할 수 있습니다.
+
+link:update-arpai.html["ARP/AI 업데이트에 대해 자세히 알아보십시오"]
+
+
+
+[[what-arpai-detects]]
+== ARP/AI가 감지하는 것
+
+ARP/AI는 수신 데이터를 암호화된 텍스트 또는 평문으로 식별하고, 사전 학습된 머신러닝 모델을 사용하여 여러 엔트로피 기반 신호와 파일 동작 패턴을 동시에 평가하여 랜섬웨어 활동을 실시간으로 감지합니다.
+
+ARP/AI는 소수의 파일만 암호화된 후 대부분의 랜섬웨어 공격 확산을 감지하고, 데이터를 보호하기 위해 자동으로 대응하며, 공격이 의심되는 경우 사용자에게 경고합니다.
+
+
+NOTE: 어떤 랜섬웨어 탐지 시스템도 완벽한 안전을 보장할 수는 없습니다. ARP/AI는 안티바이러스 소프트웨어가 침입을 탐지하지 못할 경우 추가적인 방어막을 제공합니다.
+
+
+
+[[enablement-options-for-arpai]]
+== ARP/AI 활성화 옵션
+
+ARP/AI는 클러스터, SVM 및 볼륨 수준에서 유연한 활성화 옵션을 제공합니다.
+
+.새 볼륨에서 자동 기본 활성화
+ONTAP 9.18.1 버전부터 AFF A 시리즈, AFF C 시리즈, ASA 및 ASA r2 시스템의 모든 새 볼륨에서 ARP/AI가 기본적으로 활성화됩니다. 이 자동 기본 활성화는 link:support-arpai.html#unsupported-configurations["지원되지 않는 볼륨 또는 구성"]에는 적용되지 않습니다. link:enable-arpai.html["기존 볼륨에서 ARP/AI를 수동으로 활성화"]할 수 있습니다.
+
+link:default-enable-change-arpai.html["기본 활성화를 켜거나 끕니다"] 배포 후 언제든지 가능합니다.
+
+
+NOTE: 유예 기간 및 SnapMirror 버전 요구 사항을 포함한 업그레이드별 활성화 동작에 대한 자세한 내용은 link:support-arpai.html#arp-upgrade-considerations["기존 클러스터 업그레이드 시 고려 사항"]을 참조하십시오.
+
+.새 볼륨에서 수동 기본 활성화
+클러스터 수준에서 자동 기본 활성화를 비활성화한 경우 SVM 수준에서도 link:enable-default-arpai.html["모든 새 볼륨에서 기본적으로 ARP/AI를 수동으로 활성화합니다"]을 선택할 수 있습니다. ONTAP 9.17.1 이하 버전에서는 새 볼륨에서 ARP/AI를 기본적으로 활성화하도록 구성하는 유일한 방법입니다.
+
+.기존 볼륨 전체 또는 특정 볼륨에 대한 활성화
+ONTAP 9.18.1 버전부터는 클러스터 수준에서 기존의 모든 볼륨에 대해 ARP/AI를 수동으로 활성화할 수 있습니다(*클러스터 > 보안*을 선택하고 *랜섬웨어 방지* 섹션에서 image:icon_kabob.gif["메뉴 옵션 아이콘"] *기존의 모든 볼륨에서 활성화*를 선택하십시오).
+
+특정 볼륨에서 ARP/AI를 활성화하려면 link:enable-arpai.html["볼륨에서 ARP/AI 활성화"]을 참조하십시오.
+
+
+
+[[arpai-protection-modes]]
+== ARP/AI 보호 모드
+
+ARP/AI는 학습 기간 없이 즉시 볼륨을 보호합니다. 다음 표는 볼륨 유형별 보호 동작 방식을 설명합니다.
+
+
+
+[[nas-volumes]]
+=== NAS 볼륨
+
+[cols="1,5,1"]
+|===
+| 방법 | 설명 | 볼륨 유형 및 버전 
+
+
+| 평가  a| 
+2~4주간의 평가 기간을 통해 기준 암호화 동작을 파악하며, ARP/AI는 평가 기간 동안 즉각적인 능동적 보호 기능을 제공합니다. 기준 임계값이 설정되는 동안 탐지 및 경고가 발생할 수 있습니다. 평가 기간이 완료되었는지 여부는  `security anti-ransomware volume show` 명령을 실행하고  `Block device detection status`을(를) 확인하여 알 수 있습니다.
+
+link:entropy-eval-period-arpai.html["블록 디바이스 워크로드에 대한 ARP/AI 평가 기간에 대해 알아보십시오."].
+ a| 
+ONTAP 9.17.1P5 이상 버전에서 ONTAP이 감지한 하이퍼바이저 가상 디스크를 포함하는 NAS FlexVol 볼륨
+
+
+
+| 활동적인  a| 
+ARP/AI는 워크로드 활동을 모니터링하고 랜섬웨어 공격을 나타내는 비정상적인 동작이 감지되면 자동으로 대응합니다. 데이터 보호를 위해 경고에 따라 조치를 취하거나, 오탐으로 표시할 수 있습니다. 경고를 오탐으로 표시하면 탐지 모델이 업데이트됩니다. 비정상적인 파일 동작으로 인해 발생한 경고를 오탐으로 표시하면 다음에 동일한 패턴이 관찰될 때 경고가 표시되지 않습니다.
+ a| 
+* ONTAP 9.16.1 이상을 사용한 NAS FlexVol 볼륨
+* ONTAP 9.18.1 이상을 사용한 NAS FlexGroup 볼륨
+
+
+|===
+
+
+[[san-volumes]]
+=== SAN 볼륨
+
+[cols="1,5,1"]
+|===
+| 방법 | 설명 | 볼륨 유형 및 버전 
+
+
+| 평가  a| 
+ARP/AI는 평가 기간 동안 SAN 볼륨에 대한 즉각적인 활성 보호 기능을 제공하는 반면, 기준 암호화 동작을 확인하기 위해 2~4주간의 평가 기간이 수행됩니다.  기준 임계값이 설정되는 동안에도 감지 및 경고가 발생할 수 있습니다.  평가 기간이 완료되었는지 확인하려면 다음을 실행하세요. `security anti-ransomware volume show` 명령 및 확인 `Block device detection status` .
+
+link:entropy-eval-period-arpai.html["블록 디바이스 워크로드에 대한 ARP/AI 평가 기간에 대해 알아보십시오."].
+ a| 
+ONTAP 9.17.1 이상의 SAN FlexVol 볼륨
+
+
+
+| 활동적인  a| 
+평가 기간이 종료된 후에 `security anti-ransomware volume show` 명령을 실행하고 `Block device detection status`를 확인하여 ARP/AI SAN 보호 기능이 활성화되었는지 확인할 수 있습니다. 상태가 `Active_suitable_workload`이면 평가된 엔트로피 양을 성공적으로 모니터링할 수 있음을 나타냅니다. ARP/AI는 평가 기간 동안 검토된 데이터를 기반으로 적응형 임계값을 자동으로 조정합니다.
+ a| 
+ONTAP 9.17.1 이상의 SAN FlexVol 볼륨
+
+|===
+
+
+[[threat-assessment]]
+== 위협 평가
+
+ARP/AI는 데이터가 스토리지에 기록될 때마다 위협 발생 가능성을 지속적으로 평가합니다. 머신러닝 모델이 활동이 랜섬웨어 프로필과 일치한다고 판단하면 ONTAP는 *중간* 수준의 위협에 대한 EMS 알림을 생성하여 사용자가 위협을 평가하도록 안내합니다. ARP/AI는 낮은 수준의 위협을 사용하지 않으며, 모든 탐지 사항은 중간 수준으로 보고됩니다.
+
+중간 수준의 위협에 대한 정보는 System Manager의 *이벤트* 섹션 또는  `security anti-ransomware volume show` 명령을 통해 확인할 수 있습니다.  `security anti-ransomware volume show`에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+자세한 내용은 link:respond-arpai.html["비정상적인 활동에 응답합니다"]을 참조하십시오.
+
+
+
+[[arpai-snapshots]]
+== ARP/AI 스냅샷
+
+ARP/AI는 공격 초기 징후가 감지되면 스냅샷을 생성합니다. 그런 다음 분석을 통해 잠재적 공격을 확인하거나 기각합니다. ARP/AI는 4시간 간격으로 정기적으로 스냅샷을 생성하므로 이러한 스냅샷이 생성되었다고 해서 이상 징후로 간주해서는 안 됩니다. 공격이 확인되면 공격 확률이 `Moderate`로 설정되고 공격 알림이 생성됩니다.
+
+다음 표는 ARP/AI 스냅샷 동작을 요약한 것입니다.
+
+[cols="1,3"]
+|===
+| 피처 | ARP/AI 모델 (ONTAP 9.16.1 이상) 
+
+
+| 창조 트리거  a| 
+* 스냅샷은 특정 트리거와 관계없이 고정된 4시간 간격으로 생성됩니다.
+* 공격 확인
+
+
+트리거 유형에 따라 "주기적" 또는 "공격" 스냅샷이 생성됩니다.
+
+
+
+| 접두사 이름 규칙 | "안티랜섬웨어 정기 백업" "안티랜섬웨어 공격 백업" 
+
+
+| 삭제 동작 | ARP/AI 스냅샷이 잠겨 있어 관리자가 삭제할 수 없습니다 
+
+
+| 최대 스냅샷 수 | link:modify-snapshot-options-arpai.html["6개의 스냅샷 구성 가능 한도"] 
+
+
+| 보존 기간  a| 
+스냅샷은 일반적으로 12시간 동안 보관됩니다.
+
+* NAS 볼륨: 파일 분석을 통해 공격이 확인되면 공격 전에 생성된 스냅샷은 관리자가 공격을 참으로 표시하거나 거짓 긍정(명확한 의심)으로 표시할 때까지 보관됩니다.
+* SAN 볼륨 또는 VM 데이터 저장소: 블록 엔트로피 분석을 통해 공격이 확인되면 공격 전에 생성된 스냅샷은 10일 동안 보관됩니다(구성 가능).
+
+
+
+
+| 명백한 의심 행위  a| 
+관리자는 확인을 기준으로 보존 기간을 설정하는 명백한 의심 작업을 수행할 수 있습니다.
+
+* 24시간 동안 거짓 양성 보존
+* 7일간의 True Positive 유지 기간
+
+
+
+
+| 만료 시간 | 모든 스냅샷에 만료 시간이 설정됩니다. 
+|===
+
+
+[[snapmirror-synchronous-and-active-sync]]
+=== SnapMirror 동기식 및 액티브 동기화
+
+ONTAP 9.19.1부터 SnapMirror 동기 또는 SnapMirror 활성 동기화 관계에 참여하는 볼륨에 대해 생성된 ARP/AI 스냅샷은 다음과 같은 추가 규칙을 따릅니다.
+
+* ARP/AI 스냅샷은 기본 볼륨에 생성되어 보관됩니다.
+* ARP/AI 스냅샷은 SnapMirror 동기식 또는 SnapMirror 활성 동기화의 일부로 보조 서버로 복제되지 않습니다. 장애 조치 후 복구 볼륨에서 link:enable-arpai.html["ARP/AI를 다시 활성화합니다."]해야 합니다.
+
+
+
+NOTE: SnapMirror 동기식 또는 SnapMirror active sync SAN 볼륨에서의 볼륨 레벨 복구(`volume snapshot restore`) 시에는 SnapMirror 동기식 또는 SnapMirror active sync 관계를 일시적으로 정지하거나 해제해야 할 수 있습니다. 많은 경우, 기본 볼륨의 ARP/AI 또는 기타 스냅샷에서 FlexClone 또는 파일 레벨 복구 작업을 사용하여 SnapMirror 동기식 또는 SnapMirror active sync 관계를 해제하지 않고도 해결할 수 있습니다.
+
+link:support-arpai.html#snapmirror["SnapMirror 동기식 및 SnapMirror 활성 동기화 지원에 대해 자세히 알아보십시오"].
+
+
+
+[[respond-to-and-assess-an-attack]]
+== 공격에 대응하고 평가합니다
+
+ARP/AI는 공격 초기 징후가 감지되면 잠금 스냅샷을 생성합니다.  공격이 실제인지 오탐인지 확인해야 합니다.  잠금 스냅샷은 일반적인 방법으로는 삭제할 수 없습니다.  하지만 나중에 공격을 오탐으로 표시하기로 결정하면 ONTAP이 잠금된 사본을 삭제합니다.
+
+* link:respond-arpai.html["비정상 활동에 대응: ARP/AI"]
+* link:determine-ransomware-tips.html["랜섬웨어 공격이 실제인지 확인합니다"]
+
+
+
+
+[[recover-data-after-an-attack]]
+== 공격 후 데이터 복구
+
+공격이 확인되면 ARP/AI 스냅샷을 사용하여 볼륨을 복원할 수 있습니다. 전체 볼륨을 되돌리는 대신 선택한 스냅샷에서 영향을 받은 파일만 복구할 수 있습니다.
+
+* link:recover-arpai.html["ARP/AI 스냅샷에서 데이터 복구"]
+* link:../data-protection/restore-contents-volume-snapshot-task.html["ONTAP 스냅샷에서 복구"]
+* link:https://www.netapp.com/blog/smart-ransomware-recovery["스마트 랜섬웨어 복구"^]
+
+
+
+
+[[multi-admin-verification]]
+== 다중 관리 검증
+
+ONTAP 9.13.1부터는 ARP/AI 구성에 두 명 이상의 인증된 사용자 관리자가 필요하도록 MAV(다중 관리자 검증)를 활성화하는 것이 좋습니다. 자세한 내용은 link:../multi-admin-verify/enable-disable-task.html["다중 관리 검증을 활성화합니다"]을 참조하십시오.
+
+.관련 정보
+* link:support-arpai.html["ARP/AI 지원 구성"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

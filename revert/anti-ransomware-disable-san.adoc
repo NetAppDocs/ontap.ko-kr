@@ -2,14 +2,14 @@
 permalink: revert/anti-ransomware-disable-san.html 
 sidebar: sidebar 
 keywords: revert, reverting, reversion, anti-ransomware, san, autonomous, protection, arp 
-summary: 불필요한 CPU 및 디스크 공간 소모를 방지하려면 ONTAP 9.16.1 또는 이전 버전으로 되돌리기 전에 SAN 볼륨에서 ARP를 비활성화하세요. 
+summary: SAN 볼륨에서 ARP/AI를 비활성화한 후 ONTAP 9.16.1 이하 버전으로 되돌려 불필요한 CPU 및 디스크 공간 소비를 방지하십시오. 
 ---
 = ONTAP 9.17.1에서 복귀하기 전에 SAN 볼륨에서 자율 랜섬웨어 보호 기능을 비활성화하세요.
 :allow-uri-read: 
 
 
 [role="lead"]
-SAN 볼륨에 대한 ONTAP ARP 기능은 ONTAP 9.16.1 이하 버전에서는 지원되지 않습니다. ONTAP 9.16.1 이하 버전으로 되돌리기 전에 SAN 볼륨에서 ARP 기능을 비활성화하는 것이 좋습니다. 이렇게 하면 해당 기능이 활성 상태로 유지되어 되돌린 버전에서 실제 감지를 수행하지 않고 CPU 및 디스크 리소스를 사용하는 것을 방지할 수 있습니다.
+ONTAP 9.16.1 이하 버전에서는 SAN 볼륨용 ONTAP ARP/AI 기능이 지원되지 않습니다. ONTAP 9.16.1 이하 버전으로 되돌리기 전에 SAN 볼륨에서 ARP/AI 기능을 비활성화하는 것이 좋습니다. 그렇지 않으면 되돌린 버전에서 실제 감지 작업 없이 해당 기능이 계속 활성화되어 CPU 및 디스크 리소스를 사용하게 됩니다.
 
 .단계
 [role="tabbed-block"]

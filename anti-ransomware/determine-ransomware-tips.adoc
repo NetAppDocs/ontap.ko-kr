@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: anti-ransomware/determine-ransomware-tips.html 
-keywords: abnormal activity, data entropy, unusual file extensions, potential ransomware attack, false positive, ransomware attack, abnormal activity notification, ransomware alert, detected abnormal volume, suspected file types 
-summary: 랜섬웨어 공격이 실제로 발생하고 있는지 판단하는 방법과 대응 방법을 알아보십시오. 
+keywords: abnormal activity, arpai, data entropy, unusual file extensions, potential ransomware attack, false positive, ransomware attack, abnormal activity notification, ransomware alert, detected abnormal volume, suspected file types, ransomware detected ONTAP, ARP AI alert triage, entropy spike ransomware analysis 
+summary: 보고된 ONTAP ARP 또는 ARP/AI 이벤트가 실제 랜섬웨어 공격인지 오탐인지 판단하는 방법과 대응 방법을 알아보십시오. 
 ---
 = ONTAP에서 랜섬웨어 공격이 실제인지 확인합니다
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: 랜섬웨어 공격이 실제로 발생하고 있는지 판단하는 �
 
 
 [role="lead"]
-자율형 랜섬웨어 방지(ARP)는 보호되는 볼륨에서 비정상적인 활동을 감지하면 경고를 표시하고 의심스러운 파일 또는 엔트로피 급증에 대한 세부 정보를 보여줍니다. 사용자는 이러한 비정상적인 활동을 평가하여 정상적인 활동(오탐)인지 또는 악의적인 활동인지 판단해야 합니다.
+자율형 랜섬웨어 보호 기능이 보호되는 볼륨에서 비정상적인 활동을 감지하면 경고를 표시하고 의심스러운 파일 또는 엔트로피 급증에 대한 세부 정보를 보여줍니다. 사용자는 이러한 비정상적인 활동을 평가하여 정상적인 활동(오탐)인지 또는 악의적인 활동인지 판단해야 합니다.
 
-ARP는 탐지 및 스냅샷 생성을 자동화하지만, 파일이나 이벤트가 실제로 악성인지 여부를 최종적으로 판단하려면 수동 조사가 필요합니다. ARP는 이벤트가 실제 랜섬웨어 공격인지 여부를 확실하게 판단할 수 없습니다. ARP는 의심스러운 활동을 표시하지만, 해당 이벤트가 실제 랜섬웨어인지 아니면 오탐(양성 활동)인지 여부는 직접 조사하고 확인해야 합니다.
+자율형 랜섬웨어 보호 기능은 탐지 및 스냅샷 생성을 자동화하지만, 파일이나 이벤트가 실제로 악성인지 여부를 최종적으로 판단하려면 수동 조사가 필요합니다. 자율형 랜섬웨어 보호 기능은 이벤트가 실제 랜섬웨어 공격인지 여부를 확실하게 판단할 수 없습니다. 의심스러운 활동을 표시하기는 하지만, 해당 이벤트가 실제 랜섬웨어인지 아니면 오탐(양성 활동)인지 여부를 직접 조사하고 확인해야 합니다.
 
 다음 예시들을 통해 랜섬웨어 공격이 발생하고 있는지 여부를 판단할 수 있습니다.
 
@@ -31,7 +31,7 @@ IMPORTANT: 모든 경고를 평가하고, 의심스러운 파일을 조사하며
 NOTE: 일부 랜섬웨어는 파일 확장자를 변경하지 않습니다. 특이한 확장자가 없다고 해서 랜섬웨어 공격 가능성이 배제되는 것은 아닙니다.
 
 .경고 발생 시점을 고려하십시오
-ARP를 활성화한 후 몇 시간 또는 며칠 이내에 경고가 발생하면 오탐일 가능성이 높습니다. ARP 활성화 후 며칠 동안 경고가 발생하지 않다가 그 후에 경고가 나타나면 실제 공격일 가능성이 더 큽니다.
+자율형 랜섬웨어 보호 기능을 활성화한 후 몇 시간 또는 며칠 이내에 경고가 발생하는 경우 오탐일 가능성이 높습니다. 자율형 랜섬웨어 보호 기능을 활성화한 후 며칠 동안 경고가 발생하지 않다가 그 후에 경고가 나타나는 경우 실제 공격일 가능성이 더 높습니다.
 
 .파일 열기 시도
 문제가 발생한 파일을 해당 파일과 연결된 애플리케이션으로 열어보세요.
@@ -48,5 +48,6 @@ CAUTION: 의심스러운 파일을 여는 것은 위험을 수반합니다. 잠�
 시스템과 애플리케이션이 정상적으로 작동하고 있다면 해당 경고는 오탐일 가능성이 높습니다. 파일 시스템 활동(읽기, 쓰기, 삭제)이 갑자기 이유 없이 급증하는 경우 백그라운드에서 랜섬웨어 암호화 작업이 진행 중임을 나타내는 경우가 많습니다.
 
 .관련 정보
-* link:respond-abnormal-task.html["비정상적인 활동에 응답합니다"]
+* link:respond-arpai.html["비정상 활동에 대응: ARP/AI (ONTAP 9.16.1 이상)"]
+* link:respond-arp.html["비정상 활동에 대한 대응: ARP (ONTAP 9.15.1 및 이전 버전)"]
 

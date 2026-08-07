@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/pause-arp.html 
+keywords: ARP, arpai, ARP AI, pause, resume, autonomous ransomware protection, workload event, MAV, multi-admin verification 
+summary: 예상되는 비정상적인 작업 부하 발생 시 ARP 또는 ARP/AI 분석을 일시적으로 중단하고 다시 시작합니다. 
+---
+= 분석에서 워크로드 이벤트를 제외하려면 ONTAP ARP 또는 ARP/AI 보호를 일시 중지합니다
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+평소와 다른 작업 부하가 예상되는 경우, 자율형 랜섬웨어 방지(ARP 및 ARP/AI) 분석을 언제든지 일시적으로 중단했다가 다시 시작할 수 있습니다.
+
+ONTAP 9.13.1 버전부터는 다중 관리자 인증(MAV)을 활성화하여 두 명 이상의 인증된 사용자 관리자가 ARP 또는 ARP/AI를 일시 중지하도록 요구할 수 있습니다.
+
+link:../multi-admin-verify/enable-disable-task.html["MAV에 대해 자세히 알아보십시오"]..
+
+.이 작업에 대해
+ARP 또는 ARP/AI 일시 중지 동안 ONTAP는 새로운 쓰기에 대한 이벤트나 작업을 기록하지 않습니다. 그러나 이전 로그에 대한 분석은 백그라운드에서 계속됩니다.
+
+
+NOTE: ARP 또는 ARP/AI 비활성화 기능을 사용하여 분석을 일시 중지하지 마십시오. 이렇게 하면 볼륨에 대한 보호 기능이 비활성화되고 학습된 워크로드 동작 관련 기존 정보가 모두 손실됩니다. ARP(ONTAP 9.10.1~9.15.1)의 경우 학습 기간을 다시 시작해야 합니다. ARP/AI(ONTAP 9.16.1 이상)의 경우 누적된 워크로드 동작 데이터가 모두 손실됩니다. SAN 볼륨의 경우 평가 기간이 처음부터 다시 시작됩니다.
+
+.단계
+시스템 관리자 또는 ONTAP CLI를 사용하여 ARP 또는 ARP/AI를 일시 중지할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. *스토리지 > 볼륨*을 선택한 다음 ARP 또는 ARP/AI를 일시 중지할 볼륨을 선택합니다.
+. 볼륨 개요의 *보안* 탭에서 *랜섬웨어 방지* 상자에서 *랜섬웨어 방지 일시 중지*를 선택합니다.
++
+
+NOTE: ONTAP 9.13.1부터 MAV를 사용하여 ARP 또는 ARP/AI 설정을 보호하는 경우, 일시 중지 작업 시 하나 이상의 추가 관리자의 승인을 받아야 합니다. link:../multi-admin-verify/request-operation-task.html["모든 관리자로부터 승인을 받아야 합니다"] MAV 승인 그룹과 연결되어 있어야 하며, 그렇지 않으면 작업이 실패합니다.
+
+. 모니터링을 재개하려면 *랜섬웨어 방지 재개*를 선택하세요.
+
+
+--
+.CLI를 참조하십시오
+--
+. 볼륨에 대한 ARP 또는 ARP/AI를 일시 중지합니다.
++
+[source, cli]
+----
+security anti-ransomware volume pause -vserver <svm_name> -volume <vol_name>
+----
+. 처리를 재개하려면 를 사용합니다 `resume` 명령:
++
+[source, cli]
+----
+security anti-ransomware volume resume -vserver <svm_name> -volume <vol_name>
+----
++
+에 대한 자세한 내용은 `security anti-ransomware volume` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume+["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+. MAV를 사용하여 ARP 또는 ARP/AI 설정을 보호하는 경우, 일시 중지 작업 시 한 명 이상의 추가 관리자 승인을 요청하는 메시지가 표시됩니다. MAV 승인 그룹에 속한 모든 관리자의 승인을 받아야 하며, 그렇지 않으면 작업이 실패합니다.
++
+MAV를 사용 중이고 예상 일시 중지 작업에 추가 승인이 필요한 경우 각 MAV 그룹 승인자는 다음을 수행합니다.
+
++
+.. 요청 표시:
++
+[source, cli]
+----
+security multi-admin-verify request show
+----
+.. 요청 승인:
++
+[source, cli]
+----
+security multi-admin-verify request approve -index[<number returned from show request>]
+----
++
+MAV를 사용하고 있고 MAV 그룹 승인자인 경우 일시 중지 작업 요청을 거부할 수 있습니다.
+
++
+[source, cli]
+----
+security multi-admin-verify request veto -index[<number returned from show request>]
+----
++
+에 대한 자세한 내용은 `security multi-admin-verify request` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+request["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+
+
+--
+====

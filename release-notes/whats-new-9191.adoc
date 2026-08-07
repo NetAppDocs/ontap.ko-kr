@@ -191,11 +191,11 @@ xref:../s3-config/regenerate-access-keys.html[ONTAP S3 키]
 
 
  a| 
-System Manager UI에서 ARP 워크로드 특성이 제거되었습니다.
+자율형 랜섬웨어 보호 워크로드 특성이 시스템 관리자 UI에서 제거되었습니다.
  a| 
-System Manager에서 자율형 랜섬웨어 방지(ARP) 워크로드 특성(기준 통계 및 급증 통계 포함)이 더 이상 표시되지 않습니다. 급증 활동이 실제 랜섬웨어 공격 또는 수동 조정이 필요한 상황으로 오해되는 경우가 빈번했기 때문에 해당 정보가 제거되었습니다.
+System Manager에서 더 이상 자율형 랜섬웨어 방지 워크로드 특성(기준 통계 및 급증 통계 포함)을 표시하지 않습니다. 이 정보는 급증 활동이 실제 랜섬웨어 공격 또는 수동 조정이 필요한 상황으로 오해되는 경우가 잦았기 때문에 제거되었습니다.
 
-ARP 동작 및 탐지는 변경되지 않았으며, System Manager에서 이러한 세부 정보를 표시하는 방식만 변경되었습니다. 서지 통계는 고급 분석을 위해 ONTAP CLI 및 ONTAP REST API 옵션을 사용하여 계속 사용할 수 있습니다.
+자율형 랜섬웨어 보호 동작 및 탐지 기능은 변경되지 않았으며, System Manager에서 이러한 세부 정보를 표시하는 방식만 변경되었습니다. 급증 통계는 고급 분석을 위해 ONTAP CLI 및 ONTAP REST API 옵션을 사용하여 계속 사용할 수 있습니다.
 
 
 
@@ -216,9 +216,9 @@ NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 암호화하려면 
  a| 
 xref:../anti-ransomware/use-cases-restrictions-concept.html#snapmirror[SnapMirror 동기식 및 SnapMirror 활성 동기화에 대한 자율형 랜섬웨어 보호 지원]
  a| 
-ARP/AI는 FAS, AFF 및  https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9191.html["AFX"] 시스템의 SnapMirror 동기식(NAS 및 SAN) 관계와 AFF 및  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9191.html["ASA r2"] 시스템의 SnapMirror 활성 동기식 SAN 관계에서 운영 볼륨을 보호합니다. 탐지는 ARP 스냅샷이 생성되는 활성 읽기/쓰기 운영 볼륨에서 실행됩니다(스냅샷은 복제되지 않습니다).
+ARP/AI는 FAS, AFF 및  https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9191.html["AFX"^] 시스템의 SnapMirror 동기식(NAS 및 SAN) 관계와 AFF 및  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9191.html["ASA r2"^] 시스템의 SnapMirror 활성 동기식 SAN 관계에서 기본 볼륨을 보호합니다. 탐지는 활성 읽기/쓰기 기본 볼륨에서 실행되며, ARP/AI 스냅샷은 여기에 생성됩니다(스냅샷은 복제되지 않습니다).
 
-동기 복제 관계로 인해 이전에 기본 ARP 활성화가 비활성화되었던 클러스터가 ONTAP 9.19.1로 업그레이드되면 ARP 활성화가 자동으로 복원됩니다. 업데이트 전 경고 메시지가 관리자에게 표시되며, ARP를 비활성화할 수 있는 옵션이 제공됩니다.
+동기 복제 관계로 인해 기본 ARP/AI 활성화가 억제되었던 클러스터를 ONTAP 9.19.1로 업그레이드하면 해당 기능이 자동으로 복원됩니다. 업데이트 전 경고 메시지가 관리자에게 표시되며, 해당 기능을 비활성화할 수 있는 옵션이 제공됩니다.
 
 
 

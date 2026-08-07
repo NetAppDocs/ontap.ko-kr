@@ -119,7 +119,7 @@ ONTAP를 업그레이드하려면 을 xref:../upgrade/create-upgrade-plan.html[O
 
 
 | xref:../anti-ransomware/index.html[자율 랜섬웨어 보호]  a| 
-* xref:../anti-ransomware/use-cases-restrictions-concept.html#multi-admin-verification-with-volumes-protected-with-arp[여러 관리자가 자율적 랜섬웨어 방어 기능으로 기능을 확인합니다]
+* xref:../anti-ransomware/support-arpai.html#multi-admin-verification-with-arp-ai-protected-volumes[여러 관리자가 자율적 랜섬웨어 방어 기능으로 기능을 확인합니다]
 * xref:../anti-ransomware/enable-default-task.html[학습에서 활성 모드로 자동 전환]
 * xref:../anti-ransomware/use-cases-restrictions-concept.html#supported-configurations[FlexGroup 지원]FlexGroup 볼륨 확장, FlexVol에서 FlexGroup FlexGroup으로 전환, FlexGroup 재조정에 대한 분석 및 보고 기능이 포함되어 있습니다.
 

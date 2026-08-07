@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/release-history-arp.html 
+keywords: ransomware, arp, autonomous protection, ai, new features, enhancements, release notes, versions, feature availability, release history 
+summary: ONTAP 릴리스 전반에 걸친 자율형 랜섬웨어 보호 기능 향상 사항을 이해하십시오. 
+---
+= ONTAP 자율형 랜섬웨어 보호 기능의 출시별 제공 여부
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 릴리스 전반에 걸친 자율형 랜섬웨어 보호 기능 향상 사항을 이해하십시오.
+
+
+
+[[ontap-9-19-1]]
+== ONTAP 9.19.1
+
+* link:support-arpai.html["SnapMirror 동기식 및 SnapMirror 액티브 동기화 지원"]: ARP/AI는 이제 SnapMirror 동기식 및 SnapMirror 활성 동기화 관계의 볼륨을 지원합니다. ARP/AI는 관계에서 활성 상태인 읽기/쓰기 가능한 기본 볼륨에서 실행되어 기본 볼륨 전용 ARP/AI 스냅샷을 생성하고 머신 러닝 기반 랜섬웨어 탐지 기능을 제공합니다.
++
+** SnapMirror 동기식(NAS 및 SAN): FAS, AFF A 시리즈, AFF C 시리즈 및 AFX 시스템에서 지원됩니다.
+** SnapMirror 액티브 싱크(SAN): AFF A 시리즈, AFF C 시리즈 및 ASA r2 시스템에서 지원됩니다.
+
+
+* link:manage-parameters-arpai.html["System Manager 워크로드 특성 표시 기능이 제거되었습니다."]: System Manager에서 더 이상 AI 기반 자율 랜섬웨어 보호(ARP/AI) 워크로드 특성(기준선 및 급증 통계 포함)을 표시하지 않습니다. 급증 활동은 랜섬웨어 공격 또는 수동 조정이 필요한 활동으로 오해되는 경우가 많아 해당 정보가 제거되었습니다. ARP/AI 동작 및 탐지 기능은 변경되지 않았으며, 급증 통계는 ONTAP CLI 및 REST API 옵션을 사용하여 고급 분석에 계속 사용할 수 있습니다.
+
+
+
+
+[[ontap-9-18-1]]
+== ONTAP 9.18.1
+
+* link:enable-default-arpai.html["ARP/AI 자동 기본값 활성화"]: AFF A 시리즈 및 AFF C 시리즈, ASA 및 ASA r2 시스템의 모든 새 볼륨에서는 ARP/AI가 기본적으로 자동으로 활성화됩니다. ONTAP 9.18.1로 업그레이드한 후 12시간의 유예 기간 동안 link:default-enable-change-arpai.html["기본 활성화 해제"]할 수 있습니다. 선택 해제하지 않으면 유예 기간 종료 후 생성되는 모든 새 볼륨에 대해 ARP/AI가 자동으로 활성화됩니다.
+* link:support-arpai.html["ARP/AI FlexGroup 패리티"]: FlexGroup 볼륨은 이제 온프레미스 ONTAP 플랫폼(AFF 및 FAS)과 가상 ONTAP 배포(Cloud Volumes ONTAP 및 ONTAP Select)에서 ARP/AI 지원과 관련하여 FlexVol 볼륨과 동일한 기능을 제공합니다. ONTAP 9.18.1부터 FlexGroup 볼륨은 기본적으로 ARP/AI 모델을 사용합니다.
+
+
+
+
+[[ontap-9-17-1]]
+== ONTAP 9.17.1
+
+* link:support-arpai.html["SAN 블록 장치 지원"]: ARP/AI는 암호화 기반 이상 탐지를 통해 SAN 볼륨을 지원하며, 블록 수준 워크로드에 대한 고급 랜섬웨어 보호 기능을 제공합니다. 지원되는 볼륨에는 LUN(블록 스토리지) 및 NVMe 네임스페이스가 포함된 볼륨이 포함됩니다. 또한 ARP/AI는 VMware vSphere 하이퍼바이저 가상 디스크가 포함된 NAS 볼륨도 탐지합니다.
+* link:respond-arpai.html["System Manager 랜섬웨어 모니터링이 SAN으로 확장되었습니다."]: 이제 System Manager는 NAS 볼륨뿐만 아니라 SAN 볼륨에 대한 ARP 상태, 엔트로피 급증 세부 정보 및 위협 경고를 표시하여 모든 스토리지 유형에 걸쳐 랜섬웨어 보호 상태를 한눈에 볼 수 있도록 합니다.
+* link:entropy-eval-period-arpai.html["블록 장치 평가 기간"]: SAN 워크로드는 2~4주간의 평가 기간을 거치며, 이 기간 동안 ARP/AI는 기준 암호화 동작을 설정합니다. ARP/AI가 기준 임계값을 설정하는 동안 탐지 및 경고가 발생하여 평가 기간 동안 즉각적인 능동적 보호 기능을 제공합니다.
+* link:manage-parameters-arpai.html["SAN 볼륨에 대한 구성 가능한 감지 임계값"]: 평가 기간을 통해 SAN 볼륨에 대한 기준 암호화 임계값이 설정되면, 특정 워크로드 특성에 맞게 탐지율을 조정하기 위해 임계값을 수정할 수 있습니다.
+* link:respond-arpai.html["SAN 볼륨에 대한 엔트로피 통계"]: 새로운 CLI 명령어를 통해 SAN 워크로드에 대한 볼륨 수준 암호화 통계를 확인할 수 있으며, 암호화 비율 히스토그램과 최근 고암호화 이벤트를 확인하여 위협 조사를 지원할 수 있습니다.
+* link:recover-arpai.html["ARP 스냅샷 이름 변경"]: ARP 스냅샷 명명 규칙은 이제 주기적인 자동 백업(이름:  `Anti_ransomware_periodic_backup.YYYY-MM-DD_HHMM`)과 감지된 공격에 대응하여 생성된 스냅샷(이름:  `Anti_ransomware_attack_backup.YYYY-MM-DD_HHMM`)을 구분합니다.
+* link:entropy-eval-period-arpai.html["하이퍼바이저 지원"]: ARP/AI는 VMware vSphere 가상 디스크가 포함된 NAS 볼륨을 지원합니다. ONTAP 9.17.1 P5 버전부터 ARP/AI는 Hyper-V, KVM 및 OpenStack 하이퍼바이저도 지원합니다.
+
+
+
+
+[[ontap-9-16-1]]
+== ONTAP 9.16.1
+
+* link:index.html["ARP/AI 모델 소개"]: 새로운 AI 기반 탐지 모델이 FlexVol 볼륨용 기존 ARP 모델을 대체합니다. ARP/AI는 학습 기간 요구 사항을 없애줍니다. 활성화 즉시 능동 보호가 시작되어 더욱 빠른 랜섬웨어 보호 기능을 제공합니다.
+* link:support-arpai.html["무제한 파일 확장자 감지"]: ARP/AI는 이전 ARP 모델에 적용되었던 4,000개의 고유 파일 확장자 제한을 제거하여 파일 형식이 많은 워크로드를 더욱 효과적으로 보호합니다.
+* link:update-arpai.html["자동 보안 번들 업데이트"]: NetApp은 정기적인 ONTAP 릴리스 일정과 별도로 ARP/AI 보안 업데이트를 제공합니다. 클러스터가 자동 시스템 및 펌웨어 업데이트에 등록되어 있는 경우, ARP/AI 보안 업데이트가 제공되면 자동으로 알림을 받게 됩니다. 또한 최신 위협으로부터 지속적인 보호를 유지하기 위해 이러한 업데이트의 자동 설치를 구성할 수 있습니다.
+
+
+
+
+[[ontap-9-14-1]]
+== ONTAP 9.14.1
+
+* link:manage-parameters-arp.html["조정 가능한 알림"]: 새 파일 확장자가 감지되거나 ARP 스냅샷이 생성될 때 알림을 받도록 Autonomous Ransomware Protection을 구성하면 랜섬웨어 공격 가능성에 대한 조기 경고를 제공하고 위협에 더 빠르게 대응할 수 있습니다.
+
+
+
+
+[[ontap-9-13-1]]
+== ONTAP 9.13.1
+
+* link:support-arp.html["FlexGroup 볼륨 지원"]: FlexGroup 볼륨에 ARP 보호 기능이 추가되어 기존 FlexVol 볼륨을 넘어 대규모 확장 가능한 스토리지 환경까지 랜섬웨어 보호 기능을 확장할 수 있게 되었습니다.
+* link:switch-learning-arp.html["자동 학습 모드에서 활성 모드로의 전환"]: ARP는 최적의 학습 간격을 자동으로 판단하여 학습 모드에서 활성 모드로 전환합니다. 이는 기존의 30일 권장 기간보다 더 빨리 이루어질 수 있습니다. 이러한 자동화 기능은 수동 작업을 줄이고 완전한 보호 기능을 더 빠르게 제공합니다.
+* link:pause-arp.html["다중 관리자 인증 통합"]: 이제 다중 관리자 검증(MAV) 기능을 통해 자율형 랜섬웨어 보호(ARP) 작업을 보호할 수 있으며, 민감한 ARP 작업이 실행되기 전에 여러 관리자의 승인을 받도록 보장합니다.
+
+
+
+
+[[ontap-9-12-1]]
+== ONTAP 9.12.1
+
+* link:support-arp.html["SnapMirror 상호 운용성"]: ARP는 이제 SnapMirror 비동기 관계로 보호되는 볼륨을 지원하여 복제된 데이터에 대한 랜섬웨어 보호 기능을 제공합니다. 또한 SnapMirror(SVM 재해 복구)로 보호되는 SVM 및 SVM 데이터 이동성이 활성화된 SVM에 대한 지원도 확장되었습니다.
+
+
+
+
+[[ontap-9-11-1]]
+== ONTAP 9.11.1
+
+* link:index.html["향상된 탐지 알고리즘"]: ONTAP는 ARP 탐지 알고리즘을 향상시켜 추가적인 악성코드 위협을 탐지하고, 랜섬웨어 위협 식별의 정확성과 범위를 개선합니다.
+* link:manage-parameters-arp.html["수정 가능한 공격 탐지 매개변수"]: 파일 확장자, 엔트로피 및 IOPS에 대한 ARP 감지 임계값을 수정하여 특정 워크로드 특성에 맞게 감지 동작을 조정할 수 있습니다. 기본적으로 ARP는 짧은 시간 내에 20개 이상의 미확인 파일 확장자가 나타날 경우 플래그를 지정합니다.
+* link:modify-snapshot-options-arp.html["설정 가능한 스냅샷 보존 기간"]: 자동으로 생성되는 ARP 스냅샷에 대한 설정을 조정합니다. 여기에는 최대 스냅샷 개수 및 보존 동작이 포함됩니다.
+* link:index.html["라이선스 업데이트"]: 새  `Anti_ransomware` 라이센스 키가 자율형 랜섬웨어 보호 기능을 활성화합니다. ONTAP 9.10.1에서 업그레이드하는 시스템은 이전 라이센스 키로 계속 작동하며, 동일한 기능을 제공합니다.
+
+
+
+
+[[ontap-9-10-1]]
+== ONTAP 9.10.1
+
+* link:index.html["자율형 랜섬웨어 보호 기능 초기 버전 출시"]자율형 랜섬웨어 보호(ARP)는 NAS 환경에서 워크로드 분석을 통해 랜섬웨어 공격 가능성을 시사하는 비정상적인 활동에 대해 경고합니다. ONTAP 9.10.1 이상 버전이 설치된 NAS(NFS 및 SMB) FlexVol 볼륨에서 지원됩니다. ARP는 초기에는 학습 모드로 작동하여 시스템 메트릭을 분석하고 경고 프로필을 개발한 후, 실시간 랜섬웨어 위협 모니터링 및 대응을 위한 능동 탐지 모드로 전환됩니다.
+

@@ -1,0 +1,218 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/respond-arp.html 
+keywords: ARP, respond, abnormal activity, false positive, ransomware attack, NAS, suspected file types, clear suspect, ONTAP 9.10.1, restore first, learning mode, autonomous ransomware protection, legacy ARP response, ONTAP 9.15.1 or earlier 
+summary: ONTAP 9.10.1부터 9.15.1까지의 기존 ARP에서 보호된 NAS 볼륨에서 비정상적인 활동이 감지되면 오탐인지 실제 랜섬웨어 공격인지 평가하고 그에 따라 대응해야 합니다. 
+---
+= ONTAP ARP가 감지한 비정상적인 활동에 응답합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+자율형 랜섬웨어 방지(ARP) 기능이 보호되는 NAS 볼륨에서 비정상적인 활동을 감지하면 경고를 표시합니다. 이 알림을 검토하여 해당 활동이 정상적인 활동(오탐)인지 또는 악의적인 공격인지 판단해야 합니다. 공격 유형을 분류한 후에는 경고를 해제하고 정상적인 모니터링을 재개할 수 있습니다.
+
+
+NOTE: ONTAP 9.16.1 이상 버전을 실행 중인 경우 link:respond-arpai.html["ARP/AI가 감지한 비정상 활동에 대응합니다"]을 참조하십시오.
+
+ONTAP 9.15.1 이하 버전에서는 공격을 분류할 때 의심되는 이벤트를 삭제하면 ARP 스냅샷이 즉시 삭제됩니다.  `volume snapshot restore`를 사용하여 데이터를 복구하는 경우 의심되는 이벤트를 삭제하기 *전에* 복구해야 합니다.
+
+
+NOTE: ONTAP 9.11.1 버전부터는 ARP 스냅샷에 대한 link:modify-snapshot-options-arp.html["보존 설정"]을 수정할 수 있습니다.
+
+.이 작업에 대해
+NAS 볼륨의 경우, ARP는 높은 데이터 엔트로피, 데이터 암호화를 동반한 비정상적인 볼륨 활동, 비정상적인 파일 확장자의 조합이 감지되면 의심스러운 파일 목록을 표시합니다. ARP(9.10.1~9.15.1)는 SAN 볼륨을 지원하지 않습니다.
+
+자율형 랜섬웨어 보호 기능은 탐지 및 스냅샷 생성을 자동화하지만, 파일이나 이벤트가 실제로 악성인지 여부를 최종적으로 판단하려면 수동 조사가 필요합니다. 자율형 랜섬웨어 보호 기능은 이벤트가 실제 랜섬웨어 공격인지 여부를 확실하게 판단할 수 없습니다. 의심스러운 활동을 표시하기는 하지만, 해당 이벤트가 실제 랜섬웨어인지 아니면 오탐(양성 활동)인지 여부를 직접 조사하고 확인해야 합니다.
+
+link:determine-ransomware-tips.html["파일이나 이벤트가 실제로 악성인지 여부를 판단합니다."].
+
+ARP 경고 알림이 발행되면 다음 두 가지 방법 중 하나로 활동을 지정하여 응답합니다.
+
+* *오탐*: 식별된 파일 형식은 워크로드에서 예상되는 형식이므로 무시해도 됩니다.
+* *랜섬웨어 공격 가능성*: 식별된 파일 형식은 워크로드에서 예상치 못한 유형이므로 잠재적인 공격으로 간주해야 합니다.
+
+
+결정을 업데이트하고 ARP 알림을 지우면 정상적인 모니터링이 재개됩니다. ARP는 위협 평가 프로필에 평가를 기록하고, 선택 사항을 기반으로 후속 파일 활동을 모니터링합니다.
+
+공격이 의심되는 경우, 그것이 공격인지 여부를 판단하고, 공격이라면 대응 조치를 취한 후, 알림을 삭제하고 데이터를 복원해야 합니다. link:recover-arp.html["랜섬웨어 공격에서 복구하는 방법에 대해 자세히 알아보십시오"].
+
+.시작하기 전에
+ARP는 볼륨을 적극적으로 보호하고 있어야 합니다(학습 모드 또는 일시 중지 상태가 아니어야 함).
+
+.단계
+비정상적인 활동을 분류해야 할 경우 다음 단계를 따르십시오.
+
+. <<비정상적인 활동 세부 정보 검토,비정상적인 활동 세부 정보 검토>>
+. <<의심스러운 이벤트를 삭제할 때 스냅샷 동작 이해,의심스러운 이벤트를 삭제할 때 스냅샷 동작 이해>>
+. 다음 중 하나를 수행합니다.
++
+** <<오탐으로 분류하고 모니터링 재개,오탐으로 분류하고 모니터링 재개>>
+** <<랜섬웨어 공격 가능성으로 분류하고 데이터를 복구하세요,잠재적 랜섬웨어 공격으로 분류하고, 데이터를 복구하고, 최종 마무리합니다>>
+
+
+
+
+데이터를 복구해야 하는 경우 link:recover-arp.html["ARP를 사용하여 랜섬웨어 공격 후 데이터 복구"]의 단계를 따르십시오.
+
+
+
+[[review-abnormal-activity-details]]
+== 비정상적인 활동 세부 정보 검토
+
+응답 흐름을 선택하기 전에 System Manager 또는 ONTAP CLI를 사용하여 ARP 경고 세부 정보를 검토할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. "비정상적인 활동" 알림을 받으면 링크를 따라가세요. 또는 *Storage > Volumes*로 이동하여 문제가 발생한 볼륨을 찾고 *Security* 탭을 선택하세요.
++
+경고는 System Manager 대시보드 *개요* 창의 *이벤트* 메뉴에 표시됩니다.
+
+. *보안* 탭에서 *의심스러운 파일 형식* 보고서를 검토하십시오. *의심스러운 파일 형식* 대화 상자에는 ARP에서 식별한 파일 확장자와 파일 개수가 표시됩니다.
+
+
+--
+.CLI를 참조하십시오
+--
+. 랜섬웨어 공격이 의심되는 경우 다음 사항을 통지하여 공격의 시간 및 심각도를 확인하십시오.
++
+[source, cli]
+----
+security anti-ransomware volume show -vserver <svm_name> -volume <vol_name>
+----
++
+샘플 출력:
+
++
+....
+Vserver Name: vs0
+Volume Name: vol1
+State: enabled
+Attack Probability: moderate
+Attack Timeline: 9/14/2021 01:03:23
+Number of Attacks: 1
+....
++
+EMS 메시지를 확인할 수도 있습니다.
+
++
+[source, cli]
+----
+event log show -message-name callhome.arw.activity.seen
+----
+
+
+--
+====
+
+
+[[understand-snapshot-behavior-when-clearing-a-suspected-event]]
+== 의심스러운 이벤트를 삭제할 때 스냅샷 동작 이해
+
+ONTAP 9.15.1 이하 버전에서는 의심스러운 이벤트를 삭제하면 ARP 스냅샷이 *즉시 삭제*됩니다. 따라서  `volume snapshot restore`을 사용할 계획이라면 *삭제하기 전에 데이터를 복원해야 합니다*. 삭제 후에는 스냅샷이 완전히 사라져 복원에 사용할 수 없습니다.
+
+다른 복구 방법(FlexClone, 단일 파일 SnapRestore, 데이터 복사)을 사용하는 경우, 의심스러운 이벤트를 지우기 전이나 후에 복구를 수행할 수 있습니다. 이러한 방법은 스냅샷을 삭제하지 않습니다.
+
+ONTAP 9.13.1부터 MAV를 사용하여 ARP 설정을 보호하는 경우 `clear-suspect` 작업에 추가 승인이 필요할 수 있습니다. link:../multi-admin-verify/request-operation-task.html["모든 관리자로부터 승인을 받아야 합니다"] MAV 승인 그룹과 연결되어 있어야 하며, 그렇지 않으면 작업이 실패합니다.
+
+
+
+[[classify-as-false-positive-and-resume-monitoring]]
+== 오탐으로 분류하고 모니터링 재개
+
+이 흐름은 식별된 파일 형식이 워크로드에 _예상되는_ 경우에 사용하십시오.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 영향을 받는 파일을 선택하고 *오탐으로 표시*를 선택한 다음 *의심스러운 파일 형식 업데이트 및 지우기*를 선택합니다.
+
+
+이 작업을 수행하면 경고 알림이 사라집니다. 그러면 ARP는 볼륨에 대한 정상적인 모니터링을 재개합니다.
+
+--
+.CLI를 참조하십시오
+--
+. 다음 명령을 실행하여 결정을 기록하고 정상적인 ARP 모니터링을 재개하십시오.
++
+[source, cli]
+----
+security anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume <vol_name> [<extension_identifiers>] -false-positive true
+----
++
+다음 선택적 매개변수를 사용하여 특정 확장자만 오탐으로 식별합니다. `[-extension <text>, ... ]`
+
+
+
+--
+====
+
+
+[[classify-as-potential-ransomware-attack-and-recover-data]]
+== 랜섬웨어 공격 가능성으로 분류하고 데이터를 복구하세요
+
+워크로드에서 식별된 파일 형식이 예상치 못한 경우 이 흐름을 사용하십시오.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 선택한 파일을 *랜섬웨어 공격 가능성*으로 표시합니다.
+. 데이터를 복구하기 전에 link:recover-arp.html#choose-a-recovery-method["복구 방법 옵션"]을(를) 고려하십시오. 그런 다음 다음 중 하나를 수행하십시오.
++
+** *볼륨을 복원할 계획이라면*: 알림을 지우기 *전에* 데이터 복구를 완료하십시오.
++
+... link:recover-arp.html["가장 최근의 ARP 스냅샷 또는 이전 스냅샷에서 데이터 복구"].
+... 데이터 복구가 완료되면 의심스러운 이벤트를 삭제하여 최종 작업을 진행하십시오.
++
+**** NAS 파일 유형 경고의 경우 *의심스러운 파일 유형 업데이트 및 지우기*를 선택합니다.
++
+
+NOTE: 결정을 기록하면 공격 보고서가 지워지고 ARP 스냅샷이 삭제됩니다. 이 단계를 진행하기 전에 데이터 복구를 완료해야 합니다.
+
+
+
+
+
+** *다른 복구 방법(FlexClone 또는 단일 파일 SnapRestore)을 사용할 계획인 경우*: 데이터를 먼저 복구한 다음 알림을 지우십시오:
++
+... link:recover-arp.html["FlexClone 또는 단일 파일 SnapRestore를 사용하여 데이터 복구"].
+... 데이터 복구가 완료되면 분류를 최종 확정하십시오.
++
+**** *의심스러운 파일 형식 업데이트 및 지우기*를 선택합니다.
+
+
+
+
+
+
+
+
+--
+.CLI를 참조하십시오
+--
+. (선택 사항) 공격 보고서를 생성하고 저장 위치를 지정합니다.
++
+[source, cli]
+----
+security anti-ransomware volume attack generate-report -vserver <svm_name> -volume <vol_name> -dest-path <[svm_name]:[junction_path/sub_dir_name]>
+----
+. ONTAP 9.15.1 이하 버전의 경우 `volume snapshot restore`: 의심스러운 이벤트를 삭제하기 *전에* 데이터를 복원하십시오. link:recover-arp.html["ARP를 이용한 공격 후 데이터 복구"]를 참조하십시오.
+. 데이터를 복구한 후(또는 다른 복구 방법을 사용하는 경우), 의심스러운 이벤트를 지우고 해당 공격을 잠재적 랜섬웨어로 표시하십시오((`-false-positive false`):
++
+[source, cli]
+----
+security anti-ransomware volume attack clear-suspect -vserver <svm_name> -volume <vol_name> [<extension_identifiers>] -false-positive false
+----
++
+
+IMPORTANT: ONTAP 9.15.1 이하 버전에서는  `clear-suspect` 실행 시 ARP 스냅샷이 *즉시 삭제됩니다*. 데이터 복구를 완료할 때까지 이 명령을 실행하지 마십시오.
+
+
+
+--
+====

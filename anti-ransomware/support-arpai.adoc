@@ -1,0 +1,244 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/support-arpai.html 
+keywords: ARP AI, arpai, autonomous ransomware protection AI, ONTAP 9.16.1, supported configurations, SAN ransomware, NAS ransomware, machine learning ransomware, hypervisor ransomware, SnapMirror ARP AI, AFF ransomware protection, ASA ransomware, FlexVol ARP AI, FlexGroup ARP AI, current ARP AI model ONTAP, ARP AI requirements ONTAP, SAN ransomware support ONTAP 
+summary: 'ARP/AI(ONTAP 9.16.1 이상)는 현재 랜섬웨어 보호 모델이며 AFF, ASA, FAS 및 ASA r2 시스템의 FlexVol 및 FlexGroup 볼륨 전반에 걸쳐 NAS 및 SAN 워크로드를 지원합니다.' 
+---
+= AI를 사용하는 ONTAP 자율형 랜섬웨어 보호에 지원되는 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AI 기반 자율 랜섬웨어 보호(ARP/AI)는 NAS(ONTAP 9.16.1 이상) 및 SAN(ONTAP 9.17.1 이상) 워크로드에서 사용할 수 있습니다. ARP/AI를 배포하기 전에 지원되는 구성 및 사용 사례를 검토하고 환경이 요구 사항을 충족하는지 확인하십시오.
+
+
+NOTE: ONTAP 9.15.1 이하 버전을 사용 중인 경우, link:support-arp.html["ARP에 대해 지원되는 구성"]을 참조하십시오.
+
+
+
+[[suitable-workloads]]
+== 적합한 워크로드
+
+ARP/AI는 다음과 같은 유형의 워크로드에 적합합니다.
+
+* NFS 또는 SAN 스토리지의 데이터베이스
+* Windows 또는 Linux 홈 디렉토리
+* 이미지 및 비디오(예: 의료 기록 및 전자 설계 자동화(EDA) 데이터)
+* LUN 또는 NVMe 네임스페이스를 포함하는 볼륨의 SAN 워크로드(ONTAP 9.17.1 이상)
+* VMware, Hyper-V, KVM 및 OpenStack의 가상 머신 워크로드(ONTAP 9.17.1 이상)
+
+
+
+
+[[unsuitable-workloads]]
+== 부적합한 워크로드
+
+ARP/AI는 다음과 같은 유형의 워크로드에 적합하지 않습니다.
+
+* 파일 생성 또는 삭제 작업 빈도가 매우 높은 워크로드(몇 초 만에 수십만 개의 파일, 예: 테스트/개발 워크로드).
++
+ARP/AI의 위협 탐지는 파일 생성, 이름 변경 또는 삭제 작업의 비정상적인 급증을 인식하는 능력에 달려 있습니다. 애플리케이션 자체가 파일 활동의 원인인 경우, 랜섬웨어 활동과 효과적으로 구분할 수 없습니다.
+
+* 애플리케이션이나 호스트가 데이터를 암호화하는 작업 부하.
++
+ARP/AI는 수신 데이터가 암호화되었는지 또는 암호화되지 않았는지 구분하는 데 의존합니다. 애플리케이션 자체가 데이터를 암호화하는 경우 이 기능의 효과가 떨어집니다. 하지만 ARP/AI는 파일 활동(삭제, 덮어쓰기, 생성, 또는 새 파일 확장자를 사용한 생성 또는 이름 변경) 및 파일 유형을 기반으로 여전히 작동할 수 있습니다.
+
+* VM 내부 워크로드에 7z, ZIP 또는 암호로 보호된 PDF 또는 DOC 파일 등 고도로 압축되거나 암호화된 파일이 다량으로 포함되는 경우.
+
+
+
+
+[[supported-configurations]]
+== 지원되는 구성
+
+ARP/AI는 다양한 ONTAP 버전 및 환경에서 NAS 및 SAN 워크로드를 지원합니다. ARP/AI를 배포하기 전에 지원되는 기능을 검토하여 사용 환경이 지원되는지 확인하십시오.
+
+
+
+[[baseline-support]]
+=== 기본 지원
+
+ONTAP 9.16.1 버전부터 ARP/AI 지원이 시작되었으며, FlexVol 볼륨 및 MetroCluster 구성에서 NAS 워크로드(NFS 및 SMB)를 별도의 학습 기간 없이 지원합니다.
+
+
+
+[[protocol-and-hypervisor-support-by-ontap-version]]
+=== ONTAP 버전별 프로토콜 및 하이퍼바이저 지원
+
+* ONTAP 9.17.1 이상: SAN 블록 장치 워크로드(LUN 또는 NVMe 네임스페이스를 포함하는 볼륨) 및 VMware 가상 디스크를 포함하는 NAS 볼륨.
+* ONTAP 9.17.1P5 이상: Hyper-V, KVM 및 OpenStack 하이퍼바이저가 포함된 NAS 볼륨.
+
+
+
+
+[[feature-and-configuration-support-matrix]]
+=== 기능 및 구성 지원 매트릭스
+
+추가 구성 및 볼륨 유형에 대한 지원은 다음 ONTAP 버전에서 사용할 수 있습니다.
+
+|===
+|  | ONTAP 9.19.1 | ONTAP 9.18.1 | ONTAP 9.17.1 | ONTAP 9.16.1 
+
+
+| SnapMirror 비동기로 보호되는 볼륨 | ✓ | ✓ | ✓ | ✓ 
+
+
+| SnapMirror 동기식으로 보호되는 볼륨 ^1^ | ✓ |  |  |  
+
+
+| SnapMirror 활성 동기화로 보호되는 볼륨 ^1^ | ✓ |  |  |  
+
+
+| SnapMirror 비동기(SVM 재해 복구)를 통해 SVM 보호 | ✓ | ✓ | ✓ | ✓ 
+
+
+| SVM 데이터 이동성 (`vserver migrate`) | ✓ | ✓ | ✓ | ✓ 
+
+
+| FlexGroup 볼륨 | ✓ | ✓ | ✓ ^2^ | ✓ ^2^ 
+
+
+| 다중 관리 검증 | ✓ | ✓ | ✓ | ✓ 
+
+
+| ARP/AI 기본 활성화 | ✓ | ✓ |  |  
+|===
+^1^ ONTAP 9.19.1부터 ARP/AI는 FAS, AFF A-series, AFF C-series 및 AFX 시스템의 NAS 및 SAN에 대한 SnapMirror 동기식 관계의 기본 볼륨과 AFF A-series, AFF C-series 및 ASA r2 시스템의 SnapMirror 활성 동기화 SAN 관계의 기본 볼륨을 지원합니다. 자세한 내용은 <<SnapMirror를 참조하십시오>>을 참조하십시오.
+
+^2^ ONTAP 9.16.1 및 9.17.1 FlexGroup 볼륨은 ARP/AI 이전 버전의 ARP 모델을 사용합니다. FlexGroup 볼륨에 대한 완전한 ARP/AI 지원은 ONTAP 9.18.1부터 시작됩니다.
+
+
+
+[[snapmirror-and-arpai-interoperability]]
+[[snapmirror]]
+== SnapMirror 및 ARP/AI 상호 운용성
+
+ONTAP 9.12.1 버전부터 SnapMirror 비동기 타겟 볼륨에서 ARP가 지원됩니다.
+
+ONTAP 9.19.1 버전부터 ARP/AI는 SnapMirror 동기식 및 SnapMirror 활성 동기식 SAN 관계에 참여하는 기본 볼륨을 다음과 같은 동작으로 지원합니다.
+
+* ARP/AI는 FAS, AFF A 시리즈, AFF C 시리즈 및 AFX 시스템의 NAS 및 SAN에 대한 SnapMirror 동기식 관계에서 _운영_ 볼륨에 대해 지원됩니다.
+* ARP/AI는 AFF A 시리즈, AFF C 시리즈 및 ASA r2 시스템의 SnapMirror 액티브 동기화 SAN 관계에서 _운영_ 볼륨에 대해 지원됩니다.
+* ARP/AI 분석은 SnapMirror 동기식 및 SnapMirror 활성 동기식 SAN 관계에서 활성 읽기/쓰기 기본 볼륨에서만 실행됩니다.
+* ARP/AI 스냅샷은 SnapMirror 동기식 또는 SnapMirror 활성 동기화 관계에서 보조 볼륨으로 복제되지 않습니다. 장애 조치 후 복구 볼륨에서 link:enable-arpai.html["ARP/AI를 다시 활성화합니다."]해야 합니다.
+
+
+
+NOTE: 모든 쓰기 작업은 동기식 미러링 관계에서 두 볼륨 모두에 커밋되므로 기본 볼륨에서만 ARP/AI를 활성화하는 것으로도 이상 징후를 감지할 수 있습니다. 기본 볼륨에서 ARP/AI 분석을 통해 생성된 내부 메타데이터는 보조 볼륨으로 복제됩니다. 따라서 장애 조치 후 보조 볼륨에서 ARP/AI를 활성화하면 필요한 메타데이터가 이미 존재합니다.
+
+SnapMirror 비동기 소스 볼륨이 ARP/AI를 지원하는 경우, SnapMirror 대상 볼륨은 소스 볼륨의 ARP/AI 구성 상태( `enabled` 등), ARP/AI 보안 데이터 및 ARP/AI로 생성된 스냅샷을 자동으로 가져옵니다. 별도의 명시적 활성화는 필요하지 않습니다.
+
+비동기 대상 볼륨은 읽기 전용(RO) 스냅샷으로 구성되지만, 해당 데이터에 대해서는 ARP/AI 처리가 수행되지 않습니다. 그러나 SnapMirror 비동기 대상 볼륨이 읽기/쓰기(RW) 모드로 변환되면, 변환된 대상 볼륨에서 ARP/AI가 자동으로 활성화됩니다.
+
+
+
+[[arpai-and-virtual-machines]]
+== ARP/AI 및 가상 머신
+
+ARP/AI는 VMware, Hyper-V, KVM 및 OpenStack의 가상 머신(VM)을 지원합니다. VMware 지원은 ONTAP 9.17.1부터 시작되며, Hyper-V, KVM 및 OpenStack 지원은 ONTAP 9.17.1P5부터 시작됩니다. ARP/AI의 탐지 동작은 VM 내부와 외부의 변경 사항에 따라 다릅니다. 7z 및 ZIP 등 고도로 압축된 파일이나 암호로 보호된 PDF, DOC 또는 ZIP 등 암호화된 파일이 VM 내에 다량으로 포함된 워크로드에는 ARP/AI 사용을 권장하지 않습니다.
+
+.VM 외부의 변경 사항
+ARP/AI는 새로운 파일 확장자가 암호화된 상태로 볼륨에 추가되거나 파일 확장자가 변경되는 경우 VM 외부의 NFS 볼륨에서 파일 확장자 변경을 감지할 수 있습니다.
+
+.VM 내부의 변경 사항
+랜섬웨어 공격이 VM 외부에는 변경 사항을 적용하지 않고 VM 내부 파일만 변경하는 경우, VM의 기본 엔트로피가 낮으면(.txt, .docx, .mp4 파일 등) ARP/AI는 해당 위협을 감지합니다. ONTAP 9.17.1 버전의 SAN 지원부터는 VM 내부에서 엔트로피 이상이 감지될 경우에도 ARP/AI가 추가적으로 위협 경고를 생성합니다.
+
+기본적으로 파일의 엔트로피가 높은 경우(예: .gzip 확장자 또는 암호로 보호된 파일) ARP/AI의 탐지 기능은 제한적입니다. 이러한 경우에도 ARP/AI는 사전 예방적 스냅샷을 생성할 수 있지만, 파일 확장자가 외부에서 변조되지 않은 경우에는 경고가 발생하지 않습니다.
+
+
+NOTE: VM 내에서 발생하는 공격을 감지하는 기능은 FlexVol 볼륨에서만 사용할 수 있으며 ONTAP 9.18.1 이상에서 FlexGroup 볼륨에 VM 데이터 저장소가 구성된 경우에는 사용할 수 없습니다.
+
+
+
+[[unsupported-configurations]]
+== 지원되지 않는 구성입니다
+
+ONTAP S3 환경에서는 ARP/AI가 지원되지 않습니다.
+
+[[unsupported-configurations]]
+ARP/AI는 다음과 같은 볼륨 구성을 지원하지 않습니다.
+
+* FlexGroup 볼륨(ONTAP 9.16.1 및 9.17.1)(이 버전에서는 FlexGroup 볼륨이 이전 ARP 모델을 사용합니다. FlexGroup 볼륨에 대한 ARP/AI 지원은 ONTAP 9.18.1부터 시작됩니다.)
+* FlexCache 볼륨(ARP/AI는 원본 FlexVol 볼륨에서는 지원되지만 캐시 볼륨에서는 지원되지 않습니다)
+* 오프라인 볼륨
+* SnapLock 볼륨
+* SnapMirror active sync in ONTAP 9.18.1 및 이전 버전
+* SnapMirror synchronous(ONTAP 9.18.1 및 이전 버전)
+* SnapMirror 동기 대상 볼륨에서 캐스케이드 구성
+* 제한된 볼륨
+* 스토리지 VM의 루트 볼륨입니다
+* 중지된 스토리지 VM의 볼륨입니다
+* FlexVol 에서 FlexGroup 변환 (변환 전에 ARP/AI를 비활성화해야 합니다)
+
+
+
+
+[[arpai-performance-and-frequency-considerations]]
+== ARP/AI 성능 및 빈도 고려 사항
+
+ARP/AI는 처리량 및 최대 IOPS로 측정되는 시스템 성능에 미미한 영향을 미칠 수 있습니다. 영향은 특정 볼륨 워크로드에 따라 달라집니다. 일반적인 워크로드의 경우 다음과 같은 구성 제한을 권장합니다.
+
+[cols="30,20,30"]
+|===
+| 워크로드 특성 | 노드당 권장 볼륨 제한입니다 | 노드당 볼륨 제한을 초과하면 성능이 저하됩니다 ^1^ 
+
+
+| 읽기 집약적이거나 데이터를 압축할 수 있습니다. | 150 | 최대 IOPS의 4% 
+
+
+| 쓰기 집약적이며 데이터를 압축할 수 없습니다. | 60  a| 
+* NAS: ONTAP 9.16.1 이상 버전의 경우 최대 IOPS의 4%
+* SAN: ONTAP 9.17.1 이상의 경우 최대 IOPS의 5%
+
+
+|===
+^1^ 권장 한도를 초과하여 볼륨을 추가하더라도 이러한 백분율을 넘으면 시스템 성능이 저하되지 않습니다.
+
+[NOTE]
+====
+대량의 새 볼륨에 대해 ARP/AI를 기본적으로 활성화하면 시스템 리소스 사용량이 증가할 수 있습니다. 볼륨에서 ARP/AI를 활성화할 때는 스냅샷 등 경쟁 프로세스의 공간 요구 사항을 고려하십시오.
+
+====
+ONTAP 9.18.1부터 ARP/AI는 플랫폼 유형 및 CPU 코어 개수를 기반으로 증가된 볼륨 제한을 지원합니다.
+
+[cols="40,30"]
+|===
+| 플랫폼 유형 | 노드당 최대 ARP/AI 지원 볼륨 
+
+
+| 로우엔드(CPU 코어 수가 최대 20개인 시스템) | 250 
+
+
+| 중급(최대 64개의 CPU 코어가 있는 시스템) | 750 
+
+
+| 고급형(CPU 코어 개수가 64개 이상인 시스템) | 1000입니다 
+|===
+
+NOTE: CPU 코어 개수는 2노드 HA 쌍의 각 개별 노드에 적용됩니다.
+
+
+
+[[upgrade-considerations-for-existing-clusters]]
+[[arp-upgrade-considerations]]
+== 기존 클러스터 업그레이드 시 고려 사항
+
+
+NOTE: 새로운 ONTAP 9.18.1 이상 클러스터를 배포하는 경우, 새 볼륨에서 ARP/AI가 기본적으로 자동으로 활성화됩니다. link:learn-about-arpai.html["ARP/AI에 대해 알아보세요"]을 참조하십시오.
+
+AFF A 시리즈, AFF C 시리즈, ASA 또는 ASA r2 시스템에서 ONTAP 9.18.1 이상으로 업그레이드하면 12시간 유예 기간 후 새 볼륨에 대해 ARP/AI가 기본적으로 자동 활성화됩니다. 유예 기간 동안 link:default-enable-change-arpai.html["자동 활성화 해제"]할 수 있습니다. 기존 볼륨은 변경되지 않으므로 기존 볼륨에서 link:enable-arpai.html["ARP/AI를 수동으로 활성화"]해야 합니다.
+
+ONTAP 9.17.1 이하 버전에서 ONTAP 9.18.1로 업그레이드된 FlexGroup 볼륨의 경우 ARP/AI가 자동으로 사용 가능해지고 학습 모드에 있는 볼륨이 활성 모드로 전환됩니다.
+
+
+
+[[multi-admin-verification-with-arpai-protected-volumes]]
+== ARP/AI로 보호되는 볼륨을 사용한 다중 관리자 인증
+
+ONTAP 9.13.1 버전부터 ARP/AI 보안 강화를 위해 다중 관리자 검증(MAV)을 활성화할 수 있습니다. MAV를 사용하면 최소 두 명 이상의 인증된 관리자가 보호 대상 볼륨에서 ARP/AI를 끄거나, 일시 중지하거나, 의심스러운 공격을 오탐으로 표시해야 합니다. link:../multi-admin-verify/enable-disable-task.html["ARP/AI로 보호되는 볼륨에 대해 MAV를 활성화합니다."] 방법을 알아보십시오.
+
+MAV 그룹에 대한 관리자를 정의하고 보호하려는  `security anti-ransomware volume disable`,  `security anti-ransomware volume pause`, 및  `security anti-ransomware volume attack clear-suspect` 명령에 대한 MAV 규칙을 생성해야 합니다.
+
+에 대한 자세한 `security anti-ransomware volume disable` `security anti-ransomware volume pause` 내용은, 및 `security anti-ransomware volume attack clear-suspect`link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+anti-ransomware+volume["ONTAP 명령 참조입니다"^] 을 참조하십시오.

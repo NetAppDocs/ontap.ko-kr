@@ -55,7 +55,7 @@ ONTAP 9의 FlexGroup 볼륨에서 지원되고 지원되지 않는 ONTAP 기능�
 [[features-supported-beginning-with-ontap-9-13-1]]
 == ONTAP 9.13.1 버전부터 지원되는 기능
 
-* xref:../anti-ransomware/index.html[자율 랜섬웨어 보호(ARP)] 지원되는 다음 기능을 포함한 FlexGroup 볼륨의 경우:
+* 다음의 지원되는 기능 등을 포함하는 FlexGroup 볼륨용 xref:../anti-ransomware/index.html[자율 랜섬웨어 보호]:
 +
 ** FlexGroup 확장 운영: 새로운 구성원 볼륨이 자율적 랜섬웨어 방어 특성을 상속합니다.
 ** FlexVol에서 FlexGroup로 전환: 능동적 자율 랜섬웨어 보호를 사용하여 FlexVol을 변환할 수 있습니다.

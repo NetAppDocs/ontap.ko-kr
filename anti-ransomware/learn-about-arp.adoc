@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/learn-about-arp.html 
+keywords: ransomware, arp, autonomous protection, security, detect, detection, threat, attack, learning mode, anti-ransomware, entropy, file extension, file IOPS, NAS 
+summary: 기존 ARP 모델은 활성 랜섬웨어 탐지로 전환하기 전에 행동 기준선을 설정하기 위한 학습 기간을 사용합니다. ONTAP 9.10.1~9.15.1의 NAS FlexVol 볼륨과 ONTAP 9.13.1~9.17.1의 FlexGroup 볼륨에 적용됩니다. 
+---
+= ONTAP ARP(ONTAP 9.10.1 ~ 9.15.1)에 대해 알아보기
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.10.1부터 9.15.1까지, 자율형 랜섬웨어 방지(ARP)는 학습 기간을 사용하여 동작 기준선을 설정한 후 능동적인 랜섬웨어 탐지로 전환하기 전에 NAS 환경을 모니터링합니다. ARP는 데이터 엔트로피, 파일 확장자 변경, 파일 IOPS 패턴을 분석하여 잠재적인 랜섬웨어 공격을 식별합니다. FlexGroup 볼륨의 경우, 기존 ARP 모델은 ONTAP 9.17.1까지 적용됩니다.
+
+
+NOTE: 기존 ARP 모델은 ONTAP 9.14.1 이후로 새로운 기능 개선 사항이 적용되지 않았습니다. ONTAP 9.16.1 이상 버전을 FlexVol 볼륨에서 실행하는 경우 link:learn-about-arpai.html["ARP/AI에 대해 알아보세요"]을 참조하십시오. FlexGroup 볼륨은 ONTAP 9.17.1까지 기존 ARP 모델을 사용하며, ONTAP 9.18.1부터 ARP/AI에서 지원됩니다.
+
+
+
+[[what-arp-detects]]
+== ARP가 감지하는 것
+
+ARP는 수신 데이터를 암호화된 데이터인지 평문 데이터인지 식별하고 다음과 같은 개별 신호를 사용하여 랜섬웨어 활동을 감지합니다.
+
+* *엔트로피*: 파일 내 데이터의 무작위성을 평가하는 지표 (NAS에만 해당)
+* *파일 확장자 유형*: 예상되는 확장자 유형을 따르지 않는 파일 확장자 (NAS에만 해당)
+* *파일 IOPS*: 데이터 암호화를 동반한 비정상적인 볼륨 활동 급증(NAS 전용, ONTAP 9.11.1 이상)
+
+
+ARP는 소수의 파일만 암호화된 후 대부분의 랜섬웨어 공격이 확산되는 것을 감지하고, 자동으로 대응하여 데이터를 보호하며, 의심되는 공격이 발생했을 때 경고합니다.
+
+
+NOTE: 어떠한 랜섬웨어 탐지 시스템도 완전한 안전을 보장할 수 없습니다.  ARP는 바이러스 백신 소프트웨어가 침입을 감지하지 못할 경우 추가적인 방어 계층을 제공합니다.
+
+
+
+[[enablement-options-for-arp]]
+== ARP 활성화 옵션
+
+ARP는 볼륨별로 수동으로 활성화하거나 SVM 수준에서 새 볼륨에 대해 기본적으로 구성할 수 있습니다.
+
+* SVM의 모든 새 볼륨에서 ARP를 기본적으로 활성화하려면 link:enable-default-arp.html["새 볼륨에서 기본적으로 ARP를 활성화합니다"]을 참조하십시오.
+* 특정 볼륨에서 ARP를 활성화하려면 link:enable-arp.html["볼륨에서 ARP 활성화"]을 참조하십시오.
+
+
+
+
+[[arp-protection-modes]]
+== ARP 보호 모드
+
+ARP는 능동적 감지로 전환하기 전에 행동 기준선을 설정하기 위해 학습 모드로 시작합니다.
+
+
+
+[[nas-volumes]]
+=== NAS 볼륨
+
+다음 표는 NAS 환경에 대한 ARP 모드를 요약한 것입니다.
+
+[cols="1,5,1"]
+|===
+| 방법 | 설명 | 볼륨 유형 및 버전 
+
+
+| 학습  a| 
+ARP를 활성화하면 자동으로 학습 모드로 설정됩니다. 학습 모드에서 ONTAP 시스템은 엔트로피, 파일 확장자 유형 및 파일 IOPS 등의 분석 영역을 기반으로 경고 프로필을 개발합니다.
+
+ARP를 30일 동안 학습 모드로 유지하는 것이 좋습니다. ONTAP 9.13.1부터 ARP는 최적의 학습 간격을 자동으로 결정하고 전환을 자동화하며, 이는 30일 전에 실행될 수 있습니다. ONTAP 9.13.1 이전 버전에서는 수동으로 전환할 수 있습니다.
+
+link:switch-learning-arp.html["학습 모드에서 활성 모드로 전환하는 방법에 대해 자세히 알아보세요."].
+
+
+TIP: 이 명령은 `security anti-ransomware volume workload-behavior show` 볼륨에서 감지된 파일 확장명을 표시합니다. 이 명령을 학습 모드 초기에 실행하면 파일 유형이 정확하게 표시되는 경우 ONTAP가 다른 메트릭을 수집하고 있으므로 해당 데이터를 활성 모드로 전환하기 위한 기준으로 사용해서는 안 됩니다. 에 대한 자세한 내용은 `security anti-ransomware volume workload-behavior show` link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-workload-behavior-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+ a| 
+* ONTAP 9.10.1~9.15.1을 사용한 FlexVol 볼륨
+* FlexGroup ONTAP 9.13.1~9.17.1의 FlexGroup 볼륨
+
+
+
+
+| 활동적인  a| 
+학습 기간이 지나면 ARP는 워크로드 활동을 모니터링하고 비정상적인 동작이 감지되면 자동으로 대응합니다.  파일 확장자가 비정상으로 표시되면 해당 경고를 평가해야 합니다.  데이터 보호를 위해 경고에 따라 조치를 취하거나, 오탐으로 표시할 수 있습니다.  경고를 오탐으로 표시하면 경고 프로필이 업데이트됩니다.  예를 들어, 새로운 파일 확장자로 인해 경고가 발생했는데 이를 오탐으로 표시하면 다음에 해당 파일 확장자가 감지될 때 경고가 표시되지 않습니다.
+ a| 
+* ONTAP 9.10.1~9.15.1을 사용한 FlexVol 볼륨
+* FlexGroup ONTAP 9.13.1~9.17.1의 FlexGroup 볼륨
+
+
+|===
+
+
+[[threat-assessment]]
+== 위협 평가
+
+ARP는 두 가지 수준을 사용하여 위협 가능성을 평가합니다.
+
+* *낮음*: 볼륨에서 이상 징후(예: 볼륨에서 새로운 파일 확장자가 발견됨)가 가장 먼저 감지됩니다. 이 수준의 감지는 초기 ARP 모델에서만 사용할 수 있습니다.
++
+** ONTAP 9.11.1부터는 link:manage-parameters-arp.html["ARP에 대한 탐지 매개변수 사용자 정의"]할 수 있습니다.
+
+
+* *중간*: 높은 엔트로피가 감지되었거나 이전에 발견되지 않은 동일한 파일 확장자를 가진 파일이 여러 개 발견되었습니다. ONTAP가 분석 보고서를 실행하여 이상 징후가 랜섬웨어 프로필과 일치하는지 판단한 후 위협 수준이 중간으로 높아집니다. 공격 가능성이 중간 수준일 경우, ONTAP는 EMS 알림을 생성하여 위협 평가를 요청합니다.
+
+
+ONTAP은 낮은 위협에 대한 경고를 보내지 않습니다. 하지만 ONTAP 9.14.1부터는 link:manage-parameters-arp.html#modify-alerts["기본 알림 설정 수정"]. 자세한 내용은 link:respond-arp.html["비정상적인 활동에 응답합니다"]을 참조하십시오.
+
+중간 수준의 위협에 대한 정보는 System Manager의 *Events* 섹션 또는  `security anti-ransomware volume show` 명령을 통해 확인할 수 있습니다. 낮은 수준의 위협 이벤트 또한  `security anti-ransomware volume show` 명령을 사용하여 확인할 수 있습니다.  `security anti-ransomware volume show`에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+
+
+
+[[arp-snapshots]]
+== ARP 스냅샷
+
+ARP는 공격 초기 징후가 감지되면 스냅샷을 생성합니다. 그런 다음 상세 분석을 통해 잠재적 공격을 확인하거나 기각합니다. ARP 스냅샷은 공격이 완전히 확인되기 전에도 사전에 생성되므로 스냅샷이 존재한다고 해서 이상 징후로 간주해서는 안 됩니다. 공격 가능성이 확인되면 공격 확률이 `Moderate`로 높아지고 공격 알림이 생성됩니다.
+
+ONTAP 9.11.1부터는 link:modify-snapshot-options-arp.html["스냅샷에 대한 데이터 보존 설정을 수정합니다"]할 수 있습니다.
+
+다음 표는 ARP 스냅샷 동작을 요약한 것입니다.
+
+[cols="1,3"]
+|===
+| 피처 | 기존 ARP 모델(ONTAP 9.15.1 및 이전 버전) 
+
+
+| 창조 트리거  a| 
+* 높은 엔트로피가 감지되었습니다
+* 새로운 파일 확장자가 감지되었습니다.
+* 파일 작업량이 급증하는 현상이 감지되었습니다(ONTAP 9.11.1 이상)
+
+
+스냅샷 생성 간격은 트리거 유형에 따라 달라집니다.
+
+
+
+| 접두사 이름 규칙 | "랜섬웨어 방지 백업" 
+
+
+| 삭제 동작 | ARP 스냅샷이 잠겨 있어 관리자가 삭제할 수 없습니다. 
+
+
+| 최대 스냅샷 수 | link:modify-snapshot-options-arp.html["6개의 스냅샷 구성 가능 한도"] 
+
+
+| 보존 기간  a| 
+* 트리거 조건에 따라 결정됨(고정되지 않음)
+* 공격 발생 전에 생성된 스냅샷은 관리자가 공격을 사실 또는 오탐(명확-의심)으로 표시할 때까지 유지됩니다.
+
+
+
+
+| 명백한 의심 행위 | 관리자는 의심 해제 작업을 수행하여 경고를 해제하고 잠긴 스냅샷을 해제할 수 있습니다. 
+
+
+| 만료 시간 | 없음 
+|===
+
+
+[[respond-to-and-assess-an-attack]]
+== 공격에 대응하고 평가합니다
+
+ARP는 공격 초기 징후가 감지되면 잠금 스냅샷을 생성합니다. 공격이 실제인지 오탐인지 확인해야 합니다. 잠금 스냅샷은 일반적인 방법으로는 삭제할 수 없습니다. 하지만 나중에 공격을 오탐으로 표시하기로 결정하면 ONTAP이 잠금된 복사본을 삭제합니다.
+
+* link:respond-arp.html["비정상 활동에 대응: ARP"]
+* link:determine-ransomware-tips.html["랜섬웨어 공격이 실제인지 확인합니다"]
+
+
+
+
+[[recover-data-after-an-attack]]
+== 공격 후 데이터 복구
+
+공격이 확인되면 ARP 스냅샷을 사용하여 볼륨을 복원할 수 있습니다. 전체 볼륨을 되돌리는 대신 선택한 스냅샷에서 영향을 받은 파일만 복구할 수 있습니다.
+
+* link:recover-arp.html["ARP 스냅샷에서 데이터 복구"]
+* link:../data-protection/restore-contents-volume-snapshot-task.html["ONTAP 스냅샷에서 복구"]
+* link:https://www.netapp.com/blog/smart-ransomware-recovery["스마트 랜섬웨어 복구"^]
+
+
+
+
+[[multi-admin-verification]]
+== 다중 관리 검증
+
+ONTAP 9.13.1부터는 ARP 구성에 두 명 이상의 인증된 사용자 관리자가 필요하도록 MAV(다중 관리자 검증)를 활성화하는 것이 좋습니다. 자세한 내용은 link:../multi-admin-verify/enable-disable-task.html["다중 관리 검증을 활성화합니다"]을 참조하십시오.
+
+.관련 정보
+* link:support-arp.html["ARP 지원 구성"]
+* link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP 명령 참조입니다"^]
+

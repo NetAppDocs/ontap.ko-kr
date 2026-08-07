@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/entropy-eval-period-arpai.html 
+keywords: ARP AI, arpai, SAN, entropy evaluation, block device, ransomware detection, ONTAP 9.17.1, evaluation period, hypervisor, VMware, Hyper-V, KVM, OpenStack, machine learning ransomware 
+summary: ONTAP 9.17.1부터 ARP/AI는 블록 장치 엔트로피 수준이 랜섬웨어 보호에 적합한지 판단하기 위한 평가 기간이 필요합니다. 
+---
+= 블록 장치 워크로드에 대한 ONTAP ARP/AI 엔트로피 평가 기간에 대해 알아보십시오.
+:allow-uri-read: 
+
+
+[role="lead"]
+ONTAP 9.17.1부터 ARP/AI는 블록 장치 워크로드에 대한 엔트로피 수준이 랜섬웨어 보호에 적합한지 판단하기 위한 평가 기간을 필요로 합니다. 이러한 워크로드에는 SAN LUN 및 하이퍼바이저 가상 디스크(예: NFS 데이터스토어의 VMware 가상 디스크, 그리고 ONTAP 9.17.1P5부터는 Hyper-V, KVM 및 OpenStack 가상 디스크)가 ONTAP 볼륨에 저장된 형태가 포함됩니다. 적격 볼륨에서 ARP/AI를 활성화하면 평가 기간 동안 해당 볼륨을 적극적으로 모니터링하고 보호하는 동시에 최적의 암호화 임계값을 결정합니다.
+
+
+NOTE: 이 페이지는 ARP/AI(ONTAP 9.17.1 이상)에 적용됩니다. ARP는 이전 버전의 ONTAP에서 SAN 볼륨을 지원하지 않습니다.
+
+
+
+[[supported-workloads-and-evaluation-applicability]]
+== 지원되는 워크로드 및 평가 적용 가능성
+
+블록 디바이스 평가 기간은 다음 시나리오에 적용됩니다.
+
+* *SAN 볼륨*: 호스트 또는 하이퍼바이저에 블록 장치로 제공되는 LUN 기반 워크로드입니다.
+* *ONTAP에서 자동으로 감지된 하이퍼바이저 가상 디스크가 포함된 NAS 볼륨*: 지원되는 하이퍼바이저에는 NFS 또는 SMB 데이터스토어에 저장된 VMware, Hyper-V, KVM 및 OpenStack 가상 디스크가 포함됩니다.
+
+
+이러한 볼륨 내에서:
+
+* 평가 기간은 가상 디스크의 게스트 파일 시스템 내부의 엔트로피 변화를 기반으로 감지된 공격(예: LUN 또는 가상 디스크에 매핑된 게스트 OS 내 파일에서 작동하는 랜섬웨어)에 적용됩니다.
+* 평가 기간은 하이퍼바이저 호스트에서 가상 디스크 파일에 직접 가해지는 엔트로피 및 파일 확장자 변경을 기반으로 탐지되는 공격(예: ESXi NFS 데이터스토어 마운트 지점의 .vmdk 파일에서 직접 작동하는 랜섬웨어)에는 적용되지 않습니다. 이러한 직접 디스크 공격은 다른 탐지 경로를 사용합니다.
+
+
+
+
+[[understand-entropy-evaluation]]
+== 엔트로피 평가 이해
+
+평가 기간은 최소 2주에서 최대 4주까지입니다. 처음 2주 동안 10GB 이상의 데이터가 기록되면 해당 2주 기간이 종료되는 시점에 평가가 완료됩니다. 2주 이내에 10GB에 도달하지 못하면 10GB의 데이터가 기록될 때까지 평가가 계속되며, 최대 4주까지 진행됩니다.
+
+평가 기간 동안 시스템은 지원되는 블록 장치 및 하이퍼바이저 워크로드에서 10분 간격으로 지속적인 암호화 통계를 수집합니다.  또한 ARP/AI 주기 스냅샷이 4시간마다 지속적으로 생성됩니다.  특정 간격 내의 암호화 비율이 해당 볼륨에 대해 설정된 최적 암호화 임계값을 초과하면 경고가 발생하고  `Anti_ransomware_attack_backup`스냅샷이 생성되며, 모든 주기적 ARP/AI 스냅샷의 보존 기간이 연장됩니다.
+
+.평가 기간이 활성화되어 있는지 확인하세요
+다음 명령을 실행하고  `evaluation_period` 상태를 확인하여 평가가 활성화되었는지 확인할 수 있습니다. 볼륨이 평가 대상이 아닌 경우 평가 상태가 표시되지 않습니다.
+
+[source, cli]
+----
+security anti-ransomware volume show -vserver <svm_name> -volume <volume_name>
+----
+응답 예시:
+
+[listing, subs="+quotes"]
+----
+Vserver Name                                : vs1
+Volume Name                                 : v1
+State                                       : enabled
+Attack Probability                          : none
+Attack Timeline                             : -
+Number of Attacks                           : -
+Attack Detected By                          : -
+*Block device detection status               : Evaluation_period*
+----
+.평가 기간 데이터 수집 모니터링
+암호화 감지 현황을 실시간으로 모니터링할 수 있습니다. 이 명령은 각 암호화 비율 범위에 포함된 데이터 양을 보여주는 히스토그램을 반환합니다. 히스토그램은 10분마다 업데이트됩니다.
+
+[source, cli]
+----
+security anti-ransomware volume entropy-stat show-encryption-percentage-histogram -vserver <svm_name> -volume <vol_name> -duration real_time
+----
+
+
+[[suitable-workloads-and-adaptive-thresholds]]
+== 적절한 작업 부하 및 적응 임계값
+
+평가는 다음 결과 중 하나로 종료됩니다.
+
+* *해당 워크로드는 ARP/AI에 적합합니다.* ARP/AI는 평가 기간 동안 관찰된 최대 암호화 비율의 10%보다 높은 값으로 적응형 임계값을 자동으로 설정합니다. 또한 ARP/AI는 통계 수집을 지속하고 주기적으로 ARP/AI 스냅샷을 생성합니다.
+* *해당 워크로드는 ARP/AI에 적합하지 않습니다*. ARP/AI는 평가 기간 동안 관찰된 최대 암호화 비율에 맞춰 적응형 임계값을 자동으로 설정합니다. 또한 ARP/AI는 통계 수집을 지속하고 주기적으로 ARP/AI 스냅샷을 생성하지만, 최종적으로는 해당 볼륨에서 ARP/AI를 비활성화할 것을 권장합니다.
+
+
+.평가 결과 확인
+평가 기간이 종료되면 ARP/AI는 평가 결과를 기반으로 적응형 임계값을 자동으로 설정합니다. 다음 명령을 실행하여 평가 결과를 확인할 수 있습니다. 볼륨 적합성은 `Block device detection status` 필드에 표시됩니다.
+
+[source, cli]
+----
+security anti-ransomware volume show -vserver <svm_name> -volume <volume_name>
+----
+응답 예시:
+
+[listing, subs="+quotes"]
+----
+Vserver Name                               : vs1
+Volume Name                                : v1
+State                                      : enabled
+Attack Probability                         : none
+Attack Timeline                            : -
+Number of Attacks                          : -
+Attack Detected By                         : -
+*Block device detection status              : Active_suitable_workload*
+
+Block device evaluation start time :  5/16/2025 01:49:01
+----
+평가 결과에 따라 채택된 값 임계값을 표시할 수도 있습니다.
+
+[source, cli]
+----
+security anti-ransomware volume attack-detection-parameters show -vserver <svm_name> -volume <volume_name>
+----
+.관련 정보
+* link:modify-snapshot-options-arpai.html["ARP/AI의 스냅샷 옵션 수정"]
+* link:manage-parameters-arpai.html["ARP/AI 공격 탐지 매개변수 관리"]
+* link:respond-arpai.html["ARP/AI가 감지한 비정상 활동에 대응합니다"]
+

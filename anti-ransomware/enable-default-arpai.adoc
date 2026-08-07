@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: anti-ransomware/enable-default-arpai.html 
+keywords: ARP AI, arpai, enable by default, autonomous ransomware protection AI, default volume state, ONTAP 9.18.1, automatic enablement, SVM default, cluster default, machine learning ransomware 
+summary: ONTAP 9.16.1부터는 SVM을 구성하여 새 볼륨이 ARP/AI를 통해 기본적으로 활성화되도록 할 수 있습니다. ONTAP 9.18.1부터는 지원되는 시스템에서 클러스터 수준의 자동 활성화 기능을 사용할 수 있습니다. 
+---
+= 새 볼륨에서 ONTAP ARP/AI를 기본적으로 활성화합니다
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.16.1부터 새 볼륨에서 AI 기반 자율 랜섬웨어 보호(ARP/AI)가 기본적으로 활성화되도록 스토리지 VM(SVM)을 구성할 수 있습니다. ONTAP 9.18.1부터는 12시간의 유예 기간이 지난 후 link:support-arpai.html["지원되는 시스템"]에 대해 클러스터 수준에서 ARP/AI가 자동으로 활성화됩니다. 클러스터 수준이 아닌 SVM 수준에서 새 볼륨에 대해 기본적으로 ARP/AI를 활성화해야 하는 경우 이 절차를 사용하십시오.
+
+ONTAP 9.17.1 이하 버전에서는 SVM 수준에서 구성하는 것이 새 볼륨에서 ARP를 기본적으로 활성화하는 유일한 방법입니다.
+
+
+NOTE: ONTAP 9.15.1 이하 버전을 사용 중인 경우 link:enable-default-arp.html["새 볼륨에서 기본적으로 ARP를 활성화합니다"]을 참조하십시오.
+
+
+NOTE: ONTAP 9.13.1부터 9.17.1까지의 FlexGroup 볼륨은 이전 ARP 모델을 사용하므로 학습 기간이 필요합니다. link:enable-default-arp.html["새 볼륨에서 기본적으로 ARP를 활성화합니다"]을 참조하십시오.
+
+.이 작업에 대해
+클러스터 수준에서 ARP/AI가 자동으로 활성화되지 않는 시스템에서는 새 볼륨이 생성될 때 기본적으로 ARP/AI 기능이 비활성화됩니다. SVM에서 새 볼륨을 생성할 때 ARP/AI를 활성화하고 기본적으로 활성화되도록 구성해야 합니다.
+
+ARP/AI가 활성화되지 않은 기존 볼륨은 SVM 기본값을 변경해도 ARP/AI 활성화 상태가 자동으로 변경되지 않습니다. 이 절차에 설명된 SVM 설정은 새 볼륨에만 적용됩니다. link:enable-arpai.html["기존 볼륨에 대해 ARP/AI 활성화"] 방법을 알아보십시오.
+
+[[arp-enablement-default-behavior-table]]
+자율형 랜섬웨어 보호 기능을 활성화한 후에는 환경 및 ONTAP 버전에 따라 전환 기간이 시작될 수 있습니다.
+
+[cols="25,25,50"]
+|===
+| 볼륨 유형입니다 | ONTAP 버전입니다 | 활성화 후의 동작 
+
+
+.2+| NAS FlexGroup | ONTAP 9.18.1 이상 | ARP/AI는 학습 기간 없이 즉시 활성화됩니다. 
+
+
+| ONTAP 9.13.1부터 9.17.1까지 | ARP는 30일 동안 학습 모드로 시작됩니다. 
+
+
+.2+| NAS FlexVol | ONTAP 9.16.1 이상 | ARP/AI는 학습 기간 없이 즉시 활성화됩니다. 
+
+
+| ONTAP 9.10.1부터 9.15.1까지 | ARP는 30일 동안 학습 모드로 시작됩니다. 
+
+
+| SAN 볼륨 | ONTAP 9.17.1 이상 | ARP/AI는 즉시 활성화되어 초기 보수적 임계값에서 전환하기 전에 적절한 경고 임계값을 설정하기 위한 평가 기간을 시작합니다. 
+|===
+.시작하기 전에
+ARP/AI를 기본적으로 활성화하기 전에 환경에 다음 사항이 있는지 확인하십시오.
+
+.NAS 특정 요구 사항
+* NFS 또는 SMB(또는 둘 다) 프로토콜이 활성화된 스토리지 VM(SVM)입니다.
+* 활동적인link:../concepts/namespaces-junction-points-concept.html["접합 경로"] 볼륨을 위해서.
+
+
+.SAN 특정 요구 사항
+* iSCSI, FC 또는 NVMe 프로토콜이 활성화된 스토리지 VM(SVM).
+
+
+.일반 요구 사항
+* 사용하시는 ONTAP 버전에 대한 link:index.html#licenses-for-autonomous-ransomware-protection["올바른 라이센스입니다"].
+* (권장) 다중 관리자 검증(MAV)이 활성화되어 있습니다(ONTAP 9.13.1 이상). 보다link:../multi-admin-verify/enable-disable-task.html["다중 관리 검증을 활성화합니다"] .
+
+
+.단계
+시스템 관리자 또는 ONTAP CLI를 사용하여 SVM 수준에서 새 볼륨에 대해 ARP/AI를 기본적으로 활성화할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. 환경에 따라 *스토리지* 또는 *클러스터*를 선택하고, *스토리지 VM*을 선택한 다음, ARP/AI로 보호할 볼륨이 포함될 스토리지 VM을 선택합니다.
+. *설정* 탭으로 이동합니다. *보안*에서 *랜섬웨어 방지* 타일을 찾아 선택합니다. image:icon_pencil.gif["편집 아이콘"] .
+. 랜섬웨어 방지(ARP/AI) 기능을 활성화하려면 확인란을 선택하십시오. 스토리지 VM의 모든 적격 볼륨에서 ARP/AI를 활성화하려면 추가 확인란을 선택하십시오.
++
+
+NOTE: ARP/AI는 즉시 활성 모드로 전환되며, 학습 기간이 필요하지 않습니다.
+
+
+
+--
+.CLI를 참조하십시오
+--
+.기존 SVM을 수정하여 새 볼륨에서 ARP/AI를 기본적으로 활성화합니다.
+[source, cli]
+----
+vserver modify -vserver <svm_name> -anti-ransomware-default-volume-state enabled
+----
+.새 볼륨에 대해 ARP/AI가 기본적으로 활성화된 새 SVM을 생성합니다.
+[source, cli]
+----
+vserver create -vserver <svm_name> -anti-ransomware-default-volume-state enabled
+----
+.ARP/AI 상태 확인
+[source, cli]
+----
+security anti-ransomware volume show
+----
+--
+====
+.관련 정보
+* link:default-enable-change-arpai.html["ARP/AI 자동 활성화 해제"]
+* link:https://docs.netapp.com/us-en/ontap-cli/security-anti-ransomware-volume-show.html["보안 랜섬웨어 볼륨 보기"^]
+
