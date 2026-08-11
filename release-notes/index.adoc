@@ -79,7 +79,7 @@ TCP RACK을 통한 향상된 WAN 성능은 혼잡한 네트워크 환경에서 �
 
 * xref:../anti-ransomware/use-cases-restrictions-concept.html#snapmirror[동기식 복제 워크로드를 위한 AI 기반 랜섬웨어 탐지]
 +
-SnapMirror 동기식 SAN 및 NAS 환경과 SnapMirror 액티브 동기식 SAN 환경에 자율형 랜섬웨어 보호(ARP/AI) 기능을 확장하여 제로 RPO 아키텍처에서 탐지 및 복구 신호를 유지합니다. 
+SnapMirror 동기식(SAN 및 NAS) 환경과 SnapMirror 활성 동기식 SAN 환경에 자율형 랜섬웨어 보호(ARP/AI) 기능을 확장하여 제로 RPO 아키텍처에서 탐지 및 복구 신호를 유지합니다. 
 
 * xref:../concept-svm-admin-dashboard-sm.html[새로운 ONTAP System Manager 대시보드를 사용하여 SVM을 모니터링하고 관리합니다]
 +

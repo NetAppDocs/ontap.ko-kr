@@ -4,84 +4,30 @@ sidebar: sidebar
 keywords: fc, target, port, configuration, recommendations 
 summary: 최상의 성능과 가용성을 얻으려면 권장되는 FC 타겟 포트 구성을 사용해야 합니다. 
 ---
-= ONTAP 시스템에 권장되는 FC 타겟 포트 구성 및 속도
+= ONTAP 시스템에서 지원하는 FC 타겟 포트 속도를 확인하십시오.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-FC 타겟 포트는 FC 프로토콜에 대해 구성 및 사용되는 것과 정확히 동일한 방법으로 FC-NVMe 프로토콜에 대해 구성하고 사용할 수 있습니다. FC-NVMe 프로토콜에 대한 지원은 사용하는 플랫폼과 ONTAP 버전에 따라 다릅니다. NetApp Hardware Universe를 사용하여 지원을 확인합니다.
+FC 타겟 포트는 FC 프로토콜에서 구성하고 사용하는 방식과 완전히 동일한 방식으로 FC-NVMe 프로토콜에서도 구성하고 사용할 수 있습니다.
 
-최상의 성능과 가용성을 얻으려면 특정 플랫폼에 대해 에 나와 있는 권장 대상 포트 구성을 사용해야 https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^] 합니다.
+최상의 성능과 최고의 가용성을 위해 특정 ONTAP 시스템에 대해 https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]에 나열된 권장 대상 포트 구성을 사용해야 합니다.
 
+온보드 FC 포트와 확장 어댑터 포트는 각각 지원되는 속도에 따라 개별적으로 구성할 수 있습니다. 지원되는 속도는 ONTAP 시스템 및 HBA에 따라 다릅니다. 특정 호스트에서 사용하는 모든 대상 포트는 동일한 속도로 설정해야 합니다.
 
+최적의 설정 방법은 모든 이니시에이터 포트, 스위치 포트 및 타겟 포트에 공통 속도를 구성하는 것입니다. 포트와 이니시에이터 속도가 다르고 공통 속도를 협상할 수 없는 경우 세션을 설정할 수 없습니다. 자동 협상을 사용하여 포트 속도를 설정하는 것은 권장하지 않습니다. 자동 협상은 세션 설정 및 연결 중단 후 재연결 속도를 저하시킬 수 있습니다.
 
-[[configuration-for-fc-target-ports-with-shared-asics]]
-== 공유 ASIC를 통한 FC 타겟 포트 구성
+지원되는 속도는 각 ONTAP 시스템에 대한 NetApp Hardware Universe의 *지원 어댑터 카드* 항목에 나열되어 있습니다.
 
-다음 플랫폼에는 공유 ASIC(Application-Specific Integrated Circuits)와 포트 쌍이 있습니다. 확장 어댑터를 이러한 플랫폼에 사용할 경우 연결에 동일한 ASIC를 사용하지 않도록 FC 포트를 구성해야 합니다.
-
-[cols="3*"]
-|===
-| 컨트롤러 | 공유 ASIC가 있는 포트 쌍 | 대상 포트 수: 권장 포트 수 
-
-
- a| 
-* FAS8200를 참조하십시오
-* AFF A300
-
- a| 
-0g + 0h
- a| 
-1:0g 2:0g, 0h
+.단계
+. link:https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]로 이동하세요.
+. *제품*을 선택합니다.
+. *플랫폼*에서 시스템 유형을 선택합니다.
+. 사용하시는 시스템을 선택한 후 ONTAP 버전을 선택하십시오.
+. *결과 보기*를 선택한 다음 *지원되는 어댑터 카드*를 선택하십시오.
++
+FC 어댑터 카드는 *카테고리*에서 "Block Access (Target)"으로 표시되며, 지원되는 속도는 *지원 프로토콜*에 나열되어 있습니다.
 
 
-
- a| 
-* FAS2750
-* AFF A220
-
- a| 
-0C+0d 0e+0f
- a| 
-1:0c 2:0c, 0e 3:0c, 0e, 0d 4:0c, 0e, 0d, 0f
-
-|===
-
-
-[[fc-target-port-supported-speeds]]
-== FC 타겟 포트의 지원 속도입니다
-
-FC 타겟 포트는 다른 속도로 실행되도록 구성할 수 있습니다. 지정된 호스트에서 사용하는 모든 타겟 포트는 동일한 속도로 설정되어야 합니다. 대상 포트 속도를 연결할 장치의 속도와 일치하도록 설정해야 합니다. 포트 속도에 자동 협상을 사용하지 마십시오. autonegotiation으로 설정된 포트는 Takeover/Giveback 또는 기타 중단 후 다시 연결하는 데 더 오래 걸릴 수 있습니다.
-
-다음과 같은 속도로 실행되도록 온보드 포트 및 확장 어댑터를 구성할 수 있습니다. 필요에 따라 각 컨트롤러 및 확장 어댑터 포트를 각기 다른 속도로 구성할 수 있습니다.
-
-[cols="4*"]
-|===
-| 4Gb 포트 | 8Gb 포트 | 16Gb 포트 | 32 Gb 포트 
-
-
- a| 
-* 4Gb
-* 2Gb
-* 1Gb
-
- a| 
-* 8Gb
-* 4Gb
-* 2Gb
-
- a| 
-* 16Gb
-* 8Gb
-* 4Gb
-
- a| 
-* 32Gb
-* 16Gb
-* 8Gb
-
-
-|===
-지원되는 어댑터 및 지원되는 속도의 전체 목록은 를 참조하십시오 https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^].
