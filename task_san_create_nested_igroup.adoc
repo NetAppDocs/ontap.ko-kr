@@ -4,7 +4,7 @@ permalink: task_san_create_nested_igroup.html
 keywords: netapp, ontap, san, provisioning, create LUN, FC, iSCSI, map, lun, igroups, initiator groups, nested 
 summary: igroup을 2개 이상의 LUN에 동시에 매핑합니다. 
 ---
-= 중첩된 igroup을 생성합니다
+= ONTAP에서 중첩 igroup 생성
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

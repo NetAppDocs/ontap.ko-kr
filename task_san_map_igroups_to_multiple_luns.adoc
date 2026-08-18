@@ -4,7 +4,7 @@ permalink: task_san_map_igroups_to_multiple_luns.html
 keywords: netapp, ontap, san, provisioning, create LUN, FC, iSCSI, map, lun, igroups, initiator groups 
 summary: igroup을 2개 이상의 LUN에 동시에 매핑합니다. 
 ---
-= 여러 LUN에 igroup 매핑
+= ONTAP에서 여러 LUN에 igroup 매핑
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, after, post, ems, event, management, system, lifs, messages, not, delivered 
 summary: ONTAP 9.7 이전 버전에서 9.8 이후 버전으로 업그레이드한 후 EMS를 사용하는 경우 특정 네트워크 서비스 정책에서 EMS LIF 서비스를 제거해야 할 수도 있습니다. 
 ---
-= ONTAP 업그레이드 후 네트워크 서비스 정책에서 EMS LIF 서비스를 제거합니다
+= ONTAP 업그레이드 후 네트워크 정책에서 EMS LIF 서비스 제거
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

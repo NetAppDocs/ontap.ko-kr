@@ -4,7 +4,7 @@ permalink: concept_authentication_access_control_overview.html
 keywords: netapp, ontap, overview, secure data, data, cluster, access, storage, virus scanning, encryption, WORM storage, client authentication, client authorization, administrator authentication, RBAC, role-based access control, login, log in, antivirus, anti-virus, Vscan, SnapLock, regulation 
 summary: 클러스터 인증 및 액세스 제어를 관리할 수 있습니다. 
 ---
-= 인증 및 액세스 제어 개요
+= ONTAP 인증 및 액세스 제어에 대해 알아보기
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

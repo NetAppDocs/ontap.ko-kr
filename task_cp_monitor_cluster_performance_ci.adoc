@@ -4,7 +4,7 @@ permalink: task_cp_monitor_cluster_performance_ci.html
 keywords: netapp, ontap, cluster, performance, monitor, monitoring, headroom, cpu, cpus, data infrastructure insights, troubleshoot, optimize, private data center, Kafka, MongoDB, Nginx, Active IQ Unified Manager, cluster performance, monitor performance 
 summary: Data Infrastructure Insights를 사용하면 퍼블릭 클라우드와 프라이빗 데이터 센터를 포함한 모든 리소스를 모니터링하고, 문제를 해결하고, 최적화할 수 있습니다. 
 ---
-= ONTAP Data Infrastructure Insights를 사용하여 클러스터 성능 모니터링
+= Data Infrastructure Insights를 사용하여 ONTAP 클러스터 모니터링에 대해 알아보기
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

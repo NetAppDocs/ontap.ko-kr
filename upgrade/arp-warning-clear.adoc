@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, ransomware, protection, security, arp 
 summary: ONTAP 업그레이드하기 전에 ARP에서 비정상적인 활동 경고에 대응하십시오. 
 ---
-= ONTAP를 업그레이드하기 전에 ARP(자율적 랜섬웨어 차단)에서 활동 경고를 해결합니다
+= ONTAP 업그레이드 전에 ARP 활동 경고 해결
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

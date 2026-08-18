@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, upgrade, verify, status, health, post, after 
 summary: ONTAP를 업그레이드한 후 클러스터 버전, 클러스터 상태 및 스토리지 상태를 확인합니다.  MetroCluster FC 구성의 경우 계획되지 않은 자동 전환이 사용되도록 설정되었는지 확인합니다. 
 ---
-= ONTAP 업그레이드 후 클러스터를 확인합니다
+= ONTAP 업그레이드 후 클러스터 확인
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, upgrade, plan, planning, upgrade, how, post-checks 
 summary: ONTAP 소프트웨어를 업그레이드한 후 클러스터 준비 상태를 확인하기 위해 여러 가지 작업을 수행해야 합니다. 
 ---
-= ONTAP 업그레이드 후 수행할 작업
+= ONTAP 업그레이드 후 클러스터 준비 상태 확인
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,6 +13,7 @@ summary: ONTAP 소프트웨어를 업그레이드한 후 클러스터 준비 상
 [role="lead"]
 ONTAP를 업그레이드한 후 클러스터 준비 상태를 확인하기 위해 수행해야 하는 몇 가지 작업이 있습니다.
 
+.단계
 . link:task_verify_cluster_after_upgrade.html["클러스터를 확인합니다"].
 +
 ONTAP를 업그레이드한 후에는 클러스터 버전, 클러스터 상태 및 스토리지 상태를 확인해야 합니다. MetroCluster FC 구성을 사용하는 경우 비계획 자동 스위치오버가 활성화되어 있는지도 확인해야 합니다.

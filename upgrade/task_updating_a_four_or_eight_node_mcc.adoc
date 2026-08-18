@@ -4,15 +4,17 @@ sidebar: sidebar
 keywords: 4-node MetroCluster configurations,8-node MetroCluster configurations, upgrade, upgrading, manual, manually 
 summary: 4노드 또는 8노드 MetroCluster 구성을 수동으로 업그레이드하려면 각 DR 그룹의 DR 쌍을 준비 및 업데이트하고 업그레이드 후 작업을 수행해야 합니다 
 ---
-= CLI를 사용하여 4 또는 8노드 MetroCluster 구성의 무중단 ONTAP를 수동으로 업그레이드
+= 4노드 또는 8노드 MetroCluster 구성에서 수동 ONTAP NDU
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-4노드 또는 8노드 MetroCluster 구성을 수동으로 업그레이드하려면 업데이트 준비, 1개 또는 2개의 각 DR 그룹에서 동시에 DR 쌍 업데이트, 업그레이드 후 작업 수행이 포함됩니다.
+4노드 또는 8노드 MetroCluster 구성의 수동 무중단 업그레이드(NDU)는 업데이트 준비, 하나 또는 두 개의 DR 그룹 각각에서 DR 쌍을 동시에 업데이트하고 업그레이드 후 작업을 수행하는 과정을 포함합니다.
 
+.이 작업에 대해
+* 이 작업을 수행하려면 ONTAP 명령줄 인터페이스(CLI)를 사용해야 합니다.
 * 이 작업은 다음 구성에 적용됩니다.
 +
 ** ONTAP 9.2 이하를 실행하는 4노드 MetroCluster FC 또는 IP 구성
@@ -84,6 +86,7 @@ image:mcc_dr_groups_8_node.gif["8노드 MetroCluster 구성의 다이어그램"]
 
 image:mcc_dr_groups_8_node.gif["8노드 MetroCluster 구성의 다이어그램"]
 
+.단계
 . 구성에서 DR 페어를 식별합니다.
 +
 [source, cli]
@@ -274,6 +277,7 @@ NOTE: 노드가 업그레이드된 후 클라이언트 트래픽이 다시 시�
 
 첫 번째 DR 그룹에서 ONTAP 소프트웨어를 업그레이드하고 현재 8노드 MetroCluster 구성에서 두 번째 DR 그룹을 업그레이드하는 경우 이 작업에서 node_A_3과 node_B_3을 업데이트합니다.
 
+.단계
 . 다음 노드에서 모든 데이터 LIF를 마이그레이션:
 +
 [source, cli]
@@ -530,6 +534,7 @@ system image show
 
 첫 번째 DR 그룹에서 ONTAP 소프트웨어를 업그레이드하고 현재 8노드 MetroCluster 구성에서 두 번째 DR 그룹을 업데이트하는 경우 이 작업에서 node_A_4 및 node_B_4를 업데이트합니다.
 
+.단계
 . 다음 노드에서 모든 데이터 LIF를 마이그레이션:
 +
 [source, cli]

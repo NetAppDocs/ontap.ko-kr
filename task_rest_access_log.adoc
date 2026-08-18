@@ -4,7 +4,7 @@ permalink: task_rest_access_log.html
 keywords: netapp, ontap, rest api log, accessing rest api log, accessing api log 
 summary: System Manager에서 수행한 ONTAP REST API 호출을 기록하는 로그에 액세스할 수 있습니다. 로그를 표시할 때 API 호출을 재발급하고 결과를 검토할 수도 있습니다. 
 ---
-= REST API 로그에 액세스 중입니다
+= ONTAP REST API 로그에 액세스합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

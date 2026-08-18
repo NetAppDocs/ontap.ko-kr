@@ -4,7 +4,7 @@ permalink: task_admin_recover_deleted_volumes.html
 keywords: netapp, ontap, administration, recover, recovering, recovery, deleted, undelete, volume, volumes, recover deleted volume, SVM, storage VM, vserver, FlexVol volume, purging volume, volume retention time, deleting a volume 
 summary: 하나 이상의 FlexVol 볼륨을 실수로 삭제한 경우 이러한 볼륨을 복구할 수 있습니다. 볼륨을 삭제하여 볼륨을 영구적으로 삭제할 수도 있습니다. 
 ---
-= 삭제된 볼륨을 복구합니다
+= ONTAP System Manager를 사용하여 삭제된 볼륨 복구
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
