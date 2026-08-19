@@ -16,21 +16,25 @@ summary: 클러스터에서 ONTAP 버전을 중단 없이 업데이트할 수 �
 
 
 [role="lead"]
-자동 업그레이드를 수행하면 ONTAP가 각 노드에 대상 ONTAP 이미지를 자동으로 설치하고 클러스터를 성공적으로 업그레이드할 수 있는지 확인한 다음 중 하나를 실행합니다 xref:concept_upgrade_methods.html[일괄 또는 롤링 업그레이드] 백그라운드에서 클러스터의 노드 수를 기반으로 합니다.
+자동 무중단 업그레이드(ANDU)를 수행하면 ONTAP가 각 노드에 대상 ONTAP 이미지를 자동으로 설치하고 클러스터가 성공적으로 업그레이드될 수 있는지 확인한 다음 클러스터의 노드 수에 따라 백그라운드에서 xref:concept_upgrade_methods.html[일괄 또는 롤링 업그레이드]을 실행합니다.
 
 사용 중인 구성에서 지원되는 경우에는 System Manager를 사용하여 자동화된 업그레이드를 수행해야 합니다.  사용 중인 구성에서 System Manager를 사용한 자동 업그레이드를 지원하지 않는 경우에는 ONTAP CLI(Command Line Interface)를 사용하여 자동화된 업그레이드를 수행할 수 있습니다.
 
 
-NOTE: NetApp 통해 ONTAP 9.15.1 이상으로 업그레이드하는 경우 다음을 따르세요.link:https://docs.netapp.com/us-en/console-software-updates/get-started/software-updates.html["NetApp 콘솔 설명서의 업그레이드 절차"^] .
+NOTE: NetApp 콘솔을 통해 ONTAP 9.15.1 이상으로 업그레이드하는 경우 다음을 따르세요.link:https://docs.netapp.com/us-en/console-software-updates/get-started/software-updates.html["NetApp 콘솔 설명서의 업그레이드 절차"^] .
 
 
-IMPORTANT: 자동 무중단 업그레이드(ANDU)를 시작하기 전에 명령 옵션 설정을 수정해도 `storage failover modify-auto-giveback` 업그레이드 프로세스에는 영향을 미치지 않습니다. ANDU 프로세스는 업데이트에 필요한 Takeover/Giveback 중 이 옵션의 사전 설정 값을 무시합니다. 예를 들어, ANDU를 시작하기 전에 false로 설정하면 `-autogiveback` 반환 전에 자동 업그레이드가 중단되지 않습니다. 에 대한 자세한 내용은 `storage failover modify-auto-giveback` link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+failover+modify-auto-giveback["ONTAP 명령 참조입니다"^]을 참조하십시오.
+IMPORTANT: ANDU를 시작하기 전에  `storage failover modify-auto-giveback` 명령 옵션의 설정을 수정해도 업그레이드 프로세스에는 아무런 영향이 없습니다. ANDU 프로세스는 업데이트에 필요한 테이크오버/기브백 중에 이 옵션에 대해 사전 설정된 값을 무시합니다. 예를 들어, ANDU를 시작하기 전에  `-autogiveback`을(를) false로 설정해도 기브백 전의 자동 업그레이드가 중단되지 않습니다. link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=storage+failover+modify-auto-giveback["ONTAP 명령 참조입니다"^]에서  `storage failover modify-auto-giveback`에 대해 자세히 알아보십시오.
 
 .시작하기 전에
 * 당신은 해야 한다 link:prepare.html["업그레이드를 준비합니다"].
 * 당신은 해야 한다 link:download-software-image.html["ONTAP 소프트웨어 이미지 다운로드"] 대상 ONTAP 릴리스의 경우
 +
 를 수행하는 경우 link:../upgrade/concept_upgrade_paths.html#types-of-upgrade-paths["직접 멀티 홉 업그레이드"]특정 에 필요한 ONTAP 이미지를 모두 다운로드해야 link:../upgrade/concept_upgrade_paths.html#supported-upgrade-paths["업그레이드 경로"]합니다.
+
+* 선택적으로, link:../update/pre-stage-system-firmware.html["단일 재부팅 업그레이드를 위한 시스템 펌웨어 사전 준비"].
++
+ONTAP 9.17.1부터 ANDU를 수행하기 전에 노드의 부팅 장치에 최신 BIOS 또는 LOADER 펌웨어가 이미 있는 경우, 업그레이드 프로세스는 ONTAP 이미지에 포함된 버전으로 덮어쓰지 않고 최신 펌웨어를 유지합니다. 따라서 ONTAP 소프트웨어 업그레이드와 펌웨어 업데이트를 한 번의 재부팅 주기 내에 완료할 수 있습니다.
 
 * 각 HA 쌍에 대해 각 노드에는 동일한 브로드캐스트 도메인에 하나 이상의 포트가 있어야 합니다.
 +
@@ -373,6 +377,9 @@ metrocluster show
 
 --
 ====
+.다음 단계
+펌웨어를 사전 준비한 경우 `system node firmware bootmedia show` 명령을 사용하여 각 노드에서 의도한 펌웨어 버전이 활성화되어 있는지 확인하십시오.
+
 
 
 [[resume-ontap-software-upgrade-after-an-error-in-the-automated-upgrade-process]]

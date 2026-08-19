@@ -1,0 +1,68 @@
+---
+permalink: update/pre-stage-system-firmware.html 
+sidebar: sidebar 
+keywords: ontap, upgrade, andu, bios, loader, firmware, pre-stage, single reboot, slipstream, system firmware, boot media, cluster image update 
+summary: ONTAP 9.17.1부터 ONTAP 업그레이드 전에 노드에 최신 BIOS 또는 LOADER 펌웨어를 미리 준비하여 두 업데이트가 단일 재부팅 주기 내에 완료되도록 할 수 있습니다. 
+---
+= ONTAP 소프트웨어 업그레이드 전 시스템 펌웨어 사전 준비
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1부터 자동 무중단 업그레이드(ANDU)를 수행하기 전에 노드의 부팅 장치에 최신 BIOS 또는 LOADER 펌웨어가 이미 있는 경우, 업그레이드 프로세스는 ONTAP 이미지에 번들로 포함된 버전으로 덮어쓰지 않고 최신 펌웨어를 유지합니다. 따라서 ONTAP 소프트웨어 업그레이드와 펌웨어 업데이트를 한 번의 재부팅 주기 내에 완료할 수 있습니다.
+
+ONTAP 9.16.1 이하 버전에서는 ANDU를 실행하면 부팅 장치에 이미 설치된 펌웨어 버전과 관계없이 대상 ONTAP 이미지에 포함된 BIOS 및 LOADER 펌웨어가 항상 설치됩니다. 최신 BIOS 또는 LOADER 서비스 이미지를 별도로 다운로드한 경우, ONTAP 업그레이드 후 최신 펌웨어를 활성화하려면 별도의 테이크오버 및 반환 사이클이 필요합니다.
+
+ONTAP 9.17.1 버전부터 ONTAP는 각 노드의 부팅 장치에 있는 BIOS 및 LOADER 펌웨어 버전을 대상 ONTAP 이미지에 번들로 포함된 버전과 비교합니다. 부팅 장치에 이미 번들로 제공되는 버전보다 최신 버전이 포함되어 있는 경우, 번들 펌웨어는 설치되지 않습니다. 기존의 최신 펌웨어는 유지됩니다. 번들 버전이 부팅 장치에 있는 버전과 같거나 최신 버전인 경우, 번들 펌웨어가 설치됩니다.
+
+ANDU 워크플로의 정상적인 과정으로 노드가 재부팅되면 부팅 장치의 펌웨어가 활성화되어 ONTAP 업그레이드와 펌웨어 업데이트가 한 번의 재부팅으로 모두 완료됩니다.
+
+.시작하기 전에
+* 클러스터의 모든 노드는 ONTAP 9.17.1 이상을 실행해야 합니다.
+* link:https://mysupport.netapp.com/site/downloads/firmware/system-firmware-diagnostics["NetApp Support 사이트"^]에서 최신 BIOS 또는 LOADER 서비스 이미지를 다운로드해야 합니다.
++
+노드의 부팅 장치에 펌웨어를 다운로드하려면 고급 권한 수준이 필요합니다.
+
+
+
+.단계
+. 권한 수준을 고급으로 설정합니다.
++
+[source, cli]
+----
+set -privilege advanced
+----
+. 최신 서비스 이미지를 각 노드의 부팅 장치에 다운로드하십시오.
++
+[source, cli]
+----
+system node firmware download -node <node_name> -package
+----
++
+새 펌웨어를 수신해야 하는 클러스터의 각 노드에 대해 이 단계를 반복합니다.
+
+. 관리자 권한으로 복귀:
++
+[source, cli]
+----
+set -privilege admin
+----
+. 각 노드의 부팅 장치에 현재 설치된 펌웨어 버전을 확인하십시오.
++
+[source, cli]
+----
+system node firmware bootmedia show
+----
++
+사전 준비된 펌웨어 버전은 대상 ONTAP 이미지에 포함된 버전보다 높아야 합니다.
+
+
+
+.다음 단계
+* 펌웨어를 사전 준비한 후 link:../upgrade/automated-upgrade-task.html["자동 ONTAP 업그레이드를 수행합니다."]할 준비가 되었습니다.
++
+업그레이드 과정에서 ONTAP은 부팅 장치에 이미 최신 BIOS 및 LOADER 펌웨어가 포함되어 있음을 감지하고 이를 유지합니다. 번들 펌웨어는 이미 더 높은 버전이 설치된 노드에는 설치되지 않습니다.
+
+

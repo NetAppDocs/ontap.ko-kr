@@ -2,14 +2,8 @@
 :allow-uri-read: 
 
 
-* AFF C80 를 참조하십시오
-* AFF C60 를 참조하십시오
-* AFF C30 를 참조하십시오
-* AFF A90 를 참조하십시오
-* AFF A70 를 참조하십시오
-* AFF A50 를 참조하십시오
-* AFF A30 를 참조하십시오
+* AFF A 시리즈 시스템: AFF A90, AFF A70, AFF A50, AFF A30
 * AFF A1K 를 참조하십시오
-* FAS90를 참조하십시오
-* FAS70를 참조하십시오
+* AFF C-Series 시스템: AFF C80, AFF C60, AFF C30
+* FAS 시스템: FAS90, FAS70, FAS50
 
