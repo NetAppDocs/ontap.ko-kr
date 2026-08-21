@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, platforms, FAS, AFF, ONTAP Select, asa, afx, san array, flexpod 
 summary: ONTAP 데이터 관리 소프트웨어는 블록 또는 파일 데이터를 읽고 쓰는 애플리케이션을 위한 유니파이드 스토리지를 제공합니다. 
 ---
-= ONTAP 플랫폼
+= ONTAP 스토리지 플랫폼에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

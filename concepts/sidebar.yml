@@ -2,29 +2,29 @@
 section: learn-about
 title: ONTAP에 대해 알아보십시오
 entries:
-- title: ONTAP 플랫폼
+- title: ONTAP 스토리지 플랫폼에 대해 알아보세요.
   url: "/concepts/ontap-platforms-concept.html"
-- title: ONTAP 사용자 인터페이스
+- title: ONTAP 사용자 인터페이스에 대해 알아보기
   url: "/concepts/introducing-ontap-interfaces-concept.html"
 - title: ONTAP System Manager를 NetApp 콘솔과 통합
   url: "/concepts/sysmgr-integration-console-concept.html"
-- title: 클러스터 스토리지
+- title: ONTAP 클러스터 스토리지에 대해 알아보기
   url: "/concepts/cluster-storage-concept.html"
-- title: 고가용성 쌍
+- title: ONTAP 고가용성 페어에 대해 알아보기
   url: "/concepts/high-availability-pairs-concept.html"
-- title: AutoSupport 및 디지털 자문업체
+- title: ONTAP AutoSupport 및 Digital Advisor에 대해 알아보기
   url: "/concepts/autosupport-active-iq-digital-advisor-concept.html"
 - title: 네트워크 아키텍처
   entries:
   - title: 개요
     url: "/concepts/network-connectivity-concept.html"
-  - title: 논리 포트
+  - title: ONTAP 논리 포트에 대해 알아보기
     url: "/concepts/logical-ports-concept.html"
-  - title: 업계 표준 네트워크 기술 지원
+  - title: ONTAP 산업 표준 네트워크 기술에 대해 알아보십시오.
     url: "/concepts/support-industry-standard-technologies-concept.html"
-  - title: RDMA 를 참조하십시오
+  - title: ONTAP 원격 직접 메모리 액세스에 대해 알아보기
     url: "/concepts/rdma-concept.html"
-- title: 클라이언트 프로토콜
+- title: ONTAP 클라이언트 프로토콜에 대해 알아보기
   url: "/concepts/client-protocols-concept.html"
 - title: 디스크 및 로컬 계층
   entries:
@@ -32,21 +32,21 @@ entries:
     url: "/disks-aggregates/index.html"
   - title: RAID 그룹 및 로컬 계층
     url: "/concepts/aggregates-raid-groups-concept.html"
-  - title: 미러링 및 미러링되지 않은 로컬 계층
+  - title: 미러링 및 미러링되지 않은 ONTAP 로컬 티어
     url: "/concepts/mirrored-unmirrored-aggregates-concept.html"
-  - title: 루트 데이터 파티셔닝
+  - title: ONTAP 루트 데이터 파티셔닝에 대해 알아보기
     url: "/concepts/root-data-partitioning-concept.html"
-- title: 볼륨, Qtree, 파일 및 LUN
+- title: ONTAP의 볼륨, qtree, 파일 및 LUN
   url: "/concepts/volumes-qtrees-files-luns-concept.html"
 - title: 스토리지 가상화
   entries:
   - title: 개요
     url: "/concepts/storage-virtualization-concept.html"
-  - title: SVM 사용 사례
+  - title: ONTAP SVM 활용 사례에 대해 알아보세요.
     url: "/concepts/svm-use-cases-concept.html"
-  - title: 클러스터 및 SVM 관리
+  - title: ONTAP 클러스터 및 SVM 관리에 대해 알아보기
     url: "/concepts/cluster-svm-administrators-concept.html"
-  - title: 네임스페이스 및 교차점
+  - title: ONTAP 네임스페이스 및 접합점
     url: "/concepts/namespaces-junction-points-concept.html"
 - title: 경로 페일오버
   entries:
@@ -56,49 +56,49 @@ entries:
   url: "/concepts/load-balancing-concept.html"
 - title: 복제
   entries:
-  - title: Snapshot 복사본
+  - title: ONTAP 스냅샷 기술에 대해 알아보기
     url: "/concepts/snapshot-copies-concept.html"
-  - title: SnapMirror 재해 복구 및 데이터 전송
+  - title: ONTAP SnapMirror가 재해 복구 및 데이터 전송을 지원하는 방법
     url: "/concepts/snapmirror-disaster-recovery-data-transfer-concept.html"
-  - title: 오브젝트 스토리지에 SnapMirror Cloud 백업
+  - title: 오브젝트 스토리지에 대한 ONTAP SnapMirror 클라우드 백업에 대해 알아보십시오
     url: "/concepts/snapmirror-cloud-backups-object-store-concept.html"
-  - title: SnapVault 아카이빙
+  - title: ONTAP SnapVault 아카이빙에 대해 알아보세요
     url: "/concepts/snapvault-archiving-concept.html"
-  - title: 클라우드 백업 및 기존 백업 지원
+  - title: ONTAP 클라우드 백업 및 기존 백업 지원에 대해 알아보기
     url: "/concepts/cloud-backup-support-traditional-backups-concept.html"
-  - title: MetroCluster 지속적인 가용성
+  - title: ONTAP MetroCluster 지속적인 가용성
     url: "/concepts/mcc-config-concept.html"
 - title: 스토리지 효율성
   entries:
   - title: 개요
     url: "/concepts/storage-efficiency-overview.html"
-  - title: 씬 프로비저닝
+  - title: ONTAP 스토리지용 씬 프로비저닝
     url: "/concepts/thin-provisioning-concept.html"
-  - title: 중복 제거
+  - title: ONTAP 중복 제거에 대해 알아보기
     url: "/concepts/deduplication-concept.html"
-  - title: 압축
+  - title: ONTAP 압축에 대해 알아보기
     url: "/concepts/compression-concept.html"
-  - title: FlexClone 볼륨, 파일 및 LUN을 사용할 수 있습니다
+  - title: ONTAP FlexClone 볼륨, 파일 및 LUN에 대해 알아보십시오.
     url: "/concepts/flexclone-volumes-files-luns-concept.html"
-  - title: 용량 측정
+  - title: ONTAP 용량 보고 및 측정에 대해 알아보기
     url: "/concepts/capacity-measurements.html"
   - title: 온도에 민감한 보관
     url: "/volumes/enable-temperature-sensitive-efficiency-concept.html"
-  - title: 전용 오프로드 프로세서 스토리지 효율성
+  - title: ONTAP 전용 오프로드 프로세서 스토리지 효율성에 대해 알아보세요
     url: "/concepts/builtin-storage-efficiency-concept.html"
 - title: 보안
   entries:
-  - title: 클라이언트 인증 및 권한 부여
+  - title: ONTAP 클라이언트 인증 및 권한 부여에 대해 알아보기
     url: "/concepts/client-access-storage-concept.html"
-  - title: 관리자 인증 및 RBAC
+  - title: ONTAP 관리자 인증 및 RBAC에 대해 알아보기
     url: "/concepts/administrator-authentication-rbac-concept.html"
-  - title: 바이러스 검사
+  - title: ONTAP Vscan을 이용한 바이러스 검사
     url: "/concepts/virus-scanning-concept.html"
-  - title: 암호화
+  - title: ONTAP 암호화 기술에 대해 알아보십시오.
     url: "/concepts/encryption-concept.html"
-  - title: WORM 스토리지
+  - title: ONTAP SnapLock WORM 스토리지에 대해 알아보기
     url: "/concepts/snaplock-archiving-compliance-concept.html"
-- title: ONTAP 및 VMware vSphere
+- title: ONTAP 및 VMware vSphere에 대해 알아보기
   url: "/concepts/ontap-and-vmware.html"
-- title: FabricPool
+- title: ONTAP FabricPool 에 대해 알아보기
   url: "/concepts/fabricpool-concept.html"

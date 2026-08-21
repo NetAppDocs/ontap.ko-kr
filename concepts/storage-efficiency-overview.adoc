@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage efficiency, storage efficiencies, storage efficiency technologies, space utilization, space savings, optimizing, space optimization, minimizing, wasted space, reducing, footprint, thin provisioning, deduplication, zero block, zero-block, inline, deduplication, background deduplication, postprocessing, post-processing, compression, compaction, flex-clone technologies 
 summary: 스토리지 효율성은 스토리지 리소스를 최적화하고, 낭비되는 공간을 최소화하고, 쓰인 데이터의 물리적 설치 공간을 줄임으로써 스토리지 시스템이 사용 가능한 공간을 얼마나 효과적으로 사용하는지를 측정한 것입니다. 
 ---
-= ONTAP 스토리지 효율성 개요
+= ONTAP 스토리지 효율성에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

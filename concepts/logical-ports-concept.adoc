@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: logical ports, manage traffic, interface group, ifgrp, trunk port, multimode, load balance, end-stations 
 summary: 각 노드에 제공되는 물리적 포트 외에도 논리 포트를 사용하여 네트워크 트래픽을 관리할 수 있습니다. 논리 포트는 인터페이스 그룹 또는 VLAN입니다. 
 ---
-= 논리 포트
+= ONTAP 논리 포트에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

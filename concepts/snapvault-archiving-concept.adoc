@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapvault archive 
 summary: SnapMirror 라이센스는 백업에 대한 SnapVault 관계와 재해 복구를 위한 SnapMirror 관계를 모두 지원하는 데 사용됩니다. ONTAP 9.3부터 SnapVault 사용권은 더 이상 사용되지 않으며, SnapMirror 사용권은 볼트, 미러, 미러 및 볼트 간 관계를 구성하는 데 사용할 수 있습니다. SnapMirror 복제는 스냅샷의 ONTAP-to-ONTAP 복제에 사용되며 백업 및 재해 복구 사용 사례를 모두 지원합니다. 
 ---
-= SnapVault 아카이빙
+= ONTAP SnapVault 아카이빙에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: concepts/ontap-and-vmware.html
 keywords: vmware, vsphere, vcenter, ontap tools for vmware vsphere, otv, vvol, persistent reservation, scsi 
 summary: ONTAP 및 관련 NetApp 제품을 VMware vSphere와 통합할 수 있습니다. 기술 환경 및 비즈니스 요구 사항에 따라 몇 가지 옵션을 사용할 수 있습니다. 
 ---
-= ONTAP 및 VMware vSphere
+= ONTAP 및 VMware vSphere에 대해 알아보기
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

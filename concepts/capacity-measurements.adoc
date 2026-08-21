@@ -4,7 +4,7 @@ permalink: concepts/capacity-measurements.html
 keywords: capacity, measurement, physical, logical, storage, used storage, local tier capacity, aggregate capacity, block, capacity concern, add capacity, volume, used capacity, available capacity, total capacity, inactive capacity, static insights, dynamic insights, snapshot copy, snapshot copies, inactive data, overprovision, overflows, snapshot copy policy, snapshot copy reserves, reserves, policy, top volumes 
 summary: 'ONTAP 스토리지 용량은 물리적 공간 또는 논리적 공간으로 측정할 수 있습니다. 이러한 측정값의 표시 방식은 ONTAP 버전과 System Manager 또는 Command Line Interface(CLI) 사용 여부에 따라 다릅니다. 스토리지 사용량을 모니터링할 때는 용량 관련 용어, 물리적 용량과 논리적 용량의 차이점, 그리고 용량 유형이 표시되는 방식을 이해하는 것이 중요합니다.' 
 ---
-= ONTAP 용량 보고 및 측정에 대해 알아보세요
+= ONTAP 용량 보고 및 측정에 대해 알아보기
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

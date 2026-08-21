@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cloud backup, support, traditional backups 
 summary: ONTAP 9.7 이하 버전을 위한 디스크-디스크 전용이었던 SnapMirror 및 SnapVault 데이터 보호 관계 외에도, 이제 여러 백업 솔루션을 통해 장기적인 데이터 보존을 위한 저렴한 대안을 제공합니다. 
 ---
-= 클라우드 백업 및 기존 백업 지원
+= ONTAP 클라우드 백업 및 기존 백업 지원에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

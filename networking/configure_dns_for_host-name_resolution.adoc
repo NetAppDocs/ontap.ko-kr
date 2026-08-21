@@ -36,17 +36,17 @@ SVM에서 DNS를 사용하도록 설정하려면 'vserver services name-service 
 을 참조하십시오 xref:configure_dynamic_dns_services.html[동적 DNS 서비스를 구성합니다] SVM에서 동적 DNS 구성에 대한 자세한 내용은 를 참조하십시오.
 
 .단계
-. SVM에서 DNS 활성화:
+. SVM에서 DNS를 구성합니다.
 +
 ....
-vserver services name-service dns create -vserver <vserver_name> -domains <domain_name> -name-servers <ip_addresses> -state enabled
+vserver services name-service dns create -vserver <vserver_name> -domains <domain_name> -name-servers <ip_addresses>
 ....
 +
-다음 명령을 실행하면 SVM VS1 에서 외부 DNS 서버 서버가 활성화됩니다.
+다음 명령은 SVM vs1에서 외부 DNS 서버를 활성화합니다.
 
 +
 ....
-vserver services name-service dns create -vserver vs1.example.com -domains example.com -name-servers 192.0.2.201,192.0.2.202 -state enabled
+vserver services name-service dns create -vserver vs1.example.com -domains example.com -name-servers 192.0.2.201,192.0.2.202
 ....
 +
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap interfaces, interfaces, system manager, netapp console, cli, rest api, ontapi 
 summary: ONTAP 데이터 관리 소프트웨어는 ONTAP로 보호되는 데이터를 관리하는 데 사용할 수 있는 다양한 인터페이스를 제공합니다. 
 ---
-= ONTAP 사용자 인터페이스
+= ONTAP 사용자 인터페이스에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Direct Memory Access, NFS over RDMA, RoCE, intercluster 
 summary: 'ONTAP의 RDMA(Remote Direct Memory Access) 솔루션은 지연 시간에 민감한 고대역폭 워크로드를 지원합니다. RDMA를 사용하면 스토리지 시스템 메모리와 호스트 시스템 메모리 간에 데이터를 직접 복사할 수 있으므로 CPU 중단과 오버헤드가 줄어듭니다' 
 ---
-= RDMA 개요
+= ONTAP 원격 직접 메모리 액세스에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

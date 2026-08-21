@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm use cases 
 summary: 서비스 공급자는 SVM을 안전한 멀티 테넌시 방식으로 사용하여 각 테넌트의 데이터를 격리하고, 각 테넌트에게 고유한 인증 및 관리를 제공하며, 비용 청구를 간소화합니다. 
 ---
-= SVM 사용 사례
+= ONTAP SVM 활용 사례에 대해 알아보세요.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
