@@ -32,7 +32,7 @@ link:https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-sec
 
 
 
-| Trend Micro | link:https://docs.trendmicro.com/en-us/documentation/article/serverprotect-for-netapp-gsg-aspx-__architecture-cluster-2["클러스터 모드에서의 제품 아키텍처"^] | link:https://imt.netapp.com/matrix/["NetApp 상호 운용성 매트릭스 툴"^] 
+| Trend Micro | link:https://docs.trendmicro.com/en-us/documentation/article/trend-vision-one-fs-deploy-ontap-cluster["NetApp ONTAP Vscan 지원을 위한 파일 보안 설정"^] | 해당 없음 
 
 
 | 센티넬 원  a| 

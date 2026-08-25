@@ -26,7 +26,7 @@ NFS over TLS는 기존 ONTAP NFS 인프라와 함께 작동하므로 애플리�
 주체 대체 이름(SAN)은  `ipaddr`이 LIF IP 주소로 설정되거나  `dns` 이름이 LIF FQDN으로 설정되어야 합니다.
 
 ====
-* 클라이언트는 TCP를 통한 RPC-with-TLS를 지원해야 하며, 마운트 시 TLS를 요청하도록 구성되어야 하고, NFS 서버 인증서에 서명한 인증 기관을 신뢰해야 합니다. 클라이언트 측 구성 단계는 클라이언트마다 다르므로 여기서는 설명하지 않습니다.
+* 클라이언트는 TCP를 통한 RPC-with-TLS를 지원해야 하고, 마운트 시 TLS를 요청하도록 구성되어야 하며, NFS 서버 인증서에 서명한 인증 기관을 신뢰해야 합니다. 클라이언트 측 구성 단계는 클라이언트마다 다르므로 여기서는 설명하지 않습니다. Linux 클라이언트에 대한 전체 과정은 link:https://docs.netapp.com/us-en/ontap-technical-reports/nfs-tls/nfs-tls-configure.html["TLS를 통한 NFS 구성"]을 참조하십시오.
 
 
 

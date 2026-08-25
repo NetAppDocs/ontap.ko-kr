@@ -12373,7 +12373,6 @@
   <block id="a5bf37251c457db2c05d5400470b47f5" category="paragraph">제거한 공유 속성은 기존 공유 속성 목록에서 삭제되지만 이전에 구성한 공유 속성은 제거하지 않습니다.</block>
   <block id="059c8ad53f37974a0fb6f5be15c00f6a" category="paragraph">다음 명령을 실행하면 스토리지 가상 시스템(SVM, 이전 명칭 Vserver) VS1 에서 ""Engineering""이라는 이름의 공유에 대한 oplocks가 설정됩니다.</block>
   <block id="804769bea51af6a9dd8017685570f2c6" category="paragraph">다음 명령을 실행하면 SVM VS1 에서 ""Engineering""이라는 이름의 공유에 대한 oplocks가 해제됩니다.</block>
-  <block id="2194fabbdd542587b28842d2c6f7dc52" category="paragraph">보안을 강화하기 위해 SVM(Storage Virtual Machine)은 AES 보안 옵션을 수정할 때마다 AD에서 시스템 계정 암호를 변경합니다. 암호를 변경하려면 컴퓨터 계정이 포함된 OU(조직 구성 단위)에 대한 관리 AD 자격 증명이 필요할 수 있습니다.</block>
   <block id="cf08bed0ee19101a0818e2eb600bf46f" category="cell">Kerberos 통신을 위한 AES 암호화 유형을 원하는 경우...</block>
   <block id="5ad3a8c3b268c6f7d88c6b85bba5e6d2" category="paragraph">'vserver cifs security modify -vserver vserver_name -is-aes-encryption-enabled true'</block>
   <block id="2edd4ab2c4746f30641015636ffe0cca" category="paragraph">'vserver cifs security modify -vserver vserver_name -is-aes-encryption-enabled false'</block>
@@ -16000,7 +15999,6 @@
   <block id="c40f016d6141c65a8e7a7ea0b5573496" category="section-title">지원되지 않는 기능입니다</block>
   <block id="c377d917426c0a5b4d0f4b04d5f0bd85" category="list-text">VVOL</block>
   <block id="8d81fac66472832c2834cc956d0290b2" category="list-text">DP_Optimized(DPO) 시스템</block>
-  <block id="6f25448fe8046b21ab532f27c150c288" category="list-text">대상 볼륨에서 dump 및 SMTape를 사용하여 테이프 백업 또는 복구를 수행합니다</block>
   <block id="01d48bdfbea1921df5204b19e4f56db2" category="list-text">소스 볼륨의 처리량(QoS Min</block>
   <block id="6399008402d65fb07dcdb41c563e87a5" category="list-text">글로벌 제한</block>
   <block id="10d339b8f7cc52b3ddcd628ce261282e" category="section-title">작동 모드</block>
@@ -26614,7 +26612,6 @@
   <block id="6bd4acb85c517d1395c8f90c7b6ce7b9" category="paragraph">다음 명령을 실행하면 NonCurrentVersionExpiration 버킷 수명주기 관리 규칙이 생성됩니다.</block>
   <block id="075984e71cde5eb9536a99177c147e97" category="paragraph">다음 명령을 실행하면 만료 버킷 수명주기 관리 규칙이 생성됩니다.</block>
   <block id="d894fa6d91ac4cfd6ec85b4c7ef77793" category="paragraph">다음 명령을 실행하면 AbortIncompleteMultipartUpload 버킷 수명주기 관리 규칙이 생성됩니다.</block>
-  <block id="ca0345f903fdc156a4c582545931f960" category="inline-xref-macro">NDMP 복제본을 사용하여 데이터를 전송합니다</block>
   <block id="5e48e95d3056cb4e28b21db8241be02b" category="paragraph">또한 다음과 같은 특수 데이터 보호 애플리케이션용 SnapMirror를 사용할 수도 있습니다.</block>
   <block id="b9567455cda499b67dc3482f36ba1530" category="summary">적응형 정책 그룹 템플릿을 사용하여 SVM 레벨에서 처리량 플로어 및 상한을 적용합니다.</block>
   <block id="1152d47eacf24da3d62cb1ae683a826c" category="list-text">적응형 정책 그룹 템플릿은 기본 정책입니다<block ref="e5b30871311989ed03e632a7cd163f66" prefix=" " category="inline-code"></block>. 정책은 언제든지 수정할 수 있습니다. CLI 또는 ONTAP REST API에서만 설정할 수 있고 기존 SVM에만 적용할 수 있습니다.</block>
@@ -29964,7 +29961,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="e1ecf6cdd7a474c0d8d573fb7ef6514a" category="cell">LUN 클론 및 NVMe 네임스페이스 클론</block>
   <block id="757a83f35ef2f4b3cd011c00143177a2" category="cell">혼합 프로토콜 액세스(NFS v3 및 SMB)</block>
   <block id="db1d01fd2e529cb8d979ae811180884d" category="cell">NDMP/NDMP 복구</block>
-  <block id="fd96486733749820d434477c1e64ecff" category="cell">SnapMirror Synchronous에 NDMP를 사용하려면 소스 클러스터와 대상 클러스터 모두 ONTAP 9.13.1 이상을 실행해야 합니다. 자세한 내용은 을 참조하십시오 <block ref="74872392d517943546408ac06c4af9c3" category="inline-xref-macro-rx"></block>.</block>
   <block id="2bb63ab7e2c920ac5cabda9eab6c0947" category="cell">무중단 운영을 지원하므로 업무 중단 시간을 예약하지 않고 일반적인 여러 유지보수 작업을 수행할 수 있습니다. 지원되는 운영에는 2개의 클러스터 각각에서 단일 노드가 정상 작동하는 경우 테이크오버 및 반환, 볼륨 이동이 포함됩니다.</block>
   <block id="34a8132b17f04ee6e0feea494a36fc9c" category="cell">NFS v4.2</block>
   <block id="0b99b245267ef194ca3b9f6e694b0983" category="cell">NFS v4.1</block>
@@ -47891,7 +47887,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="40cc6441201815aba14580774301e1cd" category="paragraph">NFS over TLS는 기존 ONTAP NFS 인프라와 함께 작동하므로 애플리케이션은 TLS가 전송 중인 NFS 트래픽을 암호화하는 동안에도 NFS를 정상적으로 사용할 수 있습니다. 관리자는 X.509 인증서를 사용하여 스토리지 시스템을 인증하고 암호화된 세션을 설정합니다. 개별 데이터 LIF에서 mTLS를 활성화하여 클라이언트 인증서 유효성 검사를 선택적으로 요구할 수 있습니다. ONTAP 9.19.1에서 NFS over TLS는 최대 10,000개의 유효한 NFS over TLS 연결을 지원합니다. 더 높은 연결 제한이 필요한 경우 NetApp 지원팀에 문의하십시오.</block>
   <block id="6760d5e9be912255425ee5ad32bb88b9" category="list-text">TLS가 활성화된 NFS 데이터 LIF마다 X.509 서버 인증서가 있어야 합니다. 이 인증서는 ONTAP에서 생성하거나, 외부 CA에서 설치하거나, 필요한 LIF ID 검사에 맞는 기존에 설치된 인증서 중에서 선택할 수 있습니다.</block>
   <block id="05b4242ec1fb880b4df16698c1da72b3" category="paragraph">주체 대체 이름(SAN)은 <block ref="6d14525117cc12ced056e2289c5669ab" prefix=" " category="inline-code"></block>이 LIF IP 주소로 설정되거나 <block ref="b3bf60b851ebaeb2768b01a32e2ef32f" prefix=" " category="inline-code"></block> 이름이 LIF FQDN으로 설정되어야 합니다.</block>
-  <block id="eda5d266efcc0cec8464a4c64da663c4" category="list-text">클라이언트는 TCP를 통한 RPC-with-TLS를 지원해야 하며, 마운트 시 TLS를 요청하도록 구성되어야 하고, NFS 서버 인증서에 서명한 인증 기관을 신뢰해야 합니다. 클라이언트 측 구성 단계는 클라이언트마다 다르므로 여기서는 설명하지 않습니다.</block>
   <block id="67207397660880e85938034ffac1f808" category="section-title">ONTAP 시스템에서 NFS over TLS를 구성하여 전송 중인 데이터를 암호화합니다.</block>
   <block id="e0a285256015e90ded4a9a86ba293313" category="paragraph">NFS SVM 데이터 LIF에서 NFS over TLS를 시간 경과에 따라 점진적으로 구성하거나, TLS 액세스가 필요한 경우에만 구성할 수 있습니다.</block>
   <block id="ede352064adb053f69bb7db61e6eeeec" category="paragraph">기본적으로 TLS가 활성화된 LIF는 TLS를 요청하지 않는 클라이언트의 TCP를 통한 비TLS NFS 연결도 허용할 수 있습니다. 단, allow-nfs-tls-only로 내보내기 정책 규칙 적용을 구성한 경우는 예외입니다. 해당 클라이언트에 대해 비TLS 액세스를 거부해야 하는 경우 이 설정을 사용하십시오.</block>
@@ -48246,8 +48241,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="7e9ae042c211d12a3e3b34dd7b7edaf1" category="paragraph">ONTAP 명령 참조에서 link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html<block ref="73875e322c76bddd6a5fa384b218226a" prefix="[" category="inline-code"></block>^], link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html<block ref="ce1e6173089c5d87ceb80f40a9ec8907" prefix="[" category="inline-code"></block>^], link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html<block ref="025c83c1a746b39471a98aa72befe950" prefix="[" category="inline-code"></block>^]에 대해 자세히 알아보십시오.</block>
   <block id="6a148070bc5425edfc608b9c08900af7" category="inline-link-macro">NetApp Trellix ePO의 NetApp 구성 - 온프레미스 관리형 엔드포인트(trellix.com)</block>
   <block id="1f7dc94e41b5716c1bdac079403299a9" category="list-text"><block ref="1f7dc94e41b5716c1bdac079403299a9" category="inline-link-macro-rx"></block></block>
-  <block id="e04a0d1aa2cad12745a8afba1b683ba3" category="inline-link-macro">클러스터 모드에서의 제품 아키텍처</block>
-  <block id="506230f64091f757ec7968eadc69cda9" category="cell"><block ref="506230f64091f757ec7968eadc69cda9" category="inline-link-macro-rx"></block></block>
   <block id="e151dec72872d5eb0009a044fe37e4ac" category="inline-link-macro">NetApp에 대한 위협 탐지</block>
   <block id="0972c6e249e46bcf78f97ecd7a65fb4f" category="list-text"><block ref="0972c6e249e46bcf78f97ecd7a65fb4f" category="inline-link-macro-rx"></block></block>
   <block id="caa6941cc670ae7bf2ade1c4fb560921" category="list-text"><block ref="caa6941cc670ae7bf2ade1c4fb560921" category="inline-link-macro-rx"></block></block>
@@ -48347,7 +48340,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="3472dbc3543c36fa90b924414be2bfaf" category="paragraph"><block ref="07ea00bede9c9735d04ea911ea60bbc0" prefix="" category="inline-code"></block></block>
   <block id="59acd4e272c436bd289ab16713c9262c" category="paragraph"><block ref="423ba098c96a0fb6d01b2afc90738a61" prefix="" category="inline-code"></block></block>
   <block id="33f6de6a0c9e3057c86a1b7a7d4cf7b0" category="list-text">볼륨 이동은 FlexGroup 볼륨을 구성하는 개별 멤버 볼륨에 대해 지원됩니다.</block>
-  <block id="8258bc6ebddb87d94c7594d38c3607df" category="list-text">S3 버킷에서 사용하는 FlexGroup 볼륨의 경우 볼륨 이동이 지원되지 않습니다.</block>
   <block id="293e31aa5f7b93102d0f8391623abdab" category="paragraph">자율형 랜섬웨어 보호 기능을 활성화한 후에는 환경 및 ONTAP 버전에 따라 전환 기간이 시작될 수 있습니다.</block>
   <block id="43c115f1fec4f31068a30deb5ccaedeb" category="paragraph">자율형 랜섬웨어 보호 기능은 탐지 및 스냅샷 생성을 자동화하지만, 파일이나 이벤트가 실제로 악성인지 여부를 최종적으로 판단하려면 수동 조사가 필요합니다. 자율형 랜섬웨어 보호 기능은 이벤트가 실제 랜섬웨어 공격인지 여부를 확실하게 판단할 수 없습니다. 의심스러운 활동을 표시하기는 하지만, 해당 이벤트가 실제 랜섬웨어인지 아니면 오탐(양성 활동)인지 여부를 직접 조사하고 확인해야 합니다.</block>
   <block id="4ed041b3fb2cf05509c78ca5ee4a60dd" category="summary">지원되는 AFF 및 ASA 시스템에서 ONTAP 9.18.1 이상으로 업그레이드할 경우, 유예 기간 이후 새 볼륨에 대해 ARP/AI가 기본적으로 활성화됩니다. 언제든지 옵트아웃하거나 설정을 변경할 수 있습니다.</block>
@@ -49224,4 +49216,12 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8da0c4418aec41a5d428a5f423c5aa04" category="doc">ONTAP의 볼륨, qtree, 파일 및 LUN</block>
   <block id="4a33c12bbe02d6a836f57597144a4815" category="list-text">SVM에서 DNS를 구성합니다.</block>
   <block id="526819462806ee44d22a961cbf91c69c" category="paragraph">다음 명령은 SVM vs1에서 외부 DNS 서버를 활성화합니다.</block>
+  <block id="b8eb7bfc4885caa2cdab52e5eeebb713" category="inline-link-macro">NetApp ONTAP Vscan 지원을 위한 파일 보안 설정</block>
+  <block id="0049b1ec5da05f8a9caf761cf964663b" category="cell"><block ref="0049b1ec5da05f8a9caf761cf964663b" category="inline-link-macro-rx"></block></block>
+  <block id="1afa63dbd554862d0af3d4a4db483b68" category="cell">소스 및 타겟 클러스터 모두 SnapMirror 동기 볼륨의 덤프 또는 SMTape 기반 NDMP 백업을 수행하려면 ONTAP 9.13.1 이상을 실행해야 합니다. 덤프 또는 SMTape 기반 NDMP 복원은 SnapMirror 액티브 동기화 또는 SnapMirror 동기 관계에 있는 타겟 볼륨에 대해 지원되지 않습니다.</block>
+  <block id="d802a9b7b5e4ac66749ef0d3fe2f2ce6" category="list-text">SnapMirror 활성 동기화 또는 SnapMirror 동기 관계의 타겟 볼륨으로 덤프 또는 SMTape 기반 NDMP 복원</block>
+  <block id="270714ff537f36476f47caed654162de" category="inline-link-macro">TLS를 통한 NFS 구성</block>
+  <block id="abc3cfe9d437f8bb06b6a880f33e69bc" category="list-text">클라이언트는 TCP를 통한 RPC-with-TLS를 지원해야 하고, 마운트 시 TLS를 요청하도록 구성되어야 하며, NFS 서버 인증서에 서명한 인증 기관을 신뢰해야 합니다. 클라이언트 측 구성 단계는 클라이언트마다 다르므로 여기서는 설명하지 않습니다. Linux 클라이언트에 대한 전체 과정은 <block ref="28920ba717b553cf078f834461ac8a01" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="3f7773acceca9bd6d7fb6b16db8d84cb" category="paragraph"><block ref="ddde30b98188e05b2f6907c7b9415c27" prefix=" " category="inline-code"></block> 매개변수를 수정하면 지정된 암호화 유형이 이전에 구성된 유형을 대체합니다. 이전의 모든 암호화 유형 설정은 삭제됩니다.</block>
+  <block id="889a400c95ca500d790674eca2dfea8d" category="paragraph">보안 강화를 위해 스토리지 가상 머신(SVM)은 AES 보안 옵션이 변경될 때마다 AD(Active Directory)에서 머신 계정 암호를 변경합니다. 암호를 변경하려면 머신 계정이 포함된 조직 단위(OU)에 대한 관리자 AD 자격 증명이 필요할 수 있습니다. 자격 증명 입력 프롬프트는 ONTAP가 Active Directory에서 머신 계정 암호를 재설정해야 하고 AD 구성에서 머신 계정이 포함된 조직 단위에 대한 관리자 자격 증명이 필요한 경우에만 나타납니다. AD가 동기화되어 있고 자동 재설정이 활성화된 경우 프롬프트가 나타나지 않습니다.</block>
 </blocks>
