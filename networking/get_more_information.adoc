@@ -4,7 +4,7 @@ permalink: networking/get_more_information.html
 keywords: documentation, release notes, videos, technical reports, knowledgebase articles, community, forums, get more information, find more information about ontap 9.8 and later networking 
 summary: ONTAP 9.8 이상 네트워킹에 대한 자세한 내용을 확인하십시오. 
 ---
-= 자세한 정보를 확인하십시오
+= ONTAP 네트워킹 관련 자료 더 보기
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

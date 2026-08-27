@@ -4,7 +4,7 @@ permalink: networking/manage_routing_in_an_svm_overview.html
 keywords: introducing, introduction, overview, route, routing, svm, storage, virtual, machine, network, path, overview, introducing routing tables and network paths 
 summary: 라우팅 테이블 및 네트워크 경로 소개 
 ---
-= ONTAP 네트워크에서의 SVM 라우팅에 대해 알아보십시오
+= ONTAP가 SVM에서 네트워크 트래픽을 라우팅하는 방법
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

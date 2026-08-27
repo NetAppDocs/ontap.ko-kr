@@ -18,15 +18,15 @@ summary: 라이선스는 하나 이상의 소프트웨어 사용 권한에 대�
 [[licenses-included-with-ontap-one]]
 == ONTAP One에 포함된 라이선스
 
-ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있습니다. 표에 나와 있는 것처럼 이전 코어 번들, 데이터 보호 번들, 보안 및 규정 준수 번들, 하이브리드 클라우드 번들 및 암호화 번들의 콘텐츠가 함께 포함됩니다. 암호화는 제한된 국가에서만 사용할 수 있습니다.
+ONTAP One에는 사용 가능한 모든 라이선스 기능이 포함되어 있습니다. 이는 기존의 Core 번들, Data Protection 번들, Security and Compliance 번들, Hybrid Cloud 번들, Encryption 번들의 콘텐츠를 모두 통합한 것입니다. 암호화 기능은 제한된 국가에서는 사용할 수 없습니다.
 
 |===
 
 
-| 이전 번들 이름입니다 | ONTAP 키가 포함됩니다 
+| ONTAP 키가 포함됩니다 
 
 
-.5+| 코어 번들 | 플랙스클론 
+| 플랙스클론 
 
 
 | SnapRestore 
@@ -41,7 +41,7 @@ ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있�
 | NVMe-oF 
 
 
-.3+| 보안 및 규정 준수 번들 | 자율 랜섬웨어 보호 
+| 자율 랜섬웨어 보호 
 
 
 | MTKM입니다 
@@ -50,7 +50,7 @@ ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있�
 | SnapLock 
 
 
-.3+| 데이터 보호 번들 | SnapMirror(비동기식, 동기식, 액티브 동기식) 
+| SnapMirror(비동기식, 동기식, 액티브 동기식) 
 
 
 | SnapCenter 
@@ -59,13 +59,13 @@ ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있�
 | NetApp 타겟에 대한 SnapMirror S3 
 
 
-.2+| 하이브리드 클라우드 번들 | SnapMirror 클라우드 
+| SnapMirror 클라우드 
 
 
 | NetApp 이외의 타겟에 대한 SnapMirror S3 
 
 
-.2+| 암호화 번들 | NetApp 볼륨 암호화 
+| NetApp 볼륨 암호화 
 
 
 | 신뢰할 수 있는 플랫폼 모듈 
@@ -78,9 +78,7 @@ ONTAP One에는 사용 가능한 모든 라이센스 기능이 포함되어 있�
 ONTAP One에는 다음을 포함하여 NetApp의 클라우드 제공 서비스가 포함되지 않습니다.
 
 * NetApp 클라우드 계층화
-* 데이터 인프라 인사이트
 * NetApp 백업 및 복구
-* 데이터 거버넌스
 
 
 
@@ -102,10 +100,10 @@ ONTAP Base는 ONTAP 시스템용 ONTAP One을 대체하는 선택적 소프트�
 |===
 
 
-| 이전 번들 이름입니다 | ONTAP 키가 포함됩니다 
+| ONTAP 키가 포함됩니다 
 
 
-.5+| 코어 번들 | 플랙스클론 
+| 플랙스클론 
 
 
 | SnapRestore 
@@ -120,7 +118,7 @@ ONTAP Base는 ONTAP 시스템용 ONTAP One을 대체하는 선택적 소프트�
 | NVMe-oF 
 
 
-.2+| 암호화 번들 | NetApp 볼륨 암호화 
+| NetApp 볼륨 암호화 
 
 
 | 신뢰할 수 있는 플랫폼 모듈 

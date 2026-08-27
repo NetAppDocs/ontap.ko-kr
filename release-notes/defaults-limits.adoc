@@ -34,6 +34,9 @@ ONTAP 9 릴리스에서 구현된 제한 및 기본값에 대한 몇 가지 변�
 | HTTP 엄격한 전송 보안(HSTS) | HSTS는 9.17.1에서 기본적으로 활성화되어 있습니다. | ONTAP 9.17.1 
 
 
+| ONTAP SVM에 대한 캐시된 긍정적 자격 증명의 TTL(Time-to-Live) | ONTAP 9.17.1 버전부터 ONTAP SVM에 대한 캐시된 긍정 자격 증명의 TTL(Time-to-Live)이 24시간(86,400,000밀리초)에서 1시간(3,600,000밀리초)으로 단축되었습니다. | ONTAP 9.17.1 
+
+
 | NAS 감사 | 및 `file-session-io-grouping-duration` 매개 변수의 최대 제한이 `file-session-io-grouping-count` 증가하므로 필요에 따라 더 적은 수의 통합 NAS 감사 이벤트 알림을 선택할 수 있습니다. 이 경우 SVM이 높은 IO 속도를 지원하므로 타겟 볼륨에 대한 스토리지의 영향을 줄일 수 있습니다. NFS_FILE_SESSION_IO_GROUP_COUNT_MAX: 20000 ~ 120000 NFS_FILE_SESSION_IO_GROUP_DURATION_MAX: 600 ~ 3600 | ONTAP 9.16.1 
 
 
