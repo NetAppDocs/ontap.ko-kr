@@ -39,9 +39,7 @@ TIP: Vscan 트래픽용 LIF가 클라이언트 트래픽에 대한 LIF가 아닌
 * 바이러스 백신 엔진과 정의를 최신 상태로 유지합니다. 업데이트 빈도에 대한 권장 사항은 파트너에게 문의하십시오.
 * 멀티 테넌시 환경에서는 Vscan 서버와 SVM이 동일한 도메인 또는 신뢰할 수 있는 도메인에 속해 있는 경우 여러 SVM과 스캐너 풀(Vscan 서버 풀)을 공유할 수 있습니다.
 * 감염된 파일에 대한 바이러스 백신 소프트웨어 정책은 대부분의 바이러스 백신 공급업체에서 설정한 기본값인 "삭제" 또는 "격리"로 설정되어야 합니다. "vscan-fileop-profile"이 "write_only"로 설정되어 있고 감염된 파일이 발견되면 파일이 공유에 남아 있고 파일을 열면 검사가 트리거되지 않으므로 열 수 있습니다. 바이러스 백신 검사는 파일을 닫은 후에만 트리거됩니다.
-* 를 클릭합니다 `scan-engine timeout` 값은 보다 작아야 합니다 `scanner-pool request-timeout` 값.
-더 높은 값으로 설정하면 파일 액세스가 지연되고 결국 시간 초과될 수 있습니다.
-이를 방지하려면 를 구성하십시오 `scan-engine timeout` 보다 5초 더 짧습니다 `scanner-pool request-timeout` 값. 를 변경하는 방법에 대한 지침은 스캔 엔진 공급업체의 설명서를 참조하십시오 `scan-engine timeout` 설정. 를 클릭합니다 `scanner-pool timeout` 고급 모드에서 다음 명령을 사용하고 에 적절한 값을 입력하여 변경할 수 있습니다 `request-timeout` 매개 변수:
+*  `scan-queue-timeout` 값은  `scanner-pool request-timeout` 값보다 작아야 합니다. 더 높은 값으로 설정하면 파일 접근이 지연되거나 결국 시간 초과될 수 있습니다. 이를 방지하려면  `scan-queue-timeout`을  `scanner-pool request-timeout` 값보다 5초 짧게 구성하십시오.  `scan-queue-timeout` 설정 변경 방법에 대한 지침은 스캔 엔진 공급업체의 설명서를 참조하십시오.  `scanner-pool timeout`은 고급 모드에서 다음 명령을 사용하고  `request-timeout` 매개변수에 적절한 값을 입력하여 변경할 수 있습니다: 
 `vserver vscan scanner-pool modify`.
 * 온-액세스 검사 워크로드에 적합한 크기로 주문형 검사를 사용해야 하는 환경의 경우, NetApp 기존 바이러스 백신 인프라에 추가 로드가 발생하지 않도록 사용량이 적은 시간에 온디맨드 검사 작업을 예약하는 것이 좋습니다.
 

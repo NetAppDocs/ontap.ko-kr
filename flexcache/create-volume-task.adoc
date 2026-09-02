@@ -30,6 +30,7 @@ ONTAP 9.18.1 이상을 실행하는 경우 스토리지 관리자는 SVM-DR 관�
 +
 ONTAP 9.7 이상에는 FlexCache 라이센스가 필요하지 않습니다. ONTAP 9.7부터는 FlexCache 기능이 ONTAP에 포함되어 더 이상 라이센스나 활성화가 필요하지 않습니다. 
 
+* FlexCache 볼륨 이름은 197자 이하여야 합니다.
 
 
 
