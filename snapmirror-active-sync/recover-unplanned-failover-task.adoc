@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: snapmirror-active-sync/recover-unplanned-failover-task.html 
 keywords: fan-out, snapmirror active sync, unplanned failover 
-summary: '자동 비계획 장애 조치(AUFO) 작업은 운영 클러스터가 다운되거나 격리될 때 발생합니다. 이 경우 보조 클러스터가 운영 클러스터로 변환되어 클라이언트 서비스가 시작됩니다.' 
+summary: '자동 예기치 않은 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. SnapMirror active sync는 이러한 오류를 감지하고 보조 클러스터로 자동 예기치 않은 장애 조치를 시작합니다. 보조 클러스터는 기본 클러스터로 전환되어 클라이언트에 서비스를 제공하기 시작합니다.' 
 ---
 = 계획되지 않은 자동 ONTAP 클러스터 장애 조치 작업에서 복구
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: '자동 비계획 장애 조치(AUFO) 작업은 운영 클러스터가 
 
 
 [role="lead"]
-자동 비계획 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. ONTAP Mediator는 장애 조치가 발생할 때 이를 감지하고 보조 클러스터에 대한 자동적인 계획되지 않은 장애 조치를 실행합니다.  이 작업은 ONTAP Mediator의 도움을 받아서만 수행됩니다. 보조 클러스터는 기본 클러스터로 전환되어 클라이언트 서비스를 시작합니다. 이 작업은 ONTAP 중재자의 지원을 받아야만 수행됩니다.
+자동 예기치 않은 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. SnapMirror 액티브 싱크는 이러한 오류를 감지하고 보조 클러스터로 자동 예기치 않은 장애 조치를 시작합니다. 보조 클러스터는 기본 클러스터(선호하는 클러스터)로 전환되어 클라이언트 서비스를 시작합니다. 장애 감지 및 장애 조치 처리는 ONTAP Mediator의 지원을 통해서만 수행할 수 있습니다.
 
 
 NOTE: 예기치 않은 자동 장애 조치 후에는 I/O 경로 손실을 방지하기 위해 호스트 경로를 다시 스캔하는 것이 중요합니다.
@@ -24,7 +24,7 @@ NOTE: 예기치 않은 자동 장애 조치 후에는 I/O 경로 손실을 방�
 [[reestablish-the-protection-relationship-after-an-unplanned-failover]]
 == 계획되지 않은 페일오버 후에 보호 관계를 다시 설정합니다
 
-System Manager 또는 ONTAP CLI를 사용하여 보호 관계를 다시 설정할 수 있습니다.
+예를 들어 클러스터 A와 같은 원래 기본 클러스터가 복구되면 SnapMirror 활성 동기화는 자동으로 역방향으로 보호 기능을 설정합니다. 클러스터 A를 기본 클러스터로 복원하려면 System Manager 또는 ONTAP CLI를 사용하여 계획된 페일오버 작업을 시작하여 수동 페일백을 수행할 수 있습니다.
 
 [role="tabbed-block"]
 ====
@@ -35,7 +35,7 @@ System Manager 또는 ONTAP CLI를 사용하여 보호 관계를 다시 설정�
 IMPORTANT: ONTAP 9.8부터 ONTAP 9.14.1까지 SnapMirror 활성 동기화는 SnapMirror Business Continuity(SM-BC)로 지칭됩니다.
 
 . *보호 > 관계*로 이동하여 관계 상태가 "동기화되지 않음"으로 표시될 때까지 기다립니다.
-. 원래 소스 클러스터에서 작업을 재개하려면 를 image:icon_kabob.gif["메뉴 옵션 아이콘"] 클릭하고 * Failover * 를 선택합니다.
+. 원래 소스 클러스터에서 페일백을 수행하고 작업을 재개하려면 image:icon_kabob.gif["메뉴 옵션 아이콘"]을 클릭하고 *페일오버*를 선택하십시오.
 
 
 --
@@ -57,6 +57,25 @@ Primary Data Cluster: cluster-2
 Last Progress Update: -
        Failover Type: unplanned
   Error Reason codes: -
+....
+원래 기본 클러스터에서  `snapmirror show` 명령을 사용하여 역방향 보호 관계의 상태를 모니터링할 수 있습니다.
+
+예를 들면 다음과 같습니다.
+
+....
+ClusterA::> snapmirror show
+                                                                               Progress
+Source             Destination  Mirror        Relationship   Total             Last
+Path         Type  Path         State         Status         Progress  Healthy Updated
+-----------  ----  ------------ -------       -------------- --------- ------- --------
+vs3:/cg/dcg3 XDP   vs1:/cg/scg3 Snapmirrored  InSync          -         true    -
+....
+ `snapmirror failover start` 명령을 사용하여 원래 기본 클러스터로 페일백을 수행할 수 있습니다.
+
+예를 들면 다음과 같습니다.
+
+....
+ClusterA::> snapmirror failover start -destination-path vs1:/cg/scg3
 ....
 을 참조하십시오 link:https://docs.netapp.com/us-en/ontap-ems-9131/smbc-aufo-events.html["EMS 참조"^] 이벤트 메시지 및 수정 조치에 대해 알아보십시오.
 

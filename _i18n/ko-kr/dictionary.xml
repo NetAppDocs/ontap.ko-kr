@@ -8694,7 +8694,6 @@
   <block id="80a2163b6aefb3e021408ad62ea9fe0f" category="doc">볼륨 이동 참조 스냅샷 복사본이 최신 로 표시됩니다</block>
   <block id="d01628661a693bb37786b266c28d2e8e" category="paragraph">'스냅샷 표시-필드 최신-스냅샷 상태-확장'을 선택합니다</block>
   <block id="d4a68dacda54b82a13ab610248ab8b41" category="paragraph">수동으로 '스냅샷 미러 재동기화'를 수행하거나 볼륨 이동 작업이 완료된 후 다음 자동 재동기화 작업을 기다리십시오.</block>
-  <block id="d3c31439fb2c02db160ec2cf0fd83dc5" category="summary">자동 비계획 장애 조치(AUFO) 작업은 운영 클러스터가 다운되거나 격리될 때 발생합니다. 이 경우 보조 클러스터가 운영 클러스터로 변환되어 클라이언트 서비스가 시작됩니다.</block>
   <block id="aecb526721c5811e8b940ed95c7e8b18" category="doc">주요 개념</block>
   <block id="8fb293fea12c99804749bfab1c09f465" category="list-text">호스트 재검색을 수행하여 LUN 인벤토리를 업데이트합니다.</block>
   <block id="4810d9e2d949fbb06ce658095e98bc61" category="list-text">ONTAP 9.10.1부터 SnapMirror 관계를 삭제해도 일관성 그룹은 삭제되지 않습니다. 일관성 그룹을 삭제하려면 시스템 관리자 또는 ONTAP REST API를 사용해야 합니다. 을 참조하십시오 <block ref="e483780f8fdafa606750bab2af5f046d" category="inline-xref-macro-rx"></block> 를 참조하십시오.</block>
@@ -27905,7 +27904,6 @@ clustered ONTAP 스토리지 시스템을 활용할 수 있습니다.</block>
   <block id="3cf9d21ec461a1f2bfbf40c1cf7e095d" category="paragraph"><block ref="d1c4839c4e497964e10d0eebfe613132" prefix="" category="inline-code"></block></block>
   <block id="c5a23389a9330cd1660ee78ce4cb1291" category="doc">예기치 않은 자동 페일오버 작업에서 복구합니다</block>
   <block id="3e1793747e6eaaf4132b7f17315ba4c3" category="section-title">계획되지 않은 페일오버 후에 보호 관계를 다시 설정합니다</block>
-  <block id="f6f6925ddb2094f3a5df8486eb3c651c" category="paragraph">System Manager 또는 ONTAP CLI를 사용하여 보호 관계를 다시 설정할 수 있습니다.</block>
   <block id="b9814648b88f1fa5376e728362eb4172" category="paragraph">를 사용하여 자동 비계획 페일오버 상태를 모니터링할 수 있습니다<block ref="89b1a411b9945c3e22fdcbde1e8cdf6c" prefix=" " category="inline-code"></block> 명령.</block>
   <block id="fa550f69df3ae28230a6a22ca3f7ff73" category="section-title">페일오버 후 팬아웃 구성에서 보호를 재개합니다</block>
   <block id="3c251edba2cc4602e8db87d4eb9713dd" category="list-text">관계 재동기화:<block ref="49fb7d5f38808fdd46075cc959a63f19" prefix=" " category="inline-code"></block></block>
@@ -33506,7 +33504,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="7b51cee3056e1a6e1e46246c7efbb73a" category="list-text">Snapshot Policies * 를 찾아 선택합니다 <block ref="3bd97179928ca34721f5824ef7a7a5c9" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="02ff99a313218c90c07296d77a1c631b" category="list-text">볼륨을 추가할 SnapMirror 구성을 찾습니다. 를 선택한 다음 **확장** 을 선택합니다 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block> .</block>
   <block id="f42cd57e1e9a4bed23e53e3a27ab1c79" category="list-text">보호 &gt; 관계 * 에서 일관성 그룹에서 SnapMirror 활성 동기화 관계를 찾습니다. <block ref="2e4fa1d5403170da7db51a75f20a53a5" category="inline-image-macro-rx" type="image"></block>를 선택한 다음 * Delete * 를 선택하여 SnapMirror 활성 동기화 관계를 제거합니다.</block>
-  <block id="998436a58556aa3ccb14aecbae01929e" category="list-text">원래 소스 클러스터에서 작업을 재개하려면 를 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block> 클릭하고 * Failover * 를 선택합니다.</block>
   <block id="7d72052f64d7bd3b8ae9706a16c3593b" category="inline-link-macro">클러스터 시간 관리(클러스터 관리자만 해당)</block>
   <block id="d8489f78601e5bafe3f4cb8bbee14ec8" category="paragraph">사이트에서 NTP(Network Time Protocol) 서버를 설정해야 합니다. ONTAP 9.5부터 대칭 인증을 사용하여 NTP 서버를 설정할 수 있습니다. 자세한 내용은 의 설명서를 <block ref="4e9a90496e53f8f2ec62372afd665829" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="53ba109696904e39d483624646b75c6a" category="list-text">RSH 명령에는 고급 권한이 필요합니다.</block>
@@ -45336,7 +45333,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a2fd1cb1b92ddc9c9b02d483472dc226" category="admonition">일부 노드만 되돌렸지만 모든 노드를 되돌린 경우 클러스터를 소스 릴리스로 업그레이드하지 마세요.</block>
   <block id="f5b7ad3b857af41eec374957c177b5cf" category="list-text">MetroCluster 호환이지만 MetroCluster 검증을 받지 않은 스위치를 사용하는 MetroCluster IP 시스템에서 ONTAP 9.7에서 9.6으로 복귀하면 ONTAP 9.6 및 이전 버전을 사용하는 시스템에 대한 지원이 없으므로 중단이 발생합니다.</block>
   <block id="b408b3dc571bcdaa4dd089c047bc3d38" category="paragraph">SVM 루트 볼륨 암호화를 지원하지 않는 ONTAP 버전으로 되돌리려고 하면 시스템은 경고를 표시하고 되돌리기를 차단합니다.</block>
-  <block id="2e3f0fba0ff6b32abc16d7f2fc3ca6ac" category="paragraph">자동 비계획 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. ONTAP Mediator는 장애 조치가 발생할 때 이를 감지하고 보조 클러스터에 대한 자동적인 계획되지 않은 장애 조치를 실행합니다.  이 작업은 ONTAP Mediator의 도움을 받아서만 수행됩니다. 보조 클러스터는 기본 클러스터로 전환되어 클라이언트 서비스를 시작합니다. 이 작업은 ONTAP 중재자의 지원을 받아야만 수행됩니다.</block>
   <block id="0952e29d1bbf2f905cfab7aafd7c0b3b" category="inline-link-macro">pNFS용 네트워크 인터페이스 연결</block>
   <block id="e8a0f7824f71ae02582a324d633313b8" category="list-text"><block ref="e8a0f7824f71ae02582a324d633313b8" category="inline-link-macro-rx"></block></block>
   <block id="41d9b5d5bb9c791118b5bec44830b2b4" category="paragraph">기본적으로 pNFS는 SVM에 있는 모든 데이터 LIF가 NFS 클라이언트의 인터페이스로 라우팅 가능해야 합니다. 왜냐하면 pNFS 장치 목록에는 SVM에 있는 모든 데이터 LIF가 포함되기 때문입니다. 결과적으로 라우팅 불가능한 데이터 LIF가 선택될 수 있으며, 이는 서비스 중단 상황을 초래할 수 있습니다. 모범 사례로, pNFS를 사용할 때만 라우팅 가능한 데이터 LIF를 구성하십시오.</block>
@@ -49209,4 +49205,10 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="283624dcdc29bc04aa328e98008d6f44" category="paragraph">ONTAP One에는 사용 가능한 모든 라이선스 기능이 포함되어 있습니다. 이는 기존의 Core 번들, Data Protection 번들, Security and Compliance 번들, Hybrid Cloud 번들, Encryption 번들의 콘텐츠를 모두 통합한 것입니다. 암호화 기능은 제한된 국가에서는 사용할 수 없습니다.</block>
   <block id="2adcaf6c813214093f6ca4dea279b1e0" category="list-text"><block ref="f11fcf005a7ded5de6d0c7f54bf2119a" prefix=" " category="inline-code"></block> 값은 <block ref="203574655dae053fd4896f836f6a89ca" prefix=" " category="inline-code"></block> 값보다 작아야 합니다. 더 높은 값으로 설정하면 파일 접근이 지연되거나 결국 시간 초과될 수 있습니다. 이를 방지하려면 <block ref="f11fcf005a7ded5de6d0c7f54bf2119a" prefix=" " category="inline-code"></block>을 <block ref="203574655dae053fd4896f836f6a89ca" prefix=" " category="inline-code"></block> 값보다 5초 짧게 구성하십시오. <block ref="f11fcf005a7ded5de6d0c7f54bf2119a" prefix=" " category="inline-code"></block> 설정 변경 방법에 대한 지침은 스캔 엔진 공급업체의 설명서를 참조하십시오. <block ref="c61d24d801d3a54a3a191b1dc755fa65" prefix=" " category="inline-code"></block>은 고급 모드에서 다음 명령을 사용하고 <block ref="35864bfa38d1ae8eb74cdcbfbc2f28fe" prefix=" " category="inline-code"></block> 매개변수에 적절한 값을 입력하여 변경할 수 있습니다: <block ref="5571bc175542a1cd92402dd4667c7086" prefix=" " category="inline-code"></block>.</block>
   <block id="4c9c1a486f27c40404ddd07fdad8fe6a" category="list-text">FlexCache 볼륨 이름은 197자 이하여야 합니다.</block>
+  <block id="afc99716304bff6f6639d3b262bce508" category="summary">자동 예기치 않은 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. SnapMirror active sync는 이러한 오류를 감지하고 보조 클러스터로 자동 예기치 않은 장애 조치를 시작합니다. 보조 클러스터는 기본 클러스터로 전환되어 클라이언트에 서비스를 제공하기 시작합니다.</block>
+  <block id="867840e2c22eabb25431741747f71fbf" category="paragraph">자동 예기치 않은 장애 조치(AUFO) 작업은 기본 클러스터가 다운되거나 격리될 때 발생합니다. SnapMirror 액티브 싱크는 이러한 오류를 감지하고 보조 클러스터로 자동 예기치 않은 장애 조치를 시작합니다. 보조 클러스터는 기본 클러스터(선호하는 클러스터)로 전환되어 클라이언트 서비스를 시작합니다. 장애 감지 및 장애 조치 처리는 ONTAP Mediator의 지원을 통해서만 수행할 수 있습니다.</block>
+  <block id="f8d8544874cd4c4e0b2c120a44ec2851" category="paragraph">예를 들어 클러스터 A와 같은 원래 기본 클러스터가 복구되면 SnapMirror 활성 동기화는 자동으로 역방향으로 보호 기능을 설정합니다. 클러스터 A를 기본 클러스터로 복원하려면 System Manager 또는 ONTAP CLI를 사용하여 계획된 페일오버 작업을 시작하여 수동 페일백을 수행할 수 있습니다.</block>
+  <block id="ca4a29f07e5233b1248bcc0715714393" category="list-text">원래 소스 클러스터에서 페일백을 수행하고 작업을 재개하려면 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을 클릭하고 *페일오버*를 선택하십시오.</block>
+  <block id="aeb8b243bd3e5f25e59b007bfc2b6877" category="paragraph">원래 기본 클러스터에서 <block ref="8511c2f3ef6c5e8c42a150c01bd8495c" prefix=" " category="inline-code"></block> 명령을 사용하여 역방향 보호 관계의 상태를 모니터링할 수 있습니다.</block>
+  <block id="07adf7ed14155f33ef9b2ae41a070b12" category="paragraph"><block ref="14d30280111212a70deb032d40f55925" prefix=" " category="inline-code"></block> 명령을 사용하여 원래 기본 클러스터로 페일백을 수행할 수 있습니다.</block>
 </blocks>
