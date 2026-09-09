@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-* ONTAP Mediator 1.12 이상 버전을 설치하거나 업그레이드할 때 iSCSI 및 HTTPS를 모두 지원하는 ONTAP Mediator를 설치할지, 아니면 HTTPS만 지원하는 ONTAP Mediator를 설치할지 선택할 수 있습니다. HTTPS만 지원하는 ONTAP Mediator를 설치하도록 선택하면 SCST 패키지는 설치되지 않습니다.
+* ONTAP 9.19.1 및 ONTAP Mediator 1.12 버전부터는 iSCSI 및 HTTPS 지원 또는 HTTPS만 지원하는 ONTAP Mediator 설치 옵션을 선택할 수 있습니다. HTTPS만 지원하는 ONTAP Mediator를 설치하는 경우 SCST 패키지는 설치되지 않습니다.
 * SCST가 설치된 ONTAP Mediator 1.11 이하 버전에서 업그레이드할 때 HTTPS 전용 옵션을 선택하면 SCST 패키지가 제거되고 새 ONTAP Mediator 버전에는 SCST 패키지가 포함되지 않습니다.
 * ONTAP Mediator를 사용하여 여러 MetroCluster IP 구성을 모니터링하려는 경우 지원 여부는 Mediator 유형, ONTAP 버전 및 운영 체제에 따라 다릅니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#mediator-multiple-mccip["ONTAP Mediator를 사용하여 여러 MetroCluster IP 구성을 모니터링합니다"^]을 참조하십시오.
 * HTTPS만 지원하는 ONTAP Mediator 설치는 다음과 같은 사용 사례에 한해 지원됩니다.

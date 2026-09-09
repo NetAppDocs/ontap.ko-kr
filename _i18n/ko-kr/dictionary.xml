@@ -4067,7 +4067,6 @@
   <block id="b414fc52814b38c5d36d9fd3697e085a" category="list-text">AbortMultipartUpload 를 클릭합니다</block>
   <block id="aa4ee3f8c2fb5dabe1ea532e7382121b" category="list-text">CompleteMultipartUpload를 클릭합니다</block>
   <block id="8e6d3ba461bc713f4b2b4fcc42726627" category="list-text">CreateMultptUpload 를 클릭합니다</block>
-  <block id="0dc5f8821c1cadd52725c6388719b350" category="list-text">ListMultipartUpload 를 클릭합니다</block>
   <block id="19bd13f6db981b3981bac4a709b23c72" category="section-title">그룹 정책</block>
   <block id="62bb808f13a8de2ca98004719d7f13ec" category="paragraph">이러한 작업은 S3에 한정되지 않으며 일반적으로 IAM(Identity and Management) 프로세스와 연결됩니다. ONTAP는 이러한 명령을 지원하지만 IAM REST API는 사용하지 않습니다.</block>
   <block id="dc34af9dab91ee63dc5061320d408072" category="list-text">정책을 생성합니다</block>
@@ -46991,7 +46990,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="28216fa2878101d24775477bde33fd6a" category="list-text">이전 ONTAP 릴리스: 최대 255개의 클러스터 피어가 지원됩니다.</block>
   <block id="fa823ae2ebe162d7679db67051dbcec5" category="cell">클러스터 피어링</block>
   <block id="944b7240322e7c0f7649b2a2625cb88d" category="cell">지원되는 클러스터 피어 제한을 255개에서 400개로 늘려 클러스터 피어 관계가 많은 환경의 확장성을 향상시켰습니다.</block>
-  <block id="48ae74d62968ed8720d29d719f63343e" category="list-text">ONTAP Mediator 1.12 이상 버전을 설치하거나 업그레이드할 때 iSCSI 및 HTTPS를 모두 지원하는 ONTAP Mediator를 설치할지, 아니면 HTTPS만 지원하는 ONTAP Mediator를 설치할지 선택할 수 있습니다. HTTPS만 지원하는 ONTAP Mediator를 설치하도록 선택하면 SCST 패키지는 설치되지 않습니다.</block>
   <block id="0575e131726193c75dc0eb99beb88ea3" category="list-text">SCST가 설치된 ONTAP Mediator 1.11 이하 버전에서 업그레이드할 때 HTTPS 전용 옵션을 선택하면 SCST 패키지가 제거되고 새 ONTAP Mediator 버전에는 SCST 패키지가 포함되지 않습니다.</block>
   <block id="b9fc3e6281faea5f565f838d0ad8ac27" category="list-text">HTTPS만 지원하는 ONTAP Mediator 설치는 다음과 같은 사용 사례에 한해 지원됩니다.</block>
   <block id="22ebf50baa22eca107164392e48fabe5" category="list-text">ONTAP Mediator를 SnapMirror 액티브 동기화 클러스터 모니터링에만 사용할 계획입니다.</block>
@@ -47022,7 +47020,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="27352c146c5270e9116f5a19f4d403bc" category="paragraph">ONTAP Mediator를 업그레이드하거나 설치하기 전에 다음 정보를 검토하십시오.</block>
   <block id="f4fd85713eb15780db93bc86078dd5ef" category="list-text">SCST 패키지가 포함된 새로운 ONTAP Mediator 버전으로 업그레이드할 경우, 설치 프로그램은 더 높은 버전이 없는 한 권장 SCST 버전으로 자동 업그레이드합니다. 더 높은 SCST 버전을 수동으로 설치하는 방법에 대한 지침은 <block ref="a8383ce744dc1bf288cb215bbe5f3cdb" category="inline-link-macro-rx"></block>을 참조하십시오. 지원되는 버전은 <block ref="58024d60f7a8b223d4f2c1e07e2f8033" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="aee8b11880bbfda9a19f6b5c0201bb10" category="section-title">ONTAP Mediator의 HTTPS 및 iSCSI 설치 옵션</block>
-  <block id="c16d2b8cfb36a2f029054699c85539a8" category="list-text">ONTAP Mediator에서는 SCST 패키지를 사용하여 MetroCluster IP 구성에서 통신을 위한 iSCSI를 제공합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. ONTAP Mediator 1.12부터는 iSCSI 대신 HTTPS를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다.</block>
   <block id="69cecc7a15b3f657e822c87c8fad2241" category="section-title">방화벽 및 네트워킹 요구 사항</block>
   <block id="671e00f956495c99ae5aae5896e8542a" category="paragraph">ONTAP Mediator는 특정 서비스와 통신하기 위해 여러 포트를 사용합니다.</block>
   <block id="861ef6676813cbc81369ee701ae73269" category="list-text">타사 방화벽을 사용 중인 경우:</block>
@@ -47050,7 +47047,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9e5f52fbf54a88f3546daad7843dad0a" category="paragraph">ONTAP Mediator는 MetroCluster IP 구성에서 통신을 위해 iSCSI를 제공하기 위해 SCST를 사용합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. 커널 업데이트 후 SCST를 다시 설치해야 할 수 있습니다. 또는 ONTAP Mediator를 제거한 다음 다시 설치하고 ONTAP 관계를 재구성합니다. SCST에 대한 자세한 내용은 <block ref="6c6c0b982087c71ca9a00a75bd9ab966" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
   <block id="34e5e47f5c7b2affb68fc3b25008aa3a" category="admonition">서버 OS 커널 업데이트는 ONTAP의 유지보수 윈도우와 조정해야 합니다.</block>
   <block id="0d99e45d04eeac38e25baf7e6e2d48b9" category="section-title">HTTPS 및 iSCSI 지원</block>
-  <block id="4632a10c0d2aab80061d1edbdc0dc26b" category="paragraph">ONTAP Mediator 1.12부터 HTTPS 또는 iSCSI를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다. iSCSI와 HTTPS를 모두 지원하거나 HTTPS만 지원하도록 ONTAP Mediator를 설치할 수 있습니다. ONTAP Mediator를 HTTPS만 지원하도록 설치하는 경우 SCST 패키지는 설치되지 않습니다. 자세한 내용은 <block ref="c1766aa5c48d52f9cdf010ccaac3e9da" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
   <block id="33ddec60e94a5b1e351c678518710bc0" category="doc">호스트 운영 체제를 업그레이드하고 ONTAP Mediator를 다시 설치하거나 업그레이드하십시오.</block>
   <block id="ffce34b1ff0e0f672d07e29eaf72f284" category="paragraph">SCST가 설치된 ONTAP Mediator의 호스트 OS를 최신 버전으로 업그레이드하려면 ONTAP Mediator를 제거해야 합니다. OS 업그레이드 후 현재 버전의 ONTAP Mediator를 다시 설치하거나 최신 버전으로 업그레이드할 수 있습니다.</block>
   <block id="fa24f39a798f2dffd1d52ae6d6771a7a" category="list-text">이 작업은 SCST가 설치된 ONTAP Mediator 버전에 적용됩니다. HTTPS만 지원하는 ONTAP Mediator 1.12 이상을 설치한 경우 SCST 패키지가 설치되지 않으므로 ONTAP Mediator에 영향을 주지 않고 호스트 OS를 업그레이드할 수 있습니다. OS 업그레이드 지침은 호스트 OS 공급업체의 설명서를 참조하십시오. 호스트 OS를 업그레이드한 후 ONTAP Mediator 버전을 업그레이드해야 하는 경우 <block ref="7bbc278d4f7076df8bbc2b54bf8e89a2" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
@@ -47061,7 +47057,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1a1727a6918fd3fa55075b30a8c19c43" category="list-text">Rocky Linux 10.2, 9.8 및 8.10을 지원합니다.</block>
   <block id="6082f1d9d6234f1a22ac348bcaf40bfc" category="list-text">rhck 및 uek 커널을 모두 사용하는 Oracle Linux 10.1 및 9.7 지원.</block>
   <block id="f891556a6688c140ff5a993b15949efd" category="inline-link-macro">ONTAP Mediator의 HTTPS 및 iSCSI 설치 옵션에 대해 자세히 알아보십시오</block>
-  <block id="d3e728a574a71b225f333ebfcd59c500" category="list-text">MetroCluster IP 구성에서 통신에 HTTPS를 사용하는 ONTAP Mediator 구성을 지원합니다. HTTPS는 SSL/TLS를 사용하여 전체 세션을 암호화함으로써 보안을 강화합니다. HTTPS 프로토콜만 사용하는 ONTAP Mediator를 설치하도록 선택할 수 있습니다. 이 설치 방법을 사용하는 경우 SCST 패키지는 설치되지 않습니다. <block ref="a64233a3f11178c79e178332c809edd1" category="inline-link-macro-rx"></block>.</block>
   <block id="098e6488f292a2a967f044215af1d052" category="list-text">RHEL 10.1, 10.0, 9.7, 9.6, 9.4 및 8.10 지원.</block>
   <block id="684a4237791e6b7accb3359916149a47" category="list-text">rhck 및 uek 커널을 모두 사용하는 Oracle Linux 10.0 및 9.6 지원.</block>
   <block id="91c808163778b1252a5964a6166084bb" category="list-text">RHEL 10.0, 9.6, 9.4 및 8.10을 지원합니다.</block>
@@ -49211,4 +49206,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ca4a29f07e5233b1248bcc0715714393" category="list-text">원래 소스 클러스터에서 페일백을 수행하고 작업을 재개하려면 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을 클릭하고 *페일오버*를 선택하십시오.</block>
   <block id="aeb8b243bd3e5f25e59b007bfc2b6877" category="paragraph">원래 기본 클러스터에서 <block ref="8511c2f3ef6c5e8c42a150c01bd8495c" prefix=" " category="inline-code"></block> 명령을 사용하여 역방향 보호 관계의 상태를 모니터링할 수 있습니다.</block>
   <block id="07adf7ed14155f33ef9b2ae41a070b12" category="paragraph"><block ref="14d30280111212a70deb032d40f55925" prefix=" " category="inline-code"></block> 명령을 사용하여 원래 기본 클러스터로 페일백을 수행할 수 있습니다.</block>
+  <block id="cbfd7219fd814c56c9349bea1cd0273f" category="list-text">ONTAP 9.19.1 및 ONTAP Mediator 1.12 버전부터는 iSCSI 및 HTTPS 지원 또는 HTTPS만 지원하는 ONTAP Mediator 설치 옵션을 선택할 수 있습니다. HTTPS만 지원하는 ONTAP Mediator를 설치하는 경우 SCST 패키지는 설치되지 않습니다.</block>
+  <block id="2a08bdb6aadd6253c98572c1f40dd895" category="list-text">ONTAP Mediator에서는 SCST 패키지를 사용하여 MetroCluster IP 구성에서 iSCSI 통신을 제공합니다. SCST 패키지는 설치 중에 컴파일되는 커널 모듈입니다. ONTAP 9.19.1 및 ONTAP Mediator 1.12 버전부터는 iSCSI 대신 HTTPS를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다.</block>
+  <block id="f193834bd92e229bc0f4dabb3e14b64b" category="inline-link-macro">ONTAP Mediator를 MetroCluster IP 구성에 맞게 구성합니다</block>
+  <block id="442f5e4b297f07b28616114b4feb3d50" category="admonition">HTTPS로 구성된 ONTAP Mediator를 사용하는 SnapMirror Business Continuity(SM-BC) 클러스터 및 MetroCluster IP 구성의 경우 <block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> 및 <block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> 인증서를 ONTAP 클러스터에 추가해야 합니다. <block ref="397e1771aa14c22b065d69f360cf6a4a" category="inline-link-macro-rx"></block> 및 <block ref="17fdc58adf7488af5cac0a397597b31a" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="45de01b9cf9ce0fc6a0ddb2dd8f0cbab" category="paragraph">ONTAP 9.19.1 및 ONTAP Mediator 1.12 버전부터 HTTPS 또는 iSCSI를 사용하여 MetroCluster IP 구성을 모니터링하는 ONTAP Mediator를 구성할 수 있습니다. ONTAP Mediator를 iSCSI와 HTTPS를 모두 지원하도록 설치하거나 HTTPS만 지원하도록 설치할 수 있습니다. ONTAP Mediator를 HTTPS만 지원하도록 설치하는 경우 SCST 패키지는 설치되지 않습니다. 자세한 내용은 <block ref="c1766aa5c48d52f9cdf010ccaac3e9da" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="b2499cbb3cd1ebfa98398970fe74ecaf" category="list-text">ONTAP 9.19.1 및 ONTAP Mediator 1.12 버전부터 MetroCluster IP 구성에서 HTTPS를 사용하여 통신하는 ONTAP Mediator를 구성할 수 있습니다. HTTPS는 SSL/TLS를 사용하여 전체 세션을 암호화함으로써 보안을 강화합니다. HTTPS만 지원하도록 ONTAP Mediator를 설치할 수도 있습니다. 이 설치 방법을 사용하는 경우 SCST 패키지는 설치되지 않습니다. <block ref="a64233a3f11178c79e178332c809edd1" category="inline-link-macro-rx"></block>.</block>
+  <block id="ce0147152f43c0c7be5963e1fa6cac57" category="paragraph">ListMultipartUploads</block>
 </blocks>

@@ -91,7 +91,7 @@ NOTE: S3 NAS 버킷의 멀티파트 객체는 부분 크기가 아닌 정수 크
 +
 ONTAP 9.17.1부터 CreateMultipartUpload는 태그 지정과 사용자 메타데이터 키/값 쌍을 지원합니다.
 
-* ListMultipartUpload 를 클릭합니다
+* ListMultipartUploads
 * 업로드 파트
 
 

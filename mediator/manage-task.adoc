@@ -370,7 +370,7 @@ PKI 기관은 요청을 검증하고 서명합니다. `.csr` , 인증서 생성 
 
 +
 
-NOTE: SnapMirror Business Continuity(SM-BC) 클러스터의 경우 다음을 추가해야 합니다. `intermediate.crt` 그리고 `root_ca.crt` ONTAP 클러스터에 대한 인증서. 보다link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] .
+NOTE: HTTPS로 구성된 ONTAP Mediator를 사용하는 SnapMirror Business Continuity(SM-BC) 클러스터 및 MetroCluster IP 구성의 경우  `intermediate.crt` 및  `root_ca.crt` 인증서를 ONTAP 클러스터에 추가해야 합니다. link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] 및 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["ONTAP Mediator를 MetroCluster IP 구성에 맞게 구성합니다"^]를 참조하십시오.
 
 
 
@@ -719,7 +719,7 @@ NOTE: 절차의 앞부분에 있는 PKI 기관으로부터 및 인증서를 받�
 *** 그만큼 `ssl_ca_certs` 값은 경로입니다 `root_ca.crt` 파일.
 +
 
-NOTE: SnapMirror Business Continuity(SM-BC) 클러스터의 경우 다음을 추가해야 합니다. `intermediate.crt` 그리고 `root_ca.crt` ONTAP 클러스터에 대한 인증서. 보다link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] .
+NOTE: HTTPS로 구성된 ONTAP Mediator를 사용하는 SnapMirror Business Continuity(SM-BC) 클러스터 및 MetroCluster IP 구성의 경우  `intermediate.crt` 및  `root_ca.crt` 인증서를 ONTAP 클러스터에 추가해야 합니다. link:../snapmirror-active-sync/mediator-install-task.html["SnapMirror Active Sync를 위한 ONTAP Mediator 및 클러스터 구성"] 및 link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_configuring_the_ontap_mediator_service_from_a_metrocluster_ip_configuration.html["ONTAP Mediator를 MetroCluster IP 구성에 맞게 구성합니다"^]를 참조하십시오.
 
 
 

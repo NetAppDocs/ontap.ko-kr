@@ -314,7 +314,7 @@ ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원�
 
 
  a| 
-ListMultipartUpload 를 클릭합니다
+ListMultipartUploads
 
 ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.
 
