@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cloud retrieval, controls, volume, default, tiering policy 
 summary: ONTAP 9.8에서 도입된 -cloud-retrieval-policy 옵션을 사용하여 볼륨의 클라우드 검색 정책을 변경할 수 있습니다. 
 ---
-= 볼륨의 클라우드 검색 정책 수정
+= ONTAP 볼륨의 클라우드 검색 정책 수정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

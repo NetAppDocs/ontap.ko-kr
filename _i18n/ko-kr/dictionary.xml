@@ -9445,7 +9445,6 @@
   <block id="fcd6b25dd7664eeb5065b3a269c7658e" category="list-text">이 작업을 수행하려면 고급 권한 수준이 있어야 합니다.</block>
   <block id="b00f696b1f8c2d311e1b4349a9683368" category="list-text">계층화 정책의 동작을 클라우드 검색 정책으로 이해해야 합니다.</block>
   <block id="92b69979a297966d8e9137ae30b5e2b0" category="summary">이 비디오에서는 StorageGRID를 사용하여 ONTAP 버킷을 FabricPool Aggregate에 연결하는 방법에 대해 System Manager를 사용하는 방법에 대해 간략하게 설명합니다.</block>
-  <block id="23d929da45228f5af307f2b2dc08230e" category="doc">StorageGRID를 FabricPool 클라우드 계층으로 연결(비디오)</block>
   <block id="7204e361b95a1c0760a3bcf287c88822" category="inline-link">NetApp 비디오: StorageGRID Webscale을 FabricPool 외부 용량 계층으로 연결</block>
   <block id="211a17bbe02691866cd48fd71fdc1005" category="summary">ONTAP 9.8 이상을 실행 중인 경우 ONTAP S3를 FabricPool의 클라우드 계층으로 설정할 수 있습니다.</block>
   <block id="466490ba5631379f6e3daf4422e15cb5" category="paragraph">원격 클러스터에 연결된 LIF의 ONTAP S3 서버 이름과 IP 주소가 있어야 합니다.</block>
@@ -25249,7 +25248,6 @@
   <block id="3b9a968aab97532e3b295945339726b7" category="list-text">태그를 지정할 볼륨이 있는 스토리지 계층을 찾습니다.</block>
   <block id="3306a6b582474eeecb40acd7d6f8f747" category="list-text">태그를 지정할 볼륨을 찾고 * 개체 태그 * 열에서 * 태그를 입력하려면 클릭 * 을 선택합니다.</block>
   <block id="58d0f81f94aa86a1d59e9f5c9bb1160b" category="list-text">키와 값을 입력합니다.</block>
-  <block id="4bfc7681a384f18ceb696f83972181aa" category="doc">FabricPool 개요를 위해 오브젝트 저장소를 클라우드 계층으로 설정</block>
   <block id="42ca5bc6931babd7fdcde5fe3266c0b0" category="paragraph">ONTAP System Manager 또는 ONTAP CLI를 사용하여 ONTAP S3를 FabricPool용 클라우드 계층으로 설정할 수 있습니다.</block>
   <block id="5d92b1e26b92edeefe7f9eeaa7900f6c" category="list-text">스토리지 &gt; 계층 &gt; 클라우드 계층 추가 * 를 클릭하고 오브젝트 저장소 공급자로 ONTAP S3를 선택합니다.</block>
   <block id="99cf006cf83758b2b97f54fb168b18a4" category="doc">LUN을 생성하기 전에 알아야 할 사항</block>
@@ -27925,7 +27923,6 @@ clustered ONTAP 스토리지 시스템을 활용할 수 있습니다.</block>
   <block id="503477cb014834486f9c875c978780e0" category="paragraph"><block ref="503477cb014834486f9c875c978780e0" category="inline-link-macro-rx"></block></block>
   <block id="1ba04b8adc33d398853defc36d31be80" category="paragraph">계층화 검사가 실행되는 즉시 데이터가 클라우드 계층으로 이동하므로 계층화 최소 냉각 기간은 적용되지 않으며 설정을 수정할 수 없습니다.</block>
   <block id="6bb7bf8bb5f97cf30e9854da426a4497" category="summary">이 비디오에서는 System Manager를 사용하여 FabricPool를 통해 ONTAP 애그리게이트에 Amazon S3 버킷을 연결하는 방법에 대해 간략히 소개합니다.</block>
-  <block id="113384c7a5aea30cc0d3d9bba9ed0243" category="doc">Amazon S3를 FabricPool 클라우드 계층으로 연결(비디오)</block>
   <block id="63a44d89887c34dd1aff3740a56ccb0d" category="list-title">FabricPool에서 Amazon S3를 사용하기 위한 고려 사항</block>
   <block id="ce659beccd58a1249f1e9d57c79ad8f6" category="list-text">ONTAP에서 Amazon S3 오브젝트 서버에 연결하는 데 사용하는 LIF는 10Gbps 포트에 연결하는 것이 좋습니다.</block>
   <block id="dadfcb544685f764d5c2ac8e93b7edea" category="inline-link">Amazon Web Services 문서: Amazon S3 스토리지 클래스</block>
@@ -33799,7 +33796,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b9fb0faf5351444d6762d0eaba8332d5" category="list-text">* 현재: * 데이터는 항상 최신 상태입니다.</block>
   <block id="a4a4a4935393f9280b571a85eda7e70d" category="list-text">* Coherent : * 데이터가 올바르거나 손상되지 않았습니다.</block>
   <block id="767b456e10cff301a28be5c79c55bb69" category="summary">쓰기 저장 모드로 FlexCache를 배포하기 전에 이러한 소프트웨어, 라이센스 및 시스템 구성 요구 사항을 충족하는지 확인하십시오.</block>
-  <block id="0303a67663d6054e1420d2e2f3bb4a1e" category="list-text">오리진 *_MUST_ * 에서 ONTAP 9.15.1 이상을 실행하고 있습니다.</block>
   <block id="6a9d76b34f37805ea243abac643998f3" category="list-text">write-back 모드에서 작동해야 하는 캐싱 클러스터는 *_must_ * ONTAP 9.15.1 이상을 실행하고 있습니다.</block>
   <block id="b539d414e9e5d8d14239942d7b52bba4" category="paragraph">ONTAP 구매에 쓰기 작업 모드를 포함한 FlexCache가 포함됩니다. 추가 라이센스가 필요하지 않습니다.</block>
   <block id="5cc8ada79224d850ecd22fd22e550c47" category="section-title">피어링</block>
@@ -36245,8 +36241,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8e8e49ac816d7884c15aa4564e7e854d" category="doc">ONTAP FabricPool 미러를 생성합니다</block>
   <block id="1d862dd4ebe57229dacdb0476fff97bf" category="doc">비활성 데이터 보고를 통해 비활성 ONTAP 데이터를 분석</block>
   <block id="ec1fab0e915bf1ad863b9c18df45d45f" category="doc">ONTAP FabricPool 미러 세부 정보를 표시합니다</block>
-  <block id="33df1dd95d8b219ca44cd979febd8511" category="doc">FabricPool에서 ONTAP 볼륨을 활성화하여 적극적인 읽기-헤드를 수행할 수 있습니다</block>
-  <block id="e6e7c504384be503dc457a9f5430a8c5" category="doc">FabricPool의 ONTAP 볼륨을 통해 클라우드에 직접 쓸 수 있습니다</block>
   <block id="a1a5b1419016c899ee8206658634b838" category="doc">ONTAP FabricPool를 통한 데이터 계층화에 대해 알아보십시오</block>
   <block id="088996822ae45fe9f07a815c8d5f114b" category="doc">ONTAP S3용 클러스터에 CA 인증서를 설치합니다</block>
   <block id="18ccf9d51149f8271117acfeb023f695" category="doc">StorageGRID용 ONTAP 클러스터에 CA 인증서를 설치합니다</block>
@@ -36306,7 +36300,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8fb8ff058464c6e10e4b32313da25706" category="paragraph">쓰기 저장 모드로 FlexCache를 배포하기 전에 이러한 성능, 소프트웨어, 라이센스 및 시스템 구성 요구 사항을 충족하는지 확인하십시오.</block>
   <block id="b2d235f3dc23acbfc894802c4044bfcd" category="section-title">CPU 및 메모리</block>
   <block id="b3e57e35f4a2af6304089be17b141ccf" category="admonition">작업 부하에 크기가 작은 원본을 사용하면 다시 쓰기 가능 캐시 또는 오리진에서 성능에 큰 영향을 줄 수 있습니다.</block>
-  <block id="27786cfe6f5fa23a08b11c6f265d1f63" category="list-text">write-back 모드로 작동할 필요가 없는 캐싱 클러스터는 일반적으로 지원되는 모든 ONTAP 버전을 실행할 수 있습니다.</block>
   <block id="7eafb57b2a83a46be73583b9b005d558" category="doc">ONTAP FlexCache 후기입 사용 사례</block>
   <block id="359d9303e55cae1542b62bd57e7e7105" category="inline-link-macro">FlexCache write-back 지침</block>
   <block id="18e3c5fa46459340c5f548c203e93fe6" category="paragraph"><block ref="26c60c47066cd06c7b4f5f99aaad49c1" category="inline-link-macro-rx"></block>최대 파일 크기에 대한 최신 권장 사항은 페이지를 참조하십시오.</block>
@@ -37299,8 +37292,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="265b7c0eb31b2fbb34ad29c148afdc5e" category="paragraph">NVE를 사용하면 메타데이터와 데이터(스냅샷 포함)가 모두 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다. 외부 키 관리 서버 또는 온보드 키 관리자(OKM)는 노드에 키를 제공합니다.</block>
   <block id="a4696da3d5999e37b15e944795930001" category="paragraph">ONTAP 9.10.1부터 클라우드 호스팅 응용 프로그램에서 및 를 <block ref="4ef7b266bd9680469191a283388836d8" category="inline-link-macro-rx"></block>사용하여 ONTAP 암호화 키를 보호할 수 <block ref="9061d13c3fae693003c080b827f91c1c" category="inline-link-macro-rx"></block>있습니다. ONTAP 9.12.0부터, 로 NVE 키를 보호할 수도 <block ref="dcd2ad26b60dc4dfedd82803b27b2824" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="6c558fa1d73845e82ed38b94f65fed63" category="list-text">안전하게 제거할 파일이 기본 스냅샷에 있는 경우 다음을 수행합니다.</block>
-  <block id="858d7f518820c5a623d8e8c269e81d21" category="list-text">SnapMirror 비동기식 관계에서 대상 볼륨에 스냅샷을 생성합니다.</block>
-  <block id="260ca9c3603c36fa5b5926b0869c46b7" category="list-text">SnapMirror를 업데이트하여 기본 스냅샷을 앞으로 이동합니다.</block>
   <block id="542054d3b1799cbfebb133ba6162f9d9" category="list-text">기본 스냅샷 수에 1을 더한 것과 같은 (a) 및 (b)단계를 반복합니다.</block>
   <block id="d0e85d444afd947eb9515af85e07f5bf" category="paragraph">예를 들어 기본 스냅샷이 두 개 있는 경우 (a) 및 (b) 단계를 세 번 반복해야 합니다.</block>
   <block id="5bd42ce2d8701e5df0a5e18dfb400907" category="list-text">기본 스냅샷이 있는지 확인합니다. +<block ref="5997f38e5248d30be7189d9a06a50506" prefix=" " category="inline-code"></block></block>
@@ -41641,8 +41632,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="84bdd41dc3ee413308c35961ace10959" category="doc">ONTAP FabricPool 객체 삭제 및 조각 모음 사용자 지정</block>
   <block id="14d6c5d9870210b1117876a327bd7725" category="doc">로컬 ONTAP S3 버킷에 계층 데이터 추가</block>
   <block id="e071090f926b1554ba8084b642beead4" category="doc">MetroCluster 구성에서 ONTAP FabricPool에 대한 개체 저장소 설정</block>
-  <block id="8c2f87c3d7312fe4527337814b847e84" category="doc">ONTAP FabricPool 노드당 입력 속도에 대한 임계값 설정</block>
-  <block id="f351f5b2e2f9130b40ebeb9d21751108" category="doc">ONTAP FabricPool 구성 및 관리 작업에 대해 알아보세요.</block>
   <block id="966dc08e28d5fec45c3b38645b1a92ab" category="paragraph">1.9.1</block>
   <block id="427ed2152eb68669767965c6995623ff" category="list-text">다음을 사용하여 코드 서명 확인 건너뛰기에 대한 지원이 추가되었습니다. <block ref="88e57dba5ad35a846f8226c98dea04cb" prefix=" " category="inline-code"></block> 깃발.</block>
   <block id="8596764df0e564338852d76fd21ac3bb" category="inline-link-macro">보안 ipsec</block>
@@ -43723,30 +43712,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="56bb72ed0f8aa9d7aa9d3f5b3689615b" category="list-text"><block ref="7f036407d75c774176a7effbe959366b" prefix="" category="inline-code"></block></block>
   <block id="42348c07f83f7b8607ff0ae8a8b33fc8" category="list-text"><block ref="c2ca16d048ec66e04bca283eab048ec2" prefix="" category="inline-code"></block></block>
   <block id="5c0b634e14c7174b2b71404e9a09feaa" category="list-text"><block ref="4677fa3e5125be9b333b01e1625055e3" prefix="" category="inline-code"></block></block>
-  <block id="eda1f0988fed811adcdba6dac3957b0d" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.</block>
   <block id="ee9dca0db5b3d6849823b6c42841b402" category="list-text"><block ref="289c5faa6802e638231e7e6ff257d3a4" prefix="" category="inline-code"></block></block>
-  <block id="b6ac05535957316bab055fcc97e2086e" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="3698bf9492e47b9a9bd38d7f0139bfd8" category="cell">DeleteBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="d5f8072273b2d392376561a738498a3e" category="cell">DeleteBucketLifecycle ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="063ef7de84ecdd14b90821a9fde51429" category="cell">GetBucketAcl ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="a52e2554f7c71e541e1ac1a2cc969d7d" category="cell">GetBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
   <block id="dd22854b698364267f3f91a023123458" category="paragraph">*만료 작업만 지원됩니다.</block>
-  <block id="e5eb1abd8403671d3db3ff331918b84f" category="cell">GetBucketLocation ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="70628b46f85b2fbec35dd5b757a97b22" category="cell">GetBucketPolicy ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="262006f43dbc979cd95c29a9d901ba1b" category="cell">GetBucketVersioning ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="e00d4f9fa3ef13a09ca1f69f93757daa" category="cell">HeadBucket ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="11492a7bc090919f0bdaedd1328ad5b4" category="cell">ListAllMyBuckets ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="46240486306d852add5659f3936c26fd" category="cell">ListBuckets ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="86ce165766141c25630eaf49e0c508e8" category="cell">ListBucketVersions ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="afce8900e7237e09a3563482a5cc316b" category="cell">PutBucketCors ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="78acb561ce8dbf8da86ae2a408cdd815" category="cell">PutBucketLifecycleConfiguration ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
   <block id="d34652c3d938265c700ba6692221cda3" category="cell">ONTAP 9.13.1 * 만료 작업만 지원됩니다.</block>
-  <block id="fa3dc7e866c7b222400ba80b016a99d5" category="cell">PutBucketPolicy ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="ef7f455ca56386e94f6751d2898b5e1b" category="cell">PutBucketVersioning ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
   <block id="6ce0c22c678d3d0e5752a7b132a3a79e" category="paragraph">특정 작업에 대해 별도로 언급하지 않는 한 다음 URI 쿼리 매개변수가 지원됩니다.</block>
   <block id="74aa98b0946cd22611aacc74dd58af09" category="list-text"><block ref="770785793844f40549147a07c16f92c3" prefix="" category="inline-code"></block>( ONTAP 9.12.1부터 시작되는 개체 작업에 필요함)</block>
-  <block id="cae4a1b52d6fb597de929db7e03d2a7b" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 쿼리 매개변수도 지원합니다.<block ref="4abb4c638857edfc1b28fe74b6ff3a04" prefix=" " category="inline-code"></block></block>
-  <block id="3ce725afb3439ef83ef6f97f3b66f0e5" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 헤더도 지원합니다.</block>
   <block id="68fd67a0af208cc1304557c598790be0" category="list-text"><block ref="3eeb78c5c87061b2e5c55a3a6d5e604d" prefix="" category="inline-code"></block></block>
   <block id="8b9ebd803c28a0b2e1d8439dec69fcf2" category="list-text"><block ref="4365e9ee17ee5c685f8dee1c6233b442" prefix="" category="inline-code"></block></block>
   <block id="e17db0b4f2b9a7bb96eaabfe7a853af7" category="list-text"><block ref="a7a2fa70c9963d48fc7f7313b5c80d45" prefix="" category="inline-code"></block></block>
@@ -43764,8 +43734,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8ef9e8cd26f5425ee6fda85975caf70c" category="list-text"><block ref="88c27c7e2554eccfc8008d3d85e64de9" prefix="" category="inline-code"></block></block>
   <block id="48da187ee6d1494f3124c9d850d2a96a" category="list-text"><block ref="cfc36842a01da69c484ffdcc6782f437" prefix="" category="inline-code"></block></block>
   <block id="8aeea3a41cb7ddd8f0f58097b0f5c29e" category="list-text"><block ref="b29ddb1b7b625d2adb828d59291dc41b" prefix="" category="inline-code"></block></block>
-  <block id="5021a1f779a57e15ef205beaf4d2bee9" category="cell">DeleteObjects ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음 추가 헤더도 지원합니다.*<block ref="b29ddb1b7b625d2adb828d59291dc41b" prefix=" " category="inline-code"></block></block>
-  <block id="3d9902d80ad4fe7b9604f46f39dfcc37" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 쿼리 매개변수도 지원합니다.</block>
   <block id="02ba11266c3b3ee35e73416236226107" category="list-text"><block ref="53d4c44ace0646d844566ab628dd74ea" prefix="" category="inline-code"></block></block>
   <block id="0190d3fa3ee83b347329fa3315ef9435" category="list-text"><block ref="a2c9ae991e2712273bf4008e7ad87dfa" prefix="" category="inline-code"></block></block>
   <block id="2e3f249ca0cae4666559c49e2e7acc56" category="list-text"><block ref="18bcd13798978a68738bfb809da0104e" prefix="" category="inline-code"></block></block>
@@ -43774,13 +43742,8 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="64871a19a1a61b94a61f89e0a893d5dc" category="list-text"><block ref="76315ae5ccfdf619c9018333532bde68" prefix="" category="inline-code"></block></block>
   <block id="45f69810308d865eb0250c7e6a3d50cd" category="list-text"><block ref="24b788e909aba6e9965b72a08b22f772" prefix="" category="inline-code"></block></block>
   <block id="7af14cda3a8c00bdc27f4edb04565fa3" category="paragraph">그리고 이 추가 요청 헤더는 다음과 같습니다.</block>
-  <block id="77e6ed58c0e0bf865d9ccc07b268b216" category="cell">GetObjectAcl ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
   <block id="6baf9701e1ddfa15e136d2aeca0b884d" category="paragraph">GetObjectAttributes</block>
   <block id="681a7f11782b28396ad7c92429cd52e0" category="list-text"><block ref="11175943e09d1ab1e7177df2d2939143" prefix="" category="inline-code"></block></block>
-  <block id="25e402c73fc70b38125a7baac21cf416" category="cell">GetObjectRetention ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="0ac7f3ea54241ec55d22472b483e1727" category="cell">GetObjectTagging ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="5bfbffe4abee48d433330aa7b4e6fd70" category="cell">HeadObject ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="ebc787a84770890819ddb752a9ef969d" category="paragraph">ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원하며, 다음과 같은 추가 URI 매개변수도 지원합니다.</block>
   <block id="307915d3620928a54219790a2ed14734" category="list-text"><block ref="528d3a0db57c788c744aed5a2ee9f5c8" prefix="" category="inline-code"></block></block>
   <block id="99568649bc5e708c49a17e00f09cb1de" category="list-text"><block ref="0a07bb4f29bef5f6c8da3c04d18a2cfe" prefix="" category="inline-code"></block></block>
   <block id="6ba8b056b6dd2eab11748620dc05c402" category="list-text"><block ref="67394c945c45f45fa9b4343c474bd3d5" prefix="" category="inline-code"></block></block>
@@ -43796,11 +43759,8 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1ee6121fadc447fa2b458afb86260b7b" category="list-text"><block ref="9b5411ca377a730f8f02e238410abf04" prefix="" category="inline-code"></block></block>
   <block id="8cfd84297a9ce046c110c9bb1eff38e1" category="list-text"><block ref="911e8a0b612974c9d101b449e45d96d2" prefix="" category="inline-code"></block></block>
   <block id="4a418a7f43f620cc9874efdaa1b41250" category="list-text"><block ref="4abb4c638857edfc1b28fe74b6ff3a04" prefix="" category="inline-code"></block></block>
-  <block id="79e34d0e61770f8073a9286f0baec45f" category="cell">PutObjectLockConfiguration ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
-  <block id="0b4d6012fb2b0f933d863056a635d345" category="cell">PutObjectTagging ONTAP S3는 이 요청에 대한 모든 일반 매개변수와 헤더를 지원합니다.</block>
   <block id="6e7cbf78b8368c75aac07ce0f1e2c716" category="paragraph">그리고 다음과 같은 추가 요청 헤더가 있습니다.</block>
   <block id="7e0fd3a8933810375b5514c753a858f8" category="list-text"><block ref="2f60b798faf55af05c088961362ff4bb" prefix="" category="inline-code"></block></block>
-  <block id="88fcdb0914f7a592f6277d21a969b419" category="list-text">ONTAP S3는 이제 청크 업로드 서명 요청을 지원합니다.<block ref="1167795ccad7a99e88e8b7b6c4128a42" prefix=" " category="inline-code"></block></block>
   <block id="427b3ae82f7ebe5a6fc57aff84255608" category="paragraph">ONTAP 9.11.1부터 스토리지 관리자는 볼륨에 대한 권한을 부여하여 NFS 및 SMB 클라이언트가 비동기 삭제 작업을 수행할 수 있도록 할 수 있습니다.  클러스터에서 비동기 삭제가 활성화되면 Linux 클라이언트 사용자는 다음을 사용할 수 있습니다.<block ref="94d035945b3d82182669c4d3f6daa104" prefix=" " category="inline-code"></block> 명령 및 Windows 클라이언트 사용자는 다음을 사용할 수 있습니다.<block ref="d7fba04fc8e17bcfc603b318a85b762c" prefix=" " category="inline-code"></block> 기본적으로 .ontaptrashbin이라는 이름의 숨겨진 디렉토리로 이동하여 지정된 볼륨의 디렉토리를 삭제하는 명령입니다.</block>
   <block id="3908524ec5dbf1cb56e4427f7d8fc4b7" category="paragraph">디렉토리만 이동할 수 있습니다.  .ontaptrashbin 디렉토리로 파일을 이동할 수 없습니다.</block>
   <block id="1add511cf9ce8070d5b7e75c9c7475b5" category="list-text">볼륨의 마운트 지점에서 클라이언트 비동기 삭제를 활성화하고, 원하는 경우 휴지통 디렉토리에 대한 대체 이름을 제공합니다.</block>
@@ -48259,7 +48219,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="be1376ff9d05a0f1cfca8a7cbc06eb70" category="list-text"><block ref="e7f31f518110f3c17739edd51d047922" prefix=" " category="inline-code"></block> 매개변수는 기본적으로 비어 있는 목록을 허용합니다. <block ref="61c4ea0665eded0925f4c1c1b212936b" prefix=" " category="inline-code"></block>이 값으로 추가되면 LIF는 RoCE 오프로드를 지원하는 포트에서만 구성할 수 있으며, 이는 LIF 마이그레이션과 페일오버 모두에 영향을 미칩니다.</block>
   <block id="14940c554618efc24c58c4e107508496" category="list-text">소스 및 타겟 클러스터는 MetroCluster 구성의 일부가 될 수 없습니다.</block>
   <block id="55ddd46d69335cef9695e57d7ec3b218" category="summary">ONTAP 9.8에서 도입된 -cloud-retrieval-policy 옵션을 사용하여 볼륨의 클라우드 검색 정책을 변경할 수 있습니다.</block>
-  <block id="2951b12488cecc5509e1600f67cd8535" category="doc">볼륨의 클라우드 검색 정책 수정</block>
   <block id="438047a21893d3a40e291a6d8f396ff7" category="paragraph">FabricPool 클라우드 데이터 검색은 데이터가 로컬 계층에 다시 기록되는 시점을 결정하는 검색 정책에 의해 제어됩니다. 읽기 패턴은 순차적이거나 임의적일 수 있습니다.</block>
   <block id="3d223c316624319ab417417cd507e41b" category="paragraph">예를 들어, 'Auto' 볼륨 계층화 정책을 사용하는 경우, 콜드 블록이 순차적으로 읽히면 콜드 상태로 유지되어 클라우드 계층에 남아 있습니다. 대부분의 클라이언트 애플리케이션에서 이는 바람직한 동작이며, 바이러스 백신 및 분석 애플리케이션에서 흔히 발생하는 심층 파일 검사로 인해 콜드 데이터가 로컬 계층에 기록되는 것을 방지합니다.</block>
   <block id="b821a609f009db9fdfe64d202b04ec3b" category="inline-link-macro">기본 클라우드 검색</block>
@@ -49226,4 +49185,31 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="324af02eeb4236b07aa1d33e99f2dba8" category="cell">HA 트래픽</block>
   <block id="7ca9449a9a4cc9fa6e499b1686242135" category="cell">TLS 하드웨어 오프로드는 HA 트래픽에는 적용되지 않습니다.</block>
   <block id="d404291011eac4d076d928297923f6f1" category="admonition">AFX 플랫폼에서 TLS 하드웨어 오프로드는 TLS를 통한 NFS 및 S3 프런트엔드 트래픽 유형을 지원합니다. AFX는 SAN/블록 프로토콜을 지원하지 않으므로 NVMe/TCP는 AFX 플랫폼에서 지원되지 않습니다.</block>
+  <block id="81db8b6d66adeecfba5cac0cc069fd53" category="list-text">SnapMirror 비동기 관계의 소스 볼륨에 스냅샷을 생성합니다.</block>
+  <block id="16614702509f2dee7d51e1ddb45604eb" category="list-text">SnapMirror 관계를 업데이트하여 기본 스냅샷을 대상 위치로 이동합니다.</block>
+  <block id="f6e455b47e2524c8b2d53707df2b92a0" category="doc">ONTAP FabricPool 볼륨 아카이빙 비디오</block>
+  <block id="b80a6b09b7edfcc66c4cf12822e75396" category="doc">Amazon S3를 ONTAP FabricPool 클라우드 계층으로 사용하는 비디오</block>
+  <block id="12a2ca43f1eca27f8195d0a25be73764" category="doc">StorageGRID를 ONTAP FabricPool 클라우드 계층으로 사용하는 방법에 대한 비디오</block>
+  <block id="540c866b0c6465b4af366f6a8206b21c" category="doc">ONTAP FabricPool 볼륨에 대한 고속 읽기 예측 모드 관리</block>
+  <block id="f2bbec47908b03e1305630da12b4223f" category="doc">FabricPool의 ONTAP 볼륨에서 클라우드 쓰기 모드 활성화 또는 비활성화</block>
+  <block id="3232a1440a5e95dcd7f231a88832a6db" category="doc">ONTAP 볼륨의 클라우드 검색 정책 수정</block>
+  <block id="346fb2af8a3897f8a26f11d869e97fed" category="doc">ONTAP FabricPool 클라우드 계층을 위한 오브젝트 저장소 설정 워크플로</block>
+  <block id="fe96e5709660d32df360e0a1349fc154" category="doc">ONTAP FabricPool 노드별 PUT 속도에 대한 임계값 설정</block>
+  <block id="0a1c03eaa686bb859f189d4a2a9c09f1" category="doc">ONTAP FabricPool 볼륨 계층화 정책</block>
+  <block id="c5f5721ff2571379336c9dcaeec74357" category="doc">ONTAP FabricPool 구성 및 관리 워크플로</block>
+  <block id="151fb41db0feec61c569cbddb5c363e5" category="list-text">원본은 ONTAP 9.15.1 이상을 실행해야 합니다. 그러나 ONTAP 9.15.1에는 FlexCache 쓰기 지연에 필요한 모든 수정 사항과 개선 사항이 포함되어 있지 않으므로 프로덕션 워크로드에는 권장되지 않습니다. ONTAP 9.17.1P1에서 FlexCache 쓰기 지연에 대한 중요한 개선 사항이 도입되었습니다. 원본 및 캐시 클러스터 모두에서 9.17.1P1 이후의 현재 권장 릴리스를 실행할 것을 강력히 권장합니다. ONTAP 9.17.1을 실행할 수 없는 경우, 9.16.1의 최신 P 릴리스가 차선책으로 권장되는 릴리스입니다.</block>
+  <block id="7a232ed8b32a2a2721ba54e985f74af7" category="admonition">환경에서 FlexCache 쓰기 되돌림을 구현하기 전에 <block ref="dfd488521d6ecd416be6c96456338fa4" category="inline-link-macro-rx"></block>을 검토하는 것을 *_강력히_* 권장합니다.</block>
+  <block id="eaf2faef49612f9101d35b1f4396b247" category="list-text">쓰기 백 모드로 작동할 필요가 없는 모든 캐싱 클러스터는 FlexCache 볼륨을 지원하는 모든 ONTAP 버전을 실행할 수 있습니다.</block>
+  <block id="323981dc2b6eb5cbdbf4ccf710eb137a" category="list-text">FlexVol 볼륨을 FlexGroup 볼륨으로 변환하는 작업은 서비스 중단 없이 진행됩니다. 변환은 일반적으로 몇 초밖에 걸리지 않으며, 볼륨을 오프라인으로 전환하거나 공유 폴더 및 내보내기 파일을 다시 마운트할 필요가 없으므로 클라이언트는 계속해서 데이터에 액세스할 수 있습니다.</block>
+  <block id="3a0c3693a17e4b15a86006d8e19be842" category="paragraph">ONTAP S3는 다음 추가 헤더를 지원합니다.</block>
+  <block id="b5ef044f36f2f270aafbe292662370d0" category="cell">DeleteBucketCors</block>
+  <block id="f6658c946f667d0dd03682a0b57cfb57" category="cell">GetBucketCors</block>
+  <block id="d28df50f6e8a6fdc5953e5a886efa7f1" category="cell">ListAllMyBuckets</block>
+  <block id="7ba6b7dd94352e686e576d0fd2dfc747" category="cell">PutBucketCors</block>
+  <block id="f087556e561ad6a3f09bb0a30c5e8551" category="paragraph">ONTAP S3는 다음과 같은 추가 URI 쿼리 매개변수를 지원합니다.<block ref="4abb4c638857edfc1b28fe74b6ff3a04" prefix=" " category="inline-code"></block></block>
+  <block id="6072f3327dc56f0ad76aac37367690f4" category="paragraph">ONTAP S3는 다음과 같은 추가 헤더를 지원합니다.</block>
+  <block id="df110603c26246ba41de7734bf274427" category="cell">DeleteObjects ONTAP S3는 다음 추가 헤더를 지원합니다. *<block ref="b29ddb1b7b625d2adb828d59291dc41b" prefix=" " category="inline-code"></block></block>
+  <block id="c7048b0da080aecfe74f58223c2d6258" category="paragraph">ONTAP S3는 다음과 같은 추가 URI 쿼리 매개변수를 지원합니다.</block>
+  <block id="9fbf7114e8046ef554a8b1eee2828031" category="paragraph">ONTAP S3는 다음과 같은 추가 URI 매개변수를 지원합니다.</block>
+  <block id="6a2b2739cfc2d024f2df781dce7025c8" category="list-text">ONTAP S3는 <block ref="1167795ccad7a99e88e8b7b6c4128a42" prefix=" " category="inline-code"></block>을 사용하는 청크 업로드 서명 요청에 대한 지원을 추가합니다.</block>
 </blocks>
