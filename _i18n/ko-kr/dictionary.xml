@@ -49212,4 +49212,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="c7048b0da080aecfe74f58223c2d6258" category="paragraph">ONTAP S3는 다음과 같은 추가 URI 쿼리 매개변수를 지원합니다.</block>
   <block id="9fbf7114e8046ef554a8b1eee2828031" category="paragraph">ONTAP S3는 다음과 같은 추가 URI 매개변수를 지원합니다.</block>
   <block id="6a2b2739cfc2d024f2df781dce7025c8" category="list-text">ONTAP S3는 <block ref="1167795ccad7a99e88e8b7b6c4128a42" prefix=" " category="inline-code"></block>을 사용하는 청크 업로드 서명 요청에 대한 지원을 추가합니다.</block>
+  <block id="a54b1e8f15f6b504d9fc24e10c9b1419" category="paragraph">테이프 백업 및 복원 작업과 볼륨 이동은 스토리지 시스템이 최종 전환 단계를 시도하기 전까지 병렬로 실행될 수 있습니다. 최종 전환 단계 동안에는 이동 중인 볼륨에 대해 새로운 테이프 백업 및 복원 작업이 허용되지 않습니다. 그러나 현재 진행 중인 작업은 완료될 때까지 계속 실행됩니다.</block>
+  <block id="e67304990471d964ee19b4f91b7d1e29" category="paragraph">SMTape 백업 작업과 볼륨 이동 작업은 스토리지 시스템이 최종 전환 단계를 시도할 때까지 병렬로 실행될 수 있습니다. 최종 전환 단계 동안에는 이동 중인 볼륨에서 새로운 SMTape 백업 작업을 실행할 수 없습니다. 그러나 현재 진행 중인 작업은 완료될 때까지 계속 실행됩니다.</block>
 </blocks>
