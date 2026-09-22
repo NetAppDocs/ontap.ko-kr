@@ -28,8 +28,6 @@ entries:
     url: "/smb-hyper-v-sql/remote-vss-concepts-concept.html"
   - title: 원격 VSS에서 사용하는 디렉토리 구조의 예
     url: "/smb-hyper-v-sql/example-directory-structure-remote-vss-concept.html"
-  - title: SnapManager for Hyper-V가 SMB를 통해 Hyper-V에 대한 원격 VSS 기반 백업을 관리하는 방법
-    url: "/smb-hyper-v-sql/snapmanager-hyper-v-remote-backups-concept.html"
 - title: SMB 공유를 통해 Hyper-V 및 SQL Server에서 ODX 복사 오프로드를 사용하는 방법
   url: "/smb-hyper-v-sql/odx-copy-offload-concept.html"
 - title: 구성 요구 사항 및 고려 사항

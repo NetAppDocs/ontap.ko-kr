@@ -16,8 +16,9 @@ summary: 이전 ONTAP 릴리즈로 되돌리려면 먼저 모든 스냅샷 정�
 SnapMirror 환경에서 되돌리는 경우 먼저 다음과 같은 미러링 관계를 삭제해야 합니다.
 
 * 모든 로드 공유 미러 관계
-* ONTAP 8.3.x에서 생성된 모든 데이터 보호 미러링 관계
-* ONTAP 8.3.x에서 클러스터가 다시 생성된 경우 모든 데이터 보호 미러링 관계가 형성됩니다
++
+부하 분산 관계 삭제에 대한 자세한 내용은 link:https://kb.netapp.com/on-prem/ontap/DP/SnapMirror/SnapMirror-KBs/How_to_remove_a_load-sharing_LS_mirror_relationship["부하 분산 미러링 관계를 제거하는 방법"]을 참조하십시오.
+
 
 
 .단계

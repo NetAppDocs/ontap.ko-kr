@@ -41,10 +41,6 @@ SMB 3.0 공유를 통해 데이터에 액세스할 수 있는 특정 시점의 �
 +
 동일한 서버에 대한 섀도우 복제본 ID의 컬렉션을 고유하게 식별하는 GUID입니다.
 
-* * Hyper-V * 용 SnapManager
-+
-Microsoft Windows Server 2012 Hyper-V의 백업 및 복원 작업을 자동화하고 단순화하는 소프트웨어입니다 SnapManager for Hyper-V는 원격 VSS와 자동 복구를 사용하여 SMB 공유를 통해 Hyper-V 파일을 백업합니다.
-
 
 
 .관련 정보

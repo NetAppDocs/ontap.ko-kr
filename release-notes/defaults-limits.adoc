@@ -146,8 +146,12 @@ ONTAP 9 릴리스에서 구현된 제한 및 기본값에 대한 몇 가지 변�
 | FlexGroup 볼륨을 사용하는 SVM-DR  a| 
 * FlexGroup 볼륨에서는 최대 32개의 SVM-DR 관계가 지원됩니다.
 * SVM-DR 관계에서 단일 SVM에서 지원되는 최대 볼륨 수는 300이며, 여기에는 FlexVol 볼륨 및 FlexGroup 구성요소의 수가 포함됩니다.
-* FlexGroup의 최대 구성요소 수는 20개를 초과할 수 없습니다.
-* SVM-DR 볼륨 제한은 노드당 500개, 클러스터당 1000개입니다(FlexVol 볼륨 및 FlexGroup 구성요소 포함).
+* FlexGroup의 최대 구성 요소 수는 24개를 초과할 수 없습니다.
+* SVM-DR의 볼륨 제한은 노드당 500, HA 쌍당 1000입니다(FlexVol 볼륨 및 FlexGroup 구성 요소 포함).
++
+
+NOTE: 제한 사항은 플랫폼별로 다릅니다. link:https://hwu.netapp.com["NetApp Hardware Universe를 참조하십시오"^]로 이동하여 플랫폼과 ONTAP 버전을 선택하여 구성에 맞는 올바른 제한 사항을 확인하십시오.
+
 
 | ONTAP 9.10.1 
 
