@@ -39,26 +39,27 @@ Do you wish to install ONTAP Mediator with iSCSI and HTTPS support? Y(es)/n(o):`
 ** iSCSI로 구성된 ONTAP Mediator를 사용하여 하나 이상의 MetroCluster IP 구성을 모니터링할 계획이라면 답변 `Yes`해 주십시오.
 ** 응답 `No` ONTAP Mediator를 SnapMirror 활성 동기화에만 사용할 계획인지, 아니면 ONTAP Mediator를 HTTPS로 구성하여 하나 이상의 MetroCluster IP 구성을 모니터링할 계획인지 답변해 주십시오.
 +
-또는,  `--https-only` 옵션을  `./ontap-mediator-1.12.1/ontap-mediator-1.12.1 -y` 명령어에서 사용하여 HTTPS만 지정할 수 있습니다.
+또는,  `--https-only` 옵션을  `./ontap-mediator-1.12.1/ontap-mediator-1.12.1` 명령어에서 사용하여 HTTPS만 지정할 수 있습니다.
 
 
 
+* 자동화 사용 사례의 경우,  `./ontap-mediator-1.12.1/ontap-mediator-1.12.1 -y` 명령을 사용하여 설치 프로그램 프롬프트를 건너뛸 수 있습니다.
 
 
 .단계
 . 설치 프로그램을 실행하고 필요에 따라 프롬프트에 응답합니다.
 +
-`./ontap-mediator-1.12.1/ontap-mediator-1.12.1 -y`
+`./ontap-mediator-1.12.1/ontap-mediator-1.12.1`
 
 +
 [listing]
 ----
-[root@mediator_host ~]# ./ontap-mediator-1.12.1/ontap-mediator-1.12.1 -y
+[root@mediator_host ~]# ./ontap-mediator-1.12.1/ontap-mediator-1.12.1
 ----
 +
 [NOTE]
 ====
-설치 중 서명 확인을 건너뛰려면 다음 명령을 사용하십시오. `./ontap-mediator-1.12.1/ontap-mediator-1.12.1 -y --skip-code-signature-check`
+설치 중 서명 확인을 건너뛰려면 다음 명령을 사용하십시오. `./ontap-mediator-1.12.1/ontap-mediator-1.12.1 --skip-code-signature-check`
 
 ====
 +
@@ -451,15 +452,7 @@ OS package installations finished
 ====
 [listing]
 ----
-
-Upgrade from 1.11 to 1.12 (lower version to higher version):
-
- 
-
-Plain Text
-
-
-[root@mediator_host ~]# ontap-mediator-1.11.0/ontap-mediator-1.11.0 -y
+[root@mediator_host ~]# ontap-mediator-1.11.0/ontap-mediator-1.11.0
 
 ONTAP Mediator: Self Extracting Installer
 
@@ -584,7 +577,6 @@ Database upgrade operation complete.
 ====
 [listing]
 ----
-
 [root@mediator_host ~]# tar -zxvf ontap-mediator-1.12.1.tgz
 ontap-mediator-1.12.1/
 ontap-mediator-1.12.1/csc-prod-chain-ONTAP-Mediator.pem
@@ -679,8 +671,7 @@ OS package installations finished
 ====
 [listing]
 ----
-
-[root@mediator_host~]# ontap-mediator-1.11.0/ontap-mediator-1.11.0 -y
+[root@mediator_host~]# ontap-mediator-1.11.0/ontap-mediator-1.11.0
 
 ONTAP Mediator: Self Extracting Installer
 

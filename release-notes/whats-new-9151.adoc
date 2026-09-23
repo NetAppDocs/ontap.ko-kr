@@ -63,7 +63,7 @@ xref:../consistency-groups/configure-task.html[일관성 그룹을 사용한 ONT
  a| 
 xref:../concepts/ontap-and-vmware.html[Windows Server 페일오버 클러스터링을 사용하는 VMware 가상 볼륨에 대한 영구 예약]
  a| 
-ONTAP은 현재 VMware 가상 볼륨(VVol)과 기존 LUN과의 영구 예약을 지원합니다. ONTAP 9.15.1부터 VVOL을 통해 영구 예약을 생성할 수도 있습니다. 이 기능에 대한 지원은 VMware vSphere 9용 ONTAP 툴에 구현되어 있습니다. 클러스터된 Windows 가상 머신 그룹인 WSFC(Windows Server Failover Cluster)에서만 지원됩니다.
+ONTAP는 현재 VMware 가상 볼륨(vVols)과 기존 LUN을 사용한 영구 예약을 지원합니다. ONTAP 9.15.1부터는 vVol을 사용하여 영구 예약을 생성할 수도 있습니다. 이 기능에 대한 지원은 ONTAP tools for VMware vSphere 9에 구현되어 있습니다. 클러스터링된 Windows 가상 머신 그룹인 Windows Server 장애 조치 클러스터(WSFC)에서만 지원됩니다.
 
 |===
 

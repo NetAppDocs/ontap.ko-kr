@@ -2409,7 +2409,6 @@
   <block id="89ed1fff68874fbc22edc8dd7d8053d0" category="list-text">FlexClone LUN이 올바른지 확인합니다.</block>
   <block id="c66449470fbcc225436b96fdd3e9b034" category="summary">igroup을 생성할 때 이니시에이터의 iSCSI 노드 이름 및 WWPN을 지정하거나 나중에 추가할 수 있습니다. LUN을 생성할 때 이니시에이터 iSCSI 노드 이름과 WWPN을 지정하도록 선택한 경우 나중에 필요에 따라 제거할 수 있습니다.</block>
   <block id="bbd0b8b503f92e19435581d5df550c7d" category="doc">igroup에 대해 이니시에이터 WWPN 및 iSCSI 노드 이름을 지정합니다</block>
-  <block id="dc0502f2398c56b1acf677f0a13215c0" category="paragraph">Host Utilities 설명서의 지침에 따라 WWPN을 얻고 특정 호스트와 연결된 iSCSI 노드 이름을 찾습니다. ESX 소프트웨어를 실행하는 호스트의 경우 Virtual Storage Console을 사용합니다.</block>
   <block id="d57c791b82ca8b16d6a347ba382dd859" category="list-text">SnapVault 백업을 포함하는 SVM(스토리지 가상 머신)에는 LUN 복사본에 액세스하는 데 사용되는 호스트에서 액세스할 수 있는 원하는 SAN 프로토콜을 갖춘 하나 이상의 LIF가 있어야 합니다.</block>
   <block id="af3fb91f6f8657c644ed16ed09123c8c" category="list-text">SnapVault 2차 볼륨에서 LUN 복사본에 직접 액세스할 계획이라면 미리 SnapVault SVM에 igroup을 생성해야 합니다.</block>
   <block id="40e8179c7a5492026b81a4907045ad65" category="paragraph">먼저 LUN이 포함된 볼륨을 복원하거나 클론 복제하지 않고도 SnapVault 2차 볼륨에서 LUN에 직접 액세스할 수 있습니다.</block>
@@ -5342,7 +5341,6 @@
   <block id="4c2e05bd2aee6ccbab1e3300c3b6b290" category="paragraph">다음은 ONTAP 9.4를 실행하는 노드에만 적용됩니다.</block>
   <block id="814fed2dc82aacd3df5e56d0be36a4b4" category="list-text">NVMe LIF가 생성되기 전에 NVMe 서비스를 생성해야 합니다.</block>
   <block id="8e641965a6415f8b2aef4638fed6a48b" category="paragraph">다음 ONTAP 기능은 NVMe 구성에서 지원되지 않습니다.</block>
-  <block id="07ebf6758b37ea462dcc5d3584639d46" category="list-text">가상 스토리지 콘솔</block>
   <block id="46f1f47cfc518080e2c6533797122872" category="paragraph">FC 및 FC-NVMe 구성의 경우 시스템에서 이니시에이터-타겟 nexuse(ITN) 수를 사용하여 클러스터에 호스트를 더 추가할 수 있는지 확인해야 합니다.</block>
   <block id="07fe4152a33c3f98b72cc79eaae7bc28" category="paragraph">클러스터에서 사용되는 ITN 수를 확인하려면 클러스터의 각 노드에 대해 다음 단계를 수행하십시오.</block>
   <block id="2f30ab27ed62c2641d721904d8c05aa7" category="list-text">특정 노드에서 모든 LIF를 식별합니다.</block>
@@ -5382,7 +5380,6 @@
   <block id="a85f31a1ffefff5b53522ffb20d3dd78" category="paragraph">모든 호스트 운영 체제에서 별도의 어댑터를 사용하여 각 공급업체의 스토리지 시스템에 연결하는 것이 좋습니다. 별도의 어댑터를 사용하면 드라이버와 설정이 충돌할 가능성이 줄어듭니다. ONTAP 스토리지 시스템에 연결하려면 어댑터 모델, BIOS, 펌웨어 및 드라이버가 NetApp 상호 운용성 매트릭스 툴에 지원되는 것으로 표시되어야 합니다.</block>
   <block id="d312f8c803392d9340ebd0ede4ba1ad0" category="paragraph">호스트에 대해 필수 또는 권장 시간 초과 값과 기타 스토리지 매개 변수를 설정해야 합니다. 항상 NetApp 소프트웨어를 설치하거나 NetApp 설정을 마지막에 적용해야 합니다.</block>
   <block id="f78453dd3a55b880bc24eb3dd0365e92" category="list-text">AIX의 경우 구성의 상호 운용성 매트릭스 툴에 나열된 AIX Host Utilities 버전의 값을 적용해야 합니다.</block>
-  <block id="f91fa1fd11e6ae9bc492f02c8cf8e45f" category="list-text">ESX의 경우 VMware vSphere용 Virtual Storage Console을 사용하여 호스트 설정을 적용해야 합니다.</block>
   <block id="d03c22bbec6323ea54483cd3cf7d8f7d" category="list-text">HP-UX의 경우 HP-UX 기본 스토리지 설정을 사용해야 합니다.</block>
   <block id="b608bc9f1682286473e17db5aaeeff49" category="list-text">Linux의 경우 구성의 상호 운용성 매트릭스 툴에 나열된 Linux Host Utilities 버전의 값을 적용해야 합니다.</block>
   <block id="75cad02e93731ea524aab42f226ca5d0" category="list-text">Solaris의 경우, 구성의 상호 운용성 매트릭스 툴에 나열된 Solaris Host Utilities 버전의 값을 적용해야 합니다.</block>
@@ -23491,16 +23488,9 @@
   <block id="420e354caca3e4cef28a380e904921cd" category="list-text"><block ref="a309e7ebb76b88dd102cd2350a86ff7b" category="inline-link-macro-rx"></block></block>
   <block id="1941dadf03fe4f65c1014c33f1d585de" category="list-text"><block ref="99fb366fadc49ee627b415dc6f880a75" category="inline-link-macro-rx"></block></block>
   <block id="44c4084c814c5c6145276018bb238232" category="list-text"><block ref="23cf0b86492c3a7a48e59eb725544862" category="inline-link-macro-rx"></block></block>
-  <block id="9e5886b1cd550707758399fa0d47473d" category="summary">VMware vSphere(VSC)용 가상 스토리지 콘솔을 사용하여 ESXi 호스트용 ONTAP 기반 스토리지 시스템에서 NFS 볼륨을 프로비저닝하기 전에 ONTAP 9.7 이상용 System Manager를 사용하여 NFS를 사용하도록 설정하십시오.</block>
   <block id="92f27ae18bd96037381af341e6e89a6a" category="inline-link-macro">NFS 지원 스토리지 VM</block>
-  <block id="073e6f4ef8ee7c03dad66fd1f0d92418" category="paragraph">을 만든 후 <block ref="ea16492f7646b4f258c2ce7f60f6a486" category="inline-link-macro-rx"></block> System Manager에서 NFS 볼륨을 프로비저닝하고 VSC를 사용하여 데이터 저장소를 관리할 수 있습니다.</block>
-  <block id="6b0e9b81a3cc59a785650f8d4f2aebd9" category="inline-link">VMware vSphere 가상 어플라이언스인 ONTAP 툴</block>
-  <block id="988365f2c625ccb8ce9eba8bbf32e91a" category="paragraph">VSC 7.0부터는 VSC가 의 일부입니다<block ref="78582915faf524e50a1903c7d5fa3999" category="inline-link-rx"></block>VSC, VASA(vStorage APIs for Storage Awareness) 공급자, VMware vSphere 기능을 위한 SRA(Storage Replication Adapter) 등이 포함되어 있습니다.</block>
   <block id="bc8be72fdc9d6054f356bb2b7f80fd12" category="inline-link">NetApp 상호 운용성 매트릭스</block>
-  <block id="16c0f0ab51cf5c6ba8114f8aa567f2f7" category="paragraph">를 확인하십시오<block ref="4b3f52165843434a0b70b67a14318bc1" category="inline-link-rx"></block> 현재 ONTAP 및 VSC 릴리스 간의 호환성을 확인합니다.</block>
-  <block id="9fbe728d7eb2adabf531ccdcf064bc53" category="inline-link">VSC 개요를 사용한 ESXi용 NFS 구성</block>
   <block id="952fd691754e388c7b7ba473cf410aff" category="inline-link">TR-4597: ONTAP용 VMware vSphere</block>
-  <block id="24f423c151048112b31e4205c8dde6e5" category="paragraph">자세한 내용은 을 참조하십시오<block ref="3d61b9ab1dcb235ff5edeb0cc5e74cd4" category="inline-link-rx"></block> VSC 릴리즈에 대한 설명서를 제공합니다.</block>
   <block id="59825f2783ed8148538368f7f0242e07" category="list-text">로 이동합니다<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
   <block id="2eca5abf1f12315d80bbba3b3f4fc3bd" category="paragraph">지원되는 환경에 대한 자세한 내용은 를 참조하십시오<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
   <block id="d38a11039f0d84ab5130c02d5945c66b" category="paragraph">지원되는 SFP+ 모듈 및 Cisco Twinax(Copper) 케이블이 에 나열되어 있습니다<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
@@ -26616,7 +26606,6 @@
   <block id="57c339910e85f73a0d888b8caba6f69a" category="paragraph"><block ref="b88b8831200e6310041eac048500e39e" prefix="" category="inline-code"></block></block>
   <block id="ed61b0f7e3663d5d2318adcbb44ad20f" category="list-text">최대 LUN 크기로 LUN을 생성하는 경우 LUN의 실제 크기가 약간 더 작을 수 있습니다. ONTAP는 한계치를 약간 낮추어 줍니다.</block>
   <block id="e474036733ffde73f4a831a52efc12e6" category="list-text">모범 사례로서, igroup을 통해 하나의 특정 이니시에이터에 LUN을 매핑해야 합니다.</block>
-  <block id="1ed18246eb5302cc4392a09a283f0e1a" category="paragraph">VMware vSphere의 경우 VSC(가상 스토리지 콘솔)를 사용하여 LUN을 검색하고 초기화할 수 있습니다.</block>
   <block id="a5eae8d9f902b73a4a2990d4b96a605c" category="list-text">LUN을 초기화하고 필요에 따라 파일 시스템을 생성합니다.</block>
   <block id="cb3f1fa9c4780e107fb774ec2b22a853" category="list-text">FC 또는 iSCSI에 대한 라이센스가 있는지 확인합니다.</block>
   <block id="4acbe52522d10d5089513c8e31b5c43b" category="paragraph">* iSCSI의 경우: *</block>
@@ -27461,7 +27450,6 @@ Cisco Nexus 9336C-FX2</block>
   <block id="c0d29c96e94db458c11dcdcf5047f4f4" category="cell">SnapMirror SVM 피어 관계</block>
   <block id="6819e805b412a2f5e44dabe66d8ba82d" category="cell">SnapMirror SVM 재해 복구</block>
   <block id="f919cfc9ed773d7232e7db9986aca6f0" category="cell">가상 IP LIF/BGP</block>
-  <block id="444d2b038ec389bc13f0a51d3a4f4da9" category="cell">Virtual Storage Console 7.0 이상</block>
   <block id="0747ed6feef84f80a86a40de971ba175" category="cell">vStorage</block>
   <block id="d923ac7f33960142cbf2dd0841b67e09" category="section-title">마이그레이션 중 지원되는 작업</block>
   <block id="eb364ae2a968ae02a962404ec55ff952" category="cell">SVM 마이그레이션 상태</block>
@@ -32406,7 +32394,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e4a71e865f68323e98f0d3d9e9dfa7b1" category="list-text">VVOL(가상 볼륨)은 가상 머신에서 사용되는 스토리지에 대한 볼륨 수준 추상화를 제공합니다. 여기에는 여러 가지 이점이 있으며 기존 LUN을 사용하는 대신 사용할 수 있습니다.</block>
   <block id="fbb6332d327e8d17bb12303b4dc7d721" category="list-text">영구 예약</block>
   <block id="e4ac141018f8b2434180c4157191b7f1" category="list-text">영구 예약은 SCSI-3에서 지원되며 이전 SCSI-2 예약보다 향상되었습니다. 이를 통해 여러 클라이언트 이니시에이터가 다른 노드를 잠그는 동안 단일 대상과 통신할 수 있습니다. 오류 복구를 위해 버스를 재설정한 경우에도 예약이 지속될 수 있습니다.</block>
-  <block id="f9c7dac915ee6b7f632f3fe8ffbfbe25" category="admonition">ONTAP 9.15.1부터 SCSI-3을 사용하여 가상 볼륨에 대한 영구 예약을 생성할 수 있습니다. 이 기능은 WSFC(Windows Server Failover Cluster)가 있는 VMware vSphere 9용 ONTAP 툴을 사용하는 경우에만 지원됩니다.</block>
   <block id="6458349f90f9f03e0ac5b2055316563d" category="list-text">Windows Server 장애 조치 클러스터링</block>
   <block id="4a0365c30eca9631e5a655b5866334d3" category="list-text">Microsoft WSFC는 Windows Server 운영 체제의 기능으로 내결함성과 고가용성을 제공합니다. 일련의 서버 노드(물리적 또는 가상)가 클러스터로 결합되어 장애 발생 시 복원력을 제공합니다. WSFC는 일반적으로 데이터베이스, 파일 및 네임스페이스 서버를 비롯한 인프라 서비스를 배포하는 데 사용됩니다.</block>
   <block id="6b400b856bd0ea41f234bbf2a4b7deeb" category="list-text">VMware vSphere Storage API - 스토리지 인식</block>
@@ -32495,7 +32482,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="0ff4968254288f6880e01cc465eec03c" category="paragraph">SnapMirror의 비동기식 보호를 사용하는 일관성 그룹이 이제 일관성 그룹에서 최대 80개의 볼륨을 지원합니다.</block>
   <block id="8df12027f1128a3350190a9e47c4078d" category="inline-xref-macro">Windows Server 페일오버 클러스터링을 사용하는 VMware 가상 볼륨에 대한 영구 예약</block>
   <block id="d33519b83708cdf81fbec2a44a713757" category="paragraph"><block ref="d33519b83708cdf81fbec2a44a713757" category="inline-xref-macro-rx"></block></block>
-  <block id="07036a7d1828a30f6fb6e324abd72e99" category="paragraph">ONTAP은 현재 VMware 가상 볼륨(VVol)과 기존 LUN과의 영구 예약을 지원합니다. ONTAP 9.15.1부터 VVOL을 통해 영구 예약을 생성할 수도 있습니다. 이 기능에 대한 지원은 VMware vSphere 9용 ONTAP 툴에 구현되어 있습니다. 클러스터된 Windows 가상 머신 그룹인 WSFC(Windows Server Failover Cluster)에서만 지원됩니다.</block>
   <block id="f1535772e81f31b37fd4a68ee1ba6f83" category="inline-xref-macro">단순화된 FPolicy 영구 저장소 생성 및 구성</block>
   <block id="84de5fd4954a9a8d7d92915ae0c01119" category="paragraph"><block ref="84de5fd4954a9a8d7d92915ae0c01119" category="inline-xref-macro-rx"></block></block>
   <block id="12c45f04b4f8ffb4c646120af35f2fc2" category="paragraph">를 사용하여 FPolicy 영구 저장소를 생성하고 볼륨 생성 및 구성을 동시에 자동화할 수 있습니다<block ref="e5711977a56a47bb8dbdfb227e812098" prefix=" " category="inline-code"></block> 명령.</block>
@@ -33183,7 +33169,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d08602385747766acf2c2535139ef797" category="paragraph"><block ref="d08602385747766acf2c2535139ef797" category="inline-link-rx"></block></block>
   <block id="f2c39fe4d6cbf995ac69b984240921b8" category="list-text">9.7P21 이상 9.7 릴리스(참조<block ref="2f912b6e4a3cbdcf435c9a69423ebe70" category="inline-link-rx"></block>)</block>
   <block id="c628a7148fb9b0455acc7dadb32939dc" category="cell"><block ref="c628a7148fb9b0455acc7dadb32939dc" category="inline-link-rx"></block></block>
-  <block id="d36253a1067bdd08f575c2294e7f2664" category="paragraph">System Manager Classic(ONTAP 9.7 이하 릴리즈용)을 사용하여 ESXi 호스트에 대한 NFS 액세스를 데이터 저장소에 설정하려면 를 참조하십시오<block ref="e8f616a33e46fc261504d69677dac2ca" category="inline-link-rx"></block></block>
   <block id="1686e7ea0e0ce792e4c6d1e944421a48" category="paragraph">VMware 데이터 저장소 프로비저닝 Best Practice는 를 <block ref="7ebb93c5086613950d9bdf0b7e2106ab" category="inline-link-macro-rx"></block> 참조하십시오.</block>
   <block id="a705eb4af7a43dae927b0c9842e32e44" category="paragraph"><block ref="a705eb4af7a43dae927b0c9842e32e44" category="inline-link-rx"></block></block>
   <block id="991d4547c01d72caeb8cac4dbfa8079b" category="paragraph"><block ref="991d4547c01d72caeb8cac4dbfa8079b" category="inline-link-rx"></block></block>
@@ -41718,9 +41703,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="3e065b000f30ee1ce12fc5f7a20599cc" category="doc">ONTAP 시스템 관리자를 사용하여 노드 관리</block>
   <block id="91eebcd9a1620b0167e6fb8c4b69901a" category="doc">ONTAP System Manager를 사용하여 호스트별 사용자 및 그룹 관리</block>
   <block id="69b21fdec848c8707713f7271bca7545" category="doc">ONTAP SVM에 대한 추가 정보를 찾을 수 있는 곳</block>
-  <block id="e0472838face5f8c6092ef27951661e4" category="doc">ONTAP FPolicy 인증서는 ID 보존 구성이 아닌 SVM 재해 복구 관계에서 복제되지 않습니다.</block>
-  <block id="7e5e7beff765a890950f0f1ac1e82400" category="doc">ONTAP에서 FPolicy 구성을 수정하는 명령</block>
-  <block id="9647ca91b37c7bb868c06bb4fd98fbb0" category="doc">SSL 인증 연결을 사용하도록 ONTAP FPolicy 외부 엔진을 구성하는 방법에 대한 추가 정보</block>
   <block id="f73122fe103367b228d8587701c0050d" category="doc">ONTAP FPolicy 이벤트 생성</block>
   <block id="99b4d1b456ed2ab2cc1c82e7523b0e6f" category="doc">ONTAP FPolicy 외부 엔진 생성</block>
   <block id="ecc4946e90c5765b8742341f75070681" category="doc">ONTAP FPolicy 정책 생성</block>
@@ -41743,9 +41725,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1db8bcaada9cf4867aaebfbfd8a64e97" category="doc">ONTAP FPolicy 이벤트 구성 워크시트 완료</block>
   <block id="3bc1e3c74a841bbada9ae92bd9dc07ac" category="doc">ONTAP FPolicy 외부 엔진 구성 워크시트 완료</block>
   <block id="a8586bcde30f3a7086e92d68b265c18d" category="doc">ONTAP FPolicy가 외부 FPolicy 서버와 작동하는 방식</block>
-  <block id="534a1f3ba9c9fead1f977a25639cb4a1" category="doc">ONTAP FPolicy passthrough-read가 계층적 저장소 관리의 사용성을 향상시키는 방법</block>
   <block id="7c5f2ab5ec8ee5a904e3940b78d0c7c4" category="doc">ONTAP FPolicy 정책 워크시트 완료</block>
-  <block id="352892028b42c47fa04f456c353e5177" category="doc">FPolicy 정책이 네이티브 엔진을 사용하는 경우 ONTAP FPolicy 범위 구성에 대한 요구 사항</block>
   <block id="036ca0b1d40841729301e79195ee9358" category="doc">ONTAP FPolicy 범위 워크시트 완료</block>
   <block id="7b826ee9c5e5fedbdd476234898814fd" category="doc">SVM 네임스페이스 전반의 ONTAP FPolicy 서비스에 대해 알아보세요.</block>
   <block id="cde47c9d46030af5856ee463b177cfc7" category="doc">ONTAP 보안 추적 결과 해석</block>
@@ -41756,15 +41736,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="920d4f69b5f974c400750b4dee688a0b" category="doc">ONTAP FPolicy 외부 엔진 구성 계획</block>
   <block id="9877ace4ff832904668d0656a5021cbf" category="doc">ONTAP FPolicy 정책 구성에 대해 알아보세요</block>
   <block id="c5f5681a03c4d3e4d15dac88e6e2e445" category="doc">ONTAP FPolicy 범위 구성에 대해 알아보세요</block>
-  <block id="f682e452dc85bb2174061cf42fd8868a" category="doc">ONTAP FPolicy 구성을 위한 요구 사항, 고려 사항 및 모범 사례</block>
-  <block id="bd6c7e7663080a26489c4b8ca34fc164" category="doc">MetroCluster 및 SVM 재해 복구 구성을 사용하는 클러스터 범위 ONTAP FPolicy 외부 엔진에 대한 제한 사항</block>
   <block id="9f8d894e355274fcd69db1c98d2c6ba4" category="doc">ONTAP FPolicy 구현에서의 클러스터 구성 요소 역할</block>
   <block id="764ba76bc3412e79fdaac0e2b9cc2df3" category="doc">ONTAP 보안 추적에 대해 알아보세요</block>
   <block id="65a419511dd04e5b051f2664b13abefb" category="doc">ONTAP FPolicy show 명령에 대해 알아보세요</block>
   <block id="d42adc8326d17399071c76a0e359a61b" category="doc">ONTAP FPolicy 구성 설정</block>
-  <block id="e7ff30fa063577f6dda1b3f8d3fd793e" category="doc">ONTAP FPolicy가 NFSv3에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합</block>
   <block id="fd68c9f0c3f24fc7668bbfa1f605acc6" category="doc">ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합</block>
-  <block id="297390f7aeb6c96c367c9447e600da38" category="doc">SMB용 ONTAP FPolicy 모니터에서 지원되는 파일 작업 및 필터 조합</block>
   <block id="685f12e2e844a103bda30990291571f9" category="doc">ONTAP FPolicy 동기 및 비동기 알림</block>
   <block id="1178348c656451cb7602a7f41966dfcd" category="doc">ONTAP SVM에서 보안 추적 모니터링을 위한 액세스 검사 유형</block>
   <block id="2c0e701876c52526706ca96b2b35e8f7" category="doc">시스템 관리자를 사용하여 ONTAP 클러스터에 액세스합니다.</block>
@@ -47719,9 +47695,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1cdf890a814b27389ca73efb6ef1b2a0" category="paragraph">ONTAP Mediator 1.12.1부터 설치가 실패하는 경우, <block ref="711a32ad400471be43668bfcda3244b2" prefix=" " category="inline-code"></block>에 있는 SCST 복구 툴을 사용하여 설치를 복구할 수 있습니다.</block>
   <block id="cbaf49dde1c8c8a64598acebeddd8885" category="paragraph">업그레이드된 운영 체제에 패치가 필요한 경우, 해당 도구에는 ONTAP Mediator 패키지에 포함된 SCST 버전에 맞는 패치가 들어 있습니다. 이 <block ref="60141085cb46333d90d906cb4f6b2bed" prefix=" " category="inline-code"></block>도구는 메인 설치 프로그램과는 별개의 독립 실행형 툴이며 ONTAP Mediator <block ref="05d1190d81e37d06607cc19e21f63ea7" prefix=" " category="inline-code"></block>파일 내에 포함되어 있습니다. ONTAP Mediator의 설치 또는 업그레이드 경로에는 영향을 미치지 않습니다.</block>
   <block id="10b2c55da479eba92cedc967836bc0c6" category="list-text">응답<block ref="bafd7322c6e97d25b6299b5d6fe8920b" prefix=" " category="inline-code"></block> ONTAP Mediator를 SnapMirror 활성 동기화에만 사용할 계획인지, 아니면 ONTAP Mediator를 HTTPS로 구성하여 하나 이상의 MetroCluster IP 구성을 모니터링할 계획인지 답변해 주십시오.</block>
-  <block id="cb9a7c8b69402e884580fdaa415998aa" category="paragraph">또는, <block ref="57d50f027c66afa1ed46336b1408221e" prefix=" " category="inline-code"></block> 옵션을 <block ref="e06c57956a1db62e945519ac48ec3f4f" prefix=" " category="inline-code"></block> 명령어에서 사용하여 HTTPS만 지정할 수 있습니다.</block>
-  <block id="93db5a642cb8d01b2091d1bca7a5d24c" category="paragraph"><block ref="e06c57956a1db62e945519ac48ec3f4f" prefix="" category="inline-code"></block></block>
-  <block id="ce33657037f9b172e3868b03669db7f6" category="paragraph">설치 중 서명 확인을 건너뛰려면 다음 명령을 사용하십시오.<block ref="d8fd1ce0cd196e25714174823ea96ceb" prefix=" " category="inline-code"></block></block>
   <block id="59695863d263b33f206a381bcc6ce261" category="paragraph"><block ref="0c59cbf13b1608fef86b59cc0e6967de" prefix="" category="inline-code"></block></block>
   <block id="33f0539bc1c75ea74e9511e01ab8e080" category="paragraph">버전 1.12.1의 제품 설치 실행 파일</block>
   <block id="0c55f368e18cfaa6fe2b014acbea4986" category="paragraph"><block ref="4618732bcabe7114d848c5006bfb9ab6" prefix="" category="inline-code"></block></block>
@@ -49197,4 +49170,36 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="0eca038bebf20e7d623083dc75c6b86e" category="paragraph">0 - 36500</block>
   <block id="08f4444164b270fe88e661b2900ca8da" category="paragraph">0 - 1200</block>
   <block id="3a60a21c170e9a792bdbed98c8b4d8fa" category="admonition">이러한 제한 사항은 AFF 및 ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)을 사용하는 경우 <block ref="3e0ea9acbce13b3743fd44762b9023bc" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="87c0e29ba235ae1b9001f53b41c18551" category="admonition">ONTAP 9.15.1 버전부터 SCSI-3을 사용하여 가상 볼륨에 대한 영구 예약을 생성할 수 있습니다. 이 기능은 Windows Server 장애 조치 클러스터(WSFC)가 포함된 ONTAP tools for VMware vSphere 9를 사용할 때만 지원됩니다.</block>
+  <block id="f19487721cab9d8de852c771a3184694" category="paragraph">또는, <block ref="57d50f027c66afa1ed46336b1408221e" prefix=" " category="inline-code"></block> 옵션을 <block ref="fcd2585ca4e769848950b5d7a9a7d316" prefix=" " category="inline-code"></block> 명령어에서 사용하여 HTTPS만 지정할 수 있습니다.</block>
+  <block id="bc6ccd2a38c1da7dbabbd34e51736ca7" category="list-text">자동화 사용 사례의 경우, <block ref="e06c57956a1db62e945519ac48ec3f4f" prefix=" " category="inline-code"></block> 명령을 사용하여 설치 프로그램 프롬프트를 건너뛸 수 있습니다.</block>
+  <block id="83f7b86aa13679fc80cdcd1d1b748abb" category="paragraph"><block ref="fcd2585ca4e769848950b5d7a9a7d316" prefix="" category="inline-code"></block></block>
+  <block id="2de314e0193491abb63cf8aca0d0f457" category="paragraph">설치 중 서명 확인을 건너뛰려면 다음 명령을 사용하십시오.<block ref="0909581c61d409342de86e60b8beeaa3" prefix=" " category="inline-code"></block></block>
+  <block id="f0231eb57b1259c40d00bb70e7f147c9" category="doc">ID 보존 기능이 없는 SVM 재해 복구 환경에서 ONTAP FPolicy 인증서 복제</block>
+  <block id="9926b4de6d7698e92d4412660cb7f266" category="doc">ONTAP에서 FPolicy 구성을 수정하기 위한 명령</block>
+  <block id="6e7fe2d4d6ef0a9aff4971d63355bd14" category="doc">ONTAP FPolicy 외부 엔진이 SSL 인증 연결을 사용하는 방법</block>
+  <block id="27dc43ba76d0a5b277b328d0de20be67" category="doc">외부 ONTAP FPolicy 서버에 대한 연결을 표시합니다.</block>
+  <block id="a038318ff3c5bb2ddd82232623fa08a9" category="doc">ONTAP FPolicy 패스스루 읽기 연결 상태 표시</block>
+  <block id="f7953af1d92d5ccd1c3031bea6742cd5" category="doc">ONTAP FPolicy 이벤트 구성 워크시트</block>
+  <block id="7aaa9fd7a7274283c9d47aa13d308fc1" category="doc">ONTAP FPolicy 외부 엔진 구성 워크시트</block>
+  <block id="0acde14e716b615e66f97af8e41d07a0" category="doc">ONTAP FPolicy 패스스루 읽기가 사용 편의성을 향상시키는 방법</block>
+  <block id="63660ac6d11bd7c3a0365f66471bec3a" category="doc">ONTAP FPolicy 정책 워크시트</block>
+  <block id="483be2e39cab1c0de7ee53abf3b5e525" category="doc">네이티브 엔진에 대한 ONTAP FPolicy 범위 구성 요구 사항</block>
+  <block id="954c9ff81daecf2b9d560a1af354bef4" category="doc">ONTAP FPolicy 범위 워크시트</block>
+  <block id="a45bd57338ad35628f18831daa028613" category="doc">ONTAP FPolicy 외부 엔진 구성에 대해 알아보십시오</block>
+  <block id="1e1b8908553df8018fc8a77b3ea38fe5" category="doc">ONTAP FPolicy 구성에 대한 요구 사항 및 모범 사례</block>
+  <block id="26159f0de66c3b8498588d878a5d84a5" category="doc">MetroCluster 및 SVM 재해 복구를 사용하는 FPolicy 외부 엔진의 ONTAP 제한 사항</block>
+  <block id="7c30349bd4da761c9584dab4f1bab4b2" category="doc">ONTAP에서 NFSv3에 대해 지원되는 FPolicy 파일 작업 및 필터</block>
+  <block id="6c2a2824b2b1f1221ddddadc5366d148" category="doc">ONTAP의 NFSv4에 대해 지원되는 FPolicy 파일 작업 및 필터</block>
+  <block id="3df46404cbd177d08b440016781648f2" category="doc">ONTAP에서 SMB에 대해 지원되는 FPolicy 파일 작업 및 필터</block>
+  <block id="c3197b3e79f73dfcdc987acb466c5964" category="paragraph">ONTAP는 현재 VMware 가상 볼륨(vVols)과 기존 LUN을 사용한 영구 예약을 지원합니다. ONTAP 9.15.1부터는 vVol을 사용하여 영구 예약을 생성할 수도 있습니다. 이 기능에 대한 지원은 ONTAP tools for VMware vSphere 9에 구현되어 있습니다. 클러스터링된 Windows 가상 머신 그룹인 Windows Server 장애 조치 클러스터(WSFC)에서만 지원됩니다.</block>
+  <block id="96313f6eb0a58628aaa278777ddcd6cb" category="paragraph">VMware vSphere의 경우 ONTAP tools for VMware vSphere를 사용하여 LUN을 검색하고 초기화하십시오.</block>
+  <block id="24521ccdac9a79837badd043d4fdcf4c" category="paragraph">WWPN을 얻고 특정 호스트와 연결된 iSCSI 노드 이름을 찾으려면 호스트 유틸리티 설명서의 지침을 따르십시오. ESX 소프트웨어를 실행하는 호스트의 경우 ONTAP tools for VMware vSphere를 사용하십시오.</block>
+  <block id="c318c3b87d8b04129fce0ea195291a66" category="list-text">ESX의 경우 ONTAP tools for VMware vSphere를 사용하여 호스트 설정을 적용해야 합니다.</block>
+  <block id="5079acede737af5a2da9aee618b3f032" category="summary">ONTAP tools for VMware vSphere를 사용하여 ESXi 호스트용 ONTAP 기반 스토리지 시스템에 NFS 볼륨을 프로비저닝하기 전에 ONTAP 9.7 이상의 System Manager를 사용하여 NFS를 활성화하십시오.</block>
+  <block id="8f79ba4d017f4fdab9ae05ce26db0982" category="paragraph">시스템 관리자에서 <block ref="ea16492f7646b4f258c2ce7f60f6a486" category="inline-link-macro-rx"></block>을 생성한 후 ONTAP tools for VMware vSphere를 사용하여 NFS 볼륨을 프로비저닝하고 데이터 저장소를 관리합니다.</block>
+  <block id="5b09a42ce88efa10ba6b6113ff700f20" category="paragraph">현재 사용 중인 ONTAP과 ONTAP tools for VMware vSphere 릴리스 간의 호환성을 확인하려면 반드시 <block ref="4b3f52165843434a0b70b67a14318bc1" category="inline-link-rx"></block>을 확인하십시오.</block>
+  <block id="849d420a987b241e3f3ff749636c1a7f" category="inline-link">ESXi용 NFS 구성 개요</block>
+  <block id="ab2b9085b80e6049dc01d8160c61d214" category="paragraph">System Manager Classic(ONTAP 9.7 이하 버전용)을 사용하여 ESXi 호스트의 데이터스토어에 대한 NFS 액세스를 설정하려면 다음을 참조하십시오.<block ref="55f829ee3711f4921fd4ae690f84c898" category="inline-link-rx"></block></block>
+  <block id="ff32ff94a757a18eba31ff92b046a6a7" category="paragraph">자세한 내용은 <block ref="3d61b9ab1dcb235ff5edeb0cc5e74cd4" category="inline-link-rx"></block> 및 <block ref="c86a54e7124af60c63f6fe9c63ad8fb8" category="inline-link-rx"></block>을 참조하십시오.</block>
 </blocks>

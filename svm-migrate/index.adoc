@@ -370,7 +370,7 @@ SnapMirror 소스가 마이그레이션되면 ONTAP에서 SnapMirror 업데이�
 | 가상 IP LIF/BGP | 지원되지 않습니다 |  
 
 
-| Virtual Storage Console 7.0 이상 | 지원되지 않습니다 |  
+| VMware vSphere용 ONTAP 툴 | 지원되지 않습니다 |  
 
 
 | 볼륨 클론 | 지원되지 않습니다 |  

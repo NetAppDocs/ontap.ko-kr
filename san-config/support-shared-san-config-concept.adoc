@@ -18,7 +18,7 @@ summary: 공유 SAN 구성은 ONTAP 스토리지 시스템과 다른 공급업�
 호스트에 대해 필수 또는 권장 시간 초과 값과 기타 스토리지 매개 변수를 설정해야 합니다. 항상 NetApp 소프트웨어를 설치하거나 NetApp 설정을 마지막에 적용해야 합니다.
 
 * AIX의 경우 구성의 상호 운용성 매트릭스 툴에 나열된 AIX Host Utilities 버전의 값을 적용해야 합니다.
-* ESX의 경우 VMware vSphere용 Virtual Storage Console을 사용하여 호스트 설정을 적용해야 합니다.
+* ESX의 경우 ONTAP tools for VMware vSphere를 사용하여 호스트 설정을 적용해야 합니다.
 * HP-UX의 경우 HP-UX 기본 스토리지 설정을 사용해야 합니다.
 * Linux의 경우 구성의 상호 운용성 매트릭스 툴에 나열된 Linux Host Utilities 버전의 값을 적용해야 합니다.
 * Solaris의 경우, 구성의 상호 운용성 매트릭스 툴에 나열된 Solaris Host Utilities 버전의 값을 적용해야 합니다.
