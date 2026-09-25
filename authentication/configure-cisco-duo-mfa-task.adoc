@@ -222,6 +222,11 @@ security login duo modify -vserver <STORAGE_VM_NAME> -is-enabled false
 ----
 
 
+[NOTE]
+====
+ `-is-enabled false`를 설정하면 Duo 인증이 비활성화되지만 SSH 로그인 경로에서 Duo 구성이 제거되지는 않습니다. 일부 환경에서는 SSH 로그인에 여전히 대화형 인증 흐름이 필요할 수 있으며, 이로 인해 비대화형 SSH 로그인이 불가능해질 수 있습니다. 비대화형 SSH 로그인 동작을 복원하려면  `security login duo delete -vserver <STORAGE_VM_NAME>`을 사용하여 Duo 구성을 완전히 제거하십시오.
+
+====
 
 
 [[exclude-duo-group-users]]
