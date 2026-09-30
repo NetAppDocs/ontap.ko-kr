@@ -22,4 +22,4 @@ NFSv4.1은 ONTAP 9.9.1 이상에서 기본적으로 활성화되어 있습니다
 ONTAP는 NFSv4.1 디렉토리 및 파일 레벨 위임을 지원하지 않습니다.
 
 .관련 정보
-link:nconnect-concept.html["NFS 성능을 위한 nconnect에 대해 알아보세요"].
+link:nconnect-concept.html["ONTAP NFS 성능을 위한 nconnect에 대해 알아보기"].

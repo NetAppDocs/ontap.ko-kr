@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: just in time, just-in-time, privilege elevation, password, security, authentication, JIT, elevation 
 summary: ONTAP 사용자가 특정 작업을 수행하기 위해 일시적으로 권한을 높일 수 있도록 Just-In-Time 권한 상승을 구성합니다. 
 ---
-= ONTAP 에서 JIT 권한 상승에 액세스
+= ONTAP에서 JIT 권한 상승 사용
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

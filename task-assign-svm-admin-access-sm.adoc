@@ -85,7 +85,7 @@ SVM 대시보드 액세스 권한을 할당하려면 각 SVM 관리자에게 SVM
 
 .관련 주제:
 * link:disks-aggregates/assign-aggregates-svms-task.html["SVM(스토리지 VM)에 ONTAP 로컬 계층 할당"]
-* link:authentication/create-svm-user-accounts-task.html#cluster-and-svm-administrators["ONTAP 로그인 계정 생성에 대해 자세히 알아봅니다"]
+* link:authentication/create-svm-user-accounts-task.html#cluster-and-svm-administrators["ONTAP 관리자 로그인 계정에 대해 알아보십시오."]
 * link:concepts/cluster-svm-administrators-concept.html["클러스터 및 SVM 관리"]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-login-password.html#description["보안 로그인 암호"^]
 

@@ -66,7 +66,7 @@ link:../nfs-config/configure-name-service-switch-table-task.html["nsswitch 구�
 +
 에 대한 자세한 내용은 `security login modify` link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
-** 새 관리자는 를 참조하십시오link:../authentication/grant-access-nis-ldap-user-accounts-task.html["LDAP 또는 NIS ONTAP 계정 액세스를 설정합니다"].
+** 새로운 관리자 사용자의 경우 link:../authentication/grant-access-nis-ldap-user-accounts-task.html["ONTAP 관리자 계정에 대해 LDAP 또는 NIS 액세스를 활성화합니다"]을(를) 참조하십시오.
 
 
 

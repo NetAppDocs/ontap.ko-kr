@@ -22,11 +22,11 @@ entries:
       url: "/nfs-admin/ontap-secures-file-directory-access-concept.html"
   - title: ONTAP가 NFS 클라이언트 인증을 처리하는 방식
     entries:
-    - title: NAS 클라이언트 인증에 대해 알아보세요
+    - title: NFS 클라이언트 인증에 대해 알아보기
       url: "/nfs-admin/nfs-client-authentication-concept.html"
     - title: ONTAP이 이름 서비스를 사용하는 방법을 알아보세요
       url: "/nfs-admin/ontap-name-services-concept.html"
-    - title: NFS 클라이언트에서 SMB 파일 액세스 권한 부여
+    - title: NFS 클라이언트에서 SMB 파일 액세스에 대해 알아보세요.
       url: "/nfs-admin/smb-access-nfs-clients-concept.html"
     - title: NFS 자격 증명 캐시의 작동 방식
       url: "/nfs-admin/nfs-credential-cache-concept.html"
@@ -57,7 +57,7 @@ entries:
       url: "/nfs-admin/security-style-inheritance-concept.html"
     - title: NFS UNIX 권한 보존에 대해 알아보세요
       url: "/nfs-admin/ontap-preserves-unix-permissions-concept.html"
-    - title: Windows 보안 탭을 사용하여 NFS SVM의 UNIX 권한 관리
+    - title: Windows 보안 탭을 사용하여 NFS SVM에서 UNIX 권한을 관리하는 방법에 대해 알아보십시오.
       url: "/nfs-admin/manage-unix-permissions-windows-security-tab-concept.html"
   - title: NFS SVM 루트 볼륨에서 보안 스타일 구성
     url: "/nfs-admin/configure-security-styles-svm-root-volumes-task.html"
@@ -78,7 +78,7 @@ entries:
       url: "/nfs-admin/default-export-policy-svms-concept.html"
     - title: NFS 내보내기 규칙 작동 방식
       url: "/nfs-admin/export-rules-concept.html"
-    - title: 나열되지 않은 보안 유형을 사용하는 NFS 클라이언트에 대한 SVM 액세스 관리
+    - title: 보안 유형이 목록에 없는 NFS 클라이언트의 SVM 액세스에 대해 알아보십시오.
       url: "/nfs-admin/handle-clients-unlisted-security-type-concept.html"
     - title: 보안 유형이 NFS 클라이언트 액세스 수준을 결정하는 방식
       url: "/nfs-admin/security-types-client-access-levels-concept.html"
@@ -100,7 +100,7 @@ entries:
     url: "/nfs-admin/enable-nfs-over-tls-task.html"
   - title: 강력한 보안을 위해 NFS와 Kerberos 사용
     entries:
-    - title: Kerberos에 대한 NFS 지원
+    - title: Kerberos에 대한 NFS 지원에 대해 알아보기
       url: "/nfs-admin/ontap-support-kerberos-concept.html"
     - title: NFS로 Kerberos 구성 요구 사항
       url: "/nfs-admin/requirements-configuring-kerberos-concept.html"
@@ -149,7 +149,7 @@ entries:
       url: "/nfs-admin/commands-manage-name-mappings-reference-copy.html"
   - title: SVM에 대한 Windows NFS 클라이언트에 대한 액세스 활성화
     url: "/nfs-admin/enable-access-windows-nfs-clients-task.html"
-  - title: SVM에 대한 NFS 클라이언트에서 내보내기 표시를 활성화합니다.
+  - title: SVM에서 NFS 내보내기 보기에 대해 알아보십시오.
     url: "/nfs-admin/view-nfs-exports-svms-concept.html"
 - title: NFS를 사용하여 파일 액세스를 관리합니다
   entries:

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: nconnect, nfs, performance, tcp connections, nfsv3, nfsv4.2 nfsv4.1 
 summary: nconnect는 단일 마운트 지점에 대해 여러 TCP 연결을 활성화하여 NFS 성능을 향상시킵니다. 
 ---
-= NFS 성능을 위한 nconnect에 대해 알아보세요
+= ONTAP NFS 성능을 위한 nconnect에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

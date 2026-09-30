@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, support, kerberos 
 summary: Kerberos는 클라이언트/서버 애플리케이션에 강력하고 안전한 인증을 제공합니다. 인증은 서버에 사용자 및 프로세스 ID를 확인하는 역할을 합니다. ONTAP 환경에서 Kerberos는 스토리지 가상 머신과 NFS 클라이언트 간의 인증을 제공합니다. 
 ---
-= Kerberos에 대한 ONTAP NFS 지원
+= Kerberos에 대한 ONTAP NFS 지원에 대해 알아보십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

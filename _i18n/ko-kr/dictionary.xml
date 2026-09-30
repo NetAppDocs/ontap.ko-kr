@@ -7062,8 +7062,6 @@
   <block id="da4ef7996976ab72fbc716588197e890" category="list-text">TLSv1.2</block>
   <block id="d2ae6a2b8f15c58278eda822eb385993" category="paragraph">SSL FIPS 모드가 활성화되면 ONTAP에서 외부 클라이언트 또는 ONTAP 외부의 서버 구성 요소로의 SSL 통신은 SSL에 FIPS 호환 암호화를 사용합니다.</block>
   <block id="0ea2072beb9f400d932bd498fbb96cd4" category="paragraph">관리자 계정이 SSH 공개 키로 SVM에 액세스하려면 SSL FIPS 모드를 활성화하기 전에 호스트 키 알고리즘이 지원되는지 확인해야 합니다.</block>
-  <block id="867ca14e5d9b5a580daa85dadda78838" category="inline-link-macro">SSH 공개 키 계정을 활성화합니다</block>
-  <block id="6798a4565d3f1428d7af302e7e458815" category="paragraph">자세한 내용은 을 참조하십시오 <block ref="1014169d0a437f6a66a8b0b2e3311ef9" category="inline-link-macro-rx"></block>.</block>
   <block id="7e81ab2ce26adee31985d20a88b53af5" category="section-title">FIPS를 사용하도록 설정합니다</block>
   <block id="1462be8ce6374aaa61002b50f31e52ad" category="paragraph">모든 보안 사용자는 시스템 설치 또는 업그레이드 직후 보안 구성을 조정하는 것이 좋습니다. SSL FIPS 모드가 활성화되면 ONTAP에서 외부 클라이언트 또는 ONTAP 외부의 서버 구성 요소로의 SSL 통신은 SSL에 FIPS 호환 암호화를 사용합니다.</block>
   <block id="ebaa6cc4eaa0e29ab0405efdff7acd7d" category="list-text">FIPS 활성화:</block>
@@ -8733,7 +8731,6 @@
   <block id="58dc7db50a2e11a9de9e6cc092c59d4d" category="section-title">ONTAP 중재자</block>
   <block id="3b30105a203ed83946eb39d6bdd028a3" category="section-title">대용량 LUN 및 대용량 볼륨</block>
   <block id="e20f4ea19c0d400106eb06d931297737" category="summary">security login create 명령을 사용하여 LDAP 또는 NIS 사용자 계정을 설정하여 admin 또는 data SVM에 액세스할 수 있습니다. SVM에 대한 LDAP 또는 NIS 서버 액세스를 구성하지 않은 경우, 계정이 SVM에 액세스하려면 먼저 액세스 권한을 구성해야 합니다.</block>
-  <block id="5c343bac186f45070393986b0b5a718d" category="doc">LDAP 또는 NIS 계정 액세스를 설정합니다</block>
   <block id="7389f842ca82d4a5172438293da6e19f" category="list-text">그룹 계정은 지원되지 않습니다.</block>
   <block id="b34c7bf05b72326bb3c267edd1af2816" category="list-text">계정이 SVM에 액세스하려면 먼저 SVM에 대한 LDAP 또는 NIS 서버 액세스를 구성해야 합니다.</block>
   <block id="4b948eb4a908e2cfc83ee59b11cd21d8" category="inline-xref-macro">LDAP 또는 NIS 서버 액세스를 구성합니다</block>
@@ -8851,7 +8848,6 @@
   <block id="78e0961570c6a6544c7acbc886ba11cd" category="paragraph">ONTAP 9.3부터 SAML(Security Assertion Markup Language) 인증은 서비스 프로세서 인프라, ONTAP API 또는 System Manager 웹 서비스를 사용하여 관리 SVM에 액세스하는 데 사용할 수 있습니다.</block>
   <block id="e829750af982703703b8d70dd227f7a7" category="list-text">ONTAP 9.4부터 SSH MFA를 LDAP 또는 NIS 서버의 원격 사용자에게 사용할 수 있습니다. nsswitch 및 공개 키를 사용한 인증이 지원됩니다.</block>
   <block id="b64ec364c80c2d4aee25b57c6c0fa426" category="summary">security login create 명령을 사용하여 관리자 계정이 admin 또는 data SVM에 암호를 사용하여 액세스할 수 있습니다. 명령을 입력하면 암호를 묻는 메시지가 표시됩니다.</block>
-  <block id="dcdecb1c24bb75d1a27a67328987cfda" category="doc">암호 계정 액세스를 활성화합니다</block>
   <block id="72c68d4f261d518afe2e3e1607c6d25c" category="list-text">로컬 관리자 계정에서 암호를 사용하여 SVM에 액세스:</block>
   <block id="a96fd21c5e0b5205eda068a0116ba997" category="paragraph">'보안 로그인 생성 - vserver SVM_name -user -or -group -name user_or_group_name -application application application -AuthMethod authentication_method -role role role-comment'</block>
   <block id="a8bb1c51e6942d916b2b2a098546b00a" category="paragraph">다음 명령을 사용하면 미리 정의된 백업 역할을 가진 클러스터 관리자 계정 admin1이 암호를 사용하여 SVM "engCluster"에 액세스할 수 있습니다. 명령을 입력하면 암호를 묻는 메시지가 표시됩니다.</block>
@@ -8918,7 +8914,6 @@
   <block id="d22ac771658c5f5f74e34dcb5e0af7cb" category="paragraph">'보안'</block>
   <block id="6496d9e8b41339f4a1d4c75d4c12100d" category="paragraph">AutoSupport 역할은 AutoSupport OnDemand가 사용하는 미리 정의된 AutoSupport 계정에 할당됩니다. ONTAP에서는 AutoSupport 계정을 수정하거나 삭제할 수 없습니다. 또한 ONTAP에서는 다른 사용자 계정에 'AutoSupport' 역할을 할당할 수 없습니다.</block>
   <block id="75ae28c91581d3974b59255fa27e6293" category="summary">보안 로그인 create 명령을 사용하여 관리자 계정이 SSL 인증서를 통해 admin 또는 data SVM에 액세스할 수 있도록 할 수 있습니다.</block>
-  <block id="ee656f2f2c9c7f1263f29c30e18577a8" category="doc">SSL 인증서 계정을 활성화합니다</block>
   <block id="7a779475aa72fdb4528af2965cf6a04d" category="list-text">계정이 SVM에 액세스하려면 CA 서명 서버 디지털 인증서를 설치해야 합니다.</block>
   <block id="2a8bee20657b6479a8f53ebc9bba0a0a" category="inline-xref-macro">CA 서명 서버 인증서 생성 및 설치</block>
   <block id="448d62f1644703030abc6bde2a99006f" category="paragraph"><block ref="448d62f1644703030abc6bde2a99006f" category="inline-xref-macro-rx"></block></block>
@@ -8954,7 +8949,6 @@
   <block id="b928ee786597c3bb248d80e1aad8b534" category="paragraph">사용자가 인증을 받으려면 SVM이 실행 중이어야 합니다.</block>
   <block id="578b3afe159773bba491c1cd8f64a9c7" category="summary">계정 액세스를 설정한 방법에 따라 공개 키를 로컬 계정에 연결하거나, CA 서명 서버 디지털 인증서를 설치하거나, AD, LDAP 또는 NIS 액세스를 구성해야 할 수 있습니다. 계정 액세스를 활성화하기 전이나 후에 이러한 모든 작업을 수행할 수 있습니다.</block>
   <block id="2b9276619081ab4f713281a52124f41e" category="summary">보안 로그인 create 명령을 사용하여 AD(Active Directory) 사용자 또는 그룹 계정을 활성화하여 admin 또는 data SVM에 액세스할 수 있습니다. AD 그룹의 모든 사용자는 그룹에 할당된 역할을 통해 SVM에 액세스할 수 있습니다.</block>
-  <block id="c4e6f59381391a668aa6d121e81fd90f" category="doc">Active Directory 계정 액세스를 설정합니다</block>
   <block id="4aff72ca6c9009c22d78b8bad43fa88c" category="list-text">클러스터 시간은 AD 도메인 컨트롤러에서 5분 이내에 에 동기화되어야 합니다.</block>
   <block id="0666611bd84fd2b277e9d3c1c9b4e897" category="list-text">계정이 SVM에 액세스하려면 먼저 클러스터 또는 SVM에 대한 AD 도메인 컨트롤러 액세스를 구성해야 합니다.</block>
   <block id="6ff066b515d43d65fa3c1bffe5cd1f93" category="inline-xref-macro">Active Directory 도메인 컨트롤러 액세스 구성</block>
@@ -13278,7 +13272,6 @@
   <block id="5838fc341b4eb13a36a1e148fd142f5c" category="summary">SMB를 통한 데이터 전송을 위한 SMB 암호화는 SMB 서버에서 활성화 또는 비활성화할 수 있는 향상된 보안 기능입니다. 공유 속성 설정을 통해 공유별로 원하는 SMB 암호화 설정을 구성할 수도 있습니다.</block>
   <block id="36a7ca5a03453e1bb047b398b8969544" category="paragraph">암호화된 SMB 세션을 생성하려면 SMB 클라이언트가 SMB 암호화를 지원해야 합니다. Windows Server 2012 및 Windows 8부터 시작되는 Windows 클라이언트는 SMB 암호화를 지원합니다.</block>
   <block id="cb98983bb71caa730c4a4617f8b7bfc9" category="paragraph">SVM의 SMB 암호화는 두 가지 설정을 통해 제어됩니다.</block>
-  <block id="fbf4c91a07aafe08fdc37d74ebf4c46e" category="paragraph">SVM의 모든 데이터에 액세스하려면 암호화를 사용할지, 선택한 공유에서만 데이터에 액세스하려면 SMB 암호화가 필요한지 여부를 결정할 수 있습니다. SVM 레벨 설정이 공유 레벨 설정보다 우선합니다.</block>
   <block id="522046c99210aba210cc92abac215b88" category="paragraph">효과적인 SMB 암호화 구성은 두 가지 설정의 조합에 따라 달라지며 다음 표에 설명되어 있습니다.</block>
   <block id="7c83e3c0eaac2c3ff793fef413359177" category="cell">SMB 서버 SMB 암호화가 활성화되었습니다</block>
   <block id="4aa1a548a8bf0c76d1316af9f99f38e7" category="cell">공유 암호화 데이터 설정이 활성화되었습니다</block>
@@ -13287,7 +13280,6 @@
   <block id="f8320b26d30ab433c5a54546d21f414c" category="paragraph">거짓</block>
   <block id="7edeb585bb98bb235e61ac8e20474022" category="paragraph">SVM의 모든 공유에 대해 서버 레벨 암호화가 활성화됩니다. 이 구성을 사용하면 전체 SMB 세션에 대해 암호화가 수행됩니다.</block>
   <block id="c13773008aa8c3beb0c3ab80c7577f97" category="paragraph">공유 레벨 암호화와 관계없이 SVM의 모든 공유에 대해 서버 레벨 암호화가 활성화됩니다. 이 구성을 사용하면 전체 SMB 세션에 대해 암호화가 수행됩니다.</block>
-  <block id="1a49743c4d79152b4e4fba2c28c77246" category="paragraph">특정 공유에 대해 공유 수준 암호화가 설정됩니다. 이 구성을 사용하면 트리 연결로부터 암호화가 수행됩니다.</block>
   <block id="4d4dbbf66878d85842ab496618993b7a" category="paragraph">암호화가 활성화되지 않았습니다.</block>
   <block id="aabd38899877461dea173ad482ba033e" category="summary">모든 GPO(그룹 정책 개체)가 CIFS 지원 SVM(스토리지 가상 머신)에 적용되는 것은 아니지만 SVM은 관련 GPO 세트를 인식하고 처리할 수 있습니다.</block>
   <block id="12e585a6ec1f2e8f82c7736929b8f0f6" category="paragraph">현재 SVM에서 지원되는 GPO는 다음과 같습니다.</block>
@@ -19729,7 +19721,6 @@
   <block id="6938890caf9d395a7a6d8548fd3f5367" category="paragraph">모드 비트를 변경할 때 NFSv4 ACL을 보존하고 삭제합니다</block>
   <block id="5a5967950d30c3d8fffb28bb70fe8de9" category="paragraph">'vserver nfs modify -vserver vserver_name -v4-acl-preserve disabled'</block>
   <block id="f68307c9ea6ca2a12530d82b1a3d1aee" category="summary">ONTAP 9.9.1부터 NFS 보안 레이블을 활성화할 수 있습니다. 기본적으로 비활성화되어 있습니다.</block>
-  <block id="06284c0f52c002600ed275a23dbbc182" category="doc">NFS v4.2 보안 레이블을 사용하도록 설정합니다</block>
   <block id="4997f9e3f8a779d977a828aa98eced32" category="paragraph">NFS v4.2 보안 레이블에서 ONTAP NFS 서버는 MAC(Mandatory Access Control)를 인식하여 클라이언트가 전송한 sec_label 특성을 저장 및 검색합니다.</block>
   <block id="dfae8df026084b5d5bf65d1cf9d3b880" category="inline-link">RFC7240</block>
   <block id="32e67246269a60a1d9d3d9bddb715a5e" category="paragraph">NFS v4.2 보안 레이블은 현재 NDMP 덤프 작업에 지원되지 않습니다. 파일 또는 디렉터리에서 보안 레이블이 발견되면 덤프가 실패합니다.</block>
@@ -35024,8 +35015,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="559bcdc0d21544cc2151ff0e080a0d13" category="paragraph">각 ONTAP 릴리즈에서 사용할 수 있는 기능에 대한 자세한 내용은 을 <block ref="77f97c332a7550736481d10499d62d42" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="0248eceb183034c82899c7bc91d5d37c" category="inline-link">내부 ID</block>
   <block id="10503baa41dc75278a6c9d91871d4b60" category="list-text"><block ref="10503baa41dc75278a6c9d91871d4b60" category="inline-link-rx"></block></block>
-  <block id="7e3cf0a4e3f3a37f43962db211a565e2" category="summary">System Manager 사용자에 대해 WebAuthn MFA를 사용하도록 설정한 경우 언제든지 사용하지 않도록 설정할 수 있습니다.</block>
-  <block id="40f28ad7b89b8abba4ccff6ca5a3fab1" category="doc">ONTAP 시스템 관리자 사용자를 위한 WebAuthn MFA를 비활성화합니다</block>
   <block id="05146a645efd798d788b047c46b74b82" category="paragraph">ONTAP 관리자는 System Manager 또는 ONTAP CLI를 사용하여 사용자 또는 그룹을 편집하여 사용자 또는 그룹에 대해 WebAuthn MFA를 사용하지 않도록 설정할 수 있습니다.</block>
   <block id="c8f249cb1c473c52017ac4473765f3f5" category="section-title">기존 사용자 또는 그룹에 대해 WebAuthn MFA를 비활성화합니다</block>
   <block id="c665a9b65333e861bed9e181561de9cf" category="paragraph">언제든지 기존 사용자 또는 그룹에 대해 WebAuthn MFA를 비활성화할 수 있습니다.</block>
@@ -35035,7 +35024,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ec52f70d2b7f872006922fac67279593" category="list-text">해당 사용자의 * MFA for HTTP * 열에서 * Disabled * 를 선택합니다.</block>
   <block id="61e091c7bb8b95844270c6e3d78785e1" category="list-text">기존 사용자 또는 그룹을 수정하여 해당 사용자 또는 그룹에 대해 WebAuthn MFA를 비활성화합니다.</block>
   <block id="28ed41b59fff4f2a7c9f8889a441f091" category="paragraph">다음 예에서는 두 번째 인증 방법으로 "none"을 선택하여 WebAuthn MFA를 사용할 수 없습니다.</block>
-  <block id="30816e8487545be91004a16bf7f19cee" category="summary">System Manager 사용자에 대해 WebAuthn MFA를 활성화할 수 있습니다.</block>
   <block id="1cde5ea3700c45129ed03c7e5b7eab30" category="doc">ONTAP 시스템 관리자 사용자 또는 그룹에 대해 WebAuthn MFA를 활성화합니다</block>
   <block id="142c100b8df60f8ef5398ededcd38c0b" category="paragraph">ONTAP 관리자는 WebAuthn MFA 옵션이 활성화된 새 사용자 또는 그룹을 추가하거나 기존 사용자 또는 그룹에 대한 옵션을 활성화하여 시스템 관리자 사용자 또는 그룹에 대해 WebAuthn MFA를 활성화할 수 있습니다.</block>
   <block id="992b9060d1a21f6664f147d248987d85" category="admonition">WebAuthn MFA를 사용자 또는 그룹에 대한 두 번째 인증 방법으로 활성화하면 사용자(또는 해당 그룹의 모든 사용자)는 다음에 System Manager에 로그인할 때 하드웨어 FIDO2 장치를 등록하라는 메시지가 표시됩니다. 이 등록은 사용자의 로컬 운영 체제에 의해 처리되며, 일반적으로 보안 키 삽입, 암호 작성 및 보안 키(지원되는 경우)로 구성됩니다.</block>
@@ -39362,30 +39350,20 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="263a1c38069d40d9fa3e864180dea646" category="paragraph">에 대한 자세한 내용은<block ref="21f6ddcfa2a91a11a34fd9420202ebb0" prefix=" " category="inline-code"></block> <block ref="c82a2a0494886a9ac9c6273371b0ec6e" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="bb75091ba007335bd9afbb8d883b0b9b" category="paragraph">에 대한 자세한 내용은<block ref="19d251a00b2284e741bd4f0d0afd9187" prefix=" " category="inline-code"></block> <block ref="229fdfbd188344ea7ca812422411bcff" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="41b3902b959a2ad7906ea05cf4113484" category="doc">TOTP를 사용하여 MFA에 대한 로컬 ONTAP 사용자 계정을 구성합니다</block>
-  <block id="a66e04098e2ab8f7cfc3680b048254c9" category="doc">로컬 ONTAP 계정 액세스 설정 에 대해 자세히 알아보십시오</block>
-  <block id="e8f64c2c9954152b2bdf07515fefcbf3" category="doc">ONTAP 로그인 계정 생성에 대해 자세히 알아봅니다</block>
   <block id="3d6d3e118d028be966a1cf47484c4551" category="doc">ONTAP 관리자를 위한 사용자 지정 역할 정의</block>
   <block id="6589b3901355733e5ad4e3d363c71d93" category="doc">ONTAP 사용자 계정에 대해 TOTP 비밀 키를 비활성화합니다</block>
   <block id="7882509862ba32cc22761393e519482a" category="doc">ONTAP 동적 인증에 대해 알아보십시오</block>
   <block id="27e5aeb0225e5a43e4c8c17f706a0a14" category="doc">ONTAP에서 Active Directory 도메인 컨트롤러 액세스를 구성합니다</block>
   <block id="32910885c0690fde8e509dd185ad2a9e" category="doc">ONTAP에서 LDAP 또는 NIS 서버 액세스를 구성합니다</block>
-  <block id="da7599bcceca45d5f685a0c9ca169dd1" category="doc">ONTAP 계정 암호 액세스를 활성화합니다</block>
-  <block id="ae4f291d1f8d2cade886134f29934234" category="doc">ONTAP 계정 SSH 공개 키 액세스를 설정합니다</block>
-  <block id="0dbbb769477ea35b9dad3fdfc8819021" category="doc">SSL 인증서 ONTAP 계정 액세스를 활성화합니다</block>
   <block id="7ee9ee242518449dcf7e6e6cd8802b01" category="doc">ONTAP 관리자 계정 암호에 SHA-2를 적용합니다</block>
-  <block id="28a1703755e64561b8fda9565d58a607" category="doc">Active Directory ONTAP 계정 액세스를 설정합니다</block>
-  <block id="77a59bed2a708196d33b89ed61fcffd7" category="doc">LDAP 또는 NIS ONTAP 계정 액세스를 설정합니다</block>
-  <block id="efded7b91d82eab9d5c40b807e013a5d" category="doc">ONTAP의 관리자 인증 및 RBAC에 대해 알아봅니다</block>
   <block id="e37cca0fa7c8107fb5020cf4582f3929" category="doc">ONTAP에서 CA 서명 서버 인증서를 생성하고 설치합니다</block>
   <block id="84c5c2dbf513ad73211eaebf59294d70" category="doc">ONTAP 관리자 계정을 잠그고 잠금 해제합니다</block>
   <block id="f06ceb86c76c00a5f84124add864d677" category="paragraph">에 대한 자세한 내용은<block ref="6d7251ae5475e16e9e5ec577e02053f0" prefix=" " category="inline-code"></block> <block ref="7d8e7945d2f27f170ed22fffd26bbec5" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="7fdc5123a30b2579de6053adc223e97a" category="paragraph">에 대한 자세한 내용은<block ref="5ab25ced9d08587835a725d4acd0f67a" prefix=" " category="inline-code"></block> <block ref="fb81c8f374068676e016052af786f1b5" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
-  <block id="84d455f16410e21a7d8a99d0696b6626" category="doc">ONTAP 액세스 제어 역할 관리에 대해 알아봅니다</block>
   <block id="7d2851cca28635a1e83630f7d2e3fc63" category="doc">System Manager를 사용하여 ONTAP 인증서를 관리합니다</block>
   <block id="8cf19460003143ed064c6aab24b095e2" category="doc">ONTAP에서 실패한 로그인 시도를 관리합니다</block>
   <block id="8363881203abcf7de1117cd20fc62aa8" category="doc">공개 키를 ONTAP 관리자 계정에 연결합니다</block>
   <block id="72bc3f537831884440f979c10a207220" category="doc">ONTAP 관리자를 위한 SSH 공개 키 및 X.509 인증서를 관리합니다</block>
-  <block id="0f3cdf9633a699fa4f43e2c8e9656d4f" category="doc">ONTAP 관리자 계정 관리에 대해 자세히 알아봅니다</block>
   <block id="2c52e300dd7c4d7e5ea4d82639570c44" category="doc">ONTAP 다단계 인증에 대해 알아보십시오</block>
   <block id="69e8797f69c890582d2b0a2517c5cf78" category="doc">ONTAP 관리자에게 할당된 역할을 수정합니다</block>
   <block id="94849f3183cc3481526abab203c609d5" category="doc">ONTAP 클러스터 관리자를 위한 사전 정의된 역할입니다</block>
@@ -39412,7 +39390,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="30c17615411a43f0171558d0b98fc08d" category="doc">ONTAP에서 보호된 작업에 대한 다중 관리자 인증 규칙을 관리합니다</block>
   <block id="fc8ec668f11d82899c1c858ce9802e13" category="doc">ONTAP에서 MAV 보호 작업의 실행을 요청합니다</block>
   <block id="2d6925174f7bbddecf74a9ae29cebb3f" category="list-text"><block ref="2d6925174f7bbddecf74a9ae29cebb3f" category="inline-link-macro-rx"></block></block>
-  <block id="1ebbcf74d0c9d4eb8e4e08e9d61c0472" category="list-text">새 관리자는 를 참조하십시오<block ref="49aa2718fcfbd2032534616da547261b" category="inline-link-macro-rx"></block>.</block>
   <block id="6af0f0b37b9eb32355779bdf893de900" category="doc">ONTAP MetroCluster 스위치오버 및 스위치백 중에는 포트 중첩을 방지합니다</block>
   <block id="91fa7663ae3c01bfb84aff944aa30dc1" category="doc">ONTAP MetroCluster 환경에서 지원되는 SAN 구성</block>
   <block id="405115d35513e856c4ff938d02ed0896" category="doc">iSCSI 구성에서 ONTAP 시스템과 함께 VLAN을 사용할 때의 이점</block>
@@ -39432,13 +39409,8 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d78b1d7ef526b065e6ce158de5a8d23b" category="list-text">선택적으로 작업 ID 상태를<block ref="6c98ee2e9624cc518197534e22d6c6c4" prefix=" " category="inline-code"></block> 확인하여 SnapMirror mediator add 명령이 성공적인지 확인합니다.</block>
   <block id="df1f9e08e7da11cf6556517e7c69293d" category="doc">System Manager를 사용하여 ONTAP 관리자 액세스 관리</block>
   <block id="22f0a4bba7a0b291ae6f1a0a53e5e9a0" category="doc">System Manager에서 발생하는 ONTAP 파일 액세스 문제 진단 및 해결</block>
-  <block id="bbbbe9907f76c7528070fe759863dca2" category="sidebar">관리자 인증 및 RBAC에 대해 자세히 알아보십시오</block>
-  <block id="4751af52a27fb49ac12b4bdbd4ad48b0" category="sidebar">로그인 계정 생성에 대해 자세히 알아봅니다</block>
-  <block id="16705045ee2e4366c2affd64cb4ff0a8" category="sidebar">로컬 계정 액세스 설정에 대해 자세히 알아봅니다</block>
   <block id="a004fc3da7218c87f738bfbf6719bc6b" category="sidebar">다단계 인증에 대해 알아보십시오</block>
-  <block id="f896fa4d5f45d9b750056c3a98f78702" category="sidebar">액세스 제어 역할 관리에 대해 알아봅니다</block>
   <block id="444b9584956824aa8d6e70833b691c06" category="sidebar">System Manager를 사용하여 관리자 액세스를 관리합니다</block>
-  <block id="a6eef18fcb433b5112bccbedd6452393" category="sidebar">관리자 계정 관리에 대해 자세히 알아봅니다</block>
   <block id="c5e8074727bade997ed4e8f1e8a44cce" category="sidebar">다중 관리자 인증에 대해 알아봅니다</block>
   <block id="a18aa89769f137622c8b6adbbf833490" category="sidebar">동적 인증에 대해 자세히 알아보십시오</block>
   <block id="e3052ecc7680a666a93d32f2e1ff3aa9" category="sidebar">SAN 구성에 대해 자세히 알아보십시오</block>
@@ -40970,9 +40942,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="39ef30a831bcb713310a3e08087fd484" category="sidebar">NAS 파일 액세스 제어에 대해 알아보세요</block>
   <block id="f9bb7359a4b4328e6e03bb20adf9bc21" category="sidebar">NAS SVM에 대한 인증 기반 제한에 대해 알아보세요.</block>
   <block id="ff9ca965250ac2c15b46f3e1c402429e" category="sidebar">NAS SVM에 대한 파일 기반 제한 사항에 대해 알아보세요.</block>
-  <block id="8974189a54e744d1fdaae6ee2a332a82" category="sidebar">NAS 클라이언트 인증에 대해 알아보세요</block>
   <block id="94750f4511fe469db0f1a80853cd0968" category="sidebar">ONTAP이 이름 서비스를 사용하는 방법을 알아보세요</block>
-  <block id="912a4d27ccec361ee7f26695e65f11ab" category="sidebar">NFS 클라이언트에서 SMB 파일 액세스 권한 부여</block>
   <block id="45fb4d56f14a75820d5f14cd0e7f496f" category="sidebar">지정된 연결 지점으로 NAS 볼륨 생성</block>
   <block id="84e03dcf4f9e091baa4220285baea4df" category="sidebar">특정 연결 지점 없이 NAS 볼륨 생성</block>
   <block id="6faa743a3dfdb63638804f02f4f02387" category="sidebar">NAS 네임스페이스에서 NFS 볼륨을 마운트하거나 마운트 해제합니다.</block>
@@ -40982,7 +40952,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="11aa5e09e8dce7aea8b182516ece8bc8" category="sidebar">NAS SVM에서 사용할 보안 스타일을 결정하세요.</block>
   <block id="f441a8f78ab32889f662dab2199e3c71" category="sidebar">NFS 보안 스타일 상속에 대해 알아보십시오</block>
   <block id="12a366acf7921f093f2c7aedbc3587b2" category="sidebar">NFS UNIX 권한 보존에 대해 알아보세요</block>
-  <block id="38495b44aa14e6c4558835e65eb0d7bf" category="sidebar">Windows 보안 탭을 사용하여 NFS SVM의 UNIX 권한 관리</block>
   <block id="ab480672b66047721b8ff94c7859ec9e" category="sidebar">NFS SVM 루트 볼륨에서 보안 스타일 구성</block>
   <block id="32aa272d3e120173128f7b2e5361cee6" category="sidebar">NFS FlexVol 볼륨에서 보안 스타일 구성</block>
   <block id="60b4e678c1b039beaff71d6c041a0cdc" category="sidebar">NFS qtrees에서 보안 스타일 구성</block>
@@ -40990,7 +40959,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d40766ded95048da12b5d5369ba1c9c3" category="sidebar">내보내기 정책이 NFS 볼륨 또는 Qtree에 대한 클라이언트 액세스를 제어하는 방법</block>
   <block id="aab83a47724086fa509b90ac4e018f59" category="sidebar">NFS SVM에 대한 기본 내보내기 정책</block>
   <block id="87612254c604060ba339c6a3dfde14ee" category="sidebar">NFS 내보내기 규칙 작동 방식</block>
-  <block id="93ad269b855d4cb15840a1b8a943870b" category="sidebar">나열되지 않은 보안 유형을 사용하는 NFS 클라이언트에 대한 SVM 액세스 관리</block>
   <block id="c5004703c2a4f03dea41df378e626e40" category="sidebar">보안 유형이 NFS 클라이언트 액세스 수준을 결정하는 방식</block>
   <block id="1eac3b347b605d57378cfe583a7c0dbc" category="sidebar">NFS 슈퍼유저 액세스 요청 관리에 대해 알아보세요</block>
   <block id="f451b6376b72e06a55d6b19c2fe437c1" category="sidebar">NFS 내보내기 정책 캐시에 대해 알아보세요</block>
@@ -40999,7 +40967,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="2afdb405d7909efcbd8152e09ea366cb" category="sidebar">NFS qtree에서 내보내기 정책 제거</block>
   <block id="27ecbb7ff12df142b292dd35feca3159" category="sidebar">qtree 파일 작업을 위한 NFS qtree ID 검증</block>
   <block id="89aaf53a37d62ddc9f954536414fe4f0" category="sidebar">NFS FlexVol 볼륨에 대한 정책 제한 및 중첩된 연결 내보내기</block>
-  <block id="6b38fe7491a1f0098a2bede3abce246c" category="sidebar">Kerberos에 대한 NFS 지원</block>
   <block id="91677b98c16dda245b856bbf4986e156" category="sidebar">NFS 이름 서비스 스위치 구성에 대해 알아보세요</block>
   <block id="f7fc6ea38158d5cc551bef34aef32682" category="sidebar">NFS SVM용 LDAP에 대해 알아보세요</block>
   <block id="90e90e6cfe52af95f37281a27dcd5d2c" category="sidebar">NFS SVM에 대한 LDAP 서명 및 봉인에 대해 알아보세요.</block>
@@ -41017,7 +40984,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b9e6f26e7de1ec3d2470ee547f8fdb3a" category="sidebar">NAS SVM의 기본 사용자 구성</block>
   <block id="8eb4cf4e828064b3bfcab0dbea322980" category="sidebar">NFS 이름 매핑을 관리하는 명령입니다</block>
   <block id="2f1b850b0c66974dbb8bd39513f3a1fc" category="sidebar">SVM에 대한 Windows NFS 클라이언트에 대한 액세스 활성화</block>
-  <block id="4f76092cc0a8d106b82c0b367332ec54" category="sidebar">SVM에 대한 NFS 클라이언트에서 내보내기 표시를 활성화합니다.</block>
   <block id="897759cf3304facceff4591ac0cfdaca" category="sidebar">SVM에 대한 pNFS 활성화 또는 비활성화</block>
   <block id="145c9127a7926d24df43e9cb7fad2b04" category="sidebar">SVM에 대한 TCP 및 UDP를 통한 NFS 액세스 제어</block>
   <block id="6713640548b5b3ab5126a7e3fc03af18" category="sidebar">SVM에 대한 예약되지 않은 포트에서 NFS 요청 제어</block>
@@ -41047,7 +41013,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="4e04a509cf76cf2043e470468048d44a" category="sidebar">NFS SVM의 읽기 전용 비트에 대해 알아보세요</block>
   <block id="aa186ce2bb9be06438417131fe0284c6" category="sidebar">NFS와 Windows가 공유 경로 구성 요소의 잠금을 처리하는 방식이 어떻게 다른지 알아보세요.</block>
   <block id="0274462549cbf26d1c2335f2c1d88661" category="sidebar">NFS SVM에 대한 잠금 정보 표시</block>
-  <block id="1b3a7d1b8c027f6ade432e144f117f50" category="sidebar">NFS SVM에 대한 파일 잠금 해제</block>
   <block id="55e8fda71ae78309b1a5e023651b7356" category="sidebar">FPolicy의 첫 번째 읽기 및 첫 번째 쓰기 필터가 NFS에서 작동하는 방식을 알아보세요.</block>
   <block id="8e7ae225d00c45237be649104ccfc3bb" category="sidebar">SVM에 대한 NFSv4.1 서버 구현 ID 수정</block>
   <block id="6c0777b469e1119da79bbd95ffa19976" category="sidebar">SVM에 대한 NFSv4 ACL 활성화의 이점에 대해 알아보세요.</block>
@@ -41189,7 +41154,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e360dcc6b8fcbc817c02ce3ff0add64f" category="doc">알 수 없는 UNIX 사용자의 ONTAP NTFS 볼륨 또는 qtree에 대한 NFS 액세스를 처리합니다.</block>
   <block id="091c6c896e3ed18ae5ae718478c4c8ef" category="doc">ONTAP NAS SVM에 대한 인증 기반 제한 사항에 대해 알아보세요.</block>
   <block id="72a969fdf2a16c03682383d3c9d86dd1" category="doc">ONTAP SVM에 대한 NFSv4 ACL 활성화의 이점에 대해 알아보세요.</block>
-  <block id="0f2893c971ef63bdaaad6044af0ada82" category="doc">ONTAP NFS SVM에 대한 파일 잠금 해제</block>
   <block id="55ab2419e871a23fb0bf0ad597ccb3b8" category="doc">ONTAP NFS 다중 프로토콜 환경에서 파일 및 디렉토리 이름의 대소문자 구분에 대해 알아보세요.</block>
   <block id="3d81ba3228d5284371a05b9aa763eccd" category="doc">ONTAP NFS SVM에 대한 다양한 운영 체제의 유효한 문자에 대해 알아보세요.</block>
   <block id="15a8e59c272d63047fcbb9578265f32c" category="doc">클라이언트 IP 주소가 ONTAP NFS 넷그룹의 멤버인지 확인하세요.</block>
@@ -41249,7 +41213,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6493cb0b01c915e6cc873e87b3ad66b4" category="doc">ONTAP NFS SVM의 프로토콜 간 파일 잠금에 대해 알아보세요.</block>
   <block id="5a94b4423519b12d5fce4337e6550bc5" category="doc">ONTAP NAS SVM에 대한 내보내기 정책 캐시 플러시</block>
   <block id="950c047d5b2d6a88860dee4e954babb1" category="doc">ONTAP FPolicy의 첫 번째 읽기 및 첫 번째 쓰기 필터가 NFS에서 작동하는 방식을 알아보세요.</block>
-  <block id="297225c9109e3539b7d25c1838d5a932" category="doc">나열되지 않은 보안 유형을 사용하는 NFS 클라이언트에 대한 ONTAP SVM 액세스 관리</block>
   <block id="41add3679165bb7a5c857cb50d301a41" category="doc">ONTAP NFS 슈퍼유저 액세스 요청 관리에 대해 알아보세요</block>
   <block id="f1b367b8f57d363dc316f2a6c1294b3b" category="doc">ONTAP NFS 하드 마운트에 대해 알아보세요</block>
   <block id="e83b8908fe25922a4bec3ade5951471c" category="doc">ONTAP NAS SVM에 대한 이름 매핑 구성에 대해 알아보세요.</block>
@@ -41262,7 +41225,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="2aa7ad3a366390e9ab0b0ee6d77c3f6e" category="doc">ONTAP NFS SVM의 로컬 UNIX 사용자, 그룹 및 그룹 멤버에 대한 제한</block>
   <block id="eafe9df575c5f1c6f1d03ba3e481c461" category="doc">ONTAP NFS SVM에 대한 로컬 UNIX 사용자 및 그룹에 대한 제한 관리</block>
   <block id="39a4781206a01f38242b347b49d30b48" category="doc">ONTAP NFSv4 스토어풀 한도 관리</block>
-  <block id="37d272ebfe6e0ea4e08c951be46f618a" category="doc">Windows 보안 탭을 사용하여 ONTAP NFS SVM에서 UNIX 권한 관리</block>
   <block id="cde8ee7969b6e7ee9a048054db00b4e2" category="doc">ONTAP SVM의 NFS 자격 증명 캐시 TTL(수명)을 수정하는 이유</block>
   <block id="2950ba78989026347a3bb7c00d91c9db" category="doc">ONTAP SVM에 대한 NFSv4 ACL의 최대 ACE 제한 수정</block>
   <block id="e6afe59c0c32be8fa73ac9752a5226a6" category="doc">ONTAP SVM에 대한 NFSv3 및 NFSv4 TCP 최대 전송 크기 수정</block>
@@ -41274,7 +41236,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d17ec462059653426b2392cd0d721f75" category="doc">ONTAP NAS SVM에 대한 이름 매핑에 대해 알아보세요</block>
   <block id="f3cd571b2d13ab6345a85e662c41c705" category="doc">ONTAP NAS SVM에 대한 이름 매핑 변환 규칙</block>
   <block id="caa2581cfc9c0dac30975898efd67e11" category="doc">ONTAP NAS 네임스페이스 및 연결 지점에 대해 알아보세요</block>
-  <block id="596c7009321491280c2507d10cf14728" category="doc">NAS 클라이언트에 대한 ONTAP 인증에 대해 알아보세요</block>
   <block id="ba98214146bd2788130d5519941758fa" category="doc">ONTAP NFS 자격 증명 캐시 작동 방식</block>
   <block id="8460d13fc0cb6259a6a2b12a2963a037" category="doc">ONTAP NFS 및 SMB 파일 및 디렉토리 명명 종속성에 대해 알아보세요.</block>
   <block id="77340cda292fa0965e99b5c2624e29bf" category="doc">ONTAP SVM의 NFSv3 및 NFSv4 성능 개선 사항과 TCP 전송 크기에 대해 알아보세요.</block>
@@ -41288,7 +41249,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6b602e914cd029cec0b4051a21724da1" category="doc">ONTAP NFS 이름 서비스 스위치 구성에 대해 자세히 알아보십시오</block>
   <block id="789b38050cba50a107ed694e927081a3" category="doc">ONTAP NFS UNIX 권한 보존에 대해 알아보세요</block>
   <block id="fb6981d8f70528dc3d42216a960ece0e" category="doc">ONTAP NAS SVM에 대한 파일 기반 제한 사항에 대해 알아보세요.</block>
-  <block id="41d73e9c4f32613cbd12d4f20434ac9a" category="doc">Kerberos에 대한 ONTAP NFS 지원</block>
   <block id="aa2f235134637d264209549a58fe8f22" category="doc">NFSv4.1에 대한 ONTAP 지원에 대해 알아보세요</block>
   <block id="6b359e5fa827e6b28702cbd82c9501c0" category="doc">NFSv4.2에 대한 ONTAP 지원에 대해 알아보세요</block>
   <block id="8fa8d4e58d0504f2559beacb06deb786" category="doc">병렬 NFS에 대한 ONTAP 지원에 대해 알아보세요</block>
@@ -41302,7 +41262,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e20c856b7c542a888b63938075382bde" category="doc">ONTAP 보안 유형이 NFS 클라이언트 액세스 수준을 결정하는 방식</block>
   <block id="2626060c3c129c2cdf785fe25ec44130" category="doc">ONTAP NFS FlexVol 볼륨의 보안 스타일 알아보기</block>
   <block id="e6c363f133d77d22ea132fffa99e92c4" category="doc">ONTAP SVM에서 NFS 파일 액세스 설정에 대해 알아보세요</block>
-  <block id="3c8e7d38e2ca7cbec5151b9df9af9568" category="doc">NFS 클라이언트에서 ONTAP SMB 파일 액세스 권한 부여</block>
   <block id="f39815bf99c463a16bd222b734071cfe" category="doc">ONTAP SVM에 대한 NFSv4 잠금 유예 기간 지정</block>
   <block id="1f07e5b3b328ce876990529529e374e6" category="doc">ONTAP SVM에 대한 NFSv4 잠금 임대 기간 지정</block>
   <block id="79e1520bfdc028f1d6273ecab22c8cc6" category="doc">NFSv4에 대한 ONTAP 사용자 ID 도메인을 지정합니다.</block>
@@ -41315,7 +41274,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6684f044a91cb56f002f219f2f6c7368" category="list-text">ONTAP 9.11.1부터 를 사용할 수 있습니다 <block ref="566bf2ea4fb781f09069e8cec79766b2" category="inline-link-macro-rx"></block></block>
   <block id="2f1a90ce78a50d3701ad02a1b1a5a548" category="doc">qtree 파일 작업에 대한 ONTAP NFS qtree ID 검증</block>
   <block id="45bbba627c18be9bbe69eff4ff0e50fe" category="doc">ONTAP NAS SVM에 대한 이름 서비스 연결 확인</block>
-  <block id="2ec7b3b0ae63168eeb9c379e90e61612" category="doc">ONTAP SVM에 대한 NFS 클라이언트에서 내보내기 표시 활성화</block>
   <block id="4f410c38a1fede6d9ae74b91a5642ad5" category="doc">ONTAP NFS 내보내기 정책에 규칙 추가</block>
   <block id="20565ee971e1a92390e5e11d237eb5b1" category="doc">ONTAP NFS 지원 SVM에 스토리지 용량을 추가하는 방법에 대해 알아보세요.</block>
   <block id="11e9ae658e1f3f34484857a16a984aac" category="doc">ONTAP NFS SVM의 로컬 UNIX 그룹에 사용자 추가</block>
@@ -41349,9 +41307,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="4ead3cbbf0f2c3fe7ff66f0e8bbaf7bf" category="doc">내보내기 정책을 사용하여 ONTAP NFS 액세스 보안에 대해 알아보세요.</block>
   <block id="f0a4eb1bd7e731da0701b3f86b47e623" category="doc">ONTAP CLI를 사용한 NFS 구성에 대해 알아보십시오</block>
   <block id="f78a033f65ed63bbac85a6797fccbdad" category="paragraph">다양한 ONTAP NFS 프로토콜 기능에 대한 자세한 내용은 를 참조하십시오<block ref="8067ac7a398a508933ed87320c6d6316" category="inline-link-macro-rx"></block>.</block>
-  <block id="efed120ed20a8ed6121755e52ed11e11" category="doc">보안 인증을 위해 ONTAP NFS와 함께 Kerberos를 사용하는 방법에 대해 알아보세요.</block>
   <block id="59f2e30655b7ab3941b07bd80185c8ab" category="doc">ONTAP NFS SVM의 URI에서 로컬 UNIX 그룹 로드</block>
-  <block id="8c2f53c79220473a8e64b3a24bb4984a" category="doc">ONTAP NFS SVM에 로컬 UNIX 사용자 목록 로드</block>
   <block id="9a7cf75457ed9deef9f963f17a52aecc" category="doc">ONTAP NFS SVM의 URI에서 넷그룹 로드</block>
   <block id="4dae52d078968d1b5e8c9699f3439a0b" category="doc">ONTAP SVM에서 NFS 클라이언트 액세스 열기</block>
   <block id="e483d81f589e3f736db0628b10d61c16" category="doc">ONTAP NFS 내보내기 규칙의 처리 순서를 관리합니다.</block>
@@ -42516,7 +42472,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1621315e48f5a5744e0f8ef9231ba9a9" category="paragraph">다음을 사용하여 새 그룹 매핑 구성을 정의할 수 있습니다. <block ref="0af9720ea2618924d295552979c380a9" prefix=" " category="inline-code"></block> 명령. 그룹 UUID와 이름은 권한 부여 서버 또는 SAML IdP의 구성과 일치해야 합니다. 자세히 알아보기 <block ref="0af9720ea2618924d295552979c380a9" prefix=" " category="inline-code"></block> 에서 <block ref="0d501dc7ac05ccd2ab22939e2b93bae7" category="inline-link-macro-rx"></block> .</block>
   <block id="fb9211b1921026c1e0445c42e7ffd3be" category="cell">권한 부여 서버나 SAML IdP에서 제공하는 그룹의 범용 고유 식별자를 지정합니다.</block>
   <block id="61fc992dd2cf4bbb4ff4dd7b0af00341" category="paragraph">다음은 ONTAP 그룹을 정의하는 CLI 명령의 예입니다. 샘플 액세스 토큰의 UUID 그룹을 사용합니다.</block>
-  <block id="df246997e96290e2dec60c20583255c0" category="paragraph">UUID 값을 사용하여 그룹을 나타내는 권한 부여 서버 또는 SAML IdP를 사용하는 경우, 그룹을 역할에 매핑할 수 있습니다. ONTAP 의 역할 기반 액세스 제어에 대한 자세한 내용은 다음을 참조하십시오. <block ref="8936b08b64e70b1307993978d9a9807f" category="inline-link-macro-rx"></block> . 주요 ONTAP CLI 작업은 아래와 같습니다. 명령을 실행하려면 ONTAP *admin* 권한 수준이 필요합니다.</block>
   <block id="407a21823950fd912067bcd6dfc5712b" category="inline-xref">그룹 UUID를 그룹 이름에 매핑</block>
   <block id="947c4210bc059680f3ca5f4299675ec5" category="admonition">먼저 해야 할 일은 <block ref="58c2d9a65579b3e7dd15dfb5da0666a1" category="inline-xref-macro-rx"></block> 그룹에 대해 생성된 고유 정수 ID를 검색합니다. 그룹을 역할에 매핑하려면 이 ID가 필요합니다.</block>
   <block id="457edf530085c158905eae2f08337382" category="paragraph">다음을 사용하여 새 역할 매핑을 정의할 수 있습니다. <block ref="8fb855f1182f182c6bff8aab55e574d2" prefix=" " category="inline-code"></block> 명령. 자세히 알아보기 <block ref="8fb855f1182f182c6bff8aab55e574d2" prefix=" " category="inline-code"></block> 에서 <block ref="cf92c0b7bfc327cf147a4baeda1b0d17" category="inline-link-macro-rx"></block> .</block>
@@ -42594,7 +42549,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="72ad8b43baa48459406b7b64e805aa8b" category="cell">감사자가 민감한 데이터나 로그를 검토할 수 있도록 일시적으로 읽기 전용 액세스 권한을 부여합니다.</block>
   <block id="1d262a875cbfa32252dbed6466b086ce" category="cell">특권 액세스 검토</block>
   <block id="e9141d719e1a134276760fef7f426951" category="cell">일시적으로 권한을 승격하여 권한 있는 접근 권한을 검토하고 보고합니다. 제한된 시간 동안 읽기 전용의 권한 승격된 접근 권한을 부여합니다.</block>
-  <block id="fb12795377da29e1a9143ccd3c87315f" category="doc">ONTAP 에서 JIT 권한 상승에 액세스</block>
   <block id="cb7556360a3ee3b27b84591a5da36095" category="inline-link-macro">JIT(Just-In-Time) 권한 상승 구성</block>
   <block id="de973be605c9b372917adb70dea9e1f2" category="paragraph">ONTAP 9.17.1부터 클러스터 관리자는 다음을 수행할 수 있습니다. <block ref="0cea5b8dfc8d8a10c26d710052cd82c0" category="inline-link-macro-rx"></block> ONTAP 사용자가 특정 작업을 수행할 수 있도록 일시적으로 권한을 상승시킬 수 있도록 합니다. JIT가 사용자에 대해 구성된 경우, 사용자는 작업을 수행하는 데 필요한 권한이 있는 역할로 일시적으로 권한을 상승시킬 수 있습니다. 세션이 만료되면 사용자는 원래 액세스 수준으로 돌아갑니다.</block>
   <block id="f8d8c743c08ee25e45230455bf844917" category="paragraph">클러스터 관리자는 사용자가 JIT 권한 상승에 액세스할 수 있는 기간을 구성할 수 있습니다. 예를 들어, 클러스터 관리자는 사용자 권한 상승에 대한 액세스를 세션당 30분(세션 유효 기간)으로 설정하고 30일(JIT 유효 기간) 동안 사용할 수 있도록 구성할 수 있습니다. 30일 동안 사용자는 필요한 만큼 권한을 상승시킬 수 있지만, 각 세션은 30분으로 제한됩니다.</block>
@@ -44766,7 +44720,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="2e7f910394df9e1c7dec5ab1501893a8" category="list-text"><block ref="2e7f910394df9e1c7dec5ab1501893a8" category="inline-link-macro-rx"></block></block>
   <block id="6e97139bd836d8d64b3e8cf5daa9e2b2" category="list-text"><block ref="6e97139bd836d8d64b3e8cf5daa9e2b2" category="inline-link-macro-rx"></block></block>
   <block id="e3e6624549bc9d691fc52be37e9f1ccb" category="paragraph">nconnect는 단일 마운트에 대해 여러 TCP 연결(최대 16개)을 허용하여 NFS 클라이언트 성능을 개선하고, IOPS가 증가함에 따라 단일 TCP 연결에서 발생할 수 있는 성능 병목 현상을 극복하는 데 도움이 됩니다.</block>
-  <block id="3d8481dd90467e7c10aec31b5dd30c9f" category="paragraph"><block ref="fe350784135027ee79c4a368b49b2350" category="inline-link-macro-rx"></block>.</block>
   <block id="c22b05bd0ab7c10f143109e892f15b3a" category="list-text"><block ref="c22b05bd0ab7c10f143109e892f15b3a" category="inline-link-macro-rx"></block></block>
   <block id="23e832f016b25042f077bf69d3f4c7f0" category="inline-link-macro">ONTAP Mediator 1.11에 대한 공지</block>
   <block id="b36e1b8d747340ff716228fd88522c06" category="inline-link-macro">ONTAP Mediator 1.10에 대한 공지</block>
@@ -45764,7 +45717,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1e31a948116a31df053c25f80161a63e" category="paragraph">SnapLock 보안 클록 데몬은 시간 편차를 감지하면 규정 준수 클록을 시스템 시간으로 변경합니다. 규정 준수 클록이 시스템 시간과 동기화되도록 시스템 시간을 수정하려는 모든 시도는 실패합니다. 규정 준수 클록은 시스템 시간이 NTP 시간과 동기화된 경우에만 시스템 시간과 동기화되기 때문입니다.</block>
   <block id="920e54ca0704a7b7738e88a2fbf2a762" category="paragraph">다단계 인증(MFA) 챌린지 백분율의 하한값입니다. 유효 범위는 0에서 99까지입니다. 100은 모든 요청을 거부하므로 유효하지 않습니다. 기본값은 0입니다.</block>
   <block id="33ed3d0e9570c74727b0087264b5962b" category="list-text">JIT 권한 상승은 비밀번호, nsswitch 또는 도메인 인증을 사용하여 로그인하는 사용자에게만 지원됩니다. 다단계 인증(MFA)은 JIT 권한 상승에 지원되지 않습니다.</block>
-  <block id="184f4468e2ac6feb83b69cd49e20a0a7" category="doc">ONTAP System Manager 사용자를 위한 WebAuthn 다중 요소 인증에 대해 알아보십시오</block>
   <block id="dd0613694c4903801da9f6c9e1fe6176" category="paragraph">ONTAP 9.16.1부터 관리자는 System Manager에 로그인하는 사용자에 대해 WebAuthn 다단계 인증(MFA)을 활성화할 수 있습니다. 이를 통해 FIDO2 키(예: YubiKey)를 두 번째 인증 형식으로 사용하여 System Manager에 로그인할 수 있습니다. 기본적으로 WebAuthn MFA는 신규 및 기존 ONTAP 사용자에 대해 비활성화되어 있습니다.</block>
   <block id="773f374a331ace5c44f3c412ba6da3c3" category="paragraph">ONTAP REST API에 대한 자세한 내용은<block ref="907ba1080e5f6d08e19a17478c952bee" category="inline-link-rx"></block>를 참조하십시오.</block>
   <block id="b71f58a9303bf9ba891a973e219c8ca9" category="list-text"><block ref="b71f58a9303bf9ba891a973e219c8ca9" category="inline-link-macro-rx"></block></block>
@@ -45792,7 +45744,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="195a1d7924b6fb2c86ecac475cf9590b" category="list-text"><block ref="195a1d7924b6fb2c86ecac475cf9590b" category="inline-link-rx"></block></block>
   <block id="c54f4ba2eaab2895498925362650b22c" category="inline-xref-macro">System Manager에서 피싱 방지 WebAuthn 다중 요소 인증 지원</block>
   <block id="46f6458f506300d9d341425c3679fd29" category="paragraph"><block ref="46f6458f506300d9d341425c3679fd29" category="inline-xref-macro-rx"></block></block>
-  <block id="2950882289817ec6601054282f5983af" category="sidebar">WebAuthn 다중 요소 인증에 대해 알아보세요</block>
   <block id="ac3d350e6da2a1acabce9a8a3fbb2369" category="list-text">FlexVol에서 FlexGroup 변환(변환 전에 ARP를 비활성화해야 합니다)</block>
   <block id="39256e8b85463e186dc7bbc4daac9a22" category="list-text">*소프트웨어 업데이트*에서 *사용*을 선택합니다.</block>
   <block id="da6fd13474496081e3f7bdfabff205c1" category="list-text">*자동 업데이트 설정*에서 각 업데이트 유형에 대해 수행할 작업을 선택하십시오.</block>
@@ -46742,7 +46693,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="dd1de069084225aab69d9bc43eb6d98d" category="list-text">IP 주소를 선택하고 *vsadmin* 사용자 이름 및 암호와 함께 SVM 관리자와 공유합니다.</block>
   <block id="d83a9957d2e7e8bff3c7060ec541a88c" category="list-title">관련 주제:</block>
   <block id="620cab87645b69e93582b0f39fb0e45a" category="list-text"><block ref="620cab87645b69e93582b0f39fb0e45a" category="inline-link-macro-rx"></block></block>
-  <block id="78351c34aafccbeee966e4622e915f59" category="list-text"><block ref="78351c34aafccbeee966e4622e915f59" category="inline-link-macro-rx"></block></block>
   <block id="46f0e777bc60b130320f32f1a1df2003" category="list-text"><block ref="46f0e777bc60b130320f32f1a1df2003" category="inline-link-macro-rx"></block></block>
   <block id="88b661b1628e6c5c925e260259bb0f84" category="summary">클러스터 관리자는 SVM 관리자에게 SVM을 모니터링하고 관리할 수 있는 권한을 부여할 수 있습니다. SVM 관리자는 ONTAP System Manager의 SVM 관리자 대시보드를 통해 SVM을 모니터링하고 관리할 수 있습니다.</block>
   <block id="cb0ec5546a3eb53ae88d35c850dd58e4" category="doc">System Manager를 사용하여 ONTAP SVM 관리 및 모니터링</block>
@@ -49218,4 +49168,48 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="4b3f04f153a5718b2eebf767c6a9e0e2" category="paragraph">ONTAP 9.13.1부터 ONTAP이 신뢰할 수 있는 도메인에 대한 사이트 정보를 검색할 수 없는 경우 SMB 서버 기본 사이트가 대체 사이트로 사용됩니다.</block>
   <block id="fa249bceea8e94d67631a24904b44112" category="paragraph"><block ref="5531f5394cad5bd741cf49e6c65dc0a9" prefix="" category="inline-code"></block></block>
   <block id="92a0c025a6008d1302b0fae2ca6809c5" category="paragraph">선택 사항: ONTAP 9.13.1부터 LIF에 사이트 멤버십이 없는 경우 기본 사이트로 사용되며, 신뢰 도메인 사이트 검색이 실패할 경우 대체 사이트로 사용됩니다.</block>
+  <block id="80d301145b150de6a2443c9e00a55383" category="inline-link-macro">ONTAP 액세스 제어 역할에 대해 알아보십시오.</block>
+  <block id="148798f15e44d851c6506d80e995de8e" category="paragraph">UUID 값을 사용하여 그룹을 나타내는 권한 부여 서버 또는 SAML IdP를 사용하는 경우 그룹을 역할에 매핑할 수 있습니다. ONTAP의 역할 기반 액세스 제어에 대한 자세한 내용은 <block ref="331690f3fc0277d8ed81468104d0fbf1" category="inline-link-macro-rx"></block>을 참조하십시오. 주요 ONTAP CLI 작업은 아래에 설명되어 있습니다. 이러한 명령을 실행하려면 ONTAP *admin* 권한 수준이어야 합니다.</block>
+  <block id="1e649b52631a29e30218b769632a8705" category="doc">로컬 ONTAP 관리자 계정 액세스에 대해 알아보세요.</block>
+  <block id="5ca29e8b85ce57bf1bc45e8be82e62dc" category="doc">ONTAP 관리자 로그인 계정에 대해 알아보십시오.</block>
+  <block id="662063519730f833021c65509753ecd3" category="doc">ONTAP에서 JIT 권한 상승 사용</block>
+  <block id="3891a356c802bfefb9c5059c920b28f0" category="doc">ONTAP 관리자 계정에 대한 암호 액세스 활성화</block>
+  <block id="f2372a9b82248282f41b85fd8e437467" category="doc">ONTAP 관리자 계정에 대한 SSH 공개 키 액세스 활성화</block>
+  <block id="bab670fc77098f9fdd516f4cfc293bda" category="doc">ONTAP 관리자 계정에 대한 SSL 인증서 액세스 활성화</block>
+  <block id="dbc1aabbc2386c65a0c61084b1143efb" category="doc">ONTAP 관리자 계정에 대한 Active Directory 액세스 활성화</block>
+  <block id="ddc40ea1d3d35b56c81c99a577cbf1ef" category="doc">ONTAP 관리자 계정에 대해 LDAP 또는 NIS 액세스를 활성화합니다</block>
+  <block id="d1ce02f895072b714d7c5261813b0e71" category="doc">ONTAP 관리자 계정에 대해 알아보기</block>
+  <block id="4ddc2e21fce9e7f7e0309a294a00136c" category="summary">WebAuthn MFA를 ONTAP System Manager 사용자 또는 그룹에 대해 활성화한 경우 언제든지 비활성화할 수 있습니다.</block>
+  <block id="88b89a6a1884ed294430e3044da5cc74" category="doc">ONTAP System Manager 사용자 또는 그룹에 대해 WebAuthn MFA 비활성화</block>
+  <block id="4e3647b7f66c03185bbefb323989d33b" category="summary">WebAuthn MFA를 ONTAP System Manager 사용자 또는 그룹에 대해 활성화할 수 있습니다.</block>
+  <block id="7358ca4b3f6a07cb12605950eb6b216e" category="doc">ONTAP System Manager 사용자를 위한 WebAuthn MFA에 대해 알아보기</block>
+  <block id="61e182f60c855eb3aaf051cf582736ad" category="paragraph">자세한 내용은 <block ref="43205314624ac8fe6da6ba5d6b0cdf74" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="b7339cf7c5dacbae726e54703ebed1b8" category="doc">ONTAP NFS SVM의 파일 잠금 해제</block>
+  <block id="537e9c8f19ff9cd4b6c8321514ca7f9c" category="doc">ONTAP SVM에 대해 NFSv4.2 보안 레이블 활성화</block>
+  <block id="508c46c8f5c9f2c570505b2918fbd8ed" category="doc">목록에 없는 보안 유형의 NFS 클라이언트에 대한 ONTAP SVM 액세스에 대해 알아보십시오.</block>
+  <block id="7f4c38a6b954d0a12124a18d1f3b37e7" category="list-text">새로운 관리자 사용자의 경우 <block ref="b23c238ae61c8ac4df9476ae2fa0c41c" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="f45e31b7d689e2f739507d88aa64c638" category="doc">Windows 보안 탭을 사용하여 ONTAP NFS SVM에서 UNIX 권한을 관리하는 방법에 대해 알아보십시오.</block>
+  <block id="2dfb17c25f78386c169996e1f9dea8a9" category="doc">ONTAP NFS 성능을 위한 nconnect에 대해 알아보기</block>
+  <block id="68647437c001c763eac259c1002759a1" category="doc">NFS 클라이언트를 위한 ONTAP 인증에 대해 알아보십시오.</block>
+  <block id="0afad07577f18402995cf88116a9980d" category="doc">Kerberos에 대한 ONTAP NFS 지원에 대해 알아보십시오</block>
+  <block id="f0e1ebf41f99ea5572476e5b3ee3077a" category="paragraph"><block ref="0d57ab48b2a6d27d2b628ecd068ed222" category="inline-link-macro-rx"></block>.</block>
+  <block id="90fbd59ea37beb758c1d6483a86b3ebc" category="doc">NFS 클라이언트에서 ONTAP SMB 파일 액세스에 대해 알아보기</block>
+  <block id="62b033cacfc937b881f2a90864c979ca" category="doc">ONTAP SVM에서 NFS 내보내기 보기에 대해 알아봅니다</block>
+  <block id="cbe8dd48c0c9f5a66c432a2cc0418e68" category="doc">ONTAP NFS에서 Kerberos를 사용하여 강력한 인증을 구현하는 방법에 대해 알아보십시오.</block>
+  <block id="401e4e41962c2275356be6f5e92bfa2e" category="doc">ONTAP NFS SVM의 URI에서 로컬 UNIX 사용자 로드</block>
+  <block id="c1f40e8242929de8a1fa1aee945f025d" category="paragraph">SVM의 모든 데이터에 대한 액세스에 암호화를 요구할지, 아니면 선택한 공유의 데이터에만 액세스하는 데 SMB 암호화를 요구할지 결정할 수 있습니다. <block ref="9f91b7eaf4e9a290d8d5b566b223f8c9" prefix=" " category="inline-code"></block> 공유 속성은 공유에 액세스할 때 SMB 암호화를 요구합니다. ONTAP 9.11.1부터 <block ref="a3f9cba321d9ccabfadb1c10f10753c3" prefix=" " category="inline-code"></block> 공유 속성을 사용하면 SMB2 클라이언트는 암호화 없이 공유에 액세스할 수 있으며, SMB3 클라이언트는 <block ref="9f91b7eaf4e9a290d8d5b566b223f8c9" prefix=" " category="inline-code"></block>이 활성화된 경우 계속 암호화를 사용합니다.</block>
+  <block id="32732d626c0cb3dcec10a8c476be4bcd" category="paragraph">SVM 수준 설정이 공유 수준 설정을 재정의합니다.</block>
+  <block id="49139917e92e9760af07e8a579dcf634" category="cell">공유 시 암호화되지 않은 액세스 허용 설정이 활성화되었습니다.</block>
+  <block id="4ccd908f661ba07b7bae3182f994c67e" category="paragraph">특정 공유에 대해 공유 수준 암호화가 활성화되었습니다. SMB3 클라이언트는 암호화를 사용하지만, <block ref="a3f9cba321d9ccabfadb1c10f10753c3" prefix=" " category="inline-code"></block> 속성이 활성화되어 있으므로 SMB2 클라이언트는 암호화 없이 공유에 액세스할 수 있습니다.</block>
+  <block id="14482a4e1d3e38fa55cb286bf8c78b4c" category="paragraph">암호화가 활성화되어 있지 않습니다. 이 <block ref="a3f9cba321d9ccabfadb1c10f10753c3" prefix=" " category="inline-code"></block> 속성은 <block ref="9f91b7eaf4e9a290d8d5b566b223f8c9" prefix=" " category="inline-code"></block>이 활성화되지 않으면 아무런 효과가 없습니다.</block>
+  <block id="c48b261ba7694e1a1608ed1b808419bb" category="admonition">해당 <block ref="a3f9cba321d9ccabfadb1c10f10753c3" prefix=" " category="inline-code"></block> 속성은 ONTAP 9.11.1부터 지원됩니다.</block>
+  <block id="9adb73c3845711a9282636a9f617bbad" category="admonition">SVM 수준의 SMB 암호화는 공유 수준 설정을 재정의합니다.</block>
+  <block id="5a168a08accfb4dd65aba60ec05472f0" category="list-text"><block ref="5a168a08accfb4dd65aba60ec05472f0" category="inline-link-macro-rx"></block></block>
+  <block id="ed2d87278235631e24dd9c82d3f9f53c" category="sidebar">NFS 클라이언트 인증에 대해 알아보기</block>
+  <block id="b38a18822a4e4a4ff4bc45e994b4c0cd" category="sidebar">NFS 클라이언트에서 SMB 파일 액세스에 대해 알아보세요.</block>
+  <block id="bd92f6252e0c86d739eb4057bf38c874" category="sidebar">Windows 보안 탭을 사용하여 NFS SVM에서 UNIX 권한을 관리하는 방법에 대해 알아보십시오.</block>
+  <block id="9efd295c486679d46763bc6f2659cad6" category="sidebar">보안 유형이 목록에 없는 NFS 클라이언트의 SVM 액세스에 대해 알아보십시오.</block>
+  <block id="32eaf6fafb46abd45a609d441e8042d6" category="sidebar">Kerberos에 대한 NFS 지원에 대해 알아보기</block>
+  <block id="698788341308159d92a37d69a372e00d" category="sidebar">SVM에서 NFS 내보내기 보기에 대해 알아보십시오.</block>
+  <block id="467bb322ee62000db215c6e298fd57c2" category="sidebar">NFS SVM에 대한 파일 잠금 해제</block>
 </blocks>
