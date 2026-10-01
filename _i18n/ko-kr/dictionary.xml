@@ -43562,7 +43562,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="5cb02725ee0cc30b6d0342504c7b7ad4" category="doc">ONTAP SnapLock 구성에 대해 알아보세요</block>
   <block id="aa0f7f82624e52a7bc6aae8291bfaf4d" category="doc">랜섬웨어 공격으로부터 보호하기 위해 ONTAP 스냅샷 잠금</block>
   <block id="223783aaf9d8cc664f5854db0ff073e8" category="doc">ONTAP SnapLock 설정 확인</block>
-  <block id="f6b55a27f5a0f373325149fa8afc6b4b" category="doc">ONTAP 일관성 그룹에 볼륨 추가 또는 제거</block>
   <block id="b30d3eb6344d9f346a04b893f38d07f9" category="summary">사이트 A에서 장애가 발생해도 사이트 B에서 계획되지 않은 ONTAP 클러스터 장애 조치가 발생하지 않습니다.</block>
   <block id="9341ecc8e59b8903f067cd77a3508dc4" category="doc">ONTAP SnapMirror 활성 동기화 관계 유형 변환</block>
   <block id="155af8c10a9c9d722d0dbd29847860e1" category="summary">ONTAP SnapMirror 관계 생성 및 일관성 그룹 초기화가 실패합니다.</block>
@@ -43572,7 +43571,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9d2eb27c0c71314991993f2821e93035" category="doc">ONTAP SnapMirror Active Sync 상호 운용성</block>
   <block id="ba348dde3947c2f06b825aa4327cf62d" category="doc">ONTAP SnapMirror Active Sync에 대한 개체 제한</block>
   <block id="276e6db0c51a81793a8d1c330acfedaf" category="doc">ONTAP SnapMirror 활성 동기화 작업 모니터링</block>
-  <block id="9d744a870b0a14f5e20beff9088cd263" category="doc">SnapMirror 활성 동기화 관계에서 ONTAP 클러스터의 계획된 장애 조치를 수행합니다.</block>
   <block id="d2bf0bf7c7c363504b82c8e872d2cb92" category="doc">계획된 ONTAP 클러스터 장애 조치가 실패했습니다.</block>
   <block id="568c8a40aacd2a4154aa3659a894c739" category="doc">계획되지 않은 자동 ONTAP 클러스터 장애 조치 작업에서 복구</block>
   <block id="0543ab6c242eb1f59c042d4e154659d2" category="doc">ONTAP SnapMirror Active Sync 구성 제거</block>
@@ -44676,8 +44674,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f4d8925052a756a5ee6010a7d2a0747d" category="cell">ONTAP 9.18.1 이상 팔로우<block ref="53509a359c86a7e0d6c2baf063f11e0c" category="inline-link-macro-rx"></block> ASA 에서 ASA r2 시스템으로 SVM 마이그레이션을 위해.</block>
   <block id="66bee2e543a60105b1a626e69dbafa5f" category="cell">10ms</block>
   <block id="2f877426a45270378a2a04f028801145" category="paragraph">SMB 마이그레이션은 중단을 초래하며 마이그레이션 후 클라이언트를 새로 고쳐야 합니다.</block>
-  <block id="24bfd1f3ad4e8b0b4da5915401273a33" category="doc">ONTAP SVM 마이그레이션 후 클라이언트를 수동으로 컷오버합니다.</block>
-  <block id="272a416f8718ca568b8b8edcc53348a5" category="doc">클라이언트 전환 후 소스 ONTAP SVM을 수동으로 제거합니다.</block>
   <block id="2e108963aad094f6b52a46279537af35" category="list-text">소스 정리를 위해 상태가 준비되었는지 확인하세요.</block>
   <block id="af08a9f622caffe162b22c3eb1dd2eb7" category="doc">ONTAP SVM 마이그레이션</block>
   <block id="15747b798496b85ae52c226d91f5595b" category="paragraph">이 절차는 FAS, AFF, ASA 시스템에 적용됩니다.  ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 따르세요.<block ref="53509a359c86a7e0d6c2baf063f11e0c" category="inline-link-macro-rx"></block> SVM을 마이그레이션하려면. ASA r2 시스템은 SAN 전용 고객에게 최적화된 간소화된 ONTAP 환경을 제공합니다.</block>
@@ -45506,8 +45502,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d02eefeeb043107d123bd42a30144127" category="list-text">스위치 모델에 대한 *설치* 설명서를 선택합니다.</block>
   <block id="b1424f9c5ab9aa36f2c653e9df73dc2a" category="list-text">*케이블 연결 및 구성 고려 사항 검토* 항목을 검색하여 스토리지 시스템에 대해 검토하십시오.</block>
   <block id="33eb18fbcde867f7c627cb3cc7b11001" category="list-text">하드웨어 요구 사항을 검토하고, 사이트를 준비하고, 하드웨어 구성 요소(컨트롤러, 스토리지 셸프 및 스위치)를 설치 및 케이블링하여 새 스토리지 시스템을 설치하고 구성하십시오. 자세한 내용은 다음 ONTAP 하드웨어 시스템 설명서를 참조하십시오.</block>
-  <block id="6476573ba5b973ad8ea01c57f5b30267" category="inline-link-macro">ASA 시스템</block>
-  <block id="60a872da35b90c45275fd74dd583b81d" category="list-text"><block ref="60a872da35b90c45275fd74dd583b81d" category="inline-link-macro-rx"></block></block>
   <block id="a2241aa2744ec50ba68a11b05edfa846" category="list-text"><block ref="a2241aa2744ec50ba68a11b05edfa846" category="inline-link-macro-rx"></block></block>
   <block id="76d4d65ac11114e948cdba5790db04c7" category="inline-link-macro">ASA R2 시스템</block>
   <block id="7d3fc3f2b73b691e5b9a641581715d66" category="list-text"><block ref="7d3fc3f2b73b691e5b9a641581715d66" category="inline-link-macro-rx"></block></block>
@@ -46155,7 +46149,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1db4e2b7ec0f466aee7e9958915bebf7" category="summary">할당량은 FlexVol 볼륨별 할당량 규칙에 정의됩니다. 이러한 할당량 규칙은 스토리지 가상 머신(SVM)에 대한 할당량 정책으로 통합되어 SVM의 각 볼륨에서 활성화됩니다.</block>
   <block id="c1e3be10e7e087f1dac7ea2f6baa22e6" category="summary">UNIX 클라이언트의 루트 사용자는 트리 할당량의 적용을 받지만 사용자 또는 그룹 할당량의 적용은 받지 않습니다. 따라서 루트 사용자는 할당량으로 인해 차단될 수 있는 작업을 다른 사용자를 대신하여 수행할 수 있습니다.</block>
   <block id="623c054952364970fb543a14045501d4" category="summary">ONTAP SnapMirror 액티브 싱크 네트워크 포트 요구 사항</block>
-  <block id="7375651611f00991b648b4a9ae04736e" category="doc">네트워크 포트 요구 사항</block>
   <block id="7319de10f2c51902038451778214b5cc" category="paragraph">SnapMirror 액티브 싱크 복제에는 몇 가지 네트워크 포트 요구 사항이 있습니다.</block>
   <block id="dfa92f8652e4ce340f7e9e0a3137bb94" category="paragraph">예를 들어, 복제에 참여하는 각 노드는 파트너 노드의 상태를 모니터링하고, 복제 활동을 제어하며, 데이터 자체도 복제되어야 합니다. 또한, ONTAP Mediator 또는 ONTAP Cloud Mediator는 쿼럼 서비스를 제공하고 장애 조치를 지원하기 위해 모든 노드와 통신해야 합니다. 이러한 모든 기능은 각각 다른 엔드포인트 및 포트 요구 사항을 가지고 있습니다.</block>
   <block id="3c4b91dd13df414be2e5256454de8641" category="section-title">클러스터 간/피어 링크를 사용한 노드 간 통신</block>
@@ -47819,7 +47812,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="da5e1209dcaae70899752d9fd030b927" category="paragraph"><block ref="da5e1209dcaae70899752d9fd030b927" category="inline-link-macro-rx"></block></block>
   <block id="866f8f434f4e81f8fad5c1db4b423b8c" category="list-text">SAN 전용: 필요한 LUN이 생성되어 igroup에 매핑되며, 이 igroup은 애플리케이션 호스트의 이니시에이터에 LUN을 매핑하는 데 사용됩니다.</block>
   <block id="909677a52ca0b42c88d57ed3a47a14a1" category="list-text">애플리케이션 호스트를 다시 스캔하여 새로운 LUN 또는 볼륨이 있는지 확인합니다.</block>
-  <block id="64c6f857c447a0294b9d1b57e1165c40" category="doc">기존 ONTAP SnapMirror SAN 관계를 SAN 관계에 대한 SnapMirror 액티브 싱크로 변환합니다</block>
   <block id="04faa57c0fa275e7eb9c4f61374da6f0" category="paragraph">SnapMirror 보호 기능을 구성한 경우 SAN 관계를 SnapMirror 액티브 동기화(SAN용)로 변환할 수 있습니다. ONTAP 9.15.1 버전부터는 대칭형 액티브/액티브 보호 기능을 사용하도록 관계를 변환할 수 있습니다.</block>
   <block id="79b9ec9dd640a377bd46b49ddef2dd65" category="inline-link-macro">SVM DR 관계를 SnapMirror 활성 동기화 관계로 변환합니다</block>
   <block id="e1b29289ff7f7cc54cf1b7bdbabc6eb0" category="paragraph">SVM-DR 관계를 NAS용 SnapMirror 활성 동기화 관계로 변환하는 방법에 대한 자세한 내용은 <block ref="11474f7d068d320ff9bef5cfc6b8e100" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -49212,4 +49204,29 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="32eaf6fafb46abd45a609d441e8042d6" category="sidebar">Kerberos에 대한 NFS 지원에 대해 알아보기</block>
   <block id="698788341308159d92a37d69a372e00d" category="sidebar">SVM에서 NFS 내보내기 보기에 대해 알아보십시오.</block>
   <block id="467bb322ee62000db215c6e298fd57c2" category="sidebar">NFS SVM에 대한 파일 잠금 해제</block>
+  <block id="bf73bb48746e7cc9122a96edf20af490" category="doc">ONTAP 일관성 그룹에서 볼륨 추가 또는 제거</block>
+  <block id="2321e1647725bb7ac2cd8e5d64683397" category="doc">ONTAP Cloud Mediator 구성 요구사항</block>
+  <block id="e69534f26535949e2f4c8f2ace16831d" category="doc">기존 ONTAP SnapMirror SAN 관계를 SnapMirror 액티브 동기화로 변환합니다</block>
+  <block id="8ddd474e124268199bb733b9360cbe01" category="doc">ONTAP SnapMirror 활성 동기화를 위한 네트워크 포트 요구 사항</block>
+  <block id="3f1224a0d7a622f410eaf0419e8e3a34" category="doc">ONTAP SnapMirror 활성 동기화에서 계획된 페일오버를 수행합니다.</block>
+  <block id="278b69d7025b8d61a668b858d0bb58ae" category="doc">ONTAP SVM 마이그레이션 후 클라이언트를 수동으로 전환합니다</block>
+  <block id="005808d0c13764ecd44ab89b0c164ef2" category="doc">클라이언트 전환 후 소스 ONTAP SVM을 수동으로 제거합니다.</block>
+  <block id="f6c32351e562f6e9ea5e8f792950582c" category="doc">ONTAP 볼륨 마이그레이션 중 압축 유형 공존 지원</block>
+  <block id="8714e4dad62aa2068886c5c6f9682a1f" category="paragraph">ONTAP 시스템 간에 볼륨을 마이그레이션할 때 소스 볼륨이 대상 볼륨과 다른 데이터 압축 유형을 사용할 수 있습니다.</block>
+  <block id="8eafd3c4d31d8fe5e7e57cd2ea1f3d16" category="paragraph">지원되는 압축 유형에는 보조 압축, 적응형 8K 압축 및 온도 감응형 스토리지(TSSE)가 있습니다. 마이그레이션 중에 이러한 압축 유형은 대상 볼륨에서 다음과 같이 일시적으로 공존할 수 있습니다.</block>
+  <block id="3bd31d3bd9345d176c72069047a29177" category="cell">소스 압축 유형</block>
+  <block id="cb28df557f2f47f3a921f0fead41dca1" category="cell">대상 압축 유형</block>
+  <block id="fe8b2e5924acd48eefbf9fa274021f67" category="cell">마이그레이션을 위해 지원되는 공존</block>
+  <block id="5359bce7c5e136c8dca761661cc219f5" category="cell">애플리케이션 I/O 읽기/쓰기 크기</block>
+  <block id="0c7d6cf19426e01dcfa32434828ed266" category="cell">보조</block>
+  <block id="9a148ead3f76c1f965498fa354056435" category="cell">TSSE</block>
+  <block id="bd8d601466d33bb09092b292f114a489" category="cell">적응형 8K</block>
+  <block id="ae77f6dec12df535271278209b397bbc" category="paragraph-title">2차 및 적응형 8k 압축에서 TSSE 압축으로의 마이그레이션</block>
+  <block id="c94a6c4540f5371ac125bca1ef4c1514" category="paragraph">보조 볼륨 및 8k 적응형 볼륨은 마이그레이션 후 백그라운드 프로세스를 통해 또는 마이그레이션 중에 데이터가 대상 볼륨에 다시 기록될 때 점진적으로 TSSE로 변환됩니다.</block>
+  <block id="53cff828016eb894199fb677ed876778" category="paragraph">볼륨을 보조 또는 적응형 8K 압축에서 TSSE 압축으로 마이그레이션한 후, 기존의 모든 블록이 변환된 후에도<block ref="df899f2d908ec33afe1d01ee26b3dd47" prefix=" " category="inline-code"></block> 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로 유지되고, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.</block>
+  <block id="8da507d21afe5c07625ad95c77b98134" category="paragraph">보조 또는 적응형 8K 압축에서 변환된 볼륨에 기록된 새 데이터는 TSSE로 압축됩니다.</block>
+  <block id="b5156e0d72e33cdf926c06a6586a2870" category="paragraph-title">2차 압축에서 적응형 8k 압축으로의 마이그레이션</block>
+  <block id="c93c56132c6abbf052ea33895c457eea" category="paragraph">동일 볼륨에서 보조 8K 압축과 적응형 8K 압축을 동시에 사용하는 것은 지원되지 않습니다.</block>
+  <block id="f973fe66cbf27daa823139ea1a1195e2" category="inline-link-macro">2차 압축과 적응형 압축 사이를 이동합니다</block>
+  <block id="ab8fa4f8f86514969c699fc174e9a631" category="paragraph"><block ref="471c7baa6b3440cc5294ebd5e8ab9d96" category="inline-link-macro-rx"></block>하는 방법을 알아보십시오.</block>
 </blocks>

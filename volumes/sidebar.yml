@@ -236,6 +236,8 @@ entries:
     url: "/volumes/view-footprint-savings-task.html"
   - title: 볼륨에 대해 데이터 압축을 설정합니다
     url: "/volumes/enable-data-compression-volume-task.html"
+  - title: ONTAP 볼륨 마이그레이션 중 압축 유형 공존 지원
+    url: "/volumes/migration-compression-type-coexistence.html"
   - title: 보조 압축과 적응형 압축 간에 이동
     url: "/volumes/move-between-secondary-adaptive-compression-task.html"
   - title: 볼륨에 대한 데이터 압축을 비활성화합니다

@@ -4,7 +4,7 @@ permalink: snapmirror-active-sync/network-port-requirements.html
 keywords: SM-BC, SMBC, SM-AS, restrictions, firewall, network ports, snapmirror active sync 
 summary: ONTAP SnapMirror 액티브 싱크 네트워크 포트 요구 사항 
 ---
-= 네트워크 포트 요구 사항
+= ONTAP SnapMirror 활성 동기화를 위한 네트워크 포트 요구 사항
 :allow-uri-read: 
 :icons: font
 :linkattrs: 

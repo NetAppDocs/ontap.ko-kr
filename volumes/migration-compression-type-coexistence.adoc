@@ -1,0 +1,41 @@
+---
+permalink: volumes/migration-compression-type-coexistence.html 
+sidebar: sidebar 
+keywords: access control lists, flexclone files, flexclone luns, inheritance, ACL, ACLs, acl, acls, flexclone 
+summary: FlexClone 파일 및 FlexClone LUN은 부모 파일 및 LUN의 액세스 제어 목록을 상속합니다. 
+---
+= ONTAP 볼륨 마이그레이션 중 압축 유형 공존 지원
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 시스템 간에 볼륨을 마이그레이션할 때 소스 볼륨이 대상 볼륨과 다른 데이터 압축 유형을 사용할 수 있습니다.
+
+지원되는 압축 유형에는 보조 압축, 적응형 8K 압축 및 온도 감응형 스토리지(TSSE)가 있습니다. 마이그레이션 중에 이러한 압축 유형은 대상 볼륨에서 다음과 같이 일시적으로 공존할 수 있습니다.
+
+[cols="4"]
+|===
+| 소스 압축 유형 | 대상 압축 유형 | 마이그레이션을 위해 지원되는 공존 | 애플리케이션 I/O 읽기/쓰기 크기 
+
+
+| 보조 | TSSE | 예 | 자동 
+
+
+| 적응형 8K | TSSE | 예 | 자동 
+
+
+| 보조 | 적응형 8K | 아니요 | 지원되지 않습니다 
+|===
+.2차 및 적응형 8k 압축에서 TSSE 압축으로의 마이그레이션
+보조 볼륨 및 8k 적응형 볼륨은 마이그레이션 후 백그라운드 프로세스를 통해 또는 마이그레이션 중에 데이터가 대상 볼륨에 다시 기록될 때 점진적으로 TSSE로 변환됩니다.
+
+볼륨을 보조 또는 적응형 8K 압축에서 TSSE 압축으로 마이그레이션한 후, 기존의 모든 블록이 변환된 후에도 `volume efficiency show` 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로 유지되고, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.
+
+보조 또는 적응형 8K 압축에서 변환된 볼륨에 기록된 새 데이터는 TSSE로 압축됩니다.
+
+.2차 압축에서 적응형 8k 압축으로의 마이그레이션
+동일 볼륨에서 보조 8K 압축과 적응형 8K 압축을 동시에 사용하는 것은 지원되지 않습니다.
+
+link:move-between-secondary-adaptive-compression-task.html["2차 압축과 적응형 압축 사이를 이동합니다"]하는 방법을 알아보십시오.
