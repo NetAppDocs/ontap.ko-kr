@@ -29,6 +29,6 @@ AES(Advanced Encryption Standard)는 전자 데이터의 보안을 위한 암호
 
 * SVM 레벨 Kerberos 영역 구성
 +
-이제 SVM 관리자가 SVM 레벨에서 Kerberos 영역 구성을 생성할 수 있습니다. 즉, SVM 관리자는 더 이상 Kerberos 영역 구성을 위해 클러스터 관리자에 의존하지 않고 다중 테넌시 환경에서 개별 Kerberos 영역 구성을 생성할 수 있습니다.
+SVM 관리자는 SVM 수준에서 Kerberos 영역 구성을 생성할 수 있습니다. 즉, SVM 관리자는 Kerberos 영역 구성을 위해 더 이상 클러스터 관리자에게 의존할 필요가 없으며, 멀티 테넌시(multi-tenancy) 환경에서 개별 Kerberos 영역 구성을 생성할 수 있습니다.
 
 

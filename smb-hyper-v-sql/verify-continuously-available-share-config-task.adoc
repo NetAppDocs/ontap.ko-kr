@@ -35,13 +35,13 @@ summary: 무중단 운영을 지원하려면 Hyper-V 및 SQL Server SMB 공유�
 
 
 .단계
-. 오프라인 파일이 '수동' 또는 '사용 안 함'으로 설정되어 있고 symlink가 비활성화되어 있는지 확인합니다.
+. 오프라인 파일이  `manual` 또는  `none`로 설정되어 있고 심볼릭 링크가 비활성화되어 있는지 확인하십시오:
 +
-'* vserver CIFS 공유 show -vserver_vserver_name_*'
+`*vserver cifs share show -vserver _vserver_name_*`
 
 . SMB 공유가 무중단 가용성을 위해 구성되었는지 확인합니다.
 +
-'* vserver cifs 공유 속성 표시 - vserver_vserver_name_*'
+`*vserver cifs share properties show -vserver _vserver_name_*`
 
 
 

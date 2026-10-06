@@ -21,11 +21,49 @@ summary: 제로 RTO SnapMirror 동기식 보호를 제거하고 SnapMirror 액�
 [[remove-an-asymmetric-san-configuration]]
 == 비대칭 SAN 구성 제거
 
+
+
+[[unmap-luns-on-the-destination-cluster]]
+=== 타겟 클러스터에서 LUN 매핑 해제
+
+.이 작업에 대해
 * SnapMirror 활성 동기화 SAN 관계를 삭제하기 전에 타겟 클러스터의 모든 LUN 매핑을 해제해야 합니다.
 * LUN이 매핑 해제되었고 호스트가 다시 스캔되면 SCSI 타겟은 LUN 인벤토리가 변경되었음을 호스트에 알립니다. 제로 RTO 2차 볼륨의 기존 LUN은 제로 RTO 관계가 삭제된 후 새 ID를 반영하도록 변경됩니다. 호스트는 소스 볼륨 LUN과 관계가 없는 새 LUN으로 보조 볼륨 LUN을 검색합니다.
 * 관계가 삭제된 후 보조 볼륨은 DP 볼륨으로 유지됩니다. 을(를) 실행할 수 있습니다 `snapmirror break` 읽기/쓰기로 변환하는 명령입니다.
 * 관계가 반대로 설정되지 않은 경우 페일오버된 상태에서는 관계를 삭제할 수 없습니다.
 
+
+.단계
+SnapMirror 활성 동기화 SAN 관계를 삭제하기 전에 타겟 클러스터에서 해당 관계의 일부인 모든 LUN을 매핑 해제해야 합니다. 비대칭 SAN 구성을 삭제하기 전에 다음 단계를 완료하십시오.
+
+. 타겟 LUN이 복제된 igroup을 통해 매핑된 경우, 타겟 클러스터에서 LUN 매핑을 삭제하기 전에 소스 클러스터에서 igroup 복제를 확인하고 제거해야 합니다:
++
+`SiteB::> igroup show -igroup <igroup_name>  -vserver <vserver_name> -fields replication-peer`
+
+. igroup이 복제된 경우 소스 클러스터에서 복제 피어 연결을 제거합니다:
++
+`SiteA::> igroup modify -vserver <svm_name> -igroup <igroup_name> -replication-peer "-"`
+
+. igroup이 더 이상 복제되지 않는지 확인하십시오:
++
+`SiteB::> igroup show -igroup <igroup_name> -vserver <vserver_name> -fields replication-peer`
+
+. 대상 측 LUN 매핑을 삭제합니다:
++
+`SiteB::> lun mapping delete -vserver <svm_name> -igroup <igroup_name> -path <lun_path>`
+
+. igroup에 매핑된 추가 LUN이 없으면 igroup을 삭제합니다:
++
+`SiteB::> igroup delete -vserver <svm_name> -igroup <igroup_name>`
+
+
+
+
+
+[[delete-the-snapmirror-active-sync-san-relationship]]
+=== SnapMirror 활성 동기화 SAN 관계를 삭제합니다.
+
+LUN 매핑 해제 후 SnapMirror 활성 동기화 관계를 삭제하십시오.
 
 .단계
 . 보조 클러스터에서 소스 끝점과 대상 끝점 간의 SnapMirror 활성 동기화 일관성 그룹 관계를 제거합니다.

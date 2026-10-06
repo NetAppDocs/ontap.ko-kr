@@ -44,7 +44,7 @@ ODX는 지원되는 ONTAP 버전에서 자동으로 활성화됩니다.
 
 * Windows 클라이언트에서 ODX를 지원합니다
 +
-ODX는 Windows Server 2012 이상 및 Windows 8 이상에서 지원됩니다. 상호 운용성 매트릭스에는 지원되는 Windows 클라이언트에 대한 최신 정보가 포함되어 있습니다.
+상호 운용성 매트릭스에는 지원되는 Windows 클라이언트에 대한 최신 정보가 포함되어 있습니다.
 
 +
 https://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^]
