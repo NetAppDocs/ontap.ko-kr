@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 4-node MetroCluster configurations,8-node MetroCluster configurations, upgrade, upgrading, manual, manually 
 summary: 4노드 또는 8노드 MetroCluster 구성을 수동으로 업그레이드하려면 각 DR 그룹의 DR 쌍을 준비 및 업데이트하고 업그레이드 후 작업을 수행해야 합니다 
 ---
-= 4노드 또는 8노드 MetroCluster 구성에서 수동 ONTAP NDU
+= ONTAP 4노드 또는 8노드 MetroCluster 구성 수동 업그레이드
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

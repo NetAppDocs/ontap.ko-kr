@@ -7454,11 +7454,8 @@
   <block id="efc4b82cc2ffa72e1d19660b1442e86f" category="cell">보안 DDNS 보안 DDNS 사용 여부는 Active Directory 통합 DNS에서만 지원됩니다. Active Directory 통합 DNS에서 보안 DDNS 업데이트만 허용하는 경우 이 매개 변수의 값은 참이어야 합니다. 기본적으로 보안 DDNS는 비활성화되어 있습니다. SVM을 위해 SMB 서버 또는 Active Directory 계정을 생성한 후에만 보안 DDNS를 활성화할 수 있습니다.</block>
   <block id="7b8ff21b773466cb7c3cbae17788af96" category="cell">DNS 도메인의 FQDN DNS 도메인의 FQDN입니다. SVM에서 DNS 이름 서비스로 구성된 동일한 도메인 이름을 사용해야 합니다.</block>
   <block id="5085681ae6e18662ed0f7dbc3acdd8b6" category="doc">LIF를 생성합니다</block>
-  <block id="ff75491cef38298812f55b5192a63322" category="paragraph">ONTAP 9.7부터 ONTAP는 해당 IPspace의 동일한 서브넷에 이미 있는 LIF가 하나 이상 있으면 LIF의 홈 포트를 자동으로 선택합니다. ONTAP은 해당 서브넷에 있는 다른 LIF와 동일한 브로드캐스트 도메인에서 홈 포트를 선택합니다. 홈 포트는 여전히 지정할 수 있지만 더 이상 필요하지 않습니다(지정된 IPspace의 해당 서브넷에 LIF가 아직 없는 경우).</block>
   <block id="1ebcfad534ca6b48a25ad52ffad224cc" category="list-text">LIF에 사용할 브로드캐스트 도메인 포트를 결정합니다.</block>
-  <block id="f71d8c4bffdcfe0255989a522519e921" category="paragraph">'네트워크 포트 브로드캐스트-도메인 쇼-IPSpace_ipspace1_'</block>
   <block id="f32118da3d70a4f320a9e03ff567af21" category="list-text">LIF에 사용할 서브넷에 사용되지 않는 IP 주소가 충분히 있는지 확인합니다.</block>
-  <block id="ec9f06f6ad41803059b084ab6467f053" category="paragraph">'network subnet show - IPSpace_ipspace1_'</block>
   <block id="2307fb5b78b821211a9b011ea25ba45a" category="list-text">데이터에 액세스하는 데 사용할 포트에 하나 이상의 LIF를 생성합니다.</block>
   <block id="668781a383497a3b4080e57467cebbec" category="list-text">LIF 인터페이스 구성이 올바른지 확인합니다.</block>
   <block id="62bd47d83f665c91ba56dcaa0254344c" category="list-text">페일오버 그룹 구성이 원하는 대로 되어 있는지 확인합니다.</block>
@@ -7603,19 +7600,14 @@
   <block id="4d8a5ce7c92933b66a0cd46ca8f21f95" category="paragraph">'network port ifgrp delete-node_cluster-1-01_-ifgrp_a0b_'</block>
   <block id="de73a1e9954790ff0901101e659f1bf5" category="summary">물리적 또는 논리적 포트와 연결된 IP 주소인 LIF를 생성합니다.</block>
   <block id="2bd666a244d839e3e30fc7c0d7c001ae" category="paragraph">LIF는 물리적 포트 또는 논리적 포트와 연결된 IP 주소입니다. 구성요소 장애가 발생할 경우 LIF가 다른 물리적 포트로 페일오버되거나 마이그레이션되어 네트워크와 계속 통신할 수 있습니다.</block>
-  <block id="6789dcbf206f0a4f22a16b71e5acd842" category="list-text">기본 물리적 또는 논리적 네트워크 포트가 관리 작동 상태로 구성되어 있어야 합니다.</block>
   <block id="dc9e8d63cbbdb8d5ea7b651eb84b063e" category="list-text">LIF가 처리하는 트래픽 유형을 지정하는 메커니즘이 변경되었습니다. ONTAP 9.5 이전 버전의 경우 LIF는 역할을 사용하여 처리할 트래픽 유형을 지정합니다. ONTAP 9.6부터 LIF는 서비스 정책을 사용하여 처리할 트래픽 유형을 지정합니다.</block>
   <block id="0e2f314790eb6267c4448c40e54aaea9" category="list-text">NAS 및 SAN 프로토콜은 동일한 LIF에 할당할 수 없습니다.</block>
-  <block id="d63abfced299c6ffbd6200e985c6d340" category="paragraph">지원되는 프로토콜은 SMB, NFS, FlexCache, iSCSI 및 FC입니다. iSCSI 및 FC는 다른 프로토콜과 결합할 수 없습니다. 그러나 NAS 및 이더넷 기반 SAN 프로토콜은 동일한 물리적 포트에 존재할 수 있습니다.</block>
-  <block id="092185cac2efeb6454b5f317056077d4" category="list-text">SVM에서 사용하는 DNS, NIS, LDAP, Active Directory 등의 모든 이름 매핑 및 호스트 이름 확인 서비스 SVM의 데이터 트래픽을 처리하는 하나 이상의 LIF에서 연결할 수 있어야 합니다.</block>
   <block id="9ad4be6eef992b371fa173aecc5c7bd0" category="list-text">클러스터 간 노드 트래픽을 처리하는 LIF는 LIF가 관리 트래픽을 처리하거나 데이터 트래픽을 처리하는 LIF와 같은 서브넷에 있으면 안 됩니다.</block>
-  <block id="b4fdad0f41f5d63611cc1226e8b16ef6" category="list-text">유효한 페일오버 목표가 없는 LIF를 생성하면 경고 메시지가 표시됩니다.</block>
   <block id="df6fd02001382d75cfbaa48f225d87e0" category="list-text">ONTAP 9.7부터 동일한 서브넷에 있는 SVM에 대한 다른 LIF가 이미 있는 경우 LIF의 홈 포트를 지정할 필요가 없습니다. ONTAP는 동일한 서브넷에 이미 구성된 다른 LIF와 동일한 브로드캐스트 도메인에 있는 지정된 홈 노드에서 랜덤 포트를 자동으로 선택합니다.</block>
   <block id="4832088a6467cdd27ab5e94be99fde92" category="paragraph">ONTAP 9.4부터는 FC-NVMe가 지원됩니다. FC-NVMe LIF를 생성하는 경우 다음 사항을 알아야 합니다.</block>
   <block id="cb246c73e23f19b4642bb424d4402935" category="list-text">NVMe 프로토콜은 LIF가 생성된 FC 어댑터에서 지원되어야 합니다.</block>
   <block id="f766fb2dec615453dd7fdf037100b8c5" category="list-text">SAN을 지원하는 모든 SVM(스토리지 가상 머신)에서 관리 트래픽을 처리하는 하나의 LIF를 구성해야 합니다.</block>
   <block id="c55a4f044dfec68d4e9f5b17072e3330" category="paragraph">또한 LIF가 -auto-revert 옵션을 사용하여 홈 노드 및 홈 포트로 자동으로 되돌아가는지 여부를 지정할 수도 있습니다.</block>
-  <block id="66538afe2f70d10ce8f5fa836c504d8e" category="list-text">IP 주소는 '-address' 및 '-netmask' 옵션을 사용하여 지정하거나 '-subnet_name' 옵션을 사용하여 서브넷에서 할당을 활성화할 수 있습니다.</block>
   <block id="307b6a8428f6f758ace66db2ccc5d91b" category="list-text">'-service-policy' ONTAP 9.5부터 '-service-policy' 옵션을 통해 LIF에 대한 서비스 정책을 할당할 수 있습니다. LIF에 서비스 정책을 지정한 경우, 이 정책을 사용하여 LIF에 대한 기본 역할, 페일오버 정책 및 데이터 프로토콜 목록을 구성합니다. ONTAP 9.5에서는 서비스 정책이 인터클러스터 및 BGP 피어 서비스에 대해서만 지원됩니다. ONTAP 9.6에서는 여러 데이터 및 관리 서비스에 대한 서비스 정책을 작성할 수 있습니다.</block>
   <block id="0d710d73b461c89b1ba215412b9541e2" category="list-text">IPv6 주소를 수동으로 구성하려면 접두사::id 형식을 사용합니다.</block>
   <block id="f8f0bbecb07bf9393c191809861e2a52" category="paragraph">다음 명령을 실행하면 LIF가 생성되고 '-address' 및 '-netmask' 매개 변수를 사용하여 IP 주소와 네트워크 마스크 값이 지정됩니다.</block>
@@ -23120,7 +23112,6 @@
   <block id="addb0c312cb868a4aed2265f5f270e6f" category="sidebar">클러스터 및 스토리지 상태를 확인합니다</block>
   <block id="88b42e9cea8608e7b4f8fb0218e1cab0" category="sidebar">LIF를 홈 포트로 설정 및 되돌립니다</block>
   <block id="852aab11f81fce44254ecb41436759a2" category="sidebar">스냅샷 복사본 정책 설정</block>
-  <block id="72f484d24e898cdb86b1b6f55c9a0a83" category="sidebar">네임스페이스 크기 조정</block>
   <block id="4b546846240b394ffe10443a4ac0f3ae" category="sidebar">이름 서비스 구성</block>
   <block id="d8545c71d74d5878e7b4502b6fa83c8f" category="sidebar">로컬 UNIX 사용자 및 그룹을 구성합니다</block>
   <block id="477c42d6d4b4407faeca8c7d310981b5" category="sidebar">넷그룹으로 작업합니다</block>
@@ -23400,7 +23391,6 @@
   <block id="e50ab62ead27fa24946bf8b4d4e4d9c6" category="paragraph">'network interface modify -vserver_vserver_name_-lif_lif_name_-dns-zone_zone_name_' 예: 'network interface modify -vserver vs1-lif data1-dns-zone cifs.company.com`</block>
   <block id="f685890ab01a0bdfa017ef9b1fb495dc" category="paragraph">'network interface modify -vserver_vserver_name_-lif_lif_name_-dns-zone none' 예: 'network interface modify -vserver vs1-lif data1-dns-zone none</block>
   <block id="0c1c8882495a6eb6906cf3a4cc08b8ff" category="paragraph">'network interface modify -vserver_vserver_name_-lif * -dns-zone none' 예: 'network interface modify -vs0 -lif * -dns-zone none' SVM의 모든 LIF를 해당 영역에서 제거하여 로드 밸런싱 영역에서 SVM을 제거할 수 있습니다.</block>
-  <block id="917d93a73123e18a54b6430b74261e40" category="paragraph">SMB 트래픽이 있는 LIF가 홈 노드로 자동 복구되도록 구성하지 않아야 합니다. SMB를 통해 Hyper-V 또는 SQL Server의 무중단 운영을 지원하는 솔루션을 호스팅하려는 SMB 서버의 경우 이 권장 사항이 필수입니다.</block>
   <block id="9390baf8119cfb9fb38f99d7345affaa" category="list-text">폴더 * 상자에 감사할 데이터와 공유 이름을 가지고 있는 공유가 포함된 SMB 서버 이름을 입력합니다.</block>
   <block id="d770fe6b938534741da42f59217324ed" category="paragraph">SMB 서버 이름이 "smb_server"이고 공유 이름이 "hay1"인 경우 \\smb_server\share1"을 입력해야 합니다.</block>
   <block id="e86b4fb41810ea21a25be351eba1caf6" category="list-text">폴더 * 상자에 감사할 데이터와 공유 이름을 둘 다 포함하는 공유가 포함된 SVM(스토리지 가상 시스템)의 IP 주소 또는 SMB 서버 이름을 입력합니다.</block>
@@ -24548,7 +24538,6 @@
   <block id="c20a333d5a34ad4ce29185dc6fbbb814" category="admonition">FIPS가 설정되어 있으면 RSA 키 길이 4096으로 인증서를 설치하거나 생성할 수 없습니다.</block>
   <block id="b3ee20060daaf462161e3b5a0b6aec3a" category="paragraph">FlexGroup 볼륨을 FlexVol 볼륨으로 다시 변환할 수 없습니다.</block>
   <block id="fb1f84874f63b8a41a737c66b6385bd8" category="inline-link-macro">볼륨 복구 대기열 사용 방법</block>
-  <block id="ae0df50a6255a9c9261d6b580219771e" category="list-text">서브넷을 사용하여 네트워크 인터페이스를 만들면 ONTAP는 선택한 서브넷에서 사용 가능한 IP 주소를 자동으로 선택하고 네트워크 인터페이스에 할당합니다. 서브넷이 두 개 이상인 경우 서브넷을 변경할 수 있지만 IP 주소는 변경할 수 없습니다.</block>
   <block id="d81d9640661a9b0801992fbbafb12163" category="section-title">중요한 복제 고려 사항</block>
   <block id="d6b11bc1950444ef0fe3d5a848e513fb" category="paragraph">1월 19일 2071(GMT) 이후의 보존 날짜를 사용하여 SnapLock 소스 볼륨과 SnapMirror 관계를 설정할 때 타겟 클러스터에서 ONTAP 9.10.1 이상이 실행 중이어야 하며, 그렇지 않으면 SnapMirror 전송이 실패합니다.</block>
   <block id="326ac215123f0d0ece2670c34121f670" category="paragraph">FlexVol 볼륨의 모델 종속 최대 디렉토리 크기에 대한 자세한 내용은 를 참조하십시오 <block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>.</block>
@@ -24616,7 +24605,6 @@
   <block id="9172904e577f52b2a085e7dbb8d70d8b" category="paragraph">을 참조하십시오 <block ref="dd1e575eb1bf78037a6903cc519f262a" category="inline-xref-macro-rx"></block> SVM에서 동적 DNS 구성에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="ef934d4d8f2b4314965fe0a91d2aac87" category="doc">ASA 플랫폼의 iSCSI LIF 페일오버</block>
   <block id="3448a1d5e7a8aad36abd21809538176a" category="list-text">마이그레이션 * 을 클릭합니다.</block>
-  <block id="5b1166dba71dd88b92c8f0acf473772e" category="paragraph"><block ref="5b1166dba71dd88b92c8f0acf473772e" category="inline-link-macro-rx"></block></block>
   <block id="e2eded5c0dd62dcd53c95b4a8a17cfd0" category="paragraph">iSCSI LIF 마이그레이션은 홈 노드 또는 HA 파트너의 포트로 제한됩니다.</block>
   <block id="3b6dedfcf81d50ebb97243bebbd732cf" category="admonition">iSCSI LIF 페일오버의 경우 페일오버 정책 '로컬 전용', 'fo 파트너 전용', '사용 안 함'만 지원됩니다.</block>
   <block id="80fc161804d738bda145e4d1374b0d9a" category="paragraph">System Manager를 사용하여 새 스토리지 VM에 대한 S3 액세스를 구성하면 인증서 및 네트워킹 정보를 입력하라는 메시지가 표시되고 스토리지 VM 및 S3 오브젝트 스토리지 서버가 단일 작업으로 생성됩니다.</block>
@@ -24788,14 +24776,6 @@
   <block id="75d31256a95fb2711467d9f83b0cd41b" category="cell">'network interface modify -vserver vserver_name -lif lif_name -auto-revert true'</block>
   <block id="6f36a487ab3f05681256b419d2d8587f" category="paragraph">* System Manager를 사용하여 네트워크 인터페이스를 마이그레이션합니다 *</block>
   <block id="8c9d586f412df13f37d57291d90164d6" category="paragraph">* CLI를 사용하여 LIF를 마이그레이션합니다 *</block>
-  <block id="8d7c6d693d91720dcea00ddb63dae543" category="paragraph">서브넷에는 동일한 계층 3 서브넷에 속하는 IP 주소 풀이 포함되어 있습니다. System Manager나 network subnet create 명령을 사용하여 생성됩니다.</block>
-  <block id="53c7c393b93df8cb5a9fbfa1f669b976" category="list-text">클러스터에 LIF가 많은 경우 클러스터에서 지원되는 LIF 용량을 확인할 수 있습니다.</block>
-  <block id="cd942e7c6676928ecc4c39ce02efa758" category="list-text">시스템 관리자: ONTAP 9.12.0부터 네트워크 인터페이스 그리드의 처리량을 확인합니다.</block>
-  <block id="2d783dafcb9a806c61739c4783f65a68" category="list-text">CLI: 고급 권한 수준에서 network interface capacity details show 명령을 사용하여 각 노드에서 지원되는 LIF 용량과 network interface capacity show 명령을 사용하십시오.</block>
-  <block id="f0a3b3545950846c431aae854b982efd" category="list-text">네트워크 인터페이스를 위해 SVM을 생성(추가)할 때 기존 서브넷 범위에 있는 IP 주소를 지정할 수 없습니다. 서브넷 충돌 오류가 발생합니다. 이 문제는 SVM 설정 또는 클러스터 설정에서 클러스터 간 네트워크 인터페이스를 생성하거나 수정하는 등 네트워크 인터페이스를 위한 다른 워크플로우에서 발생합니다.</block>
-  <block id="eb3e6c35d448456277ecc4873989ccd5" category="paragraph">iSCSI LIF 페일오버가 자동으로 활성화됨(페일오버 정책은 'fo-partner-only'로 설정되고 자동 되돌리기 값은 'true'로 설정됨) 새로 생성된 iSCSI LIF에서 지정된 SVM에 iSCSI LIF가 없거나 지정된 SVM에 있는 기존 iSCSI LIF가 iSCSI LIF 페일오버로 이미 활성화되어 있는 경우.</block>
-  <block id="2e9d79bdadc3c1a3ea80a6d99ea9c771" category="paragraph">ONTAP 9.11.1 이상으로 업그레이드한 후 iSCSI LIF 페일오버 기능을 사용하도록 설정되지 않은 SVM에 기존 iSCSI LIF가 있고 동일한 SVM에 새 iSCSI LIF를 생성하고, 새로운 iSCSI LIF는 SVM에 있는 기존 iSCSI LIF와 동일한 페일오버 정책(비활성화)을 가정합니다.</block>
-  <block id="37d203a4d30c92c7e0433e138e21db41" category="paragraph">* System Manager를 사용하여 네트워크 인터페이스를 추가합니다 *</block>
   <block id="80b672eadb959ee067f798c949769797" category="list-text">다음 인터페이스 역할 중 하나를 선택합니다.</block>
   <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">데이터</block>
   <block id="a5e7f0e3e9c9116082e3187550f2112f" category="list-text">인터클러스터</block>
@@ -24807,13 +24787,10 @@
   <block id="9f5d454d522b09f8cb2c421adee76a83" category="list-text">선택한 SVM의 IPspace에서 하나 이상의 서브넷이 구성된 경우 서브넷 드롭다운이 표시됩니다.</block>
   <block id="1636f97e6bf0d009e6d54f431dd78331" category="list-text">서브넷을 선택한 경우 드롭다운에서 선택합니다.</block>
   <block id="4f251f06f399aea726037b03ba55a92e" category="list-text">서브넷 없이 진행하면 브로드캐스트 도메인 드롭다운이 표시됩니다.</block>
-  <block id="c77fd2236a05934d1482c13bc9c2cd4d" category="list-text">IP 주소를 지정합니다. IP 주소를 사용 중인 경우 경고 메시지가 표시됩니다.</block>
   <block id="f2ccfb6eb1082f7276bb8c59544ba16d" category="list-text">서브넷 마스크를 지정합니다.</block>
   <block id="877dcf4e4c0dcca42bb2ac810a06d5e7" category="list-text">네트워크 인터페이스를 저장합니다.</block>
-  <block id="9264736930746a402294c277d922cca5" category="paragraph">* CLI를 사용하여 LIF * 를 생성합니다</block>
   <block id="8c61a3dc9fe23290c557a2511c9b35e1" category="list-text">'-자동 되돌리기'를 사용하면 시작, 관리 데이터베이스의 상태 변경 또는 네트워크 연결이 이루어지는 시기에 데이터 LIF가 홈 노드로 자동 복구되는지 여부를 지정할 수 있습니다. 기본 설정은 false로 설정되어 있지만 사용자 환경의 네트워크 관리 정책에 따라 true로 설정할 수 있습니다.</block>
   <block id="efe97ec1aaddc6abcc95f07658ec7a4c" category="list-text">'-data-protocol'을 사용하면 FCP 또는 NVMe/FC 프로토콜을 지원하는 LIF를 생성할 수 있습니다. IP LIF를 생성할 때는 이 옵션이 필요하지 않습니다.</block>
-  <block id="0e8be86fb1fd96c9321d5e4107e3475b" category="list-text">* 선택 사항 *: -address 옵션에서 IPv6 주소 할당:</block>
   <block id="d3c3405ea1b62e88bc292c4c7359d30f" category="summary">브로드캐스트 도메인은 동일한 계층 2 네트워크에 속한 클러스터의 네트워크 포트를 그룹화합니다. 그런 다음 SVM에서 포트를 사용할 수 있습니다.</block>
   <block id="848b29cc2396ea274080edbc71f8a78f" category="paragraph">브로드캐스트 도메인에 추가할 포트는 다른 브로드캐스트 도메인에 속하지 않아야 합니다. 사용하려는 포트가 다른 브로드캐스트 도메인에 속하지만 사용되지 않는 경우 원래 브로드캐스트 도메인에서 해당 포트를 제거합니다.</block>
   <block id="4e236dcc6335140219a8c4b6303afcdc" category="list-text">브로드캐스트 도메인에 추가되는 포트는 물리적 네트워크 포트, VLAN 또는 링크 집계 그룹/인터페이스 그룹(LAG/ifgrp)일 수 있습니다.</block>
@@ -24916,7 +24893,6 @@
   <block id="eedfc76cf9ec795d59e735123b228063" category="list-text">[[9단계 - Define - add - specs, 9단계]] 이전에 LUN 접두사를 입력한 경우에는 LUN 접두사가 이미 표시되어 있지만 수정할 수 있습니다. 그렇지 않으면 접두사를 입력합니다.</block>
   <block id="06a60c5ed27a10050c5f9018f973fdb3" category="list-text">[[step2-coml-prov-nfs-smb, 워크플로의 2단계]] Linux 클라이언트에서 내보내기에 액세스할 수 있는지 확인합니다.</block>
   <block id="87d46193092e5bcafc0ee456fd60c691" category="paragraph">볼륨을 저장한 후 로 돌아갑니다 <block ref="9757c9337b746f8aa5c517a748aa4525" category="inline-xref-macro-rx"></block> Windows 및 Linux 서버에 대한 멀티프로토콜 프로비저닝을 완료합니다.</block>
-  <block id="cc81ac9d702ccf6d3fb5a87328ac320e" category="paragraph">ONTAP 9.12.0부터는 -- System Manager 또는 CLI를 사용하는 인터페이스에 따라 절차가 달라집니다.</block>
   <block id="2f6b7b0c1002ad67f4e455a17d784c94" category="paragraph">"""</block>
   <block id="7e0b6c73c903d14a7cb818e417579830" category="section-title">FlexGroup 볼륨에 대한 할당량 적용의 예</block>
   <block id="e3c161647851b67e47c5d7539844b325" category="list-text">디렉토리가 삭제되었는지 확인합니다.</block>
@@ -25212,7 +25188,6 @@
   <block id="99cb195154c9fe16462111c7693809fe" category="image-alt">포트 et을 사용한 LUN 액세스를 보여 주는 이미지입니다</block>
   <block id="eb7de24f549aa3f160558b8697a999bc" category="list-text"><block ref="eb7de24f549aa3f160558b8697a999bc" category="inline-xref-macro-rx"></block></block>
   <block id="419cfc02b324dc7d8faefa90ed608fb0" category="doc">시스템 요구 사항</block>
-  <block id="7eb59ea74552d796af890c483255c243" category="section-title">NVMe 라이센스 요구 사항</block>
   <block id="00151817d18957b14ac89f55e87d9bce" category="paragraph">ONTAP 9.5부터 NVMe를 지원하려면 라이센스가 필요합니다. ONTAP 9.4에서 NVMe를 사용하는 경우 ONTAP 9.5로 업그레이드한 후 라이센스를 취득하기 위한 90일 유예 기간이 제공됩니다.</block>
   <block id="a441b4ab4a68e599e4c2acbfa61f336e" category="inline-link-macro">NVMe용 스토리지 VM을 구성합니다</block>
   <block id="9c8107b0b188ae93649d6bd28ca984dd" category="paragraph">ONTAP System Manager(9.7 이상)를 사용하여 iSCSI용 스토리지 VM을 구성합니다.</block>
@@ -28324,7 +28299,6 @@ utf8mb4 지원을 위해 SVM을 업데이트할 수 있지만 기존 볼륨에 �
   <block id="1276119e738415679f43689d3b59ecf1" category="inline-link-macro">FabricPool 미러</block>
   <block id="19ee02a208636c0cfdd5f899f87992de" category="paragraph">변환 작업을 시작한 후에는 작업을 완료해야 합니다. 작업 중에 성능 문제가 발생하면 를 실행할 수 있습니다<block ref="96643b29720101822fa346c37c5ef99c" prefix=" " category="inline-code"></block> 명령을 사용하여 작업을 일시 중지하고, 를 클릭합니다<block ref="ff4b080542e36827c849a5c152a7b183" prefix=" " category="inline-code"></block> 명령을 사용하여 작업을 재개합니다.</block>
   <block id="d9ff7ff426dc4c1d7641118c503aed94" category="list-text">DNS 로드 밸런싱이 NFSv3, NFSv4, NFSv4.1, SMB 2.0, SMB 2.1, SMB 3.0 및 S3.</block>
-  <block id="5bcb18cd3811711d3c8e7a250c84fbb6" category="paragraph">LIF 마이그레이션 중에 지연을 줄이려면 ONTAP에 연결된 스위치 포트를 스패닝 트리 에지 포트로 구성해야 합니다.</block>
   <block id="52f80b45f26d2ce299a9a4dac487b1d6" category="paragraph"><block ref="ec3820fe20edade0d30e0adc71f0b716" category="inline-xref-macro-rx"></block>.</block>
   <block id="2570cb1b8cc31ac9986e85762456554b" category="paragraph">그렇지 않으면 기본 스키마를 사용하는 것이 가장 좋습니다. 이 경우 기본 스키마를 복사하고 복사본을 수정하여 고유한 스키마를 만들 수 있습니다. 자세한 내용은 다음을 참조하십시오.</block>
   <block id="6b0eb6059d131e9f5ec95ff5f386dd1f" category="paragraph">다음 명령은 LDAP 클라이언트 구성을 연결합니다<block ref="218c5ade1b03b891b805504cbb5c97ec" prefix=" " category="inline-code"></block> SVM을 사용합니다<block ref="362c9c8dc5f39232051c5162dce8392a" prefix=" " category="inline-code"></block>및 는 SVM에서 LDAP 클라이언트를 활성화합니다.</block>
@@ -28501,7 +28475,6 @@ utf8mb4 지원을 위해 SVM을 업데이트할 수 있지만 기존 볼륨에 �
   <block id="f293e6f11d3688d6ee74012ec51cf6d7" category="doc">All-Flash SAN 어레이 구성 제한 및 지원</block>
   <block id="a818af90a389b34f24cd6866b604b01d" category="paragraph">ONTAP 9.8부터는 FC 프로토콜을 사용하도록 구성된 ASA(All-Flash SAN Array)에서 영구 포트가 기본적으로 활성화됩니다. 영구 포트는 FC에만 사용할 수 있으며 WWPN(World Wide Port Name)으로 식별되는 영역 구성원이 필요합니다.</block>
   <block id="bfe4637b313bb60a35b76be1ca147fc2" category="list-text">ONTAP 9.11.1부터 ASA(All-Flash SAN 어레이) 플랫폼에서 자동 iSCSI LIF 페일오버를 사용할 수 있습니다.</block>
-  <block id="cd13dd69b76cb5a8d8836c52e28ee458" category="list-text">ONTAP 9.11.1부터 ASA(All-Flash SAN 어레이) 플랫폼에서 자동 iSCSI LIF 페일오버를 사용할 수 있습니다.</block>
   <block id="cd9e763ab00371aa250f29dd62e07c6c" category="list-text">ONTAP 9.11.1부터 ASA(All-Flash SAN 어레이) 플랫폼에서는 새로 생성된 스토리지 VM에서 새로 생성된 iSCSI LIF에 대해 iSCSI LIF 페일오버가 자동으로 활성화됩니다.</block>
   <block id="20b98cad0183bf07a8c53694814153df" category="list-text">* 프로비저닝된 용량 *: Cloud Volumes ONTAP 시스템에서 할당되었으며 사용자 또는 애플리케이션 데이터를 저장할 준비가 된 파일 시스템(볼륨)입니다.</block>
   <block id="68fb9548fd785c47928f8e564ff8418f" category="list-text">S3 NAS 버킷 구성 제거:</block>
@@ -29983,7 +29956,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="bb98e3bdf7ea9a7beddc0df76be35801" category="paragraph">ONTAP를 업그레이드하기 전에 하드웨어 구성이 대상 ONTAP 릴리스를 지원할 수 있는지 확인해야 합니다.</block>
   <block id="07b6218162aacc2575e772f8dacd54ff" category="paragraph">ONTAP를 업그레이드하기 전에 MetroCluster 구성이 있는 경우 를 사용합니다<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> MetroCluster IP 스위치가 대상 ONTAP 릴리즈에서 지원되는지 확인</block>
   <block id="2aba6782377793d4902dd92c32a9d2cf" category="summary">ONTAP를 업그레이드하기 전에 넷그룹을 SVM에 로드한 경우 각 노드에 넷그룹 파일이 있는지 확인합니다. 노드에 넷그룹 파일이 없으면 업그레이드가 실패할 수 있습니다.</block>
-  <block id="054d3cff3846274b8d1a73bad7913905" category="doc">ONTAP를 업그레이드하기 전에 모든 노드에 Netgroup 파일이 있는지 확인합니다</block>
   <block id="2b8589afc43d1e6ee98099822578031e" category="paragraph">ONTAP를 업그레이드하기 전에 넷그룹을 스토리지 가상 머신(SVM)에 로드한 경우 각 노드에 넷그룹 파일이 있는지 확인해야 합니다. 노드에 넷그룹 파일이 없으면 업그레이드가 실패할 수 있습니다.</block>
   <block id="61aeea04e3995a5e62c204376bcb4698" category="summary">ONTAP를 업그레이드하기 전에 Active IQ Config Advisor 도구를 사용하여 일반적인 구성 오류를 확인합니다.</block>
   <block id="e4092a8a0146f9969c91612e7285e748" category="summary">관리자 계정이 SSH 공개 키로 인증하는 클러스터에서 SSL FIPS 모드가 활성화된 경우 대상 릴리스에서 호스트 키 알고리즘이 지원되어야 합니다.</block>
@@ -31350,7 +31322,6 @@ AFF C-Series 플랫폼에 대한 지원은 ONTAP 9.12.1, ONTAP 9.11.1 및 ONTAP 
   <block id="bc7a6ad79915b0b669c03cdc4b13c6c5" category="list-text">IPspace 표시:</block>
   <block id="7084354993a2057e35e719497f454908" category="doc">브로드캐스트 도메인 생성(ONTAP 9.7 이하)</block>
   <block id="94c182a95d99723a9cafb23d8ea15805" category="doc">LIF 및 서비스 정책(ONTAP 9.6 이상)</block>
-  <block id="ec7d87855b2f41d3b6c36ff49c461e98" category="paragraph">SVM은 하나 이상의 네트워크 논리 인터페이스(LIF)를 통해 클라이언트에 데이터를 제공합니다. 데이터에 액세스하는 데 사용할 포트에 LIF를 생성해야 합니다. LIF(네트워크 인터페이스)는 물리적 포트 또는 논리적 포트와 연결된 IP 주소입니다. 구성요소 장애가 발생할 경우 LIF가 다른 물리적 포트로 페일오버되거나 마이그레이션되어 네트워크와 계속 통신할 수 있습니다.</block>
   <block id="b6c41eb4595cbe0dc36129c27a2d81fa" category="section-title">MIB 개요</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1개</block>
   <block id="85e2e027bff940fa88f819e030434f41" category="inline-link-macro">워크시트를 작성합니다</block>
@@ -32348,7 +32319,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="296f756d27c037198fe9a2b121b560ef" category="section-title">동적 권한 부여를 비활성화합니다</block>
   <block id="19f47c3c52d1d3bce181a9cf5466e835" category="paragraph">추가 인증 보안이 더 이상 필요하지 않은 경우 동적 권한 부여를 비활성화할 수 있습니다.</block>
   <block id="9934c7b58baadcfa97e22acfc519cd78" category="list-text">상태를 로 변경하여 동적 권한 부여를 비활성화합니다<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>. 를 사용하지 않는 경우<block ref="b058e17241aaaab6fd881949dfb6df3e" prefix=" " category="inline-code"></block> 매개 변수로, 명령은 클러스터 레벨에서 실행됩니다. 괄호(&gt;)의 값을 환경에 맞게 업데이트합니다. 굵은 글씨로 표시된 매개 변수가 필요합니다.</block>
-  <block id="8771c42b4bb875440fc45ff5bf6dc55f" category="doc">NVMe 구성, 지원 및 제한 사항</block>
   <block id="fa8c618c138547a3674f63f533db6d6e" category="paragraph">ONTAP 9.4부터 <block ref="978a0518377727b64c14f349a691f978" category="inline-link-macro-rx"></block> SAN 환경에서 프로토콜을 사용할 수 있습니다. FC-NVMe는 기존 FC 네트워크와 동일한 물리적 설정 및 조닝(zoning)을 사용하지만 FC-SCSI보다 더 큰 대역폭과 향상된 IOPS를 제공하며 지연 시간을 줄일 수 있습니다.</block>
   <block id="7dd4138bca8a8f81a4a9fafb645ded08" category="list-text">NVMe/TCP에서 4노드 MetroCluster IP 구성</block>
   <block id="64d765c73f22e37ce86f9f78119707b0" category="list-text">서브시스템에서 호스트 우선 순위 설정(호스트 레벨 QoS)</block>
@@ -36008,7 +35978,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b11c58611f4ced373f9a2d5a76634ffc" category="paragraph">이 절차에서 설명하는 명령에 대한 자세한 내용은 를 <block ref="bc2602c5a66493ba7d85e8bd5d0e7f9b" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="fc8a23c6096ea495fd6fd2dcf8940de4" category="doc">ONTAP에서 클러스터된 외부 키 서버를 구성합니다</block>
   <block id="65b2323fbe7e1a5f404b27e0883d910d" category="doc">ONTAP에서 volume encryption conversion start 명령을 사용하여 기존 볼륨에서 암호화를 활성화합니다</block>
-  <block id="c54dbe39234f8280d6f1651be5a1c1a1" category="admonition">NetApp은 데이터 SVM의 모든 LIF에 대한 서브넷 개체를 생성할 것을 권장합니다. 이는 각 서브넷 객체에 연결된 브로드캐스트 도메인이 있기 때문에 ONTAP에서 대상 클러스터의 페일오버 대상을 결정할 수 있도록 서브넷 객체를 사용하는 MetroCluster 구성에서 특히 중요합니다. 자세한 내용은 을 <block ref="ad8e74354bc7fdb3d5c3a1c355adf86b" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="f0a2b989304d28e556b9962a34329b9d" category="list-text">NetApp은 데이터 SVM의 모든 LIF에 대한 서브넷 개체를 생성할 것을 권장합니다. 이는 각 서브넷 객체에 연결된 브로드캐스트 도메인이 있기 때문에 ONTAP에서 대상 클러스터의 페일오버 대상을 결정할 수 있도록 서브넷 객체를 사용하는 MetroCluster 구성에서 특히 중요합니다.</block>
   <block id="92fddfdf5dbc47678ec4636b79dffe90" category="doc">ONTAP S3 버킷을 생성합니다</block>
   <block id="cc5ddbb381355c5ec14560d21cf91e5f" category="doc">ONTAP S3 오브젝트 저장소 서버 정책을 생성하거나 수정합니다</block>
@@ -36311,10 +36280,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b435af79e1f691df6df2c12d59ea19e1" category="doc">기존 ONTAP DP 유형 관계를 XDP로 변환합니다</block>
   <block id="56c0a3bfc3e1d556477e8a8cba2857d2" category="doc">계획된 업그레이드 전에 ONTAP 자동 업그레이드 사전 검사를 실행합니다</block>
   <block id="30683864319af2d9960510bc3547e744" category="doc">자동화된 무중단 ONTAP 업그레이드로 ONTAP 이미지를 설치합니다</block>
-  <block id="4a6591cd8ee699bc89271024726ebf1d" category="doc">업그레이드 전에 ONTAP 클러스터 SVM 라우팅 구성을 확인합니다</block>
   <block id="0b84c528e5c36ebf24b6d176388283ce" category="doc">ONTAP 업그레이드 후 디스크 자격 패키지를 업데이트합니다</block>
-  <block id="c1eb700c3f91a715b676f8d8e5e78eed" category="doc">사용 중인 하드웨어 구성에 대한 ONTAP 대상 릴리스 지원을 확인합니다</block>
-  <block id="181104cd158acb458868183ff14d242e" category="doc">SnapMirror S3 구성에 대한 ONTAP 라이센스 확인</block>
   <block id="fbe129925d69d7a1608ff8517c2e054a" category="doc">업그레이드하기 전에 ONTAP 소프트웨어 이미지를 다운로드합니다</block>
   <block id="3c1c85acf1c954debff924a041791601" category="doc">ONTAP 업그레이드 전에 TLS를 사용하도록 LDAP 클라이언트를 구성합니다</block>
   <block id="ff30859fb8678e14da434faf10d64f75" category="doc">업그레이드하기 전에 ONTAP 클러스터 LIF 페일오버 구성을 확인하십시오</block>
@@ -37308,7 +37274,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ecfa38529755b5fd267ba5c944888775" category="paragraph">FPolicy는 SMB, NFSv3, NFSv4 및 ONTAP 9.15.1부터 NFSv4.1 파일 액세스 작업을 모니터링할 수 있습니다.</block>
   <block id="7b1807f7146547bf2bbd98f7a49da644" category="paragraph">ONTAP 9.15.1부터 NFSv4를 사용하면 NFSv4.0 및 NFSv4.1 이벤트를 캡처할 수 있습니다.</block>
   <block id="371831c4c5c3d34a6e11af6df69e3bf2" category="list-text">TLSv1.3(ONTAP 9.11.1부터 시작)</block>
-  <block id="9724403f22cff13c43fab946ba63c363" category="list-text">ONTAP 9.10.1부터<block ref="168d50085a3c4e712aaa28cf90e2f228" prefix=" " category="inline-code"></block> CLI 명령에 RDMA 기반 NFS 구성에 대한 매개 변수가 포함됩니다<block ref="e7f31f518110f3c17739edd51d047922" prefix=" " category="inline-code"></block>. RDMA 기반 NFS 구성용 네트워크 인터페이스 생성은 ONTAP 9.12.1부터 System Manager에서 지원됩니다. 자세한 내용은 을 <block ref="7ea15161e83b0e9a905b63481e90b54c" category="inline-xref-macro-rx"></block>참조하십시오.</block>
   <block id="1d8404eb6271fc502c911b0db577288e" category="list-text">SVM을 생성할 때 스냅샷 정책을 지정할 계획이지만 정책 이름을 모르는 경우, 사용 가능한 정책을 나열하고 사용할 스냅샷 정책의 이름을 식별하여 기록합니다.</block>
   <block id="4b22a84049b0ae29867579d641819d56" category="paragraph">다음 표에는 ONTAP 9.12.1부터 시작하는 시스템 SVM에 있는 LIF에 대한 내장 정책이 나와 있습니다. 다른 릴리즈의 경우 다음 명령을 사용하여 서비스 정책과 세부 정보를 표시합니다.</block>
   <block id="083ea751684ac248378573774ca094b5" category="paragraph">시스템 범위 관리 정책을 사용하여 시스템 SVM이 소유하는 노드 및 클러스터 범위 관리 LIF를 생성할 수 있습니다. 이러한 LIF는 DNS, AD, LDAP 또는 NIS 서버에 대한 아웃바운드 연결뿐만 아니라 전체 시스템을 대신하여 실행되는 애플리케이션을 지원하기 위한 일부 추가 연결에 사용할 수 있습니다. ONTAP 9.12.1부터 서비스를 사용하여 감사 로그를 원격 syslog 서버에 전달하는 데 사용되는 LIF를 제어할 수<block ref="1f5803a97adcac618c409e797f78cf63" prefix=" " category="inline-code"></block> 있습니다.</block>
@@ -39903,7 +39868,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="57d91d55f06020fe5574e62877b065bf" category="paragraph">에 대한 자세한 내용은<block ref="67e744e347af4cbdf0ab39fa5f21c0c7" prefix=" " category="inline-code"></block> <block ref="fb994e46b2e16f144068ce3c7e5a0cf6" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="074210e1f3b0bb0528013586d3e469e8" category="inline-link-macro">클러스터 컨트롤러 교체 네트워크 - 인터페이스 삭제</block>
   <block id="e6efe865531f88e7e1119a8ca81c6d40" category="list-text"><block ref="e6efe865531f88e7e1119a8ca81c6d40" category="inline-link-macro-rx"></block></block>
-  <block id="2f4cfbafbd8e41a116fcfd05597e4ada" category="list-text">기본 물리적 또는 논리적 네트워크 포트가 관리<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 상태로 구성되어야 합니다. 에 대한 자세한 내용은<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> <block ref="4c63772c0d465bc502b91b6f903bbe29" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="554a60a1bdbf15aa7473f5348c14a9e8" category="paragraph">에 대한 자세한 내용은<block ref="18ac852fb0d15d21df0560ca7f7d0e22" prefix=" " category="inline-code"></block> <block ref="ef4243ec358c5e412dc9667d726f5888" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="644618ccf1cbcc1bb2636aa67dd16c8d" category="doc">ONTAP S3 감사 구성을 생성하고 사용합니다</block>
   <block id="0c9ebdfc9ba5ea7dda1079764cfd8756" category="doc">ONTAP S3 이벤트 감사에 대해 자세히 알아보십시오</block>
@@ -39932,10 +39896,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="493ab9d2a248c4d8231cfd1b2da4031f" category="paragraph"><block ref="493ab9d2a248c4d8231cfd1b2da4031f" category="inline-link-macro-rx"></block></block>
   <block id="f51291e0738be7b28dacdf71f22559ba" category="doc">ONTAP S3 스냅샷을 삭제합니다</block>
   <block id="caf60be7491db9f567b5ef1b0259e027" category="doc">ONTAP S3 스냅샷을 보고 복원합니다</block>
-  <block id="6ae17b6c65a90c3e2d4608342c65fe0e" category="paragraph"><block ref="1e368189292e3982a3ae35731a40777f" prefix=" " category="inline-code"></block>SVM은 으로 나열되어야 합니다<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>. 에 대한 자세한 내용은<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> <block ref="4c63772c0d465bc502b91b6f903bbe29" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="e1f811620c757575a04d26ca70cf082d" category="list-text">Active Directory 도메인 수정을 계속하려면 CIFS 서버의 관리 상태를 로 설정해야<block ref="74e8333ad11685ff3bdae589c8f6e34d" prefix=" " category="inline-code"></block> 합니다.</block>
-  <block id="8ad8b340a7f3ff90988838c82e65a5b5" category="list-text">명령이 성공적으로 완료되면 관리 상태가 자동으로 로<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>설정됩니다. 에 대한 자세한 내용은<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> <block ref="4c63772c0d465bc502b91b6f903bbe29" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
-  <block id="f51a1b200e2aedf02f53c08f70dba43c" category="list-text">LIF와 연결되어야 하는 홈 포트 네트워크 인터페이스 중 하나가 상태에 있지 않은 경우<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>, 이러한 인터페이스가 작동되도록 문제를 해결하십시오. 에 대한 자세한 내용은<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> <block ref="4c63772c0d465bc502b91b6f903bbe29" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="8f0db6fb02ceff2540a80aca4d8afe62" category="paragraph">에 대한 자세한 내용은<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block> <block ref="52c5aac9881c68e527ca210415f7abab" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="e3ca30297f0106f64e153af5359c4f44" category="inline-link-macro">보안 SAML - SP</block>
   <block id="b025b9a299499619d321d82e10b44c9d" category="list-text"><block ref="b025b9a299499619d321d82e10b44c9d" category="inline-link-macro-rx"></block></block>
@@ -39970,7 +39931,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="bb29a491c1f1d6b2a83599781ca1c64d" category="list-text"><block ref="bb29a491c1f1d6b2a83599781ca1c64d" category="inline-link-macro-rx"></block></block>
   <block id="df347a373b8f92aa0ae3dd920a5ec2f6" category="inline-link-macro">행</block>
   <block id="a17168900b967f74c5ad06d22f2503e7" category="list-text"><block ref="a17168900b967f74c5ad06d22f2503e7" category="inline-link-macro-rx"></block></block>
-  <block id="57bd74d15d773182b7cb25b174bf3204" category="paragraph"><block ref="727bab3e5569f98b6c0b2d6021838c82" prefix=" " category="inline-code"></block>및<block ref="73653ee3560c81c0cf4dc58e4a29d97e" prefix=" " category="inline-code"></block> 필드가<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 반환됩니다. 에 대한 자세한 내용은<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> <block ref="4c63772c0d465bc502b91b6f903bbe29" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="ba772aa8211e00200011f1fbc62ab755" category="paragraph">및<block ref="484f24f8e4da80a1185aa63fa1d5fc08" prefix=" " category="inline-code"></block> 에 대한 자세한<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block> 내용은 을 <block ref="d112375d24cd1b9561ded217911dd9f1" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="db473d2e829b51448e96550734d0dafe" category="sidebar">S3 이벤트 감사에 대해 자세히 알아보십시오</block>
   <block id="86f36a312425e9727bebca0171917508" category="sidebar">구성을 만들고 활성화합니다</block>
@@ -44542,7 +44502,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="7a4fb48520dfb199bb74635ed5df5b61" category="paragraph">클러스터의 각 노드에 대한 인증서 및 인증 기관(CA) 이름이 표시됩니다.</block>
   <block id="ee0e320b9c2150d66a895688f0536e76" category="list-text">노드의 클러스터 네트워크 암호화 인증서를 수정합니다.</block>
   <block id="b544d12facc0f5d651f9bbf1f05a7dbd" category="paragraph">이 명령은 특정 노드에 대한 클러스터 네트워크 암호화 인증서를 수정합니다.  이 명령을 실행하기 전에 인증서를 설치하고 설치된 CA에서 서명해야 합니다.  인증서 관리에 대한 자세한 내용은 다음을 참조하세요.<block ref="31a00ab4013243ed6589f7ba4570beb4" category="inline-link-macro-rx"></block> .  만약에<block ref="e50d72d773874b2be58530daec43900c" prefix=" " category="inline-code"></block> 지정하지 않으면 자동 생성된 기본 인증서가 사용됩니다.</block>
-  <block id="1876b5d5f580981e4017a9ec61211df4" category="paragraph">ONTAP 모든 SSL 연결에 대해 연방 정보 처리 표준(FIPS) 140-2를 준수합니다.  ONTAP 내에서 SSL FIPS 모드를 켜고 끌 수 있고, SSL 프로토콜을 전역적으로 설정하고, 취약한 암호를 끌 수 있습니다.</block>
   <block id="b3848087f947ca532bd0f798638c3f0d" category="inline-xref">FIPS가 비활성화되었습니다</block>
   <block id="f3046461e3924fd6a0165270c2ae3323" category="paragraph">ONTAP 9.18.1은 SSL을 위한 ML-KEM, ML-DSA 및 SLH-DSA 포스트 양자 컴퓨팅 암호화 알고리즘에 대한 지원을 도입하여 향후 발생할 수 있는 양자 컴퓨터 공격에 대비한 보안 계층을 추가로 제공합니다.  이러한 알고리즘은 다음과 같은 경우에만 사용할 수 있습니다.<block ref="bc401b934f697fff623a4e2373aca77c" category="inline-xref-macro-rx"></block> .  FIPS가 비활성화되어 있고 피어가 이를 지원하는 경우 포스트 양자 암호화 알고리즘이 협상됩니다.</block>
   <block id="1fd8835aa2cd933954033d6853847670" category="paragraph">ONTAP 9.18.1부터 ONTAP 의 SSL은 ML-KEM, ML-DSA, SLH-DSA 포스트 양자 컴퓨팅 암호화 알고리즘을 지원합니다.  이러한 알고리즘은 FIPS가 비활성화되어 있고 피어가 이를 지원하는 경우에만 사용할 수 있습니다.</block>
@@ -45776,7 +45735,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="691549d3af8c7a4e078e128c7447fe90" category="summary">LIF에 대한 서비스 정책을 생성하고 할당합니다.</block>
   <block id="7eb9bddff8d5b751be257d6ae59f214f" category="summary">LIF 구성 소개</block>
   <block id="ba0bea8ac6b69d39dada1ee8578ce85c" category="summary">물리적 네트워크 포트와 가상 네트워크 포트를 소개합니다.</block>
-  <block id="24a0b720b51546a4e67ce104eb861708" category="summary">모든 SSL 연결에 대해 Federal Information Processing Standards 140-2를 준수합니다.</block>
   <block id="a5f0d677b0f867da98953b155ec42304" category="summary">SNMP 관리자에서 SNMP 유틸리티를 실행하도록 SNMPv3 사용자를 구성합니다.</block>
   <block id="9584f2b25fa9b9fa062a9b29853f317a" category="summary">서브넷 소개.</block>
   <block id="d049ae28c8a7c44c63a19e5c489467e1" category="summary">SNMP 관리자가 트랩 알림을 수신하도록 구성합니다.</block>
@@ -48857,7 +48815,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8e9a1645efa9e3c27f2aac1ae6487519" category="doc">ONTAP 업그레이드 전에 SSH 호스트 키 알고리즘 지원 여부를 확인하십시오</block>
   <block id="c73de1c9b941fd8c6f4112889b79eef4" category="doc">ONTAP 업그레이드 기간 지침</block>
   <block id="d5e67ad9e9a84a282caee216233369b4" category="doc">ONTAP 업그레이드에 대해 알아보기</block>
-  <block id="8b71c98e7b773e00ce90608d284ef1b4" category="doc">ONTAP 소프트웨어 업그레이드를 수동으로 준비합니다</block>
   <block id="7a2e3b5e305e8519c73cc926354b3d32" category="doc">ONTAP 업그레이드 후 네트워크 정책에서 EMS LIF 서비스 제거</block>
   <block id="a0406d0b01ba33eaead3baec34463020" category="doc">ONTAP 업그레이드가 서비스 프로세서 사용자 계정에 미치는 영향</block>
   <block id="b0ae30300d11ddd0ce05f360278eb9b6" category="doc">ONTAP 업그레이드 전 특별 구성 확인</block>
@@ -48866,7 +48823,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8a3131431438414085b863e65f980bc2" category="doc">Config Advisor를 사용하여 ONTAP 업그레이드 전에 구성 오류를 식별합니다</block>
   <block id="286ddad9dd5d6de9356f29c98011d2a9" category="doc">ONTAP 업그레이드 후 LIF를 홈 포트로 활성화 및 복원</block>
   <block id="dd1e9ab49ae0a1935a1611aeb7b68bf4" category="doc">ONTAP 9.2 또는 이전 버전에서 업그레이드한 후 KMIP 서버 재구성</block>
-  <block id="c1191e4cec1734af46b2e39eaf394de4" category="doc">4노드 또는 8노드 MetroCluster 구성에서 수동 ONTAP NDU</block>
   <block id="444edf9eb9ea486a425b6cf114df64d5" category="paragraph">4노드 또는 8노드 MetroCluster 구성의 수동 무중단 업그레이드(NDU)는 업데이트 준비, 하나 또는 두 개의 DR 그룹 각각에서 DR 쌍을 동시에 업데이트하고 업그레이드 후 작업을 수행하는 과정을 포함합니다.</block>
   <block id="076d5db944cbfaaecfcc037924156e6a" category="list-text">이 작업을 수행하려면 ONTAP 명령줄 인터페이스(CLI)를 사용해야 합니다.</block>
   <block id="9d42755d1906201265ebf9079f98b345" category="doc">ONTAP 2노드 MetroCluster 구성 업그레이드</block>
@@ -49244,4 +49200,68 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9b666e9f6530a96c20bb097b74398627" category="paragraph"><block ref="ac4bfd89fa917d221e7699de7d6c48de" prefix="" category="inline-code"></block></block>
   <block id="202d3eff129ab666d73ef23971f6ed10" category="section-title">SnapMirror 활성 동기화 SAN 관계를 삭제합니다.</block>
   <block id="6bf4ed0956506783cdde9a26ef683a64" category="paragraph">LUN 매핑 해제 후 SnapMirror 활성 동기화 관계를 삭제하십시오.</block>
+  <block id="43010de42cbcfbb25be075901dd4b32b" category="summary">모든 SSL 연결은 연방 정보 처리 표준 140-2 및 140-3을 준수합니다.</block>
+  <block id="ed1c011e021a857b9e7786921725baf0" category="paragraph">ONTAP은 모든 SSL 연결에 대해 FIPS(연방 정보 처리 표준)를 준수합니다. ONTAP 내에서 SSL FIPS 모드를 켜거나 끄고, SSL 프로토콜을 전역으로 설정하며, 취약한 암호화를 끌 수 있습니다.</block>
+  <block id="8af9a580aeca3ad8a9e7638c535cd503" category="paragraph">지원되는 FIPS 규정 준수 버전은 사용 중인 ONTAP 릴리스에 따라 다릅니다:</block>
+  <block id="c19f3126c40bbba29c78f627481d536f" category="cell">FIPS 규정 준수 지원</block>
+  <block id="4a961b8f85fdf9fe71cad93d123199c8" category="cell">FIPS 140-3</block>
+  <block id="208bcd63753f2ef8a374f73ef74d14a5" category="list-text">9.19.1P2 이상</block>
+  <block id="12c504ea5bf2e5057f3d02c787d66da9" category="list-text">9.18.1P6 및 이후 9.18.1 패치 릴리스</block>
+  <block id="8a5275b722854cee8913aea0acdc2c33" category="cell">FIPS 140-2</block>
+  <block id="eca0960939de806346fd966b18fdaef5" category="list-text">9.19.1P1</block>
+  <block id="3c98a704e8c72b30a6923a188e97bd30" category="list-text">9.18.1P5 및 이전 버전</block>
+  <block id="44defbe3e6eb995ec3e6a6963de2a160" category="paragraph">스토리지 가상 머신(SVM)은 하나 이상의 논리 인터페이스(LIF)를 통해 클라이언트에 데이터를 제공합니다. LIF는 물리적 또는 논리적 포트와 연결된 IP 주소입니다. 데이터 액세스에 사용할 포트에 LIF를 생성해야 합니다. 구성 요소에 장애가 발생하면 LIF는 페일오버되거나 다른 물리적 포트로 마이그레이션되어 네트워크와의 통신을 계속할 수 있습니다.</block>
+  <block id="8611c9af48cda5587049199f7b97f656" category="list-text">기본 물리적 또는 논리적 네트워크 포트는 관리<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 상태여야 합니다.</block>
+  <block id="b0d7f1a6adfcd5a4213d1313d1c85522" category="list-title">서브넷을 사용하여 LIFS 생성</block>
+  <block id="a2a9e413667d6891efdae81c47f375aa" category="list-text">NetApp은 데이터 SVM의 모든 LIF에 대해 서브넷 오브젝트를 생성하는 것을 권장합니다. 이는 특히 MetroCluster 구성에서 중요한데, 각 서브넷 오브젝트에는 연결된 브로드캐스트 도메인이 있으므로 서브넷 오브젝트를 통해 ONTAP이 타겟 클러스터에서 페일오버 대상을 결정할 수 있기 때문입니다. LIF에 IP 주소와 네트워크 마스크 값을 할당하기 위해 서브넷 이름을 사용하려는 경우, 해당 서브넷이 이미 존재해야 합니다. 자세한 내용은 <block ref="ad8e74354bc7fdb3d5c3a1c355adf86b" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="888d709fd5726772e10897bc6d9e245d" category="list-text">클러스터 간 네트워크 인터페이스를 생성할 때 기존 서브넷 범위에 있는 IP 주소를 지정할 수 없습니다.</block>
+  <block id="a3b283ebbbb36ecc690f53829e6f2e11" category="list-text">ONTAP 9.7부터 서브넷을 사용하여 네트워크 인터페이스를 생성하면 ONTAP은 선택한 서브넷에서 사용 가능한 IP 주소를 자동으로 선택하여 네트워크 인터페이스에 할당합니다. 서브넷이 두 개 이상인 경우 서브넷을 변경할 수 있지만 IP 주소는 변경할 수 없습니다.</block>
+  <block id="762d9413e8f686daaa6c0e805e9d758a" category="paragraph-title">ONTAP 버전별 LIF 생성 기능 지원</block>
+  <block id="a4480cade6455cab138d923bf0bb1e20" category="paragraph">LIF 생성 관련 기능에 대한 지원은 ONTAP 버전에 따라 다릅니다.</block>
+  <block id="7d0a287f4ae4256262d56a3e50740fc3" category="cell">ONTAP 버전부터</block>
+  <block id="b4bc76184cf881db286fc3ee183e99e5" category="cell">System Manager에서 RDMA를 통한 NFS 구성용 네트워크 인터페이스 생성을 지원합니다. 자세한 내용은 <block ref="7ea15161e83b0e9a905b63481e90b54c" category="inline-xref-macro-rx"></block>를 참조하십시오.</block>
+  <block id="b78086408274e220dea46a6f6d1ebd92" category="cell">All-Flash SAN Array(ASA) 시스템에서 자동 iSCSI LIF 페일오버를 지원합니다. 새 iSCSI LIF의 경우, SVM에 기존 iSCSI LIF가 없거나 모든 기존 iSCSI LIF에서 페일오버가 활성화된 경우 페일오버가 자동으로 활성화되며 정책은 <block ref="9817175b2d67fda65aaaec8b8fcf2111" prefix=" " category="inline-code"></block>, 자동 복구는 <block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>로 설정됩니다. ONTAP 9.11.1 이상으로 업그레이드한 후, 동일한 SVM의 기존 iSCSI LIF에서 페일오버가 활성화되지 않은 경우 새 iSCSI LIF는 <block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block> 페일오버 정책을 상속합니다. <block ref="5b1166dba71dd88b92c8f0acf473772e" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="3aafd02626737b3fdc7b1464b4c6c61f" category="cell"><block ref="168d50085a3c4e712aaa28cf90e2f228" prefix=" " category="inline-code"></block> 명령어에는 RDMA를 통한 NFS 구성을 위한 <block ref="e7f31f518110f3c17739edd51d047922" prefix=" " category="inline-code"></block> 매개변수가 포함되어 있습니다.</block>
+  <block id="fcf3613900d6c4027d474b06d5d3c231" category="cell">동일한 서브넷에 SVM용 다른 LIF가 이미 존재하는 경우, LIF의 홈 포트를 지정할 필요가 없습니다. ONTAP은 동일한 서브넷에 이미 구성된 다른 LIF와 동일한 브로드캐스트 도메인 내에서 지정된 홈 노드의 임의의 포트를 자동으로 선택합니다.</block>
+  <block id="d6ff33ec51770db3630a6b4da594a609" category="paragraph">LIF는 서비스 정책을 사용하여 처리하는 트래픽 유형을 지정합니다. ONTAP 9.5 및 이전 버전에서는 역할을 사용하여 트래픽 유형을 지정합니다</block>
+  <block id="28c3bb61cabdf0a7164b365d8b68ccfb" category="list-title">LIF 생성 제한 사항</block>
+  <block id="5280595b4db0d37d83cc52ae2619aadf" category="paragraph">하지만 NAS 및 이더넷 기반 SAN 프로토콜은 동일한 물리적 포트에 존재할 수 있습니다.</block>
+  <block id="9574c804c9fb1d09bbbbd8b4e4636f38" category="list-text">NVMe LIF</block>
+  <block id="72c516a521e978dac7780a2e8bf37579" category="list-text">데이터 LIF는 NVMe와 다른 프로토콜 간에 공유될 수 없습니다. NVMe 데이터 LIF에서는 NVMe 프로토콜만 사용할 수 있습니다.</block>
+  <block id="8b3ceee0c2c99a2402e287d6d9b032a2" category="paragraph"><block ref="19481bdaaf9cbe1b26536cb01cf9effe" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="49ce6a3953749e0d596d53c99f772e2c" category="list-text">SMB LIF</block>
+  <block id="183f741caf1845dcfc395362a53ef463" category="list-text">SMB 서버가 Hyper-V 또는 SQL Server over SMB를 사용한 중단 없는 운영 솔루션을 호스팅하는 경우, SMB 트래픽을 전달하는 LIF가 자동으로 홈 노드로 되돌아가도록 구성하지 마십시오.</block>
+  <block id="3164484a100cb440dcd936cf2b1ece1b" category="paragraph">System Manager 또는 CLI를 사용하여 LIF를 생성하십시오.</block>
+  <block id="70f05d5e4f09d0d338143f04d8b5e5c4" category="paragraph">클러스터에 LIF가 많은 경우, 추가 LIF를 생성하기 전에 클러스터에서 지원하는 LIF 용량을 확인할 수 있습니다. ONTAP 9.12.1부터는 System Manager의 네트워크 인터페이스 그리드에서 처리량을 확인할 수 있습니다.</block>
+  <block id="4890b86912dacff6f1f095031a537ce0" category="list-text">IP 주소를 지정하십시오. IP 주소가 사용 중인 경우 경고 메시지가 표시됩니다.</block>
+  <block id="9041024967cb18a5953cefc2586c7be7" category="list-text">선택적으로, 네트워크 인터페이스 용량을 보려면 권한 수준을 고급으로 설정하십시오.</block>
+  <block id="37e228915a5c98ada5d684c37fd272e9" category="list-text">각 노드에서 지원되는 LIF 용량을 확인하십시오:</block>
+  <block id="532a7b2e1505c1bbde96f781fea3213c" category="paragraph">해당 <block ref="6d38f68efafeeda72933275474c52475" prefix=" " category="inline-code"></block>명령어<block ref="8799829b9b38f39ed37b4d409740b73e" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="d6e56a7fd30418543f46191285abe52a" category="list-text"><block ref="38df54fe961fa2bf2a7f82a5854fabad" prefix=" " category="inline-code"></block> 및 <block ref="bba17324bbe2e8cea0c60e47268d4b36" prefix=" " category="inline-code"></block> 옵션을 사용하여 IP 주소를 지정하거나, <block ref="8db950a15da003c155c149cbe4e043a2" prefix=" " category="inline-code"></block> 옵션을 사용하여 서브넷에서 할당을 활성화할 수 있습니다.</block>
+  <block id="6f2f554fc608ee2df936440bf58ccb60" category="list-text">선택적으로 -address 옵션에 IPv6 주소를 할당합니다:</block>
+  <block id="21f332db2a0aeb6d30c08d58804c1f1a" category="list-text">기본 물리적 또는 논리적 네트워크 포트는 관리자<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 상태로 구성되어 있어야 합니다.</block>
+  <block id="344d154048e17ac0c88eaacf7cfadb92" category="doc">ONTAP에서 NVMe 호스트 우선순위 변경</block>
+  <block id="b6019f8721e662eb133f05b63059d7b9" category="doc">NVMe 네임스페이스를 ONTAP LUN으로 변환</block>
+  <block id="32d766d09120959d278450c4ab04403b" category="doc">ONTAP에서 NVMe를 통한 인밴드 인증 비활성화</block>
+  <block id="c8aa8e93cb22dcf66571cf23428cdda2" category="doc">ONTAP에서 NVMe/TCP용 TLS 보안 채널 비활성화</block>
+  <block id="83d49af3ea14e0bd4118a6b111778d88" category="doc">ONTAP NVMe 라이선스 요구 사항</block>
+  <block id="3bcb20e1f89d316d053054c019cebdcb" category="doc">ONTAP NVMe 네임스페이스 크기 조정</block>
+  <block id="09439c09e105cd78806c52c1b0808b42" category="doc">ONTAP에서 NVMe를 통한 인밴드 인증 설정</block>
+  <block id="1c4d2decc8443addca9ed2dd6765b89c" category="doc">ONTAP에서 NVMe/TCP용 TLS 보안 채널 설정</block>
+  <block id="b9f54fc2ec61f3eeae745a7e9d38d3ea" category="doc">ONTAP에서의 NVMe 구성, 지원 및 제한 사항</block>
+  <block id="d53a01afd17aa7fc82a32e208c625644" category="paragraph">SVM의 <block ref="1e368189292e3982a3ae35731a40777f" prefix=" " category="inline-code"></block>은(는) <block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>(으)로 표시되어야 합니다.</block>
+  <block id="93dbbbedefe4355c45f2d59ed8d5322f" category="list-text">명령이 성공적으로 완료되면 관리 상태는 자동으로 <block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>(으)로 설정됩니다.</block>
+  <block id="128096aa51bbdce5c01acf65b4deddde" category="list-text">LIF가 연결되어야 하는 홈 포트 네트워크 인터페이스 중 하나라도 <block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 상태가 아닌 경우, 해당 인터페이스가 활성화되도록 문제를 해결하십시오.</block>
+  <block id="9b42fa22a842d7e2d6efe49ef9f49651" category="paragraph"><block ref="727bab3e5569f98b6c0b2d6021838c82" prefix=" " category="inline-code"></block> 및 <block ref="73653ee3560c81c0cf4dc58e4a29d97e" prefix=" " category="inline-code"></block> 필드는 <block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block>을(를) 반환해야 합니다.</block>
+  <block id="2bd64a1f15fde9b237ffd303fb13f9e0" category="doc">ONTAP에서 자동 업데이트 활성화</block>
+  <block id="7d3387a352d01e1cd05e30e7ea1ac865" category="doc">ONTAP 펌웨어 수동 업데이트</block>
+  <block id="44e7fb1c9aedc6a3c24d9c913a611ceb" category="doc">ONTAP이 설치를 위해 자동 업데이트를 예약하는 방법</block>
+  <block id="e7dfdf363406fab1deead3bbf6395a96" category="doc">ONTAP에서 권장 자동 업데이트 관리</block>
+  <block id="2ac0f743cb3c12679a002766f6067fd7" category="doc">ONTAP에서 자동 업데이트 수정</block>
+  <block id="4d9ff0981fadde25e34c433935660c06" category="doc">ONTAP 업그레이드 전 SVM 라우팅 구성 요구 사항</block>
+  <block id="7717a9341426a93dde759f1529a86bdf" category="doc">ONTAP 업그레이드를 위한 하드웨어 구성 요구 사항</block>
+  <block id="dd16864609ef8d2cef0bd39dbce65783" category="doc">SnapMirror S3 구성에 대한 ONTAP 라이선스 요구 사항</block>
+  <block id="93c9d4ff21582c79a7cddb11d4a3829d" category="doc">ONTAP용 수동 업그레이드 준비 워크플로우</block>
+  <block id="165e9ffb20a53bc1f7011ca5414d2161" category="doc">ONTAP 4노드 또는 8노드 MetroCluster 구성 수동 업그레이드</block>
+  <block id="c67fe6e6b4e25a2f3dba975eccebb39d" category="doc">ONTAP 업그레이드 전에 모든 노드에 netgroup 파일이 있는지 확인하십시오.</block>
 </blocks>

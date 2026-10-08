@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, ontap, prepare, digital advisor, preparation, before you upgrade, plan, upgrade overview, upgrade summary, upgrade health checker 
 summary: ONTAP 업그레이드를 준비하면 업그레이드 위험 또는 차단기를 식별하고 완화하며 구성에 적용되는 특별한 고려 사항을 파악할 수 있습니다. 
 ---
-= ONTAP 소프트웨어 업그레이드를 수동으로 준비합니다
+= ONTAP용 수동 업그레이드 준비 워크플로우
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

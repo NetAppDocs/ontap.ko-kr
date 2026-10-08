@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: nvme, namespaces, considerations, provisioning 
 summary: NVMe 지원은 ONTAP 버전, 플랫폼 및 구성에 따라 다릅니다. 
 ---
-= NVMe 구성, 지원 및 제한 사항
+= ONTAP에서의 NVMe 구성, 지원 및 제한 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

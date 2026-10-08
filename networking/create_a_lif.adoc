@@ -14,84 +14,81 @@ summary: 물리적 또는 논리적 포트와 연결된 IP 주소인 LIF를 생�
 
 
 [role="lead"]
-SVM은 하나 이상의 네트워크 논리 인터페이스(LIF)를 통해 클라이언트에 데이터를 제공합니다. 데이터에 액세스하는 데 사용할 포트에 LIF를 생성해야 합니다. LIF(네트워크 인터페이스)는 물리적 포트 또는 논리적 포트와 연결된 IP 주소입니다. 구성요소 장애가 발생할 경우 LIF가 다른 물리적 포트로 페일오버되거나 마이그레이션되어 네트워크와 계속 통신할 수 있습니다.
-
-.모범 사례
-LIF 마이그레이션 중에 지연을 줄이려면 ONTAP에 연결된 스위치 포트를 스패닝 트리 에지 포트로 구성해야 합니다.
+스토리지 가상 머신(SVM)은 하나 이상의 논리 인터페이스(LIF)를 통해 클라이언트에 데이터를 제공합니다. LIF는 물리적 또는 논리적 포트와 연결된 IP 주소입니다. 데이터 액세스에 사용할 포트에 LIF를 생성해야 합니다. 구성 요소에 장애가 발생하면 LIF는 페일오버되거나 다른 물리적 포트로 마이그레이션되어 네트워크와의 통신을 계속할 수 있습니다.
 
 .시작하기 전에
 * 이 작업을 수행하려면 클러스터 관리자여야 합니다.
-* 기본 물리적 또는 논리적 네트워크 포트가 관리 작동 상태로 구성되어 있어야 합니다.
-* 서브넷 이름을 사용하여 LIF에 대한 IP 주소 및 네트워크 마스크 값을 할당하려는 경우, 서브넷이 이미 존재해야 합니다.
-+
-서브넷에는 동일한 계층 3 서브넷에 속하는 IP 주소 풀이 포함되어 있습니다. System Manager나 network subnet create 명령을 사용하여 생성됩니다.
-
-+
-에 대한 자세한 내용은 `network subnet create` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
-
-* LIF가 처리하는 트래픽 유형을 지정하는 메커니즘이 변경되었습니다. ONTAP 9.5 이전 버전의 경우 LIF는 역할을 사용하여 처리할 트래픽 유형을 지정합니다. ONTAP 9.6부터 LIF는 서비스 정책을 사용하여 처리할 트래픽 유형을 지정합니다.
+* 기본 물리적 또는 논리적 네트워크 포트는 관리 `up` 상태여야 합니다.
 
 
 .이 작업에 대해
+동일한 네트워크 포트에서 IPv4 및 IPv6 LIF를 모두 생성할 수 있습니다.
+
+.서브넷을 사용하여 LIFS 생성
+* NetApp은 데이터 SVM의 모든 LIF에 대해 서브넷 오브젝트를 생성하는 것을 권장합니다. 이는 특히 MetroCluster 구성에서 중요한데, 각 서브넷 오브젝트에는 연결된 브로드캐스트 도메인이 있으므로 서브넷 오브젝트를 통해 ONTAP이 타겟 클러스터에서 페일오버 대상을 결정할 수 있기 때문입니다. LIF에 IP 주소와 네트워크 마스크 값을 할당하기 위해 서브넷 이름을 사용하려는 경우, 해당 서브넷이 이미 존재해야 합니다. 자세한 내용은 link:../networking/create_a_subnet.html["서브넷을 생성합니다"]를 참조하십시오.
+* 클러스터 간 노드 트래픽을 처리하는 LIF는 LIF가 관리 트래픽을 처리하거나 데이터 트래픽을 처리하는 LIF와 같은 서브넷에 있으면 안 됩니다.
+* 클러스터 간 네트워크 인터페이스를 생성할 때 기존 서브넷 범위에 있는 IP 주소를 지정할 수 없습니다.
+* ONTAP 9.7부터 서브넷을 사용하여 네트워크 인터페이스를 생성하면 ONTAP은 선택한 서브넷에서 사용 가능한 IP 주소를 자동으로 선택하여 네트워크 인터페이스에 할당합니다. 서브넷이 두 개 이상인 경우 서브넷을 변경할 수 있지만 IP 주소는 변경할 수 없습니다.
+
+
+.ONTAP 버전별 LIF 생성 기능 지원
+LIF 생성 관련 기능에 대한 지원은 ONTAP 버전에 따라 다릅니다.
+
+[cols="2"]
+|===
+| ONTAP 버전부터 | 피처 
+
+
+| 9.12.1 | System Manager에서 RDMA를 통한 NFS 구성용 네트워크 인터페이스 생성을 지원합니다. 자세한 내용은 xref:../nfs-rdma/configure-lifs-task.html[RDMA를 통해 NFS에 대해 LIFS를 구성합니다]를 참조하십시오. 
+
+
+| 9.11.1 | All-Flash SAN Array(ASA) 시스템에서 자동 iSCSI LIF 페일오버를 지원합니다. 새 iSCSI LIF의 경우, SVM에 기존 iSCSI LIF가 없거나 모든 기존 iSCSI LIF에서 페일오버가 활성화된 경우 페일오버가 자동으로 활성화되며 정책은  `sfo-partner-only`, 자동 복구는  `true`로 설정됩니다. ONTAP 9.11.1 이상으로 업그레이드한 후, 동일한 SVM의 기존 iSCSI LIF에서 페일오버가 활성화되지 않은 경우 새 iSCSI LIF는  `disabled` 페일오버 정책을 상속합니다. link:../san-admin/asa-iscsi-lif-fo-task.html["ASA 플랫폼의 iSCSI LIF 페일오버"]에 대해 자세히 알아보십시오. 
+
+
+| 9.10.1 |  `network interface` 명령어에는 RDMA를 통한 NFS 구성을 위한  `-rdma-protocols` 매개변수가 포함되어 있습니다. 
+
+
+| 9.7 | 동일한 서브넷에 SVM용 다른 LIF가 이미 존재하는 경우, LIF의 홈 포트를 지정할 필요가 없습니다. ONTAP은 동일한 서브넷에 이미 구성된 다른 LIF와 동일한 브로드캐스트 도메인 내에서 지정된 홈 노드의 임의의 포트를 자동으로 선택합니다. 
+
+
+| 9.6  a| 
+LIF는 서비스 정책을 사용하여 처리하는 트래픽 유형을 지정합니다. ONTAP 9.5 및 이전 버전에서는 역할을 사용하여 트래픽 유형을 지정합니다
+
+|===
+.LIF 생성 제한 사항
 * NAS 및 SAN 프로토콜은 동일한 LIF에 할당할 수 없습니다.
 +
-지원되는 프로토콜은 SMB, NFS, FlexCache, iSCSI 및 FC입니다. iSCSI 및 FC는 다른 프로토콜과 결합할 수 없습니다. 그러나 NAS 및 이더넷 기반 SAN 프로토콜은 동일한 물리적 포트에 존재할 수 있습니다.
-
-+
-** SMB 트래픽이 있는 LIF가 홈 노드로 자동 복구되도록 구성하지 않아야 합니다. SMB를 통해 Hyper-V 또는 SQL Server의 무중단 운영을 지원하는 솔루션을 호스팅하려는 SMB 서버의 경우 이 권장 사항이 필수입니다.
-
-
-* 동일한 네트워크 포트에서 IPv4 및 IPv6 LIF를 모두 생성할 수 있습니다.
-* SVM에서 사용하는 DNS, NIS, LDAP, Active Directory 등의 모든 이름 매핑 및 호스트 이름 확인 서비스 SVM의 데이터 트래픽을 처리하는 하나 이상의 LIF에서 연결할 수 있어야 합니다.
-* 클러스터 간 노드 트래픽을 처리하는 LIF는 LIF가 관리 트래픽을 처리하거나 데이터 트래픽을 처리하는 LIF와 같은 서브넷에 있으면 안 됩니다.
-* 유효한 페일오버 목표가 없는 LIF를 생성하면 경고 메시지가 표시됩니다.
-* 클러스터에 LIF가 많은 경우 클러스터에서 지원되는 LIF 용량을 확인할 수 있습니다.
-+
-** 시스템 관리자: ONTAP 9.12.0부터 네트워크 인터페이스 그리드의 처리량을 확인합니다.
-** CLI: 고급 권한 수준에서 network interface capacity details show 명령을 사용하여 각 노드에서 지원되는 LIF 용량과 network interface capacity show 명령을 사용하십시오.
-+
-및 `network interface capacity details show` 에 대한 자세한 `network interface capacity show` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface+capacity+show["ONTAP 명령 참조입니다"^]참조하십시오.
-
-
-
-* ONTAP 9.7부터 동일한 서브넷에 있는 SVM에 대한 다른 LIF가 이미 있는 경우 LIF의 홈 포트를 지정할 필요가 없습니다. ONTAP는 동일한 서브넷에 이미 구성된 다른 LIF와 동일한 브로드캐스트 도메인에 있는 지정된 홈 노드에서 랜덤 포트를 자동으로 선택합니다.
-+
-ONTAP 9.4부터는 FC-NVMe가 지원됩니다. FC-NVMe LIF를 생성하는 경우 다음 사항을 알아야 합니다.
-
-+
-** NVMe 프로토콜은 LIF가 생성된 FC 어댑터에서 지원되어야 합니다.
-** FC-NVMe는 데이터 LIF에서 유일한 데이터 프로토콜일 수 있습니다.
-
+하지만 NAS 및 이더넷 기반 SAN 프로토콜은 동일한 물리적 포트에 존재할 수 있습니다.
 
 * SAN을 지원하는 모든 SVM(스토리지 가상 머신)에서 관리 트래픽을 처리하는 하나의 LIF를 구성해야 합니다.
-* NVMe LIF 및 네임스페이스는 동일한 노드에서 호스팅되어야 합니다.
-* SVM당, 노드당 최대 2개의 NVMe LIF를 구성할 수 있다.
-* 서브넷을 사용하여 네트워크 인터페이스를 만들면 ONTAP는 선택한 서브넷에서 사용 가능한 IP 주소를 자동으로 선택하고 네트워크 인터페이스에 할당합니다. 서브넷이 두 개 이상인 경우 서브넷을 변경할 수 있지만 IP 주소는 변경할 수 없습니다.
-* 네트워크 인터페이스를 위해 SVM을 생성(추가)할 때 기존 서브넷 범위에 있는 IP 주소를 지정할 수 없습니다. 서브넷 충돌 오류가 발생합니다. 이 문제는 SVM 설정 또는 클러스터 설정에서 클러스터 간 네트워크 인터페이스를 생성하거나 수정하는 등 네트워크 인터페이스를 위한 다른 워크플로우에서 발생합니다.
-* ONTAP 9.10.1부터 `network interface` CLI 명령에 RDMA 기반 NFS 구성에 대한 매개 변수가 포함됩니다 `-rdma-protocols`. RDMA 기반 NFS 구성용 네트워크 인터페이스 생성은 ONTAP 9.12.1부터 System Manager에서 지원됩니다. 자세한 내용은 을 xref:../nfs-rdma/configure-lifs-task.html[RDMA를 통해 NFS에 대해 LIFS를 구성합니다]참조하십시오.
-* ONTAP 9.11.1부터 ASA(All-Flash SAN 어레이) 플랫폼에서 자동 iSCSI LIF 페일오버를 사용할 수 있습니다.
+* NVMe LIF
 +
-iSCSI LIF 페일오버가 자동으로 활성화됨(페일오버 정책은 'fo-partner-only'로 설정되고 자동 되돌리기 값은 'true'로 설정됨) 새로 생성된 iSCSI LIF에서 지정된 SVM에 iSCSI LIF가 없거나 지정된 SVM에 있는 기존 iSCSI LIF가 iSCSI LIF 페일오버로 이미 활성화되어 있는 경우.
-
+** NVMe 프로토콜은 LIF가 생성된 FC 어댑터에서 지원되어야 합니다.
+** NVMe LIF 및 네임스페이스는 동일한 노드에서 호스팅되어야 합니다.
+** SVM당, 노드당 최대 2개의 NVMe LIF를 구성할 수 있다.
+** 데이터 LIF는 NVMe와 다른 프로토콜 간에 공유될 수 없습니다. NVMe 데이터 LIF에서는 NVMe 프로토콜만 사용할 수 있습니다.
 +
-ONTAP 9.11.1 이상으로 업그레이드한 후 iSCSI LIF 페일오버 기능을 사용하도록 설정되지 않은 SVM에 기존 iSCSI LIF가 있고 동일한 SVM에 새 iSCSI LIF를 생성하고, 새로운 iSCSI LIF는 SVM에 있는 기존 iSCSI LIF와 동일한 페일오버 정책(비활성화)을 가정합니다.
+link:../nvme/support-limitations.html["NVMe 구성, 지원 및 제한 사항"]에 대해 자세히 알아보십시오.
 
+
+
+* SMB LIF
 +
-link:../san-admin/asa-iscsi-lif-fo-task.html["ASA 플랫폼의 iSCSI LIF 페일오버"]
+** SMB 서버가 Hyper-V 또는 SQL Server over SMB를 사용한 중단 없는 운영 솔루션을 호스팅하는 경우, SMB 트래픽을 전달하는 LIF가 자동으로 홈 노드로 되돌아가도록 구성하지 마십시오.
 
 
 
-ONTAP 9.7부터 ONTAP는 해당 IPspace의 동일한 서브넷에 이미 있는 LIF가 하나 이상 있으면 LIF의 홈 포트를 자동으로 선택합니다. ONTAP은 해당 서브넷에 있는 다른 LIF와 동일한 브로드캐스트 도메인에서 홈 포트를 선택합니다. 홈 포트는 여전히 지정할 수 있지만 더 이상 필요하지 않습니다(지정된 IPspace의 해당 서브넷에 LIF가 아직 없는 경우).
 
-ONTAP 9.12.0부터는 -- System Manager 또는 CLI를 사용하는 인터페이스에 따라 절차가 달라집니다.
+.단계
+System Manager 또는 CLI를 사용하여 LIF를 생성하십시오.
 
 [role="tabbed-block"]
 ====
 .시스템 관리자
 --
-* System Manager를 사용하여 네트워크 인터페이스를 추가합니다 *
+.시작하기 전에
+클러스터에 LIF가 많은 경우, 추가 LIF를 생성하기 전에 클러스터에서 지원하는 LIF 용량을 확인할 수 있습니다. ONTAP 9.12.1부터는 System Manager의 네트워크 인터페이스 그리드에서 처리량을 확인할 수 있습니다.
 
-.단계
 . Network > Overview > Network Interfaces * 를 선택합니다.
 . 를 선택합니다 image:icon_add.gif["추가 아이콘"].
 . 다음 인터페이스 역할 중 하나를 선택합니다.
@@ -117,7 +114,7 @@ ONTAP 9.12.0부터는 -- System Manager 또는 CLI를 사용하는 인터페이�
 .. 서브넷을 선택한 경우 드롭다운에서 선택합니다.
 .. 서브넷 없이 진행하면 브로드캐스트 도메인 드롭다운이 표시됩니다.
 +
-... IP 주소를 지정합니다. IP 주소를 사용 중인 경우 경고 메시지가 표시됩니다.
+... IP 주소를 지정하십시오. IP 주소가 사용 중인 경우 경고 메시지가 표시됩니다.
 ... 서브넷 마스크를 지정합니다.
 
 
@@ -130,13 +127,31 @@ ONTAP 9.12.0부터는 -- System Manager 또는 CLI를 사용하는 인터페이�
 --
 .CLI를 참조하십시오
 --
-* CLI를 사용하여 LIF * 를 생성합니다
+. 선택적으로, 네트워크 인터페이스 용량을 보려면 권한 수준을 고급으로 설정하십시오.
++
+.. 권한 수준을 고급으로 설정합니다.
++
+[source, cli]
+----
+set -privilege advanced
+----
+.. 각 노드에서 지원되는 LIF 용량을 확인하십시오:
++
+[source, cli]
+----
+network interface capacity details show
+----
++
+해당  `network interface capacity details show`명령어link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=network+interface+capacity+show["ONTAP 명령 참조입니다"^]에 대해 자세히 알아보십시오.
 
-.단계
+
+
 . LIF에 사용할 브로드캐스트 도메인 포트를 결정합니다.
 +
-'네트워크 포트 브로드캐스트-도메인 쇼-IPSpace_ipspace1_'
-
+[source, cli]
+----
+network port broadcast-domain show -ipspace _ipspace1_
+----
 +
 ....
 IPspace     Broadcast                       Update
@@ -153,20 +168,19 @@ ipspace1
 
 . LIF에 사용할 서브넷에 사용되지 않는 IP 주소가 충분히 있는지 확인합니다.
 +
-'network subnet show - IPSpace_ipspace1_'
-
+[source, cli]
+----
+network subnet show -ipspace _ipspace1_
+----
 +
 에 대한 자세한 내용은 `network subnet show` link:https://docs.netapp.com/us-en/ontap-cli/network-subnet-show.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 . 데이터에 액세스하는 데 사용할 포트에 하나 이상의 LIF를 생성합니다.
 +
-
-CAUTION: NetApp은 데이터 SVM의 모든 LIF에 대한 서브넷 개체를 생성할 것을 권장합니다. 이는 각 서브넷 객체에 연결된 브로드캐스트 도메인이 있기 때문에 ONTAP에서 대상 클러스터의 페일오버 대상을 결정할 수 있도록 서브넷 객체를 사용하는 MetroCluster 구성에서 특히 중요합니다. 자세한 내용은 을 link:../networking/create_a_subnet.html["서브넷을 생성합니다"]참조하십시오.
-
-+
-....
+[source, cli]
+----
 network interface create -vserver _SVM_name_ -lif _lif_name_ -service-policy _service_policy_name_ -home-node _node_name_ -home-port port_name {-address _IP_address_ - netmask _Netmask_value_ | -subnet-name _subnet_name_} -firewall- policy _policy_ -auto-revert {true|false}
-....
+----
 +
 ** 홈 노드는 LIF에서 네트워크 인터페이스 되돌리기 명령을 실행할 때 LIF가 반환하는 노드입니다.
 +
@@ -176,7 +190,7 @@ network interface create -vserver _SVM_name_ -lif _lif_name_ -service-policy _se
 에 대한 자세한 내용은 `network interface revert` link:https://docs.netapp.com/us-en/ontap-cli/network-interface-revert.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 ** '-home-port'는 LIF에서 '네트워크 인터페이스 되돌리기' 명령을 실행하면 LIF가 반환되는 물리적 또는 논리적 포트입니다.
-** IP 주소는 '-address' 및 '-netmask' 옵션을 사용하여 지정하거나 '-subnet_name' 옵션을 사용하여 서브넷에서 할당을 활성화할 수 있습니다.
+**  `-address` 및  `-netmask` 옵션을 사용하여 IP 주소를 지정하거나,  `-subnet_name` 옵션을 사용하여 서브넷에서 할당을 활성화할 수 있습니다.
 ** 서브넷을 사용하여 IP 주소와 네트워크 마스크를 제공하면, 서브넷에 정의된 서브넷이 해당 서브넷을 사용하여 LIF를 생성할 때 해당 게이트웨이에 대한 기본 경로가 SVM에 자동으로 추가됩니다.
 ** 서브넷을 사용하지 않고 수동으로 IP 주소를 할당하는 경우 다른 IP 서브넷에 클라이언트 또는 도메인 컨트롤러가 있는 경우 게이트웨이에 대한 기본 라우트를 구성해야 할 수 있습니다. 에 대한 자세한 내용은 `network route create` link:https://docs.netapp.com/us-en/ontap-cli/network-route-create.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 ** '-자동 되돌리기'를 사용하면 시작, 관리 데이터베이스의 상태 변경 또는 네트워크 연결이 이루어지는 시기에 데이터 LIF가 홈 노드로 자동 복구되는지 여부를 지정할 수 있습니다. 기본 설정은 false로 설정되어 있지만 사용자 환경의 네트워크 관리 정책에 따라 true로 설정할 수 있습니다.
@@ -184,7 +198,7 @@ network interface create -vserver _SVM_name_ -lif _lif_name_ -service-policy _se
 ** '-data-protocol'을 사용하면 FCP 또는 NVMe/FC 프로토콜을 지원하는 LIF를 생성할 수 있습니다. IP LIF를 생성할 때는 이 옵션이 필요하지 않습니다.
 
 
-. * 선택 사항 *: -address 옵션에서 IPv6 주소 할당:
+. 선택적으로 -address 옵션에 IPv6 주소를 할당합니다:
 +
 .. network NDP prefix show 명령을 사용하여 다양한 인터페이스에서 습득한 RA prefix 목록을 볼 수 있다.
 +
@@ -231,8 +245,7 @@ vs1
 Failover Targets: node1:e0d, node1:e0e, node2:e0d, node2:e0e
 ....
 . 구성된 IP 주소에 연결할 수 있는지 확인합니다.
-
-
++
 |===
 
 
@@ -244,21 +257,29 @@ Failover Targets: node1:e0d, node1:e0e, node2:e0d, node2:e0e
 
 | IPv6 주소입니다 | 네트워크 ping6 
 |===
++
 .예
 다음 명령을 실행하면 LIF가 생성되고 '-address' 및 '-netmask' 매개 변수를 사용하여 IP 주소와 네트워크 마스크 값이 지정됩니다.
 
++
 ....
 network interface create -vserver vs1.example.com -lif datalif1 -service-policy default-data-files -home-node node-4 -home-port e1c -address 192.0.2.145 -netmask 255.255.255.0 -auto-revert true
 ....
++
 다음 명령을 실행하면 LIF가 생성되고 지정된 서브넷(client1_sub 이름)의 IP 주소와 네트워크 마스크 값이 할당됩니다.
 
++
 ....
 network interface create -vserver vs3.example.com -lif datalif3 -service-policy default-data-files -home-node node-3 -home-port e1c -subnet-name client1_sub - auto-revert true
 ....
++
 다음 명령은 NVMe/FC LIF를 생성하고 'NVMe-FC' 데이터 프로토콜을 지정합니다.
 
++
 ....
 network interface create -vserver vs1.example.com -lif datalif1 -data-protocol nvme-fc -home-node node-4 -home-port 1c -address 192.0.2.145 -netmask 255.255.255.0 -auto-revert true
 ....
+
+
 --
 ====

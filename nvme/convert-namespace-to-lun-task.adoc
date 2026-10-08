@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: nvme, convert, namespace, lun 
 summary: ONTAP 9.11.1부터는 ONTAP CLI를 사용하여 데이터 이동 없이 기존 NVMe 네임스페이스를 LUN으로 변환할 수 있습니다. 
 ---
-= 네임스페이스를 LUN으로 변환합니다
+= NVMe 네임스페이스를 ONTAP LUN으로 변환
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

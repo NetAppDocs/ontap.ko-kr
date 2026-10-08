@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: networking/configure_network_security_using_federal_information_processing_standards_fips.html 
-keywords: fips 140-2, compliant, ssl, connections, tlsv1.2, tlsv1.1, tlsv1, enable fips, disable fips, compliance status, SSL 
-summary: 모든 SSL 연결에 대해 Federal Information Processing Standards 140-2를 준수합니다. 
+keywords: fips 140-2, fips 140-3,compliant, ssl, connections, tlsv1.2, tlsv1.1, tlsv1, enable fips, disable fips, compliance status, SSL 
+summary: 모든 SSL 연결은 연방 정보 처리 표준 140-2 및 140-3을 준수합니다. 
 ---
 = FIPS를 사용하여 ONTAP 네트워크 보안 구성
 :hardbreaks:
@@ -14,8 +14,29 @@ summary: 모든 SSL 연결에 대해 Federal Information Processing Standards 14
 
 
 [role="lead"]
-ONTAP 모든 SSL 연결에 대해 연방 정보 처리 표준(FIPS) 140-2를 준수합니다.  ONTAP 내에서 SSL FIPS 모드를 켜고 끌 수 있고, SSL 프로토콜을 전역적으로 설정하고, 취약한 암호를 끌 수 있습니다.
+ONTAP은 모든 SSL 연결에 대해 FIPS(연방 정보 처리 표준)를 준수합니다. ONTAP 내에서 SSL FIPS 모드를 켜거나 끄고, SSL 프로토콜을 전역으로 설정하며, 취약한 암호화를 끌 수 있습니다.
 
+지원되는 FIPS 규정 준수 버전은 사용 중인 ONTAP 릴리스에 따라 다릅니다:
+
+[cols="2"]
+|===
+| FIPS 규정 준수 지원 | ONTAP 릴리즈 
+
+
+| FIPS 140-3  a| 
+* 9.19.1P2 이상
+* 9.18.1P6 및 이후 9.18.1 패치 릴리스
+
+
+
+
+| FIPS 140-2  a| 
+* 9.19.1
+* 9.19.1P1
+* 9.18.1P5 및 이전 버전
+
+
+|===
 기본적으로 ONTAP의 SSL은 FIPS 준수가 비활성화되고 다음 TLS 프로토콜이 활성화된 상태로 설정됩니다.
 
 * TLSv1.3(ONTAP 9.11.1부터 시작)

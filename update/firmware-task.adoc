@@ -4,7 +4,7 @@ permalink: update/firmware-task.html
 keywords: system manager, netapp, ontap, upgrade, nondisruptive, firmware, disk, shelves, qualification, package, service, processor, baseboard, management, controller, dqp, sp, bmc, software patch, upgrade, recommendation, recommended, storage firmware, storage devices, disks, shelves, service processors, modules, digital advisor, active iq unified manager 
 summary: 디스크, 디스크 셸프, 서비스 프로세서 또는 Baseboard Management Controller와 같이 클러스터에서 지원되는 장치에 펌웨어 업데이트를 적용할 수 있습니다. 
 ---
-= 펌웨어를 수동으로 업데이트합니다
+= ONTAP 펌웨어 수동 업데이트
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

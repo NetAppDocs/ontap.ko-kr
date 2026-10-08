@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage, nvme, secure, encryption, in-flight, tls secure channel, tcp, tls, encrypt, enable, set up 
 summary: ONTAP 9.16.1부터 NVMe TCP 연결에 대한 TLS 보안 채널을 활성화 및 비활성화할 수 있습니다. 
 ---
-= NVMe/TCP에 대한 TLS 보안 채널을 설정합니다
+= ONTAP에서 NVMe/TCP용 TLS 보안 채널 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

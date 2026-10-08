@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, enable, upgrade, update, automatic, automated, firmware, ransomware, bmc, sp, system, timezone database, timezone 
 summary: 자동 업데이트를 활성화하여 ONTAP가 사용자의 개입 없이 펌웨어, 시스템 및 보안 업데이트를 다운로드하고 설치할 수 있도록 합니다. 
 ---
-= 자동 업데이트를 활성화합니다
+= ONTAP에서 자동 업데이트 활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

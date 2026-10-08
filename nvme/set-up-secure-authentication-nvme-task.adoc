@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage, nvme, secure, authentication, tcp, dh-hmac-hcap, chap, setting up, set up, in-band, in band 
 summary: ONTAP 9.12.1부터는 DH-HMAC-CHAP 인증 프로토콜을 사용하여 NVMe 호스트와 컨트롤러 간의 양방향 인증이 NVMe를 통해 지원됩니다. 
 ---
-= NVMe를 통해 대역 내 인증을 설정합니다
+= ONTAP에서 NVMe를 통한 인밴드 인증 설정
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
