@@ -24,10 +24,6 @@ SMB 클라이언트 액세스를 성공적으로 테스트한 후에는 고급 S
 +
 SMB 프로토콜을 사용하여 파일 액세스를 구성 및 관리하는 방법에 대해 설명합니다.
 
-* https://www.netapp.com/pdf.html?item=/media/16326-tr-4191.pdf["NetApp 기술 보고서 4191: clustered Data ONTAP 8.2 Windows 파일 서비스에 대한 모범 사례 가이드를 참조하십시오"^]
-+
-SMB 구현 및 기타 Windows 파일 서비스 기능에 대한 간략한 개요와 ONTAP의 권장 사항 및 기본 문제 해결 정보를 제공합니다.
-
 * https://www.netapp.com/pdf.html?item=/media/19673-tr-3740.pdf["NetApp 기술 보고서 3740: Data ONTAP의 SMB 2 차세대 CIFS 프로토콜"^]
 +
 SMB 2 기능, 구성 세부 정보 및 ONTAP에서의 구축에 대해 설명합니다.

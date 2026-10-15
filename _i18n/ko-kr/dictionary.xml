@@ -254,7 +254,6 @@
   <block id="c04792b20d4898dd29d399522144910f" category="paragraph">새 주소를 가리키도록 별칭을 조정할 수 있습니다.</block>
   <block id="1e98fed193db72d0d3582ce8d472c637" category="paragraph">둘 이상의 시스템에서 특정 테이프 디바이스를 사용하는 경우</block>
   <block id="e07cb5d98b5ea2c36b065083352b9150" category="paragraph">사용자는 모든 시스템에 대해 별칭을 동일하게 설정할 수 있습니다.</block>
-  <block id="03ac997c483519de278f2a034c5da82d" category="paragraph">Data ONTAP 8.1.x에서 Data ONTAP 8.2.x로 업그레이드하면 Data ONTAP 8.2.x의 테이프 별칭 기능이 기존 테이프 별칭 이름을 수정합니다. 이러한 경우 백업 애플리케이션에서 테이프 별칭 이름을 업데이트해야 할 수 있습니다.</block>
   <block id="6d40a60c8047b488e6c326136b0df537" category="paragraph">테이프 별칭을 할당하면 백업 디바이스의 논리적 이름(예: st0 또는 MC1)과 포트, 테이프 드라이브 또는 미디어 체인저에 영구적으로 할당되는 이름이 일치하게 됩니다.</block>
   <block id="3895b82f66e493169ec966737496bb79" category="paragraph">st0과 st00은 서로 다른 논리적 이름입니다.</block>
   <block id="f3d496506e79e68ea324deaa03b4bb21" category="paragraph">논리 이름 및 일련 번호는 장치에 액세스하는 경우에만 사용됩니다. 디바이스에 액세스한 후에는 물리적 경로 이름을 사용하여 모든 오류 메시지를 반환합니다.</block>
@@ -263,7 +262,6 @@
   <block id="d15dd85b2c4b94a37de34bc82531e284" category="paragraph">덤프 백업을 사용하여 디렉토리, 파일 및 관련 보안 설정과 같은 파일 시스템 데이터를 테이프 디바이스에 백업할 수 있습니다. 전체 볼륨, 전체 qtree 또는 전체 볼륨 또는 전체 qtree가 아닌 하위 트리를 백업할 수 있습니다.</block>
   <block id="b8c21aebf9ea282dc091f7a8cd63be6d" category="paragraph">NDMP 호환 백업 애플리케이션을 사용하여 덤프 백업 또는 복구를 수행할 수 있습니다.</block>
   <block id="580908880a091e74ad5cccc605751271" category="paragraph">덤프 엔진을 사용하여 레벨 0, 증분 또는 차등 백업을 테이프에 수행할 수 있습니다.</block>
-  <block id="68eee2e1ac5813b90840b2b9026b8988" category="paragraph">Data ONTAP 8.3 이전의 릴리즈로 되돌린 후에는 증분 백업 작업을 수행하기 전에 기본 백업 작업을 수행해야 합니다.</block>
   <block id="f9cf9415d2ebe0c1351e0f7a1221a2d8" category="inline-link">업그레이드, 되돌리기 또는 다운그레이드를 수행할 수 있습니다</block>
   <block id="f67c3625370e510ca02448e39b957b54" category="summary">복원 작업에 대한 테이프 시퀀스의 첫 번째 테이프에는 이미지 헤더가 없습니다.</block>
   <block id="0c855cc73685d053fe7d38cde66118b6" category="doc">테이프 순서가 없습니다</block>
@@ -340,7 +338,6 @@
   <block id="e3652c029bd2fed13b283f038bc1b1b8" category="list-text">UNIX 파일 권한</block>
   <block id="3fabfbd2744533c3c888e15445477652" category="list-text">ACL</block>
   <block id="ba4d86b149c5b677d2384d05dc0190d0" category="paragraph">NTFS qtree 또는 볼륨에 대한 UNIX 파일 권한만 있는 파일을 복원하는 경우 파일에 Windows NT ACL이 없습니다. 스토리지 시스템은 Windows NT ACL을 생성할 때까지 이 파일에 대한 UNIX 파일 권한만 사용합니다.</block>
-  <block id="fe06493d34379b057f093feaff993e0b" category="paragraph">Data ONTAP 8.2를 실행하는 스토리지 시스템에서 백업된 ACL을 ACE 제한이 1,024 이하인 Data ONTAP 8.1.x 및 이전 버전의 스토리지 시스템으로 복원하는 경우 기본 ACL이 복원됩니다.</block>
   <block id="0dfaa5e8bb68aedaec3de30c03046a28" category="list-text">Qtree 정보</block>
   <block id="a2a7282603ba26c3376afddbad79f419" category="paragraph">qtree 정보는 qtree가 볼륨의 루트에 복원되는 경우에만 사용됩니다. Qtree 정보는 "/vs1/vol1/subdir/lowerdir" 같은 하위 디렉토리로 qtree가 복원되고 qtree가 아닌 경우 사용되지 않습니다.</block>
   <block id="58a826418f1516e259a0623b5824c4c8" category="list-text">다른 모든 파일 및 디렉토리 속성</block>
@@ -723,7 +720,6 @@
   <block id="259a1851f027e4464d10d5524dd10940" category="paragraph">로컬, TCP, TCP/IPv6</block>
   <block id="ffa3a04f550fbf250b4b975b26f59e81" category="paragraph">TCP, TCP/IPv6</block>
   <block id="c92a871e430ae59c1ac35a5d4210cff4" category="section-title">백업 애플리케이션에서 CAB 확장을 지원하지 않는 경우 NDMP 데이터 연결 유형입니다</block>
-  <block id="8ad29fd3da1e4c61c3dacb27f9114659" category="summary">노드 범위의 NDMP 모드에서는 노드 수준에서 테이프 백업 및 복구 작업을 수행할 수 있습니다. Data ONTAP 8.2에서 사용되는 NDMP 작업 모드는 업그레이드 후에도 8.2에서 8.3으로 유지됩니다.</block>
   <block id="c1382d2bd662e050fabba9bd3f1e2db7" category="paragraph">노드 범위의 NDMP 모드에서는 볼륨을 소유하는 노드에서 테이프 백업 및 복구 작업을 수행할 수 있습니다. 이러한 작업을 수행하려면 볼륨 또는 테이프 디바이스를 소유한 노드에서 호스팅되는 LIF에 NDMP 제어 연결을 설정해야 합니다.</block>
   <block id="b81e9b7001e106554284120906641141" category="paragraph">이 모드는 더 이상 사용되지 않으며 향후 주요 릴리즈에서 제거될 예정입니다.</block>
   <block id="57cb0fc8a74e0b58cda5c5caf5695233" category="summary">덤프 이벤트의 이벤트 필드에는 이벤트 유형 다음에 괄호 안에 이벤트 관련 정보가 표시됩니다.</block>
@@ -870,8 +866,6 @@
   <block id="1e335c173db1235e1f22a9b49ff7801a" category="paragraph">메모리를 할당하지 못했습니다</block>
   <block id="48c86cb4e86d14a686868d28d44ae1af" category="paragraph">시스템 사용량이 너무 많으면 나중에 작업을 다시 시도하십시오.</block>
   <block id="d24f8ed0cd403535fe06ff2312a4d5c3" category="doc">NDMP 작업 모드에 대해 설명합니다</block>
-  <block id="b40c6db01cc156017dafc7a604c5d165" category="paragraph">Data ONTAP 8.2에서 Data ONTAP 8.3으로 업그레이드할 경우 8.2에서 사용되는 NDMP 작업 모드는 업그레이드 후에도 8.2에서 8.3으로 유지됩니다.</block>
-  <block id="babc0a88160053434706833c7a94e71c" category="paragraph">Data ONTAP 8.2 이상을 사용하여 새 클러스터를 설치하는 경우 NDMP는 기본적으로 SVM 범위의 NDMP 모드에 있습니다. 노드 범위 NDMP 모드에서 테이프 백업 및 복구 작업을 수행하려면 노드 범위 NDMP 모드를 명시적으로 설정해야 합니다.</block>
   <block id="db132b90c74bf5d1008212dfadadc0b1" category="summary">볼륨 마이그레이션 및 SMTape 백업을 동시에 실행할 수 없습니다.</block>
   <block id="4519a577e3b1b637cc9c64e7fe2a0d22" category="doc">볼륨이 현재 마이그레이션 중입니다</block>
   <block id="c89666faedcf14ecdc654dbe2773046a" category="paragraph">볼륨이 현재 마이그레이션 중입니다</block>
@@ -1034,10 +1028,8 @@
   <block id="937890d87b169af318d829a57dad399e" category="paragraph">전체 LUN 개체를 백업할 수 있지만 LUN 개체 내에서 단일 파일을 백업할 수는 없습니다. 마찬가지로, LUN 내에 단일 파일이 아니라 전체 LUN 개체를 복원할 수 있습니다.</block>
   <block id="c93d8996c09e9b0523f2326386672ab0" category="paragraph">덤프 엔진은 LUN 클론을 독립 LUN으로 백업합니다.</block>
   <block id="9e66a5a7ac296adab32cfb29b699c023" category="list-text">VM 정렬 파일</block>
-  <block id="018c6ca60dfbd405f837065ef31c0f12" category="paragraph">Data ONTAP 8.1.2 이전 릴리즈에서는 VM 정렬 파일의 백업이 지원되지 않습니다.</block>
   <block id="fda1796996d94c05cd2113e0153652c9" category="paragraph">스냅샷 지원 LUN 클론이 7-Mode에서 작동하는 Data ONTAP에서 ONTAP로 전환되면 일관성 없는 LUN이 됩니다. 덤프 엔진이 일관성 없는 LUN을 백업하지 않습니다.</block>
   <block id="7b3952e889e19b8ce879b63da8efd0bc" category="paragraph">볼륨에 데이터를 복구할 때는 복구 중인 LUN에서 클라이언트 입출력이 제한됩니다. LUN 제한은 덤프 복원 작업이 완료된 경우에만 제거됩니다. 마찬가지로, SnapMirror 단일 파일 또는 LUN 복원 작업 중에 클라이언트 I/O는 복원 중인 파일 및 LUN 모두에서 제한됩니다. 이 제한은 단일 파일 또는 LUN 복원 작업이 완료된 경우에만 제거됩니다. 덤프 복원 또는 SnapMirror 단일 파일 또는 LUN 복원 작업이 수행되고 있는 볼륨에서 덤프 백업을 수행하는 경우 클라이언트 I/O 제한이 있는 파일 또는 LUN은 백업에 포함되지 않습니다. 이러한 파일 또는 LUN은 클라이언트 입출력 제한이 제거된 경우 이후의 백업 작업에 포함됩니다.</block>
-  <block id="b25ab5b2d5be2c5602e5c8535048eeab" category="paragraph">Data ONTAP 8.3에서 실행 중이며 테이프에 백업된 LUN은 이전 릴리즈가 아닌 8.3 이상 릴리즈로만 복원할 수 있습니다. LUN이 이전 릴리즈로 복원되면 LUN이 파일로 복원됩니다.</block>
   <block id="7acee361d87c06a486c0fc7401796ca3" category="paragraph">SnapVault 보조 볼륨 또는 볼륨 SnapMirror 대상을 테이프에 백업하는 경우 볼륨의 데이터만 백업됩니다. 연결된 메타데이터는 백업되지 않습니다. 따라서 볼륨을 복원하려고 하면 해당 볼륨의 데이터만 복원됩니다. volume SnapMirror 관계에 대한 정보는 백업에서 제공되지 않으므로 복원되지 않습니다.</block>
   <block id="d0219fc03daecc247def36e87d4eae0e" category="paragraph">Windows NT 권한만 있는 파일을 덤프하고 UNIX 스타일 qtree 또는 볼륨으로 복원하면 해당 qtree 또는 볼륨에 대한 기본 UNIX 권한이 파일에 부여됩니다.</block>
   <block id="2e1612e105f3f63d2891175b999bb52b" category="paragraph">UNIX 사용 권한만 있는 파일을 덤프하고 NTFS 스타일 qtree 또는 볼륨으로 복원하면 해당 qtree 또는 볼륨에 대한 기본 Windows 사용 권한이 파일에 부여됩니다.</block>
@@ -11105,11 +11097,6 @@
   <block id="116ee261744925c5005876ee1d78e0fd" category="paragraph">볼륨 및 Qtree와 같은 객체 관리를 위한 명령과 달리, 다중 사용자 할당량을 비롯한 할당량 타겟의 이름을 바꿀 수 없습니다. 즉, 다중 사용자 할당량이 정의된 후에는 할당량 타겟의 사용자를 수정할 수 없으며 대상에 사용자를 추가하거나 대상에서 사용자를 제거할 수 없습니다. 다중 사용자 할당량에서 사용자를 추가하거나 제거하려면 해당 사용자를 포함하는 할당량과 정의된 타겟의 사용자 집합을 포함하는 새 할당량 규칙을 삭제해야 합니다.</block>
   <block id="15f595b0ba8d3749ad6cd7a583d3d094" category="paragraph">개별 사용자 할당량을 하나의 다중 사용자 할당량으로 결합하는 경우 할당량의 크기를 조정하여 변경을 활성화할 수 있습니다. 그러나 사용자가 여러 명인 할당량 대상에서 사용자를 제거하거나 사용자가 이미 여러 명인 대상에 사용자를 추가하려면 변경 사항이 적용되기 전에 할당량을 다시 초기화해야 합니다.</block>
   <block id="b4e0d45ea504b07d9e8c4cafce54035b" category="doc">FlexClone 파일 및 FlexClone LUN을 통한 공간 절약 효과를 확인하십시오</block>
-  <block id="a16875eabcc0ed5145fe8a14e7c8f012" category="list-text">FlexClone 파일 및 FlexClone LUN으로 인해 절약된 공간을 보려면 다음 명령을 입력합니다.</block>
-  <block id="d9c76738c140686ebf6d7b5f84da2106" category="paragraph">'df-s volname'입니다</block>
-  <block id="91ad92a1f434309afe91dad2b682e0e4" category="paragraph">volname은 FlexVol 볼륨의 이름입니다.</block>
-  <block id="8d6a42746d2b9d0eb68c553660223473" category="paragraph">중복 제거가 설정된 FlexVol 볼륨에 대해 df -s 명령을 실행하면 중복 제거 파일과 FlexClone 파일 및 LUN에서 저장한 공간을 볼 수 있습니다.</block>
-  <block id="c24ff271fa90598d83efb8e8bcf73811" category="paragraph">다음 예제에서는 FlexClone 볼륨 테스트1에서 절약되는 공간을 보여 줍니다.</block>
   <block id="08bdc231fe9a8aa445d668ec789f4bc0" category="doc">온도에 민감한 스토리지 효율성 개요</block>
   <block id="cabc800ccee1a20f4a7598fbb98d9e75" category="list-text">볼륨 또는 LUN에 활성 I/O가 없어야 합니다.</block>
   <block id="a026032bf1ce9a017480a0071138c599" category="list-text">대상 SVM에 동일한 이름의 igroup이 없지만 다른 이니시에이터가 있는지 확인해야 합니다.</block>
@@ -17894,8 +17881,6 @@
   <block id="64fef788c4d5b47924a6cb9d9e2b7be6" category="list-text">필수 스크리닝이 필요한지 여부</block>
   <block id="8083c052e858125eb3915e0f055e6131" category="list-text">특별 권한 액세스가 'vserver FPolicy show'인지 여부</block>
   <block id="1c9d612ec1de82821eecf69b433a2554" category="paragraph">SMB 프로토콜을 사용하여 파일 액세스를 구성 및 관리하는 방법에 대해 설명합니다.</block>
-  <block id="df7018e8b5dea8270e2b53ed45ca3664" category="inline-link">NetApp 기술 보고서 4191: clustered Data ONTAP 8.2 Windows 파일 서비스에 대한 모범 사례 가이드를 참조하십시오</block>
-  <block id="40261511a12711af686f66a0ba5aee3e" category="paragraph">SMB 구현 및 기타 Windows 파일 서비스 기능에 대한 간략한 개요와 ONTAP의 권장 사항 및 기본 문제 해결 정보를 제공합니다.</block>
   <block id="f34506326aba5bd2e96ea949212bfb7f" category="inline-link">NetApp 기술 보고서 3740: Data ONTAP의 SMB 2 차세대 CIFS 프로토콜</block>
   <block id="61e501f46c7150f878e0af89f471c9ef" category="paragraph">SMB 2 기능, 구성 세부 정보 및 ONTAP에서의 구축에 대해 설명합니다.</block>
   <block id="9b6052dbd374ba138463996cc76d0158" category="paragraph">다음을 사용하여 NFS 액세스를 추가로 구성할 수 있습니다.</block>
@@ -18276,7 +18261,6 @@
   <block id="d84f3963f747f8c5c5b915f062298e13" category="paragraph">필드 매개 변수가 있는 'show' 명령의 출력에는 요청된 필드와 관련된 다른 관련 필드와 필수 필드가 표시될 수 있습니다.</block>
   <block id="ca52d3b6cdf34c174be25d428993defc" category="paragraph">모든 'show' 명령에는 출력을 필터링하고 명령 출력에 표시되는 정보의 범위를 좁힐 수 있도록 하는 하나 이상의 선택적 매개 변수가 있습니다. '?'를 입력하여 명령에 사용할 수 있는 선택적 매개 변수를 식별할 수 있습니다 'show' 명령 뒤에.</block>
   <block id="e054536632c7da78102766d4206ba743" category="paragraph">'show' 명령은 UNIX 스타일 패턴과 와일드카드를 지원하여 명령 매개 변수 인수의 여러 값을 일치시킬 수 있습니다. 예를 들어 값을 지정할 때 와일드카드 연산자(*), NOT 연산자(!), OR 연산자(|), 범위 연산자(integer...integer), 보다 작음 연산자(&lt;), 보다 큼 연산자(&gt;), 보다 작거나 같음 연산자(\&lt;=) 및 보다 크거나 같음 연산자(&gt;=)를 사용할 수 있습니다.</block>
-  <block id="109aa0029e741d8c2e0382bab7ddfed8" category="summary">클러스터를 되돌리려는 경우 클러스터에 감사 기능이 설정된 SVM(스토리지 가상 머신)이 있을 때 ONTAP에서 따르는 복원 프로세스에 대해 알고 있어야 합니다. 되돌리기 전에 특정 조치를 취해야 합니다.</block>
   <block id="62dcd67513efe6614af6afeb79bce65a" category="summary">활성화된 FPolicy 정책에 대한 정보를 표시하여 사용자가 사용하도록 구성된 FPolicy 외부 엔진, 정책의 우선순위 및 FPolicy 정책이 연결된 스토리지 가상 시스템(SVM)을 결정할 수 있습니다.</block>
   <block id="3fbabcb683112ef7d1d9fd1ce5ce8456" category="list-text">정책 우선 순위</block>
   <block id="fef89048e7305ead60065575f81b5832" category="paragraph">명령 매개 변수를 사용하여 지정된 기준에 따라 명령의 출력을 필터링할 수 있습니다.</block>
@@ -23405,8 +23389,6 @@
   <block id="7d8454fe690103c22b102e26241b79dd" category="paragraph">SVM에서 SMB 서버의 SMB 로그온 및 로그오프 이벤트를 감사할 수 있습니다.</block>
   <block id="918d97a39b279cc6fbd825414e03e7d1" category="paragraph">제안된 중앙 액세스 정책을 통해 적용된 권한을 사용하여 SMB 서버의 개체에 대한 효과적인 액세스를 감사할 수 있습니다. 중앙 액세스 정책의 스테이징을 통해 감사를 수행하여 중앙 액세스 정책이 구축되기 전에 어떤 영향이 있는지 확인할 수 있습니다.</block>
   <block id="7bf9c192fc96a37e0fd2d23a43b2a620" category="paragraph">SMB 서버에서 동적 액세스 제어를 사용하지 않고 감사 구성에서 중앙 액세스 정책 스테이징을 설정할 수 있지만, 동적 액세스 제어를 설정한 경우에만 중앙 액세스 정책 스테이징 이벤트가 생성됩니다. 동적 액세스 제어는 SMB 서버 옵션을 통해 활성화됩니다. 기본적으로 활성화되어 있지 않습니다.</block>
-  <block id="414f394af218092caa6e9d2444dad5e9" category="section-title">SMB 로그온 및 로그오프 이벤트 및 중앙 액세스 정책 스테이징 이벤트에 대한 감사를 지원하지 않는 ONTAP 버전으로 되돌립니다</block>
-  <block id="d540cb91e9c18cd3b15d8968d35f96b4" category="paragraph">SMB 로그온 및 로그오프 이벤트 감사 및 중앙 액세스 정책 스테이징 이벤트는 clustered Data ONTAP 8.3에서 시작됩니다. 이러한 이벤트 유형을 지원하지 않는 ONTAP 버전으로 되돌리려고 하고 이러한 이벤트 유형을 모니터링하는 감사 구성이 있는 경우, 되돌리기 전에 감사 기능이 설정된 SVM에 대한 감사 구성을 변경해야 합니다. 파일 작업 이벤트만 감사되도록 구성을 수정해야 합니다.</block>
   <block id="96ca467188345af07f2c9f70443a2ac1" category="list-text">특별 권한 데이터 액세스를 구성하려면 SVM에 SMB 서버가 있어야 합니다.</block>
   <block id="b3950efbceff54bbf40b0d71304ac9c6" category="paragraph">기본값은 파일 액세스 및 SMB 로그온 및 로그오프 이벤트를 감사하는 것입니다.</block>
   <block id="870645799cb7bf3b20d8fe184ec72212" category="paragraph">* 참고: * "cap-staging"을 이벤트 범주로 지정하려면 SVM에 SMB 서버가 있어야 합니다. SMB 서버에서 동적 액세스 제어를 사용하지 않고 감사 구성에서 중앙 액세스 정책 스테이징을 설정할 수 있지만, 동적 액세스 제어를 설정한 경우에만 중앙 액세스 정책 스테이징 이벤트가 생성됩니다. 동적 액세스 제어는 SMB 서버 옵션을 통해 활성화됩니다. 기본적으로 활성화되어 있지 않습니다.</block>
@@ -23572,9 +23554,6 @@
   <block id="2633cb696efcb5cbcd922d1aa145ee31" category="cell">대상 ONTAP 릴리스는 다음과 같습니다.</block>
   <block id="7caa701b2bd5a182b80c72b9bdf88e2d" category="cell">직접</block>
   <block id="b2f8489bbd55a4e9b9edbbbfe49edf70" category="cell">사용할 수 없습니다</block>
-  <block id="41500358ffe1645da9479b8bdb6bb16e" category="inline-link">NetApp 버그 온라인 버그 ID 805277</block>
-  <block id="a38b3bc68b667dc2c5be397be3520b78" category="list-text">Data ONTAP 8.3.x에서</block>
-  <block id="adda8e73226ec3153c9aec30fbe89320" category="list-text">8.2.x를 포함한 Data ONTAP 8.3.x 이전 버전에서</block>
   <block id="f916118761b3f2a09482824840cd5435" category="list-text">MetroCluster 구성은 프런트엔드 FC 패브릭 ""라우팅된" vSAN 구성을 지원하지 않습니다.</block>
   <block id="179d629869034610941db03f62accae2" category="inline-xref-macro">LUN을 생성하고 igroup을 매핑합니다</block>
   <block id="d25cb0c5cee8862af3895fa3a4483d63" category="paragraph">'vserver cifs share properties add -vserver_vserver_name_-share-name share_name-share-properties oplocks' 명령을 입력합니다</block>
@@ -24326,9 +24305,6 @@
   <block id="ffa31027a2ea27d11f42c581660dd118" category="paragraph">에 대해 자세히 알아보십시오<block ref="f08e0a016ce47880883ba0d7b5be12fd" category="inline-link-rx"></block>.</block>
   <block id="e6f1ba9eda77b05f0ab5126e92d5e1eb" category="cell">ANDU 업그레이드 경로는 다음과 같습니다.</block>
   <block id="1142d3c327d3d337a2ea27072fc92f20" category="cell">수동 업그레이드 경로</block>
-  <block id="de78eb7ec26241150020f871006c8816" category="paragraph">을 사용하여 플랫폼이 타겟 ONTAP 릴리즈를 실행할 수 있는지 확인하십시오<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
-  <block id="452ba1ec2d7971da94fd8574a5f9762d" category="list-text">ONTAP 9.1로 직접 업그레이드한 다음 이후 릴리즈로 업그레이드할 수 있습니다.</block>
-  <block id="f24c93d590e21a0fefcd28c287d16528" category="list-text">먼저 Data ONTAP 8.3.x로 업그레이드한 다음 ONTAP 9.1로 업그레이드한 다음 이후 릴리즈로 업그레이드해야 합니다.</block>
   <block id="66487518c903dff6b5ce6b970400b486" category="cell">관리자 계정이 SSH 공개 키로 인증하는 클러스터에서 SSL FIPS 모드가 활성화됩니까?</block>
   <block id="b45e170fbe2ffe9478eb276186826d06" category="admonition">Active IQ Config Advisor에 대한 지원은 제한적이며 온라인으로만 제공됩니다.</block>
   <block id="eb88d19335758f5197bb1c3c6860759a" category="inline-link">앱을 다운로드합니다</block>
@@ -24601,7 +24577,6 @@
   <block id="e76b2a64aa118b967b7c01fb6b23792b" category="cell">사이트 B 연결</block>
   <block id="f1ee391daa7d540b9990e2eb98c6c0b5" category="cell">클러스터 피어 쇼</block>
   <block id="3e0bb6bb0efd374ad05e2f8073314f43" category="cell">'volume show_volume_name_-fields smbc-Consensus'</block>
-  <block id="dce5ca759612a73fbb00a3823f9cfad6" category="paragraph">* 참고: * Data ONTAP 8.3 업그레이드 가이드에 4노드 클러스터의 경우 epsilon을 마지막으로 보유하는 노드를 업그레이드할 계획이라는 오류 메시지가 표시됩니다. Data ONTAP 8.2.3부터 계속 업그레이드할 필요는 없습니다. 자세한 내용은 을 참조하십시오<block ref="46642dff6a4913c1b70e5c47363becfb" category="inline-link-rx"></block>.</block>
   <block id="9172904e577f52b2a085e7dbb8d70d8b" category="paragraph">을 참조하십시오 <block ref="dd1e575eb1bf78037a6903cc519f262a" category="inline-xref-macro-rx"></block> SVM에서 동적 DNS 구성에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="ef934d4d8f2b4314965fe0a91d2aac87" category="doc">ASA 플랫폼의 iSCSI LIF 페일오버</block>
   <block id="3448a1d5e7a8aad36abd21809538176a" category="list-text">마이그레이션 * 을 클릭합니다.</block>
@@ -27301,7 +27276,6 @@ Cisco Nexus 9336C-FX2</block>
   <block id="88c460886856bc081860c06c7b8d8e14" category="doc">Vscan 파트너 솔루션</block>
   <block id="420cebae710ce78dfe1215f0fe4cf249" category="cell">솔루션 설명서</block>
   <block id="e7b73d8cbef4648d4d02ed78f81f4c72" category="cell">상호 운용성 세부 정보</block>
-  <block id="0c5bc65bb59cc30cd297d0226c48968a" category="cell">Trelix(이전 명칭 McAfee)</block>
   <block id="bc9bc2e63fa75e34a32781aca837916d" category="inline-link-macro">Trelix 제품 설명서</block>
   <block id="cfde928dd2edc49cf12a6e902c5e8388" category="cell">시만텍</block>
   <block id="b75800014d091b9ab69fc17b57dfe309" category="inline-link-macro">Symantec Protection Engine 9.0.0</block>
@@ -27575,8 +27549,6 @@ ONTAP 9.7 이하 버전에서는 NVMe가 SVM에서 유일한 프로토콜이 될
   <block id="0ab6c6b3cac0717059077d11487a0d1f" category="section-title">Vscan 서버 소프트웨어</block>
   <block id="4e72dbc6d75fb97e782f19ffcdfd390a" category="paragraph">이 소프트웨어는 NetApp에서 제공하며 SVM과 바이러스 백신 소프트웨어 간의 스캔 요청 및 응답 통신을 처리합니다. 가상 시스템에서 실행할 수 있지만 최상의 성능을 위해서는 물리적 시스템을 사용해야 합니다. NetApp Support 사이트에서 이 소프트웨어를 다운로드할 수 있습니다(로그인 필요).</block>
   <block id="6d582c36ee4ebf0335acbe559df26b92" category="paragraph">이 소프트웨어는 바이러스 또는 기타 악성 코드가 있는 파일을 검사하는 파트너 제공 소프트웨어입니다. 소프트웨어를 구성할 때 감염된 파일에 대해 수행할 치료 조치를 지정합니다.</block>
-  <block id="229c54f44d37ee742e217119790323de" category="section-title">Vscan 소프트웨어 설정</block>
-  <block id="30627ba5bfc8c75e5dc285ea2a0c8971" category="paragraph">Vscan 서버에서 이러한 소프트웨어 설정을 구성해야 합니다.</block>
   <block id="d809d7778bd6d11cabad89ab03ccea20" category="paragraph">이 설정은 SVM에 연결할 수 있는 Vscan 서버 및 특별 권한 사용자를 정의합니다. 또한 스캔 요청 시간 초과 기간을 정의하며, 이 기간이 지나면 스캔 요청이 다른 Vscan 서버로 전송됩니다(사용 가능한 경우).</block>
   <block id="ccc1bb01ee5504acfae6ad3648731378" category="paragraph">Vscan 서버의 바이러스 백신 소프트웨어에서 시간 초과 기간을 scanner-pool scan-request 시간 초과 기간보다 5초 이내로 설정해야 합니다. 따라서 소프트웨어의 시간 제한 기간이 스캔 요청의 시간 초과 기간보다 크기 때문에 파일 액세스가 모두 지연되거나 거부되는 상황을 피할 수 있습니다.</block>
   <block id="60b7bf749e1263f0703f81173a25e7fe" category="paragraph">이 설정은 Vscan 서버에서 SVM에 연결하는 데 사용하는 도메인 사용자 계정입니다. 계정은 스캐너 풀의 권한이 있는 사용자 목록에 있어야 합니다.</block>
@@ -27584,9 +27556,7 @@ ONTAP 9.7 이하 버전에서는 NVMe가 SVM에서 유일한 프로토콜이 될
   <block id="b5c71c3b278b1eacc796cc3785fd92c1" category="list-text"><block ref="0c7d6cf19426e01dcfa32434828ed266" prefix="" category="inline-code"></block> 기본 스캐너 풀에 있는 Vscan 서버가 연결되어 있지 않을 때만 스캐너 풀이 활성화되도록 지정합니다.</block>
   <block id="5f398c5779db8cd6d2e0d6b69141377d" category="paragraph">이 설정은 액세스 시 스캔의 범위를 정의합니다. 스캔할 최대 파일 크기, 스캔에 포함할 파일 확장명 및 경로, 스캔에서 제외할 파일 확장명 및 경로를 지정할 수 있습니다.</block>
   <block id="5991832a0ff630a712ab8f2c8ae8c4cc" category="paragraph">"접속 실행"은 "실행 권한"과 다릅니다. 특정 클라이언트는 파일이 "실행 의도"로 열린 경우에만 실행 파일에 "실행 액세스"를 가집니다.</block>
-  <block id="ebea622ce78522c0bb53e7b1eaaaf26e" category="paragraph">를 설정할 수 있습니다<block ref="42421470692997cb60ed7d6bef614a3b" prefix=" " category="inline-code"></block> 바이러스 검사에 사용할 수 있는 Vscan 서버가 없을 때 파일 액세스가 허용되도록 지정하는 옵션. 온액세스 모드에서는 다음 두 가지 상호 배타적인 옵션 중에서 선택할 수 있습니다.</block>
   <block id="cc3df7e499be4889b238103da53ff091" category="list-text">필수: Vscan은 이 옵션을 사용하여 제한 시간이 만료될 때까지 서버에 스캔 요청을 전송하려고 합니다. 서버에서 스캔 요청을 수락하지 않으면 클라이언트 액세스 요청이 거부됩니다.</block>
-  <block id="c24f1c2d7223a9e010510d39d6b34042" category="list-text">비필수: Vscan은 이 옵션을 통해 바이러스 스캔에 Vscan 서버를 사용할 수 있는지 여부에 관계없이 항상 클라이언트 액세스를 허용합니다.</block>
   <block id="e71bd2cf2955e8ab4677592d8b167519" category="paragraph">이 설정은 온디맨드 스캔의 범위를 정의합니다. 스캔할 최대 파일 크기, 스캔에 포함할 파일 확장명 및 경로, 스캔에서 제외할 파일 확장명 및 경로를 지정할 수 있습니다. 하위 디렉터리의 파일은 기본적으로 스캔됩니다.</block>
   <block id="c0356d77ede84e19b622a94550acdf2d" category="paragraph">를 클릭합니다<block ref="404c0eb10d2e40a532e407ee9730fcfa" prefix=" " category="inline-code"></block> 에 대한 매개 변수입니다<block ref="293a1aaca0a542f4f1b1dc1a3ad95728" prefix=" " category="inline-code"></block> 명령은 바이러스 검사를 트리거하는 SMB 파일 작업을 정의합니다. 기본적으로 매개 변수는 로 설정됩니다<block ref="c00f0c4675b91fb8b918e4079a0b1bac" prefix=" " category="inline-code"></block>NetApp 모범 사례입니다. SMB 공유를 생성하거나 수정할 때 필요에 따라 이 매개 변수를 조정할 수 있습니다.</block>
   <block id="0dfa1e4a12268a8e829c95c968aeb527" category="list-text"><block ref="c00f0c4675b91fb8b918e4079a0b1bac" prefix="" category="inline-code"></block> 열기, 닫기 및 이름 바꾸기 작업을 통해 바이러스 검사가 트리거되도록 지정합니다.</block>
@@ -28306,7 +28276,6 @@ utf8mb4 지원을 위해 SVM을 업데이트할 수 있지만 기존 볼륨에 �
   <block id="aa8bf7ea7803977b3dd452db51b2bdc9" category="list-text">관리자 암호 변경:<block ref="86c7c10e5e8a300f1053032d976987ae" prefix=" " category="inline-code"></block></block>
   <block id="8fba9eeba4601dcc3bec144a6108b2d7" category="paragraph">LAG(Link Aggregation Group)라고도 하는 인터페이스 그룹은 동일한 노드에 있는 두 개 이상의 물리적 포트를 단일 논리 포트로 결합하여 생성됩니다. 논리 포트는 향상된 복구 성능, 향상된 가용성 및 로드 공유를 제공합니다.</block>
   <block id="16499ef87ff8c134ecc4dc48d82d1699" category="paragraph">특정 서비스에 바인딩되지 않은 기능은 시스템 정의 동작을 사용하여 아웃바운드 연결에 대해 LIF를 선택합니다.</block>
-  <block id="75aeba78346fb2a37725ac411806a028" category="sidebar">클러스터 되돌리기의 의미를 이해합니다</block>
   <block id="9aa10764640aa1112bcac458406099a4" category="paragraph">사이트 B에서 입출력을 사용하도록 페일오버를 강제 실행한 다음 사이트 B에서 사이트 A로 RTO 관계를 0으로 설정합니다 사이트 B에서 강제 대체 작동을 수행하려면 다음 단계를 완료합니다</block>
   <block id="8a7180cf232b9fdeb43042c6cbafd3e7" category="list-text">를 발행합니다<block ref="562007dcf7d55742abbc5fd0809cb393" prefix=" " category="inline-code"></block> 관계를 동기화하는 명령입니다.</block>
   <block id="3b78411b448acc4b51266c4f85346000" category="list-text">사이트 B와 사이트 A 간의 정합성 보장 그룹 관계를 생성합니다</block>
@@ -29144,7 +29113,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="64571b70468b74349f47e3c1dda7d534" category="open-title">수동 업그레이드 경로</block>
   <block id="e9290c5c170ded3a094fcdb15c0db764" category="section-title">ONTAP 9.4-9.0부터</block>
   <block id="d391a9295ce75805cc9a2f9bb99cd1d3" category="example-title">자동화된 업그레이드</block>
-  <block id="c177eaaa169e24456aa43d6afe000fc6" category="section-title">Data ONTAP 8</block>
   <block id="b0275898af7a7a8721194aeaa246fa6c" category="paragraph">이더넷 포트를 재할당하려면 다음 단계를 수행하십시오.</block>
   <block id="5838add9afd4c454a32ffdfa4b935384" category="list-text">네트워크 &gt; 개요 * 를 선택합니다.</block>
   <block id="918687557e820da6cb61e1635788ff42" category="list-text">브로드캐스트 도메인 편집 * 페이지에서 다른 도메인에 재할당할 이더넷 포트를 선택 취소합니다.</block>
@@ -29847,7 +29815,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="447dcce982a4b646bfecb20d68154be9" category="summary">FlexCache 원본 볼륨과 FlexCache 볼륨에 지원되는 기능 및 프로토콜은 다양합니다.</block>
   <block id="ad75d5e3b3b8452c96b921088fea3fe1" category="paragraph">ONTAP 9.6부터 qtree를 작성하고 수정할 수 있습니다. 소스에서 생성된 qtree는 캐시에서 액세스할 수 있습니다.</block>
   <block id="ba3fa6c5d504c2352091729d03648b6d" category="paragraph">FlexCache 쓰기 사운드 모드(기본 모드)를 사용하면 캐시의 쓰기가 원본 볼륨으로 전달됩니다. 할당량은 오리진에서 적용됩니다.</block>
-  <block id="99d6c45db9b728df982593cae7bd0de6" category="inline-link-macro">NetApp 기술 보고서 4743: FlexCache in ONTAP</block>
   <block id="176f3530ae8f59407b1ff3786a1c5bcb" category="list-text">MetroCluster 구성을 업그레이드하는 경우 클러스터 B에서 위의 단계를 반복합니다</block>
   <block id="a97e098133a1c5882fe2c9f221d38750" category="list-text">2노드 MetroCluster FC 구성을 업그레이드하는 경우 클러스터가 계획되지 않은 자동 스위치오버가 활성화되어 있는지 확인하십시오.</block>
   <block id="b3bfc5921399f38e3c83046c7ec3365e" category="admonition">표준 구성, MetroCluster IP 구성 또는 2노드보다 큰 MetroCluster FC 구성을 업그레이드하는 경우 이 단계를 수행할 필요가 없습니다.</block>
@@ -30075,7 +30042,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="a564d3b44367d2ea8b0f1bcc8daeea3d" category="paragraph">이 작업에서는 node_A_2와 node_B_2가 업그레이드됩니다.</block>
   <block id="990dec0f2e5e5ff5c2eeccaca569a630" category="paragraph">첫 번째 DR 그룹에서 ONTAP 소프트웨어를 업그레이드하고 현재 8노드 MetroCluster 구성에서 두 번째 DR 그룹을 업데이트하는 경우 이 작업에서 node_A_4 및 node_B_4를 업데이트합니다.</block>
   <block id="c0a479e7e5941d6a985d5a64c1eb13e7" category="paragraph">ONTAP 9.2 또는 ONTAP 9.1</block>
-  <block id="d8881a6630d9f4a0cff874f5aaa03588" category="paragraph">ONTAP 9.0 또는 Data ONTAP 8.3.x</block>
   <block id="0214fff59fa84cf57a1ca27641abc370" category="admonition">AutoSupport가 활성화된 경우 노드가 클러스터 쿼럼을 벗어났음을 나타내는 AutoSupport 메시지가 전송됩니다. 이 알림을 무시해도 되고 업그레이드를 진행할 수 있습니다.</block>
   <block id="0fa4d1c99ec010e0a32fc285090a3e24" category="list-text">HA 쌍의 각 노드에 대해 자동 반환을 활성화합니다.</block>
   <block id="6cb0f0ec105b0d888bd813c6bcce192c" category="list-text">자동 반환이 활성화되었는지 확인:</block>
@@ -31178,7 +31144,6 @@ AFF C-Series 플랫폼에 대한 지원은 ONTAP 9.12.1, ONTAP 9.11.1 및 ONTAP 
   <block id="da1b748dd409a374fb5387a605b2cbbd" category="section-title">ONTAP Base에 포함된 라이센스</block>
   <block id="80370486a53216d66aaf9a2ac90e210c" category="paragraph">ONTAP Base는 ONTAP 시스템용 ONTAP One을 대체하는 선택적 소프트웨어 제품군입니다. 전용 테스트 또는 개발 환경을 위한 비운영 시스템과 같이 SnapMirror, SnapCenter 등의 데이터 보호 기술과 자율적 랜섬웨어와 같은 보안 기능이 필요하지 않은 특정 사용 사례를 위한 것입니다. 추가 라이센스는 ONTAP Base에 추가할 수 없습니다. SnapMirror와 같은 추가 라이센스를 사용하려면 ONTAP One으로 업그레이드해야 합니다.</block>
   <block id="9949132a86e08247d7e18cffc78d8188" category="section-title">그 밖의 라이센스 제공 방법</block>
-  <block id="7cc8592eea95513fa72707a11ece7048" category="paragraph">ONTAP 8.2 ~ ONTAP 9.9.1에서는 라이센스 키가 28자 문자열로 전달되고 ONTAP 기능당 키가 하나씩 있습니다. ONTAP 8.2~ONTAP 9.9.1을 사용하는 경우 ONTAP CLI를 사용하여 라이센스 키를 설치합니다.</block>
   <block id="7a4009d77cd46afd583647924d4867b5" category="inline-link">시스템에 NLF가 이미 있는 경우 ONTAP One 라이센스를 얻는 방법</block>
   <block id="e6c044654b23501c1025e9d7a9dc6531" category="paragraph"><block ref="e6c044654b23501c1025e9d7a9dc6531" category="inline-link-rx"></block></block>
   <block id="b05cc644bdf7728b35474d3810ce403b" category="inline-link">지원 사이트를 사용하여 ONTAP 소프트웨어 권한 및 관련 라이센스 키를 확인하는 방법</block>
@@ -36183,7 +36148,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="7a7122131ffdc0457c6ca65964f9381a" category="summary">FlexCache write-back을 사용할 때 최적의 성능을 보장하려면 다음 지침을 따르십시오.</block>
   <block id="67de46ed3899084d4992e9435a5f0a51" category="doc">ONTAP FlexCache write-back 지침</block>
   <block id="ed9c782497b450c2837810f6585bee7d" category="paragraph">다음 지침은 NetApp에서 내부적으로 잘 테스트되었습니다. 이 호텔 안에 머무시는 것이 좋습니다. 그렇지 않으면 예기치 않은 동작이 발생할 수 있습니다.</block>
-  <block id="a93ef1bc6a745c13a3d5bd52ab9d1117" category="list-text">현재 반복에서 FlexCache write-back 캐시는 전체 FlexCache 볼륨에 대해 단일 구성요소로 구성해야 합니다. 다중 구성 FlexCache는 캐시에서 원치 않는 데이터 제거를 초래할 수 있습니다.</block>
   <block id="82ab829db03a0b7d5d96de51c09dea43" category="list-text">SMB 대체 데이터 스트림에 쓰면 주 파일이 캐시에서 제거됩니다. 기본 파일의 모든 더티 데이터를 오리진으로 플러시해야 해당 파일에 대해 다른 작업을 수행할 수 있습니다. 대체 데이터 스트림도 오리진으로 전달됩니다.</block>
   <block id="dc9d56b9fc793d4e43a4dab91171865d" category="list-text">파일 이름을 바꾸면 파일이 캐시에서 제거됩니다. 파일의 모든 더티 데이터를 오리진으로 플러시해야 해당 파일에 대해 다른 작업을 수행할 수 있습니다.</block>
   <block id="ccd9e772ad08b646dc3d5014eeabf59f" category="list-text">이때 write-back 지원 FlexCache 볼륨의 파일에 대해 변경하거나 설정할 수 있는 유일한 속성은 다음과 같습니다.</block>
@@ -40165,7 +40129,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d686a6d74ddcc400c9a1a660db9e037a" category="doc">사용자 계정 ONTAP 이벤트를 관리합니다</block>
   <block id="9a0a8d6c6be0adc5afd60f28175255a1" category="doc">감사 이벤트 로그를 수동으로 회전하여 특정 ONTAP SVM 이벤트 로그를 확인합니다</block>
   <block id="f33f06ffa3323207911d6df9546aa978" category="doc">ONTAP SVM에 대한 감사 구성 계획</block>
-  <block id="6eb4dfc757c593b99d9fb122d43dd4b0" category="doc">감사된 ONTAP 클러스터를 되돌리는 것의 영향을 이해합니다</block>
   <block id="962bc2f50017fc417b5fd10f81e2c47e" category="doc">ONTAP 감사를 위한 사전 요구 사항</block>
   <block id="e8cd304b70137552108243d92b197626" category="doc">ONTAP에서 결과를 해석하기 위해 감사할 수 있는 SMB 이벤트에 대해 알아보십시오</block>
   <block id="f659b4a7bf775aad5e552b26500545e9" category="doc">ONTAP 감사 이벤트 로그에 지원되는 형식에 대해 알아봅니다</block>
@@ -41939,7 +41902,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="760042a6666db7aa603c1759de3c17f8" category="admonition">인증서에 서명하는 데 사용한 경우<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block><block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> <block ref="41799a9f1cb27f52842c90e3f9f9efdf" prefix=" " category="inline-code"></block> 파일이 생성됩니다. 자세한 내용은 을 <block ref="176f27458d3e2a3c3a9ec02498de4a9f" category="inline-xref-macro-rx"></block> 참조하십시오.</block>
   <block id="757d497aac644c5208241004b9c07c58" category="admonition">인증서에 서명하는 데 사용한 경우<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block><block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> <block ref="6d9cf61db5ec1375b2846eaf8102c57d" prefix=" " category="inline-code"></block> 파일이 생성됩니다. 자세한 내용은 을 <block ref="4f20cf3f9f80bb54f26eaac3d64146c4" category="inline-xref-macro-rx"></block> 참조하십시오.</block>
   <block id="70f2db3add5b32721c8d64a340cb8e59" category="summary">Hyper-V와 SQL Server는 SMB 액세스를 위해 도메인 컴퓨터 계정을 UNIX 사용자에 매핑해야 합니다. 기본 UNIX 사용자에 매핑하는 것이 가장 쉽습니다.</block>
-  <block id="e4792c8cdc05c5dcc45cbb114976c7ff" category="paragraph">스토리지 가상 머신(SVM)을 생성하면 ONTAP에서 자동으로 기본 사용자 이름을 생성합니다. <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block> (UID가 있는 <block ref="f9df942af967185fc775031b3c286856" prefix=" " category="inline-code"></block> ) 및 그룹 이름 <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block> (GID가 있는 <block ref="f9df942af967185fc775031b3c286856" prefix=" " category="inline-code"></block> ), 그리고 기본 사용자를 추가합니다. <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block> 그룹. 클러스터를 Data ONTAP 8.2로 업그레이드하기 전에 존재했던 SVM에서 SMB를 통한 Hyper-V 솔루션을 구성하는 경우 기본 사용자 및 그룹이 없을 수 있습니다. 그렇지 않으면 CIFS 서버의 기본 UNIX 사용자를 구성하기 전에 생성해야 합니다.</block>
   <block id="b4d35aa99d0d29074a49abef930e723a" category="list-text">기본 사용자 옵션이 설정되어 있지 않고 기본 UNIX 사용자로 지정할 수 있는 UNIX 사용자가 없는 경우, 기본 그룹과 기본 UNIX 사용자를 만들고, 기본 사용자를 그룹에 추가합니다.</block>
   <block id="c8a9c9677d220b68e6d75e1644cab2c9" category="paragraph">. 기본 그룹에는 일반적으로 "pcuser"라는 그룹 이름이 지정됩니다 그룹에 할당된 GID는<block ref="f9df942af967185fc775031b3c286856" prefix=" " category="inline-code"></block> 이어야 합니다.</block>
   <block id="3b11c15d85c13edbe20b8c5234ba8a09" category="list-text">기본 그룹을 만듭니다.</block>
@@ -44335,7 +44297,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="5175d311abea9fd953abd2a80148f041" category="list-text">ONTAP 9.17.1P1에서는 FlexCache 쓰기 저장 기능에 대한 중요한 개선 사항이 도입되었습니다. 9.17.1P1 이후에는 원본 클러스터와 캐시 클러스터 모두에서 현재 권장되는 릴리스를 실행하는 것이 *_강력히_* 권장됩니다. 9.17.1 코드라인을 실행할 수 없는 경우, 다음으로 제안되는 릴리스는 최신 P 릴리스인 9.16.1입니다. ONTAP 9.15.1에는 FlexCache 쓰기 저장에 필요한 모든 수정 사항과 개선 사항이 포함되어 있지 않으므로 프로덕션 워크로드에는 권장되지 않습니다.</block>
   <block id="57e39f46662d1e17c38e8591175ed421" category="list-text">100GB 미만의 파일에 대해 테스트를 실행했으며, 캐시와 원본 간의 WAN 왕복 시간이 200ms를 초과하지 않도록 했습니다. 이러한 한도를 벗어나는 작업 부하로 인해 예상치 못한 성능 특성이 나타날 수 있습니다.</block>
   <block id="8e94df8bfa53bf22503e8a16e1e22a78" category="list-text">쓰기를 위한 SMB 기회 잠금(Oplock)은 쓰기 백이 활성화된 FlexCache 볼륨에서 지원되지 않습니다.</block>
-  <block id="2f2696665d248a128095fdbfd0c9c20d" category="list-text">낮은 대역폭 및/또는 손실이 많은 클러스터 간 네트워크는 FlexCache 쓰기 성능에 상당한 부정적인 영향을 미칠 수 있습니다. 작업 부하에 따라 크게 달라지므로 특정 대역폭 요구 사항은 없지만 캐시와 원본 간의 클러스터 간 링크 상태를 확인하는 것이 *_강력히_* 권장됩니다.</block>
   <block id="a18a0e17d9a95a68832380f05ee7f722" category="list-text">SnapMirror/ SnapVault 관계에서 FlexGroups와 FlexVol 볼륨을 혼합하는 것은 변환 프로세스를 넘어서는 지원되지 않습니다.</block>
   <block id="32429dbb125ce4d663f89c29ac28a3fd" category="paragraph"><block ref="85c0e4ec022ac99f64d0e9835cac3a45" prefix="" category="inline-code"></block></block>
   <block id="5caac37c617f05ba919423680b196cb9" category="paragraph">네. FlexCache 쓰기 저장은 캐시와 원본 간의 클러스터 간 링크에 크게 의존합니다. 대역폭이 낮거나 손실이 많은 네트워크는 성능에 상당한 부정적인 영향을 미칠 수 있습니다. 작업 부하에 따라 크게 달라지므로 특정 대역폭 요구 사항은 없습니다.</block>
@@ -45523,7 +45484,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="5e5c1e133b052cb824956a34d3dad5fb" category="list-text"><block ref="ee703c88a52e9d2bb01fee9a4af7ee64" prefix=" " category="inline-code"></block> 옵션을 사용하여 SMB 서버를 다른 OU에 추가하도록 선택할 수 있습니다.</block>
   <block id="0ae47f813a25e76d6fc9fb1ae66a6259" category="paragraph">SnapMirror 활성 동기화에서는 변조 방지 스냅샷이 지원되지 않습니다.</block>
   <block id="c9eb593214a75cb8ec32ae0033f3a99f" category="paragraph">당신은 <block ref="745a1be36f8a005c1ed0b3ce36df78cc" prefix=" " category="inline-code"></block> 설정을 <block ref="acd96993edb256d739763832d3f9f184" prefix=" " category="inline-code"></block> 엔드포인트를 사용하여 작업합니다. 현재 값을 가져오려면 GET을 사용하고, 새 qtree를 생성할 때 설정하려면 POST를 사용하며, 기존 qtree에서 변경하려면 PATCH를 사용합니다.</block>
-  <block id="080fc244a058655af01cd933a3036796" category="paragraph">아래 표에 나와 있는 것처럼 Trellix 및 Trend Micro에 대한 상호 운용성 세부 정보는 NetApp 상호 운용성 매트릭스에서 관리됩니다. Trellix, Deep Instinct 및 OPSWAT에 대한 상호 운용성 세부 정보는 파트너 웹 사이트에서도 확인할 수 있습니다. Sentinel One, Symantec, Deep Instinct, OPSWAT 및 기타 신규 파트너에 대한 상호 운용성 세부 정보는 해당 파트너가 자체 웹 사이트에서 관리합니다.</block>
   <block id="c3f8d389b2b0cad745940b72f8e21cf1" category="paragraph">스토리지 가상 머신(SVM)의 보안 추적 필터 세부 정보를 확인하여 각 필터가 추적하는 액세스 이벤트를 식별하십시오.</block>
   <block id="dc545cd90003a0eac1dd99704445650b" category="paragraph">ONTAP 9.6부터 System Manager를 사용하여 SVM의 파일 액세스를 추적할 수 있습니다.</block>
   <block id="13afb59ecccad6c5d310cb04ede1663a" category="list-text">System Manager 대시보드를 엽니다.</block>
@@ -46126,7 +46086,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="bc4293c46525148fe110597849594b7b" category="list-text">온프레미스 클러스터에서 Google Cloud Storage로 티어링을 할 때는 <block ref="1bdbbd031fafd176ebde0eb66ba6ea69" category="inline-link-macro-rx"></block>가 필요합니다.</block>
   <block id="4082a99221e61eb71ff75684e141887a" category="list-text">온프레미스 클러스터에서 IBM Cloud Object Storage로 계층화할 때 <block ref="1bdbbd031fafd176ebde0eb66ba6ea69" category="inline-link-macro-rx"></block>가 필요합니다.</block>
   <block id="167c0dd62e8115ec45795b3b49abc5bb" category="paragraph">NFS 클라이언트에 대해 대용량 볼륨 및 파일 지원을 활성화한 경우 새 최대 파일 크기가 적용되려면 클라이언트를 다시 마운트해야 합니다.</block>
-  <block id="8665c4a5ef20b44f2705f5ede3f106c2" category="list-text">쓰기 후 캐시는 원본 볼륨의 여유 공간이 20% 이하로 떨어지면 자동으로 쓰기 우회 모드로 전환됩니다. 이는 원본에서 공간이 부족하여 쓰기 후 지원 캐시에 더티 데이터가 고립되는 것을 방지하는 데 도움이 됩니다. 그러나 원본 볼륨이 오버프로비저닝된 경우, 즉 논리적으로 프로비저닝된 크기가 aggregate의 여유 공간보다 큰 경우, 보고된 여유 공간 비율이 예상보다 빨리 이 임계값을 트리거할 수 있습니다. 20% 임계값은 원본 볼륨의 보고된 여유 공간과 aggregate의 사용 가능한 물리적 용량 모두를 기준으로 평가됩니다.</block>
   <block id="5e8784782477be08ff8add860c332997" category="paragraph">NetApp 지원 사이트에서 NetApp 라이센스 파일(NLF)을 받으려면 클러스터 UUID가 필요합니다.</block>
   <block id="5804b9a7462c2bbbcedaf92042779770" category="summary">비활성 데이터 보고(IDR)는 로컬 계층에서 계층화할 수 있는 비활성(콜드) 데이터의 양을 파악하는 데 매우 유용한 도구입니다.</block>
   <block id="f7ec19912c09376e5217d139a981561f" category="paragraph">기본적으로 IDR은 31일의 냉각 기간을 사용하여 비활성 데이터를 판단합니다. 계층화되는 콜드 데이터의 양은 볼륨에 설정된 계층화 정책에 따라 달라집니다. ONTAP 9.8 이전 릴리스에서는 IDR이 고정된 31일 냉각 기간을 사용했습니다.</block>
@@ -47339,9 +47298,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ed3dd7d3e2ab1968bc176c9c9a94e022" category="list-text">SnapMirror 동기 대상은 SVM 재해 복구 소스가 될 수 없습니다. SVM 재해 복구는 DP 볼륨의 복제를 지원하지 않기 때문입니다. 동기 소스의 플립 재동기화가 발생하면 SVM 재해 복구에서 타겟 클러스터의 DP 볼륨이 제외됩니다.</block>
   <block id="45445410b29d8db0d8eec37b7b5c1815" category="list-text"><block ref="45445410b29d8db0d8eec37b7b5c1815" category="inline-link-rx"></block></block>
   <block id="9c3c8a8599754601b45533d7331968af" category="paragraph"><block ref="9c3c8a8599754601b45533d7331968af" category="inline-link-rx"></block></block>
-  <block id="57ee3cc2179babf317d185c2425dc74b" category="admonition">ONTAP 9.5 이전 ONTAP 9 릴리스에서는 원본 FlexVol 볼륨이 7-Mode로 작동하는 Data ONTAP 8.2.x 시스템에서 생성된 FlexCache 볼륨에만 데이터를 제공할 수 있었습니다. ONTAP 9.5부터는 원본 FlexVol 볼륨이 ONTAP 9 시스템의 FlexCache 볼륨에도 데이터를 제공할 수 있습니다. 7-Mode FlexCache에서 ONTAP 9 FlexCache로 마이그레이션하는 방법에 대한 자세한 내용은 <block ref="85fe5eed7a74fd8a8fda34cfb24b8219" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="d34c44590e477ae7ac510890813da60b" category="paragraph"><block ref="d34c44590e477ae7ac510890813da60b" category="inline-link-rx"></block></block>
-  <block id="ffdf4ffa43b40057d375fcf7a2527909" category="list-text"><block ref="ffdf4ffa43b40057d375fcf7a2527909" category="inline-link-rx"></block></block>
   <block id="85937592f790d6e3d8b684c96c89c085" category="list-text"><block ref="85937592f790d6e3d8b684c96c89c085" category="inline-link-rx"></block></block>
   <block id="b60ea7d3371f308b279a425ddc7f4577" category="list-text"><block ref="b60ea7d3371f308b279a425ddc7f4577" category="inline-link-rx"></block></block>
   <block id="b0d1072738c297ba0914bbc708440c94" category="paragraph">ONTAP 시스템의 SNMP 지원에 대한 자세한 내용은<block ref="010101e1a0ea4465ba9ab03058d97b65" category="inline-link-rx"></block>을 참조하십시오.</block>
@@ -49264,4 +49221,23 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="93c9d4ff21582c79a7cddb11d4a3829d" category="doc">ONTAP용 수동 업그레이드 준비 워크플로우</block>
   <block id="165e9ffb20a53bc1f7011ca5414d2161" category="doc">ONTAP 4노드 또는 8노드 MetroCluster 구성 수동 업그레이드</block>
   <block id="c67fe6e6b4e25a2f3dba975eccebb39d" category="doc">ONTAP 업그레이드 전에 모든 노드에 netgroup 파일이 있는지 확인하십시오.</block>
+  <block id="c9e1753e0145773b68524bcd983a0a6a" category="section-title">Vscan ONTAP 설정</block>
+  <block id="0dc9bb6e297d8293cbc7a446a3518cff" category="paragraph">ONTAP 시스템에서 다음 Vscan 설정을 구성해야 합니다.</block>
+  <block id="0a0ccf36f0676a7604b292d166cd1e7f" category="paragraph">바이러스 검사를 위한 Vscan 서버를 사용할 수 없을 때 파일 액세스가 허용됨을 지정하도록 <block ref="42421470692997cb60ed7d6bef614a3b" prefix=" " category="inline-code"></block> 옵션을 <block ref="3262d48df5d75e3452f0f16b313b7808" prefix=" " category="inline-code"></block>(으)로 설정할 수 있습니다. on-access 모드에서는 서로 배타적인 다음 두 가지 옵션 중에서 선택할 수 있습니다:</block>
+  <block id="68961559705ee734d72247c2c042bf0c" category="list-text">비필수: 이 옵션을 사용하면 바이러스 검사를 위해 Vscan 서버를 사용할 수 있는지 여부와 관계없이 Vscan은 항상 클라이언트 액세스를 허용합니다.</block>
+  <block id="4045df8b5dc92daea045388573f5aa94" category="paragraph">아래 표에 표시된 바와 같이, Trellix 및 Trend Micro에 대한 상호 운용성 세부 정보는 NetApp 상호 운용성 매트릭스 툴에서 관리됩니다. Sentinel One, Symantec, Deep Instinct 및 OPSWAT을 포함한 기타 모든 파트너의 경우, 상호 운용성 세부 정보는 각 파트너 웹사이트에서 관리됩니다.</block>
+  <block id="fc5c4b423ac83d8102c39331e7623935" category="cell">Trellix(구 McAfee)</block>
+  <block id="ff7119a33dc0439f1e944ce8cf5fcb59" category="list-text">ONTAP 9.19.1 GA, 9.18.1P2, 9.17.1P3, 9.16.1P10 및 각 릴리스 제품군의 이후 P 릴리스에서는 다중 구성 요소 FlexCache 쓰기 백 캐시가 지원됩니다. 이전 ONTAP 릴리스에서는 전체 FlexCache 볼륨에 대해 단일 구성 요소를 사용해야 합니다. 이전 릴리스에서 다중 구성 요소 FlexCaches를 사용하면 캐시에서 원치 않는 데이터 제거가 발생할 수 있습니다.</block>
+  <block id="2521cde500082718d3c5ef4580a2c13d" category="list-text">라이트백 캐시는 원본 볼륨의 여유 공간이 20% 이하로 떨어지면 자동으로 쓰기 우회 모드로 전환됩니다. 이는 원본에서 공간이 부족해져 라이트백 지원 캐시에 더티 데이터가 고립되는 결과를 방지하는 데 도움이 됩니다. 원본 볼륨이 초과 프로비저닝된 경우, 논리적으로 프로비저닝된 크기가 어그리게이트의 여유 공간보다 큽니다. 20% 임계값은 원본 볼륨의 사용 가능한 공간과 어그리게이트의 사용 가능한 물리적 용량을 모두 기준으로 평가됩니다. 사용 가능한 공간이 이미 해당 임계값보다 낮을 때 <block ref="42d1a6ca89f2521a475c70f1e4815f7f" prefix=" " category="inline-code"></block> 및 <block ref="7bd14a231864e618e1840c7e117e59c1" prefix=" " category="inline-code"></block>는 여전히 0%를 표시할 수 있습니다.</block>
+  <block id="a5eae52f529b7281691dfc0030e03c40" category="paragraph">다음 예시는 과도하게 프로비저닝된 원본 볼륨입니다. 데이터가 거의 기록되지 않지만, 애그리게이트가 전체 논리적 크기를 지원할 수 없습니다:</block>
+  <block id="caacd6d231105cc2cbbfd511dc0883be" category="paragraph"><block ref="42d1a6ca89f2521a475c70f1e4815f7f" prefix=" " category="inline-code"></block>은(는) 0%이지만 사용 가능한 공간은 19.70TB 중 1.33TB이며, 이는 1.33 / 19.70, 즉 약 7%가 사용 가능함을 의미한다는 점에 유의하십시오. 이는 이미 20% 임계값 미만이므로 이 오리진의 write-back 캐시는 write-around 모드로 전환됩니다.</block>
+  <block id="9698f3194dbe6e3288c69a4bb6a58f6f" category="paragraph"><block ref="7bd14a231864e618e1840c7e117e59c1" prefix=" " category="inline-code"></block>도 0%이고 515MB만 사용된다는 점에 유의하십시오. 사용 가능한 공간은 18TB 중 1363GB로, 파일 시스템의 약 7%입니다. 백분율 열은 저장된 데이터가 얼마나 적은지 보여줍니다. 애그리게이트가 실제로 제공할 수 있는 볼륨 크기가 얼마나 되는지는 보여주지 않습니다.</block>
+  <block id="2fce22f88994a11ab3a8f16942c4ba41" category="inline-link-macro">TCP RACK</block>
+  <block id="6da27d8af98b1091e9ed39a8309555d5" category="list-text">낮은 대역폭 및/또는 손실이 많은 클러스터 간 네트워크는 FlexCache 라이트백 성능에 상당한 악영향을 미칠 수 있습니다. 특정 대역폭 요구 사항은 없지만 워크로드에 따라 크게 달라지므로 캐시와 원본 간의 클러스터 간 링크 상태를 확인하는 것이 *_강력히_* 권장됩니다. 네트워크에 패킷 손실이 발생하기 쉽고 ONTAP 9.19.1 이상을 실행 중인 경우, 성능 향상을 위해 <block ref="6100f6d0700ba5986ec142263d6235de" category="inline-link-macro-rx"></block> 사용을 고려해 보십시오.</block>
+  <block id="64c93b8a694a76602cf5ad17aed5afd9" category="paragraph">스토리지 가상 머신(SVM)을 생성하면 ONTAP은 자동으로 기본 사용자 <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block>(UID는 <block ref="f9df942af967185fc775031b3c286856" prefix=" " category="inline-code"></block>)와 그룹 <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block>(GID는 <block ref="f9df942af967185fc775031b3c286856" prefix=" " category="inline-code"></block>)을 생성하고 기본 사용자를 <block ref="68b79d57b5efe5cd122cd25bf3570cb9" prefix=" " category="inline-code"></block> 그룹에 추가합니다.</block>
+  <block id="a48bc6076c0a40afc96de0e6f2b3154f" category="paragraph">노드 범위 NDMP 모드에서 테이프 백업 및 복원 작업을 수행하려면 노드 범위 NDMP 모드를 명시적으로 활성화해야 합니다.</block>
+  <block id="c679367f9f87c88ce490b9d553ec2ab1" category="paragraph">노드 범위 NDMP 모드에서는 노드 수준에서 테이프 백업 및 복원 작업을 수행할 수 있습니다.</block>
+  <block id="015c0c3c38a424f34c855a6845892e10" category="paragraph">ONTAP 9.0</block>
+  <block id="0b86181e75ac9dd963d28fee4a64e251" category="list-text">FlexClone 파일 및 FlexClone LUN으로 인한 공간 절약 효과를 확인하십시오:</block>
+  <block id="0e02eaf79e3306ff6a58686c821d7933" category="paragraph">중복 제거 기능이 활성화된 FlexVol 볼륨에서 이 명령을 실행하면 중복 제거 및 FlexClone 파일과 LUN을 통해 절약된 공간을 확인할 수 있습니다.</block>
 </blocks>

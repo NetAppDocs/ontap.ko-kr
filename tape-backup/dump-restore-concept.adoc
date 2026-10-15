@@ -64,12 +64,6 @@ ONTAP는 지정된 모든 파일이 테이프에서 복사될 때까지 2단계�
 +
 NTFS qtree 또는 볼륨에 대한 UNIX 파일 권한만 있는 파일을 복원하는 경우 파일에 Windows NT ACL이 없습니다. 스토리지 시스템은 Windows NT ACL을 생성할 때까지 이 파일에 대한 UNIX 파일 권한만 사용합니다.
 
-+
-[NOTE]
-====
-Data ONTAP 8.2를 실행하는 스토리지 시스템에서 백업된 ACL을 ACE 제한이 1,024 이하인 Data ONTAP 8.1.x 및 이전 버전의 스토리지 시스템으로 복원하는 경우 기본 ACL이 복원됩니다.
-
-====
 * Qtree 정보
 +
 qtree 정보는 qtree가 볼륨의 루트에 복원되는 경우에만 사용됩니다. Qtree 정보는 "/vs1/vol1/subdir/lowerdir" 같은 하위 디렉토리로 qtree가 복원되고 qtree가 아닌 경우 사용되지 않습니다.
