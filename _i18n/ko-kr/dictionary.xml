@@ -32729,7 +32729,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="62159df0d831bdb5f1aea1af6c1478c3" category="paragraph">ONTAP가 지원하는 Windows 클라이언트에 대한 최신 정보는 를 참조하십시오 <block ref="3256eb8d41d052ecb002b5900284dd69" category="inline-link-macro-rx"></block>.</block>
   <block id="9ca4edc2e4b5eaca49e83e850ac2dad5" category="paragraph"><block ref="9ca4edc2e4b5eaca49e83e850ac2dad5" category="inline-link-rx"></block></block>
   <block id="f4d1718476f238773172cc8143587c05" category="paragraph"><block ref="f4d1718476f238773172cc8143587c05" category="inline-link-rx"></block></block>
-  <block id="99a7c9a5823d6b508dad371d0bf538b1" category="cell"><block ref="e3c9035e5c1c0bf1bd831cef5319e43c" category="inline-link-macro-rx"></block></block>
   <block id="5b580e8317ab165eba9067ba6a9067c1" category="cell"><block ref="5b580e8317ab165eba9067ba6a9067c1" category="inline-link-macro-rx"></block></block>
   <block id="ae8a5c43c4ab159a450a1a245c7ab465" category="list-text"><block ref="ae8a5c43c4ab159a450a1a245c7ab465" category="inline-link-macro-rx"></block></block>
   <block id="71e83c0f1fb1ce89e91c985d3d679e87" category="list-text"><block ref="71e83c0f1fb1ce89e91c985d3d679e87" category="inline-link-macro-rx"></block></block>
@@ -47925,7 +47924,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="29f0f0fe5c633aae223077263e38a9c3" category="paragraph">SP에 액세스하기 위한 사용자 계정은 SP CLI 대신 ONTAP에서 관리됩니다. 클러스터 사용자 계정은 <block ref="5d6b067bb8a979d6b47c787077dfae6f" prefix=" " category="inline-code"></block> 명령의 <block ref="b019a21b1448a0b40df88e085b1d1b7f" prefix=" " category="inline-code"></block> 매개변수가 <block ref="0bde888717513a7ee9934d223131546f" prefix=" " category="inline-code"></block>(으)로 설정되고 <block ref="7d59ecef835fe5b545d088845c7326e8" prefix=" " category="inline-code"></block> 매개변수가 <block ref="5f4dcc3b5aa765d61d8327deb882cf99" prefix=" " category="inline-code"></block>(으)로 설정되어 생성된 경우 SP에 액세스할 수 있습니다. ONTAP 9.15.1부터는 <block ref="73875e322c76bddd6a5fa384b218226a" prefix=" " category="inline-code"></block> 명령을 사용하여 두 번째 인증 방법을 <block ref="2ef23106a99ab5176735b5060bcb139c" prefix=" " category="inline-code"></block>(으)로 설정한 다음 <block ref="ce1e6173089c5d87ceb80f40a9ec8907" prefix=" " category="inline-code"></block> 명령으로 공개 키를 연결하여 SP 계정에 대해 선택적으로 2단계 인증을 구성할 수 있습니다.</block>
   <block id="7e9ae042c211d12a3e3b34dd7b7edaf1" category="paragraph">ONTAP 명령 참조에서 link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html<block ref="73875e322c76bddd6a5fa384b218226a" prefix="[" category="inline-code"></block>^], link:https://docs.netapp.com/us-en/ontap-cli/security-login-publickey-create.html<block ref="ce1e6173089c5d87ceb80f40a9ec8907" prefix="[" category="inline-code"></block>^], link:https://docs.netapp.com/us-en/ontap-cli/security-login-show.html<block ref="025c83c1a746b39471a98aa72befe950" prefix="[" category="inline-code"></block>^]에 대해 자세히 알아보십시오.</block>
   <block id="6a148070bc5425edfc608b9c08900af7" category="inline-link-macro">NetApp Trellix ePO의 NetApp 구성 - 온프레미스 관리형 엔드포인트(trellix.com)</block>
-  <block id="1f7dc94e41b5716c1bdac079403299a9" category="list-text"><block ref="1f7dc94e41b5716c1bdac079403299a9" category="inline-link-macro-rx"></block></block>
   <block id="e151dec72872d5eb0009a044fe37e4ac" category="inline-link-macro">NetApp에 대한 위협 탐지</block>
   <block id="0972c6e249e46bcf78f97ecd7a65fb4f" category="list-text"><block ref="0972c6e249e46bcf78f97ecd7a65fb4f" category="inline-link-macro-rx"></block></block>
   <block id="caa6941cc670ae7bf2ade1c4fb560921" category="list-text"><block ref="caa6941cc670ae7bf2ade1c4fb560921" category="inline-link-macro-rx"></block></block>
@@ -49113,19 +49111,12 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f6c32351e562f6e9ea5e8f792950582c" category="doc">ONTAP 볼륨 마이그레이션 중 압축 유형 공존 지원</block>
   <block id="8714e4dad62aa2068886c5c6f9682a1f" category="paragraph">ONTAP 시스템 간에 볼륨을 마이그레이션할 때 소스 볼륨이 대상 볼륨과 다른 데이터 압축 유형을 사용할 수 있습니다.</block>
   <block id="8eafd3c4d31d8fe5e7e57cd2ea1f3d16" category="paragraph">지원되는 압축 유형에는 보조 압축, 적응형 8K 압축 및 온도 감응형 스토리지(TSSE)가 있습니다. 마이그레이션 중에 이러한 압축 유형은 대상 볼륨에서 다음과 같이 일시적으로 공존할 수 있습니다.</block>
-  <block id="3bd31d3bd9345d176c72069047a29177" category="cell">소스 압축 유형</block>
-  <block id="cb28df557f2f47f3a921f0fead41dca1" category="cell">대상 압축 유형</block>
   <block id="fe8b2e5924acd48eefbf9fa274021f67" category="cell">마이그레이션을 위해 지원되는 공존</block>
   <block id="5359bce7c5e136c8dca761661cc219f5" category="cell">애플리케이션 I/O 읽기/쓰기 크기</block>
-  <block id="0c7d6cf19426e01dcfa32434828ed266" category="cell">보조</block>
-  <block id="9a148ead3f76c1f965498fa354056435" category="cell">TSSE</block>
-  <block id="bd8d601466d33bb09092b292f114a489" category="cell">적응형 8K</block>
   <block id="ae77f6dec12df535271278209b397bbc" category="paragraph-title">2차 및 적응형 8k 압축에서 TSSE 압축으로의 마이그레이션</block>
-  <block id="c94a6c4540f5371ac125bca1ef4c1514" category="paragraph">보조 볼륨 및 8k 적응형 볼륨은 마이그레이션 후 백그라운드 프로세스를 통해 또는 마이그레이션 중에 데이터가 대상 볼륨에 다시 기록될 때 점진적으로 TSSE로 변환됩니다.</block>
   <block id="53cff828016eb894199fb677ed876778" category="paragraph">볼륨을 보조 또는 적응형 8K 압축에서 TSSE 압축으로 마이그레이션한 후, 기존의 모든 블록이 변환된 후에도<block ref="df899f2d908ec33afe1d01ee26b3dd47" prefix=" " category="inline-code"></block> 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로 유지되고, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.</block>
   <block id="8da507d21afe5c07625ad95c77b98134" category="paragraph">보조 또는 적응형 8K 압축에서 변환된 볼륨에 기록된 새 데이터는 TSSE로 압축됩니다.</block>
   <block id="b5156e0d72e33cdf926c06a6586a2870" category="paragraph-title">2차 압축에서 적응형 8k 압축으로의 마이그레이션</block>
-  <block id="c93c56132c6abbf052ea33895c457eea" category="paragraph">동일 볼륨에서 보조 8K 압축과 적응형 8K 압축을 동시에 사용하는 것은 지원되지 않습니다.</block>
   <block id="f973fe66cbf27daa823139ea1a1195e2" category="inline-link-macro">2차 압축과 적응형 압축 사이를 이동합니다</block>
   <block id="ab8fa4f8f86514969c699fc174e9a631" category="paragraph"><block ref="471c7baa6b3440cc5294ebd5e8ab9d96" category="inline-link-macro-rx"></block>하는 방법을 알아보십시오.</block>
   <block id="26bf73b85d79feb7830a5d867ba6cb42" category="section-title">값을 해석하는 방법</block>
@@ -49240,4 +49231,13 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="015c0c3c38a424f34c855a6845892e10" category="paragraph">ONTAP 9.0</block>
   <block id="0b86181e75ac9dd963d28fee4a64e251" category="list-text">FlexClone 파일 및 FlexClone LUN으로 인한 공간 절약 효과를 확인하십시오:</block>
   <block id="0e02eaf79e3306ff6a58686c821d7933" category="paragraph">중복 제거 기능이 활성화된 FlexVol 볼륨에서 이 명령을 실행하면 중복 제거 및 FlexClone 파일과 LUN을 통해 절약된 공간을 확인할 수 있습니다.</block>
+  <block id="5169b5b43615ad7b636406f5ba40e31b" category="cell"><block ref="5169b5b43615ad7b636406f5ba40e31b" category="inline-link-macro-rx"></block></block>
+  <block id="b916846c2c3ead3a27a79e687df84b5f" category="list-text"><block ref="b916846c2c3ead3a27a79e687df84b5f" category="inline-link-macro-rx"></block></block>
+  <block id="a1565efa58a4379112baa6f6c81b89b5" category="cell">소스 볼륨</block>
+  <block id="69039c520478dc06b38a5008795769e3" category="cell">대상 볼륨</block>
+  <block id="42125d571098ecba0452ca47fa8d4c65" category="cell">2차 압축 유형</block>
+  <block id="dc46868b966b5b8e301d36d6843e2840" category="cell">TSSE/32k 인라인 압축 방식</block>
+  <block id="45bd4b7bbd27c551316311993a130c47" category="cell">적응형 8k 압축 유형</block>
+  <block id="9d8e83ee866fae5ecce53f030c82804d" category="paragraph">보조 및 8k 적응형 볼륨은 마이그레이션 후 백그라운드 프로세스를 통해, 또는 마이그레이션 중 데이터가 대상 볼륨에 다시 기록될 때 QuickAssist Technology(QAT) 및 기타 지원되는 시스템을 위해 TSSE/32k 인라인 압축으로 점진적으로 변환됩니다.</block>
+  <block id="bd46ae9d08dcad369ebbd66a0510816e" category="paragraph">동일 볼륨에서 보조 8k 압축과 적응형 8k 압축을 동시에 사용하는 것은 지원되지 않습니다.</block>
 </blocks>
