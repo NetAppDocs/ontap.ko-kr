@@ -78,7 +78,7 @@ SAN 구성에서 구성 요소는 SnapMirror 활성 동기화 관계에서 보�
 NAS 구성에서 구성 요소는 볼륨이며, 해당 볼륨을 포함하는 SVM은 SnapMirror 활성 동기화 관계에서 보호되는 엔티티입니다.
 
 .ONTAP 중재자
-그만큼 link:../mediator/index.html["ONTAP 중재자"] 피어링된 ONTAP 클러스터 및 노드에 대한 상태 정보를 수신하여 두 클러스터 간 오케스트레이션을 수행하고 각 노드/클러스터가 정상 작동 중인지 확인합니다. ONTAP Mediator는 다음에 대한 상태 정보를 제공합니다.
+link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP 중재자"^]는 피어링된 ONTAP 클러스터 및 노드에 대한 상태 정보를 수신하고, 둘 사이의 오케스트레이션을 수행하며, 각 노드/클러스터가 정상적으로 실행 중인지 여부를 판단합니다. ONTAP Mediator는 다음에 대한 상태 정보를 제공합니다:
 
 * 피어 ONTAP 클러스터
 * 피어 ONTAP 클러스터 노드입니다

@@ -20,7 +20,9 @@ summary: 실수로 인한 삭제, 애플리케이션 충돌, 데이터 손상 �
 
 ONTAP 9.9.1의 일반 가용성부터 SAN 환경에서 비즈니스 크리티컬 애플리케이션의 자동 페일오버를 지원하기 위해 제로 복구 시간 목표(제로 RTO) 또는 투명 애플리케이션 페일오버(TAF)를 제공합니다. SnapMirror 액티브 동기화를 사용하려면 2개의 AFF 클러스터 또는 2개의 ASA(All Flash SAN Array) 클러스터가 있는 구성으로 ONTAP Mediator 1.2를 설치해야 합니다.
 
-link:../snapmirror-active-sync/index.html["SnapMirror 활성 동기화"]
+* link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP Mediator 문서"^]
+* link:../snapmirror-active-sync/index.html["SnapMirror Active Sync 설명서"^]
+
 
 
 

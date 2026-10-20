@@ -51,7 +51,7 @@ SnapMirror Synchronous 구성에서 지원되는 최대 FlexVol 볼륨 크기가
 | xref:../data-protection/snapmirror-synchronous-disaster-recovery-basics-concept.html#supported-features[SnapMirror Synchronous NDO] | SnapMirror Synchronous는 HA 테이크오버 및 반환, 볼륨 이동 및 기타 유지보수 관련 작업에 대한 무중단 운영(NDO)을 지원합니다. 이 기능은 AFF/ASA 플랫폼에서만 사용할 수 있습니다. 
 
 
-| xref:../mediator/index.html[ONTAP mediator 1.5는 SnapMirror 비즈니스 연속성을 지원합니다] | ONTAP mediator 1.5를 사용하여 SnapMirror 활성 동기화 관계를 모니터링할 수 있습니다. 
+| link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP mediator 1.5는 SnapMirror 비즈니스 연속성을 지원합니다"] | ONTAP mediator 1.5를 사용하여 SnapMirror 활성 동기화 관계를 모니터링할 수 있습니다. 
 
 
 | xref:../snapmirror-active-sync/index.html[SnapMirror 액티브 동기화 연속성 개선 사항] | SnapMirror 활성 동기화는 스냅샷에서 부분 LUN 복원을 지원합니다. 또한 SnapMirror 활성 동기화는 QoS를 SnapMirror 관계에 없는 볼륨으로 확장합니다. 

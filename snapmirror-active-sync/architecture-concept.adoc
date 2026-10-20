@@ -67,7 +67,7 @@ ONTAP Mediator는 다음 목적으로 사용됩니다.
 
 NOTE: ONTAP Mediator를 사용할 수 없는 경우 계획된 장애 조치나 자동 장애 조치를 수행할 수 없습니다.  애플리케이션 데이터는 어떠한 중단 없이 동기적으로 복제되므로 데이터 손실이 없습니다.
 
-자세한 내용은 link:mediator-install-task.html["ONTAP 중재자"] 설명서를 참조하십시오.
+자세한 내용은 link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP Mediator 문서"^]을 참조하십시오.
 
 .ONTAP 클라우드 중재자
 ONTAP 9.17.1부터 ONTAP Cloud Mediator는 NetApp 콘솔에서 클라우드 기반 서비스로 제공되며 SnapMirror Active Sync와 함께 사용할 수 있습니다. ONTAP Mediator와 유사하게 ONTAP Cloud Mediator는 SnapMirror 액티브 동기화 관계에서 다음과 같은 기능을 제공합니다.

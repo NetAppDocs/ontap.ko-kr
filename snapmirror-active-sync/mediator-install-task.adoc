@@ -46,7 +46,7 @@ IMPORTANT: SnapMirror 활성 동기화 및 ONTAP Mediator 또는 ONTAP Cloud Med
 .ONTAP 중재자 전제 조건
 * ONTAP Mediator에는 자체적인 필수 구성 요소가 포함되어 있습니다. ONTAP Mediator를 설치하기 전에 이러한 필수 구성 요소를 충족해야 합니다.
 +
-자세한 내용은 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html["ONTAP Mediator 서비스 설치를 준비하세요"^] .
+자세한 내용은 link:https://docs.netapp.com/us-en/ontap-mediator/install/prepare-install.html["ONTAP Mediator 설치 준비"^] 참조하십시오.
 
 * 기본적으로 ONTAP Mediator는 TCP 포트 31784를 통해 서비스를 제공합니다. ONTAP 클러스터와 ONTAP Mediator 사이에서 포트 31784가 열려 있고 사용 가능한지 확인해야 합니다.
 
@@ -61,7 +61,7 @@ ONTAP Mediator를 설치하고 클러스터 구성을 확인하려면 다음 단
 .단계
 . 소스 및 대상 클러스터가 올바르게 구성되었는지 확인하기 전에 ONTAP Mediator를 설치하세요.
 +
-xref:../mediator/index.html[ONTAP Mediator 설치 또는 업그레이드 준비]
+link:https://docs.netapp.com/us-en/ontap-mediator/install/workflow-summary.html["ONTAP Mediator를 설치합니다"^].
 
 . 클러스터 피어링 관계가 클러스터 간에 존재하는지 확인합니다.
 +
@@ -604,7 +604,7 @@ Info: [Job 136] 'mediator remove' job queued
 C1_test_cluster::*> snapmirror mediator show
 This table is currently empty.
 ----
-. 하위 CA에서 인증서를 가져오는 방법에 대한 지침은 `intermediate.crt` 에 설명된 단계를 link:../mediator/manage-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"]참조하십시오. 자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다
+. link:https://docs.netapp.com/us-en/ontap-mediator/administer/replace-self-signed-certificates-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"^]에 설명된 단계를 참조하여 하위 CA로부터 인증서를 발급받는 방법에 대한 지침을 확인하십시오(이를  `intermediate.crt`라고 함). 자체 서명 인증서를 신뢰할 수 있는 타사 인증서로 교체하십시오.
 +
 
 NOTE: 에는 `intermediate.crt` 파일에 정의된 PKI 권한으로 전송되어야 하는 요청에서 파생되는 특정 속성이 있습니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_ca.cnf`
@@ -729,7 +729,7 @@ Info: [Job 136] 'mediator remove' job queued
 C1_test_cluster::*> snapmirror mediator show
 This table is currently empty.
 ----
-. 하위 CA에서 인증서를 가져오는 방법에 대한 지침은 `ca.crt` 에 설명된 단계를 link:../mediator/manage-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"]참조하십시오. 자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다
+. link:https://docs.netapp.com/us-en/ontap-mediator/administer/replace-self-signed-certificates-task.html["자체 서명된 인증서를 신뢰할 수 있는 타사 인증서로 바꿉니다"^]에 설명된 단계를 참조하여  `ca.crt`라고 하는 하위 CA에서 인증서를 얻는 방법에 대한 지침을 확인하십시오. 자체 서명 인증서를 신뢰할 수 있는 타사 인증서로 교체합니다
 +
 
 NOTE: 에는 `ca.crt` 파일에 정의된 PKI 권한으로 전송되어야 하는 요청에서 파생되는 특정 속성이 있습니다 `/opt/netapp/lib/ontap_mediator/ontap_mediator/server_config/openssl_ca.cnf`
@@ -818,6 +818,7 @@ Mediator Address Peer Cluster     Connection Status Quorum Status
 --
 ====
 .관련 정보
+* link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP Mediator 문서"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/job-show.html["작업 표시"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-delete.html["보안 인증서 삭제"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["보안 인증서 설치"^]

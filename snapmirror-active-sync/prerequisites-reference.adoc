@@ -159,181 +159,7 @@ ASA r2
 
 * ONTAP 9.9.1 이상
 * ONTAP 중재자 1.2 이상
-* 다음 중 하나를 실행하는 ONTAP Mediator용 Linux 서버 또는 가상 머신:
-
-
-[cols="30,70"]
-|===
-
-
-| ONTAP 중재자 버전 | 지원되는 Linux 버전 
-
-
- a| 
-1.12.1
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능: 10.1 및 9.7 ^1^
-** 권장 사항: 10.2, 10.0, 9.8, 9.6, 9.4 및 8.10
-
-
-* Rocky Linux 10.2, 9.8 및 8.10
-* Oracle Linux 10.1 및 9.8
-
-
-
-
- a| 
-1.12
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능: 10.1 및 9.7 ^1^
-** 권장 사항: 10.2, 10.0, 9.8, 9.6, 9.4 및 8.10
-
-
-* Rocky Linux 10.2, 9.8 및 8.10
-* Oracle Linux 10.1 및 9.7
-
-
-
-
- a| 
-1.11
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능: 9.5 ^1^
-** 권장: 10.1, 10.0, 9.7, 9.6, 9.4, 8.10
-
-
-* Rocky Linux 10.1, 9.7 및 8.10
-* Oracle Linux 10.0 및 9.6
-
-
-
-
- a| 
-1.10
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능: 9.5 ^1^
-** 권장: 10.0, 9.6, 9.4 및 8.10
-
-
-* Rocky Linux 10.0, 9.6 및 8.10
-
-
-
-
- a| 
-1.9.1
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능 버전: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5, 8.4 ^1^
-** 권장: 9.5, 9.4, 9.2, 9.0, 8.10, 8.8
-
-
-* Rocky Linux 9.5 및 8.10
-
-
-
-
- a| 
-1.9
- a| 
-* Red Hat Enterprise Linux
-+
-** 호환 가능 버전: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5, 8.4 ^1^
-** 권장: 9.5, 9.4, 9.2, 9.0, 8.10, 8.8
-
-
-* Rocky Linux 9.5 및 8.10
-
-
-
-
- a| 
-1.8
- a| 
-* Red Hat Enterprise Linux:
-+
-** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
-** 권장: 9.4, 9.3, 9.2, 9.1, 9.0, 8.10, 8.9, 8.8
-
-
-* Rocky Linux 9.4 및 8.10
-
-
-
-
- a| 
-1.7
- a| 
-* Red Hat Enterprise Linux:
-+
-** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
-** 권장: 9.3, 9.2, 9.1, 9.0, 8.9, 8.8
-
-
-* Rocky Linux 9.3 및 8.9
-
-
-
-
- a| 
-1.6
- a| 
-* Red Hat Enterprise Linux:
-+
-** 호환 가능: 8.7, 8.6, 8.5, 8.4 ^1^
-** 권장: 9.2, 9.1, 9.0 및 8.8
-
-
-* Rocky Linux 9.2 및 8.8
-
-
-
-
- a| 
-1.5
- a| 
-* Red Hat Enterprise Linux: 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
-* CentOS: 7.9, 7.8, 7.7 및 7.6
-
-
-
-
- a| 
-1.4
- a| 
-* Red Hat Enterprise Linux: 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
-* CentOS: 7.9, 7.8, 7.7 및 7.6
-
-
-
-
- a| 
-1.3
- a| 
-* Red Hat Enterprise Linux: 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
-* CentOS: 7.9, 7.8, 7.7 및 7.6
-
-
-
-
- a| 
-1.2
- a| 
-* Red Hat Enterprise Linux: 8.1, 8.0, 7.9, 7.8, 7.7 및 7.6
-* CentOS: 7.9, 7.8, 7.7 및 7.6
-
-
-|===
-. 호환 가능이란 Red Hat이 더 이상 이러한 RHEL 버전을 지원하지 않지만 ONTAP Mediator는 여전히 해당 버전에 설치할 수 있음을 의미합니다.
+* 지원되는 운영 체제를 실행하는 ONTAP Mediator용 Linux 서버 또는 가상 머신. link:https://docs.netapp.com/us-en/ontap-mediator/release-notes/support-matrix.html["ONTAP 미디에이터 지원 매트릭스"^]을(를) 참조하십시오.
 
 
 
@@ -427,8 +253,9 @@ NTFS 보안 스타일은 SAN용 SnapMirror 액티브 싱크 볼륨에서는 지�
 * 완전한 기능을 갖추고 계획되지 않은 자동 장애 조치를 활성화하려면 외부 ONTAP Mediator를 ONTAP 클러스터로 프로비저닝하고 구성해야 합니다.
 * ONTAP Mediator는 두 개의 ONTAP 클러스터와 별도로 세 번째 장애 도메인에 설치해야 합니다.
 * ONTAP Mediator를 설치할 때 자체 서명된 인증서를 주요 신뢰할 수 있는 CA에서 서명한 유효한 인증서로 바꿔야 합니다.
-* ONTAP Mediator에 대한 자세한 내용은 다음을 참조하세요. link:../mediator/index.html["ONTAP Mediator 설치 준비"] .
 
+
+ONTAP Mediator에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP Mediator 문서"^]을(를) 참조하십시오.
 
 
 
@@ -445,5 +272,5 @@ NTFS 보안 스타일은 SAN용 SnapMirror 액티브 싱크 볼륨에서는 지�
 == 추가 정보
 
 * link:https://hwu.netapp.com/["Hardware Universe"^]
-* link:../mediator/mediator-overview-concept.html["ONTAP 중재자 개요"]
+* link:https://docs.netapp.com/us-en/ontap-mediator/index.html["ONTAP Mediator 문서"^]
 
