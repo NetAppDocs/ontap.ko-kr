@@ -5279,9 +5279,6 @@
   <block id="5285b67fa91998fceb2c45daaea2cea3" category="paragraph">정적 VLAN은 MAC(Media Access Control) 스푸핑을 사용하여 VLAN을 위반할 수 없기 때문에 보안이 향상됩니다. 그러나 다른 사람이 스위치에 물리적으로 액세스할 수 있는 경우 케이블을 교체하고 네트워크 주소를 다시 구성하면 액세스가 허용됩니다.</block>
   <block id="4dde55aac4561de095f548d9a9c8a046" category="paragraph">일부 환경에서는 동적 VLAN보다 정적 VLAN을 쉽게 생성하고 관리할 수 있습니다. 정적 VLAN은 48비트 MAC 주소 대신 스위치 및 포트 식별자만 지정할 수 있기 때문입니다. 또한 스위치 포트 범위에 VLAN 식별자를 사용하여 레이블을 지정할 수 있습니다.</block>
   <block id="1eb579de542d64da4891b5c3afdfccae" category="summary">최상의 성능을 얻으려면 FC 스위치를 구성할 때 특정 모범 사례를 고려해야 합니다.</block>
-  <block id="2f5e2fbf63ad59a9cda33b3ee828420f" category="doc">FC 스위치 구성 모범 사례</block>
-  <block id="a4c61361de8d4e9178254ac1f67d7eb9" category="paragraph">고정 링크 속도 설정은 FC 스위치 구성의 모범 사례이며, 특히 대규모 패브릭의 경우 패브릭 리빌드에 최고의 성능을 제공하고 시간을 크게 단축할 수 있기 때문에 그렇습니다. 자동 협상은 유연성이 높지만 FC 스위치 구성이 예전처럼 수행하지 않기 때문에 전체적인 패브릭 구성 시퀀스의 시간이 길어집니다.</block>
-  <block id="a56f78ed03831b3d2c01e023f2e2aa3d" category="paragraph">Fabric에 연결된 모든 스위치는 NPIV(N_Port ID Virtualization)를 지원해야 하며 NPIV를 설정해야 합니다. ONTAP는 NPIV를 사용하여 패브릭에 FC 대상을 제공합니다.</block>
   <block id="4b89f07ceb7db2807da75e478d13a085" category="paragraph">다음 중 하나가 있는 경우 솔루션은 여러 경로를 포함하는 것으로 간주됩니다.</block>
   <block id="38d34e76fffe5bb4bbfcb0286fee069f" category="list-text">호스트의 단일 이니시에이터 포트에서 SVM의 여러 SAN LIF에 연결됩니다</block>
   <block id="77853a198ff6e1403835bbaf856a862c" category="list-text">여러 이니시에이터 포트를 SVM의 단일 SAN LIF에 연결합니다</block>
@@ -23437,7 +23434,6 @@
   <block id="bc8be72fdc9d6054f356bb2b7f80fd12" category="inline-link">NetApp 상호 운용성 매트릭스</block>
   <block id="952fd691754e388c7b7ba473cf410aff" category="inline-link">TR-4597: ONTAP용 VMware vSphere</block>
   <block id="59825f2783ed8148538368f7f0242e07" category="list-text">로 이동합니다<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
-  <block id="2eca5abf1f12315d80bbba3b3f4fc3bd" category="paragraph">지원되는 환경에 대한 자세한 내용은 를 참조하십시오<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
   <block id="d38a11039f0d84ab5130c02d5945c66b" category="paragraph">지원되는 SFP+ 모듈 및 Cisco Twinax(Copper) 케이블이 에 나열되어 있습니다<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>.</block>
   <block id="2c1dfa4590b4e6c2ecde44e3be27950a" category="paragraph">ALUA 또는 ANA를 지원하는 특정 호스트 구성에 대한 자세한 내용은 를 참조하십시오<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> 및<block ref="ed5f0cb8da79fb5415ca9aff60303a86" category="inline-link-rx"></block> 호스트 운영 체제를 위한 것입니다.</block>
   <block id="0da788ded290e9a8a6b6853ce251affa" category="list-text">FabricPool 라이센스용 NetApp 라이센스 파일(NLF)을 에서 다운로드하십시오 <block ref="70e7038556aeb290010b0a939877737b" category="inline-link-macro-rx"></block>.</block>
@@ -38861,7 +38857,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a1e45af4f7c53106cfc4cc3d9a2d531b" category="doc">ONTAP 시스템으로 iSCSI 네트워크를 구성합니다</block>
   <block id="d9be8a4f16ec08dcf1f5e6d2439c4637" category="doc">ONTAP 시스템에 권장되는 FC 및 FCoE 조닝 구성</block>
   <block id="962c907f196b2b1398ef78f92ff08f68" category="doc">ONTAP에서 지원되는 최대 FC 및 FCoE 홉 수</block>
-  <block id="582146f20cbde89cce015745a5bf1221" category="doc">ONTAP 시스템으로 FC 스위치를 구성하는 모범 사례</block>
   <block id="4b91e4b9cf5f2be5080121a972ce2f88" category="doc">ONTAP 시스템에서 사용되는 FC 스위치의 구성 제한</block>
   <block id="c3d0bb98741ea44d98fcf520eb6e5ee3" category="doc">ONTAP는 FCoE 이니시에이터 및 타겟 포트 조합을 지원합니다</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="doc">ONTAP 시스템을 통한 FC 및 FCoE 조닝에 대해 알아보십시오</block>
@@ -46540,7 +46535,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1407e2af295585296c618232197371b4" category="paragraph"><block ref="1407e2af295585296c618232197371b4" category="inline-link-rx"></block></block>
   <block id="a4186daf04d0d3494ffd0590ae68b599" category="paragraph">영구 포트에 대한 자세한 내용은 <block ref="b8a1e1ffca2c39e74592255b1763260b" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="fc2e1945610fcb134cc8cfbd52993abf" category="list-text">MetroCluster 구성은 직접 연결을 지원하지 않습니다.</block>
-  <block id="14945439c0187795db5de3f9c95b75e2" category="paragraph">FC 및 iSCSI 모범 사례는 <block ref="77aa6eb283ce8fd34fb9e7f21d428790" category="inline-link-rx"></block>을 참조하십시오.</block>
   <block id="825f53fddb0ba59cd87cc9258355c986" category="paragraph">ONTAP 기술 및 외부 서비스와의 상호 작용에 대한 자세한 내용은 다음 기술 보고서(TR)를 참조하십시오. **<block ref="b8d14042607630375f76208a6529a103" category="inline-link-rx"></block></block>
   <block id="18bac297eeeb17a421746260816f2051" category="paragraph">SnapLock을 사용하여 파일과 스냅샷을 WORM 스토리지에 저장하고 WORM으로 보호되는 데이터의 보존 기간을 설정할 수 있습니다. SnapLock WORM 스토리지는 NetApp 스냅샷 기술을 사용하며 SnapMirror 복제 및 SnapVault 백업을 기반으로 데이터 백업 복구 보호 기능을 제공합니다. WORM 스토리지에 대한 자세한 내용은 다음 링크를 참조하십시오. <block ref="caca249db3e7fcd65c1e370c3826746e" category="inline-link-macro-rx"></block>.</block>
   <block id="82bf577cbda36b0494d4f7b9504bf9a0" category="paragraph">고급 사용법은 <block ref="0c138fc6a0106a6111d1fc5ecd67dd44" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -46917,9 +46911,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="fa29051c83849de6e65f2d0418baa9df" category="paragraph">NAS 구성의 예:</block>
   <block id="13fdea334f6802c4f377a949e4a41537" category="paragraph">SnapMirror 액티브 싱크(ONTAP 9.15.1 이전에는 SnapMirror Business Continuity라고 함)는 사이트 전체 장애 발생 시에도 비즈니스 서비스가 계속 작동하도록 지원합니다. 이 기술을 통해 애플리케이션은 수동 개입이나 사용자 지정 스크립트 없이도 보조 복사본으로 원활하게 페일오버할 수 있습니다.</block>
   <block id="91c790782e44b3ee26fd91761b617d98" category="paragraph">SnapMirror Active Sync(SM-AS)는 자동 장애 조치 기능을 갖춘 보다 세분화되고 비용 효율적이며 사용하기 쉬운 애플리케이션 수준 보호 솔루션으로 설계되었습니다. SnapMirror Active Sync를 사용하면 지리적으로 분산된 여러 사이트 간에 애플리케이션의 여러 볼륨을 동기적으로 복제할 수 있습니다. 기본 복사본에 장애가 발생할 경우 보조 복사본으로 자동 장애 조치되므로 1단계 애플리케이션의 비즈니스 연속성을 보장할 수 있습니다.</block>
-  <block id="2fa9bc4311af99e37cef9a9427495c31" category="paragraph">ONTAP 9.9.1 버전부터 SnapMirror 액티브 싱크를 AFF 및 ASA 클러스터에서 지원합니다. 기본 클러스터와 보조 클러스터는 AFF, ASA 또는 ASA r2 중 하나와 같이 동일한 유형이어야 합니다. SnapMirror 액티브 싱크는 iSCSI 또는 FCP LUN 또는 NVMe 네임스페이스를 사용하는 애플리케이션을 보호합니다.</block>
-  <block id="348154fd51550a8f71c19a9b18df5efb" category="paragraph">SnapMirror SAN 워크로드용 액티브 동기화는 대칭 및 비대칭 구성을 모두 지원합니다. ONTAP 9.9.1 이상 버전에는 비대칭 구성에 대한 지원이 포함됩니다. 대칭 액티브/액티브 구성 지원은 ONTAP 9.15.1에서 도입되었습니다. 대칭 액티브/액티브 구성을 사용하면 보호된 LUN의 두 복사본 모두 양방향 동기 복제를 통해 읽기 및 쓰기 I/O 작업을 수행할 수 있으므로 각 LUN 복사본이 로컬 I/O 요청을 처리할 수 있습니다.</block>
-  <block id="58608286b6968850f25081c4f5eea9f7" category="paragraph">ONTAP 9.19.1 버전부터 SnapMirror 액티브 싱크는 AFF 클러스터(2노드만 해당) 또는 AFX 클러스터(4노드만 해당)에서 NFS(v3 및 v4)와 SMB(2.x 이상)를 사용하여 SVM 수준에서 NAS 워크로드를 지원하며, 기본 SVM에서만 읽기/쓰기 액세스가 가능합니다. 보조 SVM과 그 안에 포함된 볼륨은 NAS 프로토콜을 사용하여 액세스할 수 없지만, 보조 볼륨을 다른 SVM으로 복제하여 액세스할 수 있도록 할 수 있습니다.</block>
   <block id="824c46ae144bf5afb0a13bc43c30d5a3" category="list-text">SAN 구성의 경우 LUN, NVMe 네임스페이스, NVMe 서브시스템 또는 스토리지 유닛 ID가, NAS 구성의 경우 볼륨 ID가 동일하게 유지되므로 애플리케이션은 이를 공유 가상 장치로 인식합니다.</block>
   <block id="c82e8b966ad780d12c476d2b0e43bb10" category="paragraph">SnapMirror 액티브 싱크를 사용하면 SAN 구성에서 데이터 LUN 또는 NVMe 네임스페이스를, NAS 구성에서 볼륨을 보호할 수 있습니다. 이를 통해 재해 발생 시에도 애플리케이션이 투명하게 장애 조치를 수행하여 비즈니스 연속성을 유지할 수 있습니다. 자세한 내용은 <block ref="79ce5941e5b7bb2394ba273dfde172e6" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="881f46841ee4078d2b932e11fb7a9ecd" category="paragraph">SnapMirror active sync는 SAN 구성에서는 일관성 그룹을, NAS 구성에서는 SVM을 사용하여 데이터 복제를 보장합니다. SnapMirror active sync는 자동 장애 조치를 위해 ONTAP Mediator 또는 ONTAP 9.17.1부터는 Cloud Mediator를 사용하여 재해 발생 시에도 데이터가 제공되도록 합니다. SnapMirror active sync 배포를 계획할 때는 SnapMirror active sync의 핵심 개념과 아키텍처를 이해하는 것이 중요합니다.</block>
@@ -46936,16 +46927,10 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1f990bde91d50eb8299f0a17f616c39a" category="list-text">**균일 호스트 액세스**란 양쪽 사이트의 호스트가 양쪽 사이트의 스토리지 클러스터에 대한 모든 경로에 연결되어 있음을 의미합니다. 사이트 간 경로는 거리에 따라 확장됩니다. 균일 호스트 액세스는 SAN 구성에만 적용됩니다.</block>
   <block id="0bf1dd6029d1b2b9b365f9b551562e48" category="list-text">**비균일 호스트 액세스**란 각 사이트의 호스트가 동일 사이트의 클러스터에만 연결되는 것을 의미합니다. 사이트 간 경로 및 확장된 경로는 연결되지 않습니다.</block>
   <block id="1a6cbb969e68196d3057db336f5b3078" category="paragraph">SnapMirror 액티브 동기화에서 지원하는 클러스터 유형, 프로토콜 및 구성은 ONTAP 버전에 따라 다릅니다. 아래 표는 업데이트가 추가된 ONTAP 버전과 해당 업데이트를 지원하는 구성을 보여줍니다.</block>
-  <block id="fe79650e2c77e2ddda11d7f477ae67ae" category="cell">지원 기능을 추가합니다.</block>
-  <block id="86e27b845187a0322b029503640d503a" category="paragraph">NAS 프로토콜은 다음 클러스터 유형에서 지원됩니다.</block>
   <block id="37542bd6d2e6168f62baaf505cf2922d" category="list-text">VMware 호스트 워크로드용 NVMe</block>
-  <block id="029627c4b62d621a76585e810216b29c" category="list-text">ASA r2, 2노드 클러스터</block>
-  <block id="1399fe08b3d41fbfff650de6204922ed" category="list-text">대칭형 액티브/액티브 4노드 대 4노드 AFF 또는 ASA 클러스터</block>
   <block id="3998d5688dee6d1cf74b4dba585f31ec" category="paragraph">ONTAP 9.16.1 이상 버전에서는 대칭형 액티브/액티브 구성이 2노드 대 2노드 클러스터 외에도 4노드 대 4노드 클러스터를 지원합니다.</block>
   <block id="f24e3583758b1bd7b2a1d58aea5d7fbe" category="paragraph">ASA r2의 경우 2노드 대 2노드 클러스터만 지원됩니다.</block>
   <block id="2530176988617b04436f98372508070b" category="paragraph">다음 구성 유형:</block>
-  <block id="ef9d66aca1e0a98ea54dc4b0629df40d" category="paragraph">ONTAP 9.15.1에서는 대칭형 액티브/액티브 구성으로 2노드 클러스터를 지원합니다.</block>
-  <block id="447e5ee04fcff72f055ecdfc6ba40826" category="list-text">ASA(C-Series only)</block>
   <block id="ad882ed7a09c04a2c5479a54e76d01b8" category="paragraph">프로토콜:</block>
   <block id="5f5d62899ce3690a119bd2521466c574" category="paragraph">구성 유형:</block>
   <block id="5daab7ca4401f7058e61e5fd704b5010" category="list-text">비대칭 활성/활성</block>
@@ -48289,11 +48274,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8714e4dad62aa2068886c5c6f9682a1f" category="paragraph">ONTAP 시스템 간에 볼륨을 마이그레이션할 때 소스 볼륨이 대상 볼륨과 다른 데이터 압축 유형을 사용할 수 있습니다.</block>
   <block id="8eafd3c4d31d8fe5e7e57cd2ea1f3d16" category="paragraph">지원되는 압축 유형에는 보조 압축, 적응형 8K 압축 및 온도 감응형 스토리지(TSSE)가 있습니다. 마이그레이션 중에 이러한 압축 유형은 대상 볼륨에서 다음과 같이 일시적으로 공존할 수 있습니다.</block>
   <block id="fe8b2e5924acd48eefbf9fa274021f67" category="cell">마이그레이션을 위해 지원되는 공존</block>
-  <block id="5359bce7c5e136c8dca761661cc219f5" category="cell">애플리케이션 I/O 읽기/쓰기 크기</block>
-  <block id="ae77f6dec12df535271278209b397bbc" category="paragraph-title">2차 및 적응형 8k 압축에서 TSSE 압축으로의 마이그레이션</block>
-  <block id="53cff828016eb894199fb677ed876778" category="paragraph">볼륨을 보조 또는 적응형 8K 압축에서 TSSE 압축으로 마이그레이션한 후, 기존의 모든 블록이 변환된 후에도<block ref="df899f2d908ec33afe1d01ee26b3dd47" prefix=" " category="inline-code"></block> 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로 유지되고, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.</block>
   <block id="8da507d21afe5c07625ad95c77b98134" category="paragraph">보조 또는 적응형 8K 압축에서 변환된 볼륨에 기록된 새 데이터는 TSSE로 압축됩니다.</block>
-  <block id="b5156e0d72e33cdf926c06a6586a2870" category="paragraph-title">2차 압축에서 적응형 8k 압축으로의 마이그레이션</block>
   <block id="f973fe66cbf27daa823139ea1a1195e2" category="inline-link-macro">2차 압축과 적응형 압축 사이를 이동합니다</block>
   <block id="ab8fa4f8f86514969c699fc174e9a631" category="paragraph"><block ref="471c7baa6b3440cc5294ebd5e8ab9d96" category="inline-link-macro-rx"></block>하는 방법을 알아보십시오.</block>
   <block id="26bf73b85d79feb7830a5d867ba6cb42" category="section-title">값을 해석하는 방법</block>
@@ -48415,8 +48396,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="42125d571098ecba0452ca47fa8d4c65" category="cell">2차 압축 유형</block>
   <block id="dc46868b966b5b8e301d36d6843e2840" category="cell">TSSE/32k 인라인 압축 방식</block>
   <block id="45bd4b7bbd27c551316311993a130c47" category="cell">적응형 8k 압축 유형</block>
-  <block id="9d8e83ee866fae5ecce53f030c82804d" category="paragraph">보조 및 8k 적응형 볼륨은 마이그레이션 후 백그라운드 프로세스를 통해, 또는 마이그레이션 중 데이터가 대상 볼륨에 다시 기록될 때 QuickAssist Technology(QAT) 및 기타 지원되는 시스템을 위해 TSSE/32k 인라인 압축으로 점진적으로 변환됩니다.</block>
-  <block id="bd46ae9d08dcad369ebbd66a0510816e" category="paragraph">동일 볼륨에서 보조 8k 압축과 적응형 8k 압축을 동시에 사용하는 것은 지원되지 않습니다.</block>
   <block id="2a7c2239a9b856a983e9246f32587175" category="doc">MetroCluster IP 및 SnapMirror 활성 동기화를 위한 ONTAP Mediator에 대해 알아보십시오.</block>
   <block id="d579e2d2fbd0efbbbd9c45317b15f8a7" category="paragraph">ONTAP Mediator는 고가용성(HA) 메타데이터를 위한 영구적이고 격리된 저장소와 쿼럼 결정을 돕는 동기식 노드 상태 쿼리 기능을 제공하고 컨트롤러 활성 상태를 위한 핑 프록시 역할을 수행하여 SnapMirror 활성 동기화 및 MetroCluster IP를 지원합니다.</block>
   <block id="8b50bed86f101df37d16ed78d60ed284" category="paragraph">ONTAP Mediator는 ONTAP 클러스터와는 별도의 제3 장애 도메인에 있는 Linux 호스트에서 실행되며, HA 메타데이터를 위한 영구적이고 펜싱된 저장소를 제공합니다. ONTAP은 이 저장소와 Mediator의 노드 상태 조회 및 핑 프록시 기능을 사용하여 SnapMirror 활성 동기화 관계 및 MetroCluster IP 구성을 모니터링합니다.</block>
@@ -48440,4 +48419,56 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9aa82443628a5371ab66a68f70dd137e" category="inline-link-macro">ONTAP 미디에이터 지원 매트릭스</block>
   <block id="7e6a290665820579d2af227b3a901f88" category="list-text">지원되는 운영 체제를 실행하는 ONTAP Mediator용 Linux 서버 또는 가상 머신. <block ref="c7c871cb805813795c38601dac27bba4" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
   <block id="b151ce6ee193283dae20bdd39e6816a2" category="paragraph">ONTAP Mediator에 대한 자세한 내용은 <block ref="39ea6030e1c8935e7815be7b79f78ed1" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="44ae2d8e85ffe6eef3ec1c057bdb0470" category="doc">ONTAP 시스템으로 FC 패브릭을 구성하는 모범 사례에 대해 알아보십시오.</block>
+  <block id="fce945cba382392ade152933061f92ea" category="paragraph">FC 패브릭 구성 모범 사례를 따르면 패브릭 변경 중에 호스트 및 타겟의 성능, 신뢰성 및 안정성이 향상됩니다.</block>
+  <block id="8f664c35c5e75c7bf7fd62bb6a1435cc" category="list-title">권장 FC 패브릭 구성 모범 사례</block>
+  <block id="9d2dcc978c8571547ba2438b074c324e" category="list-text">*단일 개시자/단일 타겟(SI/ST) 조닝*</block>
+  <block id="b75affd491b8bb4a7015a6a78100aae7" category="paragraph">SI/ST 조닝은 패브릭 변경 중 지연 시간 급증을 줄이고, 크로스토크를 제거하며, 등록된 상태 변경 알림(RSCN)을 제한하고, 문제 해결을 간소화하며, 경로 수를 호스트 제한 내로 유지합니다.</block>
+  <block id="c189b8a32d3ab28e0792205acc332c2c" category="list-text">호스트 영향: SI/ST 조닝은 예측 가능한 MPIO 동작, 더 빠른 검색 및 전체 경로 다운(APD)/영구 장치 손실(PDL) 이벤트 감소를 보장합니다.</block>
+  <block id="d470b9df2daafacc6c46d8530847918e" category="list-text">타겟 영향: SI/ST 조닝은 로그인/로그아웃 이벤트를 줄이고 안정적인 FC 세션을 보장합니다.</block>
+  <block id="4344f97c392cf907176c76c3e4ba3b41" category="list-text">*대상 LIF WWPN(물리적 포트가 아님)을 사용하는 WWPN 기반 조닝*</block>
+  <block id="b0d0fa42527a900b1303f377e0c3de59" category="paragraph">WWPN 기반 구역 설정은 LIF 이동성, 인계/반환, 재구역 설정 없는 무중단 운영을 가능하게 하며 유지 보수 중 경로 재설정을 방지합니다.</block>
+  <block id="033a94f8d347d14bbf5efcb19ea65047" category="list-text">호스트 영향: WWPN 기반 영역 설정은 LIF 이동 또는 컨트롤러 장애 조치 중에 경로 손실이 발생하지 않도록 보장합니다.</block>
+  <block id="1fe68c6f3a69024c51f0fa266f8e7a4e" category="list-text">타겟 영향: WWPN 기반 조닝은 ONTAP이 타겟 LIF를 투명하게 이동할 수 있도록 보장합니다.</block>
+  <block id="6ae87307c1a38676ab62a28a75ddf7e8" category="list-text">*모든 FC 스위치에서 NPIV가 활성화됨*</block>
+  <block id="2fe65cdf4c68f91586c023468a7f9b2b" category="paragraph">패브릭에 연결된 모든 스위치는 NPIV를 지원하고 NPIV가 활성화되어 있어야 합니다. ONTAP은 FC 타겟을 표시하기 위해 N_Port ID 가상화(NPIV)를 사용합니다. NPIV가 없으면 타겟 LIF가 올바르게 로그인할 수 없습니다.</block>
+  <block id="6532681040f29564c256b291531c6137" category="list-text">호스트 영향: NPIV는 간헐적인 경로 끊김 및 장치 누락을 방지합니다.</block>
+  <block id="75cbdde6430a90d259599a6d8e436dfc" category="list-text">타겟 영향: NPIV는 타겟 LIF 가시성과 안정적인 FC 로그인을 보장합니다.</block>
+  <block id="4c11380ba88adbb4faa2de01be56a0dd" category="list-text">*완전히 격리된 이중 독립 패브릭*</block>
+  <block id="d95916bd66a927f48a981dba7afebaef" category="paragraph">이중 독립 패브릭은 두 개의 독립적인 물리적 스위치, 전원 공급 장치 및 케이블로 구성됩니다. 패브릭 A와 패브릭 B는 서로 연결되지 않습니다. 각 패브릭은 자체 FC 네임 서버, 영역 세트 및 도메인 ID를 유지합니다. 패브릭이 완전히 격리되어 있으므로 단일 장애 지점이 없습니다. 한 패브릭에서 무중단 유지 보수를 수행하는 동안 다른 패브릭은 계속 작동할 수 있습니다.</block>
+  <block id="1fa9b50b58d9305420b7b81b1c639ffe" category="list-text">호스트 영향: 두 개의 독립적인 패브릭은 패브릭 펌웨어 업그레이드 또는 장애 발생 시에도 지속적인 I/O를 지원합니다.</block>
+  <block id="664b899ccf5964415f216f833cc09244" category="list-text">대상 영향: 두 개의 독립적인 패브릭은 스위치 문제 발생 시에도 대상에 대한 이중화된 액세스를 유지합니다.</block>
+  <block id="16236fe54a898074a39bb873b5ddcbe1" category="list-text">*고정 FC 포트 속도(자동 협상 방지)*</block>
+  <block id="0b2358b67e1742b3af1d55944fcc8495" category="paragraph">자동 협상은 패브릭 재구축을 지연시키고, 속도 불일치를 유발하며, 재수렴 지연 및 링크 플랩을 초래할 수 있습니다.</block>
+  <block id="34beea46a2055616e4f9643d44ffb1e5" category="list-text">호스트 영향: 고정된 FC 포트 속도로 인해 링크 재설정 중 장애 시간이 단축됩니다.</block>
+  <block id="ec1abd377fbff314bcfa633a5d1d0e61" category="list-text">목표 영향: FC 포트 속도 고정으로 노드 또는 스위치 이벤트 발생 후 포트 활성화 속도가 향상됩니다.</block>
+  <block id="cffc61f9cdf0143a45b50c3d3edf1955" category="list-text">*NetApp 상호 운용성 매트릭스 툴(IMT)에서 검증된 구성(HBA, 드라이버, 펌웨어, 스위치)을 엄격히 준수해야 합니다.*</block>
+  <block id="471ff51c89daf6e35e8e2b5111039744" category="inline-link">NetApp IMT</block>
+  <block id="7629c8994da51eda0b6bb748a7ab8445" category="paragraph"><block ref="64e81a5b6626d64e2d26cc13a3a3a4e0" category="inline-link-rx"></block>에서 검증된 구성을 엄격히 준수하면 예상되는 지연 시간과 처리량을 유지할 수 있습니다.</block>
+  <block id="27c85e34a75d84d5b21bd0132a25d463" category="list-text">호스트 영향: IMT 검증을 거친 구성을 사용하면 원인을 알 수 없는 I/O 오류 및 시간 초과를 방지할 수 있습니다.</block>
+  <block id="f38283a88bb43457b9479409bc49cba4" category="list-text">목표 영향: IMT 검증을 거친 구성을 사용하면 프로토콜 수준의 비호환성을 방지할 수 있습니다.</block>
+  <block id="a30d88e4a7b01bfc359475ab2073c046" category="list-text">*FC 오류 카운터(CRC, 동기화 손실, RECV_ERROR)에 대한 사전 모니터링*</block>
+  <block id="74df6b7cf0e00e040bf84d6d2934a670" category="paragraph">패브릭 오류는 ONTAP 스토리지 카운터가 감지하기 전에 호스트 측 지연 시간 또는 I/O 오류로 나타나는 경우가 많습니다. FC 오류 횟수를 사전에 모니터링하면 지속적인 지연 시간 증가를 방지할 수 있습니다.</block>
+  <block id="27cbca49ffef8c08d5710f3b1b432cc2" category="list-text">호스트 영향: 사전 예방적 모니터링을 통해 조기에 문제를 감지하고 호스트 I/O 재시도 및 애플리케이션 중단을 방지할 수 있습니다.</block>
+  <block id="6e201494639513b905d0f4c971cb3baf" category="list-text">목표 효과: 사전 예방적 모니터링을 통해 패브릭 문제를 스토리지 문제로 잘못 판단하는 것을 방지합니다.</block>
+  <block id="c55f09a90b97439a546460b79b364d97" category="list-text">*SAN 트래픽에 대한 ISL(Inter-Switch Link) 초과 할당을 피하십시오.*</block>
+  <block id="7d941d4edaf966f4822f22d9be568437" category="paragraph">혼잡한 ISL은 크레딧 고갈 및 슬로우 드레인 현상을 유발합니다.</block>
+  <block id="383b233cff1ed297b1624c038149afa8" category="list-text">호스트 영향: ISL 초과 할당을 방지하면 호스트 I/O 대기 시간과 큐잉이 줄어듭니다.</block>
+  <block id="4367e3da233dc1886e9769159229496c" category="list-text">목표 영향: ISL 초과 할당을 방지하면 ONTAP FC 포트로의 역압력을 예방합니다.</block>
+  <block id="15035ddac89e2e38b2303a29677ada6e" category="paragraph"><block ref="bca48fe9c2aef9d1a815623bb9f5e7cd" category="inline-link-rx"></block>.</block>
+  <block id="755a57b843ea9ebcaecf6471ba992ec6" category="paragraph">SnapMirror 액티브 싱크는 AFF, ASA 및 ASA r2 클러스터에서 지원됩니다. 기본 클러스터와 보조 클러스터는 AFF, ASA 또는 ASA r2와 같이 동일한 유형이어야 합니다. SnapMirror 액티브 싱크는 iSCSI 또는 FCP LUN이나 NVMe 네임스페이스를 사용하는 애플리케이션을 보호합니다.</block>
+  <block id="40495a76730fd45f58d7e051f18f188f" category="cell">SnapMirror 액티브 싱크는 다음을 지원합니다</block>
+  <block id="d2f09f414f8e7555a9337a2f772a6271" category="paragraph">SVM 수준의 NAS 워크로드</block>
+  <block id="b8c3f81e4df213f9094d9f972be95a3d" category="list-text">지원 프로토콜: NFS(v3 및 v4) 및 SMB(2.x 이상)</block>
+  <block id="cefb4108023ef8cf26d9da1bdc0a81c0" category="list-text">지원되는 클러스터 유형: AFF(2노드만 해당) 또는 AFX(4노드만 해당)</block>
+  <block id="1c320208dc3c8d784e918dcf3f824989" category="list-text">기본 시스템에서만 읽기/쓰기 액세스가 지원됩니다. 보조 SVM 및 그 안에 포함된 볼륨은 NAS 프로토콜을 사용하여 액세스할 수 없지만, 보조 볼륨을 다른 SVM으로 클론하여 액세스할 수 있도록 할 수 있습니다.</block>
+  <block id="2fbcbf55a77cfbec2371a076542240c4" category="list-text">ASA r2, 2노드 클러스터 전용</block>
+  <block id="1ec0f3c34209bf408493583c577959c9" category="list-text">AFF 및 ASA 대칭형 액티브/액티브 4노드 대 4노드 클러스터</block>
+  <block id="f1f3a4f8e6a8244eb94223e671919876" category="list-text">2노드 클러스터에서만 대칭형 액티브/액티브 구성</block>
+  <block id="f6d6ddcf181b8dd02b70b2d906028914" category="paragraph">대칭형 액티브/액티브 구성은 보호된 LUN의 두 복사본 모두 양방향 동기 복제를 통해 읽기 및 쓰기 I/O 작업을 수행할 수 있도록 하여 각 LUN 복사본이 로컬 I/O 요청을 처리할 수 있게 합니다.</block>
+  <block id="6eccfd4081481b23b5e66b84ed849bd1" category="paragraph">시스템 * AFF * ASA (C-Series 전용)</block>
+  <block id="6cf4a5df597b65d5d20b748edd327a3b" category="list-text">FC (프런트엔드 지원만 해당)</block>
+  <block id="0f889ee0735b0b34952216c72c7c78a3" category="cell">대상 볼륨의 애플리케이션 I/O 읽기/쓰기 크기</block>
+  <block id="6f3fafe5563a57f1739c834a53b1d697" category="paragraph">압축 유형을 보조 또는 적응형 8K 압축에서 TSSE/32k 인라인 압축으로 변경한 후, 기존의 모든 블록이 변환된 후에도 <block ref="df899f2d908ec33afe1d01ee26b3dd47" prefix=" " category="inline-code"></block> 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.</block>
+  <block id="24a8e5faf96472b870b9de12bc1825a1" category="sidebar">FC 패브릭 구성 모범 사례</block>
 </blocks>
