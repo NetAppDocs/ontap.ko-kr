@@ -48471,4 +48471,8 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="0f889ee0735b0b34952216c72c7c78a3" category="cell">대상 볼륨의 애플리케이션 I/O 읽기/쓰기 크기</block>
   <block id="6f3fafe5563a57f1739c834a53b1d697" category="paragraph">압축 유형을 보조 또는 적응형 8K 압축에서 TSSE/32k 인라인 압축으로 변경한 후, 기존의 모든 블록이 변환된 후에도 <block ref="df899f2d908ec33afe1d01ee26b3dd47" prefix=" " category="inline-code"></block> 명령 출력에 표시되는 *압축 유형*은 변경되지 않습니다. 변환된 보조 볼륨의 경우 압축 유형은 *보조*로, 변환된 적응형 8K 볼륨의 경우 압축 유형은 *적응형*으로 유지됩니다.</block>
   <block id="24a8e5faf96472b870b9de12bc1825a1" category="sidebar">FC 패브릭 구성 모범 사례</block>
+  <block id="78b2a18c703121a848fffa9c06111679" category="paragraph-title">FlexGroup 고급 용량 밸런싱을 사용하는 동안 FlexCache 쓰기 저장을 활성화할 수 있습니까?</block>
+  <block id="9a3edd06c938bde47dd7536de9b84a48" category="paragraph">아니요. 동일한 볼륨에 FlexGroup 고급 용량 밸런싱이 활성화되어 있는 경우 FlexCache 쓰기 저장을 사용할 수 없습니다. 고급 용량 밸런싱은 모든 볼륨에 대해 기본적으로 활성화되어 있으므로, FlexCache 쓰기 저장을 활성화하려면 먼저 "-granular-data" 옵션을 사용하여 비활성화해야 합니다.</block>
+  <block id="fbc9f042be20d6f88203bb0f378bb674" category="paragraph">기존 SMB 서버를 삭제하지 않고 Active Directory 도메인에 가입할 경우, SID, SPN 또는 트러스트 관계 등 잔여 계정 속성이나 불완전한 초기화로 인해 *위치* 창에 도메인 이름이 표시되지 않는 문제가 발생할 수 있습니다.</block>
+  <block id="0cf91a61d3d6e4457b402eac949f5ea2" category="paragraph">이 문제가 발생하는 경우 Active Directory 도메인에서 기존 SMB 서버를 삭제한 다음 도메인에 다시 가입하십시오.</block>
 </blocks>
