@@ -39,7 +39,7 @@ Upgrade Health Checker는 규모가 크거나 복잡한 환경, 인터넷 액세
 
 * 수동 준비
 +
-Upgrade Advisor 또는 Upgrade Health Checker 도구를 사용하지 않는 경우 link:prepare.html["수동으로 업그레이드 준비"]. 수동 준비에는 알려진 문제나 차단 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위한 여러 작업이 포함됩니다.
+Upgrade Advisor 또는 Upgrade Health Checker 툴을 사용하지 않는 경우 link:prepare.html["수동으로 업그레이드 준비"]해야 합니다. 수동 준비에는 알려진 문제나 차단 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위한 여러 작업을 완료해야 합니다.
 
 +
 자세한 내용은 link:prepare.html["수동 업그레이드 준비"^]을 참조하십시오.

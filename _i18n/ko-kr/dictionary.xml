@@ -27813,7 +27813,6 @@ utf8mb4 지원을 위해 SVM을 업데이트할 수 있지만 기존 볼륨에 �
   <block id="b56867bb5a157d4c5cbd45f502dce441" category="paragraph">기술 지원</block>
   <block id="b9b99311cd2a2bb8925fccd1c03d38d3" category="paragraph">근본 원인 분석</block>
   <block id="a433491371c9007f5865b28186ce3b97" category="paragraph">소프트웨어 다운로드</block>
-  <block id="9da7a267a32c995fe25d221c9f883002" category="paragraph">서비스 업데이트(패치 릴리스 [P-releases])</block>
   <block id="061876849d9a2582bd7a4e76ad564c38" category="paragraph">취약점에 대한 경고</block>
   <block id="8c77add75cf6accff0678fe4ea42ddfa" category="inline-link-macro">ONTAP 소프트웨어 버전 지원</block>
   <block id="1273a6a83756d9079183e34f57a6c925" category="inline-link-macro">ONTAP 릴리스 모델</block>
@@ -44754,7 +44753,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="bef3df2d624dc29af921eba979fcb986" category="paragraph">자세한 내용은 <block ref="a9833d792b38432449d3d4d3c3a6b8db" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="11f1922706a882609f1811f30f7f4edb" category="list-text">수동 준비</block>
   <block id="0d7db2fde5fae616bf544f068cc7e6a7" category="inline-link-macro">수동으로 업그레이드 준비</block>
-  <block id="6adcab3dd9f95faddc7b8ade50425842" category="paragraph">Upgrade Advisor 또는 Upgrade Health Checker 도구를 사용하지 않는 경우 <block ref="f84087b04f07deaddaac4e3a5a829088" category="inline-link-macro-rx"></block>. 수동 준비에는 알려진 문제나 차단 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위한 여러 작업이 포함됩니다.</block>
   <block id="d607ef40bcdabae66c184877bae761b7" category="inline-link-macro">수동 업그레이드 준비</block>
   <block id="c93ac32cf7a4bdff8f34118a474e7ddc" category="paragraph">자세한 내용은 <block ref="519880790d25d44298eac516adfdcd1f" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="80b54ef29896edbedf7abd966b047bbd" category="paragraph">수동으로 업그레이드를 준비하는 경우, 알려진 문제나 장애 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위해 여러 작업을 완료해야 합니다. 예를 들어, 클러스터에서 SSL FIPS 모드가 활성화되어 있고 관리자 계정이 인증에 SSH 공개 키를 사용하는 경우, 대상 ONTAP 릴리스에서 호스트 키 알고리즘이 지원되는지 확인해야 합니다.</block>
@@ -48475,4 +48473,9 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9a3edd06c938bde47dd7536de9b84a48" category="paragraph">아니요. 동일한 볼륨에 FlexGroup 고급 용량 밸런싱이 활성화되어 있는 경우 FlexCache 쓰기 저장을 사용할 수 없습니다. 고급 용량 밸런싱은 모든 볼륨에 대해 기본적으로 활성화되어 있으므로, FlexCache 쓰기 저장을 활성화하려면 먼저 "-granular-data" 옵션을 사용하여 비활성화해야 합니다.</block>
   <block id="fbc9f042be20d6f88203bb0f378bb674" category="paragraph">기존 SMB 서버를 삭제하지 않고 Active Directory 도메인에 가입할 경우, SID, SPN 또는 트러스트 관계 등 잔여 계정 속성이나 불완전한 초기화로 인해 *위치* 창에 도메인 이름이 표시되지 않는 문제가 발생할 수 있습니다.</block>
   <block id="0cf91a61d3d6e4457b402eac949f5ea2" category="paragraph">이 문제가 발생하는 경우 Active Directory 도메인에서 기존 SMB 서버를 삭제한 다음 도메인에 다시 가입하십시오.</block>
+  <block id="fb99952871f067c555b4aa4cdc33f163" category="paragraph">서비스 업데이트(패치 릴리스[P-릴리스]) 및 HotFix 릴리스</block>
+  <block id="a13538c7f2d8fe2e886c0f0958a7477b" category="paragraph">Upgrade Advisor 또는 Upgrade Health Checker 툴을 사용하지 않는 경우 <block ref="f84087b04f07deaddaac4e3a5a829088" category="inline-link-macro-rx"></block>해야 합니다. 수동 준비에는 알려진 문제나 차단 요소를 확인하고 클러스터가 업그레이드에 필요한 요구 사항을 충족하는지 확인하기 위한 여러 작업을 완료해야 합니다.</block>
+  <block id="38ee55d5b669748055ecf402bc413600" category="section-title">ONTAP HotFix 업그레이드</block>
+  <block id="642d96f0cde3ee795370d1fb85613176" category="inline-link-macro">ONTAP HotFix 릴리스</block>
+  <block id="4f1c83437ecbd776b1a3e79d2ad51521" category="paragraph">HotFix 업그레이드는 광범위한 고객에게 적용 가능한 시급한 문제 해결을 제공합니다. NetApp 지원 사이트에서 <block ref="c2db4e5efcbf7c2449779e7d85eda844" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
 </blocks>

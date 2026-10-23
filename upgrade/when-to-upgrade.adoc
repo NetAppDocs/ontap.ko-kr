@@ -39,6 +39,13 @@ summary: 정기적으로 ONTAP를 업그레이드합니다. 업그레이드를 �
 
 
 
+[[ontap-hotfix-upgrades]]
+== ONTAP HotFix 업그레이드
+
+HotFix 업그레이드는 광범위한 고객에게 적용 가능한 시급한 문제 해결을 제공합니다. NetApp 지원 사이트에서 link:https://mysupport.netapp.com/site/info/ontap-release-model#definition["ONTAP HotFix 릴리스"^]에 대해 자세히 알아보십시오.
+
+
+
 [[ontap-release-dates]]
 == ONTAP 릴리즈 날짜
 
@@ -240,7 +247,7 @@ NOTE: 9.10.1 이전 버전의 ONTAP를 실행하는 경우 제한된 지원 또�
 
 
  a| 
-서비스 업데이트(패치 릴리스 [P-releases])
+서비스 업데이트(패치 릴리스[P-릴리스]) 및 HotFix 릴리스
  a| 
 예
  a| 
