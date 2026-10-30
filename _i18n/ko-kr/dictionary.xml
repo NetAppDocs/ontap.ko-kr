@@ -8034,14 +8034,9 @@
   <block id="86554767e9874406e845da28cd086b0b" category="paragraph">LIF는 다양한 포트 유형을 지원하는 다양한 특성을 가질 수 있습니다.</block>
   <block id="ad678c0f71ca384bc3202876203e73d2" category="admonition">인터클러스터 및 관리 LIF가 동일한 서브넷에 구성된 경우 관리 트래픽이 외부 방화벽에 의해 차단될 수 있으며 AutoSupport 및 NTP 연결이 실패할 수 있습니다. 'network interface modify -vserver_vserver name_-lif_인터클러스터 LIF_-status-admin up|down' 명령을 실행하여 인터클러스터 LIF를 전환하여 시스템을 복구할 수 있습니다. 그러나 이 문제를 방지하려면 인터클러스터 LIF 및 관리 LIF를 다른 서브넷에 설정해야 합니다.</block>
   <block id="95416f2c916dabe21f738406546ebc53" category="cell">LIF</block>
-  <block id="72618f91e0500b0de0f483f4ac9372c7" category="cell">스토리지 가상 시스템(SVM)과 연결되고 클라이언트와 통신하는 데 사용되는 LIF 한 포트에 여러 개의 데이터 LIF가 존재할 수 있습니다. 이러한 인터페이스는 전체 클러스터에서 마이그레이션하거나 페일오버할 수 있습니다. 방화벽 정책을 관리 LIF로 수정하여 SVM 관리 LIF로 사용할 수 있습니다. NIS, LDAP, Active Directory, WINS 및 DNS 서버에 설정된 세션에서 데이터 LIF를 사용합니다.</block>
   <block id="aff7b3c6a1a82a339ee68a62e5bf859e" category="cell">클러스터 LIF</block>
-  <block id="bb6b3eeeeea530b9d443139aa98bab5b" category="cell">클러스터 내 노드 간에 클러스터 간 트래픽을 전송하는 데 사용되는 LIF. 클러스터 LIF는 항상 클러스터 포트에 생성해야 합니다. 클러스터 LIF는 동일한 노드의 클러스터 포트 간에 페일오버할 수 있으며 원격 노드로 마이그레이션하거나 페일오버할 수 없습니다. 새 노드가 클러스터에 연결되면 IP 주소가 자동으로 생성됩니다. 그러나 IP 주소를 클러스터 LIF에 수동으로 할당하려면 새 IP 주소가 기존 클러스터 LIF와 동일한 서브넷 범위에 있어야 합니다.</block>
   <block id="15a4d902a9e2eeb56724bdb94f9d1977" category="cell">클러스터 관리 LIF</block>
-  <block id="fdb61a9372481ce365c4df0d03c756b9" category="cell">LIF는 전체 클러스터에 대한 단일 관리 인터페이스를 제공합니다. 클러스터 관리 LIF는 클러스터의 모든 노드로 페일오버할 수 있습니다. 클러스터 또는 인터클러스터 포트로 페일오버할 수 없습니다</block>
-  <block id="c46b415b735a844431face26e3dd78c5" category="cell">클러스터 간 통신, 백업 및 복제에 사용되는 LIF. 클러스터 피어링을 설정하려면 먼저 클러스터의 각 노드에 대한 인터클러스터 LIF를 생성해야 합니다. 이러한 LIF는 동일한 노드의 포트로만 페일오버할 수 있습니다. 클러스터의 다른 노드로 마이그레이션하거나 페일오버할 수 없습니다.</block>
   <block id="e2578ec54f85b5b6333c94364b756a1c" category="cell">노드 관리 LIF</block>
-  <block id="cc6ff18647a66c1d43119d8291d3ab95" category="cell">LIF는 클러스터의 특정 노드를 관리하기 위한 전용 IP 주소를 제공합니다. 노드 관리 LIF는 클러스터를 생성하거나 결합할 때 생성됩니다. 이러한 LIF는 클러스터에서 노드에 액세스할 수 없을 때와 같이 시스템 유지 관리에 사용됩니다.</block>
   <block id="960e2e9197894ba266cc974be53f97d7" category="cell">VIP LIF</block>
   <block id="ea0bd843613a20eb803001b279246689" category="doc">LIF의 방화벽 정책을 구성합니다</block>
   <block id="5e0dd32aa29f514ea688b10a045aa695" category="paragraph">방화벽을 설정하면 클러스터의 보안이 강화되고 스토리지 시스템에 대한 무단 액세스가 방지됩니다. 기본적으로 온보드 방화벽은 데이터, 관리 및 인터클러스터 LIF에 대한 특정 IP 서비스 세트에 대한 원격 액세스를 허용하도록 구성됩니다.</block>
@@ -14835,7 +14830,6 @@
   <block id="1a3b47e05c52d70692f3aeea791abedf" category="paragraph">다음 명령을 실행하면 다음 구성을 가진 ""VS1"" SVM에 대한 엑스포트 규칙이 생성됩니다.</block>
   <block id="99342b4007817ecf2e8edd3907e5bdbe" category="list-text">정책 이름: cifsnfs1</block>
   <block id="2de6a4e9afb046a5ad3aaddd3ccb5f2b" category="list-text">색인 번호: 2</block>
-  <block id="a42ab0ecd3880c39bd388d43fd452a4c" category="list-text">클라이언트 일치: 모든 클라이언트를 일치시킵니다</block>
   <block id="5b6920bd8e42096359ec24ecc98f145e" category="list-text">프로토콜: SMB 및 NFS 액세스</block>
   <block id="f1e397e7572336e42279b12ef246b1eb" category="list-text">읽기 전용 액세스: 모든 클라이언트에 대해</block>
   <block id="f5bf8db4c3beef3c0df8e4079abaeedc" category="list-text">읽기-쓰기 액세스: Kerberos(NFS 및 SMB) 또는 NTLM 인증(SMB)을 사용하는 클라이언트에 대한 액세스</block>
@@ -35675,7 +35669,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="aaa0926959481a380c623250cf7aee17" category="inline-link">ONTAP REST API의 새로운 기능</block>
   <block id="b8e07ee130842c6360c09fb9da1746c1" category="inline-link">IPsec 끝점</block>
   <block id="fcbc078b41f8ea4c4bb53a099d48993e" category="paragraph">를 비롯한 ONTAP REST API에 대한 자세한 내용은 ONTAP 자동화 설명서 를<block ref="5a62402f4eb0a1dd8bfdfac5725ef9cf" category="inline-link-rx"></block> 참조하십시오. 에 대한 자세한 내용은 ONTAP 자동화 설명서를 검토해야<block ref="40b8bcff9d85e29d4dcf335573374556" category="inline-link-rx"></block> 합니다.</block>
-  <block id="1e95f2bb91366d9573942dc324e74c11" category="cell">VIP LIF는 VIP 포트에 생성된 모든 데이터 LIF입니다. 자세한 내용은 을 참조하십시오<block ref="a7179264dd2f35ea2c150b71a7246696" category="inline-link-macro-rx"></block>.</block>
   <block id="6307629bef173bd4931a102051e87648" category="paragraph"><block ref="6307629bef173bd4931a102051e87648" category="inline-xref-macro-rx"></block></block>
   <block id="88cd898c2db92154a58676708297e658" category="paragraph"><block ref="88cd898c2db92154a58676708297e658" category="inline-link-macro-rx"></block></block>
   <block id="5bfe513c35c2c46da7880888a3308666" category="paragraph">자세한 내용은 을<block ref="c528a3b8fe5bcb93f8e90074cd8523d7" category="inline-link-rx"></block>참조하십시오.</block>
@@ -48478,4 +48471,31 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="38ee55d5b669748055ecf402bc413600" category="section-title">ONTAP HotFix 업그레이드</block>
   <block id="642d96f0cde3ee795370d1fb85613176" category="inline-link-macro">ONTAP HotFix 릴리스</block>
   <block id="4f1c83437ecbd776b1a3e79d2ad51521" category="paragraph">HotFix 업그레이드는 광범위한 고객에게 적용 가능한 시급한 문제 해결을 제공합니다. NetApp 지원 사이트에서 <block ref="c2db4e5efcbf7c2449779e7d85eda844" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="684e04e9cef22aa87cd0a0af7e6c586e" category="list-text">HTTP 애플리케이션용 사용자 계정을 생성하고 <block ref="a00c50b90749f90a36742b8673eb5362" prefix=" " category="inline-code"></block> 및 <block ref="988c1fa850a7f28af6d297a4fcaf635f" prefix=" " category="inline-code"></block> REST API에 대한 (최소한 읽기 전용) 액세스 권한이 있는 역할을 할당했는지 확인하십시오.</block>
+  <block id="a5da7f8871afd7d4a18d1254d6800bc7" category="paragraph">LIFs는 다양한 포트 유형을 지원하기 위해 서로 다른 특성을 가질 수 있습니다. LIFs는 IPspace 내의 물리적 포트 또는 논리적 포트에 호스팅될 수 있습니다. 각 포트는 하나의 IPspace에만 연결됩니다.</block>
+  <block id="97af8eedbbce18dd0aa0ce556efa9b57" category="paragraph">다음 표는 LIF 유형, 호환 포트 유형 및 장애 조치 또는 마이그레이션 동작을 요약합니다.</block>
+  <block id="07ea719175e49a5b50c51d409da3bab8" category="paragraph">클러스터 내 노드 간에 클러스터 내부 트래픽을 전달하는 데 사용되는 LIF입니다.</block>
+  <block id="447347484d40e37f2d951a4d4063e049" category="list-text">클러스터 LIF는 항상 클러스터 포트에 생성해야 합니다.</block>
+  <block id="4f9507943fe3b0522a0fc4fbe61066e4" category="list-text">클러스터 LIF는 동일 노드 내의 클러스터 포트 간에 페일오버될 수 있지만, 원격 노드로 마이그레이션하거나 페일오버할 수는 없습니다. 새 노드가 클러스터에 참여하면 IP 주소가 자동으로 생성됩니다. 하지만 클러스터 LIF에 IP 주소를 수동으로 할당하려면 새 IP 주소가 기존 클러스터 LIF와 동일한 서브넷 범위에 있어야 합니다.</block>
+  <block id="2fc430e6e712c74fd7f804f31aade34a" category="paragraph">클러스터 전체에 대한 단일 관리 인터페이스를 제공하는 LIF입니다.</block>
+  <block id="18c28c1c9746503204502a53c92fa2fe" category="list-text">클러스터 관리 LIF는 클러스터 내의 모든 노드로 페일오버할 수 있습니다. 클러스터 포트 또는 클러스터 간 포트로는 페일오버할 수 없습니다.</block>
+  <block id="319ae8b892b82f44da56a16cc9fc7cd0" category="paragraph">스토리지 가상 머신(SVM)과 연결되어 클라이언트와의 통신에 사용되는 LIF입니다.</block>
+  <block id="a4acbf82bc139c31fa2ac5fd01223892" category="list-text">각 SVM은 특정 IPspace와 연결됩니다. 데이터 SVM은 일반적으로 "기본" IPspace에 있지만 반드시 그런 것은 아닙니다.</block>
+  <block id="0f3854f5c216d866a8eb1b9c3315d0cb" category="list-text">하나의 포트에 여러 개의 데이터 LIF를 호스팅할 수 있습니다. 이러한 데이터 LIF는 클러스터 전체에서 마이그레이션 또는 장애 조치를 수행할 수 있습니다. 방화벽 정책을 mgmt로 수정하여 데이터 LIF를 SVM 관리 LIF로 사용할 수 있도록 변경할 수 있습니다.</block>
+  <block id="ed1e22b945e8ed5a5e80c33a31c83d67" category="list-text">NIS, LDAP, Active Directory, WINS 및 DNS 서버와의 세션 설정에는 데이터 LIF가 사용됩니다.</block>
+  <block id="c037744dd0c66542ca8f02335fc7c191" category="paragraph">클러스터 간 통신, 백업 및 복제에 사용되는 LIF입니다.</block>
+  <block id="753de00e46785c430041d2e8a1a90246" category="list-text">클러스터 피어링 관계를 설정하기 전에 클러스터의 각 노드에 클러스터 간 LIF를 생성해야 합니다. 이러한 LIF는 동일한 노드의 포트로만 페일오버할 수 있습니다. 클러스터 내의 다른 노드로 마이그레이션하거나 페일오버할 수 없습니다.</block>
+  <block id="91ba88e95aece1ac89b4efb40f3e5142" category="paragraph">클러스터 내 특정 노드를 관리하기 위한 전용 IP 주소를 제공하는 LIF입니다.</block>
+  <block id="442193c860accf7bfc6d81cf776095ad" category="list-text">노드 관리 LIF는 클러스터 생성 또는 참여 시점에 생성됩니다. 이러한 LIF는 시스템 유지 관리, 예를 들어 노드가 클러스터에서 접근할 수 없게 된 경우에 사용됩니다.</block>
+  <block id="a954bd55e944d7b65a02512356ab0177" category="cell">SVM 관리 LIF</block>
+  <block id="7eb3c16096c2ff1a72285c7cde8fd9b2" category="paragraph">SVM에 대한 관리 연결을 제공하여 해당 SVM에 대한 관리 작업(대개 443번 포트를 통해) 및 관리 관련 서비스를 가능하게 하는 LIF입니다.</block>
+  <block id="6215b5b3d2f4e21d87f5002aba1ca95d" category="list-text">각 SVM은 특정 IPspace와 연결됩니다.</block>
+  <block id="2769f5bd1ca10159de28b7eef534b0dc" category="list-text">LIF는 페일오버 정책에 따라 다른 노드 또는 포트로 마이그레이션하거나 페일오버할 수 있습니다.</block>
+  <block id="fbd43e1e8d072e6a1db09a56473d4502" category="list-text">하나의 포트에 여러 개의 SVM 관리 LIF를 호스팅할 수 있습니다.</block>
+  <block id="e58a631048eac29af1a79b2be34cb8fc" category="list-text">SVM 관리 LIF는 멀티 테넌시(multi-tenancy) 환경에서 호스팅할 때 유용합니다.</block>
+  <block id="975479f5c675274676df2cf5a669d2e6" category="paragraph">가상 IP(VIP) LIF는 VIP 포트에서 생성된 모든 데이터 LIF입니다.</block>
+  <block id="aa588eb58d9238ea17a606d1c7c85a8c" category="paragraph">자세한 내용은 <block ref="a7179264dd2f35ea2c150b71a7246696" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="f67cbf9fe6ab6c46bd55d283d7e7847b" category="list-text"><block ref="f67cbf9fe6ab6c46bd55d283d7e7847b" category="inline-link-macro-rx"></block></block>
+  <block id="22182403b887cf7ca5c8e3e1dedb336a" category="list-text"><block ref="22182403b887cf7ca5c8e3e1dedb336a" category="inline-link-macro-rx"></block></block>
+  <block id="55b55918fbe4abda28fb1e2d711c035e" category="cell">LIF는 HA 파트너가 아닌 다른 노드로 페일오버됩니다.</block>
 </blocks>
