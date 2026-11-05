@@ -31,6 +31,10 @@ ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock S
 
 .변조 방지 스냅샷에서 지원되는 기능
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-worm-snaplock.html["Cloud Volumes ONTAP"^]
+* FlexCache 원본 볼륨
++
+ONTAP 9.16.1부터 지원됩니다.
+
 * FlexGroup 볼륨
 +
 스냅샷 잠금은 FlexGroup 볼륨에 대해 지원됩니다. 스냅샷 잠금은 루트 구성 요소 스냅샷에서만 발생합니다. FlexGroup 볼륨은 루트 구성 요소 만료 시간이 경과한 경우에만 삭제할 수 있습니다.
@@ -39,15 +43,23 @@ ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock S
 +
 잠긴 스냅샷이 있는 FlexVol volume를 FlexGroup 볼륨으로 변환할 수 있습니다. 변환 후에도 스냅샷은 잠긴 상태로 유지됩니다.
 
+* SnapMirror NAS용 활성 동기화
++
+ONTAP 9.20.1부터 SVM 수준 관계의 SnapMirror 액티브 싱크 NAS FlexVol 볼륨에 변조 방지 스냅샷을 생성할 수 있습니다.
+
 * SnapMirror 비동기
 +
 소스와 대상 모두에서 컴플라이언스 클록을 초기화해야 합니다.
+
+* 를 사용하는 SnapMirror 정책 규칙입니다 `-schedule` 매개 변수
+* SnapMirror 동기식
++
+ONTAP 9.19.1부터 스냅샷 생성 중에만 만료 시간을 지정할 수 있습니다. 기존 스냅샷에 대해 만료 시간을 설정하거나 연장할 수 없습니다.
 
 * SVM 데이터 이동성(소스 클러스터에서 타겟 클러스터로 SVM을 마이그레이션 또는 재배치하는 데 사용)
 +
 ONTAP 9.14.1부터 지원됩니다.
 
-* 를 사용하는 SnapMirror 정책 규칙입니다 `-schedule` 매개 변수
 * SVM DR
 +
 소스와 대상 모두에서 컴플라이언스 클록을 초기화해야 합니다.
@@ -55,14 +67,6 @@ ONTAP 9.14.1부터 지원됩니다.
 * 볼륨 클론 및 파일 클론
 +
 잠긴 스냅샷에서 볼륨 클론 및 파일 클론을 생성할 수 있습니다.
-
-* FlexCache 원본 볼륨
-+
-ONTAP 9.16.1부터 지원됩니다.
-
-* SnapMirror 동기식
-+
-ONTAP 9.19.1부터 스냅샷 생성 중에만 만료 시간을 지정할 수 있습니다. 기존 스냅샷에 대해 만료 시간을 설정하거나 연장할 수 없습니다.
 
 
 
@@ -75,7 +79,7 @@ ONTAP 9.19.1부터 스냅샷 생성 중에만 만료 시간을 지정할 수 있
 변조 방지 스냅샷은 삭제할 수 없는 변경 불가능한 보호를 제공합니다. FabricPool에는 데이터 삭제 기능이 필요하므로 동일한 볼륨에서 FabricPool 및 스냅샷 잠금을 활성화할 수 없습니다.
 
 * SMTape
-* SnapMirror 활성 동기화
+* SnapMirror SAN용 활성 동기화
 
 
 

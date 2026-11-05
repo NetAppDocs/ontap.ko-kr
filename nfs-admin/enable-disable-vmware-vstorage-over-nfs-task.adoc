@@ -11,15 +11,17 @@ summary: vserver nfs modify 명령을 사용하면 스토리지 가상 머신에
 
 
 [role="lead"]
-"vserver NFS modify" 명령을 사용하여 SVM(스토리지 가상 머신)에서 VMware vStorage over NFS에 대한 지원을 설정하거나 해제할 수 있습니다.
+ `vserver nfs modify` 명령을 사용하여 스토리지 가상 머신(SVM)에서 NFS를 통한 VMware vStorage 지원을 활성화 또는 비활성화할 수 있습니다. 이 설정은 복사 오프로드 및 공간 예약 등 NFS를 통한 VMware VAAI 작업을 제어합니다.
 
 .이 작업에 대해
 기본적으로 VMware vStorage over NFS에 대한 지원은 비활성화되어 있습니다.
 
+ONTAP 9.20.1부터 ONTAP NFS를 통해 VMware vStorage를 활성화하면 씬 프로비저닝된 NFSv3 및 NFSv4.1 데이터스토어에 대한 자동 공간 재확보도 지원됩니다.
+
 .단계
-. SVM에 대한 현재 vStorage 지원 상태 표시:
+. SVM에 대한 현재 VMware vStorage over NFS 설정을 확인하십시오:
 +
-'vserver nfs show -vserver vserver_name -instance'
+`vserver nfs show -vserver vserver_name -fields vstorage`
 
 . 다음 작업 중 하나를 수행합니다.
 +
@@ -41,10 +43,18 @@ VMware vStorage 지원을 사용하지 않도록 설정합니다
 'vserver nfs modify -vserver vserver_name -vStorage disabled'
 
 |===
+. 설정이 업데이트되었는지 확인하십시오:
++
+`vserver nfs show -vserver vserver_name -fields vstorage`
+
 
 
 .작업을 마친 후
-이 기능을 사용하려면 먼저 VMware VAAI용 NFS 플러그인을 설치해야 합니다. 자세한 내용은 _VMware VAAI_용 NetApp NFS 플러그인 설치 를 참조하십시오.
+이 기능을 사용하려면 먼저 VMware VAAI용 NetApp NFS 플러그인을 설치해야 합니다. 자동 공간 재확보에는 버전 3.0 이상이 필요합니다.
+
+VMware 호스트, 플러그인 및 상호 운용성 요구 사항에 대해서는 NetApp NFS Plug-in for VMware VAAI 설명서와 NetApp 상호 운용성 매트릭스 툴을 참조하십시오.
 
 .관련 정보
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61278["NetApp 설명서: VMware VAAI용 NetApp NFS 플러그인"^]
+
+https://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^]

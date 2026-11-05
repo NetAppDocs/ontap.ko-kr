@@ -16,8 +16,8 @@ ONTAP 9.18.1에서 사용할 수 있는 새로운 기능에 대해 알아보세�
 최신 ONTAP 9 릴리스에서 알려진 문제, 제한 사항 및 업그레이드 주의 사항에 대한 자세한 내용은 를 참조하십시오 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP 9 릴리즈 노트"^]. 릴리스 정보에 액세스하려면 NetApp 계정으로 로그인하거나 계정을 만들어야 합니다.
 
 * 새로운 기능 및 향상된 기능에 대해 알아봅니다 https://docs.netapp.com/us-en/ontap-metrocluster/releasenotes/mcc-new-features.html["ONTAP MetroCluster 기능"^].
-* 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9171.html["NetApp AFX 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
-* 에 대해 알아보세요  https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9171.html["NetApp ASA r2 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^] .
+* 자세히 알아보기 https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9181.html["NetApp AFX 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^].
+* 자세히 알아보기 https://docs.netapp.com/us-en/asa-r2/release-notes/whats-new-9181.html["NetApp ASA r2 스토리지 시스템을 위한 새롭고 향상된 ONTAP 소프트웨어 기능"^].
 * 에 대해 알아보세요  https://docs.netapp.com/us-en/ontap-systems/whats-new.html["AFF, ASA 및 FAS 시스템과 지원되는 스위치에 대한 새롭고 향상된 지원"^] .
 * 의 업데이트에 대해 알아봅니다 https://docs.netapp.com/us-en/ontap-automation/whats_new.html["ONTAP REST API를 참조하십시오"^].
 
@@ -147,6 +147,13 @@ xref:../anti-ransomware/learn-about-arpai.html[지원되는 시스템에서는 �
 [cols="30%,70%"]
 |===
 | 업데이트 | 설명 
+
+
+ a| 
+FabricPool 대규모 애그리게이트 지원을 위한 티어링 스캐너 확장성
+ a| 
+FabricPool은 매일 수행되는 전체 애그리게이트 냉각 스캔을 동적 열 추적으로 대체하여 대규모 애그리게이트에서 백그라운드 스캔을 최적화함으로써, 티어링, 비활성 데이터 보고(IDR) 및 온도 민감형 스토리지 효율성(TSSE)을 위한 일일 스캔 및 메타데이터 I/O 오버헤드를 제거합니다. 클라이언트 I/O를 보호하기 위한 적응형 삭제 스로틀링과 함께 메타데이터 사전 가져오기 및 일괄 처리를 통해 클라우드 오브젝트 회수 처리량이 크게 가속화됩니다. 또한 스토리지 애그리게이트 show-space의 공간 보고가 업데이트되어 논리적으로 참조되지 않은 용량에 클라우드 오브젝트 회수 기능이 즉시 회수할 수 있는 완전히 참조되지 않은 오브젝트의 공간만 표시됩니다.
+
 
 
  a| 

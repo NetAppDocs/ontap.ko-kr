@@ -11,7 +11,7 @@ summary: Vscan은 NetApp에서 개발한 바이러스 백신 검사 솔루션으
 
 
 [role="lead"]
-Vscan은 NetApp에서 개발한 바이러스 백신 검사 솔루션으로, 고객이 바이러스나 기타 악성 코드에 의해 데이터가 손상되는 것을 방지할 수 있습니다. 파트너가 제공하는 바이러스 백신 소프트웨어와 ONTAP 기능을 결합하여 고객이 파일 검사를 관리하는 데 필요한 유연성을 제공합니다.
+Vscan은 바이러스나 기타 악성 코드로부터 데이터를 보호할 수 있는 바이러스 백신 검사 솔루션입니다. 파트너사가 제공하는 바이러스 백신 소프트웨어와 ONTAP 기능을 결합하여 파일 검사를 유연하게 관리할 수 있도록 지원합니다.
 
 
 
@@ -34,6 +34,42 @@ NFS를 통해서만 내보낸 볼륨에서도 SVM 네임스페이스에서 모�
 
 일반적으로 SVM에서 액세스 시 스캐닝 모드와 온디맨드 스캐닝 모드를 모두 사용할 수 있습니다. 어느 모드에서든 바이러스 백신 소프트웨어는 소프트웨어 설정에 따라 감염된 파일에 대한 치료 조치를 취합니다.
 
-NetApp에서 제공하고 외부 서버에 설치된 ONTAP 바이러스 백신 커넥터는 스토리지 시스템과 바이러스 백신 소프트웨어 간의 통신을 처리합니다.
+NetApp에서 제공하고 외부 서버에 설치되는 ONTAP Antivirus Connector는 스토리지 시스템과 바이러스 백신 소프트웨어 간의 통신을 처리합니다. ONTAP 9.20.1부터 ONTAP은 Antivirus Connector가 필요 없는 ICAP(Internet Content Adaptation Protocol) 기반 스캔 경로를 지원합니다. 각 SVM은 ICAP 또는 Antivirus Connector 중 하나만 사용하며, 둘 다 사용하지는 않습니다.
+
+
+NOTE: ICAP 기반 Vscan은 접속 시 스캔만 지원합니다.
+
+
+
+[[icap-based-vscan-compared-with-the-antivirus-connector]]
+== ICAP 기반 Vscan과 Antivirus Connector 비교
+
+다음 표는 Antivirus Connector와 ICAP 기반 Vscan의 차이점을 요약한 것입니다:
+
+[cols="30,35,35"]
+|===
+
+
+| 피처 | 바이러스 백신 커넥터 | ICAP 기반 Vscan 
+
+
+| 구성 요소 | Windows 서버에 설치된 ONTAP Antivirus Connector | 별도의 설정이 필요하지 않습니다. ONTAP이 스캔 엔진에 직접 연결됩니다. 
+
+
+| 통신 프로토콜 | SMB 명명 파이프 및 MS-RPC | TCP를 통한 ICAP 
+
+
+| 인프라 | 전용 Vscan 연결 관리자 | FPolicy 공유 메모리 알림 파이프라인 
+
+
+| 지원되는 스캔 엔진 OS | Windows 전용 | Windows 및 Linux 
+
+
+| 확장성 | 바이러스 백신 커넥터 인스턴스당 LIF 연결은 400개로 제한됩니다. | FPolicy 연결 풀링을 활용하여 확장성을 향상시킵니다 
+
+
+| 검색 메커니즘 | SVM 및 LIF의 폴링 기반 검색 | FPolicy를 통한 이벤트 기반 연결 관리 
+|===
+아래 예시는 바이러스 백신 커넥터 통신 방식을 보여줍니다.
 
 image:how-virus-scanning-works-new.gif["바이러스 검사 워크플로 다음은 커넥터가 스토리지 시스템과 바이러스 백신 소프트웨어 간의 통신을 처리하는 방법에 대해 설명합니다."]

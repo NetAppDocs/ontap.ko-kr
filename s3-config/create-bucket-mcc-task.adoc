@@ -16,10 +16,14 @@ ONTAP 9.14.1부터 MetroCluster FC 및 IP 구성의 미러링 또는 미러링�
 .이 작업에 대해
 * 기본적으로 버킷은 미러링된 애그리게이트에서 프로비저닝됩니다.
 * 에 설명된 것과 동일한 프로비저닝 지침을 따릅니다 link:create-bucket-task.html["버킷을 만듭니다"] MetroCluster 환경에서 버킷 생성에 적용됩니다.
-* 다음 S3 오브젝트 스토리지 기능은 MetroCluster 환경에서 * 지원되지 않음 *.
+* ONTAP 9.20.1부터 MetroCluster 환경에서 다음과 같은 S3 오브젝트 스토리지 기능이 지원됩니다:
 +
 ** SnapMirror S3
 ** S3 버킷 라이프사이클 관리
+
+
+* 다음 S3 오브젝트 스토리지 기능은 MetroCluster 환경에서 * 지원되지 않음 *.
++
 ** Compliance * 모드에서 S3 오브젝트 잠금
 +
 

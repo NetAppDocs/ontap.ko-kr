@@ -24,10 +24,22 @@ FlexGroup 볼륨을 생성할 때 ONTAP에서 기본 로컬 계층(애그리게�
 .이 작업에 대해
 ONTAP는 각 노드에서 사용 가능한 공간이 가장 많은 2개의 로컬 계층을 선택하여 FlexGroup 볼륨을 생성합니다. 2개의 로컬 계층을 사용할 수 없는 경우 ONTAP는 노드당 하나의 로컬 계층을 선택하여 FlexGroup 볼륨을 생성합니다.
 
+ONTAP 9.20.1부터 스토리지 프로파일을 사용하여 필요에 맞는 최적의 성능 수준을 선택할 수 있습니다. 스토리지 프로파일을 통해 표준 및 성능 FlexGroup 프로비저닝 간에 전환할 수 있습니다. -storage-profile 매개변수는 ONTAP이 사용하는 스토리지 프로파일을 정의합니다.
+
+* 성능: 고성능 워크로드를 위한 처리량 최적화 프로비저닝.
+* 표준: 범용 워크로드를 위한 용량 중심 프로비저닝.
+
+
 ONTAP 9.15.1부터 FlexGroup 볼륨을 자동으로 프로비저닝할 때 ONTAP는 BP(균형 잡힌 배치)를 사용하여 로컬 계층과 FlexGroup 구성원(구성) 볼륨 레이아웃을 선택합니다. BP의 한 가지 측면은 '없음' 보장(씬 프로비저닝) FlexGroup 볼륨을 생성할 때 로컬 계층의 오버 프로비저닝을 제한하는 방법입니다. 전체 FlexGroup 볼륨의 크기는 로컬 계층에서 사용 가능한 공간의 양에 따라 제한되지만, 이 제한은 '볼륨'이 보장하는(씩 프로비저닝된) FlexGroup 볼륨에 대한 제한보다 큽니다. REST API 또는 ONTAP CLI를 사용하여 FlexGroup 볼륨을 생성할 `auto-provision-as` 경우 이 제한으로 인해 공간이 부족하여 프로비저닝이 실패할 수 있습니다. 더 작은 FlexGroup 볼륨을 생성하거나 매개 변수를 사용하면 이러한 문제를 방지할 수 link:create-task.html["FlexGroup 볼륨을 생성하고 로컬 계층을 수동으로 선택합니다"] `aggr-list` 있습니다.
 
 .단계
-. FlexGroup 볼륨 프로비저닝:
+. 다음 옵션 중 하나를 완료하십시오.
++
+.. ONTAP 9.20.1 이상을 사용하여 스토리지 프로파일로 FlexGroup 볼륨을 프로비저닝합니다:
++
+`volume create -vserver <svm name> -volume <fg_vol_name> -size <fg_size> [-storage-profile {standard|performance}]`
+
+.. ONTAP 9.19.1 이하 버전을 사용하여 FlexGroup 볼륨을 프로비저닝하십시오:
 +
 `volume create -vserver svm_name -volume fg_vol_name –auto-provision-as flexgroup -size fg_size [–encrypt true] [-qos-policy-group qos_policy_group_name] [-support-tiering true] [-granular-data advanced]`
 
@@ -72,6 +84,14 @@ Do you want to continue? {y|n}: y
 [Job 34] Job succeeded: Successful
 ----
 +
+ONTAP 9.20.1부터 스토리지 프로파일을 사용하여 FlexGroup 볼륨을 프로비저닝할 수 있습니다. 다음 예에서는 성능 스토리지 프로파일을 사용하여 100TB FlexGroup 볼륨을 생성합니다.
+
++
+[listing]
+----
+cluster1::> volume create -vserver vs0 -volume fg -size 100TB -storage-profile performance
+----
++
 다음 예에서는 처리량 상한에 대한 QoS 정책 그룹을 생성하는 방법과 FlexGroup 볼륨에 적용하는 방법을 보여 줍니다.
 
 +
@@ -105,6 +125,8 @@ FlexGroup 볼륨은 클러스터의 각 노드에 8개의 구성원 볼륨으로
 
 +
 기본적으로 FlexGroup 볼륨은 AFF 시스템을 제외하고 '볼륨' 공간 보장 설정으로 생성됩니다. AFF 시스템의 경우 기본적으로 FlexGroup 볼륨은 'none' 공간 보장으로 생성됩니다.
+
+
 
 . 접합 경로로 FlexGroup 볼륨을 마운트합니다.
 +

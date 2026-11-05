@@ -1,0 +1,71 @@
+---
+permalink: nas-audit/supported-file-operation-filter-fpolicy-s3.html 
+sidebar: sidebar 
+keywords: ontap 9, supported file operation, filter combinations, fpolicy, monitor, s3 
+summary: FPolicy 이벤트를 구성할 때 S3 오브젝트 액세스 작업 모니터링에는 특정 파일 작업 및 필터 조합만 지원된다는 점에 유의해야 합니다. 
+---
+= ONTAP FPolicy가 S3에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FPolicy 이벤트를 구성할 때 S3 오브젝트 액세스 작업 모니터링에는 특정 파일 작업 및 필터 조합만 지원된다는 점에 유의해야 합니다.
+
+ONTAP 9.20.1부터 FPolicy는 NAS 버킷의 S3 오브젝트 이벤트에 대한 알림을 지원합니다. S3 FPolicy는 비동기식, 비필수 모드에서만 작동합니다.
+
+S3 오브젝트 액세스 이벤트에 대한 FPolicy 모니터링에 지원되는 파일 작업 및 필터 조합 목록은 다음 표에 나와 있습니다:
+
+[cols="30,70"]
+|===
+
+
+| 지원되는 파일 작업 | 지원되는 필터 
+
+
+ a| 
+object_create
+ a| 
+object-create-with-put, object-create-with-copy, object-create-with-complete-mpu
+
+
+
+ a| 
+object_delete
+ a| 
+exclude-multi-delete
+
+
+
+ a| 
+오브젝트_태그
+ a| 
+object-tag-put, object-tag-delete
+
+|===
+
+
+[[filter-descriptions]]
+== 필터 설명
+
+다음 목록은 각 S3 FPolicy 필터에 대한 설명입니다:
+
+* object-create-with-put: PUT 요청을 사용하여 수행되는 오브젝트 생성 작업을 모니터링합니다.
+* object-create-with-copy: COPY 요청을 사용하여 수행되는 오브젝트 생성 작업을 모니터링합니다.
+* object-create-with-complete-mpu: 멀티파트 업로드를 완료하여 수행되는 오브젝트 생성 작업을 모니터링합니다.
+* exclude-multi-delete: 다중 삭제 요청의 일부로 삭제된 오브젝트에 대한 알림을 제외합니다. 이 필터가 설정되면 FPolicy는 단일 오브젝트 삭제 작업에 대해서만 알림을 생성합니다.
+* object-tag-put: 오브젝트 태그를 추가하거나 수정하는 작업을 모니터링합니다.
+* object-tag-delete: 오브젝트 태그를 제거하는 작업을 모니터링합니다.
+
+
+
+
+[[additional-considerations-for-s3-fpolicy-events]]
+== S3 FPolicy 이벤트에 대한 추가 고려 사항
+
+* 클라이언트가 주도하는 성공적인 S3 작업만 FPolicy 알림을 생성합니다. 오브젝트 만료 또는 스냅샷 복원 등 내부적으로 생성된 작업과 실패한 작업은 알림을 생성하지 않습니다.
+* S3 FPolicy 모니터링에서는 GET(읽기) 작업이 지원되지 않습니다.
+* 다중 삭제 요청으로 최대 1,000개의 오브젝트를 삭제할 수 있습니다. FPolicy는 성공적으로 삭제된 오브젝트당 하나의 알림을 생성합니다. 동일한 다중 삭제 요청 내의 각 알림은 상관 관계를 위해 동일한 FPolicy 요청 ID와 S3 요청 ID를 공유합니다.
+* S3 이벤트에 대해서는 액세스 거부 알림이 지원되지 않습니다.
+

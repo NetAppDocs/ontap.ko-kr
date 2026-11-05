@@ -28,11 +28,13 @@ HA 쌍당 SnapMirror 동기식 복제 작업 수의 제한은 컨트롤러 모�
 |===
 
 
-| 플랫폼 | ONTAP 9.14.1부터 ONTAP 9.11.1까지 | ONTAP 9.10.1 | ONTAP 9.9.1 | ONTAP 9.9.1 이전 릴리즈 
+| 플랫폼 | ONTAP 9.20.1 이상 버전 | ONTAP 9.11.1부터 ONTAP 9.19.1까지 | ONTAP 9.10.1 | ONTAP 9.9.1 | ONTAP 9.9.1 이전 릴리즈 
 
 
  a| 
 AFF
+ a| 
+600
  a| 
 400
  a| 
@@ -46,6 +48,8 @@ AFF
 
  a| 
 ASA
+ a| 
+400
  a| 
 400
  a| 
@@ -66,12 +70,16 @@ FAS
  a| 
 80
  a| 
+80
+ a| 
 40
 
 
 
  a| 
 ONTAP Select
+ a| 
+40
  a| 
 40
  a| 

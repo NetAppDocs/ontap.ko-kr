@@ -17,14 +17,21 @@ AutoSupport는 시스템의 상태를 능동적으로 모니터링하고 NetApp 
 
 스토리지 시스템을 처음 구성할 때 AutoSupport가 기본적으로 설정됩니다. AutoSupport는 AutoSupport가 활성화된 후 24시간 후에 기술 지원 부서에 메시지를 보내기 시작합니다. 시스템을 업그레이드 또는 되돌리거나, AutoSupport 구성을 수정하거나, 시스템 시간을 24시간 이외의 시간으로 변경하여 24시간을 단축할 수 있습니다.
 
+ONTAP 9.20.1부터 System Manager는 다음과 같은 구성 문제가 발생할 경우 AutoSupport 알림을 표시합니다:
+
+* AutoSupport가 더 높은 보안과 안정성을 위해 권장되는 HTTPS 대신 SMTP를 사용하도록 구성되어 있습니다.
+* AutoSupport가 비활성화되었지만 고객 및 파트너 이메일 수신자는 구성된 상태로 유지됩니다.
+* DNS 문제로 인해 AutoSupport 전송이 실패합니다.
+
+
 [NOTE]
 ====
-언제든지 AutoSupport를 비활성화할 수 있지만, 이 기능을 활성 상태로 두어야 합니다. AutoSupport를 활성화하면 스토리지 시스템에서 문제가 발생할 경우 문제를 신속하게 확인하고 해결할 수 있습니다. 기본적으로 시스템에서는 AutoSupport를 사용하지 않도록 설정하더라도 AutoSupport 정보를 수집하여 로컬에 저장합니다.
+언제든지 AutoSupport를 비활성화할 수 있지만 활성화 상태로 유지하는 것이 좋습니다. 스토리지 시스템에 문제가 발생할 경우 AutoSupport를 활성화하면 문제 원인 파악 및 해결 속도를 크게 높일 수 있습니다. 기본적으로 시스템은 AutoSupport를 비활성화하더라도 AutoSupport 정보를 수집하여 로컬에 저장합니다.
 
 ====
 AutoSupport에 대한 자세한 내용은 NetApp Support 사이트 를 참조하십시오.
 
 .관련 정보
+* link:autosupport-manage-settings-task.html["AutoSupport 설정 관리"]하는 방법을 알아보십시오.
 * https://support.netapp.com/["NetApp 지원"^]
-* link:../concepts/manual-pages.html["ONTAP 명령 참조입니다"]
 

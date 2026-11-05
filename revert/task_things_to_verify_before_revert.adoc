@@ -327,6 +327,40 @@ Job ID Name                 Vserver    Node           State
 ----
 
 
+
+
+[[verify-key-manager-state-before-reverting]]
+== 되돌리기 전에 키 관리자 상태를 확인하십시오
+
+ONTAP 9.20.1에서 이전 ONTAP 릴리스로 되돌리기 전에 대상 릴리스에 대해 키 관리자 구성이 유효한 상태인지 확인하십시오.
+
+.단계
+. 키 관리자 상태를 확인하십시오:
++
+[source, cli]
+----
+security key-manager keystore show
+----
+. 구성이  `inactive`인 경우, 되돌리기를 진행하기 전에 삭제하십시오:
++
+[source, cli]
+----
+security key-manager keystore delete -vserver <svm_name>
+----
+. 키 관리자 작업이 여전히 실행 중인지 확인하십시오:
++
+[source, cli]
+----
+job show -name *keymanager*
+----
+. 키 관리자 작업이 아직 초기화 중인 경우, 해당 작업이 완료될 때까지 기다린 후 되돌리기 작업을 시작하십시오.
+
+
+[NOTE]
+====
+활성 키 저장소 구성은 표준 되돌리기 프로세스의 일부로 처리됩니다. 되돌리기의 주요 고려 사항은 ONTAP 9.20.1 키 관리자 워크플로에서 도입된 비활성 키 저장소 항목 또는 진행 중인 키 관리자 작업입니다.
+
+====
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/storage-disk-show.html["저장 디스크 표시"^]
 

@@ -13,7 +13,7 @@ summary: 'ONTAP 9.19.1 버전부터 NFS가 활성화된 SVM에서 전송 중인 
 [role="lead"]
 ONTAP 9.19.1 버전부터 NFS가 활성화된 SVM에서 전송 중인 NFS 트래픽을 TLS 1.3으로 암호화할 수 있습니다. NFS over TLS는 LIF별 TLS 구성을 지원하며, 선택적 상호 TLS(mTLS) 호스트 인증과 일치하는 클라이언트에 대한 비 TLS TCP 액세스를 거부할 수 있는 내보내기 정책 제어 기능을 포함합니다.
 
-NFS over TLS는 온프레미스 ONTAP 플랫폼의 경우 ONTAP 9.19.1 이상에서 지원됩니다. 클라우드 플랫폼에서는 지원되지 않습니다. NFS over TLS는 TCP를 통해서만 지원됩니다. ONTAP 9.19.1에서는 TLS over RDMA가 지원되지 않습니다.
+NFS over TLS는 온프레미스 ONTAP 플랫폼의 경우 ONTAP 9.19.1 이상에서 지원됩니다. NFS over TLS는 TCP를 통해서만 지원됩니다. ONTAP 9.19.1에서는 TLS over RDMA가 지원되지 않습니다.
 
 .이 작업에 대해
 NFS over TLS는 기존 ONTAP NFS 인프라와 함께 작동하므로 애플리케이션은 TLS가 전송 중인 NFS 트래픽을 암호화하는 동안에도 NFS를 정상적으로 사용할 수 있습니다. 관리자는 X.509 인증서를 사용하여 스토리지 시스템을 인증하고 암호화된 세션을 설정합니다. 개별 데이터 LIF에서 mTLS를 활성화하여 클라이언트 인증서 유효성 검사를 선택적으로 요구할 수 있습니다. ONTAP 9.19.1에서 NFS over TLS는 최대 10,000개의 유효한 NFS over TLS 연결을 지원합니다. 더 높은 연결 제한이 필요한 경우 NetApp 지원팀에 문의하십시오.

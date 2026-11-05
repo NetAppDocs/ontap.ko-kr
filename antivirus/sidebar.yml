@@ -22,6 +22,8 @@ entries:
     url: "/antivirus/install-ontap-antivirus-connector-task.html"
   - title: ONTAP Vscan Antivirus 커넥터 구성
     url: "/antivirus/configure-ontap-antivirus-connector-task.html"
+  - title: 온액세스 스캐닝을 위해 ICAP 기반 Vscan 구성
+    url: "/antivirus/icap-vscan.html"
 - title: 스캐너 풀을 구성합니다
   entries:
   - title: 스캐너 풀 구성에 대해 알아보세요

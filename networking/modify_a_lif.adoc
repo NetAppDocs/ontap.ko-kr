@@ -33,26 +33,40 @@ FC LIF에서 사용되는 데이터 프로토콜을 수정하려면 LIF를 삭�
 +
 유효한 페일오버 목표가 없는 LIF가 페일오버를 시도하면 운영 중단이 발생할 수 있습니다.
 
-* ONTAP 9.5부터 LIF와 연결된 서비스 정책을 수정할 수 있습니다.
-+
-ONTAP 9.5에서는 서비스 정책이 인터클러스터 및 BGP 피어 서비스에 대해서만 지원됩니다. ONTAP 9.6에서는 여러 데이터 및 관리 서비스에 대한 서비스 정책을 작성할 수 있습니다.
-
-* ONTAP 9.11.1부터 ASA(All-Flash SAN 어레이) 플랫폼에서 자동 iSCSI LIF 페일오버를 사용할 수 있습니다.
-+
-기존 iSCSI LIF의 경우, 9.11.1 이상으로 업그레이드하기 전에 생성된 LIF를 의미하며 페일오버 정책을 로 수정할 수 있습니다 link:../san-admin/asa-iscsi-lif-fo-task.html["자동 iSCSI LIF 페일오버를 사용합니다"].
-
-* ONTAP NTP(네트워크 시간 프로토콜)를 활용하여 클러스터 전체에서 시간을 동기화합니다. LIF IP 주소를 변경한 후에는 동기화 실패를 방지하기 위해 NTP 구성을 업데이트해야 할 수도 있습니다. 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629["NetApp 지식 기반: LIF IP 변경 후 NTP 동기화가 실패함"^] .
 
 
-다음 절차는 사용하는 인터페이스에 따라 다릅니다. -- System Manager 또는 CLI:
+.ONTAP 버전별 LIF 수정 기능 지원
+LIF 수정 관련 기능에 대한 지원은 ONTAP 버전에 따라 다릅니다.
+
+[cols="1,5"]
+|===
+| ONTAP 버전부터 | 피처 
+
+
+| 9.20.1  a| 
+AFF 및 FAS 시스템에서 Broadcom 보안 호스트 버스 어댑터(HBA)에 대한 Fibre Channel 보안 프로토콜 3(FC-SP-3) 인증 및 암호화를 지원합니다.
+
+LIF를 수정할 때 FC-SP-3를 활성화하려면 System Manager에서 *전송 보안* 옵션을 선택하거나 CLI에서  `-fc-transport-security` 옵션을 사용하십시오. link:../san-admin/fc-sp-3-security-support.html["ONTAP의 FC-SP-3 지원"]에 대해 자세히 알아보십시오.
+
+
+
+| 9.11.1 | All-Flash SAN Array(ASA) 플랫폼에서 자동 iSCSI LIF 페일오버 지원 기존 iSCSI LIF, 즉 9.11.1 이상으로 업그레이드하기 전에 생성된 LIF의 경우 페일오버 정책을 link:../san-admin/asa-iscsi-lif-fo-task.html["자동 iSCSI LIF 페일오버를 사용합니다"](으)로 수정할 수 있습니다. 
+
+
+| 9.6 | 여러 데이터 및 관리 서비스에 대한 서비스 정책을 생성할 수 있습니다. 
+
+
+| 9.5 | LIF와 연결된 서비스 정책을 수정할 수 있습니다. 서비스 정책은 클러스터 간 서비스 및 BGP 피어 서비스에 대해서만 지원됩니다. 
+|===
+.단계
+LIF를 수정하려면 System Manager 또는 CLI를 사용하십시오.
 
 [role="tabbed-block"]
 ====
 .시스템 관리자
 --
-* ONTAP 9.12.0부터는 시스템 관리자를 사용하여 네트워크 인터페이스를 편집할 수 있습니다 *
+ONTAP 9.12.0부터 System Manager를 사용하여 네트워크 인터페이스를 편집할 수 있습니다.
 
-.단계
 . Network > Overview > Network Interfaces * 를 선택합니다.
 . 변경할 네트워크 인터페이스 옆의 * > 편집 * 을 선택합니다 image:icon_kabob.gif["메뉴 옵션 아이콘"] .
 . 하나 이상의 네트워크 인터페이스 설정을 변경합니다. 자세한 내용은 을 참조하십시오 link:create_a_lif.html["LIF를 생성합니다"].
@@ -62,9 +76,6 @@ ONTAP 9.5에서는 서비스 정책이 인터클러스터 및 BGP 피어 서비�
 --
 .CLI를 참조하십시오
 --
-* CLI를 사용하여 LIF를 수정합니다 *
-
-.단계
 . 'network interface modify' 명령을 사용하여 LIF의 특성을 수정합니다.
 +
 다음 예에서는 서브넷 client1_sub의 IP 주소와 네트워크 마스크 값을 사용하여 LIF datalif2의 IP 주소와 네트워크 마스크를 수정하는 방법을 보여 줍니다.
@@ -111,3 +122,5 @@ IPv6 주소
 
 --
 ====
+.다음 단계
+ONTAP NTP(네트워크 시간 프로토콜)를 활용하여 클러스터 전체에서 시간을 동기화합니다. LIF IP 주소를 변경한 후에는 동기화 실패를 방지하기 위해 NTP 구성을 업데이트해야 할 수도 있습니다. 자세한 내용은 다음을 참조하세요.link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629["NetApp 지식 기반: LIF IP 변경 후 NTP 동기화가 실패함"^] .

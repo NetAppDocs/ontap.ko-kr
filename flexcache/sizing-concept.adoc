@@ -2,7 +2,7 @@
 permalink: flexcache/sizing-concept.html 
 sidebar: sidebar 
 keywords: guidelines, sizing, flexcache, volume 
-summary: 볼륨 프로비저닝을 시작하기 전에 FlexCache 볼륨의 제한을 알고 있어야 합니다. 
+summary: FlexCache 크기 제한은 시스템에 설치된 ONTAP 버전에 따라 다릅니다. FlexCache 볼륨 프로비저닝을 시작하기 전에 해당 ONTAP 버전에 대한 제한을 확인해야 합니다. 
 ---
 = ONTAP FlexCache 볼륨 사이징 지침을 참조하십시오
 :allow-uri-read: 
@@ -11,30 +11,14 @@ summary: 볼륨 프로비저닝을 시작하기 전에 FlexCache 볼륨의 제�
 
 
 [role="lead"]
-볼륨 프로비저닝을 시작하기 전에 FlexCache 볼륨의 제한을 알고 있어야 합니다.
+FlexCache 크기 제한은 시스템에 설치된 ONTAP 버전에 따라 다릅니다. FlexCache 볼륨 프로비저닝을 시작하기 전에 해당 ONTAP 버전에 대한 제한을 확인해야 합니다.
 
-FlexVol 볼륨의 크기 제한은 원본 볼륨에 적용됩니다. FlexCache 볼륨의 크기는 원본 볼륨보다 작거나 같을 수 있습니다. FlexCache 볼륨 크기에 대한 모범 사례는 원본 볼륨 크기의 10% 이상이어야 합니다.
+FlexVol 볼륨의 크기 제한은 원본 볼륨에 적용됩니다. FlexCache 볼륨의 크기는 일반적으로 원본 볼륨보다 작거나 같습니다. 원본보다 큰 캐시를 생성할 수도 있지만, 이는 일반적인 경우는 아닙니다. FlexCache 볼륨의 크기는 원본 볼륨 크기의 최소 10% 이상으로 설정하는 것이 좋습니다.
 
-또한 FlexCache 볼륨에 대한 다음과 같은 추가 제한도 알고 있어야 합니다.
+사용 중인 ONTAP 버전에 대한 FlexCache 사이징 제한에 관한 최신 정보를 찾으려면 다음 단계를 완료하십시오:
 
-[cols="55,15,15,15"]
-|===
+. link:https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"]으로 이동하십시오.
+. *제품* 항목에서 플랫폼을 선택하십시오.
+. ONTAP 버전을 선택한 다음 *결과 보기*를 선택하십시오.
+. 스크롤하여 *FlexCache 클러스터 제한*을 찾거나 검색하십시오.
 
-
-| 제한 | ONTAP 9.8 이상 | ONTAP 9.7 | ONTAP 9.6 - 9.5 
-
-
-| 원본 볼륨에서 생성할 수 있는 최대 FlexCache 볼륨 수입니다 | 100 | 10 | 10 
-
-
-| 노드당 권장되는 최대 오리진 볼륨 수입니다 | 100 | 100 | 10 
-
-
-| 노드당 권장되는 최대 FlexCache 볼륨 수입니다 | 100 | 100 | 10 
-
-
-| 노드당 FlexCache 볼륨에 권장되는 최대 FlexGroup 구성 수 | 800 | 800 | 40 
-
-
-| 노드당 FlexCache 볼륨당 최대 구성요소 수 | 32 | 32 | 32 
-|===

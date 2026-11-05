@@ -34,6 +34,7 @@ ARP/AI는 다음 이름 중 하나가 접두사로 붙은 스냅샷을 생성합
 .시작하기 전에
 * 비정상적인 활동 경고에 대응하는 경우, 데이터 복구를 진행하기 전에 link:respond-arpai.html#classify-as-potential-ransomware-attack-and-recover-data["먼저 잠재적인 랜섬웨어 공격으로 분류해야 합니다"].
 * 복원 절차를 완료하기 전에 <<choose-a-recovery-method,복원 방법>>을(를) 선택하고 <<recovery-constraints-and-considerations,복구 제약 조건>>을(를) 검토하십시오.
+* ONTAP 9.20.1부터 ARP/AI 스냅샷 응답 정책이  `alert-only`(으)로 설정된 경우, ARP/AI 스냅샷이 생성되지 않으며 ARP/AI 스냅샷 복구를 사용할 수 없습니다. 데이터를 복구하려면 예약된 ONTAP 스냅샷 또는 자체 백업 솔루션을 사용하십시오.
 
 
 
@@ -64,6 +65,12 @@ link:../data-protection/restore-single-file-snapshot-task.html["스냅샷에서 
 * ONTAP 9.16.1 이상 버전의 경우: 먼저 (link:respond-arpai.html["비정상적인 활동에 응답합니다"]에서) 의심스러운 이벤트를 삭제한 다음 복원을 수행하십시오. 삭제 후 ARP/AI 스냅샷은 활동 분류 방식에 따라 보존됩니다. ONTAP 9.17.1부터 기본값은 실제 공격의 경우 7일, 오탐의 경우 24시간입니다. ONTAP 9.16.1에서는 기본값이 실제 공격의 경우 5일, 오탐의 경우 48시간입니다. 볼륨 복원 후에는 의심스러운 이벤트 삭제 옵션을 사용할 수 없으므로 복원 전에 반드시 삭제해야 합니다.
 * ARP/AI 스냅샷 잠금 해제는  `volume snapshot restore`이전 스냅샷에서 복원할 때만 필요합니다. FlexClone, 단일 파일 SnapRestore, 데이터 복사 작업 또는 이와 유사한 방법에는 필요하지 않습니다.
 * 엔트로피 분석만으로 공격이 감지된 SAN 볼륨의 경우, 공격 발생 직전에 생성된 스냅샷과 공격 스냅샷만 장기간(기본값 10일, 구성 가능) 보존됩니다. 다른 주기적 스냅샷은 일반 보존 규칙을 따릅니다. 이는 NAS 볼륨과 다른 점인데, NAS 볼륨의 경우 공격 발생 이전에 생성된 모든 스냅샷은 관리자가 의심 해제 작업을 수행할 때까지 보존됩니다.
+* ONTAP 9.20.1 이상 버전의 경우: 볼륨 스냅샷 복원을 통해 볼륨의 ARP/AI 스냅샷 응답 정책을 스냅샷이 캡처될 당시 적용되던 정책으로 되돌릴 수 있습니다. 볼륨 복원 후 스냅샷 응답 정책이 여전히 올바른지 확인하십시오:
++
+[source, cli]
+----
+security anti-ransomware volume snapshot-settings show -vserver <svm_name> -volume <volume_name>
+----
 
 
 .SnapMirror 고려 사항

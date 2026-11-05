@@ -30,17 +30,26 @@ SVM의 루트 디렉토리 내에 모든 파일 및 디렉토리 세트를 지�
 
 예를 들어, 많은 사용자에게 읽기 전용 데이터 액세스 권한을 부여하는 버킷 정책과, 제한된 사용자 그룹이 해당 데이터의 일부에 대해 작업을 수행할 수 있도록 허용하는 또 다른 버킷 정책을 설정할 수 있습니다.
 
-ONTAP 9.18.1부터 애플리케이션이 S3 프로토콜을 사용하여 FlexCache 볼륨의 데이터에 액세스할 수 있도록 하는 NAS 버킷을 생성할 수 있습니다. 클러스터의 모든 노드는 ONTAP 9.18.1 이상을 실행해야 합니다. S3 프로토콜을 사용하여 FlexCache 볼륨에 액세스하려면 먼저  `-is-s3-enabled` 옵션을  `true` link:../flexcache/create-volume-task.html["FlexCache 볼륨에서"]로 설정해야 합니다. 이 매개변수는 기본적으로  `false`로 설정되어 있습니다.
+ONTAP 9.18.1부터는 애플리케이션이 S3 프로토콜을 사용하여 FlexCache 볼륨의 데이터에 액세스할 수 있도록 S3 NAS 버킷을 생성할 수 있습니다. S3 프로토콜을 사용하여 FlexCache 볼륨에 액세스하려면 먼저  `-is-s3-enabled` 옵션을  `true` link:../flexcache/create-volume-task.html["FlexCache 볼륨에서"](으)로 설정해야 합니다. 이 매개변수는 기본적으로  `false`(으)로 설정되어 있습니다.
 
-ONTAP 9.17.1부터 S3 NAS 버킷을 연결 경로가 아닌 볼륨에 직접 연결할 수 있습니다. 기본적으로 NAS 볼륨의 S3 버킷은 연결 경로와 연결되며, ONTAP 관리자는 언제든지 이 경로를 변경할 수 있습니다. 이러한 변경으로 인해 S3 버킷 작업이 중단될 수 있습니다. ONTAP 9.17.1부터는  `-is-nas-path-mutable false` 옵션과 함께  `vserver object-store-server bucket create` ONTAP CLI에서 명령을 사용하여 S3 NAS 버킷을 볼륨에 연결할 수 있습니다. 기본적으로  `-is-nas-path-mutable` 로 설정됩니다  `true` .
+ONTAP 9.20.1부터 오리진 볼륨이 FlexVol 볼륨인 경우 FlexCache 볼륨의 S3 NAS 버킷이 지원됩니다.
+
+ONTAP 9.18.1 및 9.19.1에서는 FlexCache 볼륨의 S3 NAS 버킷이 FlexCache 원본 볼륨이 FlexGroup 볼륨인 경우에만 지원됩니다. ONTAP 9.17.1부터는 다음과 같은 기능을 사용할 수 있습니다.
+
+* S3 NAS 버킷을 접합 경로가 아닌 볼륨에 직접 연결합니다. 기본적으로 NAS 볼륨의 S3 버킷은 접합 경로와 연결되어 있으며, ONTAP 관리자가 언제든지 이 경로를 변경할 수 있습니다. 이러한 변경은 S3 버킷 작동에 잠재적인 문제를 일으킬 수 있습니다.
+* ONTAP CLI에서 `vserver object-store-server bucket create` 명령과 함께 `-is-nas-path-mutable false` 옵션을 사용하여 S3 NAS 버킷을 볼륨에 연결할 수 있습니다. 기본적으로 `-is-nas-path-mutable`은(는) `true`로 설정되어 있습니다.
+
 
 S3 NAS "버킷"은 매핑이지 S3 버킷이 아니므로 표준 S3 버킷의 다음 속성은 S3 NAS 버킷에 적용되지 않습니다.
 
-* * aggr-list\aggr-list-multiplier\storage-service-level\volume\size\exclude-aggr-list\QoS-policy-group * + S3 NAS 버킷을 구성할 때 볼륨 또는 qtree가 생성되지 않습니다.
+* *aggr-list \ aggr-list-multiplier \ storage-service-level \ volume \ size \ exclude-aggr-list \ qos-policy-group* + S3 NAS 버킷을 구성할 때 볼륨이나 qtree가 생성되지 않습니다.
 * *역할 \은 -protected입니다 \은 -protected-on-ontap입니다 \은 -protected-on-cloud입니다* + S3 NAS 버킷은 SnapMirror S3를 사용하여 보호되거나 미러링되지 않고 대신 볼륨 세분성에서 사용 가능한 일반 SnapMirror 보호 기능을 사용합니다.
 * *versioning-state*+ NAS 볼륨에는 일반적으로 다른 버전을 저장할 수 있는 스냅샷 기술이 있습니다. 그러나 버전 관리는 현재 S3 NAS 버킷에서 사용할 수 없습니다.
 * 볼륨 명령을 통해 NAS 볼륨에 대해 * logical-used\object-count * + 등가 통계를 사용할 수 있습니다.
 * *multipart 객체* + ONTAP 9.16.1부터 S3 NAS 버킷에서 multipart 객체가 지원됩니다. link:../flexgroup/enable-adv-capacity-flexgroup-task.html["고급 용량 밸런싱"] 기본 FlexGroup 볼륨에서 활성화되어 있습니다. 고급 용량 분산은 FlexGroup 볼륨에서만 활성화할 수 있습니다. FlexVol 볼륨에서는 활성화할 수 없습니다.
++
+ONTAP 9.20.1부터 S3 NAS 버킷 액세스는 FlexVol 오리진이 있는 FlexCache 볼륨에 대해서도 지원됩니다. FlexVol 볼륨은 Granular Data Distribution을 지원하지 않기 때문에, FlexVol 오리진이 있는 FlexCache 볼륨의 S3 NAS 버킷에 대해서는 멀티파트 업로드 작업이 지원되지 않습니다. 오리진 볼륨이 FlexVol 볼륨인 경우 동일한 FlexCache NAS 버킷 내에서 오브젝트를 복사할 수 있습니다.
+
 
 
 .단계

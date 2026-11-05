@@ -14,18 +14,13 @@ summary: SVM 마이그레이션이 완료된 후 클라이언트가 타겟 클�
 SVM 마이그레이션이 완료된 후 클라이언트가 타겟 클러스터로 자동으로 컷오버되고 불필요한 SVM이 소스 클러스터에서 제거됩니다. 자동 컷오버 및 자동 소스 클린업이 기본적으로 설정됩니다. 필요한 경우, 컷오버를 시작하기 전에 마이그레이션을 일시 중지하고 자동 소스 SVM 정리를 사용하지 않도록 설정할 수 있습니다.
 
 .이 작업에 대해
-이 절차는 FAS, AFF, ASA 시스템에 적용됩니다.  ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)이 있는 경우 다음을 따르세요.link:https://docs.netapp.com/us-en/asa-r2/manage-data/migrate-svm.html["수행할 수 있습니다"^] SVM을 마이그레이션하려면. ASA r2 시스템은 SAN 전용 고객에게 최적화된 간소화된 ONTAP 환경을 제공합니다.
-
-ONTAP 9.19.1부터 특정 AFF, ASA r2 및 FAS 시스템에서 직접 연결 FC 및 FC-NVMe 구성이 지원됩니다. 직접 연결 구성은 SVM 마이그레이션을 지원하지 않습니다.
-
-* 자동 클라이언트 컷오버가 정상적으로 수행되는 경우 '-auto-cutover false' 옵션을 사용하여 마이그레이션을 일시 중지한 다음 나중에 수동으로 컷오버를 수행할 수 있습니다.
+* 이 절차는 FAS, AFF 및 ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)을 사용하는 경우:
 +
-xref:manual-client-cutover-task.adoc[SVM 마이그레이션 후 클라이언트 수동 컷오버]
+** ASA 클러스터에서 ASA r2 클러스터로 SVM을 마이그레이션하려면 다음을 따르십시오link:https://docs.netapp.com/us-en/asa-r2/manage-data/migrate-svm.html["수행할 수 있습니다"^]
+** ONTAP 9.20.1부터 ASA r2 클러스터에서 ASA 또는 AFF 클러스터로 SVM을 마이그레이션하려면 link:https://docs.netapp.com/us-en/asa-r2/manage-data/migrate-svm-from-asa-r2.html["수행할 수 있습니다"^]을(를) 따르십시오.
 
-* advance privilege '-auto-source-cleanup false' 옵션을 사용하여 컷오버 이후 소스 SVM의 제거를 해제한 다음 나중에 컷오버를 통해 수동으로 소스 정리를 트리거할 수 있습니다.
-+
-xref:manual-source-removal-task.adoc[컷오버 이후 소스 SVM 수동 제거]
 
+* ONTAP 9.19.1부터 특정 AFF, ASA r2 및 FAS 시스템에서 직접 연결 FC 및 FC-NVMe 구성이 지원됩니다. 직접 연결 구성은 SVM 마이그레이션을 지원하지 않습니다.
 
 
 

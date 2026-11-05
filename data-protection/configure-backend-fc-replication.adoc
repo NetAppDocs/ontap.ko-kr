@@ -1,0 +1,223 @@
+---
+permalink: data-protection/configure-backend-fc-replication.html 
+sidebar: sidebar 
+keywords: configure, backend, FC, replication 
+summary: 'ONTAP 9.20.1부터 기존 Fibre Channel(FC) 패브릭을 통해 백엔드 SnapMirror 비동기 복제 및 SnapVault용 SnapLock을 구성할 수 있습니다. FC를 통한 데이터 복제를 활성화하려면 백엔드 FC 복제를 구성해야 합니다. .' 
+---
+= FC를 통한 백엔드 복제를 위해 ONTAP 시스템을 구성하십시오
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1부터 기존 Fibre Channel(FC) 패브릭을 통해 백엔드 SnapMirror 비동기 복제 및 SnapLock(SnapVault용)을 구성할 수 있습니다. FC를 통한 데이터 복제를 활성화하려면 백엔드 FC 복제를 구성해야 합니다.
+
+
+NOTE: FC를 통해 백엔드 복제를 구성할 때는 FC 패브릭과 클러스터 간 IP 네트워크가 모두 작동 중이어야 합니다. 복제 데이터는 FC 패브릭을 통해 전송될 수 있지만, 클러스터 통신 및 복제 관리 기능을 위해서는 클러스터 간 IP 네트워크가 필요합니다.
+
+.이 작업에 대해
+FC를 통한 백엔드 복제의 경우, 직접 연결된 FC 구성 및 자동 패브릭 영역 설정을 사용하는 구성은 지원되지 않습니다.
+
+.시작하기 전에
+소스 및 타겟 클러스터의 노드는 다음 구성 요구 사항을 충족해야 합니다:
+
+* 복제 관계에는 최소 4개의 스토리지 노드가 참여해야 합니다. 즉, 소스 클러스터의 노드 2개와 타겟 클러스터의 노드 2개입니다.
+* 각 노드는 최소한 다음 포트로 구성되어야 합니다:
++
+** 전용 FC 이니시에이터 포트 2개
+** FC 프런트엔드 연결을 위한 2개의 FC 타겟 포트
+** FC 백엔드 연결을 위한 2개의 FC 타겟 포트
+
+
+* 소스 클러스터와 타겟 클러스터를 연결하는 스위치 패브릭에는 백엔드 트래픽 전용으로 사용할 수 있는 최소 16개의 가용 포트와 일치하는 SFP가 있어야 합니다. link:../san-config/fc-config-best-practices.html["FC 패브릭 구성 모범 사례"]에 대해 자세히 알아보십시오.
+* 링크 안정성을 위해 복제 경로에 있는 모든 HBA, SFP 및 스위치 포트는 동일한 고정 속도로 작동해야 합니다.
+
+
+.단계
+. 소스 및 타겟 클러스터에서 백엔드 이니시에이터로 사용할 FC 네트워크 어댑터를 식별합니다:
++
+[source, cli]
+----
+network fcp adapter show
+----
++
+다음 예에서 ssan-a50-06a-06b는 소스 클러스터이고 ssan-a50-07a-07b는 타겟 클러스터입니다. 소스 클러스터에 대한 샘플 출력은 다음과 같습니다.
+
++
+[listing]
+----
+ssan-a50-06a-06b::*>network fcp adapter show
+                  Connection  Port    Admin    Operational
+Node         Adapter  Established Address Status   Status
+------------ -------- ----------- ------- -------- ---------------
+ssan-a50-06a 3a       false       0       up       link not connected
+ssan-a50-06a 3b       false       0       up       link not connected
+ssan-a50-06a 3c       false       0       up       link not connected
+ssan-a50-06a 3d       false       0       up       link not connected
+ssan-a50-06b 3a       false       0       up       link not connected
+ssan-a50-06b 3b       false       0       up       link not connected
+ssan-a50-06b 3c       false       0       up       link not connected
+ssan-a50-06b 3d       false       0       up       link not connected
+----
++
+타겟 클러스터에 대한 샘플 출력은 다음과 같습니다.
+
++
+[listing]
+----
+ssan-a50-07a-07b::*>network fcp adapter show
+ssan-a50-07a 3a       false       0       up       link not connected
+ssan-a50-07a 3b       false       0       up       link not connected
+ssan-a50-07a 3c       false       0       up       link not connected
+ssan-a50-07a 3d       false       0       up       link not connected
+ssan-a50-07b 3a       false       0       up       link not connected
+ssan-a50-07b 3b       false       0       up       link not connected
+ssan-a50-07b 3c       false       0       up       link not connected
+ssan-a50-07b 3d       false       0       up       link not connected
+----
+. 소스 클러스터와 타겟 클러스터 모두에서 복제 관계의 각 노드에 이니시에이터 모드용 포트 2개를 구성하십시오:
++
+.. 어댑터를 오프라인 상태로 전환:
++
+[source, cli]
+----
+network fcp adapter modify -node <node_name> -adapter <adapter> -status-admin down
+----
++
+다음 예에서는 포트 3c가 오프라인으로 전환됩니다.
+
++
+[listing]
+----
+network fcp adapter modify -node ssan-a50-06a -adapter 3c -status-admin down
+----
+.. 어댑터를 이니시에이터 모드로 구성하십시오:
++
+[source, cli]
+----
+system hardware unified-connect modify -t initiator <adapter_port>
+----
++
+어댑터 수정 사항을 적용하기 위해 노드를 재부팅하지 마십시오. 필요한 모든 어댑터를 구성하고 다시 온라인 상태로 전환한 후, 각 노드에 대해 스토리지 페일오버를 수행하여 변경 사항을 중단 없이 적용하십시오.
+
+.. 어댑터를 온라인으로 전환합니다.
++
+[source, cli]
+----
+network fcp adapter modify -node <node_name> -adapter <adapter> -status-admin up
+----
+.. 이니시에이터 모드로 구성해야 하는 각 포트에 대해 이 단계를 반복하십시오.
+.. 모든 포트가 온라인 상태이고 이니시에이터로 구성되어 있는지 확인하십시오:
++
+[source, cli]
+----
+network fcp adapter show
+----
+
+
+. FC 복제를 위해 구성 중인 각 HA 쌍에 대해 수동 스토리지 페일오버를 수행합니다.
++
+스토리지 페일오버로 인해 운영 중단이 발생하는 노드 재부팅 없이 어댑터 수정이 완료됩니다.
+
++
+.. HA 쌍에서 첫 번째 노드에 대해 스토리지 페일오버를 수행합니다:
++
+[source, cli]
+----
+storage failover takeover
+----
+.. 스토리지 장애 조치가 성공했는지 확인하십시오:
++
+[source, cli]
+----
+storage failover show-takeover
+----
++
+자동 반환 기능은 기본적으로 활성화되어 있습니다. 노드 인수가 완료되고 재부팅이 끝나면 파트너 노드가 자동으로 반환을 시작합니다.
+
+.. 첫 번째 노드에 대한 자동 반환이 완료되면 HA 쌍의 두 번째 노드에서 스토리지 페일오버를 수행합니다.
+.. FC 복제를 위해 구성 중인 각 HA 쌍에 대해 스토리지 페일오버 단계를 반복합니다.
+
+
+. FC 복제를 위해 구성 중인 모든 노드의 네트워크 FC 포트가 온라인 상태이고 이니시에이터로 구성되어 있는지 확인하십시오:
++
+[source, cli]
+----
+system hardware unified-connect show
+----
+. 내장 시스템의 FC 어댑터가 타겟으로 구성되어 있는지 확인하십시오:
++
+[source, cli]
+----
+network fcp adapter show
+----
++
+온보드 시스템 어댑터는 기본적으로 타겟으로 구성됩니다.
+
+. FC 타겟 포트와 이니시에이터 포트 간의 FC 배선을 완료하려면 권장 케이블링 다이어그램을 참조하십시오.
+. 케이블 연결 후 각 HA 쌍에 대해 FC 타겟 및 이니시에이터 포트를 조닝합니다.
++
+각 구역에는 하나의 이니시에이터와 하나의 타겟만 있어야 합니다.
+
++
+다음은 노드 san-a50-06a/6b와 san-a50-07a/7b 사이에 생성된 존의 예입니다:
+
++
+[listing]
+----
+zone-6a-7a-1 → Ports san-a50-06a:3c & san-a50-07a:3a
+zone-6a-7a-2 → Ports san-a50-06a:3d & san-a50-07a:3a
+zone-6a-7a-3 → Ports san-a50-06a:3c & san-a50-07a:3b
+zone-6a-7a-4 → Ports san-a50-06a:3d & san-a50-07a:3b
+zone-6b-7a-1 → Ports san-a50-06b:3c & san-a50-07a:3a
+zone-6b-7a-2 → Ports san-a50-06b:3d & san-a50-07a:3a
+zone-6b-7a-3 → Ports san-a50-06b:3c & san-a50-07a:3b
+zone-6b-7a-4 → Ports san-a50-06b:3d & san-a50-07a:3b
+zone-6a-7b-1 → Ports san-a50-06a:3c & san-a50-07b:3a
+zone-6a-7b-2 → Ports san-a50-06a:3d & san-a50-07b:3a
+zone-6a-7b-3 → Ports san-a50-06a:3c & san-a50-07b:3b
+zone-6a-7b-4 → Ports san-a50-06a:3d & san-a50-07b:3b
+zone-6b-7b-1 → Ports san-a50-06b:3c & san-a50-07b:3a
+zone-6b-7b-2 → Ports san-a50-06b:3d & san-a50-07b:3a
+zone-6b-7b-3 → Ports san-a50-06b:3c & san-a50-07b:3b
+zone-6b-7b-4 → Ports san-a50-06b:3d & san-a50-07b:3b
+----
+. 소스 클러스터에 백엔드 FC 타겟 네트워크 인터페이스(LIF)를 생성한 다음 타겟 클러스터에 생성합니다:
++
+[source, cli]
+----
+network interface create -vserver <SVM> -lif <fcp_backend_target_lif> -data-protocol fcp -home-node <home_node> -home-port <home_port> -status-admin up
+----
++
+다음 예에서는 백엔드 FC LIF가 클러스터 A: ssan-a50-06a에 생성됩니다.
+
++
+[listing]
+----
+network interface create -vserver ssan-a50-06a -lif fcp_backend_target_lif_1 -data-protocol fcp -home-node ssan-a50-06a -home-port 3a -status-admin up
+network interface create -vserver ssan-a50-06a -lif fcp_backend_target_lif_2 -data-protocol fcp -home-node ssan-a50-06a -home-port 3b -status-admin up
+network interface create -vserver ssan-a50-06b -lif fcp_backend_target_lif_1 -data-protocol fcp -home-node ssan-a50-06b -home-port 3a -status-admin up
+network interface create -vserver ssan-a50-06b -lif fcp_backend_target_lif_2 -data-protocol fcp -home-node ssan-a50-06b -home-port 3b -status-admin up
+----
++
+다음 예시에서는 백엔드 FC LIF가 클러스터 B에 생성됩니다: ssan-a50-07a
+
++
+[listing]
+----
+network interface create -vserver ssan-a50-07a -lif fcp_backend_target_lif_1 -data-protocol fcp -home-node ssan-a50-07a -home-port 3a -status-admin up
+network interface create -vserver ssan-a50-07a -lif fcp_backend_target_lif_2 -data-protocol fcp -home-node ssan-a50-07a -home-port 3b -status-admin up
+network interface create -vserver ssan-a50-07b -lif fcp_backend_target_lif_1 -data-protocol fcp -home-node ssan-a50-07b -home-port 3a -status-admin up
+network interface create -vserver ssan-a50-07b -lif fcp_backend_target_lif_2 -data-protocol fcp -home-node ssan-a50-07b -home-port 3b -status-admin up
+----
+. LIF가 생성되었는지 확인하십시오:
++
+[source, cli]
+----
+network interface show -vserver <SVM>
+----
+
+
+.다음 단계는 무엇입니까?
+FC를 백엔드 전송 프로토콜로 사용하여 link:create-replication-relationship-task.html["SnapMirror 복제 구성"]할 준비가 되었습니다.

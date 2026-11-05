@@ -287,6 +287,25 @@ ONTAP 9.6부터 지원됩니다
 
 
  a| 
+NVFail
+ a| 
+예
+
+ONTAP 9.20.1부터 지원됩니다.
+
+오리진에서 NVFAIL이 활성화된 경우 FlexCache 생성이 허용됩니다.
+
+link:https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_monitoring_and_protecting_database_validity_by_using_nvfail.html["NVFail에 대해 자세히 알아보세요"]
+ a| 
+예
+
+ONTAP 9.20.1부터 지원됩니다.
+
+ `volume modify` 명령의 `nvfail=on` 매개변수를 사용하면 오리진과 무관하게 언제든지 캐시 볼륨에서 NVFAIL을 활성화할 수 있습니다.
+
+
+
+ a| 
 ONTAP S3 NAS 버킷
  a| 
 예
@@ -295,7 +314,7 @@ ONTAP 9.12.1부터 지원됩니다
  a| 
 예
 
-ONTAP 9.18.1부터 지원됩니다.
+ONTAP 9.18.1부터 FlexGroup 오리진이 지원됩니다. ONTAP 9.20.1부터는 FlexVol 오리진도 지원됩니다.
 
 
 

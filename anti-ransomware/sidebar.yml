@@ -28,7 +28,7 @@ entries:
     url: "/anti-ransomware/respond-arpai.html"
   - title: 공격 후 데이터 복구
     url: "/anti-ransomware/recover-arpai.html"
-  - title: 스냅샷 설정 조정
+  - title: 스냅샷 응답 정책 및 설정을 구성합니다
     url: "/anti-ransomware/modify-snapshot-options-arpai.html"
   - title: ARP/AI를 업데이트합니다
     url: "/anti-ransomware/update-arpai.html"

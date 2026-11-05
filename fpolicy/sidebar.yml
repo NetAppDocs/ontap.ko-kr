@@ -50,6 +50,8 @@ entries:
       url: "/nas-audit/supported-file-operation-filter-fpolicy-nfsv3-concept.html"
     - title: FPolicy에서 NFSv4를 모니터링할 수 있는 파일 작업 및 필터 조합이 지원됩니다
       url: "/nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html"
+    - title: FPolicy가 S3에 대해 모니터링할 수 있는 지원되는 파일 작업 및 필터 조합
+      url: "/nas-audit/supported-file-operation-filter-fpolicy-s3.html"
     - title: ONTAP FPolicy 이벤트 구성 워크시트 완료
       url: "/nas-audit/fpolicy-event-config-worksheet-reference.html"
   - title: FPolicy 정책 구성을 계획합니다

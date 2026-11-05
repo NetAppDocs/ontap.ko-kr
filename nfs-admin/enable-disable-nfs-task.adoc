@@ -17,9 +17,6 @@ System Manager 또는 CLI를 사용하여 NFS 버전을 활성화 또는 비활�
 
 ONTAP 9.19.1부터 NFSv4.1과 NFSv4.2를 독립적으로 활성화 또는 비활성화할 수 있습니다. ONTAP 9.19.1 이전에는 NFSv4.1과 NFSv4.2를 함께 활성화 또는 비활성화할 수만 있었습니다. 기본적으로 관리자가 명시적으로 비활성화하지 않는 한 새 NFS 서비스가 생성될 때 NFSv4.1과 NFSv4.2가 모두 활성화됩니다.
 
-
-NOTE: NFSv4.2 파일 액세스 이벤트에 대한 FPolicy 모니터링은 지원되지 않습니다. FPolicy 모니터링을 구성하려면 SVM에서 NFSv4.2를 비활성화해야 합니다. 자세한 내용은 link:../nas-audit/supported-file-operation-filter-fpolicy-nfsv4-concept.html["ONTAP FPolicy가 NFSv4에 대해 모니터링하는 지원되는 파일 작업 및 필터 조합"]를 참조하십시오.
-
 [role="tabbed-block"]
 ====
 .시스템 관리자

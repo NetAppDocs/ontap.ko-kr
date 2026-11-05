@@ -13,6 +13,13 @@ ONTAP 9.10.1부터 클라우드 호스팅 응용 프로그램에서 및 를 link
 
 AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:configure-netapp-volume-encryption-concept.html["NVE(NetApp Volume Encryption) 키"] 데이터 SVM에만 해당.
 
+[NOTE]
+====
+ONTAP 9.20.1부터 관리자 범위 키 관리자를 통해 암호화된 볼륨을 이미 관리하고 있는 데이터 SVM에서 클라우드 키 관리자를 활성화하면 ONTAP은 해당 NVE 키를 새 데이터 SVM 키 관리자로 자동으로 마이그레이션합니다. 이 워크플로에서는 별도의  `security key-manager key migrate` 명령을 실행할 필요가 없습니다.
+
+이 자동 마이그레이션은 데이터 SVM에 적용됩니다. 관리자 SVM을 온보드 키 관리 또는 클러스터 범위 외부 키 관리에서 데이터 SVM 클라우드 키 관리자로 전환하는 경우, 먼저 해당 관리자 범위 전환 작업을 완료하십시오.
+
+====
 .이 작업에 대해
 클라우드 공급자를 사용한 키 관리는 CLI 또는 ONTAP REST API를 사용하여 설정할 수 있습니다.
 
@@ -30,7 +37,7 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 * ONTAP 클러스터 노드는 NVE를 지원해야 합니다.
 * link:../encryption-at-rest/install-license-task.html["VE(Volume Encryption) 및 MTEKM(Multi-tenant Encryption Key Management) 라이센스를 설치해야 합니다"].. 이 라이선스는 에 link:../system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP 1 을 참조하십시오"]포함되어 있습니다.
 * 클러스터 또는 SVM 관리자여야 합니다.
-* 데이터 SVM에는 암호화된 볼륨이 포함되어 있지 않아야 하며 키 관리자를 사용해야 합니다. 데이터 SVM에 암호화된 볼륨이 포함된 경우 KMS를 구성하기 전에 해당 볼륨을 마이그레이션해야 합니다.
+* ONTAP 9.20.1 이상 버전에서는 관리자 범위 키 관리자를 통해 NVE 키가 관리되는 경우 데이터 SVM에 암호화된 볼륨을 포함할 수 있습니다. ONTAP은 활성화 작업 중에 이러한 키를 자동으로 마이그레이션합니다. 이전 버전의 경우 클라우드 키 관리자를 구성하기 전에 키를 마이그레이션해야 합니다.
 
 
 
@@ -50,8 +57,9 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 ** `DescribeKey`
 ** `Encrypt`
 ** `Decrypt`
-를 누릅니다
-자세한 내용은 의 AWS 설명서를 참조하십시오 link:https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant["보조금"^].
++
+자세한 내용은 link:https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant["보조금"^]에 대한 AWS 설명서를 참조하십시오.
+
 
 
 
@@ -107,8 +115,12 @@ AWS KMS, AKV 및 Cloud KMS를 사용하여 보호할 수 있습니다 link:confi
 
 --
 ====
-하나 이상의 암호화된 볼륨이 데이터 SVM용으로 이미 구성되어 있고 admin SVM 온보드 키 관리자가 해당 NVE 키를 관리하는 경우 이러한 키를 외부 키 관리 서비스로 마이그레이션해야 합니다. CLI에서 이 작업을 수행하려면 다음 명령을 실행합니다.
-`security key-manager key migrate -from-Vserver _admin_SVM_ -to-Vserver _data_SVM_`데이터 SVM의 모든 NVE 키가 성공적으로 마이그레이션될 때까지 테넌트의 데이터 SVM에 대해 암호화된 새 볼륨을 생성할 수 없습니다.
+ONTAP 9.20.1 버전부터 데이터 SVM에 대해 하나 이상의 암호화 볼륨이 이미 구성되어 있고 해당 NVE 키를 관리자 범위 키 관리자가 관리하는 경우, ONTAP은 활성화 작업 중에 해당 키를 자동으로 마이그레이션합니다. 별도의 `security key-manager key migrate` 명령을 실행할 필요가 없습니다.
+
+ONTAP 9.20.1 이전 버전의 경우, 해당 키를 외부 키 관리 서비스로 마이그레이션해야 합니다. CLI를 사용하여 이 작업을 수행하려면 다음 명령을 실행하십시오:
+`security key-manager key migrate -from-Vserver _admin_SVM_ -to-Vserver _data_SVM_`
+
+테넌트 데이터 SVM의 모든 NVE 키가 성공적으로 마이그레이션될 때까지 테넌트의 데이터 SVM에 대한 새 암호화 볼륨을 생성할 수 없습니다.
 
 .관련 정보
 * link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html["Cloud Volumes ONTAP용 NetApp 암호화 솔루션으로 볼륨 암호화"^]

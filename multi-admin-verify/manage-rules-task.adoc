@@ -98,7 +98,7 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 
 
 | 규칙을 만듭니다  a| 
-`security multi-admin-verify rule create -operation _"protected_operation"_ [-query _operation_subset_] [_parameters_]`
+`security multi-admin-verify rule create -operation _"protected_operation"_ [-query _operation_subset_] [-approval-groups _group1_[,_group2_…]] [_parameters_]`
 
 
 
@@ -108,6 +108,8 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 * 예 *: 다음 규칙에 따라 루트 볼륨을 삭제해야 합니다.
 
 `security multi-admin-verify rule create  -operation "volume delete" -query "-vserver vs0"`
+
+ `-approval-groups` 매개변수를 사용하여 이 규칙에 대해 하나 이상의 MAV 승인 그룹을 지정하고, 이 작업에 대해서만 전역 승인 그룹 설정을 재정의하십시오.
 
 
 
@@ -124,7 +126,55 @@ NOTE: 모든 '보안 멀티 관리-검증 규칙' 명령은 '보안 멀티-관�
 | 규칙 표시  a| 
 '보안 멀티-관리-검증 규칙 표시'
 
+
+
+| MAV 보호 대상 작업 전체 보기  a| 
+`security multi-admin-verify registered-operations show`
+
 |===
+
+
+[[view-available-mav-protectable-operations]]
+== 사용 가능한 MAV 보호 가능 작업 보기
+
+ONTAP 9.20.1부터는 현재 클러스터에서 MAV로 보호할 수 있는 모든 작업을 표시할 수 있습니다. 이를 통해 외부 문서를 참조하지 않고도 유효한 작업 이름을 파악하여 규칙을 생성할 수 있습니다.
+
+`security multi-admin-verify registered-operations show`
+
+* 예: *
+
+[listing]
+----
+cluster1::> security multi-admin-verify registered-operations show
+Operation
+-----------------------------------------
+cluster peer delete
+security login delete
+security login modify
+volume delete
+volume move start
+volume snapshot delete
+...
+----
+
+NOTE: 수행 가능한 작업 목록은 ONTAP 버전 및 클러스터 유형에 따라 다릅니다.
+
+ `-operation` 매개변수를 사용하여 와일드카드 일치를 포함하여 작업 이름으로 출력을 필터링할 수 있습니다.
+
+* 예: *
+
+[listing]
+----
+cluster1::> security multi-admin-verify registered-operations show -operation security*
+Operation
+----------------------------------
+security anti-ransomware volume attack clear-suspect
+security anti-ransomware volume disable
+security anti-ransomware volume event-log modify
+security audit modify
+security login delete
+...
+----
 .관련 정보
 * link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+multi-admin-verify+rule["보안 다중 관리자 확인 규칙"^]
 * link:https://docs.netapp.com/us-en/ontap-cli/security-login-modify.html["보안 로그인 수정"^]

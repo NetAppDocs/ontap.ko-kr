@@ -1,0 +1,68 @@
+---
+permalink: s3-config/delete-recover-bucket-with-data-task.html 
+sidebar: sidebar 
+keywords: s3, bucket, system manager, cli, delete, restore, recover 
+summary: ONTAP 9.20.1 버전부터는 오브젝트 스토어 서버에서 버킷 삭제 작업을 예약하여 버킷을 먼저 비우지 않고도 삭제할 수 있습니다. 
+---
+= 오브젝트가 포함된 ONTAP S3 버킷을 삭제합니다.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1부터는 오브젝트 스토어 서버에서 버킷 삭제 작업을 예약하여 버킷을 먼저 비우지 않고도 삭제할 수 있습니다. 이는 구성 가능한 보존 기반 복구 기간을 사용하여 수행하며, 이를 통해 보존 기간이 만료되기 전에 버킷을 복구할 수 있습니다.
+
+비어 있지 않은 버킷을 삭제할 수 있는 기능은 버킷을 제거하기 전에 수동으로 오브젝트별 정리를 하지 않아도 되므로 버킷 폐기를 간소화하고, 만료 백로그를 줄이며, 용량을 더 빨리 재사용할 수 있도록 합니다.
+
+.시작하기 전에
+* 클러스터 관리자 또는 SVM 관리자이어야 합니다.
+* advanced 권한 수준이어야 합니다.
+
+
+
+
+[[delete-a-bucket-that-contains-objects]]
+== 오브젝트가 포함된 버킷을 삭제합니다.
+
+보존 기간을 설정하여 버킷을 먼저 비우지 않고도 삭제되도록 예약할 수 있습니다. 기본적으로 보존 기간은 12시간으로 설정됩니다.
+
+.단계
+이 작업은 System Manager 또는 ONTAP CLI에서 수행할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
+. *스토리지 > 버킷*으로 이동하여 삭제할 버킷을 찾으십시오.
+. 버킷 이름 옆을 클릭하고 *삭제*를 선택합니다.
+. 버킷이 비어 있지 않은 경우, *버킷 삭제* 창에서 데이터를 삭제하고 버킷을 비우는 옵션을 선택한 다음 *삭제*를 선택하십시오.
+
+
+--
+.CLI를 참조하십시오
+--
+. 버킷이 영구적으로 삭제될 보존 기간을 지정하십시오:
++
+`object-store-server create -vserver <SVM name> -bucket-delete-retention-hours <integer>`
+
+. 버킷 삭제 일정을 시작합니다:
++
+`object-store-server bucket delete -bucket <bucket name> -delete-objects tru`e
+
+
+
+--
+====
+
+
+[[recover-a-deleted-bucket]]
+== 삭제된 버킷 복구
+
+버킷이 실수로 삭제된 경우, 지정한 보존 기간 동안 ONTAP CLI를 사용하여 복구할 수 있습니다.
+
+. 삭제된 버킷을 복구하려면 다음 명령어를 입력하십시오.
++
+`object-store-server bucket recover-deleted-bucket -bucket <bucket name>`
+
+

@@ -2,7 +2,7 @@
 permalink: data-protection/calculate-reclaimable-space-task.html 
 sidebar: sidebar 
 keywords: snapshot, snapshot copy, calculate, space, reclaimable 
-summary: ONTAP 9.10.1부터 System Manager를 사용하여 삭제할 스냅샷을 선택하고 삭제하기 전에 재확보 가능한 공간을 계산할 수 있습니다. 
+summary: 삭제할 스냅샷을 선택하고 삭제하기 전에 회수 가능한 공간을 계산할 수 있습니다. 
 ---
 = 스냅샷을 삭제하기 전에 재확보 가능한 공간을 계산합니다
 :allow-uri-read: 
@@ -11,12 +11,32 @@ summary: ONTAP 9.10.1부터 System Manager를 사용하여 삭제할 스냅샷�
 
 
 [role="lead"]
-ONTAP 9.10.1부터 System Manager를 사용하여 삭제할 스냅샷을 선택하고 삭제하기 전에 재확보 가능한 공간을 계산할 수 있습니다.
+삭제할 스냅샷을 선택하고 삭제하기 전에 회수 가능한 공간을 계산할 수 있습니다.
+
+ONTAP 9.20.1 이전 버전에서는 FlexVol 볼륨의 경우 회수 가능 공간 계산이 지원되지만, FlexGroup 볼륨의 경우 FlexGroup 구성 볼륨 전체의 스냅샷 사용량을 수동으로 합산해야 합니다. ONTAP 9.20.1부터는 FlexGroup 볼륨의 스냅샷에 대한 회수 가능 공간을 계산할 수 있습니다.
 
 .단계
+이 작업은 System Manager 또는 ONTAP CLI에서 수행할 수 있습니다.
+
+[role="tabbed-block"]
+====
+.시스템 관리자
+--
 . 스토리지 > 볼륨 * 을 클릭합니다.
 . 스냅샷을 삭제할 볼륨을 선택합니다.
 . *스냅샷*을 클릭하세요.
 . 스냅샷을 하나 이상 선택합니다.
 . 회수 가능 공간 계산 * 을 클릭합니다.
 
+
+--
+.CLI를 참조하십시오
+--
+. 재사용 가능한 공간을 계산하십시오:
++
+`volume snapshot compute-reclaimable -vserver <svm_name> -volume <volume_name> -snapshots <snap1,snap2,snap3>`
+
+
+
+--
+====

@@ -1,0 +1,31 @@
+---
+permalink: san-admin/fc-sp-3-security-support.html 
+sidebar: sidebar 
+keywords: fc-sp-3, edif, support, fc, security 
+summary: 'ONTAP 9.20.1부터 ONTAP은 특정 ONTAP 시스템에서 Broadcom 보안 호스트 버스 어댑터(HBA)에 대해 Fibre Channel 보안 프로토콜 3(FC-SP-3) 인증 및 암호화를 지원합니다.' 
+---
+= FC-SP-3 보안에 대한 ONTAP 지원에 대해 알아보십시오.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1부터 ONTAP은 특정 ONTAP 시스템에서 Broadcom 보안 호스트 버스 어댑터(HBA)에 대한 Fibre Channel Security Protocol 3(FC-SP-3) 인증 및 암호화를 지원합니다. FC-SP-3는 하드웨어 수준의 암호화 및 장치 인증을 제공하여 FC 및 NVMe/FC 호스트와 ONTAP 스토리지 시스템 간에 전송되는 데이터를 가로채기, 변조 및 무단 액세스로부터 보호하는 동시에 성능을 유지하고 T11 FC 보안 표준을 준수합니다.
+
+다음 Broadcom 보안 HBA는 FC-SP-3를 지원합니다:
+
+* 대상 카드: LPe38104
+* 이니시에이터 카드: LPe38102 (64G), LPe37102 (32G)
+
+
+link:https://hwu.netapp.com/["NetApp Hardware Universe를 참조하십시오"^]을(를) 사용하여 특정 ONTAP 시스템이 필요한 HBA를 지원하는지 확인하십시오.
+
+ `fcp adapter show -fields transport-security-supported` 명령어를 사용하여 HBA가 FC-SP-3을 지원하는지 여부를 확인할 수도 있습니다. FC-SP-3이 지원되는 경우 *transport-security-supported* 필드는 *true*입니다.
+
+
+
+[[enable-fc-sp-3-support]]
+== FC-SP-3 지원 활성화
+
+구성이 FC-SP-3를 지원하는 경우, 네트워크 인터페이스(LIF)를 link:../networking/create_a_lif.html["생성"] 또는 link:../networking/modify_a_lif.html["수정"]할 때  `-fc-transport-security option`을 *mandatory* 또는 *preferred*로 설정하여 활성화할 수 있습니다. FC-SP-3를 지원하지 않는 호스트가 스토리지 시스템에 액세스하지 못하도록 옵션을 *mandatory*로 설정하십시오. FC-SP-3를 설정할 수 없는 경우에도 호스트 액세스를 허용하면서 ONTAP이 FC-SP-3 연결을 시도하도록 하려면 옵션을 *preferred*로 설정하십시오.

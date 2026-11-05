@@ -17,8 +17,7 @@ TSSE는 ONTAP 9.8에서 도입되었으며 새로 생성된 씬 프로비저닝 
 
 다음 플랫폼에는 온도에 따른 저장 효율성이 적용되지 않습니다.
 
-* AFF A 시리즈 시스템: AFF A90, AFF A70, AFF A50, AFF A30
-* AFF A1K 를 참조하십시오
+* AFF A 시리즈 시스템: AFF A1K, AFF A90, AFF A70, AFF A50, AFF A30
 * AFF C-Series 시스템: AFF C80, AFF C60, AFF C30
 * FAS 시스템: FAS90, FAS70, FAS50
 

@@ -10,6 +10,8 @@ entries:
     url: "/volumes/create-volume-task.html"
   - title: 대용량 및 대용량 파일 지원
     url: "/volumes/enable-large-vol-file-support-task.html"
+  - title: 대용량 디렉터리 최대 크기 활성화
+    url: "/volumes/enable-large-dir-max-support-task.html"
   - title: SAN 볼륨
     entries:
     - title: SAN 볼륨 프로비저닝 개요

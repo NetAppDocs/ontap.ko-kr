@@ -11,7 +11,15 @@ summary: ONTAP에는 몇 가지 기본 보호 정책이 포함되어 있으며, 
 
 
 [role="lead"]
-ONTAP에는 데이터 보호 관계에 사용할 수 있는 몇 가지 기본 보호 정책이 포함되어 있습니다. 사용하는 정책은 보호 관계 유형에 따라 다릅니다.
+ONTAP에는 데이터 보호 관계에 사용할 수 있는 기본 보호 정책이 포함되어 있습니다. 사용할 정책은 보호 관계 유형에 따라 다릅니다.
+
+ONTAP 9.20.1부터 지원되는 비동기 데이터 보호 정책을 사용하여 link:configure-backend-fc-replication.html["기존 FC 패브릭을 통해 백엔드 SnapMirror 비동기 복제를 구성합니다"]할 수 있습니다. 다음 기본 보호 정책은 백엔드 FC 복제를 지원합니다.
+
+* 비동기식
+* MirrorAllSnapshots을 선택합니다
+* MirrorAndVault를 선택합니다
+* XDPDefault
+
 
 기본 정책이 데이터 보호 관계 요구 사항을 충족하지 못하는 경우 다음을 수행할 수 link:create-custom-replication-policy-concept.html["사용자 지정 정책을 만듭니다"]있습니다.
 

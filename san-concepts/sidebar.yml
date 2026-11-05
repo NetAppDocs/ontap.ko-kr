@@ -22,6 +22,8 @@ entries:
     url: "/san-admin/isns-concept.html"
 - title: FC를 통한 SAN 프로비저닝
   url: "/san-admin/san-provisioning-fc-concept.html"
+- title: FC-SP-3 보안 지원
+  url: "/san-admin/fc-sp-3-security-support.html"
 - title: NVMe를 이용한 SAN 프로비저닝
   url: "/san-admin/san-provisioning-nvme-concept.html"
 - title: SAN 다중 경로 및 자동 LIF 페일오버 지원

@@ -34,9 +34,12 @@ summary: 물리적 또는 논리적 포트와 연결된 IP 주소인 LIF를 생�
 .ONTAP 버전별 LIF 생성 기능 지원
 LIF 생성 관련 기능에 대한 지원은 ONTAP 버전에 따라 다릅니다.
 
-[cols="2"]
+[cols="1,6"]
 |===
 | ONTAP 버전부터 | 피처 
+
+
+| 9.20.1 | AFF 및 FAS 시스템의 Broadcom 보안 호스트 버스 어댑터(HBA)에 대한 Fibre Channel Security Protocol 3(FC-SP-3) 인증 및 암호화를 지원합니다. LIF를 생성할 때 FC-SP-3를 활성화하려면 System Manager에서 *Transport security* 옵션을 선택하거나 CLI에서  `-fc-transport-security` 옵션을 사용하십시오. link:../san-admin/fc-sp-3-security-support.html["ONTAP의 FC-SP-3 지원"]에 대해 자세히 알아보십시오. 
 
 
 | 9.12.1 | System Manager에서 RDMA를 통한 NFS 구성용 네트워크 인터페이스 생성을 지원합니다. 자세한 내용은 xref:../nfs-rdma/configure-lifs-task.html[RDMA를 통해 NFS에 대해 LIFS를 구성합니다]를 참조하십시오. 
@@ -95,19 +98,20 @@ System Manager 또는 CLI를 사용하여 LIF를 생성하십시오.
 +
 .. 데이터
 .. 인터클러스터
-.. SVM 관리
+.. 스토리지 VM 관리
 
 
 . 프로토콜을 선택합니다.
 +
-.. SMB/CIFS 및 NFS
+.. NFS, SMB/CIFS 및 S3
 .. iSCSI
 .. FC
 .. NVMe/FC
 .. NVMe/TCP
 
 
-. LIF의 이름을 지정하거나 이전 선택 사항에서 생성한 이름을 그대로 사용합니다.
+. LIF에 사용할 *스토리지 VM*을 선택하세요.
+. LIF의 이름을 지정하거나 생성된 이름을 그대로 사용하십시오.
 . 홈 노드를 수락하거나 드롭다운을 사용하여 하나를 선택합니다.
 . 선택한 SVM의 IPspace에서 하나 이상의 서브넷이 구성된 경우 서브넷 드롭다운이 표시됩니다.
 +
@@ -121,7 +125,8 @@ System Manager 또는 CLI를 사용하여 LIF를 생성하십시오.
 
 
 . 브로드캐스트 도메인에서 홈 포트를 자동으로(권장) 선택하거나 드롭다운 메뉴에서 선택합니다. 홈 포트 컨트롤은 브로드캐스트 도메인 또는 서브넷 선택에 따라 표시됩니다.
-. 네트워크 인터페이스를 저장합니다.
+. FC 또는 NVMe/FC LIF를 생성하고 ONTAP 9.20.1 이상을 실행 중인 경우 FC-SP-3 *전송 보안* 옵션을 선택하십시오.
+. 추가 * 를 선택합니다.
 
 
 --

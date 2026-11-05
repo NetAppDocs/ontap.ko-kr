@@ -37,8 +37,6 @@ Cloud Volumes ONTAP
 * Cloud Sync
 * 오브젝트 잠금, 거버넌스 및 규정 준수(ONTAP 9.14.1부터)
 * link:ontap-s3-supported-actions-reference.html#bucket-operations["개체 버전 관리"] (ONTAP 9.11.1부터)
-* 미러링되지 않은 MetroCluster 애그리게이트(ONTAP 9.12.1부터)
-* 미러링된 MetroCluster 애그리게이트(ONTAP 9.14.1부터)
 * link:../s3-snapmirror/index.html["SnapMirror S3"] (ONTAP 9.10.1부터)
 * SnapMirror(NAS 볼륨만 해당, ONTAP 9.12.1부터)
 * SnapLock(NAS 볼륨 전용, ONTAP 9.14.1부터)
@@ -50,7 +48,7 @@ Cloud Volumes ONTAP
 * SnapMirror (동기 및 비동기)
 * SnapMirror 클라우드
 * SVM 재해 복구
-* SyncMirror (SyncMirror 미러링된 집계는 ONTAP 9.14.1부터 MetroCluster 구성에서 지원됩니다. SyncMirror MetroCluster 구성 외부에서는 지원되지 않습니다.)
+* SyncMirror (MetroCluster 구성 제외)
 
 
 
@@ -72,9 +70,13 @@ Cloud Volumes ONTAP
  a| 
 MetroCluster 환경
  a| 
--
+* 버킷 수명 주기 관리(ONTAP 9.20.1부터 지원)
+* SnapMirror S3 (ONTAP 9.20.1 버전부터 지원)
+* SyncMirror (ONTAP 9.14.1부터 미러링된 MetroCluster 애그리게이트)
+* 미러링되지 않은 MetroCluster 애그리게이트(ONTAP 9.12.1부터)
+
  a| 
-SnapMirror S3
+-
 
 
 
@@ -108,21 +110,30 @@ link:../performance-admin/policy-group-assignment-restrictions.html["QoS 정책 
 
 
  a| 
+FabricPool
+ a| 
+* FabricPool 클라우드 계층(link:../s3-config/index.html["네이티브 S3 전용"])
+* FabricPool 로컬 계층(link:../s3-multiprotocol/index.html["NAS 볼륨만"])
+
+ a| 
+* FabricPool 클라우드 계층(NAS 볼륨만 해당)
+* FabricPool 로컬 계층(네이티브 S3 전용)
+
+
+
+
+ a| 
 추가 기능
  a| 
 * 볼륨 이동은 FlexGroup 볼륨을 구성하는 개별 멤버 볼륨에 대해 지원됩니다.
 * link:../s3-audit/index.html["S3 이벤트를 감사합니다"] (ONTAP 9.10.1부터)
 * link:../s3-config/create-bucket-lifecycle-rule-task.html["버킷 수명 주기 관리"] (ONTAP 9.13.1부터)
-* FabricPool 클라우드 계층(link:../s3-config/index.html["네이티브 S3 전용"])
-* FabricPool 로컬 계층(link:../s3-multiprotocol/index.html["NAS 볼륨만"])
 * link:../flexcache/supported-unsupported-features-concept.html#supported-features["FlexCache 볼륨"](ONTAP 9.18.1부터)
 
  a| 
 * FPolicy를 참조하십시오
 * Qtree
 * 할당량
-* FabricPool 클라우드 계층(NAS 볼륨만 해당)
-* FabricPool 로컬 계층(네이티브 S3 전용)
 
 
 |===

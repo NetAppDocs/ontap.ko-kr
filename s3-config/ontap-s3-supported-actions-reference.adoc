@@ -29,6 +29,13 @@ NOTE: 이러한 S3 작업은 ONTAP에서 네이티브 S3 버킷을 사용할 때
 * `x-amz-date`
 
 
+ONTAP 9.20.1부터 S3 NAS 버킷에 대해 다음과 같은 체크섬 헤더가 지원됩니다:
+
+* `x-amz-checksum-algorithm`
+* `x-amz-checksum-crc64nvme`
+* `x-amz-checksum-type`
+
+
 
 
 [[bucket-operations]]
@@ -154,6 +161,13 @@ DeleteObjects 를 클릭합니다
 If-Match
 
 |===
+ONTAP 9.20.1 버전부터 ONTAP S3는 S3 NAS 버킷에 대해 유연한 체크섬을 지원합니다.
+
+* 클라이언트가 요청에 체크섬 헤더를 포함할 경우 ONTAP은 체크섬을 검증하고 저장한 후 반환합니다.
+* CRC-64NVME 알고리즘과  `FULL_OBJECT` 체크섬 유형만 지원됩니다.
+* 유연한 체크섬 지원은 S3 NAS 버킷에만 적용됩니다.
+
+
 ONTAP 9.9.1부터 ONTAP S3는 오브젝트 메타데이터 및 태그 지정을 지원합니다.
 
 * PutObject 및 CreateMultipartUpload 를 사용하여 키-값 쌍을 포함합니다 `x-amz-meta-<key>.`
@@ -276,7 +290,7 @@ ONTAP S3는 다음과 같은 추가 URI 쿼리 매개변수를 지원합니다.
 * `response-expires`
 
 
-그리고 이 추가 요청 헤더는 다음과 같습니다.
+그리고 다음과 같은 추가 요청 헤더가 있습니다.
 
 * 범위
 
@@ -289,7 +303,7 @@ ONTAP S3는 다음과 같은 추가 URI 쿼리 매개변수를 지원합니다.
  a| 
 GetObjectAttributes
 
-ONTAP S3는 다음 추가 헤더를 지원합니다.
+ONTAP S3는 이 요청에 대한 모든 일반적인 매개변수와 헤더를 지원하며, ONTAP S3는 다음 추가 헤더도 지원합니다:
 
 * `x-amz-object-attributes`
 
@@ -302,7 +316,7 @@ ONTAP S3는 다음 추가 헤더를 지원합니다.
 | GetObjectTagging | ONTAP 9.9.1 
 
 
-| HeadObject 를 선택합니다 | ONTAP 9.8 
+| HeadObject ONTAP S3는 이 요청에 대한 모든 일반적인 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
  a| 
@@ -410,7 +424,7 @@ ONTAP S3는 다음 추가 헤더를 지원합니다.
 | PutObjectTagging | ONTAP 9.9.1 
 
 
-| 업로드 파트 | ONTAP 9.8 
+| UploadPart ONTAP S3는 이 요청에 대한 모든 일반적인 매개변수와 헤더를 지원합니다. | ONTAP 9.8 
 
 
  a| 
@@ -461,6 +475,25 @@ ONTAP S3는 다음과 같은 추가 URI 매개변수를 지원합니다.
 
 [[s3-actions-by-release]]
 == 릴리즈별 S3 작업
+
+.ONTAP 9.20.1
+ONTAP 9.20.1부터 FlexCache 볼륨의 S3 NAS 버킷은 S3 `CopyObject` 및 `UploadPartCopy` API를 사용하여 서버 측 오브젝트 복사 작업을 지원합니다. 동일한 FlexCache NAS 버킷 내에서 오브젝트를 복사하거나 FlexGroup 볼륨으로 지원되는 S3 NAS 버킷에서 FlexCache NAS 버킷으로 복사할 수 있습니다. FlexVol 볼륨으로 지원되는 S3 NAS 버킷에서 FlexCache NAS 버킷으로, 두 FlexCache NAS 버킷 간에, 또는 FlexCache NAS 버킷에서 비-FlexCache NAS 버킷으로의 복사는 지원되지 않습니다.
+
+ONTAP 9.20.1은 S3 NAS 버킷에 대해 CRC-64NVME 알고리즘을 사용하는 유연한 체크섬 지원을 추가합니다. 클라이언트가 요청에 체크섬 헤더를 포함할 경우 ONTAP은 체크섬을 검증, 저장 및 반환합니다. 다음 작업은 유연한 체크섬 헤더를 지원합니다:
+
+* PutObject 를 선택합니다
+* CreateMultptUpload 를 클릭합니다
+* 업로드 파트
+* CompleteMultipartUpload를 클릭합니다
+* CopyObject 를 선택합니다
+* 업로드파트 복사
+* GetObject 를 참조하십시오
+* HeadObject 를 선택합니다
+* ListObjectsV2
+* 목록 파트
+
+
+CRC-64NVME 알고리즘과 FULL_OBJECT 체크섬 유형만 지원됩니다. 유연한 체크섬 지원은 S3 NAS 버킷에서만 사용할 수 있습니다.
 
 .ONTAP 9.14.1
 ONTAP 9.14.1에는 S3 오브젝트 잠금 지원이 추가되었습니다.

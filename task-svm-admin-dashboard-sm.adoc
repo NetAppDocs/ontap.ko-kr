@@ -60,6 +60,5 @@ ONTAP System Manager 대시보드가 열립니다.
 
 .관련 정보
 * link:concepts/cluster-svm-administrators-concept.html["클러스터 및 SVM 관리"]
-* link:task_cp_dashboard_tour.html#performance["ONTAP System Manager 대시보드(성능 섹션)에서 클러스터 관리에 대해 알아보십시오."]
 * link:volumes/manage-volumes-task.html["System Manager를 사용하여 ONTAP 볼륨 관리"]
 

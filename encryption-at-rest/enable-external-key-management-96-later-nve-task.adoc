@@ -37,6 +37,15 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 
 에 대한 자세한 내용은 `security key-manager key migrate` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-key-migrate.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
+[NOTE]
+====
+ONTAP 9.20.1부터 데이터 SVM에 외부 키 관리자를 구성할 때 ONTAP은 관리자 범위 키 관리자가 현재 관리 중인 모든 NVE 키를 자동으로 마이그레이션할 수 있습니다. 이 워크플로에서는 별도의 `security key-manager key migrate` 명령을 실행할 필요가 없습니다.
+
+데이터 SVM에 이미 암호화된 볼륨이 포함되어 있는 경우 ONTAP은 활성화 작업의 일부로 키를 마이그레이션합니다. 키 저장소는 별도의 마이그레이션 단계 없이 비활성 상태에서 활성 상태로 직접 전환됩니다.
+
+이 워크플로는 데이터 SVM에만 지원됩니다. 관리자 SVM(클러스터 범위)에는 지원되지 않습니다.
+
+====
 .시작하기 전에
 * KMIP SSL 클라이언트 및 서버 인증서를 설치해야 합니다.
 * KMIP 서버는 각 노드의 노드 관리 LIF에서 접근 가능해야 합니다.
@@ -57,7 +66,7 @@ ONTAP 9.11.1부터 기본 키 서버당 최대 3개의 보조 키 서버를 추�
 
 +
 
-NOTE: 그만큼 `security key-manager external enable` 명령은 다음을 대체합니다. `security key-manager setup` 명령.  클러스터 로그인 프롬프트에서 명령을 실행하면, `_admin_SVM_` 현재 클러스터의 관리 SVM으로 기본 설정됩니다.  당신은 실행할 수 있습니다 `security key-manager external modify` 외부 키 관리 구성을 변경하는 명령입니다.
+NOTE:  `security key-manager external enable` 명령은 ONTAP 9.6부터  `security key-manager setup` 명령을 대체합니다. 클러스터 로그인 프롬프트에서 명령을 실행하면  `_admin_SVM_`은(는) 현재 클러스터의 admin SVM으로 기본 설정됩니다.  `security key-manager external modify` 명령을 실행하여 외부 키 관리 구성을 변경할 수 있습니다.
 
 +
 다음 명령을 실행하면 외부 키 서버가 3개인 'cluster1'에 대한 외부 키 관리가 활성화됩니다. 첫 번째 키 서버는 호스트 이름과 포트를 사용하여 지정되고, 두 번째 키는 IP 주소와 기본 포트를 사용하여 지정되며, 세 번째 키는 IPv6 주소와 포트를 사용하여 지정됩니다.
@@ -67,7 +76,7 @@ NOTE: 그만큼 `security key-manager external enable` 명령은 다음을 대�
 ----
 clusterl::> security key-manager external enable -vserver cluster1 -key-servers ks1.local:15696,10.0.0.10,[fd20:8b1e:b255:814e:32bd:f35c:832c:5a09]:1234 -client-cert AdminVserverClientCert -server-ca-certs AdminVserverServerCaCert
 ----
-. SVM을 위한 키 관리자 구성:
+. SVM용 키 관리자를 구성합니다:
 +
 'Security key-manager external enable - vserver SVM-key-servers host_name | ip_address: port,... -client-cert client_certificate-server-ca-cert server_CA_certificates'를 참조하십시오
 
@@ -91,7 +100,7 @@ svm1l::> security key-manager external enable -vserver svm1 -key-servers keyserv
 +
 [NOTE]
 ====
-명령을 사용하여 추가 SVM을 구성할 수도 있습니다 `security key-manager external add-servers`.  `security key-manager external add-servers`명령이 `security key-manager add` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager external add-servers` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-add-servers.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+ `security key-manager external add-servers` 명령을 사용하여 추가 SVM을 구성할 수도 있습니다.  `security key-manager external add-servers` 명령은 ONTAP 9.6부터  `security key-manager add` 명령을 대체합니다. link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-add-servers.html["ONTAP 명령 참조입니다"^]에서  `security key-manager external add-servers`에 대해 자세히 알아보십시오.
 
 ====
 . 구성된 모든 KMIP 서버가 연결되어 있는지 확인합니다.
@@ -101,7 +110,7 @@ svm1l::> security key-manager external enable -vserver svm1 -key-servers keyserv
 +
 [NOTE]
 ====
- `security key-manager external show-status`명령이 `security key-manager show -status` 명령을 대체합니다. 에 대한 자세한 내용은 `security key-manager external show-status` link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-show-status.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
+ `security key-manager external show-status` 명령은 ONTAP 9.6부터  `security key-manager show -status` 명령을 대체합니다.  `security key-manager external show-status`에 대한 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-cli/security-key-manager-external-show-status.html["ONTAP 명령 참조입니다"^]에서 확인하십시오.
 
 ====
 +

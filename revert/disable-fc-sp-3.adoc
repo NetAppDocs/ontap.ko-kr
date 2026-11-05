@@ -1,0 +1,35 @@
+---
+permalink: revert/disable-fc-sp-3.html 
+sidebar: sidebar 
+keywords: disable, fc-sp-3, fc, security, revert 
+summary: 'ONTAP 시스템에서 FC-SP-3에 대해 FC 또는 NVMe/FC 네트워크 인터페이스(LIF)가 활성화된 경우 ONTAP 9.19.1로 되돌리기 전에 해당 기능을 비활성화해야 합니다.' 
+---
+= ONTAP 9.20.1에서 이전 버전으로 되돌리기 전에 FC LIF에서 FC-SP-3을 비활성화하십시오.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1부터 ONTAP은 AFF 및 FAS 시스템에서 Broadcom 보안 호스트 버스 어댑터(HBA)를 사용하여 Fibre Channel Security Protocol 3(FC-SP-3) 인증 및 암호화를 지원합니다. ONTAP 시스템에서 FC 또는 NVMe/FC 네트워크 인터페이스(LIF)에 FC-SP-3가 활성화된 경우, ONTAP 9.19.1로 되돌리기 전에 이를 비활성화해야 합니다.
+
+.단계
+. LIF에서 FC-SP-3 구성을 확인하십시오:
++
+[source, cli]
+----
+network interface show -fields fc-transport-security
+----
+. *transport-security-state* 필드의 상태를 사용할 수 없는 경우 추가 조치가 필요하지 않습니다. 상태가 *mandatory* 또는 *preferred*인 경우 *disabled*로 수정하십시오:
++
+[source, cli]
+----
+network interface modify -vserver <vserver_name> -lif <lif_name> -fc-transport-security disabled
+----
+. 이전에 활성화된 LIF에서 FC-SP-3이 비활성화되었는지 확인하십시오:
++
+[source, cli]
+----
+network interface show -fields fc-transport-security
+----
+

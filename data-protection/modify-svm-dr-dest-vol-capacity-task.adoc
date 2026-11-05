@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: data-protection/modify-svm-dr-dest-vol-capacity-task.html 
+keywords: netapp, ontap, system manager, data, VM, resynchronize, resynchronization, resync, source, SVM, source SVM, source storage VM, destination, destination storage VM, destination SVM, protection, relationship, protection relationship, relationships, capacity 
+summary: ONTAP 9.20.1부터 스토리지 관리자와 데이터 보호 관리자는 SVM DR 타겟 볼륨의 일부 볼륨 용량 속성을 조정하여 타겟 자동 크기 조정 제한을 소스 증가에 맞춰 유지하고, 타겟 보존을 위한 스냅샷 예약량을 늘릴 수 있으며, 서비스 제공업체 관리자는 타겟 용량을 기반으로 멀티테넌트 DR 고객을 정확하게 관리할 수 있습니다. 
+---
+= ONTAP SVM DR 관계에서 타겟 볼륨 용량을 수정합니다
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1부터 스토리지 관리자와 데이터 보호 관리자는 SVM DR 타겟 볼륨의 일부 볼륨 용량 속성을 조정하여 타겟 자동 크기 조정 제한을 소스 증가에 맞춰 유지하고, 타겟 보존을 위한 스냅샷 예약량을 늘릴 수 있으며, 서비스 제공업체 관리자는 타겟 용량을 기반으로 멀티테넌트 DR 고객을 정확하게 관리할 수 있습니다.
+
+
+
+[[adjust-the-maximum-size-svm-dr-destination-volumes-can-grow-automatically]]
+== SVM DR 타겟 볼륨이 자동으로 증가할 수 있는 최대 크기를 조정합니다
+
+.단계
+. 볼륨의 최대 자동 크기 값을 수정하려면 다음 명령을 입력하십시오:
++
+`volume modify -vserver <dest svm name> -volume <vol name> -max-autosize <integer>`
+
++
+예:
+
++
+[listing]
+----
+volume modify -vserver svmdr_dst -volume vol1 -max-autosize 10TB
+----
+
+
+
+
+[[adjust-the-minimum-size-svm-dr-volumes-can-shrink-automatically]]
+== SVM DR 볼륨이 자동으로 축소될 수 있는 최소 크기를 조정합니다.
+
+. 볼륨의 최소 자동 크기 값을 수정하려면 다음 명령을 입력하십시오:
++
+`volume modify -vserver <dest svm name> -volume vol1 -min-autosize <integer>`
+
++
+예:
+
++
+[listing]
+----
+volume modify -vserver svmdr_dst -volume vol1 -min-autosize 1TB
+----
+
+
+
+
+[[change-the-volumes-autosize-mode]]
+== 볼륨의 자동 크기 조정 모드를 변경하십시오
+
+. 자동 크기 조정 모드를 변경하려면 다음 명령을 입력하십시오:
++
+`volume modify -vserver svmdr_dst -volume vol1 -autosize-mode`
+
++
+예:
+
++
+[listing]
+----
+volume modify -vserver svmdr_dst -volume vol1 -autosize-mode grow
+----
+
+
+
+
+[[adjust-the-amount-of-space-reserved-for-snapshots]]
+== 스냅샷을 위해 예약된 공간의 양을 조정하십시오.
+
+. 스냅샷에 예약된 공간 비율을 변경하려면 다음 명령어를 입력하십시오:
++
+`volume modify -vserver <dest svm name> -volume <vol name> -percent-snapshot-space <integer>`
+
++
+예:
+
++
+[listing]
+----
+volume modify -vserver svmdr_dst -volume vol1 -percent-snapshot-space 25
+----
+

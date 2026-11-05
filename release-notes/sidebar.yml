@@ -2,7 +2,7 @@
 section: release-notes
 title: 릴리스 정보
 entries:
-- title: 주요 내용을 릴리스합니다
+- title: ONTAP 9.20.1의 새로운 기능
   url: "/release-notes/index.html"
 - title: ONTAP 9.19.1의 새로운 기능
   url: "/release-notes/whats-new-9191.html"

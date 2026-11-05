@@ -1,7 +1,7 @@
 ---
 permalink: encryption-at-rest/configure-external-key-management-overview-concept.html 
 sidebar: sidebar 
-keywords: external key management, kmip, configure 
+keywords: external key management, kmip, configure, intracluster key sharing, key restore 
 summary: '하나 이상의 외부 키 관리 서버를 사용하여 클러스터가 암호화된 데이터에 액세스하는 데 사용하는 키를 보호할 수 있습니다. 외부 키 관리 서버는 KMIP(Key Management Interoperability Protocol)를 사용하여 노드에 키를 제공하는 스토리지 환경의 타사 시스템입니다.' 
 ---
 = ONTAP NetApp Volume Encryption을 사용하여 외부 키 관리 구성에 대해 알아보세요.
@@ -14,3 +14,14 @@ summary: '하나 이상의 외부 키 관리 서버를 사용하여 클러스터
 하나 이상의 외부 키 관리 서버를 사용하여 클러스터가 암호화된 데이터에 액세스하는 데 사용하는 키를 보호할 수 있습니다. 외부 키 관리 서버는 키 관리 상호 운용성 프로토콜(KMIP)을 사용하여 노드에 키를 제공하는 스토리지 환경의 타사 시스템입니다. ONTAP Onboard Key Manager 외에도 여러 외부 키 관리 서버를 지원합니다.
 
 ONTAP 9.10.1부터 다음을 사용할 수 있습니다. xref:manage-keys-azure-google-task.html[Azure Key Vault 또는 Google Cloud Key Manager 서비스] 데이터 SVM에 대한 NVE 키를 보호합니다. ONTAP 9.11.1부터 클러스터에서 여러 개의 외부 키 관리자를 구성할 수 있습니다. 보다xref:configure-cluster-key-server-task.html[클러스터형 키 서버 구성] . ONTAP 9.12.0부터 다음을 사용할 수 있습니다. link:https://docs.aws.amazon.com/kms/latest/developerguide/overview.html["AWS의 KMS"^] 데이터 SVM에 대한 NVE 키를 보호합니다. ONTAP 9.17.1부터 OpenStack을 사용할 수 있습니다. xref:manage-keys-barbican-task.html[바비칸 KMS] 데이터 SVM에 대한 NVE 키를 보호합니다.
+
+[[intracluster-key-sharing]]
+ONTAP 9.20.1부터 외부 KMIP 키 관리자를 사용하는 클러스터의 노드는 서로 암호화 키를 공유합니다. 공유 키는 AES-GCM-256으로 암호화 및 인증됩니다. ONTAP은 다음 두 가지 상황에서 키를 공유합니다:
+
+* *키 생성.* ONTAP이 새 키를 생성할 때, 예를 들어 암호화된 FlexVol 볼륨, FlexGroup 볼륨 또는 애그리게이트를 생성할 때, 키를 생성하는 노드는 해당 키를 키 서버에 저장한 다음 클러스터의 다른 모든 노드로 전송합니다.
+* *재부팅 후 키 복원.* 노드가 재부팅될 때(예: 자동 무중단 업그레이드, 인수 및 반환, 또는 예기치 않은 재부팅 중) 해당 노드는 HA 파트너로부터 키를 복원합니다. ONTAP은 파트너가 제공할 수 없는 키에 대해서만 키 서버에 연결합니다. 파트너가 모든 키를 보유하고 있는 경우, 키 서버를 사용할 수 없는 동안에도 키 복원이 완료될 수 있습니다.
+
+
+이 동작은 새로운 ONTAP 9.20.1 클러스터에서, 그리고 클러스터를 ONTAP 9.20.1로 업그레이드할 때 자동으로 활성화됩니다.
+
+클러스터 내 키 공유는 외부 KMIP 키 관리자에만 적용됩니다. 온보드 키 관리자, Azure Key Vault, Google Cloud Key Management Service, AWS KMS 또는 Barbican에서는 사용되지 않습니다. MetroCluster가 구성된 경우에는 사용되지 않습니다. 재부팅 후 키를 복원하려면 HA 파트너가 온라인 상태여야 하며 키를 보유하고 있어야 합니다.

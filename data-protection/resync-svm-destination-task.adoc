@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/resync-svm-destination-task.html 
 keywords: netapp, ontap, system manager, data, VM, resynchronize, resynchronization, resync, source, SVM, source SVM, source storage VM, destination, destination storage VM, destination SVM, protection, relationship, protection relationship, relationships 
-summary: ONTAP 9.8부터는 System Manager를 사용하여 소스 스토리지 VM의 데이터 및 구성 세부 정보를 손상된 보호 관계에 있는 대상 스토리지 VM으로 재동기화하고 관계를 다시 설정할 수 있습니다. 
+summary: 보호 관계가 끊어진 경우 소스 스토리지 VM에서 대상 스토리지 VM으로 데이터 및 구성 세부 정보를 다시 동기화하여 관계를 다시 설정할 수 있습니다. 
 ---
 = ONTAP SnapMirror 대상 SVM에서 데이터를 다시 동기화합니다
 :hardbreaks:
@@ -16,9 +16,11 @@ summary: ONTAP 9.8부터는 System Manager를 사용하여 소스 스토리지 V
 
 
 [role="lead"]
+보호 관계가 끊어진 경우 소스 스토리지 VM에서 대상 스토리지 VM으로 데이터 및 구성 세부 정보를 다시 동기화하여 관계를 다시 설정할 수 있습니다.
+
 ONTAP 9.11.1에는 재해 복구 연습을 수행할 때 전체 데이터 웨어하우스 재구축을 우회하는 옵션이 도입되어 생산 단계로 빠르게 돌아갈 수 있습니다.
 
-ONTAP 9.8부터는 System Manager를 사용하여 소스 스토리지 VM의 데이터 및 구성 세부 정보를 손상된 보호 관계에 있는 대상 스토리지 VM으로 재동기화하고 관계를 다시 설정할 수 있습니다.
+ONTAP 9.20.1부터 SVM-DR 관계의 FlexGroup 구성 요소와 함께 ONTAP CLI에서  `quick-resync` 옵션을 사용할 수 있습니다. ONTAP System Manager는 역방향 재동기화를 위한 빠른 재동기화 옵션을 제공하지 않습니다.
 
 원래 관계의 대상에서만 재동기화 작업을 수행합니다. 재동기화를 수행하면 소스 스토리지 VM의 데이터보다 최신 대상 스토리지 VM의 데이터가 삭제됩니다.
 

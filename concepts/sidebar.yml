@@ -80,7 +80,7 @@ entries:
     url: "/concepts/compression-concept.html"
   - title: ONTAP FlexClone 볼륨, 파일 및 LUN에 대해 알아보십시오.
     url: "/concepts/flexclone-volumes-files-luns-concept.html"
-  - title: ONTAP 용량 보고 및 측정에 대해 알아보기
+  - title: ONTAP에서 사용된 스토리지를 보고하는 방법을 알아보십시오.
     url: "/concepts/capacity-measurements.html"
   - title: 온도에 민감한 보관
     url: "/volumes/enable-temperature-sensitive-efficiency-concept.html"

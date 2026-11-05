@@ -38,7 +38,7 @@ S3 서버가 포함된 스토리지 VM이 이미 존재해야 합니다.
 *** 또는 버킷이 계층화에 사용되는지 여부를 지정할 수 있습니다. 이 경우 ONTAP는 계층형 데이터에 대해 최적의 성능을 제공하는 경제적인 미디어를 선택하려고 합니다.
 
 
-** 기본 애그리게이트 및 FlexGroup 구성요소 선택(고급 권한 명령 옵션 필요): 버킷과 FlexGroup 볼륨을 생성해야 하는 애그리게이트를 수동으로 선택한 다음, 각 애그리게이트에서 구성요소 수를 지정할 수 있습니다. 추가 버킷 추가 시:
+** 기본 애그리게이트 및 FlexGroup 구성 요소를 선택합니다(고급 권한 명령 옵션 필요): 버킷과 해당 FlexGroup 볼륨을 생성할 애그리게이트를 수동으로 선택한 다음 각 애그리게이트의 구성 요소 수를 지정할 수 있습니다. 추가 버킷을 추가할 때:
 +
 *** 새 버킷에 대해 Aggregate 및 구성요소를 지정하는 경우 새 FlexGroup가 새 버킷에 대해 생성됩니다.
 *** 새 버킷에 대한 애그리게이트 및 구성 요소를 지정하지 않으면 새 버킷은 기존 FlexGroup에 추가되지만,  `retention-mode` 설정이 기존 버킷의  `retention-mode` 설정과 일치하고 FlexGroup 유형((`compliance`,  `non-snaplock`,  `enterprise`)이 일치하는 경우에만 가능합니다. 자세한 내용은 xref:../flexgroup/index.html[FlexGroup 볼륨 관리]을 참조하십시오.
@@ -66,6 +66,9 @@ S3 서버가 포함된 스토리지 VM이 이미 존재해야 합니다.
 . 버킷 생성:
 +
 `vserver object-store-server bucket create -vserver <svm_name> -bucket <bucket_name> -size [integer{KB|MB|GB|TB|PB}] [-comment text] [additional_options]`
+
++
+ONTAP 9.20.1부터 버킷을 생성할 때  `-size` 옵션을 지정하지 않으면 ONTAP은 S3 서버에 구성된 기본 버킷 크기를 사용합니다. 기본값이 구성되어 있지 않으면 ONTAP은 플랫폼 최소 버킷 크기를 사용합니다. 이 동작은 S3 API 또는 ONTAP REST API를 통해 명시적인 크기 지정 없이 생성된 버킷에도 적용됩니다.
 
 +
 스토리지 VM 이름은 데이터 스토리지 VM 또는 일 수 있습니다 `Cluster` 로컬 계층화를 구성하는 경우 (시스템 스토리지 VM 이름)
