@@ -4,7 +4,7 @@ permalink: san-admin/provision-storage.html
 keywords: netapp, ontap, san, provisioning, linux, servers, provision, storage, create lun, fc, iscsi, zone switches, scsi disk, iscsi 
 summary: LUN을 생성하여 FC 또는 iSCSI SAN 프로토콜을 사용하여 호스트에 스토리지를 제공합니다. LUN은 호스트에 디스크로 표시됩니다. 
 ---
-= SAN 스토리지 용량 할당
+= ONTAP에서 SAN 스토리지 프로비저닝
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

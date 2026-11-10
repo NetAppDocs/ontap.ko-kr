@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: microsoft, offloaded, data, transfer, odx 
 summary: 'Microsoft Offloaded Data Transfer(복사 오프로드라고도 함)는 호스트 컴퓨터를 거치지 않고 스토리지 장치 내에서 또는 호환되는 스토리지 장치 간에 데이터를 직접 전송할 수 있도록 합니다.' 
 ---
-= Microsoft ODX(Offloaded Data Transfer)
+= ONTAP의 Microsoft Offloaded Data Transfer ODX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

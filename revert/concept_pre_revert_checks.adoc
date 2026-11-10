@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reverting, revision, plan, planning, pre-checks 
 summary: 환경에 따라 복원을 시작하기 전에 특정 요소를 고려해야 합니다. 
 ---
-= ONTAP 버전에 필요한 되돌리기 전 작업
+= ONTAP 버전에 대한 되돌리기 전 요구사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

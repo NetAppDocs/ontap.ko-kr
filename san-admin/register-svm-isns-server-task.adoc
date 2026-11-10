@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, svm, isns, server 
 summary: vserver iscsi isns 명령을 사용하여 스토리지 가상 머신이 iSNS 서버에 등록하도록 구성할 수 있습니다. 
 ---
-= iSNS 서버를 사용하여 SVM을 등록합니다
+= ONTAP SVM을 iSNS 서버에 등록합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

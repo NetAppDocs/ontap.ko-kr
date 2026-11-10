@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reversion, reverting, two-node, 2-node, four-node, 4-node, metrocluster, mcc, configurations 
 summary: 2노드 또는 4노드 MetroCluster 구성을 되돌리기 전에 자동 비계획 전환을 비활성화해야 합니다. 
 ---
-= MetroCluster 구성을 되돌리기 전에 자동 계획되지 않은 전환을 비활성화합니다.
+= ONTAP MetroCluster 복원 전에 계획되지 않은 자동 전환을 비활성화합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, ransomware, protection, security, arp 
 summary: ONTAP을 되돌리기 전에 자율적 랜섬웨어 방어에서 비정상적인 활동 경고에 응답하십시오. 
 ---
-= ONTAP 복원 전에 자율형 랜섬웨어 보호 기능의 활동 경고를 해결합니다.
+= ONTAP 되돌리기 전에 ARP 활동 경고를 해결하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

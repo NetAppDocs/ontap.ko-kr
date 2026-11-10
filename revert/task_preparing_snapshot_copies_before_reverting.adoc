@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reverting, reversion, snapshot, copies, prepare, preparing, disable, delete 
 summary: 이전 ONTAP 릴리즈로 되돌리려면 먼저 모든 스냅샷 정책을 해제하고 현재 릴리즈로 업그레이드한 후에 생성된 모든 스냅샷을 삭제해야 합니다. 
 ---
-= ONTAP 클러스터를 되돌리기 전에 스냅샷을 준비합니다
+= ONTAP 클러스터를 복원하기 전에 스냅샷 복사본을 준비하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

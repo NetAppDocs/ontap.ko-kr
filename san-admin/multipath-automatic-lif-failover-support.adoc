@@ -4,7 +4,7 @@ permalink: san-admin/multipath-automatic-lif-failover-support.html
 keywords: netapp, ontap, san, multipath, automatic lif failover, supported configurations, active-active, local-active, active-active-scsi-only, multipathing, 
 summary: 클러스터에서 ONTAP 버전을 중단 없이 업데이트할 수 있습니다. 
 ---
-= ONTAP 시스템의 SAN 다중 경로 및 자동 LIF 페일오버 지원에 대해 알아보십시오
+= SAN 멀티패싱 및 자동 LIF 페일오버에 대한 ONTAP 지원
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: flexgroup advanced capacity balancing, flexgroup granular data distribution, gdd, flexgroup, volume, balancing 
 summary: ONTAP 9.16.1부터 고급 용량 밸런싱이 도입되어 매우 큰 파일이 확장되어 하나의 구성원 볼륨에서 공간을 사용할 때 FlexGroup 구성원 볼륨 간에 데이터를 배포할 수 있습니다. 
 ---
-= 파일 데이터를 재배포하여 ONTAP FlexGroup 볼륨의 균형을 조정합니다
+= ONTAP FlexGroup 볼륨에서 고급 용량 균형 조정을 활성화합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revert, reverting, reversion, anti-ransomware, enable, autonomous, protection, arp 
 summary: ONTAP 9.18.1로 업그레이드된 볼륨에서 ARP/AI 자동 활성화 기능을 비활성화한 후 ONTAP 9.17.1 또는 이전 버전으로 되돌리십시오. 
 ---
-= ONTAP 9.18.1에서 이전 버전으로 되돌리기 전에 자율형 랜섬웨어 보호 기능의 자동 활성화를 비활성화하십시오
+= ONTAP 9.18.1에서 이전 버전으로 되돌리기 전에 자동 ARP 활성화를 비활성화하십시오.
 :allow-uri-read: 
 
 

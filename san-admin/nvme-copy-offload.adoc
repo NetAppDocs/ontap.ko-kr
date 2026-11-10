@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, ports 
 summary: NVMe 복사 오프로드를 사용하면 NVMe 호스트가 CPU에서 ONTAP 스토리지 컨트롤러의 CPU로 복사 작업을 오프로드할 수 있습니다. 호스트는 애플리케이션 워크로드를 위해 CPU 리소스를 예약하는 동시에 한 NVMe 네임스페이스에서 다른 네임스페이스로 데이터를 복사할 수 있습니다. 
 ---
-= NVMe 복사 오프로드에 대해 알아보세요
+= ONTAP의 NVMe 복사 오프로드에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

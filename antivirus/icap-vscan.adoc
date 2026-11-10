@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: antivirus, vscan, icap, on-access scanning, smb 
 summary: ONTAP 9.20.1부터 SMB 온액세스 스캐닝을 위해 ICAP 기반 Vscan을 구성하십시오. 
 ---
-= 온액세스 스캐닝을 위해 ICAP 기반 Vscan 구성
+= 온액세스 스캐닝을 위해 ICAP 기반 ONTAP Vscan을 구성합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

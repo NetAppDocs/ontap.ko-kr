@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: select, selective, lun, map, slm, enabled, modify, reporting, nodes, list 
 summary: 선택적 LUN 맵은 호스트에서 LUN까지의 경로 수를 줄입니다. SLM을 사용하면 새 LUN 맵이 생성될 때 해당 LUN은 LUN을 소유한 노드와 해당 HA 파트너 노드의 경로를 통해서만 액세스할 수 있습니다. 
 ---
-= 선택적 LUN 맵 개요
+= ONTAP의 Selective LUN Map에 대해 알아보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

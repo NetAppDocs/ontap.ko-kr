@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reversion, reverting, downgrade, downgrading, preparation 
 summary: 다양한 구성 설정이 클러스터 업그레이드 준비에 영향을 미칠 수 있습니다. 
 ---
-= ONTAP 9.16.1에서 되돌리기 전에 확장 Qtree 성능 모니터링을 비활성화하십시오
+= ONTAP 되돌리기 전에 확장 qtree 성능 모니터링 비활성화
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

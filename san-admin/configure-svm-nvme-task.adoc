@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, svm, nvme 
 summary: 노드에서 NVMe 프로토콜을 사용하려면 NVMe용으로 특수 SVM을 구성해야 합니다. 
 ---
-= NVMe용 스토리지 VM을 구성합니다
+= NVMe용 ONTAP 스토리지 VM을 구성합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

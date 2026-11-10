@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revert, reverting, reversion, anti-ransomware, autonomous, protection, arp, license, licensing 
 summary: 랜섬웨어 방지 보호를 구성했고 ONTAP 9.11.1 이상에서 ONTAP 9.10.1로 복원하면 경고 메시지와 제한된 랜섬웨어 방지 기능이 나타날 수 있습니다. 
 ---
-= ONTAP 9.11.1에서 되돌리기 전에 자율적 랜섬웨어 방어 라이센스를 확인하십시오
+= ONTAP 9.11.1에서 이전 버전으로 되돌리기 전에 ARP 라이선스를 확인하십시오.
 :allow-uri-read: 
 
 

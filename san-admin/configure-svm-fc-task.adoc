@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, svm, for fc 
 summary: FC용 스토리지 가상 머신을 구성하려면 SVM용 LIF를 생성하고 해당 LIF에 FC 프로토콜을 할당해야 합니다. 
 ---
-= FC용 SVM 구성
+= FC용 ONTAP SVM을 구성합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

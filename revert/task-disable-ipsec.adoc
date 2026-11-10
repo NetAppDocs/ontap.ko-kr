@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reversion, reverting, two-node, 2-node, four-node, 4-node, metrocluster, mcc, configurations 
 summary: ONTAP 9.12.1에서 MetroCluster 구성을 되돌리려면 먼저 IPsec을 비활성화해야 합니다. 
 ---
-= ONTAP 9.12.1에서 되돌리기 전에 MetroCluster 구성에서 IPsec을 비활성화합니다
+= ONTAP 9.12.1에서 이전 버전으로 되돌리기 전에 MetroCluster에서 IPsec을 비활성화하십시오.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

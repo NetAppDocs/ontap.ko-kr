@@ -4,7 +4,7 @@ permalink: anti-ransomware/entropy-eval-period-arpai.html
 keywords: ARP AI, arpai, SAN, entropy evaluation, block device, ransomware detection, ONTAP 9.17.1, evaluation period, hypervisor, VMware, Hyper-V, KVM, OpenStack, machine learning ransomware 
 summary: ONTAP 9.17.1부터 ARP/AI는 블록 장치 엔트로피 수준이 랜섬웨어 보호에 적합한지 판단하기 위한 평가 기간이 필요합니다. 
 ---
-= 블록 장치 워크로드에 대한 ONTAP ARP/AI 엔트로피 평가 기간에 대해 알아보십시오.
+= 블록 디바이스 워크로드에 대한 ONTAP ARP/AI 엔트로피 평가에 대해 알아보십시오.
 :allow-uri-read: 
 
 

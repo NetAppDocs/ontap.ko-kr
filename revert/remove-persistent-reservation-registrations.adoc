@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revert, persistent reservation, registrations, SCSI-3, LUN, 9.20.1 
 summary: 만약 어떤 LUN이라도 과거에 182개의 SCSI-3 영구 예약 등록을 초과한 적이 있다면, ONTAP은 ONTAP 9.20.1 이전 버전으로 되돌리는 것을 차단합니다. 되돌리기 전에 각 LUN을 확인하고 모든 등록을 제거하십시오. 
 ---
-= ONTAP 9.20.1에서 이전 버전으로 되돌리기 전에 영구 예약 등록을 제거하십시오.
+= ONTAP 9.20.1로 되돌리기 위해 영구 예약 등록을 제거합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

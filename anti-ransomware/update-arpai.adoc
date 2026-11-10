@@ -4,7 +4,7 @@ permalink: anti-ransomware/update-arpai.html
 keywords: ARP AI, arpai, update, autonomous ransomware protection AI, security files, security package, security updates, security bundle, automatic update, manual update, ONTAP 9.16.1, machine learning ransomware, update ransomware model ONTAP, ARP AI security bundle update, automatic ransomware security updates 
 summary: ONTAP 릴리스 주기와 관계없이 ARP/AI 보안 번들을 자동으로 또는 수동으로 업데이트하여 최신 랜섬웨어 위협에 대한 ARP/AI 보호 기능을 최신 상태로 유지하십시오. 
 ---
-= AI(ARP/AI)로 ONTAP 자율적 랜섬웨어 방어 업데이트
+= AI를 활용하여 ONTAP 자율형 랜섬웨어 보호 업데이트
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

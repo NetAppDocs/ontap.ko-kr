@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: off-box, ONTAP, antivirus, 
 summary: 다음 권장 사항을 고려하여 ONTAP에서 바이러스 백신 기능을 구성하십시오. 
 ---
-= ONTAP Vscan에서 오프박스 바이러스 백신 기능을 구성하기 위한 모범 사례
+= ONTAP Vscan을 사용한 오프박스 바이러스 백신 모범 사례
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

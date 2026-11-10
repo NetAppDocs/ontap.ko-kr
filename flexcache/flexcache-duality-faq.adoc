@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: duality, faq, frequently asked questions, flexcache, ontap s3, s3, nas, smb, nfs 
 summary: ONTAP 9.18.1에 도입된 FlexCache 이중화 기능에 대한 자주 묻는 질문입니다. 
 ---
-= FlexCache 이중성에 대한 FAQ
+= ONTAP FlexCache 이중성 관련 FAQ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

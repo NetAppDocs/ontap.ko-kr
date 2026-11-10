@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view, adapter, settings, display, information, x1143a-r6 
 summary: 특정 명령을 사용하여 FC/UTA 어댑터에 대한 정보를 볼 수 있습니다. 
 ---
-= 어댑터 설정을 봅니다
+= ONTAP FC/UTA 어댑터 설정 보기
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

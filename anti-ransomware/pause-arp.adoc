@@ -4,7 +4,7 @@ permalink: anti-ransomware/pause-arp.html
 keywords: ARP, arpai, ARP AI, pause, resume, autonomous ransomware protection, workload event, MAV, multi-admin verification 
 summary: 예상되는 비정상적인 작업 부하 발생 시 ARP 또는 ARP/AI 분석을 일시적으로 중단하고 다시 시작합니다. 
 ---
-= 분석에서 워크로드 이벤트를 제외하려면 ONTAP ARP 또는 ARP/AI 보호를 일시 중지합니다
+= 워크로드 이벤트 발생 시 ONTAP ARP 또는 ARP/AI 보호 일시 중지
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

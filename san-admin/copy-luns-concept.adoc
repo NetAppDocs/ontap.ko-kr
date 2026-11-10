@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: considerations, copying, luns, before 
 summary: LUN을 복제하기 전에 몇 가지 사항을 숙지해야 합니다. 
 ---
-= LUN을 복제하기 전에 알아야 할 사항
+= ONTAP LUN 복사에 대해 알아보십시오.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

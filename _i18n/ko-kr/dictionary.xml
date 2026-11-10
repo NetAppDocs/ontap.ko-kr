@@ -1487,7 +1487,6 @@
   <block id="efee3c4ad39e5c74d66be19310a29ac5" category="paragraph">'vserver iscsi interface show -vserver_SVM_name_-fields SendTargets-FQDN'</block>
   <block id="142ad9ecee1ebcc4b40298ea35d7526e" category="paragraph">이 예제에서 storagehost-005.example.com 은 SendTargets-FQDN 출력 필드에 표시됩니다.</block>
   <block id="3c0b6fe4cdf3671afbd6b25714b5add7" category="summary">ONTAP는 일반 프로비저닝, 씬 프로비저닝 및 반일반 프로비저닝의 세 가지 기본 볼륨 프로비저닝 옵션을 제공합니다. 각 옵션은 볼륨 공간과 ONTAP 블록 공유 기술의 공간 요구 사항을 관리하는 다양한 방법을 사용합니다. 옵션의 작동 방식을 이해하면 환경에 가장 적합한 옵션을 선택할 수 있습니다.</block>
-  <block id="961be6b8fee60fe8e6b449ee12e1420a" category="doc">SAN 볼륨 개요 정보</block>
   <block id="238441cd4e239dbda9ce5240b1e32679" category="paragraph">SAN LUN과 NAS 공유를 동일한 FlexVol 볼륨에 배치하는 것은 권장되지 않습니다. SAN LUN을 위해 특별히 별도의 FlexVol 볼륨을 프로비저닝해야 하며 NAS 공유에 별도의 FlexVol 볼륨을 프로비저닝해야 합니다. 이렇게 하면 관리 및 복제 구축이 간소화되고 FlexVol 볼륨이 Active IQ Unified Manager(이전의 OnCommand Unified Manager)에서 지원되는 방식과 유사점이 있습니다.</block>
   <block id="1c8de8e7f89d65ca99de59e48dee5aba" category="section-title">볼륨에 대한 씬 프로비저닝</block>
   <block id="09ceb0cae5221cc6d09141eeb5753a43" category="paragraph">씬 프로비저닝된 볼륨이 생성된 경우 ONTAP는 볼륨이 생성될 때 추가 공간을 예약하지 않습니다. 볼륨에 데이터가 기록될 때 볼륨은 쓰기 작업을 수용하기 위해 Aggregate에서 필요한 스토리지를 요청합니다. 씬 프로비저닝된 볼륨을 사용하면 애그리게이트를 오버 커밋할 수 있으므로 애그리게이트에 여유 공간이 부족할 때 볼륨이 필요한 공간을 확보할 수 없게 됩니다.</block>
@@ -1576,7 +1575,6 @@
   <block id="ff28de804dc31b7e52ff8ea0d2200274" category="paragraph">활성 또는 최적화되지 않은 경로(간접) 경로에서 데이터 트래픽은 클러스터 네트워크를 통해 이동합니다. 이 문제는 호스트에서 활성 또는 최적화된 경로를 모두 사용하여 트래픽을 처리할 수 없는 경우에만 발생합니다. 호스트 2에서 SVM-2 LIF2.4로의 경로가 손실된 경우, lun3 및 LUN4에 대한 액세스가 클러스터 네트워크를 통과합니다. 호스트 2에서의 액세스는 노드 3에서 LIF2.3을 사용합니다. 그런 다음 트래픽이 클러스터 네트워크 스위치에 유입되어 lun3 및 lun4에 액세스하기 위해 노드 4에 백업됩니다. 그런 다음 클러스터 네트워크 스위치를 통해 다시 이동한 다음 LIF2.3을 통해 호스트 2로 돌아갑니다. LIF2.4의 경로가 복원되거나 노드 4의 다른 물리적 포트에서 SVM-2에 대한 새 LIF가 설정될 때까지 액티브 또는 최적화되지 않은 경로가 사용됩니다.</block>
   <block id="65d1cbe674d40a6cf672008301b8f5d2" category="image-alt">최적화되지 않은 경로의 예</block>
   <block id="931c1aafede8dc62dbc29f87f8b88110" category="summary">스토리지 가상 시스템(SVM)에서 NVMe 프로토콜을 사용하려면 먼저 SVM에서 NVMe 서비스를 시작해야 합니다.</block>
-  <block id="bb5fb7b8a05c204bbcad3e9ed15b1e43" category="doc">SVM을 위한 NVMe 서비스를 시작합니다</block>
   <block id="f3013ca26865bafb47df633c84ab8589" category="paragraph">NVMe는 시스템에서 프로토콜로 허용되어야 합니다.</block>
   <block id="f088a256d4f79dd3129ef00740c6b9d5" category="paragraph">지원되는 NVMe 프로토콜은 다음과 같습니다.</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">프로토콜</block>
@@ -1597,7 +1595,6 @@
   <block id="a90b4572e33b37d366f31ee1133d8ec3" category="list-text">원본 데이터는 변경되지 않은 형식으로 유지하면서 조작 및 예상 작업에 사용할 데이터베이스 복제본을 만들려는 경우</block>
   <block id="eb5d9f97c5d8312e9e170773637ca0f0" category="list-text">동일한 운영 체제를 사용하는 여러 SAN 부팅 호스트가 필요합니다.</block>
   <block id="b42cd04bfcbc9d9d593a3990a908a885" category="summary">LUN이 더 이상 필요하지 않은 경우 SVM(스토리지 가상 시스템)에서 LUN을 삭제할 수 있습니다.</block>
-  <block id="ce32094cc1e3f4f6f04deda444a6d0ba" category="doc">LUN을 삭제합니다</block>
   <block id="4566f2c9119213a913180cf92881b41a" category="paragraph">LUN을 삭제하기 전에 해당 igroup에서 매핑 해제해야 합니다.</block>
   <block id="f7daa32444e8f7f74a66d3664635e02b" category="list-text">애플리케이션 또는 호스트에서 LUN을 사용하고 있지 않은지 확인합니다.</block>
   <block id="79d55511a9e038453ba20754c08e2ed4" category="list-text">igroup에서 LUN 매핑을 해제합니다.</block>
@@ -1714,7 +1711,6 @@
   <block id="db1f781c74e110ea7e44d2b9b0f6faae" category="list-text">스토리지 시스템의 인바운드 자격 증명은 이니시에이터의 아웃바운드 자격 증명과 일치해야 합니다.</block>
   <block id="1f2926e82d8017a17f3fede9f78d43b9" category="list-text">스토리지 시스템의 아웃바운드 자격 증명은 이니시에이터의 인바운드 자격 증명과 일치해야 합니다.</block>
   <block id="ebc6d6e9a67d2ebfe91f3029f62477d4" category="summary">스토리지 QoS 정책 그룹에 LUN을 할당하여 LUN에 대한 입출력 성능을 제어할 수 있습니다. 입출력 성능을 제어하여 워크로드가 특정 성능 목표를 달성하도록 보장하고, 다른 워크로드에 부정적인 영향을 주는 워크로드를 조절할 수 있습니다.</block>
-  <block id="c63b522128d25c98e6db082fc19f5671" category="doc">스토리지 QoS를 사용하여 LUN에 대한 I/O 성능을 제어 및 모니터링합니다</block>
   <block id="f053dce977705e1208d5302a2082edd5" category="paragraph">정책 그룹은 최대 처리량 제한(예: 100MB/s)을 적용합니다. 최대 처리량을 지정하지 않고 정책 그룹을 생성하면 워크로드를 제어하기 전에 성능을 모니터링할 수 있습니다.</block>
   <block id="b693d76b821c3a5b095fa9dfcde67c4f" category="paragraph">FlexVol 볼륨 및 LUN이 있는 SVM(스토리지 가상 시스템)을 정책 그룹에 할당할 수도 있습니다.</block>
   <block id="84656e0ee38c4bdea118d65af21c70b6" category="paragraph">LUN을 정책 그룹에 할당하는 것에 대한 다음 요구 사항을 참고하십시오.</block>
@@ -2174,7 +2170,6 @@
   <block id="5dd3b84908c30e3beef3b3151fc408a9" category="paragraph">'lun show' 명령 출력에서 운영 볼륨의 srcvolA 및 SnapVault 보조 볼륨 dstvolB에서 해당 LUN의 읽기 전용 복제본을 확인할 수 있습니다. SnapVault 백업에는 LUN_D의 복제본이 없습니다.</block>
   <block id="f60a925e3f71f96f22652d05efcd2b21" category="paragraph">SnapVault 보조 볼륨에서 볼륨을 복구한 후에는 소스 볼륨에 LUN_D가 더 이상 포함되지 않습니다 복구 후 소스 볼륨의 LUN은 여전히 매핑되므로 LUN을 다시 매핑할 필요가 없습니다.</block>
   <block id="41fd88740aff56a0eb836a5cf192d054" category="summary">필요한 경우 스토리지 가상 시스템(SVM)에서 NVMe 서비스를 삭제할 수 있습니다.</block>
-  <block id="229f0167cb057b217c7763ae0cbf0776" category="doc">SVM에서 NVMe 서비스를 삭제합니다</block>
   <block id="be83a0e98b1fcb2f97018b5647d7b30b" category="list-text">SVM에서 NVMe 서비스를 중지합니다.</block>
   <block id="7284bafaa4c98f7c4a19c787d9457d58" category="paragraph">'vserver NVMe modify-status-admin down'</block>
   <block id="aafd42cef26ee59c132f6e5511b2384f" category="list-text">NVMe 서비스를 삭제합니다.</block>
@@ -2236,7 +2231,6 @@
   <block id="6448737593bb8717931f56d5e6e7f59a" category="list-text">볼륨에 여유 공간이 부족하면 쓰기 작업이 시간 초과되어 실패할 수 있습니다.</block>
   <block id="22078181e3afa09eb153dc6d0fe379e1" category="paragraph">압축은 AFF 플랫폼에 대해 기본적으로 사용하도록 설정되어 있습니다. AFF 플랫폼에서 반씩 프로비저닝을 사용하려는 모든 볼륨에 대해 압축을 명시적으로 해제해야 합니다.</block>
   <block id="46ecf48a985fa7bc9513c01e0d011046" category="summary">VMware와 Microsoft는 복제 오프로드 작업을 지원하여 성능과 네트워크 처리량을 높여줍니다. 개별 복제 오프로드 기능을 사용하려면 VMware 및 Windows 운영 체제 환경의 요구 사항을 충족하도록 시스템을 구성해야 합니다.</block>
-  <block id="bd0399e6d716b35a1e2f3f4987573e47" category="section-title">가상화된 SAN 환경을 사용할 때의 이점</block>
   <block id="794fdcd9c8631f2bf8da33e0442491b8" category="paragraph">SVM(Storage Virtual Machine)과 LIF를 사용하여 가상화 환경을 구축하면 클러스터의 모든 노드로 SAN 환경을 확장할 수 있습니다.</block>
   <block id="8a52c9271f079fa5f18e24d221385524" category="list-text">분산 관리</block>
   <block id="c5de3dded3d80724a53838448540fcc6" category="paragraph">SVM의 모든 노드에 로그인하여 클러스터의 모든 노드를 관리할 수 있습니다.</block>
@@ -2329,7 +2323,6 @@
   <block id="baf5d52135cbcd978e0083939e9f3071" category="paragraph">그룹4</block>
   <block id="ef5510ce5165e6668bbbf31fa4de1376" category="paragraph">'/vol/vol2/qtree2/lun4''/vol/vol2/qtree1/lun5'</block>
   <block id="0274731d87ccab40f6af53eca2133bf2" category="summary">통합 타겟 어댑터(X1143A-R6)를 구성하려면 동일한 퍼스낼리티 모드에서 동일한 칩에 두 개의 인접 포트를 구성해야 합니다.</block>
-  <block id="4ee1b7be8a7961365d390c0d98378b2a" category="doc">포트를 구성합니다</block>
   <block id="9a315ce38ec50dc19a5800f9b5df9bcd" category="list-text">'system node hardware unified-connect modify' 명령을 사용하여 FC(Fibre Channel) 또는 CNA(Converged Network Adapter)에 필요한 포트를 구성합니다.</block>
   <block id="b62fff62e43797163547fa824a889de4" category="list-text">FC 또는 10Gb 이더넷에 적합한 케이블을 연결합니다.</block>
   <block id="3d9e99ff30ab8ca81a1ae09bd1391445" category="paragraph">CNA의 경우 10Gb 이더넷 SFP를 사용해야 합니다. FC의 경우 연결 중인 FC 패브릭을 기반으로 8Gb SFP 또는 16Gb SFP를 사용해야 합니다.</block>
@@ -2359,7 +2352,6 @@
   <block id="c491851dbd3e6fc6d52365d2da2cf785" category="list-text">호스트에서 LUN을 다시 마운트합니다.</block>
   <block id="03593dd738a8814d8e3162d0712607c9" category="list-text">호스트에서 LUN에 대한 액세스를 다시 시작합니다.</block>
   <block id="b3133cd12c8c727a2e90f1bf54807c0a" category="summary">SLM(Selective LUN Map)은 호스트에서 LUN으로의 경로 수를 줄입니다. SLM 기능을 통해 새 LUN 맵이 생성되면 LUN 및 해당 HA 파트너를 소유하는 노드의 경로를 통해서만 LUN에 액세스할 수 있습니다.</block>
-  <block id="831e5f7fa8abcc6b09009c720d4dfd8f" category="doc">선택적 LUN 맵 개요</block>
   <block id="baadad7e98bfa15a352d9041e3ba4922" category="paragraph">SLM은 호스트당 단일 igroup을 관리할 수 있도록 하며, 포트셋 조작 또는 LUN 재매핑이 필요하지 않은 무중단 LUN 이동 작업도 지원합니다.</block>
   <block id="1f2505d14ebe86758e95f2d811ca1c88" category="paragraph">SLM은 모든 새로운 LUN 맵에서 기본적으로 활성화됩니다.</block>
   <block id="14e2348de760f12e6b8c13617948e64e" category="summary">어댑터에 대해 선택한 퍼스낼리티 모드를 지원하도록 유니파이드 타겟 어댑터(CNA/UTA2)의 광 모듈을 변경해야 합니다.</block>
@@ -2449,7 +2441,6 @@
   <block id="76d37d4afc201dc533a694640bedecad" category="inline-link">Brocade 제품</block>
   <block id="c65e65e16bc9000c793ebd27cd79b517" category="paragraph"><block ref="c65e65e16bc9000c793ebd27cd79b517" category="inline-link-rx"></block></block>
   <block id="1ca573c74382f648a51b865bd4dbec71" category="summary">ONTAP는 올바르게 정렬된 LUN에 대한 I/O 정렬 불량을 보고할 수 있습니다. 일반적으로 이 정렬 불량 경고는 LUN이 제대로 프로비저닝되고 파티셔닝 테이블이 올바른 경우에 무시할 수 있습니다.</block>
-  <block id="1c8d148baf6c3a4b6189e0de96772875" category="doc">올바르게 정렬된 LUN의 입출력 정렬 불량 개요</block>
   <block id="16042a183c1bd1f50890b958c85ba3f9" category="paragraph">LUN과 하드 디스크는 모두 스토리지를 블록으로 제공합니다. 호스트의 디스크에 대한 블록 크기가 512바이트이므로 LUN은 호스트에 해당 크기의 블록을 제공하는 동시에 실제로 더 큰 4KB 블록을 사용하여 데이터를 저장합니다. 호스트에서 사용되는 512바이트 데이터 블록을 논리적 블록이라고 합니다. LUN에서 데이터를 저장하는 데 사용하는 4KB 데이터 블록을 물리적 블록이라고 합니다. 즉, 각 4KB 물리적 블록에는 8개의 512바이트 논리적 블록이 있습니다.</block>
   <block id="d63d105122ab4225c8b70a3fa7344e6b" category="paragraph">호스트 운영 체제는 모든 논리 블록에서 읽기 또는 쓰기 I/O 작업을 시작할 수 있습니다. I/O 작업은 물리적 블록의 첫 번째 논리적 블록에서 시작될 때만 정렬되는 것으로 간주됩니다. 물리적 블록의 시작이 아닌 논리적 블록에서 I/O 작업이 시작되면 I/O가 잘못 정렬된 것으로 간주됩니다. ONTAP는 자동으로 정렬 불량을 감지하여 LUN에 보고합니다. 하지만 잘못 정렬된 I/O가 있다고 해서 LUN도 제대로 정렬되지 않은 것은 아닙니다. 잘못 정렬된 I/O가 제대로 정렬된 LUN에 보고될 수 있습니다.</block>
   <block id="cdf036af5051e2b20e06eb97c1817265" category="paragraph">정렬 문제 해결을 위한 도구에 대한 자세한 내용은 다음 설명서를 참조하십시오: +</block>
@@ -23499,7 +23490,6 @@
   <block id="c1e64964e7cece205b41c66e7c4dd55b" category="paragraph">볼륨을 정책 그룹에</block>
   <block id="bf72cb1d6ee06e058e7ad5e11475eee2" category="paragraph">정책 그룹에 LUN을 지정합니다</block>
   <block id="4d7a8062759f54b374ed2e12415f4e15" category="paragraph">파일을 정책 그룹에 저장합니다</block>
-  <block id="057b54c4b082fce08d8b07eff9b05076" category="doc">NVMe 개요</block>
   <block id="fc0cf184ac9872d5db9ff77d32bb19ae" category="section-title">NVMe란 무엇입니까</block>
   <block id="f63ddcd8a11a1048eb0c7cd15974c964" category="paragraph">NVMe(Nonvolatile Memory Express) 프로토콜은 비휘발성 스토리지 미디어에 액세스하는 데 사용되는 전송 프로토콜입니다.</block>
   <block id="a63b79eb683d547f82d67c006bc35306" category="paragraph">NVMe over Fabrics (NVMeoF)는 PCIe 이외의 연결을 통해 NVMe 기반 통신을 가능하게 하는 NVMe에 대한 사양 정의 확장입니다. 이 인터페이스를 통해 외부 스토리지 인클로저를 서버에 연결할 수 있습니다.</block>
@@ -23576,7 +23566,6 @@
   <block id="97c66883806095d6a6da2e301046330b" category="summary">볼륨을 생성하여 NFS 또는 SMB 서비스용으로 구성된 기존 스토리지 VM에 추가할 수 있습니다.</block>
   <block id="ce21afaa7141940450125c30e2ddaf77" category="paragraph">ONTAP 9.11.1에는 재해 복구 연습을 수행할 때 전체 데이터 웨어하우스 재구축을 우회하는 옵션이 도입되어 생산 단계로 빠르게 돌아갈 수 있습니다.</block>
   <block id="6e2faf1341e565136dd94d631694c479" category="list-text">선택적으로 * 빠른 재동기화 수행 * 을 선택하여 재해 복구 리허설 중에 전체 데이터 웨어하우스 재구축을 우회합니다.</block>
-  <block id="e38d6f0a684b3cc719c83432498db42b" category="inline-link-macro">SAN 이니시에이터 및 igroup을 보고 관리합니다</block>
   <block id="f2ca44be2f95d6dd1857fbfb7ed342a2" category="summary">랜섬웨어 방지 보호를 구성했고 ONTAP 9.11.1 이상에서 ONTAP 9.10.1로 복원하면 경고 메시지와 제한된 랜섬웨어 방지 기능이 나타날 수 있습니다.</block>
   <block id="a4bd25b885083f831d26dbcc3197515b" category="inline-link">Cloud Volumes ONTAP를 되돌리거나 다운그레이드하는 중입니다</block>
   <block id="b59cced8914a5ae4b2997c54c8cfeb8d" category="paragraph">ONTAP 9.11.1</block>
@@ -24962,7 +24951,6 @@
   <block id="664f9c52f93e2fbf6e801148b0f573ad" category="sidebar">HA 쌍 관리</block>
   <block id="997fbd60cb19ba0c1674b8161b130b26" category="paragraph">ONTAP 9.10.1부터 System Manager를 사용하여 원격 측정 로깅을 활성화할 수 있습니다. 원격 측정 로깅이 허용되는 경우 System Manager에 의해 기록되는 메시지에는 메시지를 트리거한 정확한 프로세스를 나타내는 특정 원격 측정 식별자가 제공됩니다. 해당 프로세스와 관련하여 발급된 모든 메시지는 동일한 식별자를 가지며, 이 식별자는 작업 워크플로의 이름과 번호(예: "add-volume-1941290")로 구성됩니다.</block>
   <block id="c3ba38442995091464c76676b4bde764" category="paragraph">성능 문제가 발생할 경우 원격 측정 로깅을 활성화하여 지원 담당자가 메시지가 발행된 특정 프로세스를 보다 쉽게 식별할 수 있습니다. 원격 측정 식별자가 메시지에 추가되면 로그 파일이 약간 확대됩니다.</block>
-  <block id="563c6fa09f1e284ce85546393fc8feb8" category="doc">SAN 관리 개요</block>
   <block id="13545eea1042dc237a1d28bb7e778bfb" category="paragraph">이 섹션의 내용은 ONTAP 9.7 이상 릴리즈에서 ONTAP CLI(Command Line Interface) 및 System Manager를 사용하여 SAN 환경을 구성하고 관리하는 방법을 보여줍니다.</block>
   <block id="aa6350da63bbc24b5ebe62846242ae05" category="list-text">ONTAP 버전에 따라 * 추가 옵션 * 을 클릭하여 다음 중 하나를 수행할 수 있습니다.</block>
   <block id="750015cd83c85ab22fd84efee735cdb4" category="list-text">SVM에서 프로토콜 서비스 지원:</block>
@@ -25016,7 +25004,6 @@
   <block id="a94babd8594d5fa839eb5925af09f719" category="section-title">UTA(Unified Target Adapter) X1143A-R6</block>
   <block id="239059d9fb55e247622c69b923234b23" category="paragraph">ONTAP System Manager(9.7 이상)를 사용하여 LUN을 이동합니다.</block>
   <block id="8aa093d376abfdf84e32e09c0a6892cc" category="paragraph">ONTAP CLI를 사용하여 LUN을 이동합니다.</block>
-  <block id="6a621e191e0165c57e5b73694667ac93" category="doc">프로토콜 FC 또는 iSCSI 라이센스를 확인하고 추가합니다</block>
   <block id="1b61b7aea971646f4ebe3664bc35f9a2" category="list-text">FC 또는 iSCSI에 대한 활성 라이센스가 있는지 확인합니다.</block>
   <block id="1d8b6d7b5723bafeb1798721d7276744" category="list-text">FC 또는 iSCSI에 대한 활성 라이센스가 없는 경우 라이센스 코드를 추가합니다.</block>
   <block id="d459ee3a62a60cdedafa4fd891c75948" category="summary">SLM(Selective LUN Map)을 사용하는 것 외에도 igroup 및 포트 세트를 통해 LUN에 대한 액세스를 제한할 수 있습니다.</block>
@@ -25025,9 +25012,7 @@
   <block id="e077a87d1d3ad9c9668e5a85636cb253" category="image-alt">포트셋 없이 LUN 액세스를 보여 주는 이미지입니다</block>
   <block id="99cb195154c9fe16462111c7693809fe" category="image-alt">포트 et을 사용한 LUN 액세스를 보여 주는 이미지입니다</block>
   <block id="eb7de24f549aa3f160558b8697a999bc" category="list-text"><block ref="eb7de24f549aa3f160558b8697a999bc" category="inline-xref-macro-rx"></block></block>
-  <block id="419cfc02b324dc7d8faefa90ed608fb0" category="doc">시스템 요구 사항</block>
   <block id="00151817d18957b14ac89f55e87d9bce" category="paragraph">ONTAP 9.5부터 NVMe를 지원하려면 라이센스가 필요합니다. ONTAP 9.4에서 NVMe를 사용하는 경우 ONTAP 9.5로 업그레이드한 후 라이센스를 취득하기 위한 90일 유예 기간이 제공됩니다.</block>
-  <block id="a441b4ab4a68e599e4c2acbfa61f336e" category="inline-link-macro">NVMe용 스토리지 VM을 구성합니다</block>
   <block id="9c8107b0b188ae93649d6bd28ca984dd" category="paragraph">ONTAP System Manager(9.7 이상)를 사용하여 iSCSI용 스토리지 VM을 구성합니다.</block>
   <block id="87c80d5701597008508ba9659b4cb20e" category="cell">새 스토리지 VM에서 iSCSI를 구성합니다</block>
   <block id="c3ae964cf45c64e3da8c9fcdf9647fbe" category="cell">기존 스토리지 VM에서 iSCSI를 구성합니다</block>
@@ -29493,7 +29478,6 @@ ONTAP 9.14.1부터 SMB에 대해 지원됩니다.</block>
   <block id="bf0f3455941e72a8f19b82aeca00ff9e" category="list-text">포트 11104 및 11105를 통해 모든 인터클러스터 LIF의 IP 주소로 양방향으로 시작된 TCP 트래픽입니다</block>
   <block id="2bfcdd9919bbbb9c5eb42f76bf9c3a92" category="list-text">* 온도에 민감한 스토리지 효율성 *</block>
   <block id="5927e0c5429d2e7d0ff849d50a3a2915" category="summary">ONTAP 9.11.1 이상으로 업그레이드한 후에는 ONTAP 9.10.1 이전 버전에서 생성된 모든 iSCSI LIF에서 자동 LIF 페일오버를 수동으로 사용하도록 설정해야 합니다.</block>
-  <block id="ce6fb05435343e5371da9a99b8f2766a" category="doc">자동 iSCSI LIF 페일오버를 사용 또는 사용하지 않도록 설정합니다</block>
   <block id="c9697c440b31a1e16a541a47a241a708" category="paragraph">ONTAP 9.11.1부터 All-Flash SAN 어레이 플랫폼에서 iSCSI LIF에 대한 자동 LIF 페일오버를 활성화할 수 있습니다. 스토리지 페일오버가 발생하는 경우 iSCSI LIF가 홈 노드나 포트에서 HA 파트너 노드 또는 포트로 자동으로 마이그레이션된 다음, 페일오버가 완료되면 다시 뒤로 마이그레이션됩니다.  또는 iSCSI LIF의 포트가 정상 상태가 아닐 경우 LIF는 자동으로 현재 홈 노드의 정상 포트로 마이그레이션된 다음, 포트가 다시 정상 상태가 되면 원래 포트로 다시 돌아갑니다.  를 사용하면 iSCSI에서 실행되는 SAN 워크로드가 페일오버가 발생한 후 I/O 서비스를 더 빠르게 재개할 수 있습니다.</block>
   <block id="6e25baaf7acdf5d3a0f3923eb3aaf109" category="paragraph">ONTAP 9.11.1 이상에서는 기본적으로 새로 생성된 iSCSI LIF가 다음 조건 중 하나에 해당할 경우 자동 LIF 페일오버에 사용하도록 설정됩니다.</block>
   <block id="656f7f81097050f64a959dfeaa7281bb" category="list-text">SVM에 iSCSI LIF가 없습니다</block>
@@ -34377,7 +34361,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6fd3cae72f51745b3f46793456392659" category="list-text">매개 변수를 로<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 설정하면<block ref="8e2c9b9bbb6e13f43b14de21724221b8" prefix=" " category="inline-code"></block> ONTAP S3에 대한 인증서 검사가 비활성화됩니다. <block ref="bb98b82b586e15e0d5dafedea742a5dd" prefix="(" category="inline-code"></block>타사 인증 기관에서 서명한 인증서를 사용하는 것이 좋습니다.</block>
   <block id="6ecf521116551956418bd9b39e4a619f" category="list-text">매개 변수를 로<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 설정하면<block ref="8e2c9b9bbb6e13f43b14de21724221b8" prefix=" " category="inline-code"></block> StorageGRID에 대한 인증서 검사가 비활성화됩니다. <block ref="bb98b82b586e15e0d5dafedea742a5dd" prefix="(" category="inline-code"></block>타사 인증 기관에서 서명한 인증서를 사용하는 것이 좋습니다.</block>
   <block id="65400abb2fbdf558dd7dcb3dcd6ab151" category="summary">ONTAP 9.16.1부터 고급 용량 밸런싱이 도입되어 매우 큰 파일이 확장되어 하나의 구성원 볼륨에서 공간을 사용할 때 FlexGroup 구성원 볼륨 간에 데이터를 배포할 수 있습니다.</block>
-  <block id="906ac0d7b7c6f341f7dbb7b09fd07618" category="doc">파일 데이터를 재배포하여 ONTAP FlexGroup 볼륨의 균형을 조정합니다</block>
   <block id="bd4e67ffcee7dd8782b92e5f931aa7c5" category="paragraph">ONTAP 9.16.1부터 고급 용량 밸런싱을 활성화하여 매우 큰 파일이 확장되어 하나의 구성원 볼륨에서 공간을 사용할 때 FlexGroup 구성원 볼륨 간에 데이터를 배포할 수 있습니다.</block>
   <block id="90a751fe680dc594253c0868480880e8" category="inline-link-macro">FlexGroup 볼륨의 균형 조정</block>
   <block id="38792fad6e5ecdfc59abbce5b04d19ac" category="paragraph">고급 용량 밸런싱은 ONTAP 9.12.1에 도입된 세분화된 데이터 기능을 확장하므로 ONTAP에서 파일을 다른 구성원으로 이동할 수 <block ref="55fb1ae6b0fff73480d242f0d1269dfc" category="inline-link-macro-rx"></block>있습니다. ONTAP 9.16.1부터 고급 용량 균형 조정 옵션을 사용하도록 설정하면<block ref="34237d33ca3c28492714e26ea6fe6704" prefix=" " category="inline-code"></block> "기본" 파일 재조정 기능과 고급 용량 기능이 모두 활성화됩니다.</block>
@@ -35025,10 +35008,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b666c31a396b4e19cb991dda2bd1d257" category="open-title">FC 모드에서 CNA 모드로 전환합니다</block>
   <block id="ec8685d8b84d52a207022c4b83eb09ab" category="list-text">올바른 SFP+가 설치되었는지 확인합니다.</block>
   <block id="0910065562c7183f54f025f933e2b1ee" category="paragraph">CNA의 경우 10Gb 이더넷 SFP를 사용해야 합니다.</block>
-  <block id="7141f748e4277c660a41c3f9e9f3594e" category="doc">ONTAP 9.11.1에서 되돌리기 전에 자율적 랜섬웨어 방어 라이센스를 확인하십시오</block>
   <block id="b44b2a82ee80efde61fbb6833f53709e" category="paragraph">ARP(자율적 랜섬웨어 방어)를 구성한 후 ONTAP 9.11.1에서 ONTAP 9.10.1로 되돌리면 경고 메시지와 제한된 ARP 기능이 발생할 수 있습니다.</block>
-  <block id="c6b7c4548e0d1889d2a5fa2536b1cdf9" category="doc">SnapMirror 동기식 관계를 사용하여 ONTAP 9.6에서 시스템을 되돌리기 위한 고려 사항</block>
-  <block id="052272f17b14cc424ee868461baecb6f" category="doc">ONTAP 버전에 필요한 되돌리기 전 작업</block>
   <block id="7e8e4aa525de31b453ea75af3687034e" category="paragraph">ONTAP 버전에 따라 되돌리기 프로세스를 시작하기 전에 추가 준비 작업을 수행해야 할 수도 있습니다.</block>
   <block id="46c9bb847c815c9e7d1384902fa4d2d5" category="cell">다음으로 되돌리는 경우...</block>
   <block id="1c45bb556ea773a1b6a6ae26ba1f312b" category="cell">되돌리기 프로세스를 시작하기 전에 다음을 수행하십시오.</block>
@@ -35072,7 +35052,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ca22e865996f6c0b8ce1b228904adcb0" category="paragraph">다음과 같은 지원되는 되돌리기 경로는 사내 ONTAP 릴리즈에만 해당됩니다. 클라우드에서 ONTAP를 되돌리는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="618ccc156ffe69795626013a97d1f1f5" category="inline-link-rx"></block>.</block>
   <block id="053658208517b8bdd943fbe26338cd7e" category="doc">ONTAP 복원 문제 및 제한 사항</block>
   <block id="a2a4b4434abfc42b1c78ecbc08956eb7" category="paragraph">ONTAP 클러스터를 복구하기 전에 되돌리기 문제 및 제한 사항을 고려해야 합니다.</block>
-  <block id="d7d48860b48a7d2bd67874e0b9ec2845" category="doc">ONTAP 클러스터를 복구하려면 기술 지원이 필요합니까?</block>
   <block id="fa414ea6d0a24340f356cc17da9009d6" category="paragraph">다음과 같은 상황에서 ONTAP 클러스터를 복구하기 전에 기술 지원 부서에 문의해야 합니다.</block>
   <block id="c8b0bf5e474ff06c1c25f13381076a96" category="list-text">프로덕션 환경</block>
   <block id="b397916034753273e11c1af081cadfba" category="paragraph">기술 지원 부서의 도움 없이 운영 클러스터를 복구하려고 하지 마십시오.</block>
@@ -35082,7 +35061,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="2f96d8c925f3c0498d3b5fea8e8125ba" category="list-text">되돌리기가 실패하거나 완료할 수 없습니다.</block>
   <block id="52c6785fe3cb49b0ad96a8a193e5ea7d" category="list-text">되돌리기가 완료되지만 운영 환경에서 클러스터를 사용할 수 없습니다.</block>
   <block id="fc457a1a99b3ca02c18dcd529d98d8dc" category="list-text">되돌리기가 완료되고 클러스터가 운영 환경으로 전환되지만 이 동작이 만족스럽지 않습니다.</block>
-  <block id="823f975a3f377c76d742847ffd5d617f" category="doc">ONTAP 9.16.1에서 되돌리기 전에 확장 Qtree 성능 모니터링을 비활성화하십시오</block>
   <block id="d7236134d345e3b415da1d0384ba41d1" category="paragraph">ONTAP 9.16.1부터 ONTAP REST API를 사용하여 지연 시간 메트릭 및 기간별 통계를 비롯한 확장된 qtree 모니터링 기능에 액세스할 수 있습니다. 모든 qtree에서 확장 모니터링이 활성화되어 있는 경우 9.16.1에서 되돌리려면 먼저 false로 설정해야 합니다<block ref="745a1be36f8a005c1ed0b3ce36df78cc" prefix=" " category="inline-code"></block>.</block>
   <block id="597db26e4a28c28899d39814f8a6ea5e" category="inline-link-macro">확장된 qtree 성능 모니터링으로 클러스터 되돌리기</block>
   <block id="83a36a994e85b6bd1b4154a93087ac22" category="summary">ONTAP 9.12.1에서 되돌리는 경우 되돌리기 전에 대역내 인증을 비활성화해야 합니다.</block>
@@ -35099,7 +35077,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="c21bd4252938f41c165887ec6cc70fe0" category="paragraph">ONTAP 9.13.1로 되돌리면 트렁킹된 연결을 사용하는 클라이언트가 다시 단일 연결을 사용하는 것으로 전환됩니다. 이러한 데이터 처리량에 영향을 주지만 중단은 없습니다. 되돌리기 동작은 SVM에 대한 NFSv4.1 트렁킹 옵션을 Enabled에서 Disabled로 수정하는 것과 동일합니다.</block>
   <block id="85adeccae4b6a909f572bfa3eed9a6e6" category="list-text">NFSv4.1 서버에서 트렁킹을 해제합니다.</block>
   <block id="6bc0e6135bd2cff6745cc582b0f49435" category="summary">ONTAP 9.12.1에서 MetroCluster 구성을 되돌리려면 먼저 IPsec을 비활성화해야 합니다.</block>
-  <block id="1990d771ba611200f42ccac41e01e458" category="doc">ONTAP 9.12.1에서 되돌리기 전에 MetroCluster 구성에서 IPsec을 비활성화합니다</block>
   <block id="057d4a7668a8d64a982bdf0046197392" category="paragraph">MetroCluster 구성 내에 IPsec 구성이 없는지 확인하기 위해 되돌리기 전에 검사가 수행됩니다. 복원을 계속하기 전에 존재하는 IPsec 구성을 제거하고 IPsec을 비활성화해야 합니다. 사용자 정책을 구성하지 않은 경우에도 IPsec을 사용하도록 설정하면 ONTAP를 되돌릴 수 없습니다.</block>
   <block id="d7031020059e4052aa86d86b15c90106" category="doc">ONTAP 9.16.1에서 되돌리기 전에 NVMe 호스트에서 TLS를 사용하지 않도록 설정합니다</block>
   <block id="75dfe8e3b47d0004d11f057c475aa3d2" category="paragraph">NVMe 호스트에 NVMe/TCP 연결을 위한 TLS 보안 채널이 구성되어 있는 경우, ONTAP 9.16.1에서 클러스터를 복구하기 전에 이 채널을 비활성화해야 합니다.</block>
@@ -35119,11 +35096,9 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a08e3ef51735b363e30e135aed637275" category="list-text">각 노드에 소프트웨어 이미지가 다운로드되고 설치되어 있는지 확인합니다.</block>
   <block id="5b3cf0e501b334f487467b5a4fc71f8e" category="doc">ONTAP 되돌리기 후 LIF를 홈 포트로 설정 및 되돌리기</block>
   <block id="c766597bdef6428f01ff7111f4c24624" category="paragraph">재부팅 중 일부 LIF는 할당된 페일오버 포트로 마이그레이션되었을 수 있습니다. ONTAP 클러스터를 되돌린 후 홈 포트에 없는 LIF를 사용하도록 설정하고 되돌려야 합니다.</block>
-  <block id="010170b1dfae14a61849c8aacb210bb7" category="doc">ONTAP 되돌리기 후 MetroCluster 구성에 대해 자동 전환이 활성화된다</block>
   <block id="cea5eeb43d4e8fbf146ce02b0ed1ee6c" category="paragraph">ONTAP MetroCluster 구성을 되돌린 후 계획되지 않은 자동 전환을 활성화하여 MetroCluster 구성이 완전히 작동하는지 확인해야 합니다.</block>
   <block id="35721e429b4b83de55d9286805a3b83f" category="list-text">계획되지 않은 자동 전환 지원:</block>
   <block id="0839a30d5875a05f2acdf6c928f9fe49" category="list-text">MetroCluster 구성을 검증합니다.</block>
-  <block id="bf1748410d1727ab8110faa87900ae26" category="doc">ONTAP 클러스터를 되돌리기 전에 스냅샷을 준비합니다</block>
   <block id="e02224d30462138e2c2520297aec3e4a" category="list-text">노드의 애그리게이트를 식별합니다.</block>
   <block id="e54a99789f96af2bbaa3b51f6c2e43fb" category="list-text">노드의 루트 볼륨 식별:</block>
   <block id="e032545876e1b0457d389f4e208132f0" category="paragraph">명령 출력의 * Options * 열에서 root 라는 단어로 루트 볼륨을<block ref="3d5415340ee1032b06bcded13325abb0" prefix=" " category="inline-code"></block> 식별합니다.</block>
@@ -35185,13 +35160,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="4881ea3d8be16cb4864cdb905e4cf601" category="list-text">되돌리기에 성공하지 못하면 인스턴스를 표시하여 되돌리기가 실패한 이유를 확인합니다.</block>
   <block id="8d9df783e6dff6c4a2e51c663f01c971" category="list-text">되돌리기 작업이 완료된 후 admin 권한 수준으로 돌아갑니다.</block>
   <block id="5f0263e7e6d7c114b26533ed9504a57a" category="paragraph">에 대해 자세히 <block ref="a15ba1fc5a56db86588fad5680ccb96d" category="inline-link-macro-rx"></block>알아보십시오.</block>
-  <block id="d8bd0dfc29488eed0331f0b3306f3055" category="doc">ONTAP 클러스터를 되돌리기 전에 검토할 리소스</block>
   <block id="5e397af2d3cc29f277eb4e28004c5979" category="paragraph">ONTAP 클러스터를 복구하기 전에 하드웨어 지원을 확인하고 리소스를 검토하여 발생 가능하거나 해결해야 할 문제를 파악해야 합니다.</block>
   <block id="c2a47a3fab96d8e78da20dfcc257ddb8" category="doc">SnapLock 볼륨을 되돌리기 전에 ONTAP 볼륨에 대해 자동 커밋 기간을 설정합니다</block>
   <block id="1060bb25c2a84359830d33084f164d94" category="paragraph">ONTAP 9의 모든 버전에서 ONTAP 클러스터를 되돌리려면 먼저 SnapLock 볼륨에 대한 자동 커밋 기간의 값을 며칠이 아닌 몇 시간 내에 설정해야 합니다. SnapLock 볼륨의 자동 커밋 값을 확인하고 필요한 경우 며칠에서 몇 시간으로 수정해야 합니다.</block>
   <block id="4af40f9c46fa1142402dc9f94e94516c" category="list-text">클러스터에 지원되지 않는 자동 커밋 기간이 있는 SnapLock 볼륨이 있는지 확인합니다.</block>
   <block id="c6b5fb9e38b55f1435b5bc6a69ae3498" category="list-text">지원되지 않는 자동 커밋 기간을 시간 단위로 수정합니다</block>
-  <block id="995dacfbe84379c8159e382c76b7bdfa" category="doc">ONTAP 클러스터를 되돌리기 전에 수행할 시스템 확인</block>
   <block id="2e3b797530157ed1cc8a4b0d34de98ff" category="paragraph">ONTAP 클러스터를 되돌리려면 먼저 클러스터 상태, 스토리지 상태 및 시스템 시간을 확인해야 합니다. 또한 클러스터에서 실행 중인 작업이 없는지 확인해야 합니다.</block>
   <block id="2d708f8b02a438f3a61b597647836fd0" category="paragraph">ONTAP 클러스터를 되돌리려면 먼저 노드가 정상 상태이고 클러스터에 참여할 자격이 있는지, 클러스터가 쿼럼에 있는지 확인해야 합니다.</block>
   <block id="402b66c4b72ef81e3e8d67e3ce796853" category="paragraph">이 예에서는 모든 노드가 정상 상태이며 클러스터에 참여할 수 있습니다.</block>
@@ -35219,7 +35192,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="512d15ef7d5da56b33700eedfd36df1b" category="list-text">지속적으로 사용할 수 없는 설정된 SMB 세션을 식별합니다.</block>
   <block id="f56b70c4ce04f4cba94e65616d69210f" category="list-text">필요한 경우 확인한 각 SMB 세션에 대해 열려 있는 파일을 확인합니다.</block>
   <block id="03968500021913c3a949d380c3b5b770" category="summary">ONTAP 9.8 이하에서 사용자 계정을 만들고 ONTAP 9.9.1 이상으로 업그레이드한 다음 ONTAP 9.8로 다시 되돌리면 -role 매개 변수가 ONTAP 9.8의 원래 값으로 복원됩니다.</block>
-  <block id="a8afe1ee8af268abaa36631997cd958c" category="doc">ONTAP 9.8로 되돌린 후 서비스 프로세서에 액세스할 수 있는 사용자 계정을 확인합니다</block>
   <block id="b53be51b19a9a41c3da5c8bbca6421fa" category="paragraph">ONTAP 9.9.1 이상에서는<block ref="68d6505ca064eccb1bf70c0fbbf9b654" prefix=" " category="inline-code"></block> 사용자 계정에 대한 매개 변수가 로<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>변경됩니다. ONTAP 9.8 이하에서 사용자 계정을 만들고 ONTAP 9.9.1 이상으로 업그레이드한 다음 ONTAP 9.8로 다시 되돌리면<block ref="68d6505ca064eccb1bf70c0fbbf9b654" prefix=" " category="inline-code"></block> 매개 변수가 원래 값으로 복원됩니다. 수정된 값이 허용 가능한지 확인해야 합니다.</block>
   <block id="e4a469ca13bea374f2714a4bde1d1f2b" category="summary">스냅샷 및 FlexClone LUN을 자동으로 삭제하는 정책을 정의하여 공간 활용률을 관리할 수 있습니다.</block>
   <block id="712e1580fe64132aa6af379e9f02f97f" category="doc">공간을 관리하기 위해 자동 스냅샷 및 LUN 삭제를 활성화합니다</block>
@@ -36030,7 +36002,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="3f3c8e90873183735e915414948c825a" category="paragraph">명령을 사용하여 QoS 워크로드에 대한 자세한 지연 시간 통계를 볼 수<block ref="e9c641089fd88f386a148bd17d4b7d7e" prefix=" " category="inline-code"></block> 있습니다. 에 대한 자세한 내용은<block ref="e9c641089fd88f386a148bd17d4b7d7e" prefix=" " category="inline-code"></block> <block ref="8256e77437b64ab4c75d7ecc0c69537d" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="1b0a2f698ad3c1d74167edd2f62bc9a4" category="paragraph">에 대한 자세한 내용은<block ref="81d20fed85af7742aa90f044a6df8b29" prefix=" " category="inline-code"></block> <block ref="ac7ce0e7761c83cbdb1a84f0e57e89ea" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="07fac647a5966d07036c6516ddbeca82" category="paragraph">ONTAP 9.16.1부터 S3 오브젝트 태깅은 비멀티프로토콜 ONTAP S3 버킷에서 NAS 및 S3 멀티프로토콜 ONTAP S3 버킷으로 확장됩니다. 태그는 S3 프로토콜에서만 표시됩니다. S3 클라이언트를 사용하여 S3 오브젝트에 적용함으로써<block ref="ae9b8261d9ca043288ee933334c5761b" category="inline-link-rx"></block> ONTAP에 오브젝트 또는 파일로 저장된 데이터에서 라이프사이클, 비용 청구, 데이터 범주 및 사용자 지정 워크플로우를 정의하는 데 도움이 됩니다. Bedrock 또는 Athena와 같은 AWS 데이터 서비스와 통합할 경우 태그 및 메타데이터가 이 서비스에서 제공하는 Data Processing의 핵심이 됩니다.</block>
-  <block id="869b8445a937ac8b3f9deb1913e73273" category="doc">ONTAP의 iSNS(인터넷 저장소 이름 서비스)입니다</block>
   <block id="fc501885b81271a7f09a6206c85ae464" category="paragraph">에 대한 자세한 내용은<block ref="044be90bfabe23ab8943bfe26fbd2809" prefix=" " category="inline-code"></block> <block ref="f09bc79f1073df0e29b602f881ce90ef" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="09e979b5acad84c1305a957a78b16bcc" category="paragraph">선택적 매개 변수의 값은 Storage-Level Access Guard에서 무시됩니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 <block ref="bc2602c5a66493ba7d85e8bd5d0e7f9b" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="cff4b05e6d7f59f5c0d531edbf8b911c" category="paragraph">에 대한 자세한 내용은<block ref="8cad624ca17bf84725be65a7e5000d92" prefix=" " category="inline-code"></block> <block ref="a3bc035657aea3e47fcaa8357d442d31" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -37244,7 +37215,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="80dd8e38a4868b9c55545fc21fbc6182" category="paragraph">비운영 환경에서 운영 워크로드를 테스트하는 것이 가장 좋습니다. 이 지침을 벗어나는 FlexCache Write-Back을 구현할 경우 더욱 중요합니다.</block>
   <block id="a12fa889ea810f11b7244f9400b72942" category="list-text">ONTAP 9.10.1부터 자동 업데이트를 사용하도록 설정한 경우 다음 추가 URL에 HTTPS 연결이 있는지 확인합니다.</block>
   <block id="26ad474209427bf06072b27e4a873b25" category="paragraph">SP와 ONTAP는 모두 시스템 콘솔에 액세스할 수 있는 명령을 제공합니다. 그러나 SP에서는 자체 노드의 시스템 콘솔에만 액세스할 수 있습니다. 클러스터에서 클러스터의 다른 노드(로컬 노드 제외)의 시스템 콘솔에 액세스할 수 있습니다.</block>
-  <block id="85277a262ac7ce11e8f3634e0c219418" category="doc">AI(ARP/AI)로 ONTAP 자율적 랜섬웨어 방어 업데이트</block>
   <block id="ff1166be058fae7aad55f0358100ade4" category="doc">ONTAP 자율적 랜섬웨어 방어에 대해 알아보십시오</block>
   <block id="230530ba48e8b3453804616720e946fd" category="doc">ONTAP ARP가 감지한 비정상적인 활동에 응답합니다</block>
   <block id="37525db070b0d4c5bd803f29e54e452a" category="doc">ONTAP S3를 FabricPool 클라우드 계층으로 설정합니다</block>
@@ -37503,7 +37473,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="03261a66d603d377419109acbe5bd3e4" category="list-text">비플래시 동질적인 로컬 계층의 경우 핫 스페어 디스크 또는 디스크 파티션이 최소 2개 있어야 합니다.</block>
   <block id="940cb51ea4bac68865b1006dec3449da" category="list-text">Flash Pool 로컬 계층의 경우 각 HA 쌍에 대해 최소 2개의 스페어 디스크가 있어야 합니다. 에서 Flash Pool 로컬 계층에 대해 지원되는 RAID 정책에 대한 자세한 내용을 확인할 수<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block> 있습니다.</block>
   <block id="eea098be2fd8a0d53d137ed0b0216fe3" category="summary">하나 이상의 로컬 계층에 있는 모든 볼륨에서 사용되는 공간을 확인하여 추가 공간을 확보하기 위한 조치를 취할 수 있습니다.</block>
-  <block id="779a1aaec90c526d5fb4368cf1fa4218" category="doc">ONTAP 로컬 계층의 공간 사용량을 확인합니다</block>
   <block id="f3ce6b0856d8e15b94e383bf1e92f87f" category="paragraph">WAFL는 로컬 계층 레벨 메타데이터 및 성능을 위해 총 디스크 공간의 비율을 예약합니다. 로컬 계층에서 볼륨을 유지하는 데 사용된 공간은 WAFL 예비 공간을 벗어나서 변경할 수 없습니다.</block>
   <block id="4e18e783d01970b39acd4410fcfe9a92" category="paragraph">30TB 미만의 로컬 계층에서는 WAFL가 로컬 계층 수준 메타데이터 및 성능을 위해 총 디스크 공간의 10%를 예약합니다.</block>
   <block id="44feeef02f20aa1be050a6e7ba52a32e" category="paragraph">ONTAP 9.12.1부터 30TB 이상의 로컬 계층에서는 로컬 계층 수준 메타데이터 및 성능을 위해 예약된 디스크 공간이 줄어들기 때문에 로컬 계층에서 사용 가능한 공간이 5% 더 많아집니다. 절약되는 공간의 가용성은 해당 플랫폼 및 ONTAP 버전에 따라 다릅니다.</block>
@@ -38563,34 +38532,28 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="59d972945896de9f8801219522db7621" category="paragraph">다음 예에서는<block ref="93e9fa0fcb7aba0522283d98215b5d88" prefix=" " category="inline-code"></block> SVM이라는 볼륨을 FabricPool 지원 로컬 계층으로<block ref="66e28b10f51869bd35dbf6d03759ef49" prefix=" " category="inline-code"></block> 이동합니다<block ref="1236318b32ff887884462107aee24792" prefix=" " category="inline-code"></block>.</block>
   <block id="a14c58b082fa45ef38547f28a36e3e01" category="doc">ONTAP FlexCache 볼륨 감사에 대해 자세히 알아보십시오</block>
   <block id="59028869486d2aa4a440b60d8cf11a94" category="doc">ONTAP FlexCache 관계 삭제</block>
-  <block id="4373a2a0001fd5a996a485f8c58a5f24" category="doc">ONTAP FlexCache 볼륨에서 파일 액세스 시간 업데이트를 활성화합니다</block>
   <block id="226f16dc8a5e373584caec601e76a06e" category="doc">ONTAP FlexCache 볼륨에 대한 글로벌 파일 잠금을 사용합니다</block>
   <block id="4e59e775225da37265a8902119d82992" category="doc">ONTAP FlexCache 볼륨에 대해 알아보십시오</block>
   <block id="9d5642049830e178b805163f80c6d401" category="doc">ONTAP FlexCache 볼륨을 미리 채웁니다</block>
   <block id="6f1d1c25725512032690b36eb97448b8" category="doc">ONTAP FlexCache 관계 구성을 업데이트합니다</block>
   <block id="45dc85094689f105d988e73a9d872518" category="doc">ONTAP FlexCache 볼륨 사이징 지침을 참조하십시오</block>
   <block id="139215a7f152a1f3d2f522c1c8a76185" category="doc">ONTAP FlexCache 볼륨에 대해 지원되거나 지원되지 않는 기능</block>
-  <block id="0627aaf0bb6139e220095c983cfde43a" category="doc">원본 볼륨의 ONTAP FlexCache 볼륨 속성을 동기화합니다</block>
   <block id="06371692551fd560338759ecd66a16fd" category="doc">HDFA 및 ONTAP 데이터 LIF를 구성합니다</block>
   <block id="11cc830f25da97160f9915afb3206a05" category="doc">ONTAP FlexCache 볼륨으로 고성능 컴퓨팅 워크로드의 핫 스팟 해결</block>
   <block id="3b6b116bf1313a5bc4c0fc42d8d14c77" category="doc">ONTAP FlexCache write-back 상호 운용성</block>
   <block id="143ccd7e6088e13e6f29a3406f9cad06" category="doc">ONTAP FlexCache Write-Back에 대해 자세히 알아보십시오</block>
   <block id="2fa952eac95543c63d2f18c349ad7efe" category="doc">대상 ONTAP FlexGroup 볼륨을 활성화합니다</block>
-  <block id="5caa522abbab8d7a32d4a49458c4af3d" category="doc">크기를 자동으로 늘리거나 줄일 수 있도록 ONTAP FlexGroup 볼륨을 구성합니다</block>
   <block id="68af71ecf24083eeb73412dfcd6907b3" category="doc">ONTAP FlexGroup 볼륨으로 qtree를 생성합니다</block>
-  <block id="f09687b568876c03e79f27d5c354f796" category="doc">ONTAP FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계를 생성할 때의 고려 사항</block>
   <block id="49781793fe40989dbba4294488329c65" category="doc">ONTAP FlexGroup 볼륨 설정 워크플로</block>
   <block id="353aa2e88d3ba088f0bbc9670c685130" category="doc">ONTAP FlexGroup 볼륨의 재해 복구 워크플로우</block>
   <block id="591faef715f99787d252cf2c97d339fc" category="doc">SnapMirror 관계의 대상 ONTAP FlexGroup 볼륨을 확장합니다</block>
   <block id="f094cdfeee672945fd47a9fd87762e91" category="doc">SnapMirror 관계에서 ONTAP FlexGroup 볼륨 확장</block>
   <block id="06b2267dfe08378ef0257c884f461142" category="doc">SnapMirror 관계의 소스 ONTAP FlexGroup 볼륨을 확장합니다</block>
   <block id="c01bf5f9f81da71943c03480109b82ae" category="doc">기존 ONTAP FlexGroup 볼륨에 대해 FabricPool의 Aggregate를 사용합니다</block>
-  <block id="5032222dac9049c45ebbde06b1e3aa1f" category="doc">CLI를 사용한 ONTAP FlexGroup 볼륨 관리에 대해 자세히 알아보십시오</block>
   <block id="93121fb5843ee6c72204783c5f4a177e" category="doc">파일을 이동하여 ONTAP FlexGroup 볼륨의 균형을 조정합니다</block>
   <block id="fb8ddea6efe38e8cdae136a33c403dde" category="doc">ONTAP FlexGroup 볼륨의 SnapMirror 데이터 전송을 모니터링합니다</block>
   <block id="7c87a817aeb275a4882df8c75bc86598" category="doc">ONTAP FlexGroup 볼륨에서 SnapMirror 단일 파일 복원을 수행합니다</block>
   <block id="edf390781768f11ecd6fba66ed02af98" category="doc">스냅샷을 사용하여 ONTAP FlexGroup 볼륨을 보호합니다</block>
-  <block id="615142aa73af269d7f5d1f868432cf9b" category="doc">ONTAP FlexGroup 볼륨에 대한 데이터 보호 워크플로우 요약</block>
   <block id="68063dfdcf1e3ad70ae0f0116b0c8c0b" category="doc">ONTAP FlexGroup 볼륨을 자동으로 프로비저닝합니다</block>
   <block id="c5f28ae0a39cf596527a906c0e12e899" category="doc">ONTAP FlexGroup 볼륨에 할당량을 사용합니다</block>
   <block id="9101609496c8792ef43bff80327cbd4e" category="doc">재해 발생 후 원래 소스 ONTAP FlexGroup 볼륨을 다시 활성화합니다</block>
@@ -38706,9 +38669,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="73db51f8f1257d3be7dd9978cf3d213f" category="doc">ONTAP 파일 시스템 분석을 통해 역할 기반 액세스 제어</block>
   <block id="39e8c9f61166c89e9366ec7f8068f49e" category="doc">ONTAP FlexCache 볼륨을 생성합니다</block>
   <block id="7b49fecbb3cfa0b5e8794eadf7f5b6ac" category="doc">ONTAP FlexVol 볼륨을 FlexGroup 볼륨으로 변환하는 방법에 대해 알아봅니다</block>
-  <block id="da9b7adcb10fc2c3f70bf744f4e8b5fb" category="doc">ONTAP FlexVol volume SnapMirror 관계를 ONTAP FlexGroup 볼륨 SnapMirror 관계로 변환합니다</block>
   <block id="b2a7880769734af7787ed85f0dc88149" category="doc">SVM-DR 관계 내에서 ONTAP FlexVol 볼륨을 FlexGroup 볼륨으로 변환합니다</block>
-  <block id="b6134aa22ec51af8cdc85add6794897a" category="doc">ONTAP FlexVol 볼륨을 ONTAP FlexGroup 볼륨으로 변환합니다</block>
   <block id="ec0b41795eca8d11e33e6c11611e5240" category="doc">ONTAP FlexGroup 볼륨에 대한 SnapMirror 관계 생성</block>
   <block id="5cf3b3328e9b577075388b0b93ddbd27" category="doc">ONTAP FlexGroup 볼륨에 대한 SnapVault 관계 생성</block>
   <block id="acd1f1af226ed5ea0755e4bcd3f1dd18" category="doc">ONTAP FlexGroup 볼륨에 대한 SVM 재해 복구 관계 생성</block>
@@ -38721,9 +38682,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="c65dc10eae4adc51a51ef1c385dfa1bf" category="doc">ONTAP FlexGroup 볼륨의 공간 사용량을 모니터링합니다</block>
   <block id="db63f709b4d9e1b2b19d8a34e8a963b9" category="doc">ONTAP FlexGroup 볼륨에서 구성요소를 이동합니다</block>
   <block id="aaa2b3eb0fb168a4adcb1265160ab754" category="doc">SnapVault 백업에서 ONTAP FlexGroup 볼륨을 복원합니다</block>
-  <block id="14e1b76d2efe7caca0c81e6185825ebb" category="doc">재해 복구 중에 ONTAP FlexGroup 볼륨 간의 역방향 SnapMirror 관계</block>
   <block id="eac438c6773643c5194a7aba3ce44d6b" category="doc">ONTAP FlexGroup 볼륨의 크기를 줄입니다</block>
-  <block id="f999c138a4c0c3f866b008405e5a825f" category="doc">ONTAP FlexGroup 볼륨에 대한 SnapVault 백업 관계 및 통합 데이터 보호 관계를 생성할 때의 고려 사항</block>
   <block id="dddee12c90f007d5abb88d41e82f2e42" category="doc">ONTAP FlexGroup SnapMirror 관계를 SVM DR으로 전환</block>
   <block id="92d375ae13aef349145e8dc2877f3c76" category="doc">ONTAP 중재자에 대해 자세히 알아보십시오</block>
   <block id="2379f006c7634c9a3930eb53207e352b" category="doc">ONTAP 네트워크 포트 구성에 대해 자세히 알아보십시오</block>
@@ -39258,8 +39217,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="50a2c4e1505782b8359ec85edafaf460" category="list-text">LUN 클론을 제거합니다.</block>
   <block id="b7d254fa95a8d9ddc6c6f2df0254fc10" category="list-text">스냅샷을 제거합니다.</block>
   <block id="4a19db9d2ce0727d8db4c352f129a996" category="doc">SAN 환경에서의 ONTAP SnapVault 백업에 대해 알아보십시오</block>
-  <block id="1d71bcd5d9de515c68b4ad663c09c64e" category="doc">호스트 백업 시스템을 ONTAP에 연결하기 위한 권장 구성입니다</block>
-  <block id="88011d929167107f302384561c437ec4" category="doc">SAN 환경을 위한 ONTAP 데이터 보호 방법에 대해 알아보십시오</block>
   <block id="c3272f05d93dc7bd9e1179f9c35498d5" category="paragraph">ONTAP는 SAN 프로토콜과 ONTAP 버전에 따라 공간 할당을 지원합니다. ONTAP 9.16.1부터 새로 생성된 LUN 및 모든 네임스페이스에 대해 iSCSI, FC, NVMe 프로토콜에 대해 공간 할당이 기본적으로 활성화됩니다.</block>
   <block id="be9005844c7e6b900e37ea8913e3ba4e" category="paragraph">새로 생성된 LUN 및 모든 네임스페이스에 대해 기본적으로 설정됩니다</block>
   <block id="73ce065cd0a43c0ee3b477e913fc2a7b" category="doc">ONTAP FlexClone LUN으로 데이터를 보호합니다</block>
@@ -39270,7 +39227,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1f071b1d2ab6b4eb9ee0928f7ef476fd" category="list-text"><block ref="1f071b1d2ab6b4eb9ee0928f7ef476fd" category="inline-link-macro-rx"></block></block>
   <block id="e47f4d0f75b812b6c56a06e717eb4cd4" category="inline-link-macro">FlexClone LUN이 자동으로 삭제되지 않도록 방지합니다</block>
   <block id="2cb7d1597316d7b1e9332b8d97837ff1" category="list-text"><block ref="2cb7d1597316d7b1e9332b8d97837ff1" category="inline-link-macro-rx"></block></block>
-  <block id="95e0793ceaa038d5e8be86aaf3fe42f8" category="doc">ONTAP 스냅샷에서 볼륨의 모든 LUN을 복구합니다</block>
   <block id="84c805cc4b5c10e6cff8a981a136b1ae" category="doc">ONTAP SnapVault 백업에서 볼륨의 모든 LUN을 복원합니다</block>
   <block id="d373c15768ef5dc8e104b98c54921179" category="list-text">SnapVault 2차 볼륨이 포함된 2차 볼륨을 확인합니다.</block>
   <block id="f0a7b9264055c6c0ce05fcb441f93f2b" category="list-text">복원할 스냅샷을 식별합니다.</block>
@@ -39467,10 +39423,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="fdfaa5d389365276da98e6d2588d9048" category="doc">ONTAP 로컬 계층에 용량을 추가합니다</block>
   <block id="5657a21e6943d29d9cdc14e99d24e6bc" category="doc">ONTAP 노드 또는 쉘프에 드라이브를 추가합니다</block>
   <block id="efd7be7bad393ef63d89af9530fc3980" category="doc">ONTAP SSD 스토리지 풀에 SSD를 추가합니다</block>
-  <block id="b3cbaa32f4227512a96bc9d4b023bfed" category="doc">ONTAP 로컬 계층을 추가하는 워크플로입니다</block>
-  <block id="e1554dad2b121bb858adfdcbbd832ac0" category="doc">ONTAP 로컬 계층에 용량을 추가하기 위한 워크플로우</block>
   <block id="a9e16a5e7ce063c468a046ff370c251b" category="doc">SVM(스토리지 VM)에 ONTAP 로컬 계층 할당</block>
-  <block id="c7ee5e935adfc67f84700a8d5794925f" category="doc">로컬 계층 재배치를 위한 ONTAP 명령입니다</block>
   <block id="1b4a76c1e4eb1240243d163d218e7b7d" category="doc">공간 사용 정보를 표시하기 위한 ONTAP 명령입니다</block>
   <block id="b98f05f56c3e894103ff2b55d71b7285" category="doc">스토리지 쉘프에 대한 정보를 표시하기 위한 ONTAP 명령입니다</block>
   <block id="0530f336cfec498e4ba28fd37826af49" category="doc">로컬 계층 관리를 위한 ONTAP 명령</block>
@@ -39486,27 +39439,17 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="75ecf7959f094edc58b504c9cc411594" category="doc">SSD 스토리지 풀 할당 유닛을 사용하여 ONTAP Flash Pool 로컬 계층을 생성합니다</block>
   <block id="af15ab013fd660446dd6782ed17cbf80" category="doc">SSD 스토리지 풀을 생성하여 ONTAP 로컬 계층에 캐시를 추가합니다</block>
   <block id="ff6823b5ab37ef723321f1489ddd755b" category="doc">ONTAP RAID 그룹의 크기를 사용자 지정합니다</block>
-  <block id="b51aa57190ff5adb6bbfad8d541bf5a6" category="doc">ONTAP 로컬 계층을 생성하는 데 사용할 방법을 결정합니다</block>
   <block id="3eb92ed259acd27a22ba50b2ee2e6478" category="doc">ONTAP 로컬 계층에 대한 기본 RAID 정책</block>
   <block id="4a9cbc26b1520c0258df3c9035c95b48" category="doc">ONTAP 로컬 계층을 삭제합니다</block>
   <block id="48b00963223269608539eeb95b87c643" category="doc">ONTAP 로컬 계층에 있는 볼륨의 공간 사용량을 확인하고 제어합니다</block>
   <block id="b68157b8794c26fb5ba611c15c9629fa" category="doc">ONTAP 로컬 계층의 드라이브 및 RAID 그룹 정보를 확인합니다</block>
   <block id="5c837c31c172da6b7353d520f87dd932" category="doc">ONTAP Flash Pool 로컬 계층에서 SSD 스토리지 풀을 사용하고 있는지 확인합니다</block>
   <block id="3d692fbcdcceed362a918a79355b6ec4" category="doc">ONTAP Flash Pool의 적합성과 최적의 캐시 크기를 결정합니다</block>
-  <block id="032efb8f9716c052cd5618cd38189cb8" category="doc">SSD를 SSD 스토리지 풀에 추가할 때 ONTAP 캐시 크기에 미치는 영향을 확인합니다</block>
-  <block id="63283345a0507127434d1f67e6032603" category="doc">Flash Pool 로컬 계층의 ONTAP 캐싱 정책을 수정할지 여부를 결정합니다</block>
-  <block id="888594acddadc6cd410d501fec949d6b" category="doc">ONTAP 로컬 계층에 필요한 디스크 또는 디스크 파티션 수를 확인합니다</block>
   <block id="a13d569545da77399535688b6644dfe4" category="doc">ONTAP 로컬 계층에 상주하는 볼륨을 확인합니다</block>
   <block id="61f39899bb23ad33f9f5679eab7d5165" category="doc">ONTAP 디스크 소유권 자동 할당에 대해 알아봅니다</block>
-  <block id="779c64b6c6db79dc37457b05d2562951" category="doc">ONTAP 디스크 및 파티션의 소유권을 관리합니다</block>
   <block id="e472d42e7e5df570c929e213a5c57faf" category="doc">ONTAP 디스크 및 파티션 소유권을 표시합니다</block>
-  <block id="ea8b3298589952efbe3581331a725e8b" category="doc">ONTAP 로컬 계층에 대한 드라이브 및 RAID 그룹 정보</block>
-  <block id="21394731cec86a8b81a589bf80299391" category="doc">ONTAP 드라이브를 수동으로 빠르게 0으로 설정합니다</block>
-  <block id="148a7026cacd5bf52ca94ba2dd4052bd" category="doc">Flash Pool ONTAP 로컬 계층 캐싱 정책</block>
-  <block id="e2ebb95fce721eb4b868895b76ec8563" category="doc">스토리지 풀을 사용하여 ONTAP Flash Pool 로컬 계층에 Flash Pool SSD 파티셔닝</block>
   <block id="c4176dbd743ed71281382ed504dedeaf" category="doc">ONTAP 핫 스페어 디스크의 작동 원리</block>
   <block id="5e84fa7abfce5f8b730753524edf13fc" category="doc">디스크 및 ONTAP 로컬 계층</block>
-  <block id="1d6b79228372dae8547d700b3005101c" category="doc">스페어 경고가 ONTAP 스페어 디스크를 관리하는 데 얼마나 도움이 되는지 확인하십시오</block>
   <block id="1c7faa386d7a1bb6a9bff1482a3039a7" category="doc">ONTAP 로컬 계층 관리에 대해 자세히 알아보십시오</block>
   <block id="596f94aa8cf0a7a913879f53612f4e42" category="doc">분할되지 않은 디스크의 ONTAP 디스크 소유권을 수동으로 할당합니다</block>
   <block id="d728aa9e925f459534841063ef96cfd6" category="doc">ONTAP 디스크 소유권을 수동으로 할당합니다</block>
@@ -39520,18 +39463,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="d13c49a2255fa0364f3eb44e91f11a98" category="doc">디스크에서 ONTAP 소유권을 제거합니다</block>
   <block id="8e566d3a0962b3d8865a6c4bc1cd763f" category="doc">ONTAP 로컬 계층의 이름을 바꿉니다</block>
   <block id="92e2b56c822b77d111af68fa62397e02" category="doc">추가적인 ONTAP 루트 데이터 파티셔닝 관리 옵션</block>
-  <block id="dd3d58f884ccd2d90f6474e67bf771f8" category="doc">ONTAP 디스크 삭제가 중단되면 어떻게 됩니까</block>
-  <block id="8fd3ccdc967a766141d8ed53dd252e04" category="doc">ONTAP 디스크 삭제를 수행할 수 없는 경우에 대해 알아보십시오</block>
   <block id="350846118a85a3f55e505a5f7f6a1677" category="doc">ONTAP 디스크 삭제에 대해 알아보십시오</block>
-  <block id="16a85fda4df6e8db59f17d223f7b7858" category="doc">삭제할 데이터가 포함된 ONTAP 로컬 계층을 만들고 백업하기 위한 팁입니다</block>
   <block id="da96049ac2782df66c0d0b7eedc05d4c" category="doc">ONTAP 디스크 완전 삭제</block>
   <block id="0089993e3d6192552042e703b77b33fe" category="paragraph">각 디스크에서 완료된 작업을 보여 주는 지정된 디스크의 삭제 로그가 에<block ref="617cfa1370269f268fce43fe01cae482" prefix=" " category="inline-code"></block>기록됩니다.</block>
   <block id="bd05164f80fd3e0042c3cfc538e1d811" category="doc">ONTAP Flash Pool 로컬 계층에 대한 캐시 보존 정책을 설정합니다</block>
   <block id="62d771a1f8e3e3b448d4a9a0000346c8" category="doc">ONTAP 로컬 계층의 미디어 비용을 설정합니다</block>
-  <block id="4470f81415eb81eed21da13fc2889cdf" category="doc">루트 데이터-데이터 파티셔닝을 사용하여 ONTAP 노드에서 액티브-패시브 구성을 설정합니다</block>
-  <block id="09ec55a5cb413af695ce4d4167435ff6" category="doc">루트 데이터 파티셔닝을 사용하여 ONTAP 노드에서 액티브-패시브 구성을 설정합니다</block>
-  <block id="b284b20c3e295df227b44eb26ab3b33b" category="doc">ONTAP RAID 그룹을 사이징할 때의 고려 사항</block>
-  <block id="f54d0a21666fd6ecf252f3632e68bde0" category="doc">ONTAP 디스크 검증 패키지를 업데이트해야 하는 시기를 알아봅니다</block>
   <block id="843710b920a855d1708175e8c6e0249c" category="list-text">ONTAP 9.16.1부터  <block ref="34237d33ca3c28492714e26ea6fe6704" prefix="(" category="inline-code"></block>CLI에서 를 활성화하여 파일이 10GB보다 클 때 여러 FlexGroup 멤버 볼륨에 걸쳐 데이터를 쓸 수 <block ref="0217084a92eac65acbbe1c2ddc82e58d" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="61ea0cef0c2b58cf1f64be7474bfe27a" category="paragraph">에 대한 자세한<block ref="16fdd92def5a71313d6535c74ef67b81" prefix=" " category="inline-code"></block><block ref="4e5efd8167f08c488fa3bc6f718e7db8" prefix=" " category="inline-code"></block> 내용은, 및<block ref="141f671a5edc94f5cc9316f953bc9ffb" prefix=" " category="inline-code"></block><block ref="fdf318549e67371302269f79f46a8616" category="inline-link-macro-rx"></block> 을 참조하십시오.</block>
   <block id="ad1ad1909d3f141324c5bbe1299e221e" category="paragraph">및<block ref="141f671a5edc94f5cc9316f953bc9ffb" prefix=" " category="inline-code"></block> 에 대한 자세한<block ref="16fdd92def5a71313d6535c74ef67b81" prefix=" " category="inline-code"></block> 내용은 을 <block ref="fdf318549e67371302269f79f46a8616" category="inline-link-macro-rx"></block>참조하십시오.</block>
@@ -40643,13 +40579,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="801be10ef862ae6ecc9b2d79d1093b2f" category="doc">MetroCluster ONTAP Vscan 구성에 스캐너 정책 적용</block>
   <block id="dbec245dac606fb7060cd1f69bb8661a" category="doc">ONTAP Vscan을 사용하여 단일 클러스터에 스캐너 정책 적용</block>
   <block id="e853c7c85e514b2bedb8612ee6d28f21" category="doc">ONTAP Vscan을 활용한 안티바이러스 아키텍처</block>
-  <block id="ef637ccb0447074aeccfdcf565dabbf7" category="doc">ONTAP Vscan에서 오프박스 바이러스 백신 기능을 구성하기 위한 모범 사례</block>
   <block id="be8decb57dfe5abc56ce821cf976b3dc" category="doc">온액세스 정책을 관리하기 위한 ONTAP Vscan 명령</block>
   <block id="cff7bcc440dfc5227357bae7db12536a" category="doc">주문형 작업 관리를 위한 ONTAP Vscan 명령</block>
   <block id="605c302e30beb54bf6e341773d09d5b3" category="doc">Vscan에서 스캐너 풀을 관리하기 위한 ONTAP 명령</block>
   <block id="55f5171cc7570ffa2ac6fec8a7ebbf24" category="doc">Vscan 서버 연결 상태를 보기 위한 ONTAP 명령</block>
   <block id="3cdd51f847a858721d9a4de87b6ff794" category="doc">ONTAP Vscan 온디맨드 스캐닝 구성에 대해 알아보세요</block>
-  <block id="ddd1d83bdbc128786d5995bd72c52591" category="doc">ONTAP Vscan Antivirus 커넥터 구성</block>
   <block id="589d3fd96355bd49197b2e3b7b01a0c1" category="doc">ONTAP Vscan 스캐너 풀 구성에 대해 알아보세요</block>
   <block id="f8f1ecd6a9b45ecad30880442d872e89" category="doc">ONTAP Vscan 온액세스 정책 생성</block>
   <block id="f39f7e517d1d98f46a0efbc033d33eac" category="doc">ONTAP Vscan으로 주문형 작업 만들기</block>
@@ -40667,7 +40601,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="46fb6e59b511f7ab8a609cce4792e5ce" category="doc">ONTAP Vscan을 사용하여 주문형 작업 일정을 예약하세요</block>
   <block id="012cf7ee7988843b6b845fdbd8b14220" category="doc">바이러스 ONTAP Vscan 스캐닝 문제 해결</block>
   <block id="c492aa21631aad1ca9c808e10f78341e" category="doc">ONTAP Vscan 파트너 솔루션에 대해 알아보세요</block>
-  <block id="2b1c39aabd1ec3973e18a54eb3d5abe3" category="doc">스캔 필수 옵션과 관련된 잠재적인 ONTAP Vscan 연결 문제</block>
   <block id="34f0579ee35c133c4a23146ad114f41f" category="doc">ONTAP Vscan 서버 설치 및 구성</block>
   <block id="bb68fa6b08f854cde9e7314b669c95d1" category="doc">ONTAP Vscan을 사용한 바이러스 검사 워크플로</block>
   <block id="5ff50f06ded96e1ff2b982aa4c04ddb9" category="doc">ONTAP 시스템 관리자를 사용하여 클러스터에 태그 지정</block>
@@ -41254,7 +41187,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f970ee849b925d768253964b6ba2630e" category="inline-link-macro">SVM에서 동적 DNS 구성</block>
   <block id="e39bdfd04a35f9ca426fbc4085850500" category="paragraph">에 대해 자세히 <block ref="0a445a0e01ec8c28c12889d1fb4a76ea" category="inline-link-macro-rx"></block>알아보십시오.</block>
   <block id="1a7996c774485cb44e53d364aed030dd" category="list-text"><block ref="1a7996c774485cb44e53d364aed030dd" category="inline-link-macro-rx"></block></block>
-  <block id="b45354704cd8dca7f080de92bf8ad6a4" category="doc">MetroCluster 구성을 되돌리기 전에 자동 계획되지 않은 전환을 비활성화합니다.</block>
   <block id="03a16402095f36d05392eb0bf27f6527" category="paragraph">ONTAP 9 버전을 실행하는 MetroCluster 구성을 되돌리려면 자동 계획되지 않은 전환(AUSO)을 비활성화해야 합니다.</block>
   <block id="003f463ca6e377ae8fde750c10dc61f4" category="section-title">Active Directory 또는 SMB 서버에 대한 S3 액세스 구성</block>
   <block id="7a90f6392fab1482ebe4b81eb65e702a" category="inline-link-macro">선호하는 신뢰할 수 있는 도메인을 추가, 제거 및 수정합니다.</block>
@@ -41770,7 +41702,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f18d37979be41942b8d894c46edf1e84" category="inline-xref-macro">FlexGroup 볼륨에서 직접 삭제 진행 상황을 보기 위한 향상된 지원</block>
   <block id="0aaf52659eb58ee5958b0de01437fdff" category="paragraph"><block ref="0aaf52659eb58ee5958b0de01437fdff" category="inline-xref-macro-rx"></block></block>
   <block id="be9ed60697e46aa9b010f6cfc510ba16" category="paragraph">ONTAP CLI 명령 <block ref="45b41c3b60f6d2530732097b0d3a81ab" prefix=" " category="inline-code"></block> 클라이언트에서 실행된 비동기 삭제 작업을 포함하도록 향상되었습니다.</block>
-  <block id="3221da0f90df389221a63f6c5ecea489" category="doc">ONTAP 9.17.1에서 복귀하기 전에 SAN 볼륨에서 자율 랜섬웨어 보호 기능을 비활성화하세요.</block>
   <block id="eeff54d50b829eecba4c872f98e52769" category="list-text">*저장소 &gt; 볼륨*을 선택한 다음 볼륨 이름을 선택합니다.</block>
   <block id="79d5253edab6934ad04665d6e7f9ab44" category="list-text">*볼륨* 개요의 *보안* 탭에서 *상태*를 선택하여 사용에서 사용 안 함으로 전환합니다.</block>
   <block id="c1f7436a8e10547305211566bd5b468a" category="list-text">볼륨에서 랜섬웨어 보호 비활성화:</block>
@@ -42486,7 +42417,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="3efd5b2135d839b987f72cfc9ed6010f" category="doc">단일 ONTAP 일관성 그룹 구성</block>
   <block id="861e782fbe38e1e67495d578b9989422" category="doc">ONTAP 일관성 그룹 삭제</block>
   <block id="c787098ec77629691b918cef145e8e2b" category="doc">ONTAP 일관성 그룹에 대해 알아보세요</block>
-  <block id="58c330a9139a2061719ae783d6c332a0" category="doc">ONTAP 일관성 그룹 제한에 대해 알아보세요</block>
   <block id="cda4258b21ac96c57fa502103c4e6c87" category="doc">ONTAP 일관성 그룹 지오메트리 수정</block>
   <block id="bdee23d792d8e85ccce14171c5fcf685" category="doc">ONTAP 일관성 그룹 애플리케이션 및 구성 요소 태그 수정</block>
   <block id="86906bbfda98cf6a843dc66c9497f0a5" category="doc">ONTAP 일관성 그룹의 멤버 볼륨 수정</block>
@@ -42495,18 +42425,14 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b8fb834511bf6e0a68232104cbfd98cf" category="list-text">ONTAP 9.9.1부터 재부팅이 필요하지 않습니다.  ONTAP 9.8 또는 이전 버전을 사용하는 경우 클러스터의 각 노드를 수동으로 재부팅하세요.</block>
   <block id="507278e8490fc41d09942f36a2fa796f" category="paragraph">ONTAP 9.14.1 및 9.13.1에서는 논리 인터페이스(LIF)에서 사용되지 않고 연결된 스위치에서 기본 VLAN 연결이 없는 태그가 지정되지 않은 포트는 저하된 것으로 표시됩니다.  이는 사용되지 않는 포트를 식별하는 데 도움이 되며, 서비스 중단을 나타내는 것은 아닙니다.  네이티브 VLAN은 ONTAP CFM 브로드캐스트와 같은 ifgrp 기반 포트에서 태그가 지정되지 않은 트래픽을 허용합니다.  태그가 지정되지 않은 트래픽이 차단되는 것을 방지하려면 스위치에 네이티브 VLAN을 구성합니다.</block>
   <block id="53f76082b918614f3c41bfae0d7985c6" category="doc">ONTAP SnapLock 사용하여 WORM에 파일 커밋</block>
-  <block id="5620ac469c85f5884eae749e46a9bff8" category="doc">ONTAP 볼트 대상의 WORM에 스냅샷 커밋</block>
   <block id="e7f404a3df13eba9f8b36c0c98a9c3c8" category="doc">ONTAP SnapLock 으로 보호되는 감사 로그 생성</block>
   <block id="b68b9c6bade2811cc643f92a34929928" category="doc">ONTAP SnapLock 집계 생성</block>
   <block id="142e3140fa04264b39856b2fcb9c3d39" category="doc">ONTAP SnapLock 볼륨 생성 및 마운트</block>
   <block id="41b38fa395c264b7210fea23aabab4de" category="doc">ONTAP SnapLock 사용하여 WORM 파일 삭제</block>
   <block id="11baec6bd17e45fb7fbb211e5c9fbaa7" category="doc">ONTAP SnapLock Legal Hold를 사용하여 소송 중 WORM 파일 보관</block>
-  <block id="1097ff965d0ff96115f134b58c643baf" category="doc">ONTAP 규정 준수 시계 초기화</block>
-  <block id="4e4b5e0c306536315d1529f4aa043803" category="doc">ONTAP SnapLock 사용하여 WORM 파일 관리</block>
   <block id="e4125a1d548e3fc6715dfaaa10f2fa6b" category="doc">ONTAP SnapMirror 사용하여 재해 복구를 위한 WORM 파일 미러링</block>
   <block id="c6b1591fc9ef4260ef2de3228a3c5b14" category="doc">ONTAP SnapLock 볼륨 이동</block>
   <block id="b6c166bdf75ba94b5824d614dfc812e2" category="doc">ONTAP SnapLock 보존 시간 설정</block>
-  <block id="5cb02725ee0cc30b6d0342504c7b7ad4" category="doc">ONTAP SnapLock 구성에 대해 알아보세요</block>
   <block id="aa0f7f82624e52a7bc6aae8291bfaf4d" category="doc">랜섬웨어 공격으로부터 보호하기 위해 ONTAP 스냅샷 잠금</block>
   <block id="223783aaf9d8cc664f5854db0ff073e8" category="doc">ONTAP SnapLock 설정 확인</block>
   <block id="b30d3eb6344d9f346a04b893f38d07f9" category="summary">사이트 A에서 장애가 발생해도 사이트 B에서 계획되지 않은 ONTAP 클러스터 장애 조치가 발생하지 않습니다.</block>
@@ -43460,7 +43386,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f2457a08bb5a309c3b52f98d126d170f" category="paragraph">다음을 사용하여 전체 버킷, 특정 접두사가 있는 개체 또는 단일 개체를 복원할 수 있습니다.<block ref="abb0a139a098dcd1145f6fd176e85d0d" prefix=" " category="inline-code"></block> 명령.</block>
   <block id="c191bfbe1584adbdcaddd4cf029daa64" category="inline-link-macro">정렬되지 않은 LUN에 대해 자세히 알아보세요</block>
   <block id="9a84c93dc952b1d0d0b131646be9760a" category="paragraph">가상화된 환경에서 VMware와 Microsoft 복사 오프로드를 사용하는 경우 LUN을 정렬해야 합니다.  정렬되지 않은 LUN은 성능을 저하시킬 수 있습니다. <block ref="4e23a5daa72ffa001c72fc05be0e582f" category="inline-link-macro-rx"></block>.</block>
-  <block id="076fe70c00d72b404875149388b2487b" category="doc">NVMe 복사 오프로드에 대해 알아보세요</block>
   <block id="42eb07c74e24625c353bbed93a01ffb4" category="paragraph">NVMe 복사 오프로드를 사용하면 NVMe 호스트가 CPU에서 ONTAP 스토리지 컨트롤러의 CPU로 복사 작업을 오프로드할 수 있습니다. 호스트는 애플리케이션 워크로드를 위해 CPU 리소스를 예약하는 동시에 한 NVMe 네임스페이스에서 다른 네임스페이스로 데이터를 복사할 수 있습니다.</block>
   <block id="f19d03b167d5c7cb0705b4c36ba26082" category="paragraph">예를 들어, 성능 분포를 개선하기 위해 스토리지 작업 부하를 재조정해야 한다고 가정해 보겠습니다.  이를 위해서는 각각 평균 크기가 500GB인 45개의 NVMe 네임스페이스를 포함하는 10개의 가상 머신(VM)을 마이그레이션해야 합니다.  즉, 약 22.5TB의 데이터를 복사해야 한다는 의미입니다.  호스트는 데이터 마이그레이션에 자체 CPU를 사용하는 대신 NVMe 복사 오프로드를 사용하여 데이터가 복사되는 동안 애플리케이션 워크로드에 대한 CPU 리소스가 감소하지 않도록 할 수 있습니다.</block>
   <block id="0674f4c422dc5fcc778398ed57a32796" category="section-title">NVMe 복사 오프로드 지원 및 제한 사항</block>
@@ -44125,7 +44050,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1b4e45d4ba7133b92f2b929978f52ecd" category="paragraph">ONTAP 9.18.1 이상에서는<block ref="2d2a51ba4ba356cb2255c8188435d256" prefix=" " category="inline-code"></block> 명령이 논리적 참조 용량 및 논리적 미참조 용량 보고 방식을 변경합니다. 논리적 참조 용량은 모든 객체의 참조된 블록과 조각화된 객체의 미참조 블록을 보고합니다. 논리적 미참조 용량은 충만도 임계값을 초과하고 객체 삭제 및 조각 모음 대상인 객체의 미참조 블록만 보고합니다.</block>
   <block id="9e956930b513f572031e2aaa5102fade" category="paragraph">예를 들어 ONTAP S3 및 StorageGRID에 대해 기본 애그리게이트 충만도 임계값 40%를 사용하는 경우 객체의 블록 중 60%가 참조되지 않아야 블록이 참조되지 않은 용량으로 보고됩니다.</block>
   <block id="0dae399b9ea5e849dabb5f041fcf06cb" category="paragraph">ONTAP 9.18.1 이전 릴리스에서는 논리적 참조 용량이 모든 객체(전체 객체 및 조각화된 객체 모두)의 참조된 블록을 보고합니다. 논리적 미참조 용량은 모든 객체의 미참조 블록을 보고합니다.</block>
-  <block id="32d1bba3c19566338f0bd0e388e69a0b" category="doc">ONTAP 9.18.1에서 이전 버전으로 되돌리기 전에 자율형 랜섬웨어 보호 기능의 자동 활성화를 비활성화하십시오</block>
   <block id="a51072a2ecdee97c97440b6825eeb359" category="list-text">ONTAP 9.18.1 이상으로 업그레이드된 볼륨에서 자동 활성화 옵션이 활성화되었는지 확인합니다.</block>
   <block id="84ed81af738900a1975814f33dbe0525" category="list-text">SVM의 모든 볼륨에서 랜섬웨어 보호에 대한 자동 활성화 옵션을 비활성화합니다.</block>
   <block id="71cc8411e0c3c086f3f030d6552f7504" category="paragraph"><block ref="bf01499ddd03cb02cbe81c4a683f006d" prefix="" category="inline-code"></block></block>
@@ -44195,7 +44119,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="28e87f1fb6f7d4cf3e00117db4eefcc6" category="inline-link-macro">AWS CLI 설치</block>
   <block id="178f1541a73be8e25668eed2c89f4dbc" category="paragraph">다양한 S3 클라이언트를 사용할 수 있습니다. AWS CLI를 사용하는 것이 좋은 시작점입니다. 자세한 내용은 <block ref="01a11aadba1dce3acda0435c177ce7cf" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="a788b6f2b7cfbbfde4b310cfd8de88c6" category="summary">ONTAP 9.18.1에 도입된 FlexCache 이중화 기능에 대한 자주 묻는 질문입니다.</block>
-  <block id="19fb3974bcefdefc083592b530197f6b" category="doc">FlexCache 이중성에 대한 FAQ</block>
   <block id="e43d51b35dd8944b8d4aeb78f6f59615" category="paragraph">이 FAQ는 ONTAP 9.18.1에서 도입된 FlexCache 이중화에 대한 일반적인 질문에 답변합니다.</block>
   <block id="af2a4d2810d86aa0169c117f82682f9a" category="section-title">자주 묻는 질문</block>
   <block id="a58bf9b44717479386f3d75530906721" category="paragraph-title">"이원성"이란 무엇입니까?</block>
@@ -45246,7 +45169,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="53fb936524010c0bfb75eb25d9a48624" category="inline-xref-macro">자동 업그레이드 사전 점검을 위한 향상된 보고</block>
   <block id="d2051fcd19ad128919c6733b030abe47" category="paragraph"><block ref="d2051fcd19ad128919c6733b030abe47" category="inline-xref-macro-rx"></block></block>
   <block id="2b1cc84feb959647df3e34b19f0fa843" category="paragraph">자동화된 업그레이드 전 검사를 실행할 때 오류와 경고가 별도로 표시되어 업그레이드 전에 해결해야 할 문제를 쉽게 파악할 수 있습니다.</block>
-  <block id="dde57f7f02063db8a2cacd3ac399ef9b" category="doc">ONTAP 9.19.1에서 되돌리기 전에 ONTAP 9.19.1 이상에서 생성된 QoS 정책 그룹을 수정합니다</block>
   <block id="77aae28695a4b45e47f7d01e7388e994" category="paragraph">적응형 및 비적응형 QoS 정책 그룹은 기본적으로 워크로드의 처리량 상한을 1초 동안 50%까지 일시적으로 높여 단기적인 성능 향상 요구에 대응하도록 자동으로 활성화됩니다. ONTAP 9.19.1부터는 이러한 기본 설정을 수정할 수 있습니다. ONTAP 9.18.1 이하 버전에서는 이러한 설정을 변경할 수 없습니다. ONTAP 9.19.1 이상 버전에서 생성한 QoS 정책 그룹의 기본 설정을 수정한 경우, ONTAP 9.19.1에서 ONTAP 9.18.1로 되돌리기 전에 설정을 원래대로 되돌려야 합니다.</block>
   <block id="0d4bc12d4ec1038c2fe2188b6e79084f" category="list-text">자동 처리량 상한 증가를 위해 활성화된 QoS 정책 그룹이 있는지 확인하십시오.</block>
   <block id="2d9b50f5192b62425085908d11c8c622" category="list-text"><block ref="524d775717bd7a1d6fad5b27665a94bf" prefix=" " category="inline-code"></block>, <block ref="5b2dc99c24f8f5e3e861ca1d1a5d0897" prefix=" " category="inline-code"></block> 및 <block ref="79a952b44eb5f22af7a30bdf533515bc" prefix=" " category="inline-code"></block>로 구성된 정책 그룹이 있는 경우 이러한 옵션을 0으로 설정하십시오.</block>
@@ -45334,7 +45256,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="05e23a03ca97730f1681ee5122edebb2" category="paragraph">LIF를 이동하면 다음과 같은 작업을 중단 없이 수행할 수 있습니다.</block>
   <block id="3d12a8d372466ea3b6a7e4d8cd0acb15" category="list-text">LUN 또는 네임스페이스 데이터에 액세스하는 호스트에 투명한 방식으로 클러스터의 HA 쌍 하나를 업그레이드된 HA 쌍으로 교체합니다</block>
   <block id="43e99848908c54901a478277683a469f" category="paragraph"><block ref="d6005a96a06e8f1e309972284760d85a" prefix=" " category="inline-code"></block> 명령을 사용하여 SAN LIF를 이동할 수 없습니다. SAN LIF를 이동하려면 오프라인 상태로 전환한 후 새 홈 노드 또는 포트로 이동하고 다시 온라인 상태로 전환해야 합니다. SAN LIF는 이동 전에 오프라인 상태로 전환해야 하므로 호스트 트래픽은 호스트 다중 경로 소프트웨어를 사용하여 LUN에 대한 무중단 액세스를 제공해야 I/O 중단이 발생하지 않습니다.</block>
-  <block id="beb7e06f28a6d21535d96ff16a10080b" category="doc">ONTAP 시스템의 SAN 다중 경로 및 자동 LIF 페일오버 지원에 대해 알아보십시오</block>
   <block id="b54850652c9e2fabf776afe2779fab69" category="paragraph">다중 경로 구성에서는 호스트와 스토리지 시스템 간에 여러 네트워크 경로가 구성되어 하나의 경로를 사용할 수 없게 될 경우 서비스 중단을 방지하기 위해 I/O를 대체 경로로 리디렉션할 수 있습니다. 자동 LIF 페일오버를 사용하면 논리 인터페이스(LIF)의 홈 포트가 비정상 상태가 되거나 스토리지 페일오버가 발생할 경우 해당 논리 인터페이스가 자동으로 다른 포트로 마이그레이션됩니다. 자동 LIF 페일오버를 지원하는 다중 경로는 페일오버 경로 전환 없이도 I/O를 가장 최적화된 사용 가능한 경로로 원활하게 재라우팅합니다.</block>
   <block id="322fb372daf9d238f49f6732bd4c61f4" category="section-title">SAN 지원 다중 경로 구성</block>
   <block id="4b90a8a61fad53e30a7c5b9b8889b67c" category="paragraph">SAN 환경에서 지원되는 다중 경로 구성은 다음과 같습니다.</block>
@@ -46144,7 +46065,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b9486413b5548fc89c05020168b97ce5" category="paragraph">기본 클라우드 보호 정책인 DailyBackup을 사용하여 기존 볼륨에 대한 SnapMirror Cloud 백업을 신속하게 구성할 수 있습니다.</block>
   <block id="5646fb03340b7e724513cc312b71abc0" category="list-text">클라우드에 처음 백업하는 경우, 표시된 대로 라이센스 필드에 SnapMirror Cloud API 라이센스 키를 입력하십시오.</block>
   <block id="f2bb56e8ed41b3b2929303a7b899a07e" category="paragraph">SnapMirror Cloud 백업에 기본 DailyBackup 클라우드 정책을 사용하지 않으려면 자체 정책을 생성할 수 있습니다.</block>
-  <block id="a54fa25dff50d86fbc439d78b78cc13f" category="admonition">ONTAP 9.16.1 이상 버전을 사용 중이고 SnapMirror Cloud를 사용하여 FlexGroup 볼륨에 단일 파일 복원을 수행하는 경우, FlexGroup 볼륨 내의 새 디렉터리에만 파일을 복원해야 하며, 세부 데이터는 대상 FlexGroup 볼륨에서<block ref="37c3450b6618a349e4890dcafff6b505" prefix=" " category="inline-code"></block>으로 설정되어야 합니다. 해당 <block ref="34237d33ca3c28492714e26ea6fe6704" prefix=" " category="inline-code"></block> 옵션 설정에 대한 자세한 내용은 <block ref="f5a3ea5de79c6f9c95d2bfc5f28aa731" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="0d7d91aea62daf425de9a23753c797dd" category="section-title">SnapMirror 클라우드 관계를 삭제합니다.</block>
   <block id="e5f4a61b7564e1d00efeee6c08f703b9" category="summary">SVM 구성 정보를 복제 과정에서 제외하는 SVM DR 관계를 구성 정보를 복제하는 관계로 변환하려면 <block ref="524218dc9ff1ef52c9a0404971525b21" prefix=" " category="inline-code"></block> 매개변수를 사용하십시오.</block>
   <block id="081122f229807922b6a83d9f668bf733" category="doc">ONTAP SnapMirror SVM 복제 관계에 SVM 구성 정보를 포함하도록 변환합니다</block>
@@ -46837,7 +46757,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8544ad12e0b0045a8cb772fac9e0762b" category="inline-link-macro">ARP/AI 자동 활성화 해제</block>
   <block id="202cedbb7f494d12afc6c32b0fb37fe9" category="list-text"><block ref="202cedbb7f494d12afc6c32b0fb37fe9" category="inline-link-macro-rx"></block></block>
   <block id="22c67dfd09696c7669857ff727b47137" category="summary">ONTAP 9.17.1부터 ARP/AI는 블록 장치 엔트로피 수준이 랜섬웨어 보호에 적합한지 판단하기 위한 평가 기간이 필요합니다.</block>
-  <block id="169c53b82b12e8242c9f8a873feb43fb" category="doc">블록 장치 워크로드에 대한 ONTAP ARP/AI 엔트로피 평가 기간에 대해 알아보십시오.</block>
   <block id="5ff6db01e1fd9ea72fe9bd876b734934" category="paragraph">ONTAP 9.17.1부터 ARP/AI는 블록 장치 워크로드에 대한 엔트로피 수준이 랜섬웨어 보호에 적합한지 판단하기 위한 평가 기간을 필요로 합니다. 이러한 워크로드에는 SAN LUN 및 하이퍼바이저 가상 디스크(예: NFS 데이터스토어의 VMware 가상 디스크, 그리고 ONTAP 9.17.1P5부터는 Hyper-V, KVM 및 OpenStack 가상 디스크)가 ONTAP 볼륨에 저장된 형태가 포함됩니다. 적격 볼륨에서 ARP/AI를 활성화하면 평가 기간 동안 해당 볼륨을 적극적으로 모니터링하고 보호하는 동시에 최적의 암호화 임계값을 결정합니다.</block>
   <block id="3444da7025215415d19db88f37944309" category="admonition">이 페이지는 ARP/AI(ONTAP 9.17.1 이상)에 적용됩니다. ARP는 이전 버전의 ONTAP에서 SAN 볼륨을 지원하지 않습니다.</block>
   <block id="c6373b38459b73d2ac40e2b5df19d00f" category="list-text">*SAN 볼륨*: 호스트 또는 하이퍼바이저에 블록 장치로 제공되는 LUN 기반 워크로드입니다.</block>
@@ -47082,7 +47001,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="fb9e10da84c78147297cba861f4f64fc" category="inline-link-macro">위협 평가 및 ARP/AI 스냅샷</block>
   <block id="7b75128e709c20313158c6a2692e304d" category="list-text"><block ref="7b75128e709c20313158c6a2692e304d" category="inline-link-macro-rx"></block></block>
   <block id="30d158ca53f4c9db20bd18d3a667f4a4" category="summary">예상되는 비정상적인 작업 부하 발생 시 ARP 또는 ARP/AI 분석을 일시적으로 중단하고 다시 시작합니다.</block>
-  <block id="881e92f4cc3e21563e00df00569af7b4" category="doc">분석에서 워크로드 이벤트를 제외하려면 ONTAP ARP 또는 ARP/AI 보호를 일시 중지합니다</block>
   <block id="71bdb044e6ffd91084dbd7ddd39d5242" category="paragraph">평소와 다른 작업 부하가 예상되는 경우, 자율형 랜섬웨어 방지(ARP 및 ARP/AI) 분석을 언제든지 일시적으로 중단했다가 다시 시작할 수 있습니다.</block>
   <block id="cc64cdef68495808f7bbe7d2e838e3ba" category="paragraph">ONTAP 9.13.1 버전부터는 다중 관리자 인증(MAV)을 활성화하여 두 명 이상의 인증된 사용자 관리자가 ARP 또는 ARP/AI를 일시 중지하도록 요구할 수 있습니다.</block>
   <block id="4f7479f80c3376afa3de098b157a1f20" category="paragraph">ARP 또는 ARP/AI 일시 중지 동안 ONTAP는 새로운 쓰기에 대한 이벤트나 작업을 기록하지 않습니다. 그러나 이전 로그에 대한 분석은 백그라운드에서 계속됩니다.</block>
@@ -47308,7 +47226,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="02786eb57b7c6eb50ec77ec17814eabb" category="paragraph">MAV 그룹에 대한 관리자를 정의하고 보호하려는 <block ref="217cca8430094f6d0f96c9574f4d2c97" prefix=" " category="inline-code"></block>, <block ref="c3e65a4ff70911c5d78e4f2028b04b16" prefix=" " category="inline-code"></block>, 및 <block ref="ed2947b213db866ea0868f16cf478bda" prefix=" " category="inline-code"></block> 명령에 대한 MAV 규칙을 생성해야 합니다.</block>
   <block id="4764299676c66e66e044403650c439e0" category="list-text"><block ref="4764299676c66e66e044403650c439e0" category="inline-link-macro-rx"></block></block>
   <block id="926913b0a8989f7c6515d3c39404d5a4" category="summary">ARP/AI(ONTAP 9.16.1 이상)는 현재 랜섬웨어 보호 모델이며 AFF, ASA, FAS 및 ASA r2 시스템의 FlexVol 및 FlexGroup 볼륨 전반에 걸쳐 NAS 및 SAN 워크로드를 지원합니다.</block>
-  <block id="9005449befb4ca6f16a156c1bcd44cf2" category="doc">AI를 사용하는 ONTAP 자율형 랜섬웨어 보호에 지원되는 구성</block>
   <block id="763be80f70bf3a630e7584be7c83ed51" category="paragraph">AI 기반 자율 랜섬웨어 보호(ARP/AI)는 NAS(ONTAP 9.16.1 이상) 및 SAN(ONTAP 9.17.1 이상) 워크로드에서 사용할 수 있습니다. ARP/AI를 배포하기 전에 지원되는 구성 및 사용 사례를 검토하고 환경이 요구 사항을 충족하는지 확인하십시오.</block>
   <block id="0a67c998ac067c5f432d2b669ed5c66f" category="inline-link-macro">ARP에 대해 지원되는 구성</block>
   <block id="9bc8d2b1528f83b9ba7073a6cd6a4bd4" category="admonition">ONTAP 9.15.1 이하 버전을 사용 중인 경우, <block ref="ee3d4bcf8cd6b8612d6b8bc2925f4068" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -47397,7 +47314,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="55d245c4847c164b36825988589034e3" category="summary">SAN 볼륨에서 ARP/AI를 비활성화한 후 ONTAP 9.16.1 이하 버전으로 되돌려 불필요한 CPU 및 디스크 공간 소비를 방지하십시오.</block>
   <block id="172bc9048a91943f037552b3817febc5" category="paragraph">ONTAP 9.16.1 이하 버전에서는 SAN 볼륨용 ONTAP ARP/AI 기능이 지원되지 않습니다. ONTAP 9.16.1 이하 버전으로 되돌리기 전에 SAN 볼륨에서 ARP/AI 기능을 비활성화하는 것이 좋습니다. 그렇지 않으면 되돌린 버전에서 실제 감지 작업 없이 해당 기능이 계속 활성화되어 CPU 및 디스크 리소스를 사용하게 됩니다.</block>
   <block id="fc75d7268721b9dd5c3a1fe380c10071" category="summary">ONTAP을 되돌리기 전에 자율적 랜섬웨어 방어에서 비정상적인 활동 경고에 응답하십시오.</block>
-  <block id="1f0ee6f0914bc25d4eceb1d2e5b1bfa0" category="doc">ONTAP 복원 전에 자율형 랜섬웨어 보호 기능의 활동 경고를 해결합니다.</block>
   <block id="34e297f9ff9e4f5ca8f8609086354b3f" category="paragraph">ONTAP 9.17.1 또는 이전 버전으로 되돌리기 전에 자율형 랜섬웨어 보호에서 보고된 비정상 활동 경고에 대응하고 관련 자율형 랜섬웨어 보호 스냅샷을 모두 삭제해야 합니다.</block>
   <block id="fba1721b5dfb6495a7105db97d5d76de" category="paragraph">자율형 랜섬웨어 보호 스냅샷을 삭제하려면 "Advanced" 권한이 필요합니다.</block>
   <block id="870cc8f786741b2de721ef30bc54957e" category="list-text"><block ref="6293b0379a12959f3a5d6662a6ac63e8" category="inline-link-macro-rx"></block>에서 보고된 모든 비정상 활동 경고에 대응하고 잠재적인 문제를 해결하십시오.</block>
@@ -48775,7 +48691,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="b94a1b08d34b618035c482669bbfd107" category="list-text">*transport-security-state* 필드의 상태를 사용할 수 없는 경우 추가 조치가 필요하지 않습니다. 상태가 *mandatory* 또는 *preferred*인 경우 *disabled*로 수정하십시오:</block>
   <block id="a2e643596e40b7295d247888bb2a958f" category="list-text">이전에 활성화된 LIF에서 FC-SP-3이 비활성화되었는지 확인하십시오:</block>
   <block id="1403a63b59aa625d4ee836b3dec0aa97" category="summary">만약 어떤 LUN이라도 과거에 182개의 SCSI-3 영구 예약 등록을 초과한 적이 있다면, ONTAP은 ONTAP 9.20.1 이전 버전으로 되돌리는 것을 차단합니다. 되돌리기 전에 각 LUN을 확인하고 모든 등록을 제거하십시오.</block>
-  <block id="b87e7a10880bc0f571263673b851adab" category="doc">ONTAP 9.20.1에서 이전 버전으로 되돌리기 전에 영구 예약 등록을 제거하십시오.</block>
   <block id="e77cc5b53f123f86d87f59b56a65bdca" category="paragraph">ONTAP 9.20.1 이전 버전은 LUN당 최대 182개의 SCSI-3 영구 예약 등록을 지원합니다. ONTAP 9.20.1부터 이 제한은 256개로 증가합니다. 어떤 LUN이라도 과거에 182개 등록을 초과한 적이 있다면, ONTAP은 현재 등록 개수와 관계없이 되돌리기를 차단합니다. 9.20.1에서 9.19.1로 되돌리기 전에 영향을 받는 LUN에서 영구 예약 등록을 확인하고 제거하십시오.</block>
   <block id="ae4ed3a2300db30256993fab559307d9" category="admonition">클러스터 환경에서 영구 예약 등록을 제거하려면 호스트 측 재구성이 필요할 수 있습니다. 호스트 운영 체제 및 클러스터링 소프트웨어에 따라 클러스터 리소스를 오프라인으로 전환하고, 클러스터 관리에서 영향을 받는 LUN을 제거한 다음, 복원 후 클러스터 액세스를 다시 설정해야 할 수 있습니다. 복원하기 전에 클러스터링 솔루션 설명서를 검토하고 테스트 환경에서 복구 워크플로를 검증하십시오.</block>
   <block id="2b0a66f921637f051d8af6cc0bb69a49" category="list-text">어떤 LUN이 과거에 영구 예약 등록 수 182개를 초과했는지 확인하십시오:</block>
@@ -48784,7 +48699,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1dcafa9c9885ad8aa1c71bdc172050c4" category="list-text">영향을 받는 모든 LUN에서 영구 예약 등록을 제거합니다.</block>
   <block id="fbe5ae7a632a442a6a3bd739e578f4c7" category="paragraph">되돌리기 사전 검사를 실행합니다. 이 조건이 감지되면 사전 검사 출력에 필요한 특정 정리 명령이 포함됩니다.</block>
   <block id="808ee9a97453d2eec9b5f22633071357" category="summary">SHA-512 인증을 사용하는 SNMPv3 사용자가 있는 경우 ONTAP은 ONTAP 9.20.1 이전 버전으로 되돌리는 것을 차단합니다. 이전 버전으로 되돌리기 전에 해당 사용자를 삭제하고 지원되는 인증 프로토콜로 다시 생성하십시오.</block>
-  <block id="da4cf831380738fcd0550298dc6129b9" category="doc">ONTAP 9.20.1에서 이전 버전으로 되돌리기 전에 SHA-512 인증을 사용하는 SNMPv3 사용자를 제거하십시오.</block>
   <block id="73633e5f9d9ec6ce6a77a8d539864f0a" category="paragraph">ONTAP 9.20.1부터는 SHA-512 인증을 사용하는 SNMPv3 사용자를 생성할 수 있습니다. 9.20.1 이전의 ONTAP 버전은 SHA-512 인증을 지원하지 않으므로, SHA-512 인증을 사용하는 SNMPv3 사용자가 있는 경우 ONTAP에서 되돌리기를 차단합니다. 되돌리기 전에 이러한 사용자를 삭제하고 지원되는 인증 프로토콜을 사용하여 다시 생성하십시오.</block>
   <block id="aef3eb768a0d9936b9e0fa261a528b1a" category="list-text">SHA-512 인증을 사용하는 SNMPv3 사용자를 표시합니다:</block>
   <block id="ed42986d210d6d362b277c5bb5b9811b" category="list-text">각 SHA-512 사용자를 삭제합니다:</block>
@@ -49063,4 +48977,160 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="4244900893d746cbb6988bb3ddfae1e6" category="sidebar">SHA-512 인증을 사용하는 SNMPv3 사용자</block>
   <block id="8205fcaa3c6d97c4679cbe0a17e3bcf4" category="sidebar">FC-SP-3 보안 지원</block>
   <block id="769b259867f3d604c31c86914aea1923" category="sidebar">대용량 디렉터리 최대 크기 활성화</block>
+  <block id="0ba966d9cd9a3aace0730a5317510923" category="doc">블록 디바이스 워크로드에 대한 ONTAP ARP/AI 엔트로피 평가에 대해 알아보십시오.</block>
+  <block id="361e3770c9f56f54edcc22dbc320eda0" category="doc">워크로드 이벤트 발생 시 ONTAP ARP 또는 ARP/AI 보호 일시 중지</block>
+  <block id="e849cb534cc6768aa5db1ff710be1baa" category="doc">ONTAP ARP/AI에서 지원되는 구성</block>
+  <block id="516167d74695adcf51aff966a3a3910d" category="doc">AI를 활용하여 ONTAP 자율형 랜섬웨어 보호 업데이트</block>
+  <block id="ab991b6028b667bddc5898da95e9f313" category="doc">ONTAP Vscan을 사용한 오프박스 바이러스 백신 모범 사례</block>
+  <block id="89f36c0c18a8eed99a308d62f6e9d82c" category="doc">ONTAP Vscan 바이러스 백신 커넥터를 구성합니다</block>
+  <block id="97e275e43d540845990292ed2b34b929" category="doc">ONTAP Vscan을 사용하여 SVM에서 바이러스 검사를 활성화합니다.</block>
+  <block id="bd0bb8afb93e7a21eab5b043a6d899e6" category="doc">온액세스 스캐닝을 위해 ICAP 기반 ONTAP Vscan을 구성합니다.</block>
+  <block id="1637200c0c7501b08d32b9c73e5a2956" category="doc">Vscan 서버에 ONTAP Antivirus Connector를 설치하십시오.</block>
+  <block id="9bb196f032ef92a292a971df373e5cea" category="doc">ONTAP에서의 Vscan 상태 및 성능 모니터링</block>
+  <block id="200d2924494ad2394754d91226335e6b" category="doc">ONTAP Vscan으로 스캔한 파일의 상태를 재설정합니다.</block>
+  <block id="7864d007cf247ea3f94c1d71cba9cd0a" category="doc">ONTAP Vscan 바이러스 검사 시 흔히 발생하는 문제 및 해결 방법</block>
+  <block id="82c889b3dc6f4d293671fe07080c793d" category="doc">ONTAP Vscan 파트너 솔루션</block>
+  <block id="8aef691bf8284df1bfbb932847ffe71d" category="doc">ONTAP Vscan 연결 문제 (scan-mandatory 옵션 사용 시)</block>
+  <block id="95a18506908e50b70ffd736996d5f2fb" category="doc">ONTAP 일관성 그룹에 대한 오브젝트 제한</block>
+  <block id="ca82e1a2ba318bb667ffde35a729b79a" category="inline-link-macro">ONTAP FlexGroup 볼륨에서 고급 용량 균형 조정을 활성화합니다.</block>
+  <block id="ccb9904c499f56edaf6d7dfd281e0a44" category="admonition">ONTAP 9.16.1 이상 버전을 사용 중이고 SnapMirror Cloud를 사용하여 FlexGroup 볼륨에 단일 파일 복원을 수행하는 경우, FlexGroup 볼륨 내의 새 디렉터리에만 파일을 복원해야 하며, 세부 데이터는 대상 FlexGroup 볼륨에서<block ref="37c3450b6618a349e4890dcafff6b505" prefix=" " category="inline-code"></block>으로 설정되어야 합니다. 해당 <block ref="34237d33ca3c28492714e26ea6fe6704" prefix=" " category="inline-code"></block> 옵션 설정에 대한 자세한 내용은 <block ref="447acfd4b4985a0cb25720254f043ebe" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="537545a9384bf17c72a3e97f185e42fb" category="doc">ONTAP 로컬 티어 생성 워크플로</block>
+  <block id="6c0048d020959c15e4aa4110edfbc776" category="doc">ONTAP 로컬 계층 용량 확장 워크플로</block>
+  <block id="de92cecf1df56ed75e1a7293691bbece" category="doc">스토리지 VM에 ONTAP 로컬 티어 할당</block>
+  <block id="4f4291bd20fd98fd8f38b7e1f845b685" category="doc">로컬 계층 재배치를 위한 ONTAP 명령</block>
+  <block id="08d5ea68935d5c1bd47bfd26eb123b57" category="doc">ONTAP의 로컬 계층 생성 방법</block>
+  <block id="36caa3fd2bc906180b855c5836d10ec0" category="doc">스토리지 풀에 SSD 추가가 ONTAP 캐시 크기에 미치는 영향을 확인합니다.</block>
+  <block id="d9ff7108b64ab9c6a853a544089011f0" category="doc">ONTAP Flash Pool 캐싱 정책을 수정할지 여부를 결정합니다</block>
+  <block id="74e5c551963d59505d1af481a713bc07" category="doc">ONTAP 로컬 계층에 필요한 디스크 및 파티션 요구 사항</block>
+  <block id="10d5bf00ab57dcd95027a16a85bed0a9" category="doc">ONTAP 로컬 계층의 공간 사용량</block>
+  <block id="2c31b5fe72c1197635ff30d74fc090d0" category="doc">ONTAP에서의 디스크 및 파티션 소유권 관리</block>
+  <block id="89cf80e04590415273b2fcfe32294900" category="doc">ONTAP 로컬 티어의 드라이브 및 RAID 그룹 정보를 확인합니다.</block>
+  <block id="e3dc7e2cb653443ab3b878404476a785" category="doc">수동으로 ONTAP 드라이브 빠른 제로화</block>
+  <block id="28f0e3846524c1c0eec91c0165a08606" category="doc">ONTAP 로컬 계층용 Flash Pool 캐싱 정책</block>
+  <block id="d423afc0f9bd5ce9ee2f6700bfe859a6" category="doc">스토리지 풀을 사용하는 ONTAP 로컬 계층용 Flash Pool SSD 파티셔닝</block>
+  <block id="421a87b499e6bc425234b0927dc23922" category="doc">ONTAP에서 스페어 부족 경고가 작동하는 방식</block>
+  <block id="3b10c5cd7a065fa1711ac0cfdfe0476c" category="doc">ONTAP이 중단된 디스크 삭제를 처리하는 방법</block>
+  <block id="1b36835b6cc31fd498decb8b2d45e09f" category="doc">ONTAP 디스크 삭제에 대해 지원되지 않는 시나리오</block>
+  <block id="1588b3ffce5a00801995e6c725bcc087" category="doc">ONTAP 로컬 계층에서 데이터 삭제를 위한 팁</block>
+  <block id="9469a604026245b0629fc3b8e3a27baf" category="doc">루트-데이터-데이터 파티셔닝을 사용하여 액티브-패시브 ONTAP 노드를 설정합니다.</block>
+  <block id="1d43835ef53ab91f1d0f605677fc20e0" category="doc">루트 데이터 파티셔닝을 사용하여 액티브-패시브 ONTAP 노드를 설정합니다.</block>
+  <block id="7b7bb0d921802b1ec0cb62fe8510b658" category="doc">ONTAP RAID 그룹 크기 결정 요소</block>
+  <block id="2cc69e044a1bf55fa73508333262efc4" category="doc">ONTAP 디스크 인증 패키지 업데이트 시기</block>
+  <block id="993254c284dc290790a302935e6fe163" category="doc">ONTAP FlexCache 볼륨에서 파일 액세스 시간 업데이트를 활성화합니다.</block>
+  <block id="68ac97d7a4bc85f61c5efa39912b8d98" category="doc">ONTAP NAS FlexCache 볼륨에 대한 S3 액세스 활성화</block>
+  <block id="038d970c64f7469a1137fe0afe0e4192" category="doc">ONTAP FlexCache 이중성 관련 FAQ</block>
+  <block id="f313604081976894a7e905bf0814adb3" category="doc">ONTAP FlexCache 볼륨 속성을 원본 볼륨과 동기화합니다</block>
+  <block id="4ee7036022a02c24a47ef90e90dc4a11" category="doc">ONTAP FlexGroup 볼륨의 자동 확장 및 축소를 구성합니다.</block>
+  <block id="2a5c11c5cea48c575ca8a89ca97e8f34" category="doc">ONTAP에서 FlexVol SnapMirror 관계를 FlexGroup 관계로 변환</block>
+  <block id="003794aec19483aabbd2c6f9dc8bc240" category="doc">ONTAP FlexVol 볼륨을 FlexGroup 볼륨으로 변환</block>
+  <block id="c0c91a64c16ed8820870c3312b49bcd9" category="doc">ONTAP FlexGroup 볼륨에 대한 SnapMirror 캐스케이드 및 팬아웃 관계</block>
+  <block id="ac1e106d8a3f44eb84b7d04d79ac56af" category="doc">CLI를 사용하여 ONTAP FlexGroup 볼륨을 관리하는 방법에 대해 알아보십시오.</block>
+  <block id="84bfb108e6fc44567d0c91a8ae0222a2" category="doc">ONTAP FlexGroup 볼륨에 대한 데이터 보호 워크플로</block>
+  <block id="4e5524a86d092a553960f42f925e714e" category="doc">재해 복구를 위한 ONTAP FlexGroup SnapMirror 관계 반전</block>
+  <block id="0c33ab1feb07a1f4d87ccbb521a526f0" category="doc">SnapVault 및 ONTAP FlexGroup 볼륨에 대한 통합 데이터 보호 관계</block>
+  <block id="2d4c3f259f987facd75221ee2b7ead56" category="doc">ONTAP 9.18.1에서 이전 버전으로 되돌리기 전에 자동 ARP 활성화를 비활성화하십시오.</block>
+  <block id="ce88b60514f157ce28a7590bec797823" category="doc">ONTAP 9.17.1에서 이전 버전으로 되돌리기 전에 SAN 볼륨에서 ARP를 비활성화하십시오.</block>
+  <block id="e234fa111d2bd4fb9e8402825ac776bd" category="doc">ONTAP 9.11.1에서 이전 버전으로 되돌리기 전에 ARP 라이선스를 확인하십시오.</block>
+  <block id="a5c7423176d57c3dc10dae0ee69955f6" category="doc">ONTAP 되돌리기 전에 ARP 활동 경고를 해결하십시오</block>
+  <block id="b2d573b1ae1206f442ea797cae83ae95" category="doc">ONTAP 9.6으로 되돌리기 전에 SnapMirror 동기식 관계를 준비하십시오.</block>
+  <block id="f970a066ddb20160a46e0727812a25d8" category="doc">ONTAP 버전에 대한 되돌리기 전 요구사항</block>
+  <block id="48bf0728eda757f5bc47c8dedc8e83ad" category="doc">ONTAP 되돌리기 관련 기술 지원 문의 시점</block>
+  <block id="c464fe31a2bc595905225f0c039fdead" category="doc">ONTAP 되돌리기 전에 확장 qtree 성능 모니터링 비활성화</block>
+  <block id="b388449ab17eda4ca449c3c7f6eb7d44" category="doc">ONTAP 9.19.1에서 이전 버전으로 되돌리기 전에 QoS 정책 그룹 수정</block>
+  <block id="49753c6f10dbd62f412975b4e1a67249" category="doc">ONTAP 9.20.1로 되돌리기 위해 영구 예약 등록을 제거합니다.</block>
+  <block id="be9414a8a88f2035e192eb69c01fcd0b" category="doc">ONTAP 9.20.1에서 이전 버전으로 되돌리기 전에 SHA-512 SNMPv3 사용자를 제거하십시오.</block>
+  <block id="3adebb9c6dbc5688acee6ca78785202e" category="doc">ONTAP 9.12.1에서 이전 버전으로 되돌리기 전에 MetroCluster에서 IPsec을 비활성화하십시오.</block>
+  <block id="e15791ea38859fc13cc1a220162eacd4" category="doc">ONTAP MetroCluster 복원 전에 계획되지 않은 자동 전환을 비활성화합니다.</block>
+  <block id="f99a91238882207c94f5b81274a2f850" category="doc">ONTAP MetroCluster 복원 후 자동 전환 활성화</block>
+  <block id="2e2f5055a4c365692dbe73ee9462c4ab" category="doc">ONTAP 클러스터를 복원하기 전에 스냅샷 복사본을 준비하십시오</block>
+  <block id="acc0122216e47ad24e4e4e15a12b493d" category="doc">ONTAP 클러스터를 되돌리기 전에 리소스를 검토하십시오.</block>
+  <block id="fbbb8bf4b5d84be9c54a80af6b15a9bc" category="doc">ONTAP 클러스터를 복원하기 전에 시스템 준비 상태를 확인하십시오</block>
+  <block id="d29ff4da9f4caeae8e8913b334aaeef1" category="doc">ONTAP 9.8로 복원 후 서비스 프로세서 사용자 계정을 확인하십시오.</block>
+  <block id="9af9ab014e25e14b785d6ae9f8417130" category="doc">ONTAP 클러스터에 노드를 추가하기 위한 SAN LIF 요구 사항</block>
+  <block id="dade6fa3e2a412b8bc1516ff481eb80f" category="doc">ONTAP LUN이 오프라인 상태가 될 때 문제를 해결하는 방법</block>
+  <block id="d699a8a32fd656686608b1d72244faa2" category="doc">ONTAP에서 자동 iSCSI LIF 페일오버 활성화 또는 비활성화</block>
+  <block id="46e6d7a6a26cd1a2bac49f0275410af5" category="doc">ONTAP LUN의 데이터 증가율을 계산합니다.</block>
+  <block id="6ee84d03778bc3e5b1bfe5a6ed2c7893" category="doc">ONTAP 시스템에서 CNA/UTA2 타겟 어댑터 광 모듈을 교체하십시오</block>
+  <block id="a3d62596b0dea37f86febc1f9b750eff" category="doc">ONTAP 시스템의 UTA2 포트를 CNA 모드에서 FC 모드로 변경하십시오.</block>
+  <block id="0336d942a180bc70f0b2b85ec118576b" category="doc">ONTAP의 FC 어댑터 관리 명령</block>
+  <block id="d93194906904830df919175ab1e63ae0" category="doc">ONTAP 씬 프로비저닝 볼륨에서 공간 예약되지 않은 LUN에 대한 설정</block>
+  <block id="3bbe4023e5a8c1686a3aad1aef060bdc" category="doc">ONTAP에서 FC 어댑터 구성</block>
+  <block id="f25f10d36c1d68d9aefafe3c8f80b57c" category="doc">ONTAP에서 최상의 iSCSI 성능을 위해 네트워크를 구성하십시오</block>
+  <block id="d0b44c6c0b15e1c736029f057cadf38c" category="doc">ONTAP 시스템 통합 타겟 어댑터 포트를 구성하십시오</block>
+  <block id="cb8cfd992a7ff85de243cb36a34f5109" category="doc">SendTargets 검색을 위해 ONTAP iSCSI LIF가 FQDN을 반환하도록 구성합니다</block>
+  <block id="a866517c17bbbde9c0a9bd3b2dbd817f" category="doc">FC용 ONTAP SVM을 구성합니다.</block>
+  <block id="2d1ba46d2502278e1dbefde68053e164" category="doc">iSCSI용 ONTAP SVM을 구성합니다.</block>
+  <block id="36192ac79c6f877cdc587d61dc10500d" category="doc">NVMe용 ONTAP 스토리지 VM을 구성합니다.</block>
+  <block id="448557cea58c655fa5c4a7e13e0e2eda" category="doc">ONTAP에서 FCoE용 스위치 구성</block>
+  <block id="df1b13303871fac0f75da4124fec1878" category="doc">호스트 백업 시스템을 ONTAP에 연결하기 위한 권장 구성</block>
+  <block id="fd38ba2c69813edaa97f2dbd3d9c0dc8" category="doc">ONTAP Storage QoS를 사용하여 LUN에 대한 I/O 성능 제어 및 모니터링</block>
+  <block id="0cfcc98da053d55f3d1e875c0bd9042c" category="doc">ONTAP LUN을 NVME 네임스페이스로 변환</block>
+  <block id="7555a9c2a4736cb937180b4673e08006" category="doc">ONTAP LUN 복사에 대해 알아보십시오.</block>
+  <block id="298194cd157da0d9f68ba628ebe8e9cd" category="doc">ONTAP에서 NVMe 스토리지 프로비저닝</block>
+  <block id="c1b1dd26ccecb717ca897f391a9f708a" category="doc">ONTAP 포트셋을 생성하고 이를 igroup에 바인딩합니다</block>
+  <block id="af24906d07a85543876a70a635542968" category="doc">SAN 환경을 위한 ONTAP 데이터 보호 방법</block>
+  <block id="031cfd49862da18dbdb5630c13318130" category="doc">이니시에이터에 대한 ONTAP 보안 정책 메서드를 정의합니다.</block>
+  <block id="21ec9ec2765db346e0a26fe439187fdf" category="doc">ONTAP SVM에서 FC 서비스를 삭제합니다.</block>
+  <block id="f19ed8dc8ee2afe8fccff8c5a0b2d512" category="doc">ONTAP SVM에서 iSCSI 서비스를 삭제합니다.</block>
+  <block id="a800ca429eaa3269de817be494699e7f" category="doc">ONTAP SAN 환경에서 LIF 삭제</block>
+  <block id="eb4831842baac3ca43d2a023f18dc1cd" category="doc">ONTAP LUN 삭제</block>
+  <block id="82e7d8832d48a3ffda1d70dffa06d431" category="doc">ONTAP SVM에서 NVMe 서비스를 삭제합니다</block>
+  <block id="7132435f82a61733d609726f009429ab" category="doc">ONTAP 환경에 맞는 올바른 볼륨 및 LUN 구성을 결정하십시오.</block>
+  <block id="d85e11c66ea6b579f18d046d5e059f5b" category="doc">ONTAP LUN QoS 정책 그룹 편집</block>
+  <block id="6c7652fd9df228743a06a01530fa8ad2" category="doc">ONTAP LUN의 구성 및 사용 공간을 확인합니다.</block>
+  <block id="4f77cc2d6de426961622bb4336c52120" category="doc">ONTAP FlexClone LUN에 대해 알아보십시오</block>
+  <block id="98fcbdbceb8616df6194984f5930dc26" category="doc">ONTAP의 SAN 호스트 측 공간 관리에 대해 알아보기</block>
+  <block id="e2df89d689a075256c80ce751e42d294" category="doc">ONTAP VMware VAAI 기능이 ESX 호스트 성능을 향상시키는 방법</block>
+  <block id="5d5d84d1efd86bbb6e3d0d3d2bd43a92" category="doc">ONTAP을 사용한 SAN 관리에 대해 알아보십시오.</block>
+  <block id="89b73c94dc03acc282dbf444df853110" category="doc">올바르게 정렬된 ONTAP LUN에서 발생하는 I/O 정렬 오류에 대해 알아보십시오.</block>
+  <block id="5f8aa3b6678349b747023c8aca865b5f" category="doc">ONTAP에서 iSCSI 인증이 작동하는 방식</block>
+  <block id="32ca0ad057f8a102e610d5af2a006352" category="doc">ONTAP의 iSCSI 엔드포인트 격리에 대해 알아보십시오.</block>
+  <block id="0bf079407cdec5777abb126cad776851" category="doc">ONTAP의 iSCSI 이니시에이터 보안 관리에 대해 알아보기</block>
+  <block id="aac24a4850c6c71fcb2b2e6b15af8fc6" category="doc">ONTAP iSCSI 인터페이스 액세스 목록이 성능과 보안을 향상시키는 방법</block>
+  <block id="af473ac72f56b36c622f67c185a52791" category="doc">ONTAP의 iSCSI 서비스 관리 알아보기</block>
+  <block id="952299a41be4a841311607d0f59da639" category="doc">ONTAP의 iSNS</block>
+  <block id="52a14bb10ed98f49e77ab2e45e28ff09" category="doc">ONTAP에서 포트셋 및 igroup을 사용하여 LUN 액세스를 제한하는 방법</block>
+  <block id="23666e03532e17a0a90a670dfbc81715" category="doc">ONTAP의 SAN 환경에 대한 LUN 가이드라인</block>
+  <block id="b5e935f5353e8e73db687249d98630fe" category="doc">ONTAP의 NVMe 프로토콜에 대해 알아보십시오</block>
+  <block id="bea874d9a200dcc37204f966bc4c6cd9" category="doc">ONTAP 포트셋 관리</block>
+  <block id="fbd082e23aa27e0a3c5ade2a4dcc46a2" category="doc">ONTAP에서 SAN 이니시에이터 및 igroup 보기 및 관리</block>
+  <block id="cfbda00adcff4bfc0d4fab1427f1a1ed" category="doc">ONTAP의 FC 어댑터 관리</block>
+  <block id="af7da24795d22365d02001f098d7ff31" category="doc">ONTAP에서 NVMe 네임스페이스를 서브시스템에 매핑</block>
+  <block id="aec234dba42171b93fb034fe4fea4a95" category="doc">ONTAP의 Microsoft Offloaded Data Transfer ODX</block>
+  <block id="e53fbea53dd2de90817efee9c67b9b7c" category="doc">ONTAP LUN 이동</block>
+  <block id="be75e56c3fc821b11a6672a3454a58c7" category="doc">SAN 멀티패싱 및 자동 LIF 페일오버에 대한 ONTAP 지원</block>
+  <block id="1714a80dbc4b467ecedd19aad7cbbbab" category="doc">ONTAP의 NVMe 복사 오프로드에 대해 알아보기</block>
+  <block id="0e714bc7282070132e5e83abd82b87ec" category="doc">ONTAP LUN을 오프라인으로 전환합니다</block>
+  <block id="e7cd8d303d657752e32bbf1b17b3310b" category="doc">ONTAP LUN 설정을 위한 필수 조건</block>
+  <block id="b891f093fc63777f1b193ec6b96a5975" category="doc">ONTAP에서 X1133A-R6 어댑터를 사용한 연결 손실 방지</block>
+  <block id="e0495efe6405a1587b70905ae2a36910" category="doc">ONTAP에서 SAN 스토리지 프로비저닝</block>
+  <block id="357f6e81e84c23dbc1c420daf8034653" category="doc">ONTAP의 FCoE 점보 프레임 권장 MTU 구성</block>
+  <block id="c26d9198692b0c173be5f89c79b6566d" category="doc">ONTAP의 볼륨 및 LUN 구성 조합에 대해 알아보기</block>
+  <block id="bdc66b7bc962716a51cefbad05d6b829" category="doc">ONTAP SVM을 iSNS 서버에 등록합니다</block>
+  <block id="0c6227a2b3477136a751bf551f5d0560" category="doc">포트 세트에서 ONTAP SAN LIF를 제거합니다.</block>
+  <block id="e1f2d137b22005c4c7055f6722894f88" category="doc">ONTAP SAN 환경에서 볼륨을 이동하기 위한 요구 사항</block>
+  <block id="cea69892e107662d8688063411232876" category="doc">ONTAP의 iSCSI 오류 메시지 및 해결 방법</block>
+  <block id="414849b2635f28242d60866b273e8d21" category="doc">ONTAP 스냅샷에서 볼륨의 모든 LUN을 복원합니다.</block>
+  <block id="e11b8d838a2efa8eb3a5e55237945639" category="doc">ONTAP에서 iSCSI를 사용한 SAN 프로비저닝</block>
+  <block id="748b1d45c525739d590c8a1dc4ceac81" category="doc">ONTAP에서 FC를 사용한 SAN 프로비저닝</block>
+  <block id="a0e240f4fe3097d82760832f2e3db214" category="doc">ONTAP에서 NVMe를 사용한 SAN 프로비저닝</block>
+  <block id="52327ad915d7fe5bf30c10c4647167a6" category="doc">ONTAP SAN 볼륨에 대해 알아보십시오</block>
+  <block id="843ff43697bb0d5252965950113aada0" category="doc">ONTAP의 Selective LUN Map에 대해 알아보기</block>
+  <block id="d323b252ddd8749a3196c2bbee739ccb" category="doc">ONTAP의 부분 예약에 대해 알아보기</block>
+  <block id="a973714efe8fbc3f8d00734ecfa4e697" category="doc">semi-thick 볼륨을 사용한 공간 예약 설정에 대해 알아보십시오.</block>
+  <block id="a1f3b92c8736a55c949eb6062c49553e" category="doc">thick 볼륨의 공간 예약 설정에 대해 알아보십시오.</block>
+  <block id="de2837200283d6f9ce9eca67c7903290" category="doc">ONTAP i그룹용 이니시에이터 WWPN 및 iSCSI 노드 이름</block>
+  <block id="19fc4c3c6b3c698eaac40698ab5f4895" category="doc">ONTAP SVM용 NVMe 서비스를 시작합니다</block>
+  <block id="c9d0d17788ec35802251d4084540709b" category="doc">ONTAP에서 가상화된 SAN 환경을 사용하는 장점</block>
+  <block id="b30ee6f0fa81dddf5718cf5f74fc5726" category="doc">ONTAP에서 X1143A-R6 어댑터에 지원되는 포트 구성</block>
+  <block id="65c31cbe6c45616906965d351384a260" category="doc">ONTAP LUN을 효과적으로 모니터링하는 데 사용할 수 있는 툴</block>
+  <block id="4353b4890a787351f05ef1ace80df5aa" category="doc">전환된 ONTAP LUN의 기능 및 제한 사항</block>
+  <block id="c2d2e2ba553c74684ffbc9d3ec6ad04e" category="doc">호스트에서 ONTAP iSCSI LUN이 보이지 않는 문제 해결</block>
+  <block id="18c429fa18cda88e65deaf9607b6b9bd" category="doc">ONTAP에서 FC 또는 iSCSI 라이센스를 확인하고 추가합니다</block>
+  <block id="298ff30d1e0de7e27551a1d22bc4d408" category="doc">ONTAP FC/UTA 어댑터 설정 보기</block>
+  <block id="8e58cfa7c121e55746ff6556b3cedbf4" category="doc">ONTAP의 SAN 볼륨 구성 옵션</block>
+  <block id="3dd79b16af405f56948688a9a390232a" category="doc">ONTAP SnapLock 볼트 대상에 스냅샷을 WORM에 커밋합니다.</block>
+  <block id="884188488d12a9842375108a8969c5a2" category="doc">ONTAP SnapLock 규정 준수 클럭을 초기화합니다</block>
+  <block id="d5fd991d15e17eefe87cc4148c737135" category="doc">ONTAP SnapLock에서의 WORM 파일 관리</block>
+  <block id="294d51051d246800906ec63735bf084e" category="doc">ONTAP SnapLock 구성 워크플로</block>
 </blocks>

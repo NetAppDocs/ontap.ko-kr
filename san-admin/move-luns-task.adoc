@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: system manager, move, lun 
 summary: 스토리지 가상 머신 내에서는 볼륨 간에 LUN을 이동할 수 있지만 SVM 간에는 LUN을 이동할 수 없습니다. SVM 내에서 볼륨 간에 이동된 LUN은 연결 손실 없이 즉시 이동됩니다. 
 ---
-= LUN을 이동합니다
+= ONTAP LUN 이동
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

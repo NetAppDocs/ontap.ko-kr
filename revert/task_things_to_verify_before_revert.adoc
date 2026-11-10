@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap, revert, reversion, reverting, downgrade, downgrading, preparation, pre-revert, checks, verification, cluster health, storage health, system time, jobs 
 summary: ONTAP를 되돌리기 전에 클러스터 상태, 스토리지 상태 및 시스템 시간을 확인해야 합니다. 또한 클러스터에서 실행 중인 작업이 없는지 확인해야 합니다. 
 ---
-= ONTAP 클러스터를 되돌리기 전에 수행할 시스템 확인
+= ONTAP 클러스터를 복원하기 전에 시스템 준비 상태를 확인하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
