@@ -4,7 +4,7 @@ permalink: data-protection/cloud-backup-using-cbs-task.html
 keywords: cloud, data, backup, back up, storage, volume, lun, connector, secret key, access key, bluexp back and recovery service, Cloud Backup service, CBS, restore data, protect volumes, ipspace, storagegrid, storage grid, archive, archival, archiving, cost, calculator, glacier, deep archive 
 summary: ONTAP 9.19.1부터 System Manager는 NetApp Backup and Recovery 서비스를 사용하여 클라우드에 데이터를 백업하는 것을 더 이상 지원하지 않습니다. 대신 NetApp Console을 사용하여 NetApp Backup and Recovery 서비스를 구성하고 클라우드 대상에 대한 SnapMirror 관계를 생성해야 합니다. 
 ---
-= NetApp Backup and Recovery를 사용하여 데이터 백업
+= NetApp Backup and Recovery를 사용하여 ONTAP 데이터를 백업합니다.
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

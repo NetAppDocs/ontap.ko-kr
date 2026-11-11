@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exclude, network, name service, other settings, svm replication, disaster recovery, convert 
 summary: 'SVM 구성 정보를 복제 과정에서 제외하는 SVM DR 관계를 구성 정보를 복제하는 관계로 변환하려면  `-identity-preserve true` 매개변수를 사용하십시오.' 
 ---
-= ONTAP SnapMirror SVM 복제 관계에 SVM 구성 정보를 포함하도록 변환합니다
+= ONTAP SnapMirror SVM 관계에 SVM 설정을 포함하도록 변환합니다.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

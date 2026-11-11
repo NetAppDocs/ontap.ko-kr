@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: all flash san array, asa, san, array, software, configuration, configure, configuring, setup, set up, limitations, restrictions, nvme, mcc ip, persistent ports, host, settings, utilities, ways to identify 
 summary: 'ASA(All-Flash SAN 어레이)의 구성 제한 및 지원은 ONTAP 버전에 따라 다릅니다.' 
 ---
-= All-Flash SAN 어레이 구성 제한 및 지원
+= ONTAP ASA 구성 제한 및 지원
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 

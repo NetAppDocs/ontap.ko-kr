@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: on-demand snapshot, system manager, ontap cli, snapshot, create, delete 
 summary: 예약된 스냅샷이 생성될 때까지 기다릴 수 없는 경우 스냅샷을 수동으로 생성하거나 더 이상 필요하지 않은 경우 스냅샷을 삭제합니다 
 ---
-= 스냅샷을 수동으로 생성하고 삭제합니다
+= ONTAP 스냅샷을 수동으로 생성 및 삭제
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

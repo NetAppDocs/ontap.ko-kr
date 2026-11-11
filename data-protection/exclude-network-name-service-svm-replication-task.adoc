@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exclude, network, name service, other settings, svm replication, disaster recovery 
 summary: SnapMirror create 명령의 -identity-preserve false 옵션을 사용하여 SVM의 볼륨 및 보안 구성만 복제할 수 있습니다. 
 ---
-= ONTAP를 통한 SVM 복제에서 네트워크, 네임 서비스 및 기타 설정을 제외합니다
+= ONTAP SVM 복제에서 네트워크 및 네임 서비스 설정을 제외합니다
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

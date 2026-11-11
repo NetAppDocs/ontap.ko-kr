@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapshot, snapshot copy, calculate, space, reclaimable 
 summary: 삭제할 스냅샷을 선택하고 삭제하기 전에 회수 가능한 공간을 계산할 수 있습니다. 
 ---
-= 스냅샷을 삭제하기 전에 재확보 가능한 공간을 계산합니다
+= ONTAP 스냅샷을 삭제하기 전에 회수 가능한 공간을 계산하십시오
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

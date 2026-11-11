@@ -4,9 +4,9 @@ title: HA 쌍 관리
 entries:
 - title: ONTAP 클러스터에서 HA 쌍 관리에 대해 알아보세요
   url: "/high-availability/index.html"
-- title: ONTAP 클러스터에서 하드웨어 지원 인수에 대해 알아보세요
+- title: ONTAP에서 하드웨어 지원 테이크오버가 작동하는 방식
   url: "/high-availability/ha_how_hardware-assisted_takeover_works.html"
-- title: ONTAP 클러스터의 자동 인수 및 반환에 대해 알아보세요
+- title: ONTAP에서 자동 테이크오버 및 기브백이 작동하는 방식
   url: "/high-availability/ha_how_automatic_takeover_and_giveback_works.html"
 - title: ONTAP 자동 인수 명령
   url: "/high-availability/ha_automatic_takeover_commands_overview.html"
@@ -16,7 +16,7 @@ entries:
   url: "/high-availability/ha_manual_takeover.html"
 - title: ONTAP 수동 포기 명령
   url: "/high-availability/ha_manual_giveback.html"
-- title: ONTAP 클러스터에서 인수 및 반환 테스트
+- title: ONTAP에서 테이크오버 및 기브백 테스트
   url: "/high-availability/ha_test_takeover_giveback.html"
 - title: HA 쌍 모니터링을 위한 ONTAP 명령
   url: "/high-availability/ha_monitor_an_ha_pair_overview.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: secure, purge, scrub, data, encrypted, volume, nve, netapp, volume, encryption, snapmirror 
 summary: ONTAP 9.4부터 secure-purge를 사용하여 NVE 지원 볼륨의 데이터를 중단 없이 삭제할 수 있습니다. 
 ---
-= SnapMirror 관계 없이 암호화된 ONTAP 볼륨에서 데이터 스크럽
+= SnapMirror 없이 ONTAP 볼륨에서 암호화된 데이터 스크러빙
 :allow-uri-read: 
 
 

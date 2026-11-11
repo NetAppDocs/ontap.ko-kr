@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ways to, configure, fc, fc-nvme, san hosts with ha pairs 
 summary: FC 및 FC-NVMe SAN 호스트는 하나 이상의 패브릭을 통해 HA 쌍에 연결하도록 구성할 수 있으며, ONTAP 버전에 따라 스위치를 사용하지 않고 FC 또는 FC-NVMe SAN 호스트를 HA 쌍에 직접 연결할 수도 있습니다. 
 ---
-= ONTAP 시스템을 사용하여 FC 또는 FC-NVME 패브릭 및 직접 연결 구성을 설정하는 방법을 알아보세요.
+= ONTAP용 FC 및 FC-NVMe 패브릭 및 직접 연결 구성
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
