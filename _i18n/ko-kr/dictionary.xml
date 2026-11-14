@@ -15578,7 +15578,6 @@
   <block id="57322b62a0919aa906d4db2c46c49b00" category="doc">소스 SVM 재활성화 워크플로우</block>
   <block id="8479dac4c4f6d432ac0f077d3c8aabd6" category="paragraph">'vol show -vserver_SVM_-volume_volume_-fields snapshot-reserve-available'</block>
   <block id="4ed8d1625ef7a6879b32b6ac645d3cff" category="summary">대상에서 데이터를 더 이상 사용할 필요가 없을 경우 소스 및 타겟 SVM 간에 원래 데이터 보호 관계를 다시 설정할 수 있습니다. 이 절차는 볼륨 복제 절차와 크게 동일하지만 한 가지 예외가 있습니다. 소스 SVM을 다시 활성화하기 전에 타겟 SVM을 중지해야 합니다.</block>
-  <block id="453e32180102576e59ec8f3e3f713549" category="paragraph">데이터를 제공하는 동안 대상 볼륨의 크기를 늘인 경우 소스 볼륨을 다시 활성화하기 전에 원본 소스 볼륨의 최대 크기 자동 크기 조정을 수동으로 늘려 충분히 성장할 수 있도록 해야 합니다.</block>
   <block id="9609ef04727079fb4d7f77c4f4426147" category="paragraph"><block ref="9609ef04727079fb4d7f77c4f4426147" category="inline-link-macro-rx"></block></block>
   <block id="df66bd84e871c542c5dad0737fcfd980" category="paragraph">이 절차에서는 원본 소스 볼륨의 기준선이 온전한 것으로 가정합니다. 기준선이 변경되지 않은 경우 절차를 수행하기 전에 데이터를 제공하는 볼륨과 원본 소스 볼륨 간의 관계를 생성하고 초기화해야 합니다.</block>
   <block id="52b894a6cb5a99e05683145b4ba43dd5" category="list-text">원본 소스 SVM 또는 원본 소스 클러스터에서 동일한 구성, 정책 및 ID 보존 설정을 원본 SVM DR 관계로 사용하여 역방향 SVM DR 관계를 생성합니다.</block>
@@ -15606,7 +15605,6 @@
   <block id="914f2f68a0a9e66f41cc3f3bd7946941" category="list-text">원래 소스 SVM 또는 원래 소스 클러스터에서 다음 명령을 실행하여 역방향 데이터 보호 관계를 삭제합니다.</block>
   <block id="535e2aff25bd8b0b6c53654bea563961" category="paragraph">다음 예에서는 원래 대상 SVM, sVM_backup과 원래 소스 SVM, svm1 간의 역방향 관계를 삭제합니다.</block>
   <block id="a87d7c48d925b71b122f5d0d4f34d05f" category="list-text">원래 대상 SVM 또는 원래 대상 클러스터에서 역방향 데이터 보호 관계를 해제합니다.</block>
-  <block id="c45c4db019582765320560f9bdd26045" category="paragraph">다음 예에서는 원래 대상 SVM, svm_backup 및 원래 소스 SVM, svm1 간의 역방향 관계를 해제합니다</block>
   <block id="378628ed8455b2e13ea5a2578e74ab15" category="paragraph">엄격한 동기식 미러링</block>
   <block id="9bac0f1a3bbe195989f77ec2aa11c239" category="paragraph">동기식-미러</block>
   <block id="2a81f6d022c329bc76f824b3e8e69da3" category="paragraph">사용자 지정 복제 정책을 생성할 때는 기본 정책 다음에 정책을 모델링하는 것이 좋습니다.</block>
@@ -28326,7 +28324,6 @@ ONTAP 9.9.1 이상을 사용하여 미러 소산 정책을 사용하여 SVM 재�
   <block id="ab84e6df69c0fd52a73efc761e3099ea" category="inline-xref-macro">기존 정책 레이블</block>
   <block id="1529987d7858ddaa2c637e76aabedf3c" category="section-title">기존 정책을 수정하여 장기 보존을 적용합니다</block>
   <block id="b9e5d0f84af6a58cd2618a9fb2670be0" category="list-text">기존 SnapMirror 정책에 규칙 추가:</block>
-  <block id="e3015c83fb1b34722f76c34eba731cd9" category="paragraph">다음 예에서는 "LockVault"라는 기존 정책에 6개월의 보존 기간을 적용하는 규칙을 만듭니다.</block>
   <block id="aea16b5b14cb004763e6ea24e28bc467" category="paragraph">다음 그림에서는 SnapLock 볼트 관계를 초기화하는 절차를 보여 줍니다.</block>
   <block id="9e129cbe4f54a719d26cc58a668e4ea1" category="paragraph">ONTAP 9.13.1부터 S3 버킷에서 오브젝트 라이프사이클을 관리하는 라이프사이클 관리 규칙을 생성할 수 있습니다. 버킷의 특정 오브젝트에 대한 삭제 규칙을 정의하고 이 규칙을 통해 버킷 오브젝트를 만료시킬 수 있습니다. 따라서 보존 요구사항을 충족하고 전체 S3 오브젝트 스토리지를 효율적으로 관리할 수 있습니다.</block>
   <block id="7155143fac31cfd3f4bd7bb57b2f3039" category="admonition">버킷 오브젝트에 대해 오브젝트 잠금이 설정되어 있으면 잠긴 오브젝트에 오브젝트 만료에 대한 라이프사이클 관리 규칙이 적용되지 않습니다. 개체 잠금에 대한 자세한 내용은 을 참조하십시오 <block ref="c24df32643990d2e8a7c383df80311ce" category="inline-link-macro-rx"></block>.</block>
@@ -35715,14 +35712,10 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="edb7de5345c0e13b445ca56a1ac41e47" category="open-title">ONTAP 중재자 1.9 이상</block>
   <block id="924f0dc2963f2e4930b13d461565e506" category="open-title">ONTAP 중재자 1.8 이하</block>
   <block id="bb8917b538ccb8a7e1b5863be366fde2" category="list-text">X60132A(4P, 10G/25G 이더넷 컨트롤러)</block>
-  <block id="84621d601f6b7bd1714240b0cfde2213" category="summary">ONTAP 9.12.1부터 비 SnapLock 볼륨에서 스냅샷을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다.</block>
   <block id="5e8c9d081a4e7ca510072e15483c4571" category="doc">랜섬웨어 공격으로부터 보호하기 위해 스냅샷을 잠급니다</block>
   <block id="8b9a79e7cc5f300c141dd7c278939b96" category="paragraph">ONTAP 9.12.1부터 비 SnapLock 볼륨에서 스냅샷을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷을 잠그면 실수로 또는 악의적으로 삭제할 수 없습니다.</block>
   <block id="b2d747eadc51f2eb67a7db66db8c16c8" category="paragraph">만료 시간에 도달할 때까지 스냅샷을 삭제할 수 없도록 SnapLock Compliance 시계 기능을 사용하여 지정된 기간 동안 스냅샷을 잠급니다. 스냅샷을 잠그면 무단 변경이 방지되어 랜섬웨어 위협으로부터 보호할 수 있습니다. 볼륨이 랜섬웨어 공격에 의해 손상된 경우 잠긴 스냅샷을 사용하여 데이터를 복구할 수 있습니다.</block>
-  <block id="172b197c353a5fe9dfef508ec34bf1a0" category="paragraph">ONTAP 9.14.1부터 스냅샷 잠금은 SnapLock 볼트 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 장기 보존 스냅샷을 지원합니다. 에 연결된 SnapMirror 정책 규칙을 사용하여 보존 기간을 설정하여 스냅샷 잠금을 <block ref="ded6b9b6cfc55c6433ead109aad587ab" category="inline-xref-macro-rx"></block>설정할 수 있습니다. 이 규칙은 볼륨에 설정된 기본 보존 기간을 재정의합니다. SnapMirror 레이블과 연결된 보존 기간이 없으면 볼륨의 기본 보존 기간이 사용됩니다.</block>
   <block id="658eabfbc09936df441511879ddd9205" category="list-title">변조 방지 스냅샷 요구사항 및 고려사항</block>
-  <block id="9ba6d91428dee1f51709985481ef8572" category="list-text">볼륨에 스냅샷 잠금이 설정되어 있으면 클러스터를 ONTAP 9.12.1 이후의 ONTAP 버전으로 업그레이드할 수 있지만, 잠긴 스냅샷이 모두 만료 날짜에 도달하여 삭제되고 스냅샷 잠금이 해제될 때까지 이전 버전의 ONTAP로 되돌릴 수 없습니다.</block>
-  <block id="8e8ce627f1ddc06df230f8fc5a53a64e" category="list-text">스냅샷이 잠기면 볼륨 만료 시간이 스냅샷의 만료 시간으로 설정됩니다. 두 개 이상의 스냅샷이 잠겨 있는 경우 볼륨 만료 시간은 모든 스냅샷 중에서 가장 긴 만료 시간을 반영합니다.</block>
   <block id="03dd4daa5f7bc7945251ed79dd854dee" category="list-text">잠긴 스냅샷의 보존 기간이 스냅샷 유지 수보다 우선합니다. 즉, 잠긴 스냅샷에 대한 스냅샷 보존 기간이 만료되지 않은 경우에는 유지 수 제한이 적용되지 않습니다.</block>
   <block id="79b2210dd83897a638c325cb5569f52a" category="list-text">SnapMirror 관계에서 미러 볼트 정책 규칙에 보존 기간을 설정할 수 있으며 대상 볼륨에 스냅샷 잠금이 활성화된 경우 대상에 복제된 스냅샷에 보존 기간이 적용됩니다. 보존 기간이 유지 수보다 우선합니다. 예를 들어 만료 기간이 경과하지 않은 스냅샷은 유지 수를 초과하더라도 유지됩니다.</block>
   <block id="9d496dfbb59d2280a53cf15786eb7a9e" category="list-text">비 SnapLock 볼륨에서 스냅샷 이름을 바꿀 수 있습니다. SnapMirror 관계의 운영 볼륨에 대한 스냅샷 이름 바꾸기 작업은 정책이 MirrorAllSnapshots인 경우에만 보조 볼륨에 반영됩니다. 다른 정책 유형의 경우 이름이 바뀐 스냅샷은 업데이트 중에 전파되지 않습니다.</block>
@@ -35732,7 +35725,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="ece639b3be09d728380c9aec0671d060" category="paragraph">잠긴 스냅샷이 있는 FlexVol volume를 FlexGroup 볼륨으로 변환할 수 있습니다. 변환 후에도 스냅샷은 잠긴 상태로 유지됩니다.</block>
   <block id="0c39a77bf4051e469ae6ed0dadf8ad5c" category="paragraph">소스와 대상 모두에서 컴플라이언스 클록을 초기화해야 합니다.</block>
   <block id="b39fec1f8d779120807149756262f595" category="paragraph">잠긴 스냅샷에서 볼륨 클론 및 파일 클론을 생성할 수 있습니다.</block>
-  <block id="6843d841f73b15905aebb343eb44dca3" category="paragraph">다음 기능은 현재 변조 방지 스냅샷에서 지원되지 않습니다.</block>
   <block id="519637fcf202a3b9dfc537d904577f48" category="section-title">볼륨을 생성할 때 스냅샷 잠금을 설정합니다</block>
   <block id="e247c4237210d4f15a2a234e91d22033" category="paragraph">ONTAP 9.12.1부터 새 볼륨을 생성할 때 또는 CLI에서 및<block ref="9f9fc58b577820fbcd41ff15739ed6f0" prefix=" " category="inline-code"></block> 명령의 옵션을<block ref="4784dd0ffa42c3d1b43b0afd079dfc17" prefix=" " category="inline-code"></block> 사용하여 기존 볼륨을 수정할 때 스냅샷 잠금을 설정할 수 있습니다<block ref="a3aabd91f02aa5f85ce99a47d482a668" prefix=" " category="inline-code"></block>. ONTAP 9.13.1부터 System Manager를 사용하여 스냅샷 잠금을 설정할 수 있습니다.</block>
   <block id="71e3692dc4f2b7211b850fd62cb9b685" category="list-text">새 볼륨을 생성하고 스냅샷 잠금을 설정하려면 다음 명령을 입력합니다.</block>
@@ -35744,7 +35736,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="26b4e9ebf24ca7006f0e85d4c9fed4a9" category="paragraph">ONTAP 9.12.1부터 스냅샷 정책을 생성하여 스냅샷 보존 기간을 적용하고 볼륨에 정책을 적용하여 지정된 기간 동안 스냅샷을 잠글 수 있습니다. 보존 기간을 수동으로 설정하여 스냅샷을 잠글 수도 있습니다. ONTAP 9.13.1부터 System Manager를 사용하여 스냅샷 잠금 정책을 생성하여 볼륨에 적용할 수 있습니다.</block>
   <block id="c3bdc87ed100230b1bd89645be241fda" category="section-title">스냅샷 잠금 정책을 생성합니다</block>
   <block id="7f1664b2cbda5a2895ad33c3d00a8caa" category="list-text">스케줄 이름, 유지할 최대 스냅샷 및 SnapLock 보존 기간을 포함한 스냅샷 스케줄 세부 정보를 제공합니다.</block>
-  <block id="096108732f4478923d4531ac81f4f104" category="list-text">SnapLock 보존 기간 * 열에 스냅샷을 보존할 시간, 일, 월 또는 년 수를 입력합니다. 예를 들어 보존 기간이 5일인 스냅샷 정책은 스냅샷이 생성된 시점부터 5일 동안 스냅샷을 잠그며, 이 시간 동안에는 삭제할 수 없습니다. 다음과 같은 보존 기간 범위가 지원됩니다.</block>
   <block id="40c1375a0050f61e9da4da7bb4730754" category="list-text">스냅샷 정책을 생성하려면 다음 명령을 입력합니다.</block>
   <block id="02dd8a84f7ca9362aeb9a9d6b6200c69" category="paragraph">다음 명령을 실행하면 스냅샷 잠금 정책이 생성됩니다.</block>
   <block id="9657c93c6101640c73aa7011ea86da4f" category="paragraph">활성 보존 상태인 스냅샷은 대체되지 않습니다. 즉, 아직 만료되지 않은 잠긴 스냅샷이 있는 경우에는 보존 횟수가 유지되지 않습니다.</block>
@@ -35762,7 +35753,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="139b26d504158be8ac8b634e41c8586e" category="list-text">스냅샷을 선택하고 를 선택한 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>다음 * SnapLock 만료 시간 수정 * 을 선택합니다. 보존 만료 날짜 및 시간을 선택할 달력을 선택할 수 있습니다.</block>
   <block id="fc27cd0394ada76e3ac40dea3c9d6aeb" category="list-text">기존 스냅샷에 보존 기간을 수동으로 적용하려면 다음 명령을 입력합니다.</block>
   <block id="e6c579a0a2c3c0df75b542a7f4e322e0" category="paragraph">다음 예에서는 기존 스냅샷에 보존 기간을 적용합니다.</block>
-  <block id="c58091855169d27fe4d38bcd198f5a08" category="paragraph">ONTAP 9.14.1부터 스냅샷의 장기 보존을 설정하는 규칙을 추가하여 기존 SnapMirror 정책을 수정할 수 있습니다. 이 규칙은 SnapLock 소산 대상 및 비 SnapLock SnapMirror 대상 볼륨에서 기본 볼륨 보존 기간을 재정의하는 데 사용됩니다.</block>
   <block id="22421ba01185b452d160a85301c212d3" category="paragraph"><block ref="54ce562754112bd2c30ed1c955215936" prefix="" category="inline-code"></block></block>
   <block id="caba72de7441e3ac5072123ba7f61d78" category="list-text">* option (a) *: * Import * 를 선택하여<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> 파일을 탐색하고 가져옵니다.</block>
   <block id="28e6598b0d0084dbc2aaecb8893f570d" category="list-text">* option (b) *: 파일의 내용을<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> 복사하여 * Certificate * 필드에 붙여 넣습니다.</block>
@@ -38219,7 +38209,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="44e33c8aa80d8adcdbf6f3bfdecbcda8" category="list-text">3차 대상 클러스터에서 정책에 대한 규칙을 정의합니다<block ref="f15d884fee5c1c1f6ac0fa41ba0da1ed" prefix=" " category="inline-code"></block>.</block>
   <block id="756ef84ce2a8f0fe3ff959c9f1560e6a" category="list-text">이 설정된 후에는<block ref="6a623c8871cfdca9220b553cbf376ae1" prefix=" " category="inline-code"></block> FlexCache 볼륨의 파일을 자동으로 스크러빙할 수 있는지 여부와 스크러빙 간격을 지정할 수 있습니다.</block>
   <block id="cf140b40f437242c3431977ac42bff75" category="paragraph"><block ref="26981efd56500fad281084a7455e9d64" prefix="" category="inline-code"></block></block>
-  <block id="0d9d70ce35ffa8a547f0c910b22ae9be" category="paragraph">버킷에서 버전 관리를 사용하도록 설정한 경우, S3 클라이언트를 사용하여 오브젝트의 특정 버전에 오브젝트 잠금 보존 시간을 배치할 수 있습니다. 개체의 특정 버전을 잠그더라도 개체의 다른 버전이 삭제되는 것을 막을 수는 없습니다. 나중에 복구할 수 있도록 개체의 버전 관리를 활성화하려면 * 버전 관리 활성화 * 를 선택합니다. 버킷에서 오브젝트 잠금을 사용하도록 설정하는 경우 버전 관리가 기본적으로 활성화됩니다. 개체 버전 관리에 대한 자세한 내용은 를<block ref="b50a9a79e638b29595f9a351415e2311" category="inline-link-rx"></block>참조하십시오.</block>
   <block id="19b2e4b9be52e7a8ece485368b3a9586" category="paragraph">9.14.1부터 S3 버킷에서 오브젝트 잠금이 지원됩니다. 버킷이 생성될 때 S3 오브젝트 잠금을 활성화해야 합니다. 기존 버킷에서는 오브젝트 잠금을 활성화할 수 없습니다. 오브젝트 잠금은 네이티브 S3 사용 사례에서만 사용할 수 있습니다. S3 프로토콜을 사용하도록 구성된 멀티프로토콜 NAS 볼륨은 SnapLock를 사용하여 WORM 스토리지에 데이터를 커밋해야 합니다. S3 오브젝트 잠금에는 표준 SnapLock 라이센스가 필요합니다. 이 라이센스는 에 <block ref="f7dbe68b41c16767df4408fcc8699964" category="inline-link-macro-rx"></block>포함되어 있습니다.</block>
   <block id="9ce298fb67f5d9b5d847fc509f21e671" category="paragraph">SnapLock 라이센스가 설치되어 있음을 확인한 후 버킷의 객체가 삭제되거나 덮어쓰지 않도록 보호하려면 * 개체 잠금 활성화 * 를 선택합니다. 잠금은 모든 오브젝트 또는 특정 버전에서 활성화될 수 있으며 클러스터 노드에 대해 SnapLock 컴플라이언스 클록이 초기화된 경우에만 활성화됩니다. 다음 단계를 수행하십시오.</block>
   <block id="10eec202a4ec02313d7f6f9b5a9b3ae6" category="list-text">클라이언트에 대한 내보내기 규칙을 만들기 전에 DNS에 "PTR" 레코드가 있어야 합니다.</block>
@@ -38453,7 +38442,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e255981be7fc6073adfec23ea3b23fd1" category="paragraph">에 대한 자세한 내용은<block ref="7191f5eb2cfca6dcf721ad376b2bef37" prefix=" " category="inline-code"></block> <block ref="d29358cb651d8164b0e87cbb870ecff7" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="ad399144628d206575224c00ae51223c" category="paragraph">및<block ref="9685140cece962ad95fe159398d7fffd" prefix=" " category="inline-code"></block> 명령을 사용하여 SVM 복제 관계를 삭제할 수 있습니다<block ref="730d187801768a4d84de4567732a6c18" prefix=" " category="inline-code"></block>. 그런 다음 불필요한 대상 볼륨을 수동으로 삭제할 수 있습니다. 이 절차에서 설명하는 명령에 대한 자세한 내용은 를 <block ref="bc2602c5a66493ba7d85e8bd5d0e7f9b" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="d504622ca10484864531f89aed691e22" category="paragraph">에 대한 자세한 내용은<block ref="ec8bfbd590d8678aad77b0e369355eb7" prefix=" " category="inline-code"></block> <block ref="0e819e7a9aa735d154700a2863625c15" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
-  <block id="205b5d1f93258748036bd94c1504de2d" category="paragraph">ONTAP 9.11.1부터 <block ref="00568fdae21a828533b2e5b1b7949ff7" prefix=" " category="inline-code"></block><block ref="562007dcf7d55742abbc5fd0809cb393" prefix=" " category="inline-code"></block>SVM DR 관계의 역재동기화를 수행하는 동안 명령의 CLI  옵션을 사용하여 재해 복구 예행 연습 중에 재동기화 시간을 줄일 수 있습니다. 빠른 재동기화를 통해 데이터 웨어하우스 재구축 및 복원 작업을 바이패스하여 운영 상태로 돌아가는 데 걸리는 시간을 줄일 수 있습니다. 에 대한 자세한 내용은<block ref="562007dcf7d55742abbc5fd0809cb393" prefix=" " category="inline-code"></block> <block ref="235cbb955a58591179160b7a6cd1ff1d" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="29972ba62df1bdaf5ff5ff4a540e82dc" category="paragraph">에 대한 자세한 내용은<block ref="ea77a400bf6e69bd7111d5c46dfec51c" prefix=" " category="inline-code"></block> <block ref="a0258d27aa07dba3f7b612d26d0c9f7a" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="367dfc2d53286622d7bd1e0f5b431fd4" category="paragraph">에 대한 자세한 내용은<block ref="859f5842129c4a4759882f44afc53f67" prefix=" " category="inline-code"></block> <block ref="146c6b792023845f5eebba00f91d76e8" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="b608507d9a0dd4081a0931563d86df73" category="paragraph">스냅숏에서 복원하면 볼륨을 이전 시점으로 복구할 수 있습니다. System Manager 또는 명령을 사용하여 스냅샷에서 볼륨의 내용을 복원할 수<block ref="8f381ba1024744332b561ba609495012" prefix=" " category="inline-code"></block> 있습니다. 에 대한 자세한 내용은<block ref="8f381ba1024744332b561ba609495012" prefix=" " category="inline-code"></block> <block ref="652ab39b1770adfaf5ce01531369d6d6" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -43870,7 +43858,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e525a0c85ae5bc92647b0afa0d512056" category="list-text">SP 를 재부팅하세요:</block>
   <block id="396262ee936f3d3e26ff0e60bea6cae0" category="open-title">BMC</block>
   <block id="c3645395a1004c3e93ef44f5099eb9f1" category="list-text">BMC 를 재부팅하세요:</block>
-  <block id="652e0cfcaf59ea183f052c8fc7b1ea91" category="admonition">클러스터 관리자는 데이터 손실을 방지하기 위해 원래 소스 SVM을 다시 활성화하기 전에 클라이언트의 쓰기 작업을 일시 중지해야 합니다.</block>
   <block id="fb30db4e4395c9324f563fe3e0159f70" category="list-text">클라이언트에서 원래 소스 SVM으로 쓰기 작업을 재개합니다.</block>
   <block id="b2e978dd3fa32c9b20e6c8c5b95bb992" category="list-text">로컬 또는 원격 FabricPool 용량 계층으로 사용되는 버킷에서는 S3 스냅샷을 사용하지 않는 것이 좋습니다.</block>
   <block id="13b3c62fdbf9418a02dc296611c02206" category="list-text">KMIP 서버는 각 노드의 노드 관리 LIF에서 접근 가능해야 합니다.</block>
@@ -43929,24 +43916,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e3f32015c0c1388e646d8bdf26d24223" category="paragraph">ONTAP 9.8부터 시스템 관리자를 사용하여 재해 발생 후 소스 스토리지 VM을 다시 활성화할 수 있습니다.</block>
   <block id="21714beb36feda9f7be0b843fccf42f8" category="paragraph">이 작업은 시스템 관리자 또는 ONTAP CLI를 사용하여 수행할 수 있습니다.</block>
   <block id="009535d68eab225a562400eafd180320" category="open-title">시스템 관리자 ONTAP 9.17.1 이상</block>
-  <block id="6f9ca3bdf0a6b885df1a7eb4a382a37b" category="list-text">대상 클러스터에서 원하는 보호 관계를 선택하려면 *보호 &gt; 복제*를 클릭하십시오.</block>
-  <block id="f9e3a75773e81904d7c79e747da28537" category="list-text">소스 이름 위에 마우스 커서를 올려놓고 클릭하세요. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그리고 *역방향 동기화*를 클릭하세요.</block>
   <block id="02814269ba2fc2bcfc83cd047c3426d6" category="paragraph">해당 관계는 *복제* 테이블에서 사라지고 이제 원래 소스 클러스터에서 관리됩니다.</block>
-  <block id="7851c0be02d96c32a64a2e6f5852c0b2" category="list-text">원본 소스 클러스터에서 *보호 &gt; 복제*를 클릭하고 상태가 *미러링됨*으로 표시되는지 확인하여 역방향 재동기화가 완료되었는지 확인합니다.</block>
   <block id="a89cfe51feedfe0f2863a25e763e70e4" category="list-text">원래 대상 클러스터에서 *클러스터 &gt; 스토리지 VM*으로 이동합니다.</block>
-  <block id="027e3ca7c6319e595e87d043723d0d82" category="list-text">스토리지 VM을 찾고, 스토리지 VM 이름 위에 마우스 커서를 올린 다음 클릭합니다. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그리고 *정지*를 클릭하세요.</block>
-  <block id="03b3665d6618dea524ded0a5f29081f2" category="list-text">*저장소 VM 중지* 창에서 *중지*를 클릭합니다.</block>
-  <block id="8db9900d034597d286acc00917fd2233" category="list-text">원본 클러스터에서 *보호 &gt; 복제*로 이동하여 다시 활성화할 스토리지 VM을 찾고, 스토리지 VM 이름 위에 마우스 커서를 올려놓은 다음 클릭합니다. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그런 다음 *대상 스토리지 VM 활성화*를 클릭합니다.</block>
-  <block id="dc7f8be17c9da708382825faca44cc3f" category="list-text">*대상 스토리지 VM 활성화* 창에서 *대상 스토리지 VM을 활성화하고 연결을 해제*를 선택한 다음 *활성화*를 클릭합니다.</block>
-  <block id="e4e009dfaef27ea0f7c7795bc7fad0fd" category="list-text">*복제* 페이지로 돌아가면 스토리지 VM 이름 위에 마우스 커서를 다시 올려놓고 클릭하세요. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그리고 *역방향 동기화*를 클릭하세요.</block>
   <block id="8652f71026ac455b8f950a83ef3a4372" category="open-title">시스템 관리자 ONTAP 9.16.1 및 이전 버전</block>
-  <block id="649e260716256b597119f882cc088d9c" category="list-text">대상 클러스터에서 원하는 보호 관계를 선택하려면 *보호 &gt; 관계*를 클릭하십시오.</block>
   <block id="41d27f8a4617faecc68a449185d0651c" category="paragraph">해당 관계는 이제 원래 소스 클러스터에서 관리되므로 *관계* 테이블에서 사라집니다.</block>
-  <block id="884045e2208b8ac37716a337abbcf4e0" category="list-text">원본 소스 클러스터에서 *보호 &gt; 관계*를 클릭하고 상태가 *미러링됨*으로 표시되는지 확인하여 역방향 재동기화가 완료되었는지 확인합니다.</block>
   <block id="a0465bb00d28c88d8ecc0dbfd193f766" category="list-text">원래 대상 클러스터에서 *스토리지 &gt; 스토리지 VM*으로 이동합니다.</block>
-  <block id="2ba447381e6bf86f53b67350e45d780d" category="list-text">원본 클러스터에서 스토리지 VM(이제 역관계의 원본 SVM)을 찾고, SVM 이름 위에 마우스 커서를 올려놓은 다음 클릭합니다. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그런 다음 *대상 스토리지 VM 활성화*를 클릭합니다.</block>
-  <block id="2367c22bf167d3636e2a565dd63304dc" category="list-text">*대상 스토리지 VM 활성화* 창에서 *대상 스토리지 VM 활성화 및 연결 해제*를 선택하고 *활성화*를 클릭합니다.</block>
-  <block id="78d5d4b5512a2bd3a8ee4dda84e9b808" category="list-text">*관계* 페이지로 돌아가서 스토리지 VM 이름 위에 마우스 커서를 다시 올려놓고 클릭하세요. <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>그리고 *역방향 동기화*를 클릭하세요.</block>
   <block id="90b0718d4da02df7541cbf2e444ed300" category="list-text">ONTAP 9.16.1 버전부터 단일 파트 객체의 메타데이터를 지원합니다.</block>
   <block id="5508dfce6cbfe795c47582bc94a05a39" category="list-text">ONTAP 9.16.1 버전부터 단일 파트 객체를 포함하는 태그를 지원합니다.</block>
   <block id="b45299ccd3b6c2152ca74ce334f5b772" category="paragraph-title">-disktype을 사용하여 각 디스크 유형을 변경해야 하는 flashpools/hybrid aggregates 프로세스</block>
@@ -49140,4 +49114,35 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="7a2d847520dcdf3655d0bcc5f5257d19" category="cell">SnapMirror 액티브 싱크는 SAN 및 NAS 구성에서 HA 쌍당 지원되는 볼륨 수를 400개에서 600개로 늘립니다.</block>
   <block id="261d8342915863b4035b9b7d3bc5b49d" category="cell">LUN당 지원되는 최대 SCSI-3 영구 예약 등록 수가 182개에서 256개로 증가했습니다.</block>
   <block id="f24ce81f056d5acd59788df7f5ab36a1" category="cell">FlexCache</block>
+  <block id="080d1cd419d9c3bc98d0867f751e9d47" category="list-text">데이터를 제공하는 동안 타겟 볼륨의 크기를 늘린 경우, 소스 볼륨을 다시 활성화하기 전에 원본 소스 볼륨의 max-autosize 값을 수동으로 늘려 충분한 확장이 가능하도록 해야 합니다.</block>
+  <block id="155e02981b20d50aa04ce356503acf13" category="admonition">데이터 손실을 방지하려면 원본 소스를 다시 활성화하기 전에 클라이언트 애플리케이션을 일시 중지하십시오. 타겟 SVM이 중지되면 소스 SVM이 다시 활성화될 때까지 클라이언트 애플리케이션에서 I/O 중단이 발생합니다.</block>
+  <block id="13cfea8d719c7d468fb6bd593f11d710" category="paragraph">ONTAP 9.11.1부터 SVM DR 관계의 역방향 재동기화를 수행하는 동안 <block ref="562007dcf7d55742abbc5fd0809cb393" prefix=" " category="inline-code"></block> 명령의 CLI<block ref="00568fdae21a828533b2e5b1b7949ff7" prefix=" " category="inline-code"></block> 옵션을 사용하여 재해 복구 리허설 중 재동기화 시간을 줄일 수 있습니다. 빠른 재동기화는 데이터 웨어하우스 재구축 및 복원 작업을 우회하여 운영 환경으로 돌아가는 데 걸리는 시간을 줄일 수 있습니다. <block ref="235cbb955a58591179160b7a6cd1ff1d" category="inline-link-macro-rx"></block>에서<block ref="562007dcf7d55742abbc5fd0809cb393" prefix=" " category="inline-code"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="3e2f7cdbd7f097e30e898cfbad633ebc" category="list-text">타겟 클러스터에서 원하는 보호 관계를 선택합니다. *보호 &gt; 복제*를 선택하십시오.</block>
+  <block id="9fde9d8fda13bccd3985832c17b13696" category="list-text">소스 이름 위에 커서를 올리고 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택한 다음, *역방향 재동기화*를 선택합니다.</block>
+  <block id="08160ecbcaaeea647538978e6fc91f07" category="list-text">*역방향 동기화 관계* 창에서 *역방향 동기화*를 선택합니다.</block>
+  <block id="85334bbc1bdd6e7776fea55ab7717c73" category="list-text">원본 소스 클러스터에서 *보호 &gt; 복제*를 선택하고 상태가 *미러링됨*으로 표시되는지 확인하여 역방향 재동기화가 완료되었는지 확인합니다.</block>
+  <block id="4797137d8eb6a3ff20ce54dc2369a088" category="list-text">스토리지 VM을 찾고, 스토리지 VM 이름 위에 커서를 올려놓은 다음, <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택하고 *중지*를 선택합니다.</block>
+  <block id="c9f399e705f9b73028314192a6e0e216" category="list-text">*스토리지 VM 중지* 창에서 *중지*를 선택합니다.</block>
+  <block id="1b487728c2bccc29eaa5591684e9eb82" category="list-text">소스 클러스터에서 *보호 &gt; 복제*로 이동하여 다시 활성화할 스토리지 VM을 찾고, 스토리지 VM 이름 위로 커서를 가져간 다음, <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택하고 *타겟 스토리지 VM 활성화*를 선택합니다.</block>
+  <block id="88c418e653328e6207a40c42e9da70b4" category="list-text">*대상 스토리지 VM 활성화* 창에서 *대상 스토리지 VM을 활성화하고 연결을 해제*를 선택한 다음 *활성화*를 선택합니다.</block>
+  <block id="82edf1a0f7722ca9b5468fb349031e67" category="list-text">*복제* 페이지로 돌아가면 스토리지 VM 이름 위에 커서를 다시 올려놓고 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택한 다음 *역방향 재동기화*를 선택합니다.</block>
+  <block id="9a1a129eb58cbaeb8c83c3ef751e0adb" category="list-text">타겟 클러스터에서 원하는 보호 관계를 선택합니다. *보호 &gt; 관계*를 선택하십시오.</block>
+  <block id="fd4fb50a2b851302b2da3f441e7ebaa6" category="list-text">원본 소스 클러스터에서 *보호 &gt; 관계*를 선택하고 상태가 *미러링됨*으로 표시되는지 확인하여 역방향 재동기화가 완료되었는지 확인합니다.</block>
+  <block id="65bd006e8a4661b6e15cd03d8a42c43c" category="list-text">소스 클러스터에서 스토리지 VM(이제 역방향 관계의 소스 SVM)을 찾고, SVM 이름 위에 커서를 올린 다음 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택하고 *타겟 스토리지 VM 활성화*를 선택합니다.</block>
+  <block id="475240f1f3e7ff6af4b8a8b4012c646d" category="list-text">*대상 스토리지 VM 활성화* 창에서 *대상 스토리지 VM 활성화 및 연결 해제*를 선택한 다음 *활성화*를 선택합니다.</block>
+  <block id="62007b35651dbd7f472d0cfacaabd4f0" category="list-text">*관계* 페이지로 돌아가면 스토리지 VM 이름 위에 마우스 커서를 다시 올리고 <block ref="d47b50c0fc9a1e10d010a1d0b2f31ccd" category="inline-image-macro-rx" type="image"></block>을(를) 선택한 다음 *역방향 재동기화*를 선택합니다.</block>
+  <block id="72eb830bf05aea20f8febfd8f7b39a13" category="paragraph">다음 예제는 데이터를 제공하는 원래 타겟 SVM인 <block ref="f2dcd1c21dd6e00e42ff4b9467c5e011" prefix=" " category="inline-code"></block>과 원래 소스 SVM인 <block ref="3568c00ad84b08a31b2dfadbfd8ee221" prefix=" " category="inline-code"></block> 간의 관계를 업데이트합니다:</block>
+  <block id="0ec8e360ecfaea7ec407280f9ed7c349" category="paragraph">다음 예제는 원래 타겟 SVM <block ref="f2dcd1c21dd6e00e42ff4b9467c5e011" prefix=" " category="inline-code"></block>과 원래 소스 SVM <block ref="3568c00ad84b08a31b2dfadbfd8ee221" prefix=" " category="inline-code"></block> 간의 역관계를 해제합니다.</block>
+  <block id="8c07231cc4602e59b9f8e5c898dd057b" category="paragraph">나중에 복구하기 위해 오브젝트에 대한 버전 관리를 활성화하려면 *버전 관리 활성화*를 선택하십시오. 버킷에서 오브젝트 잠금을 활성화하는 경우 버전 관리가 기본적으로 활성화됩니다. 버킷에서 버전 관리가 활성화되면 비활성화할 수 없습니다.</block>
+  <block id="09d8faabb1a375bf10c7b8884f017e09" category="paragraph">System Manager에서 *버전 관리 활성화* 확인란을 선택 해제하거나 CLI를 사용하여 버전 관리를 일시 중지할 수 있습니다.</block>
+  <block id="703aac91108306f4f8b07e94f253f17f" category="paragraph">버킷에서 버전 관리가 활성화된 경우, S3 클라이언트를 사용하여 오브젝트의 특정 버전에 Object Lock 보존 시간을 설정할 수 있습니다. 오브젝트의 특정 버전을 잠근다고 해서 오브젝트의 다른 버전이 삭제되는 것을 방지하지는 않습니다.</block>
+  <block id="e5fa74207a72a5712d50b354957d1402" category="paragraph">오브젝트 버전 관리에 대한 자세한 내용은 <block ref="b50a9a79e638b29595f9a351415e2311" category="inline-link-rx"></block>을(를) 참조하십시오.</block>
+  <block id="de1456ae3513c38788b03d315c043ee6" category="summary">비 SnapLock 볼륨의 스냅샷을 잠가 랜섬웨어 공격으로부터 보호할 수 있습니다. 스냅샷을 잠그면 실수로 또는 악의적으로 삭제되는 것을 방지할 수 있습니다.</block>
+  <block id="c8f4f455f6bfa865f12f3e17485fe8fb" category="paragraph">ONTAP 9.14.1부터 스냅샷 잠금은 비SnapLock 볼트 및 미러-볼트 SnapMirror 타겟 볼륨에서 장기 보존 스냅샷을 지원합니다. <block ref="ded6b9b6cfc55c6433ead109aad587ab" category="inline-xref-macro-rx"></block>과(와) 연결된 SnapMirror 정책 규칙으로 보존 기간을 설정하여 스냅샷 잠금을 활성화합니다. 이 규칙은 볼륨에 설정된 기본 보존 기간을 재정의합니다. SnapMirror 레이블과 연결된 보존 기간이 없는 경우 볼륨의 기본 보존 기간이 사용됩니다.</block>
+  <block id="7955029cd8bdaafe410a74f3786726cc" category="list-text">볼륨에서 스냅샷 잠금이 활성화된 경우, 클러스터를 ONTAP 9.12.1 이후 버전으로 업그레이드할 수 있습니다. 그러나 잠긴 모든 스냅샷의 만료일이 도래하여 삭제되고 스냅샷 잠금이 비활성화될 때까지는 이전 버전의 ONTAP으로 되돌릴 수 없습니다.</block>
+  <block id="6957eca128865d50d9262b567876b088" category="list-text">스냅샷이 잠기면 볼륨 만료 시간은 해당 스냅샷의 만료 시간으로 설정됩니다. 둘 이상의 스냅샷이 잠긴 경우, 볼륨 만료 시간은 모든 스냅샷 중 가장 긴 만료 시간을 반영합니다.</block>
+  <block id="fb031f26738897f40fd3613a7e718ecd" category="paragraph">변조 방지 스냅샷은 다음 기능을 지원하지 않습니다:</block>
+  <block id="e1f70860abd9e5fc15cf85bb06afb9ec" category="list-text">*SnapLock 보존 기간* 열에 스냅샷을 보존할 시간, 일, 월 또는 연도를 입력합니다. 예를 들어, 보존 기간이 5일로 설정된 스냅샷 정책은 스냅샷이 생성된 시점부터 5일 동안 스냅샷을 잠그며, 이 기간 동안에는 삭제할 수 없습니다. 지원되는 보존 기간 범위는 다음과 같습니다.</block>
+  <block id="81e27204de2e946d06a1948b3f7b1dc0" category="paragraph">ONTAP 9.14.1부터는 스냅샷의 장기 보존을 설정하는 규칙을 추가하여 기존 SnapMirror 정책을 수정할 수 있습니다. 이 규칙은 비 SnapLock 볼트 및 미러-볼트 SnapMirror 타겟 볼륨의 기본 볼륨 보존 기간을 재정의합니다.</block>
+  <block id="3fc3cc854447902027a622be128f1555" category="paragraph">다음 예시는 "snapvault"라는 기존 정책에 6개월의 보존 기간을 적용하는 규칙을 생성합니다:</block>
 </blocks>
