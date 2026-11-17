@@ -2,7 +2,7 @@
 permalink: system-admin/generate-certificate-signing-request-cluster-task.html 
 sidebar: sidebar 
 keywords: generate, certificate, sign, request, cluster, csr, ca 
-summary: '`security certificate generate-csr` 명령을 사용하여 인증서 서명 요청을 생성할 수 있습니다. 요청을 처리한 후 인증 기관에서 서명된 디지털 인증서를 보냅니다.' 
+summary: security certificate generate-csr 명령어를 사용하여 인증서 서명 요청을 생성한 다음, 이를 인증 기관에 보내 서명된 디지털 인증서를 발급받으십시오. 
 ---
 = ONTAP에서 클러스터에 대한 인증서 서명 요청을 생성합니다
 :allow-uri-read: 
@@ -27,7 +27,7 @@ security certificate generate-csr -common-name <FQDN_or_common_name> -size 512|1
 에 대한 자세한 내용은 `security certificate generate-csr` link:https://docs.netapp.com/us-en/ontap-cli/security-certificate-generate-csr.html["ONTAP 명령 참조입니다"^]을 참조하십시오.
 
 +
-다음 명령은 SHA256 해싱 기능에 의해 생성된 2,048비트 개인 키를 가진 CSR을 생성하고, 사용자 정의 공통 이름이 server1.companyname.com 인 회사의 IT 부서에서 사용하는 사용자 정의 공용 키가 미국 캘리포니아주 서니베일에 있습니다. SVM 연락처 관리자의 이메일 주소는 \web@example.com 입니다. 출력에 CSR과 개인 키가 표시됩니다.
+다음 명령은 미국 캘리포니아주 서니베일에 위치한 회사의 IT 부서 소프트웨어 그룹에 대한 CSR을 생성합니다. 이 CSR에는 사용자 지정 공통 이름인 server1.companyname.com과 SHA256 해싱 기능으로 생성된 2,048비트 개인 키가 있습니다. SVM 담당 관리자의 이메일 주소는 \web@example.com입니다. 시스템은 출력에 CSR과 개인 키를 표시합니다.
 
 +
 [listing]
@@ -49,6 +49,10 @@ Note: Please keep a copy of your certificate request and private key
 for future reference.
 ----
 . CSR 출력에서 인증서 요청을 복사한 다음 전자 양식(예: 전자 메일)으로 신뢰할 수 있는 타사 CA로 보내 서명합니다.
++
+
+NOTE: 인증 기관은 서명된 인증서를 base64로 인코딩된 PEM 또는 PKCS12 형식으로 반환해야 합니다.
+
 +
 요청을 처리한 후 CA는 서명된 디지털 인증서를 보냅니다. 개인 키와 CA 서명 디지털 인증서의 복사본을 유지해야 합니다.
 

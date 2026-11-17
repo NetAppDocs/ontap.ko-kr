@@ -8694,7 +8694,6 @@
   <block id="15f88251e20db7abda520a09e7e62092" category="paragraph">다음 명령어를 통해 'storage' 명령 디렉토리의 명령에 대한 'vm_storage' 역할 읽기 전용 액세스, 'storage encryption' 하위 디렉토리의 명령에 대한 액세스 권한 없음, 'storage aggregate offline' 비내장 명령에 대한 전체 액세스 권한을 부여한다.</block>
   <block id="8c1e88ab47d6b4583108e8867f6c6519" category="doc">CA 서명 서버 인증서를 설치합니다</block>
   <block id="6064d3dd94e3006b736c123d39cce709" category="paragraph">이 작업을 수행하려면 클러스터 또는 SVM 관리자여야 합니다.</block>
-  <block id="b903822494e014b0d04e9041cb581280" category="paragraph">ONTAP 서버 인증서의 인증서 체인을 형성하는 CA 루트 및 중간 인증서를 입력하라는 메시지가 표시됩니다. 체인은 서버 인증서를 발급한 CA의 인증서로 시작되며 CA의 루트 인증서까지 범위가 될 수 있습니다. 누락된 중간 인증서는 서버 인증서 설치에 실패합니다.</block>
   <block id="d56c106d1290880b8d32fbd9f3edf564" category="paragraph">'Security certificate generate -csr' 명령을 사용하여 CSR(인증서 서명 요청)을 생성할 수 있습니다. 요청을 처리한 후 CA(인증 기관)에서 서명된 디지털 인증서를 보냅니다.</block>
   <block id="f638d474cf218813efba23b624db9da4" category="list-text">CSR 생성:</block>
   <block id="fce10515a8c7c539fab038ccdc478d36" category="list-text">CSR 출력에서 인증서 요청을 복사한 다음 전자 양식(예: 전자 메일)으로 신뢰할 수 있는 타사 CA로 보내 서명합니다.</block>
@@ -9389,7 +9388,6 @@
   <block id="9ebc6a7dfbb9e7012090b1a7631556e6" category="list-text">'Storage aggregate object-store unmirror' 명령을 사용하여 FabricPool에서 오브젝트 저장소 미러를 제거합니다.</block>
   <block id="44a323a0ec06d9d0001324a331c025f9" category="list-text">"force-Tiering-on-MetroCluster true" 옵션을 사용하여 'Storage aggregate object-store modify"를 사용하여 미러 데이터 저장소를 제거한 후 운영 데이터 저장소에서 계층화를 강제로 다시 시작할 수 있습니다.</block>
   <block id="5f70b53a6314b67fcc380b3dacec55ce" category="paragraph">미러가 없으면 MetroCluster 구성의 복제 요구 사항에 방해가 됩니다.</block>
-  <block id="467096e646d53f02eed118bfe52ab2fa" category="list-text">'Storage aggregate object-store config create' 명령을 사용하여 대체 오브젝트 저장소를 생성합니다.</block>
   <block id="7d0a01605ce15a9acbb8e517f280c541" category="list-text">'Storage aggregate object-store mirror' 명령을 사용하여 FabricPool 미러에 객체 저장소 미러를 추가합니다.</block>
   <block id="46e381fd397947c87a7d1f927bb042e1" category="list-text">'storage aggregate object-store show' 명령을 사용하여 오브젝트 저장소 정보를 표시합니다.</block>
   <block id="27fabf464ce109a0e0b0b1fb5ebd7a22" category="section-title">일반 고려 사항 및 요구 사항</block>
@@ -22058,7 +22056,6 @@
   <block id="452439568ebcea7e7f17d98f2b303eb8" category="list-text">'system service-processor api-service show' 명령을 사용하여 SP API 서비스 구성을 표시합니다.</block>
   <block id="05174ca0b25cf80d980a8b8fd4dc8fe9" category="doc">클러스터에 대한 인증서 서명 요청을 생성합니다</block>
   <block id="b9b9b489a903015e81ebc92a7812ae39" category="paragraph">보안 인증서 'generate-csr' 명령을 사용하여 인증서 서명 요청(CSR)을 생성할 수 있습니다. 요청을 처리한 후 CA(인증 기관)에서 서명된 디지털 인증서를 보냅니다.</block>
-  <block id="d7fa27fe316d67ef082decd3f3ea48ed" category="paragraph">다음 명령은 SHA256 해싱 기능에 의해 생성된 2,048비트 개인 키를 가진 CSR을 생성하고, 사용자 정의 공통 이름이 server1.companyname.com 인 회사의 IT 부서에서 사용하는 사용자 정의 공용 키가 미국 캘리포니아주 서니베일에 있습니다. SVM 연락처 관리자의 이메일 주소는 \web@example.com 입니다. 출력에 CSR과 개인 키가 표시됩니다.</block>
   <block id="9bafc4a11696799c597b4af7a23f09fc" category="list-text">CSR 출력에서 인증서 요청을 복사한 다음 전자 양식(예: 전자 메일)으로 신뢰할 수 있는 타사 CA로 보내 서명합니다.</block>
   <block id="3552fade596f6ae46d898d9897e8b8aa" category="doc">CLI 세션의 레코드를 관리하는 명령입니다</block>
   <block id="64953bc317f204ac81f880a2e6a35866" category="paragraph">'system script' 명령어를 이용하여 CLI 세션 기록을 관리한다.</block>
@@ -27589,7 +27586,6 @@ utf8mb4 지원을 위해 SVM을 업데이트할 수 있지만 기존 볼륨에 �
   <block id="4e60196f40bcb383cb8890a1ea7eeb26" category="list-text">SVM에서 NIS 도메인 구성 생성:</block>
   <block id="410c0f04bda7af7ee151624c2b3ccf51" category="example-title">CSR 생성 예</block>
   <block id="ff828542f8df7c22801c0f624e248281" category="list-text">CA 서명 서버 인증서 설치:</block>
-  <block id="c52eaea88910be65bd6e554bb73f9b51" category="example-title">CA 서명 서버 인증서 중간 인증서 설치 예</block>
   <block id="f319e35d0284a09f9592b599045f022a" category="paragraph">AD 계정이 SVM에 액세스하려면 먼저 클러스터 또는 SVM에 대한 AD 도메인 컨트롤러 액세스를 구성해야 합니다. 데이터 SVM을 위해 SMB 서버를 이미 구성한 경우, SVM을 클러스터에 대한 AD 액세스를 위한 게이트웨이 또는 _tunnel_로 구성할 수 있습니다. SMB 서버를 구성하지 않은 경우 AD 도메인에서 SVM에 대한 컴퓨터 계정을 생성할 수 있습니다.</block>
   <block id="c1743bb4b0d2d2eb65c5d685e3cd2ed7" category="summary">CLI 세션을 지정된 이름 및 크기 제한이 있는 파일에 기록한 다음 파일을 FTP 또는 HTTP 대상으로 업로드할 수 있습니다.</block>
   <block id="2ee33cc2654dd7bc28293122683ea2cf" category="list-text">파일에 현재 CLI 세션 녹화를 시작합니다.</block>
@@ -35761,8 +35757,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f8f2fd40a10b3592662e11f80f98e8fb" category="admonition">에는<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> 파일에 정의된 PKI 권한으로 전송되어야 하는 요청에서 파생되는 특정 속성이 있습니다<block ref="603163ce5e8659fa810255687a12d61f" prefix=" " category="inline-code"></block></block>
   <block id="c8122c352cb3563e51119b9ab14cdf54" category="list-text">ONTAP 중재자 Linux VM/호스트 소프트웨어 설치 위치에서 새 타사 ONTAP 중재자 CA 인증서를<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> 추가합니다.</block>
   <block id="2a2dca30698f3ed08a3461908359e3b8" category="list-text"> 를 설치해야 <block ref="f2d413d340731b42fc0657bf55834c27" category="inline-link-macro-rx"></block>SVM에합니다.</block>
-  <block id="f3b339b25884cc3effa2415cf1eede83" category="summary">운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다.</block>
-  <block id="040f2bb83ba96c652e170c46831a6692" category="paragraph">다음 명령을 실행하면 미국 캘리포니아주 서니베일에 위치한 회사 부서의<block ref="65d7883a7e68f5448c3e0bd4f18a6d0e" prefix=" " category="inline-code"></block> 그룹에서<block ref="cd32106bcb6de321930cf34574ea388c" prefix=" " category="inline-code"></block> 사용할 수 있도록 해시 기능에서<block ref="719d067b229178f03bcfa1da4ac4dede" prefix=" " category="inline-code"></block> 생성된 2048비트 개인 키가 포함된 CSR이<block ref="b505df5aa812b4f320420b8a952f20e5" prefix=" " category="inline-code"></block> 생성됩니다. SVM 담당자 관리자의 이메일 주소는 입니다<block ref="a5805072a204db8b189cb2c0824feef0" prefix=" " category="inline-code"></block>. 출력에 CSR과 개인 키가 표시됩니다.</block>
   <block id="b78e2a61a529c7ed42bce68d24b29d29" category="paragraph">다음 명령을 실행하면 SVM에 CA 서명 서버 인증서 및 중간 인증서를 설치합니다<block ref="58f08113a5b8566cb78053e8121ddde4" prefix=" " category="inline-code"></block>.</block>
   <block id="27a04550706dfe79dbad694fc2064f42" category="inline-link-macro">SVM active-directory create 를 참조하십시오</block>
   <block id="25de59b1065c184c4f400b218ab71a2b" category="list-text">NetBackup을 선택합니다</block>
@@ -37958,7 +37952,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="64af77d3bfba52235087fbfc96d55f88" category="sidebar">클라이언트 구성</block>
   <block id="deeb2662f5cb9182770365d618d60b7b" category="inline-link-macro">보안 로그인</block>
   <block id="875d571e09d8c25ece0994524c29b1a2" category="list-text"><block ref="875d571e09d8c25ece0994524c29b1a2" category="inline-link-macro-rx"></block></block>
-  <block id="cd95cf636c4035310b4726fa5e81db99" category="paragraph">운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 명령을 사용하여 인증서 서명 요청(CSR)을 생성하고,<block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block> 명령을 사용하여 인증 기관으로부터 받은 인증서를 설치할 수<block ref="f211ef8a54ddb39592cadbeccb43d071" prefix=" " category="inline-code"></block> 있습니다. 및<block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block> 에 대한 자세한<block ref="f211ef8a54ddb39592cadbeccb43d071" prefix=" " category="inline-code"></block> 내용은 을 <block ref="9e4bf8e2b30778b4ec096d90970796ef" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="d5f41d5acc3e3ca52a5d1799c4c5d443" category="paragraph">명령을 사용하여 SVM에 CA 서명 서버 인증서를 설치할 수 있습니다<block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block>. ONTAP는 서버 인증서의 인증서 체인을 형성하는 CA(인증 기관) 루트 및 중간 인증서를 입력하라는 메시지를 표시합니다. 에 대한 자세한 내용은<block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block> <block ref="8b442c7e2376cf3230eef30aef14afca" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="d19c89554b7b7e43709339b0b41086a7" category="paragraph">명령을 사용하여 이러한 작업을 수행할 수<block ref="a681e20212d416207be306cfdbdc48c3" prefix=" " category="inline-code"></block> 있습니다. 에 대한 자세한 내용은<block ref="a681e20212d416207be306cfdbdc48c3" prefix=" " category="inline-code"></block> <block ref="f7f01406cbda14974394044a39e4781f" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="77bac7c0a16b32efe912ed3fdeb78600" category="list-text">명령을 사용하여<block ref="3da64edfc83f1e59494ff335d912aba2" prefix=" " category="inline-code"></block> 새로 생성된 모든 SVM에 대해 실패한 로그인 시도 횟수를 제한할 수 있습니다. 에 대한 자세한 내용은<block ref="3da64edfc83f1e59494ff335d912aba2" prefix=" " category="inline-code"></block> <block ref="c9890b75f2982d0b52eb30720f3c94a8" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
@@ -44719,7 +44712,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="107ec461eba81cc6001df9eb62d513c4" category="summary">ONTAP 9.3부터 웹 서비스에 대한 Security Assertion Markup Language 인증을 구성할 수 있습니다.</block>
   <block id="546a53e134c07fd9d656bf6494730e64" category="summary">인증된 CLI 사용자에게 정보를 전달하기 위해 오늘의 메시지를 생성할 수 있습니다. 오늘의 메시지는 사용자가 인증된 후 clustershell 프롬프트가 나타나기 전에 콘솔 세션 또는 SSH 세션에 표시됩니다.</block>
   <block id="09b0796ff28c780c72da8c3b790e9cdf" category="summary">클러스터의 고유 식별자, 이름, 일련 번호, 위치 및 연락처 정보를 표시할 수 있습니다.</block>
-  <block id="16b8b494411bd8e7ba9360acd5b77b42" category="summary">`security certificate generate-csr` 명령을 사용하여 인증서 서명 요청을 생성할 수 있습니다. 요청을 처리한 후 인증 기관에서 서명된 디지털 인증서를 보냅니다.</block>
   <block id="90870a1ddf951cf36f0ec9b83f38394c" category="summary">시스템 상태 경고는 AutoSupport 메시지와 이벤트 관리 시스템의 이벤트를 트리거하여 상태 모니터링 시스템을 직접 사용하는 것 외에도 AutoSupport 메시지와 EMS를 사용하여 시스템 상태를 모니터링할 수 있도록 합니다.</block>
   <block id="006692103c64aa410f897255ed8ca58a" category="summary">명령줄 인터페이스를 사용하여 ONTAP 시스템을 관리할 수 있습니다.</block>
   <block id="5eea77b0f432f99b65a0fa8917e79cf3" category="summary">SSL 서버가 클러스터 또는 스토리지 가상 머신을 SSL 클라이언트로 인증할 수 있도록 하려면 클러스터 또는 SVM에 클라이언트 유형의 디지털 인증서를 설치합니다. 그런 다음 client-ca 인증서를 SSL 서버 관리자에게 제공하여 서버에 설치하도록 합니다.</block>
@@ -49145,4 +49137,13 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e1f70860abd9e5fc15cf85bb06afb9ec" category="list-text">*SnapLock 보존 기간* 열에 스냅샷을 보존할 시간, 일, 월 또는 연도를 입력합니다. 예를 들어, 보존 기간이 5일로 설정된 스냅샷 정책은 스냅샷이 생성된 시점부터 5일 동안 스냅샷을 잠그며, 이 기간 동안에는 삭제할 수 없습니다. 지원되는 보존 기간 범위는 다음과 같습니다.</block>
   <block id="81e27204de2e946d06a1948b3f7b1dc0" category="paragraph">ONTAP 9.14.1부터는 스냅샷의 장기 보존을 설정하는 규칙을 추가하여 기존 SnapMirror 정책을 수정할 수 있습니다. 이 규칙은 비 SnapLock 볼트 및 미러-볼트 SnapMirror 타겟 볼륨의 기본 볼륨 보존 기간을 재정의합니다.</block>
   <block id="3fc3cc854447902027a622be128f1555" category="paragraph">다음 예시는 "snapvault"라는 기존 정책에 6개월의 보존 기간을 적용하는 규칙을 생성합니다:</block>
+  <block id="9b2b44e9bb0eda0fa54695e487032b7d" category="summary">인증서 서명 요청을 생성하고 CA에서 서명한 서버 인증서를 설치하여 ONTAP 클러스터 또는 SVM을 SSL 서버로 인증합니다.</block>
+  <block id="46c1898c54a59ffbc8162746358864bc" category="paragraph">프로덕션 시스템에서는 클러스터 또는 SVM을 SSL 서버로 인증하는 모범 사례로 CA 서명 디지털 인증서를 설치하십시오. <block ref="f211ef8a54ddb39592cadbeccb43d071" prefix=" " category="inline-code"></block> 명령을 사용하여 CSR(인증서 서명 요청)을 생성하고, <block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block> 명령을 사용하여 인증 기관으로부터 돌려받은 인증서를 설치할 수 있습니다. <block ref="9e4bf8e2b30778b4ec096d90970796ef" category="inline-link-macro-rx"></block>에서 <block ref="f211ef8a54ddb39592cadbeccb43d071" prefix=" " category="inline-code"></block> 및 <block ref="a9768a1721be1abfec9928f99bc40b43" prefix=" " category="inline-code"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="2fa4804409ee60da4dc9117a911a3d80" category="paragraph">다음 명령은<block ref="b505df5aa812b4f320420b8a952f20e5" prefix=" " category="inline-code"></block> 해싱 기능으로 생성된 2048비트 개인 키를 사용하여 CSR을 만듭니다. 이 CSR은 미국 캘리포니아주 Sunnyvale에 위치한 회사의<block ref="cd32106bcb6de321930cf34574ea388c" prefix=" " category="inline-code"></block> 부서에 있는<block ref="719d067b229178f03bcfa1da4ac4dede" prefix=" " category="inline-code"></block> 그룹이 사용하기 위한 것입니다. 회사의 사용자 지정 일반 이름은<block ref="65d7883a7e68f5448c3e0bd4f18a6d0e" prefix=" " category="inline-code"></block>입니다. SVM 연락처 관리자의 이메일 주소는<block ref="a5805072a204db8b189cb2c0824feef0" prefix=" " category="inline-code"></block>입니다. 시스템이 출력에 CSR과 개인 키를 표시합니다.</block>
+  <block id="22aaf289020b8709e2bbfe667bb03136" category="admonition">인증 기관은 서명된 인증서를 base64로 인코딩된 PEM 또는 PKCS12 형식으로 반환해야 합니다.</block>
+  <block id="006b5fa049b64fc1dc527a4c12f05a97" category="paragraph">ONTAP은 서버 인증서의 인증서 체인을 구성하는 CA 루트 및 중간 인증서를 입력하라는 메시지를 표시합니다. 이 체인은 서버 인증서를 발급한 CA의 인증서로 시작하여 CA의 루트 인증서까지 이어질 수 있습니다. 중간 인증서가 누락되면 서버 인증서 설치가 실패합니다.</block>
+  <block id="16141d3821b8b0b0084fd3327c3de279" category="example-title">CA 서명 서버 인증서 및 중간 인증서 설치 예시</block>
+  <block id="6ed1d2e0b39b14c5eeb4c12d9bb25105" category="list-text"><block ref="5cd37b9fd1f58e8192a623dd36a207fb" prefix=" " category="inline-code"></block> 명령을 사용하여 이전에 미러링 해제된 오브젝트 저장소와 동일한 버킷을 사용하지 않는 대체 오브젝트 저장소를 생성합니다.</block>
+  <block id="f8848a80fba9eb9b2d84041624cf6c4e" category="summary">security certificate generate-csr 명령어를 사용하여 인증서 서명 요청을 생성한 다음, 이를 인증 기관에 보내 서명된 디지털 인증서를 발급받으십시오.</block>
+  <block id="aab0eda397efd966d6db85dcb98a1012" category="paragraph">다음 명령은 미국 캘리포니아주 서니베일에 위치한 회사의 IT 부서 소프트웨어 그룹에 대한 CSR을 생성합니다. 이 CSR에는 사용자 지정 공통 이름인 server1.companyname.com과 SHA256 해싱 기능으로 생성된 2,048비트 개인 키가 있습니다. SVM 담당 관리자의 이메일 주소는 \web@example.com입니다. 시스템은 출력에 CSR과 개인 키를 표시합니다.</block>
 </blocks>

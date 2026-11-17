@@ -2,7 +2,7 @@
 permalink: authentication/install-server-certificate-cluster-svm-ssl-server-task.html 
 sidebar: sidebar 
 keywords: generate, install, ca-signed, server, certificate, csr, signing request, signed 
-summary: 운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 
+summary: 인증서 서명 요청을 생성하고 CA에서 서명한 서버 인증서를 설치하여 ONTAP 클러스터 또는 SVM을 SSL 서버로 인증합니다. 
 ---
 = ONTAP에서 CA 서명 서버 인증서를 생성하고 설치합니다
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증�
 
 
 [role="lead"]
-운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증하는 데 사용할 CA 서명 디지털 인증서를 설치하는 것이 좋습니다. 명령을 사용하여 인증서 서명 요청(CSR)을 생성하고, `security certificate install` 명령을 사용하여 인증 기관으로부터 받은 인증서를 설치할 수 `security certificate generate-csr` 있습니다. 및 `security certificate install` 에 대한 자세한 `security certificate generate-csr` 내용은 을 link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+certificate["ONTAP 명령 참조입니다"^]참조하십시오.
+프로덕션 시스템에서는 클러스터 또는 SVM을 SSL 서버로 인증하는 모범 사례로 CA 서명 디지털 인증서를 설치하십시오.  `security certificate generate-csr` 명령을 사용하여 CSR(인증서 서명 요청)을 생성하고,  `security certificate install` 명령을 사용하여 인증 기관으로부터 돌려받은 인증서를 설치할 수 있습니다. link:https://docs.netapp.com/us-en/ontap-cli/search.html?q=security+certificate["ONTAP 명령 참조입니다"^]에서  `security certificate generate-csr` 및  `security certificate install`에 대해 자세히 알아보십시오.
 
 
 
@@ -31,7 +31,7 @@ summary: 운영 시스템에서 클러스터 또는 SVM을 SSL 서버로 인증�
 security certificate generate-csr -common-name FQDN_or_common_name -size 512|1024|1536|2048 -country country -state state -locality locality -organization organization -unit unit -email-addr email_of_contact -hash-function SHA1|SHA256|MD5
 ----
 +
-다음 명령을 실행하면 미국 캘리포니아주 서니베일에 위치한 회사 부서의 `server1.companyname.com` 그룹에서 `IT` 사용할 수 있도록 해시 기능에서 `Software` 생성된 2048비트 개인 키가 포함된 CSR이 `SHA256` 생성됩니다. SVM 담당자 관리자의 이메일 주소는 입니다 `web@example.com`. 출력에 CSR과 개인 키가 표시됩니다.
+다음 명령은 `SHA256` 해싱 기능으로 생성된 2048비트 개인 키를 사용하여 CSR을 만듭니다. 이 CSR은 미국 캘리포니아주 Sunnyvale에 위치한 회사의 `IT` 부서에 있는 `Software` 그룹이 사용하기 위한 것입니다. 회사의 사용자 지정 일반 이름은 `server1.companyname.com`입니다. SVM 연락처 관리자의 이메일 주소는 `web@example.com`입니다. 시스템이 출력에 CSR과 개인 키를 표시합니다.
 
 +
 .CSR 생성 예
@@ -57,6 +57,10 @@ NOTE: Keep a copy of your certificate request and private key for future referen
 ====
 . CSR 출력에서 인증서 요청을 복사한 다음 전자 양식(예: 전자 메일)으로 신뢰할 수 있는 타사 CA로 보내 서명합니다.
 +
+
+NOTE: 인증 기관은 서명된 인증서를 base64로 인코딩된 PEM 또는 PKCS12 형식으로 반환해야 합니다.
+
++
 요청을 처리한 후 CA는 서명된 디지털 인증서를 보냅니다. 개인 키와 CA 서명 디지털 인증서의 복사본을 유지해야 합니다.
 
 
@@ -81,14 +85,14 @@ security certificate install -vserver SVM_name -type certificate_type
 +
 [NOTE]
 ====
-ONTAP 서버 인증서의 인증서 체인을 형성하는 CA 루트 및 중간 인증서를 입력하라는 메시지가 표시됩니다. 체인은 서버 인증서를 발급한 CA의 인증서로 시작되며 CA의 루트 인증서까지 범위가 될 수 있습니다. 누락된 중간 인증서는 서버 인증서 설치에 실패합니다.
+ONTAP은 서버 인증서의 인증서 체인을 구성하는 CA 루트 및 중간 인증서를 입력하라는 메시지를 표시합니다. 이 체인은 서버 인증서를 발급한 CA의 인증서로 시작하여 CA의 루트 인증서까지 이어질 수 있습니다. 중간 인증서가 누락되면 서버 인증서 설치가 실패합니다.
 
 ====
 +
 다음 명령을 실행하면 SVM에 CA 서명 서버 인증서 및 중간 인증서를 설치합니다 `engData2`.
 
 +
-.CA 서명 서버 인증서 중간 인증서 설치 예
+.CA 서명 서버 인증서 및 중간 인증서 설치 예시
 [%collapsible]
 ====
 [listing]

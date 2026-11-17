@@ -35,7 +35,7 @@ storage aggregate object-store unmirror -aggregate <aggregate name> -name mcc1_o
 ----
 storage aggregate object-store modify -aggregate <aggregate name> -name mcc1_ostore1 -force-tiering-on-metrocluster true
 ----
-. 'Storage aggregate object-store config create' 명령을 사용하여 대체 오브젝트 저장소를 생성합니다.
+.  `storage aggregate object-store config create` 명령을 사용하여 이전에 미러링 해제된 오브젝트 저장소와 동일한 버킷을 사용하지 않는 대체 오브젝트 저장소를 생성합니다.
 +
 [listing]
 ----
