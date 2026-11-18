@@ -25540,7 +25540,6 @@
   <block id="d9124afcc02b843cfffad50be8b6c5fb" category="paragraph">ONTAP 9.12.1부터 보존 기간이 설정된 WORM 파일<block ref="d415f0e30c471dfdd9bc4f827329ef48" prefix=" " category="inline-code"></block> SnapLock 볼륨에 대해 구성된 최소 보존 기간으로 보존 기간을 설정해야 합니다. 에서 파일 보존 기간을 변경하는 경우<block ref="d415f0e30c471dfdd9bc4f827329ef48" prefix=" " category="inline-code"></block> 지정된 새 보존 시간은 파일에 이미 설정된 최소 보존 시간보다 커야 합니다.</block>
   <block id="009bdc627cbf7a3e197ca64571dd5c7c" category="list-text">방화벽 정책은 더 이상 사용되지 않으며 LIF 서비스 정책으로 교체됩니다. 이전에는 방화벽 정책을 사용하여 온보드 방화벽을 관리했습니다. 이 기능은 이제 LIF 서비스 정책을 사용하여 구현됩니다.</block>
   <block id="7571f13c3c3405ac41066a2e566d7eee" category="paragraph">ONTAP Select 업그레이드의 경우 * ONTAP Select 노드 업그레이드 * 를 선택합니다.</block>
-  <block id="ab65b2fff8e39e07cd5c391a76b10586" category="paragraph">예를 들어, 시스템에서 ONTAP 9.3P9를 실행 중이고 9.11.1로 업그레이드할 계획이라면 먼저 최신 9.3 패치 릴리스로 업그레이드한 다음 9.3에서 9.11.1로 업그레이드 경로를 따라야 합니다.</block>
   <block id="fe033bb600782e2d617eed728394e9e1" category="summary">DMA가 CAB(Cluster Aware Backup) 확장을 지원하는 경우 SVM 범위의 NDMP를 사용하도록 설정하고, 클러스터에서 NDMP 서비스를 설정하고(admin SVM), 데이터 및 제어 연결을 위해 LIF를 구성하여 클러스터의 여러 노드에서 호스팅되는 모든 볼륨을 백업할 수 있습니다.</block>
   <block id="0169954c11bc442510e1b0501876a239" category="paragraph">노드 범위 NDMP를 설정하고, NDMP 서비스를 사용하도록 설정하고, 데이터 및 제어 연결을 위해 LIF를 구성하여 단일 노드에서 호스팅되는 볼륨을 백업할 수 있습니다. 이 작업은 클러스터의 모든 노드에 대해 수행할 수 있습니다.</block>
   <block id="b370a44ee12b1eac974a8e43164593ae" category="admonition">노드 범위 NDMP는 ONTAP 9에서 더 이상 사용되지 않습니다.</block>
@@ -38480,25 +38479,15 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="20df74dd9059112f4ef8506d8ece8b43" category="inline-link-macro">자세히 들여다보았습니다</block>
   <block id="94cbe0a1b5f2d1b8d701ffe90240f923" category="paragraph">데이터가 볼륨 레벨에서 미러링됩니다. 운영 스토리지의 소스 볼륨과 2차 스토리지의 타겟 볼륨 간의 관계를 _ 데이터 보호 관계라고 합니다. _ 볼륨이 상주하는 클러스터와 볼륨의 데이터를 제공하는 SVM이 되어야 합니다.<block ref="4fcb22bea40d5020e5c1306fc10718f1" category="inline-link-macro-rx"></block> 피어 관계를 통해 클러스터와 SVM이 데이터를 안전하게 교환할 수 있습니다.</block>
   <block id="f2248ba92c3e9181ac4a4025a3a9c15f" category="paragraph">다음 그림에서는 SnapMirror 데이터 보호 관계를 보여 줍니다.</block>
-  <block id="bdab6e4420d2594639deec294187ca21" category="summary">로컬 계층, 연결된 클라우드 계층 및 볼륨(볼륨 계층화 정책)에서 발생하는 변경 사항이 기능에 큰 영향을 미칠 수 있으므로 FabricPool에서 볼륨 이동이 어떻게 작동하는지 이해하는 것이 중요합니다.</block>
-  <block id="064bc5dcf6a07ff4107cf22eb0a51dae" category="paragraph">A는 <block ref="7f1ebb6fb0ad236c93285e2e95f25dcd" category="inline-link-macro-rx"></block>ONTAP가 하나의 로컬 계층(소스)에서 다른 타겟(타겟)으로 볼륨을 중단 없이 이동하는 방법입니다. 하드웨어 라이프사이클 관리, 클러스터 확장 및 로드 밸런싱이 가장 일반적인 이유이지만 볼륨 이동은 다양한 이유로 수행할 수 있습니다.</block>
   <block id="970817aace0e2ac5c058aebdc5d2260f" category="section-title">대상 로컬 계층</block>
-  <block id="e275af7bfd30d3c94e9b3cc69404a8d9" category="paragraph">볼륨 이동의 타겟 로컬 계층에 연결된 클라우드 계층이 없는 경우 클라우드 계층에 저장된 소스 볼륨의 데이터가 타겟 로컬 계층의 로컬 계층에 기록됩니다.</block>
   <block id="83c4e98eb75fbe6e0e33fa86b715bb61" category="inline-link-macro">비활성 데이터 보고</block>
-  <block id="48f9a59647954f3d3d75ff3ad6a319a3" category="paragraph">ONTAP 9.8 이전에는 볼륨을 다른 로컬 계층으로 이동하면 로컬 계층에서 블록의 비활성 기간이 재설정됩니다. 예를 들어, 로컬 계층에 20일 동안 비활성 상태였지만 아직 계층화되지 않은 데이터가 있는 자동 볼륨 계층화 정책을 사용하는 볼륨은 볼륨 이동 후 데이터 온도가 0일로 재설정됩니다.</block>
   <block id="076d157b00500af5ab08efae31d07141" category="section-title">최적화된 볼륨 이동</block>
   <block id="ff2bde5a8343cc482e0322d25adb2ef5" category="paragraph">일부 구성은 최적화된 볼륨 이동과 호환되지 않습니다.</block>
-  <block id="2a2f34180c3e283f6adc7cd9fa111610" category="list-text">볼륨 이동 중에 계층화 정책 변경</block>
   <block id="616de5f719c279866668004b401c2601" category="list-text">FlexClone 상위 볼륨</block>
   <block id="a08166d0beceb1d7def8a9a134701d5a" category="list-text">MetroCluster(ONTAP 9.8 이상에서 최적화된 볼륨 이동 지원)</block>
   <block id="5781475adce88988cf97ad0e0173d075" category="list-text">동기화되지 않은 FabricPool 미러 버킷</block>
-  <block id="1b9fed706aa7d6a1f00ae291b6d66335" category="paragraph">볼륨 이동의 대상 로컬 계층에 연결된 클라우드 계층이 있는 경우 클라우드 계층에 저장된 소스 볼륨의 데이터가 먼저 대상 로컬 계층의 로컬 계층에 기록됩니다. 그런 다음 이 접근 방식이 볼륨의 계층화 정책에 적합한 경우 대상 로컬 계층의 클라우드 계층에 기록됩니다.</block>
-  <block id="8265c048f3a52f77e24a78282fa7f80d" category="paragraph">먼저 로컬 계층에 데이터를 기록하면 볼륨 이동 성능이 향상되고 컷오버 시간이 단축됩니다. 볼륨 이동을 수행할 때 볼륨 계층화 정책이 지정되지 않으면 타겟 볼륨이 소스 볼륨의 계층화 정책을 사용합니다.</block>
-  <block id="d44edc28afba4ec4eb0baa4a29d5384f" category="paragraph">볼륨 이동을 수행할 때 다른 계층화 정책을 지정하면 지정된 계층화 정책으로 타겟 볼륨이 생성되고 볼륨 이동이 최적화되지 않습니다.</block>
-  <block id="da92f9dda78e5281f95be5be81ec5de3" category="admonition">SVM DR 관계에서는 소스 및 타겟 볼륨이 동일한 계층화 정책을 사용해야 한다.</block>
   <block id="e954eb646a72e329755cdd586078cf2e" category="list-text">명령을 사용하여<block ref="3f87f7557ca0f649ab7e92a464f34132" prefix=" " category="inline-code"></block> 볼륨을 소스 로컬 계층에서 대상 로컬 계층으로 이동합니다.</block>
   <block id="0278a1f71f17239ca4f341d56295db9a" category="paragraph-title">볼륨 이동의 예</block>
-  <block id="59d972945896de9f8801219522db7621" category="paragraph">다음 예에서는<block ref="93e9fa0fcb7aba0522283d98215b5d88" prefix=" " category="inline-code"></block> SVM이라는 볼륨을 FabricPool 지원 로컬 계층으로<block ref="66e28b10f51869bd35dbf6d03759ef49" prefix=" " category="inline-code"></block> 이동합니다<block ref="1236318b32ff887884462107aee24792" prefix=" " category="inline-code"></block>.</block>
   <block id="a14c58b082fa45ef38547f28a36e3e01" category="doc">ONTAP FlexCache 볼륨 감사에 대해 자세히 알아보십시오</block>
   <block id="59028869486d2aa4a440b60d8cf11a94" category="doc">ONTAP FlexCache 관계 삭제</block>
   <block id="226f16dc8a5e373584caec601e76a06e" category="doc">ONTAP FlexCache 볼륨에 대한 글로벌 파일 잠금을 사용합니다</block>
@@ -38785,8 +38774,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="0d704824e2eb08cd12a84101c131110e" category="doc">ONTAP SnapMirror 기술을 사용한 볼트 보관에 대해 알아봅니다</block>
   <block id="3273a7d7e7a733002df8f99f991cba51" category="sidebar">SnapMirror 볼륨 복제에 대해 알아보십시오</block>
   <block id="80b639092985aa4e4eea3bd7a8f44159" category="sidebar">SnapMirror 볼륨 복제를 구성합니다</block>
-  <block id="78e1cf5f28d26755dadcc9d795f0157c" category="paragraph">ONTAP 9.8부터 볼륨을 활성화한 경우 <block ref="4b8901d49e979ec3294f6b6c6a486a8b" category="inline-link-macro-rx"></block>FabricPool는 볼륨의 Heat Map을 사용하여 콜드 데이터가 대상 로컬 계층에 기록되는 즉시 계층화를 시작합니다.</block>
-  <block id="be8589d500f0e921001d96f1a9c4e8f6" category="paragraph">ONTAP 9.6부터 볼륨 이동의 타겟 로컬 계층이 소스 로컬 계층과 동일한 버킷을 사용할 경우 버킷에 저장된 소스 볼륨의 데이터가 로컬 계층으로 다시 이동하지 않습니다. 계층화된 데이터는 사용되지 않고 핫 데이터만 로컬 계층 간에 이동되어야 합니다. 이렇게 최적화된 볼륨 이동을 통해 네트워크 효율성이 크게 향상됩니다.</block>
   <block id="353801a02ede2cda219b569d27814857" category="paragraph">최적화되지 않은 볼륨 이동은 추가 네트워크 및 컴퓨팅 트래픽(읽기/가져오기 및 쓰기/출력)을 생성하여 ONTAP 클러스터 및 오브젝트 저장소에 대한 수요를 증가시키며, 퍼블릭 오브젝트 저장소로 계층화할 때 비용이 상승할 가능성이 있습니다.</block>
   <block id="d0e655b146adde2a06ab517f63310ed2" category="list-text">서로 다른 암호화 키를 사용하는 소스 및 대상 로컬 계층</block>
   <block id="2d1d92f2654c23f1127f16bf50985059" category="section-title">볼륨 메타데이터</block>
@@ -39691,11 +39678,7 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="e615d081056a6324246cc9785367d8c8" category="inline-link-macro">ONTAP Mediator 설치</block>
   <block id="a2672e9b873423536ffb51dc72e3ade7" category="paragraph">세 번째 위치에서 노드와 해당 DR 파트너의 상태를 모니터링할 수 <block ref="e587061c075abb259d77eb555283ce4c" category="inline-link-macro-rx"></block>있습니다. ONTAP Mediator는 재해 발생 시 Mediator 지원 비계획 전환(MAUSO)을 구현할 수 있습니다.</block>
   <block id="aa58eb509677af1b939847c67a936f03" category="paragraph"><block ref="aa58eb509677af1b939847c67a936f03" category="inline-link-rx"></block></block>
-  <block id="69130266fa791fe1f4fc8d0e5d8edf79" category="paragraph">예를 들어, 300TB의 최적화된 볼륨 이동은 300TB의 콜드 데이터가 한 로컬 계층에서 다른 로컬 계층으로 이동하더라도 개체 저장소에 대한 300TB의 읽기 및 300TB의 쓰기가 트리거되지 않음을 의미합니다.</block>
-  <block id="e8b5538a6bfc5ac5131c512eb7733524" category="paragraph">볼륨 이동 최적화 여부와 관계없이 ONTAP은 로컬 및 계층형 데이터의 위치, 스토리지 효율성, 권한, 사용 패턴 등에 대한 상당한 양의 메타데이터를 저장합니다. 메타데이터는 항상 로컬 계층에 저장되며 계층화되지 않습니다. 볼륨이 한 로컬 계층에서 다른 로컬 계층으로 이동되는 경우 이 정보도 대상 로컬 계층으로 이동해야 합니다.</block>
   <block id="e02d2ae03de9d493df2b6b2d2813d302" category="section-title">기간</block>
-  <block id="a36b89c75501c59aa92756fea927863b" category="paragraph">볼륨 이동에는 여전히 시간이 걸리며, 최적화된 볼륨 이동에는 계층화되지 않은 동일한 양의 데이터를 이동하는 데 걸리는 시간과 거의 같을 것으로 예상됩니다.</block>
-  <block id="f24cbbe169ffe6b09c83779179a475a2" category="paragraph">"처리량"이 보고된다는 것을 이해하는 것이 중요합니다. <block ref="d49fd39f851c023584dd0dc5f7165617" prefix=" " category="inline-code"></block> 명령은 클라우드 계층에서 이동하는 데이터 측면에서 처리량을 나타내는 것이 아니라 로컬에서 업데이트되는 볼륨 데이터를 나타냅니다.</block>
   <block id="36613d1ea1c454faed3af3843d3eb782" category="paragraph">시스템 관리자를 사용하여 FlexGroup 볼륨을 생성할 수 있습니다.</block>
   <block id="f106d6b8eedd7a8e6483ca635c73be68" category="list-text">*저장소 &gt; 볼륨*으로 이동하여 선택하십시오. <block ref="43f48618b8b157dea4d31396a9d4b622" category="inline-image-macro-rx" type="image"></block> .</block>
   <block id="78dd2514aed1997e282c99624fbf7059" category="list-text">*볼륨 추가* 창에서 볼륨 이름과 크기를 입력한 다음 *기타 옵션*을 선택합니다.</block>
@@ -43357,8 +43340,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a48a0937fc12df9714feb4f90708686d" category="cell">9.17.1 이상</block>
   <block id="13b477c27dd96755771d2ecdf914a837" category="cell">9.14.1 이상</block>
   <block id="b69791a38ba725881c6a2fc5ecab63cb" category="cell">9.13.1 이상</block>
-  <block id="7b9b304d8e5b60ec223a3d711f1c4efd" category="paragraph">예를 들어, 9.12.1에서 9.13.1로, 또는 9.13.1에서 9.17.1로 직접 업그레이드 경로를 사용할 수 있습니다.</block>
-  <block id="1e115964a8a46a221e6cb931cf9272cc" category="paragraph">예를 들어, 현재 9.8을 실행 중이고 9.16.1로 업그레이드하려는 경우 여러 단계로 구성된 업그레이드를 완료해야 합니다. 먼저 9.8에서 9.12.1로 업그레이드한 다음, 9.12.1에서 9.16.1로 업그레이드합니다.  이전 릴리스에서 업그레이드하려면 중간 업그레이드를 여러 번 거쳐야 하며, 3단계 이상이 필요할 수도 있습니다.</block>
   <block id="98b5b702f937abf9757ead0639de7ee1" category="list-text">9.17.1 -&gt; 9.18.1</block>
   <block id="0371f0a846848905a6c124b6e92aeb90" category="list-text">9.16.1 -&gt; 9.18.1</block>
   <block id="dc676c2d56b2a704b90a6cce8a76bd36" category="list-text">9.15.1 -&gt; 9.18.1</block>
@@ -49146,4 +49127,34 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6ed1d2e0b39b14c5eeb4c12d9bb25105" category="list-text"><block ref="5cd37b9fd1f58e8192a623dd36a207fb" prefix=" " category="inline-code"></block> 명령을 사용하여 이전에 미러링 해제된 오브젝트 저장소와 동일한 버킷을 사용하지 않는 대체 오브젝트 저장소를 생성합니다.</block>
   <block id="f8848a80fba9eb9b2d84041624cf6c4e" category="summary">security certificate generate-csr 명령어를 사용하여 인증서 서명 요청을 생성한 다음, 이를 인증 기관에 보내 서명된 디지털 인증서를 발급받으십시오.</block>
   <block id="aab0eda397efd966d6db85dcb98a1012" category="paragraph">다음 명령은 미국 캘리포니아주 서니베일에 위치한 회사의 IT 부서 소프트웨어 그룹에 대한 CSR을 생성합니다. 이 CSR에는 사용자 지정 공통 이름인 server1.companyname.com과 SHA256 해싱 기능으로 생성된 2,048비트 개인 키가 있습니다. SVM 담당 관리자의 이메일 주소는 \web@example.com입니다. 시스템은 출력에 CSR과 개인 키를 표시합니다.</block>
+  <block id="fbd12a2bc6f022534723b7f93f8cbfed" category="paragraph">2026년 11월</block>
+  <block id="3020f0cf9e8887140f906c1660d4d1d5" category="summary">볼륨을 중단 없이 FabricPool 지원 로컬 계층으로 이동하고, 클라우드 계층 데이터, 계층화 정책 및 최적화된 볼륨 이동이 이동에 미치는 영향을 알아보십시오.</block>
+  <block id="111d61f244fbf4496e32b88104aa5d01" category="paragraph"><block ref="7f1ebb6fb0ad236c93285e2e95f25dcd" category="inline-link-macro-rx"></block>은(는) 주로 하드웨어 수명 주기 관리, 클러스터 확장 또는 로드 밸런싱을 위해 볼륨을 중단 없이 한 ONTAP 로컬 계층(소스)에서 다른 계층(대상)으로 이동합니다. 볼륨을 FabricPool 지원 로컬 계층으로 이동할 때, 이동이 계층화된 데이터 및 계층화 정책에 미치는 영향을 이해하면 불필요한 네트워크 트래픽과 오브젝트 스토어 비용을 방지하는 데 도움이 됩니다.</block>
+  <block id="45403556ddfa9c5cdb2a495085539790" category="paragraph">볼륨 이동으로 인해 로컬 계층, 연결된 클라우드 계층 및 볼륨 계층화 정책에 발생하는 변경 사항은 FabricPool 기능에 큰 영향을 미칠 수 있습니다.</block>
+  <block id="560bcdd262531e3ea0ac81df2028f294" category="paragraph">볼륨 이동의 대상 로컬 계층에 연결된 클라우드 계층이 없는 경우, 클라우드 계층에 저장된 소스 볼륨의 데이터가 대상 로컬 계층에 기록됩니다.</block>
+  <block id="c4d13aaf8f9d1678fc97b1bddb6f9326" category="paragraph">ONTAP 9.8부터 볼륨에 <block ref="4b8901d49e979ec3294f6b6c6a486a8b" category="inline-link-macro-rx"></block>이(가) 활성화된 경우, FabricPool은 데이터가 대상 로컬 계층에 기록되는 즉시 해당 볼륨의 히트맵을 사용하여 콜드 데이터를 계층화 대기열에 추가합니다.</block>
+  <block id="ac41f0c0d329a58e5eea4d72b02bcb06" category="paragraph">ONTAP 9.7 이하 버전에서는 볼륨을 다른 로컬 티어로 이동하면 해당 로컬 티어의 블록 비활성 기간이 재설정됩니다. 예를 들어, 자동 볼륨 티어링 정책을 사용하는 볼륨이 있고 로컬 티어에 20일 동안 비활성 상태였지만 아직 티어링되지 않은 데이터가 있는 경우, 볼륨을 이동하면 해당 데이터의 비활성 기간이 0일로 재설정됩니다.</block>
+  <block id="b8674bb6eecd0f9f2204684a29145fdf" category="paragraph">ONTAP 9.6부터 볼륨 이동의 대상 로컬 티어가 소스 로컬 티어와 동일한 버킷을 사용하는 경우, 소스 볼륨의 해당 버킷에 저장된 데이터는 로컬 티어로 다시 이동하지 않습니다. 계층화된 데이터는 그대로 유지되며, 핫 데이터만 한 로컬 티어에서 다른 로컬 티어로 이동됩니다. 이러한 최적화된 볼륨 이동으로 네트워크 효율성이 크게 향상됩니다.</block>
+  <block id="61dd4bb7ee9fb13cf3b076dd0d295a70" category="paragraph">예를 들어, 300TB 최적화 볼륨 이동의 경우, 300TB의 콜드 데이터가 한 로컬 티어에서 다른 로컬 티어로 이동하더라도 오브젝트 스토어에 대한 300TB의 읽기 및 300TB의 쓰기 작업이 발생하지는 않습니다.</block>
+  <block id="263ae8992f503ca606a103b77b08f198" category="list-text">볼륨 이동 중 티어링 정책 변경</block>
+  <block id="011412e67109c5da33c3c1a075150081" category="list-text">QuickAssist Technology (QAT)를 지원하는 플랫폼에서 지원하지 않는 플랫폼으로 볼륨이 이동합니다.</block>
+  <block id="191b8a6d75f8fe3185fba11bd276bcf3" category="inline-link-macro">QAT가 볼륨 이동에 미치는 영향</block>
+  <block id="d08d3e2e9f903a2fb1aa836396ef365c" category="paragraph"><block ref="cddfbbec81c22276e1b01ab5e724ff50" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="6cd36cc69859465d9b1919ec6204a9e2" category="paragraph">볼륨 이동 대상 로컬 계층에 연결된 클라우드 계층이 있는 경우, 클라우드 계층에 저장된 소스 볼륨의 데이터가 먼저 대상 로컬 계층의 로컬 계층에 기록됩니다. 그런 다음, 볼륨의 계층화 정책에서 허용하는 경우, 해당 데이터는 대상 로컬 계층에 연결된 클라우드 계층에 기록됩니다.</block>
+  <block id="77fcfa4f1c09361063990e82cfe00fa3" category="paragraph">데이터를 먼저 로컬 계층에 기록하면 볼륨 이동 성능이 향상되고 전환 시간이 단축됩니다. 볼륨을 이동할 때 볼륨 계층화 정책을 지정하지 않으면 대상 볼륨은 소스 볼륨의 계층화 정책을 사용합니다.</block>
+  <block id="7438b9d16323447d73c6a2eca09896c7" category="paragraph">볼륨을 이동할 때 다른 계층화 정책을 지정하면 대상 볼륨이 지정된 계층화 정책으로 생성되고 볼륨 이동이 최적화되지 않습니다.</block>
+  <block id="b13a94fbb0f58328f2d1fd4856ee82ef" category="paragraph">볼륨 이동이 최적화되었는지 여부와 관계없이 ONTAP은 위치, 스토리지 효율성, 권한 및 사용 패턴 등을 포함하여 로컬 및 계층형 데이터 모두에 대한 상당량의 메타데이터를 저장합니다. 메타데이터는 항상 로컬 계층에 유지되며 계층화되지 않습니다. 볼륨을 한 로컬 계층에서 다른 로컬 계층으로 이동할 때 이 정보도 대상 로컬 계층으로 이동해야 합니다.</block>
+  <block id="64cc9b8c49a9e90aa8b19f7b8109e21e" category="paragraph">볼륨 이동은 완료하는 데 여전히 시간이 걸립니다. 최적화된 볼륨 이동은 동일한 양의 계층화되지 않은 데이터를 이동하는 것과 거의 동일한 시간이 소요될 것으로 예상됩니다.</block>
+  <block id="315c295a0bd8dd1d17e09bf517d72637" category="paragraph">해당 <block ref="d49fd39f851c023584dd0dc5f7165617" prefix=" " category="inline-code"></block> 명령이 보고하는 처리량은 클라우드 계층에서 이동된 데이터가 아닌 로컬에서 업데이트된 볼륨 데이터를 나타냅니다.</block>
+  <block id="24e1c919c266e4d458f66a707485800d" category="admonition">볼륨이 SVM DR 관계에 있는 경우 소스 볼륨과 대상 볼륨은 동일한 계층화 정책을 사용해야 합니다.</block>
+  <block id="1bb17a20e1255d265b522a4c171bb711" category="paragraph"><block ref="93e9fa0fcb7aba0522283d98215b5d88" prefix=" " category="inline-code"></block> SVM의<block ref="1236318b32ff887884462107aee24792" prefix=" " category="inline-code"></block>라는 볼륨을 FabricPool이 활성화된 로컬 계층인<block ref="66e28b10f51869bd35dbf6d03759ef49" prefix=" " category="inline-code"></block>으로 이동하는 예를 보여 줍니다.</block>
+  <block id="83b3dc487b634ec92f3ade8a267a392e" category="admonition">이 작업은 오브젝트 저장소 컨테이너의 모든 오브젝트를 영구적으로 삭제하며 되돌릴 수 없습니다. 오브젝트 삭제는 미러링 해제 작업이 완료된 후에도 백그라운드에서 계속 진행됩니다. 백그라운드 삭제 프로세스가 완료될 때까지 컨테이너를 재사용하거나 다른 용도로 사용하지 마십시오.</block>
+  <block id="a4598caa75c14b028e0610d87f14599b" category="paragraph">예를 들어, 9.17.1에서 9.18.1로 또는 9.15.1에서 9.19.1로 직접 업그레이드 경로를 사용할 수 있습니다.</block>
+  <block id="0512832a2d2979aca79795ff9e488293" category="paragraph">예를 들어, 현재 9.14.1을 실행 중이고 9.19.1로 업그레이드하려는 경우 다단계 업그레이드를 완료해야 합니다. 먼저 9.14.1에서 9.18.1로 업그레이드한 다음 9.18.1에서 9.19.1로 업그레이드해야 합니다. 이전 릴리스에서 업그레이드하는 경우 여러 번의 중간 업그레이드를 포함하여 3개 이상의 단계가 필요할 수 있습니다.</block>
+  <block id="e0ca3e678452cdc055355719edf923e3" category="paragraph">예를 들어, 시스템이 ONTAP 9.14.1P9를 실행 중이고 9.19.1로 업그레이드하려는 경우, 먼저 최신 9.14.1 패치 릴리스로 업그레이드한 다음 9.14.1에서 9.19.1로의 업그레이드 경로를 따라야 합니다.</block>
+  <block id="6f79c410a1e0e23029e9c34a5bf3a854" category="list-text">9.19.1 -&gt; 9.20.1</block>
+  <block id="10a833450b4d18f2abe53dba65184a06" category="list-text">9.18.1 -&gt; 9.20.1</block>
+  <block id="a26e4204ec8290ac2fc79961eb176ec8" category="list-text">9.17.1 -&gt; 9.20.1</block>
+  <block id="9df7bb0d4f4a5c6104b95d6bb9faf265" category="list-text">9.16.1 -&gt; 9.20.1</block>
+  <block id="d3ceda18c9d46516729fefa717497b8d" category="list-text">9.17.1-&gt;9.20.1</block>
 </blocks>
