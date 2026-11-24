@@ -212,13 +212,6 @@ FlexGroup 볼륨
  a| 
 FlexGroup 볼륨이 지원됩니다. 대상 애그리게이트는 소스 애그리게이트와 볼륨 레벨 또는 애그리게이트 레벨에서 동일한 유형이어야 합니다. ONTAP 9.5부터 FlexGroup 볼륨을 제자리에서 다시 입력하다
 
-
-
- a| 
-7-Mode 전환
- a| 
-7-Mode 전환 툴 3.3부터는 7-Mode 전환 툴 CLI를 사용하여, 클러스터링된 시스템의 NVE 지원 대상 볼륨으로의 복사본 기반 전환을 수행할 수 있습니다.
-
 |===
 .관련 정보
 * link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/FAQ%3A_NetApp_Volume_Encryption_and_NetApp_Aggregate_Encryption["FAQ - NetApp 볼륨 암호화 및 NetApp 애그리게이트 암호화"^]

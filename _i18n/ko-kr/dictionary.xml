@@ -283,8 +283,6 @@
   <block id="269ba89aa123249c9974a41985f6f50d" category="paragraph">이 옵션은 지정된 레벨 값으로 전송에 사용되는 덤프 레벨을 설정합니다. 유효한 값은 0, 1, 9, 0은 전체 전송을 나타내고 1은 9, 0은 증분 전송을 지정합니다. 기본값은 0입니다.</block>
   <block id="079566ebb51bfd0b7e6b40ab6b09f50b" category="paragraph">'-d'</block>
   <block id="cdf584bb1dff11693078fbaa171e49f4" category="paragraph">이 옵션을 사용하면 ndmpcopy 디버그 로그 메시지를 생성할 수 있습니다. ndmpcopy 디버그 로그 파일은 '/mroot/etc/log' 루트 볼륨에 있습니다. ndmpcopy 디버그 로그 파일 이름은 ndmpcopy.yyyymmdd 형식으로 되어 있습니다.</block>
-  <block id="5dc9381893a40ede2bf975c5b13c2bfa" category="paragraph">"-f"</block>
-  <block id="3b8a10101a73a62d84ee57e00dc11ad5" category="paragraph">이 옵션은 강제 모드를 활성화합니다. 이 모드에서는 7-Mode 볼륨의 루트에 있는 '/etc' 디렉토리에서 시스템 파일을 덮어쓸 수 있습니다.</block>
   <block id="f887937cb5b85ec66d23995ebc5632fd" category="paragraph">'-h'</block>
   <block id="ebfc6aff65cfd3c50a0424106e2f9cd6" category="paragraph">이 옵션은 도움말 메시지를 인쇄합니다.</block>
   <block id="23fbd6b3007c2c5d8d17fd0fbc19f102" category="paragraph">'-p'</block>
@@ -345,8 +343,6 @@
   <block id="7b3c6a2d089eb1b6f8959e7e61a50c07" category="list-text">LUN을 클릭합니다</block>
   <block id="743a3b9466067c6ee0a404b3a5d2ace1" category="list-text">LUN을 LUN으로 유지하려면 볼륨 레벨 또는 qtree 레벨로 복원해야 합니다.</block>
   <block id="6394d4dc354b3f4c915afa052b9df9dc" category="paragraph">디렉터리에 복원되면 유효한 메타데이터가 없기 때문에 파일로 복원됩니다.</block>
-  <block id="982d7337e3c4fa105f96fb0310a04e58" category="list-text">7-Mode LUN은 ONTAP 볼륨에서 LUN으로 복구됩니다.</block>
-  <block id="0f32fc1a52e8d405d9c92be2cb53edf1" category="list-text">7-Mode 볼륨을 ONTAP 볼륨으로 복원할 수 있습니다.</block>
   <block id="8f2581b18ea32dbd13852f7535633239" category="list-text">대상 볼륨에 복원된 VM 정렬 파일은 대상 볼륨의 VM 정렬 속성을 상속합니다.</block>
   <block id="23851943aa8d75b28503c0384838636c" category="list-text">복구 작업의 대상 볼륨에 필수 잠금 또는 권장 잠금이 있는 파일이 있을 수 있습니다.</block>
   <block id="d59402d3ad8c4ca63ccd0c6e99e88838" category="paragraph">이러한 대상 볼륨에 대한 복구 작업을 수행하는 동안 덤프 엔진은 이러한 잠금을 무시합니다.</block>
@@ -1027,15 +1023,12 @@
   <block id="4311c0caa3bd5d1eff6f63a1143d0c70" category="list-text">LUN 및 LUN 복제</block>
   <block id="937890d87b169af318d829a57dad399e" category="paragraph">전체 LUN 개체를 백업할 수 있지만 LUN 개체 내에서 단일 파일을 백업할 수는 없습니다. 마찬가지로, LUN 내에 단일 파일이 아니라 전체 LUN 개체를 복원할 수 있습니다.</block>
   <block id="c93d8996c09e9b0523f2326386672ab0" category="paragraph">덤프 엔진은 LUN 클론을 독립 LUN으로 백업합니다.</block>
-  <block id="9e66a5a7ac296adab32cfb29b699c023" category="list-text">VM 정렬 파일</block>
-  <block id="fda1796996d94c05cd2113e0153652c9" category="paragraph">스냅샷 지원 LUN 클론이 7-Mode에서 작동하는 Data ONTAP에서 ONTAP로 전환되면 일관성 없는 LUN이 됩니다. 덤프 엔진이 일관성 없는 LUN을 백업하지 않습니다.</block>
   <block id="7b3952e889e19b8ce879b63da8efd0bc" category="paragraph">볼륨에 데이터를 복구할 때는 복구 중인 LUN에서 클라이언트 입출력이 제한됩니다. LUN 제한은 덤프 복원 작업이 완료된 경우에만 제거됩니다. 마찬가지로, SnapMirror 단일 파일 또는 LUN 복원 작업 중에 클라이언트 I/O는 복원 중인 파일 및 LUN 모두에서 제한됩니다. 이 제한은 단일 파일 또는 LUN 복원 작업이 완료된 경우에만 제거됩니다. 덤프 복원 또는 SnapMirror 단일 파일 또는 LUN 복원 작업이 수행되고 있는 볼륨에서 덤프 백업을 수행하는 경우 클라이언트 I/O 제한이 있는 파일 또는 LUN은 백업에 포함되지 않습니다. 이러한 파일 또는 LUN은 클라이언트 입출력 제한이 제거된 경우 이후의 백업 작업에 포함됩니다.</block>
   <block id="7acee361d87c06a486c0fc7401796ca3" category="paragraph">SnapVault 보조 볼륨 또는 볼륨 SnapMirror 대상을 테이프에 백업하는 경우 볼륨의 데이터만 백업됩니다. 연결된 메타데이터는 백업되지 않습니다. 따라서 볼륨을 복원하려고 하면 해당 볼륨의 데이터만 복원됩니다. volume SnapMirror 관계에 대한 정보는 백업에서 제공되지 않으므로 복원되지 않습니다.</block>
   <block id="d0219fc03daecc247def36e87d4eae0e" category="paragraph">Windows NT 권한만 있는 파일을 덤프하고 UNIX 스타일 qtree 또는 볼륨으로 복원하면 해당 qtree 또는 볼륨에 대한 기본 UNIX 권한이 파일에 부여됩니다.</block>
   <block id="2e1612e105f3f63d2891175b999bb52b" category="paragraph">UNIX 사용 권한만 있는 파일을 덤프하고 NTFS 스타일 qtree 또는 볼륨으로 복원하면 해당 qtree 또는 볼륨에 대한 기본 Windows 사용 권한이 파일에 부여됩니다.</block>
   <block id="5c415543cd881d3bad98fdc7e178943d" category="paragraph">다른 덤프 및 복원으로 사용 권한이 보존됩니다.</block>
   <block id="da5ca6ae1de018f91fb173975dfb47fa" category="inline-link-macro">논리적 스토리지 관리</block>
-  <block id="bcd8ed848389097040a30cfceafbbd44" category="paragraph">VM 정렬 파일과 'VM 정렬 섹터' 옵션을 백업할 수 있습니다. VM 정렬 파일에 대한 자세한 내용은 을 참조하십시오 <block ref="a15ba1fc5a56db86588fad5680ccb96d" category="inline-link-macro-rx"></block>.</block>
   <block id="2f914a58d4b3e04648a9aeb841a2dc07" category="summary">덤프 백업은 미리 정의된 프로세스를 사용하여 파일 시스템 데이터를 디스크에서 테이프로 씁니다. 볼륨, qtree 또는 전체 볼륨이나 qtree가 아닌 하위 트리를 백업할 수 있습니다.</block>
   <block id="824b5050bd010e74dc687c440748cd61" category="doc">덤프 백업의 작동 방식</block>
   <block id="2d349d89b5d8b1b5c73bcb0d411962ad" category="paragraph">다음 표에서는 ONTAP에서 덤프 경로로 표시된 개체를 백업하는 데 사용하는 프로세스를 설명합니다.</block>
@@ -1737,16 +1730,7 @@
   <block id="7193b8517d65a51d49786823f558f7cb" category="list-text">호스트를 LUN에 연결하고 필요에 따라 LUN의 컨텐츠를 액세스합니다.</block>
   <block id="1818de7aeb9aa2ffb0cd2df5937c9624" category="paragraph">LUN은 읽기/쓰기이며 원래 LUN 대신 사용할 수 있습니다. LUN 일련 번호가 다르므로 호스트는 이 일련 번호를 원본과 다른 LUN으로 해석합니다.</block>
   <block id="720453d1bfe3b29e95358be889430f9a" category="list-text">호스트에서 복제 프로그램을 사용하여 LUN 컨텐츠를 원래 LUN에 다시 복제합니다.</block>
-  <block id="94fdda03b030522c1ff868371963d5c4" category="summary">SAN 환경에서는 7-Mode 볼륨을 ONTAP로 전환하는 동안 서비스 중단이 필요합니다. 전환을 완료하려면 호스트를 종료해야 합니다. 전환 후에는 ONTAP에서 데이터 제공을 시작하기 전에 호스트 구성을 업데이트해야 합니다.</block>
-  <block id="2d8a06c5979e84c47a41b22e2f381728" category="paragraph">SAN 환경에서는 7-Mode 볼륨을 ONTAP로 전환하는 동안 서비스 중단이 필요합니다. 전환을 완료하려면 호스트를 종료해야 합니다. 전환 후에는 ONTAP에서 데이터 제공을 시작하기 전에 호스트 구성을 업데이트해야 합니다</block>
-  <block id="7c444bb5c607c1e2e2b7e50e52207db5" category="paragraph">호스트를 종료하고 전환을 완료할 수 있는 유지 관리 기간을 예약해야 합니다.</block>
   <block id="357547431c32be12f3196cc5fa113586" category="section-title">전환된 LUN의 기능 및 제한</block>
-  <block id="5abfcddf38c270fd73c8cc526a63fd70" category="paragraph">7-Mode에서 운영되는 Data ONTAP에서 ONTAP로 전환된 LUN에는 LUN 관리 방식에 영향을 주는 특정 기능과 제한 사항이 있습니다.</block>
-  <block id="3ed7d27b92f2cb595143be10bd39cfb2" category="paragraph">전환된 LUN에서 다음을 수행할 수 있습니다.</block>
-  <block id="f7b0283bdfcd451ce4786c2a13ba6227" category="list-text">'lun show' 명령을 사용하여 LUN을 확인합니다</block>
-  <block id="22a0f2edf0530ce3a7e9ce86ae9bd645" category="list-text">'transition 7-mode show' 명령을 사용하여 7-Mode 볼륨에서 전환된 LUN의 인벤토리를 확인합니다</block>
-  <block id="b4831fa9ca5bb29031341452f7ae0637" category="paragraph">전환된 LUN에서는 다음을 수행할 수 없습니다.</block>
-  <block id="140a44e7a81487c16050bc9e2f850961" category="inline-link-macro">복사 기반 전환</block>
   <block id="9c3181cdfd164f5a6f5bd1206a31cef2" category="summary">ONTAP 9.1부터 기존 iSCSI 보안 명령이 IP 주소 범위 또는 여러 IP 주소를 사용할 수 있도록 향상되었습니다.</block>
   <block id="6208f1e321705f8b4a94bebf55933872" category="doc">iSCSI 엔드포인트 격리</block>
   <block id="18a8ea684fa71a77bb5705a579c93142" category="paragraph">모든 iSCSI 초기자는 세션 또는 대상과의 연결을 설정할 때 발신 IP 주소를 제공해야 합니다. 이 새로운 기능은 원본 IP 주소가 지원되지 않거나 알려지지 않은 경우 이니시에이터가 클러스터에 로그인하지 못하도록 하여 고유한 식별 체계를 제공합니다. 지원되지 않거나 알 수 없는 IP 주소에서 시작된 모든 이니시에이터는 iSCSI 세션 계층에서 로그인이 거부되어 이니시에이터가 클러스터 내의 LUN 또는 볼륨에 액세스하지 못하게 됩니다.</block>
@@ -3882,7 +3866,6 @@
   <block id="c3ffc8e078b339d5886703a912ed9b58" category="section-title">지원 세부 정보</block>
   <block id="8db918ed0f3814eca3898085fa4c511b" category="cell">리소스 또는 기능</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="paragraph">SnapMirror를 참조하십시오</block>
-  <block id="231afe47f3f37d3808096b36c28b4ded" category="paragraph">요소</block>
   <block id="eec89088ee408b80387155272b113256" category="paragraph">네트워크</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="paragraph">SnapLock</block>
   <block id="7e4716fcadce4a1adb7676534312a764" category="paragraph">SVM DR</block>
@@ -4202,7 +4185,6 @@
   <block id="f3f512551dec384f33c956f12f75885d" category="summary">ONTAP S3를 사용하여 원격 FabricPool 용량(클라우드) 계층화를 활성화하는 경우 인터클러스터 LIF를 구성해야 합니다. 데이터 네트워크와 공유하는 포트에 대한 인터클러스터 LIF를 구성할 수 있습니다. 이렇게 하면 인터클러스터 네트워킹에 필요한 포트 수가 줄어듭니다.</block>
   <block id="3301483c1bfb5a3d7e0425017e23608a" category="doc">원격 FabricPool 계층화에 대한 인터클러스터 LIF를 생성합니다</block>
   <block id="db5146a029b17e49f578d29634864d88" category="list-text">LIF 서비스 정책이 이미 존재해야 합니다.</block>
-  <block id="ee6a5f6bc8e3d8eb120ad5400550fb7d" category="paragraph">인터클러스터 LIF는 로컬 Fabric 풀 계층화나 외부 S3 애플리케이션을 제공하기 위해 필요하지 않습니다.</block>
   <block id="e998af28064b6e6dffe6eb4e9e215c22" category="list-text">클러스터의 포트 나열:</block>
   <block id="607c252016eb2a63263f0d64ac6d9373" category="paragraph">다음 예에서는 "cluster01"의 네트워크 포트를 보여줍니다.</block>
   <block id="79535297ba63fe49ca425eaa96a5e72f" category="list-text">시스템 SVM에 대한 인터클러스터 LIF 생성:</block>
@@ -9455,7 +9437,6 @@
   <block id="58c148ec4b77bce720aa20d4800dc8db" category="section-title">FabricPool에서 지원하지 않는 기능 또는 기능입니다</block>
   <block id="4c7e9324e6ff9ad408ac1ffa1cf2167c" category="list-text">WORM 지원 및 오브젝트 버전 관리가 활성화된 오브젝트 저장소</block>
   <block id="4530021b8ca50b33b34f0e35b0dcd03e" category="list-text">오브젝트 저장소 버킷에 적용되는 ILM(정보 라이프사이클 관리) 정책</block>
-  <block id="5d4b945fa2ec2f6f92db4a1da336caa6" category="list-text">ONTAP CLI 명령 또는 7-Mode 전환 툴을 사용하여 7-Mode 데이터 전환</block>
   <block id="d7ea29e2e5cd4342225b4ecb16a26a35" category="list-text">RAID SyncMirror(MetroCluster 구성 제외</block>
   <block id="d76cec6499d29be11f4d777aec6c771f" category="list-text">ONTAP 9.7 이하 릴리즈를 사용할 때 SnapLock 볼륨</block>
   <block id="c58286417a337ad3fe216a7969263c6c" category="list-text">FabricPool 지원 애그리게이트용 SMTape를 사용한 테이프 백업</block>
@@ -10535,7 +10516,6 @@
   <block id="af6381cde237d5ac406fbb37ca777727" category="cell">용적 조건</block>
   <block id="ac5948fac9817150328d6d7c06cf1abf" category="paragraph">인라인 볼륨 간 중복제거</block>
   <block id="58cdc92d0dfd16b6a7a6bc976b2efdc5" category="paragraph">인라인 압축</block>
-  <block id="e1353499826e4be3f4e8191fc6326882" category="paragraph">ONTAP 7-Mode를 clustered ONTAP으로 전환합니다</block>
   <block id="ada84bb9596539ed9c2bc3cc2b157b35" category="paragraph">일반 프로비저닝된 볼륨</block>
   <block id="88203c53ec4a5f4140a50a1002f315f1" category="paragraph">암호화된 볼륨</block>
   <block id="003eb21aa2a591f9e281c0244c748a26" category="paragraph">하나 이상의 인라인 스토리지 효율성 기능에는 다음 예외가 적용됩니다.</block>
@@ -11804,8 +11784,6 @@
   <block id="2c1653a98165dd539016c72958ad97d3" category="list-text">SVM 복제의 경우, 볼륨 암호화를 지원하는 노드가 타겟에 포함되지 않은 경우, 복제가 성공하지만 타겟 볼륨이 암호화되지 않은 한 타겟 볼륨이 자동으로 암호화됩니다.</block>
   <block id="323d45dc50d7fe3e73f1520b8bf9d83b" category="list-text">MetroCluster 구성의 경우 각 클러스터는 구성된 키 서버에서 외부 키 관리 키를 가져옵니다. OKM 키는 구성 복제 서비스에 의해 파트너 사이트에 복제됩니다.</block>
   <block id="9c0408c775a2b61052a2e700a89f396f" category="paragraph">규정 준수</block>
-  <block id="dd97a9777d404405f08770a3de458418" category="paragraph">7-Mode 전환</block>
-  <block id="7c869ad819fd8ca9dbe0531e2e26f2a5" category="paragraph">7-Mode 전환 툴 3.3부터는 7-Mode 전환 툴 CLI를 사용하여, 클러스터링된 시스템의 NVE 지원 대상 볼륨으로의 복사본 기반 전환을 수행할 수 있습니다.</block>
   <block id="ef56311814c26ec12191c92618429e37" category="summary">NetApp은 스토리지 미디어가 용도 변경, 반환, 잘못된 위치 또는 도난된 경우 유휴 데이터를 읽을 수 없도록 소프트웨어 및 하드웨어 기반 암호화 기술을 모두 제공합니다.</block>
   <block id="0f71e3018a3fb1365c9b8557423b58d0" category="doc">ONTAP 9.6 이상에서 온보드 키 관리를 활성화합니다</block>
   <block id="4bc27897ebf836a88f71efacd7add187" category="paragraph">Onboard Key Manager를 사용하여 FIPS 드라이브 또는 SED에 대한 클러스터 노드를 인증할 수 있습니다. Onboard Key Manager는 데이터와 동일한 스토리지 시스템의 노드에 인증 키를 제공하는 기본 제공 도구입니다. Onboard Key Manager는 FIPS-140-2 레벨 1을 준수합니다.</block>
@@ -12156,7 +12134,6 @@
   <block id="45f6ea8ed5d75635a07641d5d6453b10" category="paragraph">볼륨이 다른 사이트에 복제되면 해당 VCC도 복제됩니다. 예를 들어, 사이트 A에서 사이트 B로 볼륨 전환이 발생하면 사이트 A의 SCC가 사이트 A가 오프라인이 되면 사이트 B에서 VCC가 계속 업데이트됩니다.</block>
   <block id="e7a03abb7f9d2163979345b0e8878873" category="paragraph">사이트 A가 다시 온라인 상태가 되고 볼륨 스위치백을 수행하면 볼륨의 VCC가 계속 업데이트되는 동안 사이트 A SCC 클록이 다시 시작됩니다. 스위치오버 및 스위치백 작업과 관계없이 VCC가 지속적으로 업데이트되기 때문에 파일 보존 시간은 SCC 클럭에 의존하지 않고 늘어나지 않습니다.</block>
   <block id="c4f90d7101aad23e42a468081fbd66fe" category="paragraph">SnapLock는 대부분의 규정 준수 요구사항을 충족하는 데이터 보호 방법을 지원합니다.</block>
-  <block id="9653cf98bd0bafa030e219a7067934ce" category="section-title">7-Mode 전환</block>
   <block id="415366543fc3cef079fe8b44fc24b80a" category="paragraph">* 법적 고지 사항: * NetApp은 자체 암호화 드라이브 또는 볼륨의 SnapLock 보호 WORM 파일이 인증 키가 손실되거나 실패한 인증 시도 횟수가 지정된 제한을 초과하여 드라이브가 영구적으로 잠기는 경우 이를 복구할 수 있다고 보장할 수 없습니다. 인증 실패에 대한 책임은 사용자에게 있습니다.</block>
   <block id="3423388858935d74c9879658824ec34d" category="doc">WORM 추가 가능 파일을 생성합니다</block>
   <block id="f47c06b21a29a702f3663d6363eec553" category="paragraph">WORM 추가 가능 파일은 로그 항목과 같이 점진적으로 기록된 데이터를 유지합니다. 적합한 명령 또는 프로그램을 사용하여 WORM 추가 가능 파일을 생성하거나 SnapLock_VOLUME append mode_feature를 사용하여 기본적으로 WORM 추가 가능 파일을 생성할 수 있습니다.</block>
@@ -16023,25 +16000,6 @@
   <block id="5952ee352bab0d9975206c42c84b8d2e" category="paragraph">'vserver nfs show -vserver_vserver_name_'</block>
   <block id="c141fa1d7cecec25085c35e0a488d647" category="paragraph">다음 명령을 실행하면 NFSv3 및 NFSv4.0이 설정된 VS1 이라는 SVM에 NFS 서버가 생성됩니다.</block>
   <block id="3e80fa67755d6436fa2c2ca256b1230d" category="paragraph">다음 명령을 실행하면 이름이 VS1 인 새 NFS 서버의 상태와 구성 값이 검증됩니다.</block>
-  <block id="a9149a110701a522b66804b5f6624a30" category="summary">ONTAP의 내보내기는 7-Mode 환경에 있는 내보내기와 다르게 정의 및 사용됩니다.</block>
-  <block id="8d7c979e3ddf26e45ba1ad610b7bf5b8" category="cell">차이 영역</block>
-  <block id="407d240765867fcde050385db483b5d0" category="cell">향상됩니다</block>
-  <block id="249cfa26125860e68805f50e92b36a11" category="paragraph">내보내기 정의 방법</block>
-  <block id="f081088925822b1bbd4e9f76ec5d9fa9" category="paragraph">내보내기는 '/etc/exports' 파일에 정의되어 있습니다.</block>
-  <block id="3598a1f13d3ea3c8b7e2211cf5464062" category="paragraph">내보내기는 SVM 내에서 엑스포트 정책을 생성하여 정의합니다. SVM에는 둘 이상의 엑스포트 정책이 포함될 수 있습니다.</block>
-  <block id="671f3260187c544429353d647a23dd49" category="paragraph">수출 범위</block>
-  <block id="6cb303b76860ce1d17a80b2b9c5a7b8c" category="list-text">내보내기는 지정된 파일 경로 또는 qtree에 적용됩니다.</block>
-  <block id="79af29735def5d26c87d5972d291b694" category="list-text">각 파일 경로 또는 qtree에 대해 '/etc/exports'에 별도의 항목을 생성해야 합니다.</block>
-  <block id="cb0bcf3da7ebba2af81a2f0caa161927" category="list-text">내보내기는 '/etc/exports' 파일에 정의되어 있는 경우에만 지속적입니다.</block>
-  <block id="477bb3fc2a29ccf61a2463ad57f49f7b" category="list-text">엑스포트 정책은 볼륨에 포함된 모든 파일 경로 및 qtree를 포함하여 전체 볼륨에 적용됩니다.</block>
-  <block id="f88617fdc9907150e7f899d6eea83485" category="list-text">원하는 경우 둘 이상의 볼륨에 내보내기 정책을 적용할 수 있습니다.</block>
-  <block id="8cd39c3ebf0c3f5951fce525f0a5bd05" category="list-text">모든 내보내기 정책은 시스템을 다시 시작할 때마다 유지됩니다.</block>
-  <block id="a9d16ee4523e85982a677c2bcfde1ba1" category="paragraph">펜싱(동일한 리소스에 대한 특정 클라이언트에 대해 다른 액세스 지정)</block>
-  <block id="4c008e771156a24aa1a8e4e02b028465" category="paragraph">내보낸 단일 리소스에 대해 특정 클라이언트에 서로 다른 액세스 권한을 제공하려면 각 클라이언트와 허용된 액세스 권한을 '/etc/exports' 파일에 나열해야 합니다.</block>
-  <block id="784b11c929a79a94de519df66fe3627e" category="paragraph">엑스포트 정책은 다양한 개별 엑스포트 규칙으로 구성됩니다. 각 내보내기 규칙은 리소스에 대한 특정 액세스 권한을 정의하고 해당 권한이 있는 클라이언트를 나열합니다. 특정 클라이언트에 대해 다른 액세스를 지정하려면 각 특정 액세스 권한 집합에 대한 내보내기 규칙을 만들고 해당 권한이 있는 클라이언트를 나열한 다음 엑스포트 정책에 규칙을 추가해야 합니다.</block>
-  <block id="defe146c4a92d2a414f8f91bbe164b37" category="paragraph">이름 앨리어싱</block>
-  <block id="d1a4e67f23b84e7024b8ffdce2c323a1" category="paragraph">내보내기를 정의할 때 파일 경로 이름과 내보내기 이름을 다르게 지정할 수 있습니다. '/etc/exports' 파일에서 해당 내보내기를 정의할 때 '-actual' 매개변수를 사용해야 합니다.</block>
-  <block id="b90ead554b21f9e9dd7de92cb0c58467" category="paragraph">기본적으로 볼륨은 해당 볼륨 이름으로 마운트됩니다. 볼륨의 접합 경로 이름을 사용자 지정하려면 마운트를 해제하고 이름을 바꾼 다음 다시 마운트해야 합니다.</block>
   <block id="b53ed9015fe302332e8a6f513de2d8f9" category="summary">vserver services name-service unix-group create 명령을 사용하여 SVM에 로컬인 UNIX 그룹을 생성할 수 있습니다. 로컬 UNIX 그룹은 로컬 UNIX 사용자와 함께 사용됩니다.</block>
   <block id="7e7cae3eb1faaf86eda7d230611b54b1" category="doc">로컬 UNIX 그룹을 생성합니다</block>
   <block id="fb1c4a98f6a9d9abf9fc882758f47867" category="paragraph">"vserver services name-service unix-group create" 명령을 사용하여 SVM에 로컬인 UNIX 그룹을 생성할 수 있습니다. 로컬 UNIX 그룹은 로컬 UNIX 사용자와 함께 사용됩니다.</block>
@@ -16676,47 +16634,6 @@
   <block id="2488510a98524a836be81b886f70bc15" category="paragraph">'vserver services name-service unix-group show -vserver_vserver__name'</block>
   <block id="9a21a999d77a347d6974f002cb387a44" category="paragraph">SVM에는 다음과 같은 UNIX 그룹이 구성되어 있어야 합니다.</block>
   <block id="a7418eea52bc2498cb6b32a79a87a07f" category="paragraph">이러한 값이 표시되지 않으면 'vserver services name-service unix-group modify' 명령을 사용하여 해당 값을 업데이트할 수 있습니다.</block>
-  <block id="1ae885278e0d2aa97d611c5894fcd250" category="summary">내보내기 정책의 예를 검토하여 ONTAP에서 내보내기 정책의 작동 방식을 보다 잘 이해할 수 있습니다.</block>
-  <block id="0fd8b69197930c95d6eb3d5bca9ed5cb" category="section-title">7-Mode 내보내기의 ONTAP 구현 예</block>
-  <block id="d35d05b789c7ac57b55a1061a6968ec2" category="paragraph">다음 예에서는 '/etc/export' 파일에 나타나는 7-Mode 내보내기를 보여 줍니다.</block>
-  <block id="71c6eee162ca1f885d72198b787f3393" category="paragraph">이 내보내기를 클러스터된 내보내기 정책으로 복제하려면 세 개의 엑스포트 규칙을 사용하여 엑스포트 정책을 생성한 다음 볼륨 vol1에 엑스포트 정책을 할당해야 합니다.</block>
-  <block id="ab7a485ebe75b6dd7243ad719f23c7de" category="cell">규칙</block>
-  <block id="f443d346dd3545d4aed93c1949d1a969" category="paragraph">규칙 1</block>
-  <block id="8f949ddc82f28ddd1c26f7929fef6a4a" category="paragraph">'-clientmatch'(클라이언트 사양)</block>
-  <block id="cadb387dd42997abaf7693ad94dc1368" category="paragraph">'@readonly_netgroup'</block>
-  <block id="2c3cdeddaf5e674b83aeb1068d9b5945" category="paragraph">'-ruleindex'(규칙 목록에 있는 내보내기 규칙의 위치)</block>
-  <block id="2fc042d3545f5ad7df1999c9e5486176" category="paragraph">"1"</block>
-  <block id="f3e3813ea298de8da93550328b083f0f" category="paragraph">'-rorule'(읽기 전용 액세스 허용)</block>
-  <block id="97ad8223e532762f76eacb3d58ae44f6" category="paragraph">Sys(AUTH_SYS로 인증받은 클라이언트)</block>
-  <block id="abfa4fa511efea020dddfa36455d3a03" category="paragraph">'-rwrule'(읽기-쓰기 액세스 허용)</block>
-  <block id="03bd2b1605178b5340b79397c1fc84e1" category="paragraph">'-superuser'(슈퍼유저 액세스 허용)</block>
-  <block id="c77e6814afbc098100ccdb394a72535e" category="paragraph">'없음'(root_squashed_to anon)</block>
-  <block id="10189fb4e046e5aba21ae08a2eb852bf" category="paragraph">규칙 2</block>
-  <block id="1ee828388ddaf54db3ac68ef636f4199" category="paragraph">'@rootaccess_netgroup'</block>
-  <block id="01d5574b77a9ca8dff8f5bed0d361fa0" category="paragraph">2</block>
-  <block id="872c8fae68f9bd1ad1271bbfd4120ea2" category="paragraph">규칙 3</block>
-  <block id="77997a1167e4aeb1ba9685a2b7e84857" category="paragraph">'@readwrite_netgroup1, @readwrite_netgroup2'</block>
-  <block id="93316c3c7d112b8d1bea788ff99da1e6" category="list-text">exp_vol1이라는 엑스포트 정책을 생성합니다.</block>
-  <block id="3f4465696220c3a3e18d884d40aa664d" category="paragraph">'vserver export-policy create-vserver NewSVM-policyname exp_vol1'</block>
-  <block id="c1d428cd4c83df195632967ae97a8fc2" category="list-text">기본 명령에 다음 매개 변수를 사용하여 세 개의 규칙을 생성합니다.</block>
-  <block id="635599316bf228f56be6f5e4ac345d60" category="list-text">기본 명령: + 'vserver export-policy rule create-vserver NewSVM-policyname exp_vol1'</block>
-  <block id="3e33636edf1aef46ecf61840711895e0" category="list-text">규칙 매개 변수: + ``clientmatch@readonly_netgroup-ruleindex 1-protocol nfs-rorule sys-rwrule never-superuser none'+'-clientmatch@rootaccess_netgroup-rindex 2-protocol nfs-rorule_rule_rule_rule -clientmatch@readwrite_wrule_wrule -rrulule_nfs -rrrrrrule_none</block>
-  <block id="cac2ae6de9f83509583c5f1032b208dd" category="list-text">볼륨 vol1에 정책을 할당합니다.</block>
-  <block id="bafcac274d77d9404af5c24c913cccc3" category="paragraph">'volume modify -vserver NewSVM-volume vol1-policy exp_vol1'</block>
-  <block id="5235430d4dda15a88bf3a0e1b3c579ba" category="section-title">7-Mode 엑스포트 통합의 예</block>
-  <block id="0f513c4586d7201d54499212c9b48ea2" category="paragraph">다음 예에서는 10개의 qtree당 한 줄이 포함된 7-Mode '/etc/export' 파일을 보여 줍니다.</block>
-  <block id="5c80457aba9d50409d62c863d1961208" category="paragraph">ONTAP에서는 각 qtree에 대해 -clientmatch host1519s 등의 규칙이 있는 정책 또는 -clientmatch host2057s 등의 규칙이 있는 정책 중 하나가 필요합니다.</block>
-  <block id="a1d72239bcac2bf7e1c0adb45a8a1d41" category="list-text">exp_vol1q1 및 exp_vol1q2라는 두 개의 엑스포트 정책을 생성합니다.</block>
-  <block id="9f106d485b265e6df237f7260306f0ed" category="list-text">'vserver export-policy create-vserver NewSVM-policyname exp_vol1q1'</block>
-  <block id="b34c6ef99e6affb706125bbc4fd5763a" category="list-text">'vserver export-policy create-vserver NewSVM-policyname exp_vol1q2'</block>
-  <block id="92642126f64e195119b53080bcc6ff23" category="list-text">각 정책에 대한 규칙 생성:</block>
-  <block id="dec63fa6230abb1a4575f25c02b8f60a" category="list-text">'vserver export-policy rule create-vserver newSVM-policyname exp_vol1q1-clientmatch host1519s-rwrule sys-superuser sys'</block>
-  <block id="02009c89aaa830e5134bcec733a25c1a" category="list-text">'vserver export-policy rule create-vserver newSVM-policyname exp_vol1q2-clientmatch host1519s-rwrule sys-superuser sys'</block>
-  <block id="22aafa7641c9ea907ecb756d12da3d2e" category="list-text">qtree에 정책을 적용합니다.</block>
-  <block id="c992ffa430eacd5ba12e50f1288b0a61" category="list-text">'볼륨 qtree modify -vserver NewSVM-qtree-path /vol/vol1/q_1472-export-policy exp_vol1q1'</block>
-  <block id="aa4c801eb05fc770cfa6116370901085" category="list-text">[다음 4 qtree...]</block>
-  <block id="adba7439830987a202d2c1cb02195a3f" category="list-text">'볼륨 qtree modify -vserver NewSVM-qtree-path /vol/vol1/q_2237 -export-policy exp_vol1q2'</block>
-  <block id="863b6fed85526192152f29e41cdc8abe" category="paragraph">나중에 이러한 호스트에 대해 추가 qtree를 추가해야 하는 경우 동일한 엑스포트 정책을 사용합니다.</block>
   <block id="2d23e3eb3fa08a6bb90eeb997f734a97" category="summary">새 스토리지 개체에 대한 NFS 액세스를 검증한 후 NFS 관리 호스트에 로그인하고 SVM에서 데이터를 읽고 쓰는 방법으로 구성을 테스트해야 합니다. 그런 다음 클라이언트 시스템에서 루트 이외의 사용자로 프로세스를 반복해야 합니다.</block>
   <block id="8bda879f1c757d3fba36841a438dade9" category="doc">클라이언트 시스템에서 NFS 액세스를 테스트합니다</block>
   <block id="d96215831c7a2dd8949e140cd05e0d37" category="list-text">클라이언트 시스템에는 이전에 지정한 내보내기 규칙에서 허용하는 IP 주소가 있어야 합니다.</block>
@@ -16779,10 +16696,6 @@
   <block id="40326b583071ca4c0846423b1b73cd61" category="paragraph">NIS 서버는 최대 10개까지 지정할 수 있습니다.</block>
   <block id="3820120cd0bdf429754748e1a1880e07" category="list-text">도메인이 생성되었는지 확인합니다.</block>
   <block id="08b43623af38cca22b7f77ee9dd94163" category="paragraph">'vserver services name-service NIS-domain show'를 참조하십시오</block>
-  <block id="536f80a3fd614c8ec42bda9844de232a" category="summary">ONTAP에서 NFS 엑스포트를 구축하는 방법에 대한 생소한 사용자는 7-Mode와 ONTAP 엑스포트 구성 툴을 비교할 수 있을 뿐만 아니라, 클러스터 정책 및 규칙을 사용하는 샘플 7-Mode/etc/exports 파일을 비교할 수 있습니다.</block>
-  <block id="065b39b42bf9194c10b0d63ad1977682" category="doc">ONTAP 내보내기는 7-Mode 내보내기와는 어떻게 다릅니까</block>
-  <block id="9c30ffabb984f274d5d1e78b242fea2d" category="paragraph">ONTAP에서 NFS 엑스포트를 구축하는 방법에 대한 생소한 사용자는 7-Mode와 ONTAP 엑스포트 구성 툴을 비교할 수 있을 뿐만 아니라 7-Mode '/etc/exports' 파일을 클러스터 정책 및 규칙과 비교할 수 있습니다.</block>
-  <block id="7dfad30596f930868fee0654fd2a24c9" category="paragraph">ONTAP에는 '/etc/exports' 파일과 'exportfs' 명령이 없습니다. 대신 엑스포트 정책을 정의해야 합니다. 엑스포트 정책을 사용하면 7-Mode와 동일한 방식으로 클라이언트 액세스를 제어할 수 있으며, 여러 볼륨에 동일한 엑스포트 정책을 다시 사용할 수 있는 등 기능도 추가로 제공됩니다.</block>
   <block id="8b752c28f715451cd73abb7cd497efa6" category="summary">NFS 프로토콜을 사용하여 VMware 데이터 저장소를 제공할 볼륨을 생성합니다.</block>
   <block id="49df364e1252444661784568f582238d" category="inline-link-macro">VSC를 사용한 ESXi용 NFS 구성</block>
   <block id="bdec86833bc68cb3ec7e90fb7fa72510" category="doc">지원 케이스를 보고 제출합니다</block>
@@ -24301,7 +24214,6 @@
   <block id="36c048bb978c1517d45e29dc0a63b53b" category="paragraph">기존 서비스 정책 이름 바꾸기(고급 권한 필요)</block>
   <block id="6bc60bb143e3a6e3d1acc20d48ede786" category="paragraph">기존 서비스 정책 삭제(고급 권한 필요)</block>
   <block id="bc01f913bcd18bddb2daba5c2a430d0e" category="paragraph">기본 제공 서비스 정책을 원래 상태로 복원(고급 권한 필요)</block>
-  <block id="e7c8ed00f8f00ab5b4011270d59cb379" category="paragraph">'network interface create-vserver cluster-lif_LIF_name_-service-policy default-인터클러스터-home-node_node_-home-port_port_-address_port_ip_-netmask_mask_'</block>
   <block id="4726e8735975d8102768f34928fb4796" category="paragraph">'vserver object-store-server policy create-vserver_svm_name_-policy_policy_name_[-comment_text_]'</block>
   <block id="09d514c973d5c397c2deaf12dea34431" category="paragraph">'vserver object-store-server policy statement create-vserver_svm_name_-policy_policy_name_-effect{allow|deny}-action_object_store_actions_-resource_object_store_resources_[sid text]'입니다</block>
   <block id="666b05db74464377ceeeff39f469bcde" category="paragraph">'vserver show -vserver_svm_name_'</block>
@@ -24693,7 +24605,6 @@
   <block id="67cc1d4ffae5c215c625c5d68ee172c5" category="paragraph">_로그 파일 지속 시간 제한 _</block>
   <block id="66170f2cf4a38d72d5b6d53d47123ec2" category="paragraph">로그 파일을 삭제하기 전에 보존할 수 있는 기간을 결정합니다. 예를 들어 5d0h0m 값을 입력하면 5일 이상 지난 로그가 삭제됩니다.</block>
   <block id="544379047fd51005051e9f4882d7814e" category="admonition">v4.2는 v4.1이 활성화된 경우 ONTAP 9.8 이상에서도 지원됩니다.</block>
-  <block id="7398491b4370d3857cd27daa7b1b29a6" category="paragraph">내보낸 볼륨의 이름을 실제 볼륨 이름과 다르게 설정할 수 있습니다. 이렇게 하려면 SVM 네임스페이스 내에서 사용자 지정 접합 경로 이름을 사용하여 볼륨을 마운트해야 합니다.</block>
   <block id="15536381fe2a2faa89fd9b3d765858dc" category="paragraph">다음 절차는 사용하는 인터페이스에 따라 다릅니다. -- System Manager 또는 CLI:</block>
   <block id="714303b3e012debfe33d74fab964f656" category="paragraph">* System Manager를 사용하여 오브젝트 저장소 서버 정책을 생성하거나 수정합니다 *</block>
   <block id="3286ac94266ced4b04954b71f57f9ea7" category="paragraph">* CLI를 사용하여 오브젝트 저장소 서버 정책을 생성하거나 수정합니다 *</block>
@@ -25512,7 +25423,6 @@
   <block id="b0d639c9292658d414439b8688a22c14" category="cell">System Manager의 시각화</block>
   <block id="9b7de1e2f1b38e20bc5872a4c6fd81c2" category="cell">용량 분석</block>
   <block id="2c72caaff60cdf4c9f27182fd94a7ef2" category="cell">비활성 데이터 정보</block>
-  <block id="3070cf8e8101d383f4f400c81c77ded3" category="cell">Data ONTAP 7-Mode에서 전환된 볼륨 지원</block>
   <block id="df10985a69a34c7c2af7ec41a811986f" category="cell">System Manager에서 비활성 기간을 사용자 지정할 수 있습니다</block>
   <block id="eaca7c2c14ec466672ed2039d467e8d2" category="cell">볼륨 레벨 활동 추적</block>
   <block id="413aa6b9e054371e166e0d834b9363b1" category="cell">활동 추적 데이터를 CSV로 다운로드합니다</block>
@@ -25809,7 +25719,6 @@
   <block id="567574df43ef68314b6fa44d4ecb7fd0" category="paragraph">Aggregate 또는 볼륨의 이름을 바꿉니다</block>
   <block id="57b81594da181b5ccf7fb0ea110ff731" category="paragraph">비NetApp 디스크를 사용합니다</block>
   <block id="2d773050efa9154e6aceda4c13159740" category="paragraph">감사 로깅을 위해 SnapLock 볼륨을 사용합니다</block>
-  <block id="9e4e3d7f75d7706b7e71902281d1143c" category="paragraph">7-Mode 전환 도구의 CBT(Copy-Based Transition) 기능을 사용하여 SnapLock 볼륨을 7-Mode에서 ONTAP로 마이그레이션할 수 있습니다. 대상 볼륨의 SnapLock 모드인 Compliance 또는 Enterprise는 소스 볼륨의 SnapLock 모드와 일치해야 합니다. CFT(Copy-Free Transition)를 사용하여 SnapLock 볼륨을 마이그레이션할 수는 없습니다.</block>
   <block id="b1b921c2f629e90702b4115dd7385134" category="summary">SnapLock를 사용하기 전에 여러 구성 작업을 수행해야 합니다.</block>
   <block id="34ea366e6bf5c029a3ea55377d5d1ee8" category="summary">파일을 수동으로 커밋하거나 자동으로 커밋하여 WORM(Write Once, Read Many)에 커밋할 수 있습니다. WORM 추가 가능 파일을 생성할 수도 있습니다.</block>
   <block id="57c88b4e35ad0a46ef41f05a54ab07bd" category="section-title">파일을 WORM에 자동으로 커밋합니다</block>
@@ -33856,13 +33765,11 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a71f7fbfd87a1b4cf8100a4cfb57ea61" category="sidebar">스냅샷을 수동으로 생성하고 삭제합니다</block>
   <block id="838d2ec28a34d426c8b535dca6cc658c" category="paragraph"><block ref="2133fd717402a7966ee88d06f9e0b792" prefix=" " category="inline-code"></block>동시에 액세스할 것으로 예상되는 파일이 포함된 공유로 프로필을 제한해야 합니다. 이 프로필은 더 많은 스캔 요청을 생성하므로 성능에 영향을 미칠 수 있습니다.</block>
   <block id="e2f3a8e2d9dbebebccfd5c2dd674a96c" category="cell">7년 보존이 있는 Unified SnapMirror 정책</block>
-  <block id="89b7f5a8d189f2aac31f88cad0bca87d" category="list-text">7-Mode 시스템에서 FlexGroup 볼륨으로 전환된 볼륨을 변환</block>
   <block id="5a26d8bce9f9eaa96dbabd0d2140a4bd" category="list-text">하나 이상의 네트워크 인터페이스 설정을 변경합니다. 자세한 내용은 을 참조하십시오 <block ref="aea0defaab0fad717881c459f7531116" category="inline-link-macro-rx"></block>.</block>
   <block id="e6ba4c8a897dc7875e6d6d8f49b75f77" category="paragraph"><block ref="e6ba4c8a897dc7875e6d6d8f49b75f77" category="inline-link-macro-rx"></block></block>
   <block id="31eed51357bb3f5d9843ad06cabeb2ad" category="paragraph"><block ref="31eed51357bb3f5d9843ad06cabeb2ad" category="inline-link-macro-rx"></block></block>
   <block id="be99d10153592f37f702e7fa579ca100" category="paragraph"><block ref="be99d10153592f37f702e7fa579ca100" category="inline-link-macro-rx"></block></block>
   <block id="6e135928b99fa90ba16acad76bbb526f" category="paragraph">System Manager를 사용하여 NAS 멀티 프로토콜 액세스를 구성하려면 를 참조하십시오<block ref="69817c9c6ce0e1f96531cdcd2366001e" category="inline-link-macro-rx"></block>.</block>
-  <block id="b62f553f46f531972c44d54ec69f69c9" category="list-text">7-Mode에서 운영되는 Data ONTAP의 볼륨 전환에서는 네임스페이스를 생성할 수 없습니다.</block>
   <block id="316c2a376f389fe224b06e758502582c" category="paragraph">NIC 및 데이터 스위치와 같은 중간 네트워크 장치는 네트워크 엔드포인트보다 더 높은 MTU 크기로 설정할 수 있습니다. 자세한 내용은 을 <block ref="c7b897b9bcbb96f8bbd1f7b444ba3e4c" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="89dad40148b1cd9f117ac7457c80c628" category="list-text"><block ref="89dad40148b1cd9f117ac7457c80c628" category="inline-link-macro-rx"></block></block>
   <block id="e0fe46b6696e9f5f544e200b57d16f8c" category="paragraph">ONTAP 9.5부터 NVMe를 사용한 호스트 데이터 액세스를 지원하려면 라이센스가 필요합니다. ONTAP 9.4에서 NVMe를 사용하는 경우 ONTAP 9.5로 업그레이드한 후 라이센스를 취득하기 위한 90일 유예 기간이 제공됩니다. 이 있는 <block ref="a62fc0122806ceec9dd8592aadbd3e06" category="inline-link-macro-rx"></block>경우 NVMe 라이센스가 포함됩니다. 다음 명령을 사용하여 라이센스를 설정할 수 있습니다.</block>
@@ -36566,13 +36473,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a716996539d651eae4558db22d50bf01" category="paragraph">변경률이 높은 경우 드물지만 스냅샷 자동 삭제가 지연되어 위에서 요구하는 모든 구성 설정을 사용 중이더라도 볼륨의 공간이 부족해질 수 있습니다.</block>
   <block id="1739b0007312b3548921b1c5c20ae889" category="paragraph">또한 필요에 따라 볼륨 자동 확장 기능을 사용하여 볼륨 스냅샷이 자동으로 삭제될 가능성을 줄일 수 있습니다. 자동 확장 기능을 사용하도록 설정한 경우 연결된 애그리게이트의 여유 공간을 모니터링해야 합니다. Aggregate가 가득 차서 볼륨 증가를 막을 수 없을 경우, 볼륨의 여유 공간이 고갈되면 더 많은 스냅샷이 삭제될 수 있습니다.</block>
   <block id="29db3afde517fdb64669d56b19927894" category="list-text">해당 LUN을 지원하는 볼륨의 공간이 부족하면 보호 데이터(FlexClone LUN 및 파일, 스냅샷)가 삭제됩니다.</block>
-  <block id="42a3e73bce92fcb75dd9284311c66f2c" category="list-text">7-Mode 스냅샷에서 볼륨을 복원합니다</block>
-  <block id="9ccb8f220872e169c085ca5977400e87" category="paragraph">볼륨을 복원하면 스냅샷에 캡처된 모든 LUN이 전환됩니다</block>
-  <block id="fde91ca88ad19b61c1ee884627801e35" category="list-text">명령을 사용하여 7-Mode 스냅샷에서 단일 LUN을 복원합니다<block ref="17055bc24119a044680a5e06b82a4c49" prefix=" " category="inline-code"></block></block>
-  <block id="4ed0bc0bf3054d334d92a611a9202fae" category="list-text">7-Mode 스냅샷에서 LUN 클론을 생성합니다</block>
-  <block id="d7f030923ce0e57a80920b1833bf0869" category="list-text">7-Mode 스냅샷에서 캡처된 LUN의 블록 범위를 복원합니다</block>
-  <block id="7bc6ad3f010a8db4993d71caf4a004c7" category="list-text">7-Mode 스냅샷을 사용하여 볼륨의 FlexClone을 생성합니다</block>
-  <block id="fb2ddd06b1ab03e955fe9d9b012bf7fb" category="list-text">볼륨에서 캡처된 스냅샷 지원 LUN 클론에 액세스합니다</block>
   <block id="fcc319d9277742809fa07a8e1b513b04" category="paragraph">스냅샷 생성을 지원하기 위해 자동 확장을 트리거할 수 없습니다. 스냅샷을 생성하려고 하는데 볼륨에 공간이 부족하면 자동 증가가 설정된 경우에도 스냅샷 생성이 실패합니다.</block>
   <block id="f086e5f59026c6647f7af36c3057b748" category="paragraph">스냅샷 자동 삭제는 다음 중 하나가 발생하면 스냅샷을 자동으로 삭제합니다.</block>
   <block id="5c45b23130700b36034b9788432fc2e5" category="list-text">스냅샷 예약 공간이 거의 가득 찼습니다.</block>
@@ -39102,8 +39002,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="08dc599faa1fc3036db78674b08f4faf" category="paragraph">에 대한 자세한 내용은<block ref="8e0a640983c944bc113dbb2b7abdace2" prefix=" " category="inline-code"></block> <block ref="ad3728c4e66b2b82c0b5a65aaae20b46" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="e5c5921a7f5593dd72ce99731de39edb" category="paragraph">에 대한 자세한 내용은<block ref="6538294e44809ac7cddfafcb56bf6122" prefix=" " category="inline-code"></block> <block ref="3a4e705d028c9e577516a1d1e9d11c9c" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="a725d731008cfb3a24961b5f58f6a9a7" category="paragraph">에 대한 자세한 내용은<block ref="dd5482134b2daeb15de3547342b7d19d" prefix=" " category="inline-code"></block> <block ref="96c12bd3033627fdc4467b7c64bead98" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
-  <block id="b8fdaa53ba08988f3b422c1226f85a2a" category="inline-link-macro">LUN 표시</block>
-  <block id="fd5bdb879fb82939ee7c30877a606a3e" category="list-text"><block ref="fd5bdb879fb82939ee7c30877a606a3e" category="inline-link-macro-rx"></block></block>
   <block id="dd5482134b2daeb15de3547342b7d19d" category="inline-link-macro">LUN 매핑이 표시됩니다</block>
   <block id="338f27c077c18de29857a5ad96b9131e" category="list-text"><block ref="338f27c077c18de29857a5ad96b9131e" category="inline-link-macro-rx"></block></block>
   <block id="9dddd5ce1b1375bc497feeb871842d4b" category="inline-link-macro">있습니다</block>
@@ -40010,8 +39908,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9ddccfb5d1756ff0fb7260d8bddbc063" category="sidebar">볼륨에 NFS 내보내기 정책 할당</block>
   <block id="aeb6783b33623817a60ae7607c4801ef" category="sidebar">Qtree에 NFS 내보내기 정책 할당</block>
   <block id="8edd92cc13776acd2989b96bc0428dc6" category="sidebar">추가 NFS 정보를 찾을 수 있는 곳</block>
-  <block id="aece62a0abb054d73a16882cf0d32e64" category="sidebar">7-Mode 및 NFS 내보내기 비교에 대해 알아보세요</block>
-  <block id="b8a65cfc5949e69e0f5ac036076057f3" category="sidebar">NFS 내보내기 정책 예제에 대해 알아보세요</block>
   <block id="9db04f289edc5db196f9e10bac61e89c" category="sidebar">SMB에 대해 알아보십시오</block>
   <block id="d1d33df0a99e4e948b49051cf0d09abf" category="sidebar">SMB 바이패스 트래버스 검사 구성에 대해 알아보세요</block>
   <block id="06633a6172d825b0322d44f9a8e761ae" category="sidebar">사용자 또는 그룹이 SMB 디렉터리 트래버스 검사를 우회하도록 허용</block>
@@ -40197,7 +40093,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="9c42f0cdc5180afd4be89bdfb4aba707" category="doc">ONTAP NFS의 물리적 스토리지 요구사항을 평가합니다</block>
   <block id="876465f879b7e0325c33ef582ca4ffb7" category="doc">ONTAP NFS 내보내기 정책을 qtree에 할당합니다.</block>
   <block id="9b2bdd9fe3dd4e18b4d51970ba747e1b" category="doc">볼륨에 ONTAP NFS 내보내기 정책 할당</block>
-  <block id="8e49b36eb20904732f3c54a422a4aa79" category="doc">7-Mode 및 ONTAP NFS 내보내기 비교에 대해 알아보세요</block>
   <block id="dab6402e33d53e60c6eb4f4252e52abb" category="doc">ONTAP NFS SVM 호스트 이름 확인을 위해 DNS 활성화</block>
   <block id="5373bde99ddd34d68221f67f9f41d235" category="doc">ONTAP SVM에 대해 NFS Kerberos 허용 암호화 유형 구성</block>
   <block id="d7753f59433605f23c1e247e6365aa22" category="doc">ONTAP NFS SVM에 대한 로컬 UNIX 사용자 및 그룹에 대해 알아보세요.</block>
@@ -40218,7 +40113,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="08d8cd62a29b48880ca94484627e64e2" category="doc">NFS 데이터 액세스를 위한 ONTAP SVM 생성</block>
   <block id="a165f14d9e5bfaeb180bbd03ff43e2d7" category="doc">ONTAP NFS 볼륨 생성</block>
   <block id="2dd85d3f465aa13b8dd5386b8f3359c5" category="doc">ONTAP NFS SVM과 LDAP 클라이언트 구성 연결</block>
-  <block id="385269526f6699d13f6c0d89a3d7c994" category="doc">ONTAP NFS 내보내기 정책 예제에 대해 알아보세요</block>
   <block id="4ead3cbbf0f2c3fe7ff66f0e8bbaf7bf" category="doc">내보내기 정책을 사용하여 ONTAP NFS 액세스 보안에 대해 알아보세요.</block>
   <block id="f0a4eb1bd7e731da0701b3f86b47e623" category="doc">ONTAP CLI를 사용한 NFS 구성에 대해 알아보십시오</block>
   <block id="f78a033f65ed63bbac85a6797fccbdad" category="paragraph">다양한 ONTAP NFS 프로토콜 기능에 대한 자세한 내용은 를 참조하십시오<block ref="8067ac7a398a508933ed87320c6d6316" category="inline-link-macro-rx"></block>.</block>
@@ -43037,8 +42931,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="f095324dafb0589dc1d0c9b29a08083a" category="inline-link-macro">NetApp 지식 기반: NetApp ONTAP 파일 시스템 분석을 켠 후 대기 시간이 길어지거나 변동함</block>
   <block id="4a3763eff6d6fa4a7cb4274d8eb75bec" category="paragraph">지연 시간이 눈에 띄게 증가하는 경우 다음을 참조하세요.<block ref="fd0219e821bf690ad95572ee8b455015" category="inline-link-macro-rx"></block> .</block>
   <block id="6898cbf5151cb463bab92e9adc4a561e" category="paragraph">자세히 알아보세요<block ref="dfeaa02dcc375ce117463dee2412e1b7" category="inline-link-macro-rx"></block> .</block>
-  <block id="86c24cf22cfed17463c640f23695c3f9" category="inline-link-macro">NetApp 지식 기반: 전환된 FlexVol FlexGroup 으로 변환하는 방법</block>
-  <block id="088cacea0b755ceeac5fe239ded8c226" category="paragraph">자세한 내용은 다음을 참조하세요.<block ref="3397f25e8b507b021ab4e7f756b128b5" category="inline-link-macro-rx"></block> .</block>
   <block id="c19df8f074c2c9cb8188e269ee0773fa" category="inline-link-macro">NetApp 기술 자료: MAV 관리자가 사용 불가능한 경우 다중 관리자 검증을 비활성화하는 방법</block>
   <block id="b91bd53efb5f805a002a172dabeab9ce" category="admonition">MAV 관리자 승인 없이 다중 관리자 확인 기능을 비활성화해야 하는 경우 NetApp 지원팀에 문의하여 다음 사항을 언급하십시오.<block ref="ece07a05ca0959179cd4b82af1d2662c" category="inline-link-macro-rx"></block> .</block>
   <block id="545c396045554d441fd6102ee20e31eb" category="inline-link-macro">NetApp 지식 기반: 클러스터 모드에서 DNS 부하 분산을 설정하는 방법</block>
@@ -45398,7 +45290,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="1102d790417e21497a5b26230dedc754" category="list-text"><block ref="c59916038b3f30b9d6fa83c14c51da44" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
   <block id="737db56266aa238322e85325597f4233" category="list-text"><block ref="86686296eda0c6674200ad69cc9cde0e" category="inline-link-macro-rx"></block>가 HA 쌍이 소유한 LUN에 액세스하는 데 사용되는 경로를 제한하는 방법을 알아보십시오.</block>
   <block id="793d4bc82d8de5051a103f79fa560a0f" category="paragraph">ASA r2 스토리지 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30 또는 ASA A20)이 있는 경우 <block ref="fbfc908ec8199bb5006938ac876f627a" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
-  <block id="05be83ebd6460742ec4bdb85cd44d4b1" category="list-text"><block ref="05be83ebd6460742ec4bdb85cd44d4b1" category="inline-link-macro-rx"></block></block>
   <block id="147e09377bc0bf4730d497c8b63fc187" category="admonition">이러한 제한 사항은 ASA 시스템에 적용됩니다. ASA r2 시스템(ASA A1K, ASA A90, ASA A70, ASA A50, ASA A30, ASA A20 또는 ASA C30)을 사용하는 경우 <block ref="8f5a76f413171aa855dc75fd720fe289" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="5d5b1f5d93571e2eb42fd7a86a55e504" category="inline-link-macro">FC 및 FC-NVMe 호스트에 직접 연결하도록 ONTAP FC 포트를 구성합니다</block>
   <block id="285668afb15006be8acb814037ee638e" category="list-text"><block ref="129860930aab2660d98e1efe9faafe33" category="inline-link-macro-rx"></block>.</block>
@@ -48238,7 +48129,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="6423576c75606e359ee292fc58df71ad" category="list-text">ONTAP 9.10.1 이전 버전에서는 FlexVol 볼륨을 소유하는 SVM에서 SVM-DR이 비활성화되어 있습니다. ONTAP 9.10.1부터는 <block ref="54481151238b915e30fab83b23cc87e3" category="inline-link-macro-rx"></block> 할 수 있습니다.</block>
   <block id="a6dc27dd0f5d2505fded541963f904ab" category="list-text">FlexVol 볼륨은 NetApp FlexClone 볼륨의 상위 볼륨이 아니어야 합니다. 변환 대상 볼륨은 상위 볼륨이나 클론 볼륨이 아니어야 합니다.</block>
   <block id="b66a123bd1b53e6d1a303060b71505d3" category="list-text">해당 볼륨은 NetApp FlexCache 원본 볼륨일 수 없습니다.</block>
-  <block id="c0fa950104cdf5199e0d39cac7ae9983" category="list-text">7MTT(ONTAP 9.7)를 사용하여 7-Mode에서 전환된 FlexVol 볼륨은 변환할 수 없습니다. ONTAP 9.8부터 전환된 볼륨을 변환할 수 있습니다.</block>
   <block id="c7fb4f8a1af61455e4267976f5b926e4" category="list-text">볼륨은 애플리케이션과 연결되어서는 안 됩니다. 이는 ONTAP 9.7에만 적용됩니다. 이 제한은 ONTAP 9.8에서 해제되었습니다.</block>
   <block id="084324a02f31dafba94abab74131c79f" category="list-text">스토리지 효율성이 비활성화되었습니다. 변환 후 다시 활성화할 수 있습니다.</block>
   <block id="f073fcca1a8229e3a42910e50ddfccb1" category="list-text">볼륨이 SnapMirror 관계의 소스이고 대상이 아직 변환되지 않은 경우 변환할 수 없습니다.</block>
@@ -49029,7 +48919,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="c9d0d17788ec35802251d4084540709b" category="doc">ONTAP에서 가상화된 SAN 환경을 사용하는 장점</block>
   <block id="b30ee6f0fa81dddf5718cf5f74fc5726" category="doc">ONTAP에서 X1143A-R6 어댑터에 지원되는 포트 구성</block>
   <block id="65c31cbe6c45616906965d351384a260" category="doc">ONTAP LUN을 효과적으로 모니터링하는 데 사용할 수 있는 툴</block>
-  <block id="4353b4890a787351f05ef1ace80df5aa" category="doc">전환된 ONTAP LUN의 기능 및 제한 사항</block>
   <block id="c2d2e2ba553c74684ffbc9d3ec6ad04e" category="doc">호스트에서 ONTAP iSCSI LUN이 보이지 않는 문제 해결</block>
   <block id="18c429fa18cda88e65deaf9607b6b9bd" category="doc">ONTAP에서 FC 또는 iSCSI 라이센스를 확인하고 추가합니다</block>
   <block id="298ff30d1e0de7e27551a1d22bc4d408" category="doc">ONTAP FC/UTA 어댑터 설정 보기</block>
@@ -49157,4 +49046,20 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="a26e4204ec8290ac2fc79961eb176ec8" category="list-text">9.17.1 -&gt; 9.20.1</block>
   <block id="9df7bb0d4f4a5c6104b95d6bb9faf265" category="list-text">9.16.1 -&gt; 9.20.1</block>
   <block id="d3ceda18c9d46516729fefa717497b8d" category="list-text">9.17.1-&gt;9.20.1</block>
+  <block id="e6b096c05b10a782bfd5d1b7ada84bb8" category="paragraph-title">배타적 바이트 범위 잠금:</block>
+  <block id="640e7ec2501cc302d338f8af5aa26fe6" category="paragraph">write-around 및 write-back 모드 모두에서 ONTAP은 배타적 바이트 범위 잠금(EBL)을 지원합니다. 이 기능은 클라이언트가 파일 내의 특정 바이트 범위를 배타적으로 잠가 다른 클라이언트로부터 해당 범위를 보호하는 동시에, 다른 사이트에 있는 클라이언트가 파일의 다른 범위에 동시에 읽거나 쓸 수 있도록 합니다. 이는 XLD와는 다릅니다. 모든 EBL은 원본으로 전달되며, 원본은 파일의 위임과 EBL 요청을 기반으로 EBL 승인 여부를 결정합니다.</block>
+  <block id="0a150440bf38eafb59586634043afa33" category="summary">ONTAP은 SVM의 볼륨 또는 qtree에 할당된 내보내기 정책 및 규칙을 통해 NFS 클라이언트 액세스를 제어합니다.</block>
+  <block id="c7e5de6c3b0795e617deea00725d7c02" category="doc">ONTAP NFS 내보내기에 대해 알아보십시오.</block>
+  <block id="f15d24db8e227721a5fdc71658c30c80" category="paragraph">ONTAP은 볼륨 또는 qtree에 할당된 엑스포트 정책을 통해 NFS 클라이언트 액세스를 제어합니다. 각 정책에는 어떤 클라이언트가 데이터에 액세스할 수 있는지, 그리고 어떤 권한을 부여받는지 정의하는 규칙이 포함되어 있습니다.</block>
+  <block id="5d0aca47f75713974a3acc0a289a6e50" category="paragraph">SVM에는 여러 개의 내보내기 정책이 포함될 수 있습니다. 각 정책에는 클라이언트 일치 및 액세스 권한을 지정하는 0개 이상의 내보내기 규칙이 포함될 수 있습니다. 정책이 비어 있으면 모든 액세스가 거부됩니다. 내보내기 정책을 둘 이상의 볼륨에 적용할 수 있습니다.</block>
+  <block id="972412866eafbc1e2377e4cba0cd0679" category="section-title">볼륨 및 qtree에 엑스포트 정책을 적용합니다</block>
+  <block id="2f1b5f2c7a7229791fd69450eab312dd" category="paragraph">볼륨 또는 qtree에 내보내기 정책을 할당하여 해당 스토리지에 대한 NFS 클라이언트 액세스를 제어합니다. 볼륨에 할당된 정책은 해당 볼륨의 데이터에 적용됩니다. qtree에 대한 액세스를 제어해야 하는 경우 qtree에 직접 정책을 할당할 수 있습니다.</block>
+  <block id="c9103c5c58a2649f1d353570b7c917a4" category="section-title">볼륨 정션 경로</block>
+  <block id="97826c5d125844e4298d13c534a39956" category="paragraph">볼륨은 SVM 네임스페이스의 정션 경로에 마운트됩니다. NFS 클라이언트는 이 경로를 사용하여 볼륨의 데이터에 액세스합니다. 정션 경로는 볼륨 이름과 다를 수 있습니다.</block>
+  <block id="0b9373609eb690ba4a27ac41ec008d00" category="paragraph"><block ref="0b9373609eb690ba4a27ac41ec008d00" category="inline-link-macro-rx"></block></block>
+  <block id="4ea7cc25100b7bcb79f78595d5791f32" category="summary">데이터 네트워크와 공유되는 포트에 클러스터 간 LIF를 생성하여 ONTAP S3를 사용한 원격 FabricPool 계층화를 활성화하고 클러스터 간 포트 수를 줄입니다.</block>
+  <block id="e6141d5980cc2cfba4c29f7ae52a09cc" category="list-text">기본 물리적 또는 논리적 네트워크 포트는 관리<block ref="46c48bec0d282018b9d167eef7711b2c" prefix=" " category="inline-code"></block> 상태로 구성되어야 합니다.</block>
+  <block id="8687ae861efc345fb88cb244c8ac3af7" category="paragraph">클러스터 간 LIF는 로컬 FabricPool 계층화 또는 외부 S3 앱 제공에 필요하지 않습니다.</block>
+  <block id="09c1b0a1d50bd671813081f6837a1070" category="paragraph">ONTAP SMB 서버에서 로컬 또는 도메인 사용자나 그룹에 할당된 권한을 관리합니다. 권한을 추가, 제거 또는 재설정하여 각 사용자 또는 그룹이 수행할 수 있는 작업을 사용자 지정하고 권한 재정의에 대한 정보를 표시할 수 있습니다.</block>
+  <block id="84336c547960e27ad3f1ee2111f4ccc0" category="sidebar">NFS 엑스포트 정책에 대해 알아보기</block>
 </blocks>

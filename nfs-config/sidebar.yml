@@ -89,6 +89,8 @@ entries:
   entries:
   - title: NFS 지원 SVM에 저장 용량을 추가하는 방법에 대해 알아보세요.
     url: "/nfs-config/add-storage-capacity-nfs-enabled-svm-concept.html"
+  - title: NFS 엑스포트 정책에 대해 알아보기
+    url: "/nfs-config/ontap-nfs-exports-concept.html"
   - title: NFS 내보내기 정책 만들기
     url: "/nfs-config/create-export-policy-task.html"
   - title: NFS 내보내기 정책에 규칙 추가
@@ -116,11 +118,3 @@ entries:
     url: "/nfs-config/test-access-client-systems-task.html"
 - title: 추가 NFS 정보를 찾을 수 있는 곳
   url: "/nfs-config/additional-information-reference.html"
-- title: ONTAP 내보내기는 7-Mode 내보내기와는 어떻게 다릅니까
-  entries:
-  - title: 개요
-    url: "/nfs-config/exports-differ-concept.html"
-  - title: 7-Mode 및 NFS 내보내기 비교에 대해 알아보세요
-    url: "/nfs-config/comparison-exports-7-mode-concept.html"
-  - title: NFS 내보내기 정책 예제에 대해 알아보세요
-    url: "/nfs-config/examples-export-policies-concept.html"

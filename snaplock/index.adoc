@@ -402,9 +402,3 @@ ONTAP는 스토리지 미디어의 용도 변경, 반환, 잘못된 위치 변�
 암호화된 볼륨은 SnapLock 집계에서 지원됩니다.
 
 ====
-
-
-[[7-mode-transition]]
-== 7-Mode 전환
-
-7-Mode 전환 도구의 CBT(Copy-Based Transition) 기능을 사용하여 SnapLock 볼륨을 7-Mode에서 ONTAP로 마이그레이션할 수 있습니다. 대상 볼륨의 SnapLock 모드인 Compliance 또는 Enterprise는 소스 볼륨의 SnapLock 모드와 일치해야 합니다. CFT(Copy-Free Transition)를 사용하여 SnapLock 볼륨을 마이그레이션할 수는 없습니다.

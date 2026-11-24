@@ -1,0 +1,38 @@
+---
+permalink: nfs-config/ontap-nfs-exports-concept.html 
+sidebar: sidebar 
+keywords: ONTAP, NFS exports, export policies, export rules 
+summary: ONTAP은 SVM의 볼륨 또는 qtree에 할당된 내보내기 정책 및 규칙을 통해 NFS 클라이언트 액세스를 제어합니다. 
+---
+= ONTAP NFS 내보내기에 대해 알아보십시오.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP은 볼륨 또는 qtree에 할당된 엑스포트 정책을 통해 NFS 클라이언트 액세스를 제어합니다. 각 정책에는 어떤 클라이언트가 데이터에 액세스할 수 있는지, 그리고 어떤 권한을 부여받는지 정의하는 규칙이 포함되어 있습니다.
+
+
+
+[[export-policies-and-rules]]
+== 엑스포트 정책 및 규칙
+
+SVM에는 여러 개의 내보내기 정책이 포함될 수 있습니다. 각 정책에는 클라이언트 일치 및 액세스 권한을 지정하는 0개 이상의 내보내기 규칙이 포함될 수 있습니다. 정책이 비어 있으면 모든 액세스가 거부됩니다. 내보내기 정책을 둘 이상의 볼륨에 적용할 수 있습니다.
+
+
+
+[[apply-export-policies-to-volumes-and-qtrees]]
+== 볼륨 및 qtree에 엑스포트 정책을 적용합니다
+
+볼륨 또는 qtree에 내보내기 정책을 할당하여 해당 스토리지에 대한 NFS 클라이언트 액세스를 제어합니다. 볼륨에 할당된 정책은 해당 볼륨의 데이터에 적용됩니다. qtree에 대한 액세스를 제어해야 하는 경우 qtree에 직접 정책을 할당할 수 있습니다.
+
+
+
+[[volume-junction-paths]]
+== 볼륨 정션 경로
+
+볼륨은 SVM 네임스페이스의 정션 경로에 마운트됩니다. NFS 클라이언트는 이 경로를 사용하여 볼륨의 데이터에 액세스합니다. 정션 경로는 볼륨 이름과 다를 수 있습니다.
+
+.관련 정보
+link:export-policies-concept.html["내보내기 정책을 사용하여 NFS 액세스 보안에 대해 알아보세요"]

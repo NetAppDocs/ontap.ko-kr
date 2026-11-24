@@ -2,7 +2,7 @@
 permalink: s3-config/create-intercluster-lifs-remote-fabricpool-tiering-task.html 
 sidebar: sidebar 
 keywords: create, intercluster, lifs, remote fabricpool, tiering 
-summary: 'ONTAP S3를 사용하여 원격 FabricPool 용량(클라우드) 계층화를 활성화하는 경우 인터클러스터 LIF를 구성해야 합니다. 데이터 네트워크와 공유하는 포트에 대한 인터클러스터 LIF를 구성할 수 있습니다. 이렇게 하면 인터클러스터 네트워킹에 필요한 포트 수가 줄어듭니다.' 
+summary: 데이터 네트워크와 공유되는 포트에 클러스터 간 LIF를 생성하여 ONTAP S3를 사용한 원격 FabricPool 계층화를 활성화하고 클러스터 간 포트 수를 줄입니다. 
 ---
 = ONTAP S3를 사용하여 원격 FabricPool 계층화를 위한 인터클러스터 LIF를 생성합니다
 :allow-uri-read: 
@@ -14,12 +14,12 @@ summary: 'ONTAP S3를 사용하여 원격 FabricPool 용량(클라우드) 계층
 ONTAP S3를 사용하여 원격 FabricPool 용량(클라우드) 계층화를 활성화하는 경우 인터클러스터 LIF를 구성해야 합니다. 데이터 네트워크와 공유하는 포트에 대한 인터클러스터 LIF를 구성할 수 있습니다. 이렇게 하면 인터클러스터 네트워킹에 필요한 포트 수가 줄어듭니다.
 
 .시작하기 전에
-* 기본 물리적 또는 논리적 네트워크 포트는 관리자 `up` 상태로 구성되어 있어야 합니다.
+* 기본 물리적 또는 논리적 네트워크 포트는 관리 `up` 상태로 구성되어야 합니다.
 * LIF 서비스 정책이 이미 존재해야 합니다.
 
 
 .이 작업에 대해
-인터클러스터 LIF는 로컬 Fabric 풀 계층화나 외부 S3 애플리케이션을 제공하기 위해 필요하지 않습니다.
+클러스터 간 LIF는 로컬 FabricPool 계층화 또는 외부 S3 앱 제공에 필요하지 않습니다.
 
 .단계
 . 클러스터의 포트 나열:
@@ -53,7 +53,7 @@ cluster01-02
 
 . 시스템 SVM에 대한 인터클러스터 LIF 생성:
 +
-'network interface create-vserver cluster-lif_LIF_name_-service-policy default-인터클러스터-home-node_node_-home-port_port_-address_port_ip_-netmask_mask_'
+'network interface create-vserver_system_SVM_-lif_LIF_name_-service-policy default-인터클러스터-home-node_node_-home-port_port_-address_port_ip_-netmask_mask_'
 
 +
 다음 예에서는 인터클러스터 LIF 'cluster01_icl01'과 'cluster01_icl02'를 생성합니다.
@@ -62,11 +62,11 @@ cluster01-02
 [listing]
 ----
 
-cluster01::> network interface create -vserver Cluster -lif cluster01_icl01 -service-
+cluster01::> network interface create -vserver cluster01 -lif cluster01_icl01 -service-
 policy default-intercluster -home-node cluster01-01 -home-port e0c -address 192.168.1.201
 -netmask 255.255.255.0
 
-cluster01::> network interface create -vserver Cluster -lif cluster01_icl02 -service-
+cluster01::> network interface create -vserver cluster01 -lif cluster01_icl02 -service-
 policy default-intercluster -home-node cluster01-02 -home-port e0c -address 192.168.1.202
 -netmask 255.255.255.0
 ----
