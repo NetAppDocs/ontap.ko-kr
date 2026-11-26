@@ -54,13 +54,19 @@ summary: SAN 구성에서 볼륨을 추가하거나 제거하여 일관성 그�
 +
 대상 경로 VS1_Dst:vol_dst3'이라는 메시지가 나타납니다
 
-. 정합성 보장 그룹 관계를 삭제합니다.
 +
-대상 경로 VS1_DST:/CG/CG_DST'의 경우, "대상 경로:::> SnapMirror delete-destination-path VS1_DST:/CG/CG_DST"
+.. 초기화가 완료되면 일관성 그룹 관계를 해제하고 삭제합니다:
++
+`destination::>snapmirror break -destination-path vs1_dst:vol_dst3`
 
-. 소스 SnapMirror 관계를 해제하고 공통 스냅샷을 보존합니다.
++
+`destination::>snapmirror delete -destination-path vs1_dst:vol_dst3`
+
+.. 소스 SnapMirror 관계를 해제하고 공통 스냅샷을 보존합니다.
 +
 'source::> snapmirror release-relationship-info-only true-destination-path vs1_dst:vol_dst3'
+
+
 
 . LUN 매핑을 해제하고 기존 일관성 그룹 관계를 삭제합니다.
 +

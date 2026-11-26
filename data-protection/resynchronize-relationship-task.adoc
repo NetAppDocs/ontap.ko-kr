@@ -48,6 +48,9 @@ System Manager 또는 ONTAP CLI를 사용하여 이 작업을 수행할 수 있�
 ====
 .System Manager 역방향 재동기화
 --
+
+NOTE: 장기 보존(LTR) 스냅샷이 저장된 읽기/쓰기 볼륨에 대해 SnapMirror 역방향 재동기화를 수행하지 않는 것이 좋습니다.
+
 link:make-destination-volume-writeable-task.html["관계를 끊습니다"]대상을 쓰기 가능하게 만들려면 관계를 역순으로 다시 동기화합니다.
 
 . 대상 클러스터에서 * 보호 > 관계 * 를 클릭합니다.

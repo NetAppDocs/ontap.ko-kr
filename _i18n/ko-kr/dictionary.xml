@@ -27361,7 +27361,6 @@ clustered ONTAP 스토리지 시스템을 활용할 수 있습니다.</block>
   <block id="af76282fbd1a8da0c7b61235ba6afc15" category="list-text">ONTAP 9.10.1.1부터는 를 관리하는 것이 좋습니다 <block ref="2aa14ba8e0c5223cc5347d8a5fc38d99" category="inline-link-macro-rx"></block> System Manager 또는 ONTAP REST API를 통해</block>
   <block id="07df995eeae9fa7d6e3c7bf1d38733ea" category="list-text">에 있는 동안에는 일관성 그룹을 수정할 수 없습니다<block ref="c2d2dc98c478a5a1743d85e03534f500" prefix=" " category="inline-code"></block> 상태.</block>
   <block id="8014ec93b1e7587756a03bffdf102738" category="paragraph">두 볼륨 매핑에 표시된 예는 다음과 같습니다.<block ref="5583d76a9f7823271345fff52534f619" prefix=" " category="inline-code"></block> &lt;--&gt;<block ref="337bf6c22cf13961a2ef5940797fadea" prefix=" " category="inline-code"></block> 및<block ref="3d6af961720d650985b316432fdc2ce5" prefix=" " category="inline-code"></block> &lt;--&gt;<block ref="dff0f3689dad3c7a4b2959fa341adec3" prefix=" " category="inline-code"></block>정합성 보장 그룹 관계에서 최종 지점 간의 관계를 나타냅니다<block ref="e28a2631e17a66244eefb295d4283f42" prefix=" " category="inline-code"></block> 및<block ref="6c00f121bf77ee9d796b65e16bebd098" prefix=" " category="inline-code"></block>.</block>
-  <block id="e530a431085e8f4730d7ff2375e353b6" category="list-text">정합성 보장 그룹 관계를 삭제합니다.</block>
   <block id="07b0dc0f3b0e8507dfa110d52c5b1923" category="list-text">클러스터 간 지연 RTT(Round Trip Time)는 10밀리초 미만이어야 합니다.</block>
   <block id="503477cb014834486f9c875c978780e0" category="paragraph"><block ref="503477cb014834486f9c875c978780e0" category="inline-link-macro-rx"></block></block>
   <block id="1ba04b8adc33d398853defc36d31be80" category="paragraph">계층화 검사가 실행되는 즉시 데이터가 클라우드 계층으로 이동하므로 계층화 최소 냉각 기간은 적용되지 않으며 설정을 수정할 수 없습니다.</block>
@@ -43615,7 +43614,6 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="60170aa734e3a610ee5539f8581c0cc1" category="inline-link-macro">FlexGroup 볼륨 구성</block>
   <block id="c71dcc6cf8f10fc51921bfad18a9cb0a" category="list-text"><block ref="c71dcc6cf8f10fc51921bfad18a9cb0a" category="inline-link-macro-rx"></block></block>
   <block id="b0d9889a49167818dcbc580695e2c59a" category="paragraph">SnapLock 은 ONTAP 의 라이선스 기반 기능입니다. 단일 라이선스를 통해 엄격한 규정 준수 모드에서 SnapLock 사용하여 SEC 규칙 17a-4(f)와 같은 외부 의무를 충족하고, 느슨한 엔터프라이즈 모드에서 디지털 자산 보호를 위한 내부적으로 의무화된 규정을 충족할 수 있습니다. SnapLock 라이센스는 다음의 일부입니다. <block ref="a62fc0122806ceec9dd8592aadbd3e06" category="inline-link-macro-rx"></block> 소프트웨어 제품군.</block>
-  <block id="50a9901279a07960aa40679dc0e932fe" category="admonition">ONTAP 9.10.1 이전 릴리스에서는 규정 준수 모드 파일을 WORM 상태로 커밋하기 전에 보존 시간을 명시적으로 설정하지 않고 기본값을 수정하지 않으면 해당 파일은 30년 동안 보존됩니다. 이 변경 사항은 실행 취소할 수 없습니다. 마찬가지로 ONTAP 9.10.1 이상에서는 엔터프라이즈 모드 파일을 WORM 상태로 커밋하기 전에 보존 시간을 명시적으로 설정하지 않고 기본값을 수정하지 않으면 해당 파일은 0년 동안 보존되거나 사실상 전혀 보존되지 않습니다.</block>
   <block id="c0121291a5d78c7dd392d01763e4145b" category="list-text">대상 클러스터에서 SVM 마이그레이션이 실행되고 있지 않습니다. 한 번에 하나의 SVM 마이그레이션만 허용됩니다.</block>
   <block id="777a12e289856707f7b372f4377dc65b" category="sidebar">NFS 구성</block>
   <block id="7dc123c4e087396baa0db49180ad3268" category="sidebar">NFS 관리</block>
@@ -49062,4 +49060,9 @@ HTTPS가 활성화된 경우 SSL/TLS와의 올바른 통합을 위해 CA 인증�
   <block id="8687ae861efc345fb88cb244c8ac3af7" category="paragraph">클러스터 간 LIF는 로컬 FabricPool 계층화 또는 외부 S3 앱 제공에 필요하지 않습니다.</block>
   <block id="09c1b0a1d50bd671813081f6837a1070" category="paragraph">ONTAP SMB 서버에서 로컬 또는 도메인 사용자나 그룹에 할당된 권한을 관리합니다. 권한을 추가, 제거 또는 재설정하여 각 사용자 또는 그룹이 수행할 수 있는 작업을 사용자 지정하고 권한 재정의에 대한 정보를 표시할 수 있습니다.</block>
   <block id="84336c547960e27ad3f1ee2111f4ccc0" category="sidebar">NFS 엑스포트 정책에 대해 알아보기</block>
+  <block id="911e28a4460a536c3e8fa89e26d14c23" category="admonition">장기 보존(LTR) 스냅샷이 저장된 읽기/쓰기 볼륨에 대해 SnapMirror 역방향 재동기화를 수행하지 않는 것이 좋습니다.</block>
+  <block id="925783a9350aa872c7e23d5186b27d65" category="admonition">ONTAP 9.10.1 이전 릴리스에서는 규정 준수 모드 파일을 WORM 상태로 커밋하기 전에 보존 기간을 명시적으로 설정하지 않고 기본값을 수정하지 않으면 파일이 30년 동안 보존됩니다. 이 변경 사항은 되돌릴 수 없습니다. ONTAP 9.10.1 이상에서는 파일이 0년 동안 보존되거나 사실상 전혀 보존되지 않습니다. 마찬가지로 엔터프라이즈 모드 파일을 WORM 상태로 커밋하기 전에 보존 기간을 명시적으로 설정하지 않고 기본값을 수정하지 않으면 파일이 0년 동안 보존되거나 사실상 전혀 보존되지 않습니다.</block>
+  <block id="6d8743db7296f726e985644664d61f76" category="list-text">초기화가 완료되면 일관성 그룹 관계를 해제하고 삭제합니다:</block>
+  <block id="b9f71937ec8c1b6cb1d742c389d5577a" category="paragraph"><block ref="132bdd8d078dad782b09a4ffd9532a8a" prefix="" category="inline-code"></block></block>
+  <block id="5f69d246a85ba62a2a81a935cb85eb60" category="paragraph"><block ref="2851bf84391bab66dd9f31b93986fdb8" prefix="" category="inline-code"></block></block>
 </blocks>
